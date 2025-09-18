@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" giftId="1" reward="30000_1300017_5" />
+      <data id="2" giftId="1" reward="30000_840194_10" />
+      <data id="3" giftId="1" reward="30000_1800000_4" />
+      <data id="4" giftId="1" reward="30000_800000_1" />
+      <data id="5" giftId="2" reward="30000_1300017_20" />
+      <data id="6" giftId="2" reward="30000_840194_40" />
+      <data id="7" giftId="2" reward="30000_1800000_16" />
+      <data id="8" giftId="2" reward="30000_800000_4" />
+      <data id="9" giftId="2" reward="30000_21063003_3" />
+      <data id="10" giftId="2" reward="30000_21063002_3" />
+      <data id="11" giftId="3" reward="30000_1300017_60" />
+      <data id="12" giftId="3" reward="30000_802003_3" />
+      <data id="13" giftId="3" reward="30000_1800000_48" />
+      <data id="14" giftId="3" reward="30000_800000_12" />
+      <data id="15" giftId="3" reward="30000_21063003_9" />
+      <data id="16" giftId="3" reward="30000_21063002_9" />
+      <data id="17" giftId="4" reward="30000_1300017_120" />
+      <data id="18" giftId="4" reward="30000_802003_6" />
+      <data id="19" giftId="4" reward="30000_1800000_96" />
+      <data id="20" giftId="4" reward="30000_800000_24" />
+      <data id="21" giftId="4" reward="30000_21063003_18" />
+      <data id="22" giftId="4" reward="30000_21063002_18" />
+      <data id="23" giftId="5" reward="30000_1300017_440" />
+      <data id="24" giftId="5" reward="30000_802003_22" />
+      <data id="25" giftId="5" reward="30000_1800000_350" />
+      <data id="26" giftId="5" reward="30000_800000_90" />
+      <data id="27" giftId="5" reward="30000_21063003_66" />
+      <data id="28" giftId="5" reward="30000_21063002_66" />
+</root>

@@ -1,0 +1,15 @@
+option java_package = "com.hawk.game.protocol";
+
+message FinishCountPB
+{
+	required int32 achieveId	= 1;// 成就id
+	required int32 finishCount	= 2;// 完成次数
+}
+
+// 玩家酒馆信息
+message TavernInfoSync
+{
+	required int64 refreshTime	= 1;// 下一次刷新时间（毫秒）
+	repeated FinishCountPB count		= 2;// 成就完成次数列表
+	optional bool openQuestShare = 3; //是否打开每日福袋分享
+}

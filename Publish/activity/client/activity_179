@@ -1,0 +1,25 @@
+return {
+	prop =
+	{
+		activityId = 179,
+		name = [[折扣礼包]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">尊敬的指挥官，我们为您准备了超低折礼包，来答谢您的回归！</font>]],
+		priority = 10004,
+		icon = [[Activity_Icon_179_Nor.png]],
+		selecticon = [[Activity_Icon_179_Sel.png]],
+		bigIcon = [[]],
+	},
+	return_gift = [[id	playerType	title	itemId	discount	limit	price	rewards	icon	buttonIcon
+1	1	2	1	1	1	2	2	2	2
+1	1	超值体力礼包	1150159	2	5	10000_1000_300	30000_850052_4,30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	Activity_Icon_179_07.png	V3CommonUI_Icon_Diamonds_01.png
+2	1	超值资源礼包	1150160	1	5	10000_1000_6480	30000_1780050_150,30000_1140001_10,30000_850039_30,30000_850019_30,30000_850029_30	Activity_Icon_179_06.png	V3CommonUI_Icon_Diamonds_01.png
+3	1	超值加速礼包	1150161	15	5	10000_1000_6480	30000_100060_20,30000_810002_20,30000_100050_200,30000_810001_200	Activity_Icon_179_02.png	V3CommonUI_Icon_Diamonds_01.png
+4	1	超值英雄礼包	1150162	7	5	10000_1000_6480	30000_1000003_40,30000_1782009_20,30000_1782008_20,30000_1510004_200,30000_13310004_200	Activity_Icon_179_05.png	V3CommonUI_Icon_Diamonds_01.png
+5	1	超值机甲礼包	1150163	5	5	10000_1000_6480	30000_840194_8000,30000_840166_1000,30000_9990008_8000	Activity_Icon_179_01.png	V3CommonUI_Icon_Diamonds_01.png
+6	1	超值能源礼包	1150164	5	5	10000_1000_6480	30000_1480001_8800,30000_1490004_2,30000_810001_30,30000_850009_10,30000_850039_10	Activity_Icon_179_03.png	V3CommonUI_Icon_Diamonds_01.png
+7	1	超值装备礼包	1150165	11	5	10000_1000_6480	30000_802003_160,30000_800000_160,30000_800001_600	Activity_Icon_179_09.png	V3CommonUI_Icon_Diamonds_01.png
+8	1	超值勋章礼包	1150166	4	5	10000_1000_6480	30000_1300017_3750,30000_850009_10,30000_850039_10,30000_850019_10,30000_850029_10	Activity_Icon_179_08.png	V3CommonUI_Icon_Diamonds_01.png
+]],
+
+}

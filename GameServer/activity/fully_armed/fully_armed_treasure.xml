@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" precondition="0" cost="30000_1150120_1" awardId="4950020" />
+      <data id="2" precondition="1" cost="30000_1150120_1" awardId="4950021" />
+      <data id="3" precondition="2" cost="30000_1150120_1" awardId="4950022" />
+      <data id="4" precondition="3" cost="30000_1150120_1" awardId="4950023" />
+      <data id="5" precondition="4" cost="30000_1150120_1" awardId="4950024" />
+      <data id="6" precondition="5" cost="30000_1150120_1" awardId="4950025" />
+      <data id="7" precondition="6" cost="30000_1150120_1" awardId="4950026" />
+      <data id="8" precondition="7" cost="30000_1150120_1" awardId="4950027" />
+</root>

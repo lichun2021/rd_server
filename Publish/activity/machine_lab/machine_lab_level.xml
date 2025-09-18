@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1" levelExp="0" playerLevelExp="200" reward="30000_840196_5" playerReward="30000_840194_10,30000_840196_5" playerAdvReward="30000_840201_15,30000_840202_80" />
+      <data level="2" levelExp="1000" playerLevelExp="400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="3" levelExp="2000" playerLevelExp="600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="4" levelExp="3000" playerLevelExp="800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="5" levelExp="4000" playerLevelExp="1000" reward="30000_840194_50" playerReward="30000_840201_3,30000_840202_10" playerAdvReward="30000_840201_6,30000_840202_30" />
+      <data level="6" levelExp="5000" playerLevelExp="1200" reward="30000_840194_5" playerReward="30000_840194_15,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="7" levelExp="6000" playerLevelExp="1400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="8" levelExp="7000" playerLevelExp="1600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="9" levelExp="8000" playerLevelExp="1800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="10" levelExp="9000" playerLevelExp="2000" reward="30000_840194_50" playerReward="30000_840201_3,30000_840202_10" playerAdvReward="30000_840201_6,30000_840202_30" />
+      <data level="11" levelExp="10000" playerLevelExp="2200" reward="30000_840194_5" playerReward="30000_840194_15,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="12" levelExp="11000" playerLevelExp="2400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="13" levelExp="12000" playerLevelExp="2600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="14" levelExp="13000" playerLevelExp="2800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="15" levelExp="14000" playerLevelExp="3000" reward="30000_840194_50" playerReward="30000_840201_3,30000_840202_10" playerAdvReward="30000_840201_6,30000_840202_30" />
+      <data level="16" levelExp="15000" playerLevelExp="3200" reward="30000_840194_5" playerReward="30000_840194_15,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="17" levelExp="16000" playerLevelExp="3400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="18" levelExp="17000" playerLevelExp="3600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="19" levelExp="18000" playerLevelExp="3800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="20" levelExp="19000" playerLevelExp="4000" reward="30000_840194_50" playerReward="30000_840201_3,30000_840202_10" playerAdvReward="30000_840201_6,30000_840202_30" />
+      <data level="21" levelExp="20000" playerLevelExp="4200" reward="30000_840194_5" playerReward="30000_840194_15,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="22" levelExp="21000" playerLevelExp="4400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="23" levelExp="22000" playerLevelExp="4600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="24" levelExp="23000" playerLevelExp="4800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="25" levelExp="24000" playerLevelExp="5000" reward="30000_840194_50" playerReward="30000_840201_3,30000_840202_10" playerAdvReward="30000_840201_6,30000_840202_30" />
+      <data level="26" levelExp="25000" playerLevelExp="5200" reward="30000_840194_5" playerReward="30000_840194_15,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="27" levelExp="26000" playerLevelExp="5400" reward="30000_850008_1" playerReward="30000_850008_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="28" levelExp="27000" playerLevelExp="5600" reward="30000_850038_1" playerReward="30000_850038_3,30000_840195_5" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="29" levelExp="28000" playerLevelExp="5800" reward="30000_100050_1" playerReward="30000_100050_3,30000_840194_10" playerAdvReward="30000_840201_1,30000_840202_5" />
+      <data level="30" levelExp="30000" playerLevelExp="6000" reward="30000_840194_100" playerReward="30000_840201_5,30000_840202_30" playerAdvReward="30000_840201_15,30000_840202_80" />
+</root>

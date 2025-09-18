@@ -1,0 +1,743 @@
+option java_package = "com.hawk.game.protocol";
+import "Common.proto";
+import "Equip.proto";
+import "Armour.proto";
+
+//新增字段务必为optional 服务器做了处理,只发增量修改部分.
+message PlayerInfo
+{
+	optional string playerId 		= 1;
+	optional string name 			= 2;
+	optional int32  gold 			= 3;	//钻石
+	optional int32  coin 			= 4;
+	optional int32  recharge 		= 5;
+	optional int32  vipPoint 		= 6;    //vip经验
+	optional int32  vipLevel 		= 7;
+	//required int64  vipEndTime    = 8;    //vip等级大于0时便处于激活状态，不再根据时间来判断了
+	optional int32  level 			= 9;
+	optional int32  exp 			= 10;
+	optional int32  icon 			= 11;	//角色头像id
+	optional int64  goldore 		= 12;	//金矿
+	optional int64  oil 			= 13;	//石油
+	optional int64  steel 			= 14;	//铀矿
+	optional int64  tombarthite		= 15;	//合金
+	optional int64  battlePoint		= 16;	//总战斗力
+	optional int64  electric 		= 17;	//电力
+	optional int64  electricMax 	= 18;	//电力上限
+	optional int32  vit 			= 19;	//体力..........
+	optional int64  vitTime 		= 20;	//上次体力恢复时间
+	optional int64  lastLoginTime 	= 21;	//上次登陆时间
+	optional int32  freeVipPoint	= 22;	//今日赠送vip点数
+	optional string iconBuy 		= 23;	//已购头像id,id,id
+	optional int64  recruits        = 24;   // 新兵
+	optional string pfIcon			= 25;	//平台头像
+	optional int32  diamonds		= 26;	// 玩家钻石
+	optional int32 activeVipLevel   = 27;   // 玩家加入联盟时升到的vip等级
+	optional int64  goldoreUnsafe 		= 31;	//金矿(非受保护)
+	optional int64  oilUnsafe 			= 32;	//石油(非受保护)
+	optional int64  tombarthiteUnsafe	= 33;	//合金(非受保护)
+	optional int64  steelUnsafe			= 34;	//铀矿(非受保护)
+	optional int64  silentTime          = 35;   //禁言结束时间
+	optional int32 buyVitTimes          = 36;   //玩家当日购买体力次数
+	optional int32 militaryRankLvl		= 37;	//军衔等级
+	optional int32 militaryRankExp		= 38;	//军衔经验
+	optional int64 warFeverEndTime		= 39;	//战争狂热结束时间
+	optional int32 attackFoggyWinTimes  = 40;	//攻击迷雾要赛胜利次数（发起集结）
+	optional PlayerCommon common 		= 41; // 玩家通用数据
+	optional string originalPfIcon		= 42; //原始的平台url;
+	optional int32 credit				= 43; // 信用分
+	optional int64 globalProtectEndTime	= 44; // 全服保护结束时间
+	optional int32 cityLevel	= 45; //大本等级
+	optional int32 lmjyState = 46; // 副本状态 1 联盟军演等待进入 2 联盟军演在游戏中,世界地图要换 , 3 tbly  太博利亚 5 sw 大帝战, 7 cyborg 四国 9 达牙  11 月球
+	optional int32 crRewardTimes = 47;	//玩家当日cr英雄试练领奖次数
+	optional int32 crHighestScore = 48; //玩家当日cr英雄试练最高积分
+	optional int32 superLab		= 49; // 激活超能实验室 
+	optional int32 tblyCamp	= 50; //泰博利亚阵营
+	optional int64 lastInviteMass = 51; //上次邀请集结时间
+	optional int64 lmjyEnterCd = 52; // 联盟军演进入cd
+	optional ArmourSuitType currArmourSuit = 53; // 当前穿戴铠甲套装
+	optional int32 unlockASuitCount = 54;	// 解锁铠甲套装数量
+	optional bool isRegisterPuidCtrlPlayer = 55; // 是注册白名单
+	optional bool isTBLYAnchor = 56; // 是太博利亚主播
+	optional bool isCYBORGAnchor = 57; // 是四国主播
+	optional int32 cyborgCamp = 58;
+	optional int32 laboratory = 61; // 新超能实验室
+	optional int32 xlzjCamp	= 62; //XLZJ利亚阵营
+	optional bool isXLZJAnchor = 63; // 是XLZJ利亚主播
+	optional int32 xlzjRectangle = 64; // 心灵终结副本中所在圈子 由外向内 1 2 3
+	optional bool oldFlag  = 65;  // 新老玩家标识（以202200303新手优化版本为界限，在这之前的玩家是老玩家对应值为true，后面的玩家对应值为false）
+	optional int32 dyzzCamp = 66; //打压之战阵营
+	optional int32 nationalMilitaryLv  = 67; // 国家军衔等级 nation_military 表
+	optional int32 nationalMilitaryExp = 68; // 国家军衔经验
+	optional bool nationalMilitaryReward = 69; //国家军衔每日奖励 true 就是领取过了 
+	optional int64 nationalMilitaryReset = 70; // 国家军衔经验重置
+	optional string ipBelongsAddr        = 71; // ip归属地
+	optional int32 yqzzCamp	= 72; // 月战阵营
+	optional int64 nationalMilitaryRankReset = 73; // 国家军衔重置
+	optional bool dyzzSpeedItemFree = 74; // 免费加速可领取
+	optional int32 dyzzSpeedItemBuyCnt = 75; // 免费加速购买数
+	optional int32 swKillHonor = 76; //  大帝击杀
+	optional int64 soulResetCd = 77; // 红英雄重置天赋cd
+	optional int32 xhjzCamp = 78; // 星海阵营
+	optional int32 xhjzGasoline = 79; // 星海燃油
+	optional int32 xhjzCommonder = 80; // 星海指挥官
+	optional int32 fgylCamp = 81;// 反攻幽灵阵营
+	optional int32 fgylSkillOrder = 82; // 反攻幽灵技能点
+	optional int64 militaryScore                = 83;   // 军演积分
+	optional int64 cyborgScore                	= 84;   // 赛博积分
+	optional int64 dyzzScore                	= 85;   // 达雅积分
+	optional int32 fgylMonsterAttack			= 86; // 反攻幽灵 打野
+	optional int32 xqhxCamp	= 87; //先驱会想阵营
+	optional int32 priority = 88; // 白名单 权限等级
+	optional int32 joinAtkFoggyWinTimes  = 89;	//攻击迷雾要赛胜利次数（参与集结，上面的attackFoggyWinTimes字段表示发起集结）
+}
+
+// 体力购买信息
+message VitPurchaseInfo
+{
+	required int32 purchaseTimes = 1;  // 已购买次数
+	required int32 timesLimit    = 2;  // 当日购买次数上限
+	optional int32 nextTimeCost  = 3;  // 下次购买需要花费多少钱
+}
+
+// 体力购买信息请求
+message VitPurchaseInfoReq
+{
+
+}
+
+// 体力购买信息响应
+message VitPurchaseInfoResp
+{
+	required VitPurchaseInfo purchaseInfo = 1;
+}
+
+message HPPlayerInfoSync
+{
+	required PlayerInfo playerInfo = 1;
+}
+
+// 被屏蔽的玩家信息
+message ShieldPlayerInfo
+{
+	required string playerId 		= 1;
+	required string name 			= 2;
+	required int32  icon 			= 3;	//头像id
+	required int64  battlePoint		= 4;	//战斗力
+	required string guildName   	= 5;    //联盟名称
+}
+
+// 同步被屏蔽玩家的信息
+message HPShieldPlayerInfoSync
+{
+	repeated ShieldPlayerInfo shieldPlayer  = 1;
+}
+
+message PlayerResCollection
+{
+	required string buildingId = 1;
+	required int32 resType = 2;
+	required int32 resNum = 3;
+}
+
+message HPPlayerResCollectionSync
+{
+	repeated PlayerResCollection res = 1;
+}
+
+// 屏蔽玩家请求
+message ShieldPlayerReq
+{
+	required string playerId = 1;
+}
+
+// 屏蔽返回
+message ShieldPlayerResp
+{
+	required bool result = 1;//是否成功
+	optional ShieldPlayerInfo shieldPlayer = 2;
+}
+
+// 解除屏蔽请求
+message RemoveShieldPlayerReq
+{
+	required string playerId = 1;
+}
+
+// 敏感词检测通用，对应6012号协议
+message SensitiveWordCheckReq
+{
+	required string word = 1;
+	optional MsgCategory category = 2;
+	optional string param = 3;  // 服务器需要的额外参数，比如：修改能量矩阵名称时，指定修改哪个矩阵（对应的编号）的名称
+}
+
+// 安全sdk上报输入内容对应的场景
+enum MsgCategory {
+	PLAYER_NAME             = 101;  // 角色名字
+	PLAYER_SIGNATURE        = 102;  // 个性签名
+	GUILD_NOTICE            = 103;  // 联盟公告
+	GUILD_MANOR_NAME        = 104;  // 联盟堡垒名字
+	GUILD_ANNOUNCE          = 105;  // 联盟宣言
+	GUILD_SIGN              = 106;  // 联盟标记
+	GUILD_NAME              = 107;  // 联盟名字（创建）
+	GUILD_LEVEL             = 108;  // 联盟阶级
+	GUILD_TAG               = 109;  // 联盟简称
+	PRESIDENT_NOTICE        = 110;  // 国王公告
+	CYBOR_TEAM_NAME         = 111;  // 赛博队伍名字
+	TIBER_TEAM_NAME         = 112;  // 泰伯利亚队伍名字
+	ASK_DRESS               = 113;  // 索要装扮
+	SEND_DRESS              = 114;  // 赠送装扮
+	CHAT_ROOM_NAME          = 115;  // 群聊名称 
+	FRIEND_REMARK           = 116;  // 添加好友备注 
+	ENERGY_NAME             = 117;  // 能量矩阵名称
+	MARCH_PRESET_NAME       = 118;  // 部队编队名字
+	ARMOUR_GROUP_NAME       = 119;  // 装备编组名字
+	WORLD_FAVORITE_ADD      = 120;  // 世界添加收藏
+	PLAYER_CREATE           = 121;  // 角色名字创建
+	GUILD_NAME_CHANGE       = 122;  // 联盟名字修改
+	COLLEGE_NAME_CHANGE     = 123;  // 学院名称修改
+	COLLEGE_CREATE          = 124;  // 学院创建
+	WORLD_CHAT              = 1001; // 世界聊天
+	CHAT_GUILD              = 1002; // 联盟聊天
+	PRIVATE_CHAT            = 1003; // 私聊
+	GROUP_CHAT              = 1004; // 群聊 
+	WORLD_BROADCAST         = 1005; // 世界广播
+	ADD_FRIEND_FUYAN        = 2001; // 添加好友（附言） 
+	SEND_GUILD_MAIL         = 2002; // 发送联盟管理邮件
+	GUILD_LIUYAN            = 3001; // 联盟留言
+	SEARCH_FRIEND           = 4001; // 搜索游戏内好友 
+	SEARCH_ADD_FRIEND       = 4002; // 查找和添加好友
+	PRESIDENT_SEARCH_MEMBER = 4003; // 国王搜索玩家
+	SEARCH_ADD_GUILD        = 4004; // 搜索添加联盟
+	ASK_DRESS_SEARCH        = 4005; // 索要装扮搜索
+	SEND_DRESS_SEARCH       = 4006; // 赠送装扮搜索
+	CROSS_GIFT_SEARCH_MEMBER = 4007; // 跨服礼包搜索玩家
+	GUILD_FORMATION			= 4008; // 联盟编队
+	CHANGE_SVR_SEARCH_MEMBER = 4009; // 迁服搜索成员
+	YQZZ_SEARCH_MEMBER 		= 4010; // 月球搜索成员
+	ITEM_SEARCH      		= 4011; // 所搜背包
+}
+
+// 敏感词检测响应
+message SensitiveWordCheckResp
+{
+	required bool sensitive			= 1; // 为true表示包含敏感词，false表示不包含敏感词
+	optional int32 errorCode 		= 2; // 错误码
+	optional string msg             = 3; // 提示信息，当这个字段不为空时，不管errCode和sensitive，直接按msg弹框提示
+}
+
+message PlayerChangeIconReq
+{
+	required int32 iconId = 1;
+	required bool useGold = 2;	// 使用金币购买头像
+}
+
+message PlayerChangeNameReq
+{
+	required string name  = 1;
+	required bool useGold = 2;	// 是否使用金币改名
+	optional int32 itemId = 3;	// 改名道具ID
+}
+
+message PlayerCheckNameReq
+{
+	required string name = 1;
+}
+
+message PlayerCheckNameResp
+{
+	required bool result 				= 1;//是否成功
+	optional int32 errorCode 			= 2;//错误码：@Status.proto NameError
+	optional string msg                 = 3;//提示信息，当这个字段不为空时，不管errCode和result，直接按msg弹框提示
+}
+
+//领主详情
+message PlayerDetailReq
+{
+	optional string playerId			= 1; //玩家ID，查自己不用填
+	optional bool isAtkBuild			= 2; // 是否是攻打建筑
+}
+
+message PlayerDetailRes
+{	
+	// 战斗状态
+	required StatisticPB statistic		= 1; //战斗统计信息
+	
+	// 战力
+	optional int64 battlePoint 			= 2; //总战力
+	optional int64 playerBattlePoint 	= 3; //指挥官战力
+	optional int64 armyBattlePoint 		= 4; //部队战斗力
+	optional int64 buildBattlePoint 	= 5; //建筑战斗力
+	optional int64 techBattlePoint 		= 6; //科技战斗力
+	optional int64 trapBattlePoint 		= 7; //陷阱战斗力
+	optional int64 equipBattlePoint		= 8; //装备战斗力
+	optional int64 heroBattlePoint		= 9; // 英雄战力
+	optional int64 mechaBattlePoint     = 10; // 机甲战力 
+	optional int64 armourBattlePoint    = 11; // 铠甲战力 
+	optional int64 equipResearchPoint	= 12; // 装备科技战力
+	optional int64 plantTechBattlePoint	= 13; // 泰能战力
+	optional int64 plantSoldierBattlePoint	= 14; // 泰能展示强化战力
+	optional int64 starExporeBattlePoint	= 15; // 星能探索战力
+	
+	// 军事
+	optional int32 maxMarchNum			= 20; // 最大行军数
+	optional int32 maxMarchSoldierNum	= 21; // 出征上限
+	optional int32 maxTrainNum			= 22; // 单次训练部队数量
+	
+	// 城市发展
+	optional int32 maxCapNum 			= 30; // 医院上限
+	
+	// 城防
+	optional int32 cityDefVal			= 40; // 城防值
+	optional int32 maxTrapNum			= 41; // 陷阱上限
+	
+	optional ArmourBriefInfo armourInfo     = 42; //铠甲简要信息
+	optional int32 plantScienceBattlePoint  = 43; //泰能科技树战斗力
+	optional int64 manhattanBaseBattlePoint	= 44; //超武聚能底座战力
+	optional int64 manhattanSWBattlePoint	= 45; //超级武器战力
+	optional int64 mechacoreTechPower	    = 46; //机甲核心科技战力
+	optional int64 mechacoreModulePower	    = 47; //机甲核心模块战力
+	optional int64 homeLandPower	    	= 48; //家园战力
+}
+
+//查询其它玩家信息
+message OtherPlayerDetailResp
+{
+	optional PlayerSnapshotPB snapshot	= 1; //目标玩家信息
+	required int32  state 				= 2; //状态，@see CommanderState
+	optional string name 				= 3; //俘虏者信息
+	optional int32  level 				= 4;
+	optional int32  posX 				= 5;
+	optional int32  posY 				= 6;
+	optional int32 todayDueled			= 7; // 被决斗次数
+	optional ArmourBriefInfo armourInfo = 8; // 铠甲简要信息
+	optional ArmourTechInfoPush armourTechInfo = 9; // 装备科技信息
+}
+
+// 玩家信息快照
+message PlayerSnapshotPB
+{
+	required string playerId 			= 1;
+	required string puid 				= 2;
+	required string name 				= 3;
+	required int32  level 				= 4;
+	required int32  icon 				= 5; //头像
+	required int64  power 				= 6; //战力
+	optional string guildId 			= 7;
+	optional string guildName 			= 8;
+	required string language			= 9;
+	optional string guildTag			= 10;
+	required int64  logoutTime			= 11; //最后一次登出时间
+	required string serverName			= 12; //服name
+	required int32  cityLevel 			= 13; //大本等级
+	required int32  vip					= 14; //vip等级
+	optional int32  achievement 		= 15; //成就完成度
+	optional string pfIcon              = 16; //平台头像
+	optional bool   lively				= 17; //活跃 该字段弃用,不可使用.
+	repeated PBEquipSlot equipSlot 		= 18; //装备信息 
+	optional int32  livelyMask			= 19; //用于计算活跃度的字段
+	optional StatisticPB statInfo 		= 20; //统计信息
+	optional int32 militaryRankLvl		= 21; //军衔
+	optional PlayerCommon common 		= 22; //玩家通用数据
+	optional int32 cityPlantLevel 		= 23; // 泰能等级
+	optional string ipBelongsAddr       = 24; // ip归属地
+	optional int32 nationalMilitaryLv  = 25; // 国家军衔等级 nation_military 表
+}
+
+// 玩家统计信息
+message StatisticPB
+{
+	required int32 warWinCnt			= 1; //战斗胜利次数
+	required int32 warLoseCnt			= 2; //战斗失败次数
+	required int32 atkWinCnt			= 3; //进攻胜利次数
+	required int32 atkLoseCnt			= 4; //进攻失败次数
+	required int32 defWinCnt			= 5; //防御胜利次数
+	required int32 winRate				= 6; //战斗胜率
+	optional int32 spyCnt				= 7; //侦查次数
+	required int64 armyKillCnt			= 8; //消灭部队数
+	required int64 armyLoseCnt			= 9; //部队损失数量
+	required int64 armyCureCnt			= 10; //部队治疗数量
+}
+
+//buff增益效果显示
+message StateInfo
+{
+	required int32 type					= 1;
+	required int32 key					= 2;
+	required int32 value				= 3;
+	optional int64 startTime			= 4;//开始时间
+	optional int64 endTime				= 5;//结束时间
+	optional string targetId            = 6;//作用对象
+}
+
+
+//全服buff显示.
+message SynGlobalBuff 
+{
+	repeated StateInfo stateInfos = 1;
+}
+
+//buff增益信息推送
+message StateInfoSync
+{
+	repeated StateInfo stateInfos 		= 1; 
+}
+
+//其他玩家作用号数据请求
+message OtherPlayerEffectReq
+{
+	required string playerId 			= 1;
+	repeated int32 effectId 			= 2;
+}
+
+//作用号信息
+message EffectPB
+{
+	required int32 effId				= 1;  //作用号
+	required int32 effVal				= 2;  //作用值
+	optional string targetId            = 3;  //作用对象
+}
+
+//作用号推送
+message HPPlayerEffectSync
+{
+	repeated EffectPB effList 			= 1; //作用号信息列表
+}
+
+//获得邀请玩家请求
+message GetPlayerBasicInfoReq
+{
+	required string name = 1;
+}
+
+//获得邀请玩家请求
+message GetPlayerBasicInfoResp
+{
+	repeated HPPlayerBasicInfo info		= 1;
+	optional string msg  = 2;//提示信息，当这个字段不为空时，不管info，直接按msg弹框提示
+}
+
+message HPPlayerBasicInfo
+{
+	required string playerId			= 1;
+	required string playerName			= 2;
+	optional string guildName			= 3;
+	required int64 power				= 4;
+	required int32 icon					= 5;
+	required string kingdom				= 6;
+	required string language			= 7;
+	optional int32 vip					= 8;
+	optional string pfIcon      		= 9; //平台头像
+	optional PlayerCommon common 		= 10; // 玩家通用数据
+}
+
+//领取玩家升级奖励
+message HPGetPlayerLevelUpReward
+{
+	optional int32 rewardLevel			= 1;
+}
+
+// 玩家在线时间和流量统计
+message HPPlayerStatInfo
+{
+	required int64 onlineTime  = 1;
+	required int64 recvSize  = 2;
+	required int64 sendSize  = 3;
+}
+
+// 刷新玩家钻石
+message UpdatePlayerDiamond
+{
+	required int32 diamonds  = 1;	// 玩家钻石数目
+}
+
+//同步玩家的每日数据
+message SynPlayerDailyData {
+	required PlayerDailyDataMsg dataMsg = 1; //玩家的每日数据
+}
+//每日凌晨需要清理的数据
+message PlayerDailyDataMsg {
+	optional int32 travelShopRefreshTimes = 1; //黑市商人刷洗次数
+	repeated KeyValuePairInt recieveMailTimes = 2; //邮件的领取次数
+	optional int32 armourStarAttrRandTimes = 3; // 装备星级属性随机次数
+}
+
+//基础的玩家信息, 尽量重用代码
+message MiniPlayerMsg {
+	optional string playerId 			= 1;  //玩家ID
+	optional string playerName 			= 2; //玩家名字
+	optional int64 power 	  			=3;  //战力
+	optional int32  icon 				=4; //头像
+	optional string pfIcon 				=5; //平台头像
+	optional int32  offlineTime				=6; //离线时间  0为在线
+}
+
+
+//请求玩家的外观信息
+message PlayerFacadeInfoReq{
+	required string playerId = 1; //玩家ID
+	required string from = 2; //客户端请求来源
+}
+
+//请求玩家的外观信息
+message PlayerFacadeInfoResp {
+	optional MiniPlayerMsg playerMsg = 1; //玩家信息
+	optional string guildName = 2; //工会名字
+	optional string guildTag = 3; //工会的名字
+	required string from = 4; //客户端请求来源
+}
+
+//暂时用于迁服
+enum PlayerStatus {
+	START  			= 1;		//迁服开始     一旦开始迁服，锁住玩家不可上发协议.
+	PACKAGE			= 2;		//打包完成迁往目标服务器
+	FINISH			= 3;		//远程数据落地完成
+	ERROR			= 4; 		//迁服失败
+}
+
+//玩家迁出
+message PlayerMigrateOutReq {
+	required string targetServerId = 1; //迁往的服务器ID
+}
+
+
+message PLAYER_STATUS_SYN {
+	required PlayerStatus status = 1;//玩家状态
+	optional int32 errorCode = 2; //当状态为Error的时候errorCode才有意义 出现失败的时候客户端放开限制
+	
+}
+
+//请求真实的pfIocnUrl
+message GetRealPficonUrlReq{
+	repeated string identifyList = 1; //标识符列表
+}
+
+//返回真实的pfIocnUrl
+message GetRealPficonUrlResp{
+	repeated KeyValuePairStrStr identifyUrlList = 1; //标识符列表 [{identify, url},{identify1,url1}]
+}
+
+// 健康游戏提醒信息
+message HealthGameRemindPB {
+	required ReportType type  = 1;  // 通知类型（中控提醒时类型为DEFAULT_REMIND，此时2和3字段无用）
+	optional int32 periodTime = 2;  // 当日已经历的游戏时长：单位s 
+	optional int32 restTime   = 3;  // 强制休息时长：单位s
+	optional int64 endTime    = 4;  // 宵禁或禁玩的结束时间，以ms为单位的时间戳
+	optional ZKType zkType    = 5;  // 中控处理类型
+	optional string zkTitle   = 6;  // 中控提示标题
+	optional string zkMsg     = 7;  // 中控提示信息
+	optional string zkTraceId = 8;  // 中控流水号
+	optional string jsonStr   = 9;  // 中控验证，实名认证json数据（UTF-8,URL编码）， URL解码后传入msdk接口WGOpenFullScreenWebViewWithJson
+}
+
+// 健康游戏信息上报
+message HealthGameReportReq {
+	required ReportType reportType = 1; // 上报类型
+}
+
+enum ZKType {
+	ZK_REMIND = 1;  // 中控提醒
+	ZK_BAN = 2;     // 中控禁玩
+	ZK_VERIFY = 3;  // 中控强制验证
+}
+
+// 上报类型
+enum ReportType {
+	DEFAULT_REMIND        = 0;  // 中控接口为默认，以其他参数本身判断是什么消息
+	ONCE_GAME_TIME_LONG   = 1;  // 单次时长提醒；
+	ACCUMULATE_TIME_LONG  = 2;  // 累计时长提醒;
+	ONECE_GAME_FORCE_EIXT = 3;  // 单次强制休息；
+	ACCUMULATE_FORCE_EIXT = 4;  // 累计强制休息；
+	CURFEW_GAME           = 5;  // 宵禁
+	BAN_GAME              = 6;  // 禁玩
+}
+
+// 举报信息
+message ReportingInfoPB
+{
+	required string reportRoleId  = 1;  // 被举报方玩家playerId
+    required int32 reportScene    = 2;  // 举报场景，1 人物资料 ，99为其他
+    repeated int32 reportType     = 3;  // 举报子类型，1 使用外挂，2 诈骗 ，3 言语辱骂，4 售卖资源，5发布违规信息，6举报头像 99为其他
+	optional string reportDesc    = 4;  // 用户填写的举报说明
+    optional string reportChatContent  = 5;   // 用户举报的信息内容
+	repeated string reportPicUrlList    = 6;  // 举报玩家图片的URLlist
+}
+
+// 服务器返回的举报倒计时信息
+message ReportingCDPB
+{
+	required string reportRoleId     = 1;  // 被举报方玩家playerId
+	required int64 nextReportingTime = 2;  // 对同一个玩家下次可以举报的时间
+	required bool normal             = 3;  // 正常请求处理成功时返回true，其它情况返回false
+}
+
+message PlayerFlagSyn{
+	required int32 flag = 1;
+}
+
+//int32 最多只能到31位
+enum PlayerFlagPosition {
+	BREAK_ICE 			= 1;  //破冰礼包
+	GUIDE_TRAVEL_SHOP 	= 2;  //黑市商人引导
+	ADD_TALENT_POINT 	= 3;  //是否加过技能点
+	HERO_DEF		 	= 4;  //是否英雄驻防过
+	GUARD_ONLINE_STATUS = 5; //允许对方查看自己的在线状态
+	GUARD_POSITION		= 6; //允许对方查看自己的坐标
+	GUARD_PROTECTED_TIME = 7;//查看自己的屏障剩余时间.
+	GUARD_RECEIVE_RADER	 = 8; //接受对方的雷达.
+	GUARD_INIT			= 9; //是否初始化过守护.
+	PUSH_GIFT_SPECIAL	=10; //特殊推送礼包.
+}
+
+// 军衔奖励(每日津贴)
+message PlayerMilitaryRankAward {
+	required bool isReceived = 1;
+}
+
+enum VipFlag
+{
+	VIP_FLAG_COMMON = 0; // 正常状态
+	VIP_FLAG_HIDE = 1; // 隐藏状态
+}
+
+// 0表示普通登录，1表示通过游戏中心启动登录
+enum LoginWay
+{
+     COMMON_LOGIN     	= 0; // 通登录
+	 GAMECENTER_LOGIN   = 1; // 游戏中心启动登录
+}
+
+// 玩家通用
+message PlayerCommon
+{
+	optional VipFlag vipFlag = 1; // vip框显示状态(0显示1隐藏)
+	optional LoginWay loginWay = 2; //以什么方式启动
+	optional int32 svipLevel = 3; //超级会员(0就不传)
+	optional string serverId = 4; //玩家注册服的serverId
+	optional int32 officeId = 5; // 官职
+	repeated int32 personalProtectSwitch = 6; // 个保法开关
+	optional int32 starWarOfficeId = 7; // 统帅官司职
+}
+
+// 改变vip flag请求
+message ChangeVipFlagReq
+{
+	required VipFlag vipFlag = 1;
+}
+
+//使用头像或者头像框
+message UseImageOrCircle
+{ 
+	required ImageType type = 1; //类型 1:头像框 2:头像
+    required int32 id   = 2; //id
+}
+
+//头像显示类型
+message PlayerImageDisplayOption
+{
+    optional ImageDisPlayType displayPlatformPrivilegeImageCircle  = 1; //显示平台特权头像框
+	optional ImageDisPlayType displayNobleIdentify                 = 2; //显示贵族标识
+	optional ImageDisPlayType displayCircle                        = 3; //显示头像框
+	optional ImageDisPlayType displayChatCircle                    = 4; //显示聊天框
+}
+
+enum ImageDisPlayType
+{
+    VIEW                                               = 1; //显示
+	HIDDEN                                             = 2; //隐藏
+}
+
+// 头像（头像框）列表
+message PlayerImageOrCircleInfo{
+    repeated ImageOrCircleProperties infos          = 1;
+	required PlayerImageDisplayOption displayOption = 2;
+	optional string image_resource                  = 3; //玩家头像大图
+	optional string image_small                     = 4; //玩家头像小图
+}
+
+//头像框属性
+message ImageOrCircleProperties
+{
+     required ImageType type                   = 1; //类型 1:头像框 2:头像
+	 required int32 id                         = 2; //id
+	 required ImageUseProperties useType       = 3; //使用类型 1:默认 2:可使用 3:未获得 4:已使用
+}
+
+enum ImageType
+{ 
+     IMAGE      = 1; //头像
+	 CIRCLE     = 2; //头像框
+}
+
+//
+enum ImageUseProperties{
+     IMAGE_DEFAULT    = 1; //默认
+	 IMAGE_CANUSE     = 2; //可使
+	 IMAGE_NOTGAIN    = 3; //未获得
+	 IMAGE_INUSE      = 4; //正在使用
+}
+
+// 头像来源
+enum ImageSource
+{
+     FROMIM     = 1; //来自通讯软件平台
+	 FROMGAME   = 2; //来自红警OL
+}
+
+message reqOtherImage
+{
+     required string playerId    = 1; //玩家id
+}
+
+message resOtherResourceImage
+{
+     required string resource    = 1; //大图url
+}
+
+//跨服查看玩家的结构.
+message CrossPlayerStruct {
+	optional string serverId = 1 ;//玩家的注册区服ID
+	optional string playerId = 2; //玩家的id
+	optional string guildTag = 3;  //公会简称
+	optional string guildID = 4; // 公会ID，
+	optional string guildName = 5; // 公会名字
+	optional string pfIcon = 6; //pficon 这里的三段式需要特殊处理{#link RecallFriendPlayerMsg#pfIcon}
+	optional int32 icon = 7; //玩家的icon
+	optional int64 battlePoint = 8; //战力.
+	optional string name	 = 9; //玩家的名字.
+	optional int32 guildFlag = 10; //工会旗帜
+	optional string mainServerId = 11; //合服之后的主服,如果没有合服则是注册服.
+}
+
+// 账号注销
+message AccountCancellationReq
+{
+	required string name = 1; // 名字
+	required string num = 2; // 身份证号
+}
+
+message AccountCancellationResp
+{
+	required bool success = 1; // 是否成功
+	optional AccountCancellationState state = 2; // 状态
+	optional int64 cdRemain = 3; // cd剩余时间
+	optional int64 applicationTime = 4;  // 提交申请的时间
+}
+
+// 账号注销失败返回码
+enum AccountCancellationState
+{
+	CHECK_SUCCESS = 0; // 检测通过
+	CERTIFICATION_FAILED = 1; // 实名验证失败
+	PRESIDENT_FAILED = 2; // 国王不能注销
+	CROSS_FAILDE = 3; // 跨服不能注销
+	GUILD_LEADER_FAILED = 4; // 有联盟不能注销
+	REQ_CD_FAILED = 5; // cd状态
+}
+
+// 账号注销信息推送
+message AccountCancellationInfoPush
+{
+	required int64 cdRemainTime = 1; // cd剩余时间
+}

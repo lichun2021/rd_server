@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" unlockRecharge="0" buyCost="10000_1000_680" />
+      <data giftId="2" unlockRecharge="1960" buyCost="10000_1000_1200" />
+      <data giftId="3" unlockRecharge="5000" buyCost="10000_1000_2880" />
+      <data giftId="4" unlockRecharge="10000" buyCost="10000_1000_4880" />
+</root>

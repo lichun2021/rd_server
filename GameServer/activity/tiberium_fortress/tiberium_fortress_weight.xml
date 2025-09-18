@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="1" weight1="300" />
+      <data id="2" times="2" weight1="300" />
+      <data id="3" times="3" weight1="300" />
+      <data id="4" times="4" weight1="300" />
+      <data id="5" times="5" weight1="300" />
+      <data id="6" times="6" weight1="300" />
+      <data id="7" times="7" weight1="600" />
+      <data id="8" times="8" weight1="900" />
+      <data id="9" times="9" weight1="1200" />
+      <data id="10" times="10" weight1="1500" />
+      <data id="11" times="11" weight1="2000" />
+      <data id="12" times="12" weight1="2000" />
+</root>

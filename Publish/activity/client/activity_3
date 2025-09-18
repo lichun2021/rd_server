@@ -1,0 +1,16 @@
+return {
+	prop =
+	{
+		activityId = 3,
+		name = [[备战远征]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 航海远征一触即发，海量活动助您备战；<br/>2. 活动时间: 1月17日-1月23日；</font>]],
+		priority = 21060,
+		icon = [[Activity_Icon_08_Nor.png]],
+		selecticon = [[Activity_Icon_08_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20190108gchd/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20190108gchd/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20190108gchd/index.html]],
+	},
+
+}

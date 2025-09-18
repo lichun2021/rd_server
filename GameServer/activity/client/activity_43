@@ -1,0 +1,74 @@
+return {
+	prop =
+	{
+		activityId = 43,
+		name = [[复制中心]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，指挥官可选择已获得的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">荣耀</font>英雄送入复制中心。<br/>2. 复制必定获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1-10</font>个复制英雄的碎片，并且额外可获得其他道具奖励。<br/>3. 详细奖励内容指挥官可以返回活动页面查看奖励详情。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">注意：当前只有部分荣耀英雄可以复制。</font></font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">复制英雄概率公示：</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 获得1个碎片概率74%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 获得2个碎片概率15%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 获得3个碎片概率7%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 获得5个碎片概率3%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 获得10个碎片概率1%。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 芯片图纸数量3概率20%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 芯片图纸数量5概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 特级经验胶囊数量10概率20%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 极品经验胶囊数量10概率15%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 特级芯片强化器数量10概率20%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 极品芯片强化器数量10概率15%。</font>]],
+		priority = 20100,
+		icon = [[Activity_Icon_47_Nor.png]],
+		selecticon = [[Activity_Icon_47_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		costItem = [[30000_9990027_1]],
+		seniorCostItem = [[30000_9990027_1]],
+		itemPrice = [[10000_1001_600]],
+		seniorItemPrice = [[10000_1001_600]],
+		frequencyS = 80,
+		frequencySS = 80,
+		exReward = [[30000_840172_1]],
+	},
+	copy_center_activity = [[id	heroId	color	level	star
+1	1	1	1	1
+1	1112	0	0	0
+2	1111	0	0	0
+3	1110	0	0	0
+4	1109	0	0	0
+5	1108	0	0	0
+6	1107	0	0	0
+7	1106	0	0	0
+8	1105	0	0	0
+9	1104	0	0	0
+10	1103	0	0	0
+11	1102	0	0	0
+12	1101	0	0	0
+13	1100	0	0	0
+14	1099	0	0	0
+15	1098	0	0	0
+16	1096	0	0	0
+17	1095	0	0	0
+18	1094	0	0	0
+19	1093	0	0	0
+20	1092	0	0	0
+21	1090	0	0	0
+22	1089	0	0	0
+23	1088	0	0	0
+24	1086	0	0	0
+25	1083	0	0	0
+26	1081	0	0	0
+27	1078	0	0	0
+]],
+	copy_center_chip = [[id	chipNum	weight
+1	1	1
+1	1	7400
+2	2	1500
+3	3	700
+4	5	300
+5	10	100
+]],
+	copy_center_reward = [[id	type	rewards	weight
+1	1	2	1
+1	1	30000_800143_3	20
+2	1	30000_800143_5	20
+3	1	30000_1510004_10	10
+4	1	30000_1510005_10	20
+5	1	30000_13310004_10	20
+6	1	30000_13310005_10	10
+7	2	30000_800143_3	20
+8	2	30000_800143_5	10
+9	2	30000_1510004_10	20
+10	2	30000_1510005_10	15
+11	2	30000_13310004_10	20
+12	2	30000_13310005_10	15
+]],
+
+}

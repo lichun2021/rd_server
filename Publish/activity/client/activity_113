@@ -1,0 +1,28 @@
+return {
+	prop =
+	{
+		activityId = 113,
+		icon = [[Activity_Icon_113_Nor.png]],
+		selecticon = [[Activity_Icon_113_Sel.png]],
+		title = [[以下行为可获得积分]],
+		bigIcon = [[Activity_HellFire_u_Rendered_02.png]],
+		name = [[战地为王]],
+		priority = 10001,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间，将以联盟为单位，参与围绕<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟旗帜/联盟信标</font>进行的建造与摧毁的乐趣玩法。旗帜/信标越多奖励越丰厚。<br/>1.联盟旗帜会产出资源，建造完成的旗帜数量将作为解锁联盟信标的条件。(联盟旗帜和联盟信标需盟主和四位官员才可以建造/拆除)<br/>2.联盟信标会产出兑换道具，每个建造完成的信标可以报名30个获得道具的指挥官。<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">4个特殊信标会产出特殊兑换道具</font>，需要信标范围与盟军总部边缘接触或覆盖，生效时会有明显的烟花效果。摧毁敌盟并建造己盟的信标可以抢夺特殊产出资格。<br/>建造条件：<br/>建造联盟旗帜/联盟信标时，该旗帜的领地范围必须与已经建造完成的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟堡垒/联盟旗帜/联盟信标</font>领地范围<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">相连（不可覆盖）</font><br/>不可建造规则：<br/>建造联盟旗帜时，该旗帜不得放置在已经建造完成的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟堡垒/联盟旗帜/联盟信标</font>领地<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">范围内</font><br/>交战规则：<br/>摧毁敌方或防守己方的联盟旗帜/联盟信标时<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">我方联盟旗帜/联盟信标的领地必须与敌方联盟旗帜/联盟信标的领地相连/覆盖</font>才可以进攻敌方联盟旗帜。（顶部会有标识显示状态）<br/>联盟旗帜摧毁规则：<br/>1.占领敌方联盟旗帜时<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">攻守双方均为伤兵</font>（受限伤员中心数量）。<br/>2.我方部队进入到敌方联盟旗帜/联盟信标内则开始减少敌方旗帜的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">占领值</font>，当占领值达到0时该旗帜/信标被摧毁。（可建造数量返还给被摧毁联盟）<br/>3.占领值变为0之前占领方撤兵，占领值<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">保持当前数量</font>，任意可进行占领的联盟共享。防守方驻守部队可逐渐回复占领值。</font>]],
+		desc = [[排名奖励将在活动结束后通过邮件发放]],
+		descShow = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，将以联盟为单位进行<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">拥有旗帜总数排行</font>，获得旗帜最多的联盟，全员将获得丰厚奖励。<br/>2.旗帜增益属性：除继承了所有联盟领地属性外还有<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">大量资源收益</font>，旗帜越多收益越大。<br/>3.同期开放的战神降临活动奖励<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">SS级通用碎片</font>。</font>]],
+	},
+	activity_flagking_rank = [[id	rankUpper	rankLower	reward
+1	1	1	2
+1	1	1	30000_840003_150,30000_1510003_30,30000_13310003_30,30000_810001_30,30000_1480001_300,30000_840165_300,30000_800000_30
+2	2	2	30000_840003_90,30000_1510003_18,30000_13310003_18,30000_810001_18,30000_1480001_180,30000_840165_180,30000_800000_18
+3	3	3	30000_840003_60,30000_1510003_12,30000_13310003_12,30000_810001_12,30000_1480001_120,30000_840165_120,30000_800000_12
+4	4	6	30000_840003_45,30000_1510003_9,30000_13310003_9,30000_810001_9,30000_1480001_90,30000_840165_90,30000_800000_9
+5	7	10	30000_840003_30,30000_1510003_6,30000_13310003_6,30000_810001_6,30000_1480001_60,30000_840165_60,30000_800000_6
+]],
+	flagKing_showreward = [[id	reward
+1	2
+1	30000_810001_20,30000_1480001_200,30000_840165_200,30000_800000_20
+]],
+
+}

@@ -1,0 +1,30 @@
+return {
+	prop =
+	{
+		activityId = 77,
+		name = [[充值福利]],
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Microsoft YaHei" fontsize ="20">1. 活动期间指挥官充值金条达指定数量即可领取对应奖励；<br/>2. 活动期间首次充值满足任意条件即可领取额外奖励；<br/>3. 累计充值金条数满足宝箱条件即可领取宝箱对应奖励；<br/>4. 点击宝箱可查看宝箱奖励内容；<br/>5. 充值成就奖励每日重置，累计宝箱奖励为活动期间总的累计奖励；<br/>6 . 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励；<br/>注：累计金条数仅计算充值界面充值的金条数，赠送数量、每日必买、特权补给等直购礼包不计算累计金额</font>]],
+		priority = 20210,
+		icon = [[Activity_Icon_77_Nor.png]],
+		selecticon = [[Activity_Icon_77_Sel.png]],
+	},
+	preferential_surprise_achieve = [[achieveId	isFixed	configValue	rewards	gotoType	gotoValue	title
+1	1	1	2	1	2	2
+770001	0	60	30000_810001_10,30000_21070056_10,30000_21065001_5,30000_1782123_5,30000_1000005_1	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770002	0	300	30000_810001_20,30000_21070056_20,30000_21065001_10,30000_1782123_10,30000_1000005_1	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770003	0	1000	30000_810001_30,30000_21070056_30,30000_21065001_15,30000_1782123_15,30000_1000005_1	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770004	0	2000	30000_810001_40,30000_21070056_40,30000_21065001_20,30000_1782123_20,30000_1000005_2	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770005	0	3000	30000_810001_50,30000_21070056_50,30000_21065001_25,30000_1782123_25,30000_1000005_2	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770006	0	5000	30000_810001_60,30000_21070056_60,30000_21065001_30,30000_1782123_30,30000_1000005_3	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+770007	0	10000	30000_810001_90,30000_21070056_90,30000_21065001_45,30000_1782123_45,30000_1000005_5	1001	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计充值满<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>
+]],
+	preferential_surprise_score = [[achieveId	configValue	rewards	boxIconStart	boxIconClose	boxIconOpen
+1	1	2	2	2	2
+771001	1000	30000_1000005_6,30000_21070056_25,30000_1782124_36,30000_810001_30,30000_1780050_10	Chest_Lottery_06.png	Chest_Lottery_04.png	Chest_Lottery_05.png
+771002	6000	30000_1000005_12,30000_21070056_50,30000_1782124_72,30000_810001_60,30000_1780050_20	Chest_Lottery_06.png	Chest_Lottery_04.png	Chest_Lottery_05.png
+771003	20000	30000_1000005_18,30000_21070056_75,30000_1782124_108,30000_810001_90,30000_1780050_30	Chest_Lottery_06.png	Chest_Lottery_04.png	Chest_Lottery_05.png
+771004	60000	30000_1000005_40,30000_21070056_150,30000_1782124_360,30000_810001_300,30000_1780050_100	Chest_Lottery_06.png	Chest_Lottery_04.png	Chest_Lottery_05.png
+]],
+
+}

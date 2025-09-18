@@ -1,0 +1,15 @@
+return {
+	prop =
+	{
+		activityId = 53,
+		name = [[SS英雄宝箱]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1、点击下方"前往获取"按钮即可跳转到热销商品界面。<br/>2、SS自选英雄宝箱，商城限时出售。</font>]],
+		priority = 20040,
+		icon = [[Activity_Icon_53_Nor.png]],
+		selecticon = [[Activity_Icon_53_Sel.png]],
+		toType = 2,
+		serverDelay = 1209600,
+	},
+
+}

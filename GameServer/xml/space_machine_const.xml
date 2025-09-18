@@ -1,0 +1,54 @@
+# 子舱数量
+subcabinNum = 2
+
+# 玩家对各个玩法建筑行军最多队列数量
+maxMarchNum = 1
+
+# 阶段1首波敌军出发时间
+cabinFirstWaveTime = 0
+
+# 阶段1子舱首波敌军出发时间
+subcabinFirstWaveTime = 110
+
+# 阶段2首波敌军出发时间
+strongholdFirstWaveTime = 20
+
+# 阶段3Boss出发时间
+bossMarchTime = 30
+
+# 玩家行军速度
+marchTime = 10
+
+# 敌军行军速度
+enemyMarchTime = 30
+
+# 掉落宝箱同时采集人数
+boxGatherLimit = 1
+
+# 点位刷新距离主舱最小距离
+minRefreshDistance = 20
+
+# 活动期间主舱防守成功全员奖个人领取次数限制
+cabinwinAwardPersonLimit = 5
+
+# 活动期主舱间防守成功参与奖个人领取次数限制
+cabinPartiAwardPersonLimit = 5
+
+# 活动期间子舱防守成功参与奖个人领取次数限制
+subcabinPartiAwardPersonLimit = 10
+
+# 活动期间宝箱采集奖励个人获取次数限制
+boxAwardLimit = 15
+
+# 每次放置据点奖励领取次数限制
+strongholdAwardLimit = 10
+
+# 活动期间据点奖励个人领取总次数限制
+strongholdAwardPersonLimit = 50
+
+# 对舱体扣血比例
+damgeTransPara = 10000_10000
+
+# 联盟放置次数上限
+setLimitNum = 1000
+

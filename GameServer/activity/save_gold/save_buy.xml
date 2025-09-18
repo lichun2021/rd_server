@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" service="0" iosPayId="3220001" androidPayID="3220007" type="1" initialGoldValue="60" incremental="34" maxGoldValue="230" />
+      <data id="2" service="0" iosPayId="3220002" androidPayID="3220008" type="2" initialGoldValue="180" incremental="70" maxGoldValue="670" />
+      <data id="3" service="0" iosPayId="3220003" androidPayID="3220009" type="3" initialGoldValue="300" incremental="100" maxGoldValue="1100" />
+      <data id="4" service="0" iosPayId="3220004" androidPayID="3220010" type="4" initialGoldValue="500" incremental="55" maxGoldValue="1710" />
+      <data id="5" service="0" iosPayId="3220005" androidPayID="3220011" type="5" initialGoldValue="680" incremental="50" maxGoldValue="2180" />
+      <data id="6" service="0" iosPayId="3220006" androidPayID="3220012" type="6" initialGoldValue="980" incremental="75" maxGoldValue="3080" />
+      <data id="7" service="1" iosPayId="3220001" androidPayID="3220007" type="1" initialGoldValue="60" incremental="43" maxGoldValue="275" />
+      <data id="8" service="1" iosPayId="3220002" androidPayID="3220008" type="2" initialGoldValue="180" incremental="89" maxGoldValue="803" />
+      <data id="9" service="1" iosPayId="3220003" androidPayID="3220009" type="3" initialGoldValue="300" incremental="128" maxGoldValue="1324" />
+      <data id="10" service="1" iosPayId="3220004" androidPayID="3220010" type="4" initialGoldValue="500" incremental="71" maxGoldValue="2062" />
+      <data id="11" service="1" iosPayId="3220005" androidPayID="3220011" type="5" initialGoldValue="680" incremental="65" maxGoldValue="2630" />
+      <data id="12" service="1" iosPayId="3220006" androidPayID="3220012" type="6" initialGoldValue="980" incremental="97" maxGoldValue="3696" />
+</root>

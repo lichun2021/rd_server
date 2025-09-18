@@ -1,0 +1,39 @@
+option java_package	= "com.hawk.game.protocol";
+import "Army.proto";
+import "Player.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+// 援军信息
+message	HPAssistantMarchPB
+{
+	required string	uuid 		= 1;	//	行军id
+	required string	playerId	= 2;	//	军队的owner的playerId
+	required string	playerName	= 3;	//	军队的owner的playerName
+	required int32	icon		= 4;
+	required string guildTag	= 5;	//	军队的owner的联盟简称
+	repeated ArmySoldierPB armySoldier = 6;	 //	军队兵种信息
+	optional string pfIcon  = 7;        // 平台头像
+	repeated ArmyHeroPB hero = 8;       //军队英雄信息(建议使用heroList代替)
+	repeated PBHeroInfo	heroList	= 10; //英雄数据
+	optional PBSuperSoldierInfo ssoldier 	= 11;
+}
+
+// 联盟援助信息请求
+message	HPGuildAssistantReq
+{
+}
+
+// 联盟援助信息响应
+message	HPGuildAssistantResp
+{
+	required sint32	forces = 1;	//	援军总兵力
+	repeated HPAssistantMarchPB	marchList	= 2;	// 援军的具体信息
+}
+
+// 援助类行军撤军时通知被援助者
+message	AssistanceCallbackNotifyPB
+{
+	required string	marchId	= 1;
+}
+

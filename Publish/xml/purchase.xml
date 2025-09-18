@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" buyEnergyDiamonds="10000_1001_20" buyDungeonTimes="10000_1001_50" refreshcost="10000_1001_0" />
+      <data id="2" buyEnergyDiamonds="10000_1001_30" buyDungeonTimes="10000_1001_80" refreshcost="10000_1001_0" />
+      <data id="3" buyEnergyDiamonds="10000_1001_40" buyDungeonTimes="10000_1001_120" refreshcost="10000_1001_2" />
+      <data id="4" buyEnergyDiamonds="10000_1001_50" buyDungeonTimes="10000_1001_150" refreshcost="10000_1001_5" />
+      <data id="5" buyEnergyDiamonds="10000_1001_60" buyDungeonTimes="10000_1001_200" refreshcost="10000_1001_10" />
+      <data id="6" buyEnergyDiamonds="10000_1001_70" refreshcost="10000_1001_15" />
+      <data id="7" buyEnergyDiamonds="10000_1001_80" refreshcost="10000_1001_15" />
+      <data id="8" buyEnergyDiamonds="10000_1001_90" refreshcost="10000_1001_15" />
+      <data id="9" buyEnergyDiamonds="10000_1001_100" refreshcost="10000_1001_15" />
+      <data id="10" buyEnergyDiamonds="10000_1001_120" refreshcost="10000_1001_15" />
+      <data id="11" buyEnergyDiamonds="10000_1001_150" refreshcost="10000_1001_15" />
+      <data id="12" buyEnergyDiamonds="10000_1001_200" refreshcost="10000_1001_15" />
+      <data id="13" buyEnergyDiamonds="10000_1001_300" refreshcost="10000_1001_15" />
+      <data id="14" buyEnergyDiamonds="10000_1001_300" refreshcost="10000_1001_15" />
+      <data id="15" buyEnergyDiamonds="10000_1001_400" refreshcost="10000_1001_15" />
+      <data id="16" buyEnergyDiamonds="10000_1001_400" refreshcost="10000_1001_15" />
+      <data id="17" buyEnergyDiamonds="10000_1001_500" refreshcost="10000_1001_15" />
+      <data id="18" buyEnergyDiamonds="10000_1001_500" refreshcost="10000_1001_15" />
+      <data id="19" buyEnergyDiamonds="10000_1001_600" refreshcost="10000_1001_15" />
+      <data id="20" buyEnergyDiamonds="10000_1001_600" refreshcost="10000_1001_15" />
+      <data id="21" buyEnergyDiamonds="10000_1001_800" refreshcost="10000_1001_15" />
+      <data id="22" buyEnergyDiamonds="10000_1001_800" refreshcost="10000_1001_15" />
+      <data id="23" buyEnergyDiamonds="10000_1001_1000" refreshcost="10000_1001_15" />
+      <data id="24" buyEnergyDiamonds="10000_1001_1000" refreshcost="10000_1001_15" />
+      <data id="25" buyEnergyDiamonds="10000_1001_1200" refreshcost="10000_1001_15" />
+      <data id="26" buyEnergyDiamonds="10000_1001_1200" refreshcost="10000_1001_15" />
+      <data id="27" buyEnergyDiamonds="10000_1001_1200" refreshcost="10000_1001_15" />
+      <data id="28" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="29" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="30" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="31" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="32" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="33" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="34" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="35" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="36" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="37" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="38" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="39" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="40" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="41" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="42" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="43" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="44" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="45" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="46" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="47" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="48" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="49" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+      <data id="50" buyEnergyDiamonds="10000_1001_1500" refreshcost="10000_1001_15" />
+</root>

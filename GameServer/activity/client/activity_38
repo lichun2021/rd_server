@@ -1,0 +1,14 @@
+return {
+	prop =
+	{
+		activityId = 38,
+		name = [[战区争夺]],
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1.盟主或官员可以在报名阶段选择<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">2个战区</font>报名争夺。<br/>2.活动开启后，战区指挥部进入争夺阶段，报名参与战斗的联盟成员可以派遣部队攻占战区指挥部并驻守。<br/>3.在战斗阶段，连续驻守战区指挥部<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">30分钟</font>可以控制战区。<br/>4.战区争夺期间<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">不可退出联盟</font>。<br/>5.战区争夺攻防双方均为<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">伤员</font>。<br/>6.如联盟上期获得了某个战区的控制权，本期争夺中，联盟将自动报名参与该战区的争夺。<br/>7.自动报名与每期主动报名的2个战区名额不冲突，即联盟可以在自动报名的战区外，再报名2个其他战区，参与争夺。<br/>8.自动报名的战区数量不受限制，最多可以有8座。<br/>9.参与联盟在战区指挥部第一次胜利战斗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">(对玩家或者幽灵都有效)</font>的玩家可以获得先锋宝箱。<br/>10.联盟在战区指挥部获得第一次胜利，所有联盟成员都可获得占领宝箱。同时，联盟可以获得战士宝箱，可由盟主或官员分配给联盟成员。<br/>11.联盟成功控制战区后，所有联盟成员都可获得控制宝箱。同时，联盟可以获得特殊奖励，可由盟主或官员分给联盟成员。<br/>12.未分配的战士宝箱及特殊奖励<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">在控制阶段结束后清零</font>，请注意及时分配。<br/>13.战区每<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">6期</font>为一个赛季。赛季结束时，所有战区控制状态全部清除(新赛季第一期时没有自动报名)，并将会根据<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">联盟战区积分</font>进行段位结算和奖励发放。每期战区争夺结束时，联盟<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">每控制1个战区，获得1点战区积分</font>。一个赛季6期内，联盟获得的战区积分总和即本赛季联盟战区积分。</font>]],
+		priority = 10325,
+		icon = [[Activity_Icon_38_Nor.png]],
+		selecticon = [[Activity_Icon_38_Sel.png]],
+		bigIcon = [[Activity_SuperWeapon_u_Rendered.png]],
+	},
+
+}

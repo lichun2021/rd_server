@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100101" />
+      <data id="100102" />
+      <data id="100103" />
+      <data id="100201" frontTalent="100101_5|100102_5|100103_5" />
+      <data id="100202" frontTalent="100101_5|100102_5|100103_5" />
+      <data id="100203" frontTalent="100101_5|100102_5|100103_5" />
+      <data id="100301" frontTalent="100201_5|100202_5|100203_5" />
+      <data id="100302" frontTalent="100201_5|100202_5|100203_5" />
+      <data id="100303" frontTalent="100201_5|100202_5|100203_5" />
+      <data id="100401" frontTalent="100301_5|100302_5|100303_5" />
+      <data id="100402" frontTalent="100301_5|100302_5|100303_5" />
+      <data id="100403" frontTalent="100301_5|100302_5|100303_5" />
+      <data id="100501" frontTalent="100401_5|100402_5|100403_5" />
+      <data id="100502" frontTalent="100401_5|100402_5|100403_5" />
+      <data id="100503" frontTalent="100401_5|100402_5|100403_5" />
+</root>

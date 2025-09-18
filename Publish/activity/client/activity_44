@@ -1,0 +1,30 @@
+return {
+	prop =
+	{
+		activityId = 44,
+		name = [[藏宝图]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动时间前<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">7天</font>，每天开启一个持续时间为24小时的宝箱，指挥官在游戏内消耗的金币会以一定比例存入对应开启的宝箱内；<br/>2. 宝箱开启后<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">第8天</font>开始，玩家可领取存入对应宝箱中的金币数量；<br/>3. 各个宝箱存入的比例互相之间不影响；<br/>4. 同一宝箱当前金币的存入比例会随着玩家在该宝箱中开启期间消耗的金币数量增加而<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">变化</font>，但不会改变已经存入宝箱的比例；<br/>5. 金币存入的比例变化如下：<br/>（1）消耗金币0-30000按照<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font>比例存入；<br/>（2）消耗金币30001-50000按照<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">15%</font>存入；<br/>（3）50001-60000按照<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">10%</font>存入；<br/>（4）超过60000存入<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">0%</font>。</font>]],
+		priority = 20010,
+		icon = [[Activity_Icon_46_Nor.png]],
+		selecticon = [[Activity_Icon_46_Sel.png]],
+		bigIcon = [[Activity_Recharge_u_Rendered_04.png]],
+	},
+	activity_treasury = [[id	storageTime	storageMax	receiveTime	inedxPos
+1	1	1	1	1
+1	1	10000	8	1
+2	2	10000	9	2
+3	3	10000	10	3
+4	4	10000	11	4
+5	5	10000	12	5
+6	6	10000	13	6
+7	7	10000	14	7
+]],
+	activity_treasury_rate = [[id	min	max	rate
+1	1	1	1
+1	0	30000	2000
+2	30001	50000	1500
+3	50001	60000	1000
+]],
+
+}

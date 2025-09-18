@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" collegeLevel="1" collegeExp="12" collegeShopGrid="1" />
+      <data id="2" collegeLevel="2" collegeExp="13" collegeShopGrid="2" />
+      <data id="3" collegeLevel="3" collegeExp="14" collegeShopGrid="3" />
+      <data id="4" collegeLevel="4" collegeExp="15" collegeShopGrid="4" />
+      <data id="5" collegeLevel="5" collegeExp="16" collegeShopGrid="5" />
+      <data id="6" collegeLevel="6" collegeExp="17" collegeShopGrid="6" />
+      <data id="7" collegeLevel="7" collegeExp="18" collegeShopGrid="7" />
+      <data id="8" collegeLevel="8" collegeExp="19" collegeShopGrid="8" />
+      <data id="9" collegeLevel="9" collegeExp="20" collegeShopGrid="9" />
+      <data id="10" collegeLevel="10" collegeExp="21" collegeShopGrid="10" />
+      <data id="11" collegeLevel="11" collegeExp="22" collegeShopGrid="11" />
+      <data id="12" collegeLevel="12" collegeExp="23" collegeShopGrid="12" />
+      <data id="13" collegeLevel="13" collegeExp="200" collegeShopGrid="13" />
+</root>

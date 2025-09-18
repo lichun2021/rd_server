@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" cost="10000_1021_20" item="30000_802003_1" numLimit="500" />
+      <data id="2" cost="10000_1021_5" item="30000_800000_1" numLimit="1000" />
+      <data id="4" cost="10000_1021_20" item="30000_820002_1" numLimit="100" />
+      <data id="5" cost="10000_1021_10" item="30000_100050_1" numLimit="200" />
+      <data id="6" cost="10000_1021_50" item="30000_850009_1" numLimit="1000" />
+      <data id="7" cost="10000_1021_50" item="30000_850039_1" numLimit="1000" />
+      <data id="8" cost="10000_1021_50" item="30000_850019_1" numLimit="1000" />
+      <data id="9" cost="10000_1021_50" item="30000_850029_1" numLimit="1000" />
+      <data id="14" cost="10000_1021_5" item="30000_800002_1" numLimit="2000" />
+      <data id="15" cost="10000_1021_7500" item="30000_9271180_1" numLimit="1" limitSeason="5" />
+      <data id="16" cost="10000_1021_5000" item="30000_9271090_1" numLimit="1" limitSeason="5" />
+      <data id="17" cost="10000_1021_5" item="30000_802004_1" numLimit="2000" />
+</root>

@@ -1,0 +1,148 @@
+return {
+	prop =
+	{
+		activityId = 144,
+		typeName = [[@Activity144Tab]],
+		name = [[购物狂欢]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20"></font>包括4组主题，分别为节日登录、节日兑换、节日任务和节日礼包；<br/>2. 节日登录：活动期间累计登录即可领取奖励；<br/>3. 节日兑换：活动期间击败野外敌军和进行补给有几率获得兑换道具，可以用于兑换各类奖励内容；<br/>4. 节日任务：活动期间完成任务可以领取奖励，任务和奖励每日重置；<br/>5. 节日礼包：活动期间可以花费金条购买超值自选礼包；<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。</font>]],
+		priority = 10052,
+		icon = [[AssortTypeIcon_1100_18.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		exchangeItem = [[30000_1780311_1,30000_1780312_1,30000_1780313_1,30000_1780314_1]],
+	},
+	mid_autumn_achieve = [[achieveId	configValue	gotoType	gotoValue	rewards	title	tag
+1	1	1	2	2	2	1
+14311001	1	-1		30000_850008_1,30000_850038_1,30000_850018_1,30000_1620055_1,30000_850048_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>天</font>	1
+14311002	2	-1		30000_850008_2,30000_850038_2,30000_850018_2,30000_1620055_1,30000_850048_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>天</font>	1
+14311003	3	-1		30000_850009_1,30000_850039_1,30000_850019_1,30000_1620055_1,30000_850048_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>天</font>	1
+14311004	4	-1		30000_850009_2,30000_850039_2,30000_850019_2,30000_1620055_1,30000_850048_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>天</font>	1
+14311005	5	-1		30000_850009_2,30000_850039_2,30000_850019_2,30000_1620056_1,30000_850048_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>天</font>	1
+14330001	20	200	2_0	30000_1300017_50,30000_802004_50,30000_1480001_100,30000_1780045_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败任意等级野外敌军<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>	3
+14330002	40	200	2_0	30000_1300017_100,30000_802004_100,30000_1480001_200,30000_1780045_4	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败任意等级野外敌军<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>	3
+14330003	80	200	2_0	30000_1300017_150,30000_802004_150,30000_1480001_300,30000_1780045_6,30000_100050_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败任意等级野外敌军<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>	3
+14330004	1000000	31	1_1_1007	30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">采集矿石或石油<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>点</font>	3
+14330005	2000000	31	1_1_1007	30000_850008_4,30000_850038_4,30000_850018_4,30000_850028_4	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">采集矿石或石油<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>点</font>	3
+14330006	4000000	31	1_1_1007	30000_850008_6,30000_850038_6,30000_850018_6,30000_850028_6,30000_100050_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">采集矿石或石油<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>点</font>	3
+14330007	3	31	16_1	30000_800002_50,30000_802004_50,30000_802005_50,30000_1780045_2,30000_100050_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">集结战胜幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>	3
+14330008	1000	23	2012	30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个</font>	3
+14330009	3000	23	2012	30000_850008_4,30000_850038_4,30000_850018_4,30000_850028_4	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个</font>	3
+14330010	5000	23	2012	30000_850008_6,30000_850038_6,30000_850018_6,30000_850028_6,30000_100050_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个</font>	3
+14330011	3000	-1		30000_100050_2,30000_101050_4,30000_104050_4,30000_103050_4,30000_105050_3	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">使用道具加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>分钟</font>	3
+14330012	300	1001	1	30000_1000005_2,30000_802004_88,30000_802005_88,30000_1300017_200,30000_1780050_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>	3
+]],
+	mid_autumn_adddrop = [[id	priority	funcType	name	des	icon	gotoType	gotoValue	dropParam	dropId	mailId
+1	1	1	2	2	2	1	2	1	1	1
+300	1	300	击败敌军	击败野外敌军有概率获得活动道具	V3Activity_Icon_Mission_05.png	200	2_0	1	2930021	20181033
+400	2	400	补给	请求补给有概率获得活动道具	V3Activity_Icon_Mission_03.png	203		1	2930022	20181033
+]],
+	mid_autumn_exchange = [[id	priority	des	needItem	gainItem	maxTime
+1	1	2	2	2	1
+1	1	超武材料福袋	30000_1780311_2,30000_1780312_2	30000_1780315_1	20
+2	2	星能福袋	30000_1780311_2,30000_1780313_2	30000_1780316_1	20
+3	3	星耀勋章福袋	30000_1780311_2,30000_1780314_2	30000_1780317_1	20
+4	4	兑换奖励	30000_1780311_1	30000_850054_1	999
+5	5	兑换奖励	30000_1780312_1	30000_1780040_1	999
+6	6	兑换奖励	30000_1780313_1	30000_810012_1	999
+7	7	兑换奖励	30000_1780314_1	30000_810010_1	999
+]],
+	mid_autumn_gift = [[giftId	chooseItems	cost	showScript
+1	1	2	2
+1	5	10000_1000_60	节日礼包一
+2	5	10000_1000_300	节日礼包二
+3	5	10000_1000_680	节日礼包三
+4	5	10000_1000_1280	节日礼包四
+5	5	10000_1000_3280	节日礼包五
+6	5	10000_1000_6480	节日礼包六
+]],
+	mid_autumn_reward = [[id	giftId	reward
+1	1	2
+1	1	30000_850009_2
+2	1	30000_850039_2
+3	1	30000_850019_2
+4	1	30000_850029_2
+5	1	30000_101050_2
+6	1	30000_104050_2
+7	1	30000_103050_2
+8	1	30000_105050_2
+9	1	30000_1300017_40
+10	1	30000_1610001_1
+11	1	30000_1800000_40
+12	1	30000_800000_10
+13	1	30000_1000003_2
+14	1	30000_800002_20
+15	1	30000_9990052_2
+16	1	30000_802005_30
+17	2	30000_1780050_10
+18	2	30000_100050_10
+19	2	30000_1300017_100
+20	2	30000_1800000_100
+21	2	30000_1480001_200
+22	2	30000_840194_100
+23	2	30000_800000_50
+24	2	30000_1610001_5
+25	2	30000_1782103_30
+26	2	30000_802004_15
+27	2	30000_800002_30
+28	2	30000_21063005_15
+29	2	30000_9990052_3
+30	2	30000_802005_50
+31	3	30000_1780050_20
+32	3	30000_100050_20
+33	3	30000_1300017_200
+34	3	30000_1800000_200
+35	3	30000_1480001_400
+36	3	30000_840194_200
+37	3	30000_800000_100
+38	3	30000_1610002_5
+39	3	30000_1782103_60
+40	3	30000_802004_30
+41	3	30000_800002_60
+42	3	30000_21063005_30
+43	3	30000_9990052_7
+44	3	30000_802005_110
+45	4	30000_1780050_40
+46	4	30000_100050_40
+47	4	30000_1300017_400
+48	4	30000_1800000_400
+49	4	30000_1480001_800
+50	4	30000_840194_400
+51	4	30000_800000_200
+52	4	30000_1610002_10
+53	4	30000_1782103_120
+54	4	30000_802004_60
+55	4	30000_800002_120
+56	4	30000_21063005_60
+57	4	30000_9990042_28
+58	4	30000_802005_200
+59	5	30000_1780050_50
+60	5	30000_100050_50
+61	5	30000_1300017_1200
+62	5	30000_1800000_1200
+63	5	30000_1480001_2400
+64	5	30000_840194_1200
+65	5	30000_800000_600
+66	5	30000_1610004_4
+67	5	30000_1782103_300
+68	5	30000_802004_150
+69	5	30000_800002_300
+70	5	30000_21063005_150
+71	5	30000_9990042_68
+72	5	30000_802005_500
+73	6	30000_1780050_100
+74	6	30000_100050_100
+75	6	30000_1300017_2000
+76	6	30000_1800000_2000
+77	6	30000_1480001_4000
+78	6	30000_840194_2000
+79	6	30000_800000_1000
+80	6	30000_1610004_10
+81	6	30000_1782103_600
+82	6	30000_802004_300
+83	6	30000_800002_600
+84	6	30000_21063005_300
+85	6	30000_9990042_136
+86	6	30000_802005_1000
+]],
+
+}

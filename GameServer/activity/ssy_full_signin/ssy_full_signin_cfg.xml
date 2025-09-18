@@ -1,0 +1,36 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 签到系数（默认签到一次增加多少）
+signinfactorQQ = 1
+
+# 签到系数（默认签到一次增加多少）
+signinfactorWX = 1
+
+# 签到注水基数(活动开始直接注入)
+signinAssistBaseQQ = 0
+
+# 签到注水基数(活动开始直接注入)
+signinAssistBaseWX = 0
+
+# 定时注水
+signinAssistIntervalQQ = 0_3600_60_1675,3600_86400_60_207,86400_90000_60_1675,90000_172800_60_207,172800_176400_60_1675,176400_259200_60_207,259200_262800_60_1675,262800_345600_60_207,345600_349200_60_1675,349200_432000_60_207,432000_435600_60_1675,435600_518400_60_207,518400_522000_60_1675,522000_604800_60_207,604800_608400_60_1675,608400_669600_60_295
+
+# 定时注水
+signinAssistIntervalWX = 0_3600_60_1675,3600_86400_60_207,86400_90000_60_1675,90000_172800_60_207,172800_176400_60_1675,176400_259200_60_207,259200_262800_60_1675,262800_345600_60_207,345600_349200_60_1675,349200_432000_60_207,432000_435600_60_1675,435600_518400_60_207,518400_522000_60_1675,522000_604800_60_207,604800_608400_60_1675,608400_669600_60_295
+
+# 数据刷新（秒）
+refreshTime = 30
+
+# 每次签到奖励（固定）
+signRewards = 30000_810001_5,30000_24200039_200
+
+# 每次签到随机奖励
+randomRewards = 2021121
+
+# 默认打开界面推送多少弹幕
+bulletChatCount = 30
+
+# 祈福语库
+blessingWords = @Bless1,@Bless2,@Bless3,@Bless4,@Bless6,@Bless7,@Bless8,@Bless9,@Bless10,@Bless11,@Bless12,@Bless14,@Bless15,@Bless16,@Bless17,@Bless18,@Bless19,@Bless20,@Bless22,@Bless23,@Bless24,@Bless25,@Bless26,@Bless28,@Bless29,@Bless30,@Bless31,@Bless32,@Bless33,@Bless34,@Bless35,@Bless36,@Bless37,@Bless38,@Bless39,@Bless40,@Bless41,@Bless42,@Bless43,@Bless44,@Bless45,@Bless46,@Bless47,@Bless48,@Bless49,@Bless50,@Bless51,@Bless52,@Bless53,@Bless54,@Bless55,@Bless56,@Bless57,@Bless58,@Bless59,@Bless60,@Bless61,@Bless62,@Bless63,@Bless64,@Bless65,@Bless66,@Bless67,@Bless68,@Bless69,@Bless70,@Bless71,@Bless72,@Bless73,@Bless74,@Bless75,@Bless76,@Bless77,@Bless78,@Bless79,@Bless80,@Bless81,@Bless82,@Bless83,@Bless84,@Bless85,@Bless86,@Bless87,@Bless88,@Bless89,@Bless90,@Bless91,@Bless92,@Bless93,@Bless94,@Bless95,@Bless96,@Bless97,@Bless98,@Bless99,@Bless100,@Bless101,@Bless102,@Bless103,@Bless104,@Bless105,@Bless106,@Bless107,@Bless108,@Bless109,@Bless110,@Bless111,@Bless112,@Bless113,@Bless114,@Bless115,@Bless116,@Bless117,@Bless118,@Bless119,@Bless120,@Bless121,@Bless122,@Bless123,@Bless124,@Bless125,@Bless126,@Bless127,@Bless128,@Bless129,@Bless130,@Bless131,@Bless132,@Bless133,@Bless134,@Bless135,@Bless136,@Bless137,@Bless138,@Bless139,@Bless140,@Bless141,@Bless142,@Bless143,@Bless144,@Bless145,@Bless146,@Bless147,@Bless148,@Bless149,@Bless150
+

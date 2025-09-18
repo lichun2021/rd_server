@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2019-9-12 00:00:00" startTime="2019-9-12 00:00:00" endTime="2019-9-18 23:59:59" hiddenTime="2019-9-18 23:59:59" />
+      <data termId="2" showTime="2019-10-1 00:00:00" startTime="2019-10-1 00:00:00" endTime="2019-10-7 23:59:59" hiddenTime="2019-10-7 23:59:59" />
+      <data termId="3" showTime="2019-11-28 00:00:00" startTime="2019-11-28 00:00:00" endTime="2019-12-4 23:59:59" hiddenTime="2019-12-4 23:59:59" />
+      <data termId="4" showTime="2019-12-25 00:00:00" startTime="2019-12-25 00:00:00" endTime="2020-1-1 23:59:59" hiddenTime="2020-1-1 23:59:59" />
+      <data termId="5" showTime="2020-1-24 00:00:00" startTime="2020-1-24 00:00:00" endTime="2020-1-30 23:59:59" hiddenTime="2020-1-30 23:59:59" />
+      <data termId="6" showTime="2020-5-1 00:00:00" startTime="2020-5-1 00:00:00" endTime="2020-5-7 23:59:59" hiddenTime="2020-5-7 23:59:59" />
+      <data termId="7" showTime="2020-8-14 00:00:00" startTime="2020-8-14 00:00:00" endTime="2020-8-20 23:59:59" hiddenTime="2020-8-20 23:59:59" />
+      <data termId="8" showTime="2020-10-24 00:00:00" startTime="2020-10-24 00:00:00" endTime="2020-10-30 23:59:59" hiddenTime="2020-10-30 23:59:59" />
+      <data termId="9" showTime="2020-11-26 00:00:00" startTime="2020-11-26 00:00:00" endTime="2020-12-3 23:59:59" hiddenTime="2020-12-3 23:59:59" />
+      <data termId="10" showTime="2020-12-25 00:00:00" startTime="2020-12-25 00:00:00" endTime="2021-1-1 23:59:59" hiddenTime="2021-1-1 23:59:59" />
+      <data termId="11" showTime="2021-2-11 00:00:00" startTime="2021-2-11 00:00:00" endTime="2021-2-18 23:59:59" hiddenTime="2021-2-18 23:59:59" />
+      <data termId="12" showTime="2021-4-3 00:00:00" startTime="2021-4-3 00:00:00" endTime="2021-4-10 23:59:59" hiddenTime="2021-4-10 23:59:59" />
+      <data termId="13" showTime="2021-5-1 00:00:00" startTime="2021-5-1 00:00:00" endTime="2021-5-8 23:59:59" hiddenTime="2021-5-8 23:59:59" />
+      <data termId="14" showTime="2021-7-16 00:00:00" startTime="2021-7-16 00:00:00" endTime="2021-7-23 23:59:59" hiddenTime="2021-7-23 23:59:59" />
+      <data termId="15" showTime="2021-8-14 00:00:00" startTime="2021-8-14 00:00:00" endTime="2021-8-21 23:59:59" hiddenTime="2021-8-21 23:59:59" />
+      <data termId="16" showTime="2021-10-1 00:00:00" startTime="2021-10-1 00:00:00" endTime="2021-10-8 23:59:59" hiddenTime="2021-10-8 23:59:59" />
+      <data termId="17" showTime="2021-10-17 00:00:00" startTime="2021-10-17 00:00:00" endTime="2021-10-24 23:59:59" hiddenTime="2021-10-24 23:59:59" />
+      <data termId="18" showTime="2021-11-25 00:00:00" startTime="2021-11-25 00:00:00" endTime="2021-12-2 23:59:59" hiddenTime="2021-12-2 23:59:59" />
+</root>

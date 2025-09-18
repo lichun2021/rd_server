@@ -1,0 +1,39 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 每圈最终奖励
+finalAward = 30000_21062499_1
+
+# 普通骰子道具ID
+ordinaryDiceId = 21061001
+
+# 普通骰子售卖价格
+ordinaryDicePrice = 10000_1001_50
+
+# 普通骰子售卖每日上限
+ordinaryDiceLimit = 10
+
+# 遥控骰子道具ID
+controlDiceId = 21061002
+
+# 遥控骰子售卖价格
+controlDicePrice = 10000_1000_50
+
+# 遥控骰子售卖每日上限
+controlDiceLimit = 80
+
+# 每次投掷最大点数
+pointLimit = 6
+
+# 通行证直购ID,安卓_苹果
+payId = 710007_700007
+
+# 奖励池显示顺序
+displayOrder = 1_2_3_4_5_6
+
+# 一键跑图消耗
+oneConsume = 30000_21061001_10,30000_21061002_3
+
+# 一键跑图次数上限
+oneTimeLimit = 100
+

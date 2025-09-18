@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data skillId="10001" isTalentSkill="1" skillType="1" skillQuality="1" officeId="10101" attrId="102" effectList="301_0_50" powerCoeff="100_40" marchUsed="0" />
+      <data skillId="10002" isTalentSkill="1" skillType="1" skillQuality="1" officeId="10101" attrId="102" effectList="320_0_50" powerCoeff="100_40" marchUsed="0" />
+      <data skillId="10003" isTalentSkill="1" skillType="1" skillQuality="1" officeId="10101" attrId="102" effectList="400_0_10" powerCoeff="100_40" marchUsed="0" />
+      <data skillId="10004" isTalentSkill="1" skillType="1" skillQuality="1" officeId="10101" attrId="102" effectList="1306_0_50" powerCoeff="100_40" marchUsed="0" />
+      <data skillId="20001" isTalentSkill="1" skillType="1" skillQuality="2" attrId="101" effectList="1011_0_35" powerCoeff="150_60" marchUsed="1" />
+      <data skillId="20002" isTalentSkill="1" skillType="1" skillQuality="2" attrId="101" effectList="1019_0_35" powerCoeff="150_60" marchUsed="1" />
+      <data skillId="20003" isTalentSkill="1" skillType="1" skillQuality="2" attrId="101" effectList="1307_0_15" powerCoeff="150_60" marchUsed="1" />
+      <data skillId="20004" isTalentSkill="1" skillType="1" skillQuality="2" attrId="101" effectList="1303_0_15" powerCoeff="150_60" marchUsed="1" />
+      <data skillId="30001" isTalentSkill="1" skillType="1" skillQuality="3" attrId="101" effectList="1007_0_100" powerCoeff="400_100" marchUsed="1" />
+      <data skillId="30002" isTalentSkill="1" skillType="1" skillQuality="3" attrId="101" effectList="1008_0_100" powerCoeff="400_100" marchUsed="1" />
+      <data skillId="30003" isTalentSkill="1" skillType="1" skillQuality="3" attrId="101" effectList="194_0_50|195_0_50" powerCoeff="400_100" marchUsed="1" />
+      <data skillId="30004" isTalentSkill="1" skillType="1" skillQuality="3" attrId="101" effectList="1305_0_25" powerCoeff="400_100" marchUsed="1" />
+      <data skillId="40001" isTalentSkill="1" skillType="1" skillQuality="4" attrId="101" effectList="1006_0_50" powerCoeff="400_200" marchUsed="1" />
+      <data skillId="40002" isTalentSkill="1" skillType="1" skillQuality="4" attrId="101" effectList="1005_0_50" powerCoeff="400_200" marchUsed="1" />
+      <data skillId="40003" isTalentSkill="1" skillType="1" skillQuality="4" attrId="101" effectList="1416_0_50" powerCoeff="400_200" marchUsed="1" />
+      <data skillId="40004" isTalentSkill="1" skillType="1" skillQuality="4" attrId="101" effectList="1417_0_50" powerCoeff="400_200" marchUsed="1" />
+      <data skillId="50001" isTalentSkill="1" skillType="1" skillQuality="5" attrId="101" effectList="1004_0_60" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="50002" isTalentSkill="1" skillType="1" skillQuality="5" attrId="101" effectList="1020_0_60" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="50003" isTalentSkill="1" skillType="1" skillQuality="5" attrId="101" effectList="1308_0_20" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="50004" isTalentSkill="1" skillType="1" skillQuality="5" attrId="101" effectList="1309_0_20" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="60001" isTalentSkill="1" skillType="1" skillQuality="6" attrId="101" effectList="1009_0_75" powerCoeff="375_150" marchUsed="1" />
+      <data skillId="60002" isTalentSkill="1" skillType="1" skillQuality="6" attrId="101" effectList="1017_0_75" powerCoeff="375_150" marchUsed="1" />
+      <data skillId="60003" isTalentSkill="1" skillType="1" skillQuality="6" attrId="101" effectList="1310_0_30" powerCoeff="375_150" marchUsed="1" />
+      <data skillId="60004" isTalentSkill="1" skillType="1" skillQuality="6" attrId="101" effectList="1311_0_30" powerCoeff="375_150" marchUsed="1" />
+      <data skillId="70001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="7" attrId="101" effectList="1004_0_90" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="70002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="7" attrId="101" effectList="1020_0_90" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="70003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="7" attrId="101" effectList="1308_0_20|1312_0_1" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="70004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="7" attrId="101" effectList="1309_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="80001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="8" attrId="101" effectList="1313_0_20" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="80002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="8" attrId="101" effectList="1008_0_130" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="80003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="8" attrId="101" effectList="194_0_55|195_0_55" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="80004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="8" attrId="101" effectList="1314_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="90001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="9" attrId="101" effectList="1006_0_80" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="90002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="9" attrId="101" effectList="1315_0_1" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="90003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="9" attrId="101" effectList="1316_0_55" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="90004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="9" attrId="101" effectList="1317_0_55" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="100001" isTalentSkill="1" skillType="1" skillQuality="10" attrId="101" effectList="1318_0_30" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="100002" isTalentSkill="1" skillType="1" skillQuality="10" attrId="101" effectList="1319_0_15" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="100003" isTalentSkill="1" skillType="1" skillQuality="10" attrId="101" effectList="1018_0_25" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="100004" isTalentSkill="1" skillType="1" skillQuality="10" attrId="101" effectList="1026_0_50" powerCoeff="200_80" marchUsed="1" />
+      <data skillId="110001" isTalentSkill="1" skillType="1" skillQuality="11" attrId="101" effectList="1011_0_90" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="110002" isTalentSkill="1" skillType="1" skillQuality="11" attrId="101" effectList="1019_0_55" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="110003" isTalentSkill="1" skillType="1" skillQuality="11" attrId="101" effectList="1307_0_15|1320_0_15" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="110004" isTalentSkill="1" skillType="1" skillQuality="11" attrId="101" effectList="1303_0_17" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="120001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="12" attrId="101" effectList="1007_0_130" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="120002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="12" attrId="101" effectList="1321_0_100" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="120003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="12" attrId="101" effectList="194_0_55|195_0_55" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="120004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="12" attrId="101" effectList="1305_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="130001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="13" attrId="101" effectList="1009_0_75" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="130002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="13" attrId="101" effectList="1017_0_75" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="130003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="13" attrId="101" effectList="1310_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="130004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="13" attrId="101" effectList="1311_0_30|1626_0_15" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="140001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="14" attrId="101" effectList="1318_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="140002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="14" attrId="101" effectList="1319_0_15|1633_0_1" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="140003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="14" attrId="101" effectList="1018_0_25" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="140004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="14" attrId="101" effectList="1026_0_50" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="150001" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="15" attrId="101" effectList="1005_0_80" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="150002" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="15" attrId="101" effectList="1322_0_1" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="150003" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="15" attrId="101" effectList="1323_0_30" powerCoeff="400_180" marchUsed="1" />
+      <data skillId="150004" iniLevel="60" isTalentSkill="1" skillType="1" skillQuality="15" attrId="101" effectList="1324_0_30" powerCoeff="400_180" marchUsed="1" />
+</root>

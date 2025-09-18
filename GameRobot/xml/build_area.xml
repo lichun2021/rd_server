@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" unlockrankLevel="15" blocks="1,2,3,4,5" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="2" unlockrankLevel="10" blocks="6,7,8,9,10" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="3" unlockrankLevel="5" blocks="11,12,13,14,15" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="4" unlockrankLevel="1" blocks="16,17,18,19,20" buildType="2101,2102,2103,2104,2026,2216" click="0" difference="0" />
+      <data id="5" unlockrankLevel="1" blocks="21,22,23,24,25" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="6" unlockrankLevel="2" blocks="26,27,28,29,30" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="7" unlockrankLevel="1" blocks="31,32,33,34,35" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="0" />
+      <data id="8" unlockrankLevel="15" blocks="36,37,38,39,40" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="1" />
+      <data id="9" unlockrankLevel="15" blocks="41,42,43,44,45" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="1" />
+      <data id="10" unlockrankLevel="15" blocks="46,47,48,49,50" buildType="2101,2102,2103,2104,2026,2216" click="1" difference="1" />
+</root>

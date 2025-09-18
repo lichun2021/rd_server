@@ -1,0 +1,81 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 基地等级
+baseLimit = 15
+
+# 跨服服务器数量
+serverNumber = 6
+
+# 每日最多普通货车发车次数
+truckNumber = 4
+
+# 联盟每日最多普通列车发车次数
+allianceCommonTrainNumber = 20
+
+# 联盟每日最多豪华列车发车次数
+allianceSpecialTrainNumber = 20
+
+# 个人每日普通联盟列车参与次数
+trainNumber = 1
+
+# 个人每日豪华联盟列车参与次数
+specialTrainNumber = 1
+
+# 普通货车刷新消耗（三段式）
+truckRefreshCost = 30000_1375001_1
+
+# 联盟列车刷新消耗（三段式）
+trainRefreshCost = 30000_1375001_1
+
+# 召唤豪华列车消耗
+SpecialTrainCost = 30000_1375002_1
+
+# 豪华列车支付ID（安卓）
+androidPayId = 3750001
+
+# 豪华列车支付ID（ios）
+iosPayId = 3750101
+
+# 每日普通货车抢夺次数
+truckRobNumber = 3
+
+# 每日联盟列车抢夺次数
+trainRobNumber = 2
+
+# 货车最多被抢次数
+truckRobbedNumber = 2
+
+# 列车最多被抢次数
+trainRobbedNumber = 2
+
+# 联盟普通车车头奖励
+commonTrainReward = 30000_820002_10,30000_100050_20,30000_1780050_20
+
+# 联盟豪华车车头奖励
+specialTrainReward = 30000_21070057_8000,30000_820002_100,30000_100050_200
+
+# 联盟最大同时集结数量
+allianceRobMaxLimit = 5
+
+# 联盟列车车厢人数
+trainCarryNumber = 2
+
+# 联盟列车准备时间（秒）
+trainPrepareTime = 600
+
+# 集结时长（秒）
+allianceRobTime = 300
+
+# 刷新券金币购买
+buyRefreshCost = 10000_1001_50
+
+# 单人车刷新次数上限
+truckRefreshLimit = 20
+
+# 联盟普通车车厢刷新上限
+commonTrainRefresLimit = 20
+
+# 联盟豪华车车厢刷新上限
+specialTrainRefreshLimit = 20
+

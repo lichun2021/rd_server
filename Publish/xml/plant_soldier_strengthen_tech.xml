@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="411100" soldierType="1" group="1" techId="111" techLevel="0" battlePoint="0" />
+      <data id="411101" soldierType="1" group="1" techId="111" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1926_12800|1934_25100" battlePoint="30000" baseAtkAttr="1_100" />
+      <data id="411200" soldierType="1" group="1" techId="112" techLevel="0" battlePoint="0" />
+      <data id="411201" soldierType="1" group="1" techId="112" techLevel="1" frontTech="411101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1934_25100|1942_10400" battlePoint="30000" baseHpAttr="1_100" />
+      <data id="411300" soldierType="1" group="1" techId="113" techLevel="0" battlePoint="0" />
+      <data id="411301" soldierType="1" group="1" techId="113" techLevel="1" frontTech="411101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1926_12800|1942_10400" battlePoint="30000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="411400" soldierType="1" group="1" techId="114" techLevel="0" battlePoint="0" />
+      <data id="411401" soldierType="1" group="1" techId="114" techLevel="1" frontTech="411201;411301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1926_12800|1934_25100|1942_10400" battlePoint="30000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="411500" soldierType="1" group="1" techId="115" techLevel="0" battlePoint="0" />
+      <data id="411501" soldierType="1" group="1" techId="115" techLevel="1" frontTech="411401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1926_25600|1934_50200|1942_20800" battlePoint="30000" baseAtkAttr="1_200" baseHpAttr="1_200" />
+      <data id="412100" soldierType="1" group="2" techId="121" techLevel="0" battlePoint="0" />
+      <data id="412101" soldierType="1" group="2" techId="121" techLevel="1" frontTech="411501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1926_12800|1934_25100" battlePoint="36000" baseAtkAttr="1_100" />
+      <data id="412200" soldierType="1" group="2" techId="122" techLevel="0" battlePoint="0" />
+      <data id="412201" soldierType="1" group="2" techId="122" techLevel="1" frontTech="412101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1934_25100|1942_10400" battlePoint="36000" baseHpAttr="1_100" />
+      <data id="412300" soldierType="1" group="2" techId="123" techLevel="0" battlePoint="0" />
+      <data id="412301" soldierType="1" group="2" techId="123" techLevel="1" frontTech="412201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1926_12800|1942_10400" battlePoint="36000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="412400" soldierType="1" group="2" techId="124" techLevel="0" battlePoint="0" />
+      <data id="412401" soldierType="1" group="2" techId="124" techLevel="1" frontTech="412301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1926_12800|1934_25100|1942_10400" battlePoint="36000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="412500" soldierType="1" group="2" techId="125" techLevel="0" battlePoint="0" />
+      <data id="412501" soldierType="1" group="2" techId="125" techLevel="1" frontTech="412401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1926_25600|1934_50200|1942_20800" battlePoint="36000" baseAtkAttr="1_200" baseHpAttr="1_200" />
+      <data id="413100" soldierType="1" group="3" techId="131" techLevel="0" battlePoint="0" />
+      <data id="413101" soldierType="1" group="3" techId="131" techLevel="1" frontTech="412501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1926_12800|1934_25100" battlePoint="42000" baseAtkAttr="1_100" />
+      <data id="413200" soldierType="1" group="3" techId="132" techLevel="0" battlePoint="0" />
+      <data id="413201" soldierType="1" group="3" techId="132" techLevel="1" frontTech="412501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1934_25100|1942_10400" battlePoint="42000" baseHpAttr="1_100" />
+      <data id="413300" soldierType="1" group="3" techId="133" techLevel="0" battlePoint="0" />
+      <data id="413301" soldierType="1" group="3" techId="133" techLevel="1" frontTech="412501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1926_12800|1942_10400" battlePoint="42000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="413400" soldierType="1" group="3" techId="134" techLevel="0" battlePoint="0" />
+      <data id="413401" soldierType="1" group="3" techId="134" techLevel="1" frontTech="413101;413201;413301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1926_12800|1934_25100|1942_10400" battlePoint="42000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="413500" soldierType="1" group="3" techId="135" techLevel="0" battlePoint="0" />
+      <data id="413501" soldierType="1" group="3" techId="135" techLevel="1" frontTech="413401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1926_25600|1934_50200|1942_20800" battlePoint="42000" baseAtkAttr="1_200" baseHpAttr="1_200" />
+      <data id="414100" soldierType="1" group="4" techId="141" techLevel="0" battlePoint="0" />
+      <data id="414101" soldierType="1" group="4" techId="141" techLevel="1" frontTech="413501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1926_12800|1934_25100" battlePoint="48000" baseAtkAttr="1_100" />
+      <data id="414200" soldierType="1" group="4" techId="142" techLevel="0" battlePoint="0" />
+      <data id="414201" soldierType="1" group="4" techId="142" techLevel="1" frontTech="413501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1934_25100|1942_10400" battlePoint="48000" baseHpAttr="1_100" />
+      <data id="414300" soldierType="1" group="4" techId="143" techLevel="0" battlePoint="0" />
+      <data id="414301" soldierType="1" group="4" techId="143" techLevel="1" frontTech="414101;414201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1926_12800|1942_10400" battlePoint="48000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="414400" soldierType="1" group="4" techId="144" techLevel="0" battlePoint="0" />
+      <data id="414401" soldierType="1" group="4" techId="144" techLevel="1" frontTech="414301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1926_12800|1934_25100|1942_10400" battlePoint="48000" baseAtkAttr="1_100" baseHpAttr="1_100" />
+      <data id="414500" soldierType="1" group="4" techId="145" techLevel="0" battlePoint="0" />
+      <data id="414501" soldierType="1" group="4" techId="145" techLevel="1" frontTech="414401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1926_25600|1934_50200|1942_20800" battlePoint="48000" baseAtkAttr="1_200" baseHpAttr="1_200" />
+      <data id="415500" soldierType="1" group="5" techId="155" techLevel="0" battlePoint="0" />
+      <data id="415501" soldierType="1" group="5" techId="155" techLevel="1" frontTech="414501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="421100" soldierType="2" group="1" techId="211" techLevel="0" battlePoint="0" />
+      <data id="421101" soldierType="2" group="1" techId="211" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1925_17600|1933_15700" battlePoint="30000" baseAtkAttr="2_100" />
+      <data id="421200" soldierType="2" group="1" techId="212" techLevel="0" battlePoint="0" />
+      <data id="421201" soldierType="2" group="1" techId="212" techLevel="1" frontTech="421101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1933_15700|1941_4500" battlePoint="30000" baseHpAttr="2_100" />
+      <data id="421300" soldierType="2" group="1" techId="213" techLevel="0" battlePoint="0" />
+      <data id="421301" soldierType="2" group="1" techId="213" techLevel="1" frontTech="421101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1925_17600|1941_4500" battlePoint="30000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="421400" soldierType="2" group="1" techId="214" techLevel="0" battlePoint="0" />
+      <data id="421401" soldierType="2" group="1" techId="214" techLevel="1" frontTech="421201;421301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1925_17600|1933_15700|1941_4500" battlePoint="30000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="421500" soldierType="2" group="1" techId="215" techLevel="0" battlePoint="0" />
+      <data id="421501" soldierType="2" group="1" techId="215" techLevel="1" frontTech="421401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1925_35200|1933_31400|1941_9000" battlePoint="30000" baseAtkAttr="2_200" baseHpAttr="2_200" />
+      <data id="422100" soldierType="2" group="2" techId="221" techLevel="0" battlePoint="0" />
+      <data id="422101" soldierType="2" group="2" techId="221" techLevel="1" frontTech="421501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1925_17600|1933_15700" battlePoint="36000" baseAtkAttr="2_100" />
+      <data id="422200" soldierType="2" group="2" techId="222" techLevel="0" battlePoint="0" />
+      <data id="422201" soldierType="2" group="2" techId="222" techLevel="1" frontTech="422101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1933_15700|1941_4500" battlePoint="36000" baseHpAttr="2_100" />
+      <data id="422300" soldierType="2" group="2" techId="223" techLevel="0" battlePoint="0" />
+      <data id="422301" soldierType="2" group="2" techId="223" techLevel="1" frontTech="422201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1925_17600|1941_4500" battlePoint="36000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="422400" soldierType="2" group="2" techId="224" techLevel="0" battlePoint="0" />
+      <data id="422401" soldierType="2" group="2" techId="224" techLevel="1" frontTech="422301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1925_17600|1933_15700|1941_4500" battlePoint="36000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="422500" soldierType="2" group="2" techId="225" techLevel="0" battlePoint="0" />
+      <data id="422501" soldierType="2" group="2" techId="225" techLevel="1" frontTech="422401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1925_35200|1933_31400|1941_9000" battlePoint="36000" baseAtkAttr="2_200" baseHpAttr="2_200" />
+      <data id="423100" soldierType="2" group="3" techId="231" techLevel="0" battlePoint="0" />
+      <data id="423101" soldierType="2" group="3" techId="231" techLevel="1" frontTech="422501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1925_17600|1933_15700" battlePoint="42000" baseAtkAttr="2_100" />
+      <data id="423200" soldierType="2" group="3" techId="232" techLevel="0" battlePoint="0" />
+      <data id="423201" soldierType="2" group="3" techId="232" techLevel="1" frontTech="422501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1933_15700|1941_4500" battlePoint="42000" baseHpAttr="2_100" />
+      <data id="423300" soldierType="2" group="3" techId="233" techLevel="0" battlePoint="0" />
+      <data id="423301" soldierType="2" group="3" techId="233" techLevel="1" frontTech="422501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1925_17600|1941_4500" battlePoint="42000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="423400" soldierType="2" group="3" techId="234" techLevel="0" battlePoint="0" />
+      <data id="423401" soldierType="2" group="3" techId="234" techLevel="1" frontTech="423101;423201;423301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1925_17600|1933_15700|1941_4500" battlePoint="42000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="423500" soldierType="2" group="3" techId="235" techLevel="0" battlePoint="0" />
+      <data id="423501" soldierType="2" group="3" techId="235" techLevel="1" frontTech="423401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1925_35200|1933_31400|1941_9000" battlePoint="42000" baseAtkAttr="2_200" baseHpAttr="2_200" />
+      <data id="424100" soldierType="2" group="4" techId="241" techLevel="0" battlePoint="0" />
+      <data id="424101" soldierType="2" group="4" techId="241" techLevel="1" frontTech="423501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1925_17600|1933_15700" battlePoint="48000" baseAtkAttr="2_100" />
+      <data id="424200" soldierType="2" group="4" techId="242" techLevel="0" battlePoint="0" />
+      <data id="424201" soldierType="2" group="4" techId="242" techLevel="1" frontTech="423501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1933_15700|1941_4500" battlePoint="48000" baseHpAttr="2_100" />
+      <data id="424300" soldierType="2" group="4" techId="243" techLevel="0" battlePoint="0" />
+      <data id="424301" soldierType="2" group="4" techId="243" techLevel="1" frontTech="424101;424201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1925_17600|1941_4500" battlePoint="48000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="424400" soldierType="2" group="4" techId="244" techLevel="0" battlePoint="0" />
+      <data id="424401" soldierType="2" group="4" techId="244" techLevel="1" frontTech="424301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1925_17600|1933_15700|1941_4500" battlePoint="48000" baseAtkAttr="2_100" baseHpAttr="2_100" />
+      <data id="424500" soldierType="2" group="4" techId="245" techLevel="0" battlePoint="0" />
+      <data id="424501" soldierType="2" group="4" techId="245" techLevel="1" frontTech="424401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1925_35200|1933_31400|1941_9000" battlePoint="48000" baseAtkAttr="2_200" baseHpAttr="2_200" />
+      <data id="425500" soldierType="2" group="5" techId="255" techLevel="0" battlePoint="0" />
+      <data id="425501" soldierType="2" group="5" techId="255" techLevel="1" frontTech="424501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="431100" soldierType="3" group="1" techId="311" techLevel="0" battlePoint="0" />
+      <data id="431101" soldierType="3" group="1" techId="311" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1928_19000|1936_15000" battlePoint="30000" baseAtkAttr="3_100" />
+      <data id="431200" soldierType="3" group="1" techId="312" techLevel="0" battlePoint="0" />
+      <data id="431201" soldierType="3" group="1" techId="312" techLevel="1" frontTech="431101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1936_15000|1944_4600" battlePoint="30000" baseHpAttr="3_100" />
+      <data id="431300" soldierType="3" group="1" techId="313" techLevel="0" battlePoint="0" />
+      <data id="431301" soldierType="3" group="1" techId="313" techLevel="1" frontTech="431101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1928_19000|1944_4600" battlePoint="30000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="431400" soldierType="3" group="1" techId="314" techLevel="0" battlePoint="0" />
+      <data id="431401" soldierType="3" group="1" techId="314" techLevel="1" frontTech="431201;431301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1928_19000|1936_15000|1944_4600" battlePoint="30000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="431500" soldierType="3" group="1" techId="315" techLevel="0" battlePoint="0" />
+      <data id="431501" soldierType="3" group="1" techId="315" techLevel="1" frontTech="431401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1928_38000|1936_30000|1944_9200" battlePoint="30000" baseAtkAttr="3_200" baseHpAttr="3_200" />
+      <data id="432100" soldierType="3" group="2" techId="321" techLevel="0" battlePoint="0" />
+      <data id="432101" soldierType="3" group="2" techId="321" techLevel="1" frontTech="431501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1928_19000|1936_15000" battlePoint="36000" baseAtkAttr="3_100" />
+      <data id="432200" soldierType="3" group="2" techId="322" techLevel="0" battlePoint="0" />
+      <data id="432201" soldierType="3" group="2" techId="322" techLevel="1" frontTech="432101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1936_15000|1944_4600" battlePoint="36000" baseHpAttr="3_100" />
+      <data id="432300" soldierType="3" group="2" techId="323" techLevel="0" battlePoint="0" />
+      <data id="432301" soldierType="3" group="2" techId="323" techLevel="1" frontTech="432201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1928_19000|1944_4600" battlePoint="36000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="432400" soldierType="3" group="2" techId="324" techLevel="0" battlePoint="0" />
+      <data id="432401" soldierType="3" group="2" techId="324" techLevel="1" frontTech="432301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1928_19000|1936_15000|1944_4600" battlePoint="36000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="432500" soldierType="3" group="2" techId="325" techLevel="0" battlePoint="0" />
+      <data id="432501" soldierType="3" group="2" techId="325" techLevel="1" frontTech="432401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1928_38000|1936_30000|1944_9200" battlePoint="36000" baseAtkAttr="3_200" baseHpAttr="3_200" />
+      <data id="433100" soldierType="3" group="3" techId="331" techLevel="0" battlePoint="0" />
+      <data id="433101" soldierType="3" group="3" techId="331" techLevel="1" frontTech="432501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1928_19000|1936_15000" battlePoint="42000" baseAtkAttr="3_100" />
+      <data id="433200" soldierType="3" group="3" techId="332" techLevel="0" battlePoint="0" />
+      <data id="433201" soldierType="3" group="3" techId="332" techLevel="1" frontTech="432501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1936_15000|1944_4600" battlePoint="42000" baseHpAttr="3_100" />
+      <data id="433300" soldierType="3" group="3" techId="333" techLevel="0" battlePoint="0" />
+      <data id="433301" soldierType="3" group="3" techId="333" techLevel="1" frontTech="432501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1928_19000|1944_4600" battlePoint="42000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="433400" soldierType="3" group="3" techId="334" techLevel="0" battlePoint="0" />
+      <data id="433401" soldierType="3" group="3" techId="334" techLevel="1" frontTech="433101;433201;433301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1928_19000|1936_15000|1944_4600" battlePoint="42000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="433500" soldierType="3" group="3" techId="335" techLevel="0" battlePoint="0" />
+      <data id="433501" soldierType="3" group="3" techId="335" techLevel="1" frontTech="433401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1928_38000|1936_30000|1944_9200" battlePoint="42000" baseAtkAttr="3_200" baseHpAttr="3_200" />
+      <data id="434100" soldierType="3" group="4" techId="341" techLevel="0" battlePoint="0" />
+      <data id="434101" soldierType="3" group="4" techId="341" techLevel="1" frontTech="433501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1928_19000|1936_15000" battlePoint="48000" baseAtkAttr="3_100" />
+      <data id="434200" soldierType="3" group="4" techId="342" techLevel="0" battlePoint="0" />
+      <data id="434201" soldierType="3" group="4" techId="342" techLevel="1" frontTech="433501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1936_15000|1944_4600" battlePoint="48000" baseHpAttr="3_100" />
+      <data id="434300" soldierType="3" group="4" techId="343" techLevel="0" battlePoint="0" />
+      <data id="434301" soldierType="3" group="4" techId="343" techLevel="1" frontTech="434101;434201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1928_19000|1944_4600" battlePoint="48000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="434400" soldierType="3" group="4" techId="344" techLevel="0" battlePoint="0" />
+      <data id="434401" soldierType="3" group="4" techId="344" techLevel="1" frontTech="434301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1928_19000|1936_15000|1944_4600" battlePoint="48000" baseAtkAttr="3_100" baseHpAttr="3_100" />
+      <data id="434500" soldierType="3" group="4" techId="345" techLevel="0" battlePoint="0" />
+      <data id="434501" soldierType="3" group="4" techId="345" techLevel="1" frontTech="434401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1928_38000|1936_30000|1944_9200" battlePoint="48000" baseAtkAttr="3_200" baseHpAttr="3_200" />
+      <data id="435500" soldierType="3" group="5" techId="355" techLevel="0" battlePoint="0" />
+      <data id="435501" soldierType="3" group="5" techId="355" techLevel="1" frontTech="434501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="441100" soldierType="4" group="1" techId="411" techLevel="0" battlePoint="0" />
+      <data id="441101" soldierType="4" group="1" techId="411" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1927_17600|1935_12100" battlePoint="30000" baseAtkAttr="4_100" />
+      <data id="441200" soldierType="4" group="1" techId="412" techLevel="0" battlePoint="0" />
+      <data id="441201" soldierType="4" group="1" techId="412" techLevel="1" frontTech="441101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1935_12100|1943_4300" battlePoint="30000" baseHpAttr="4_100" />
+      <data id="441300" soldierType="4" group="1" techId="413" techLevel="0" battlePoint="0" />
+      <data id="441301" soldierType="4" group="1" techId="413" techLevel="1" frontTech="441101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1927_17600|1943_4300" battlePoint="30000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="441400" soldierType="4" group="1" techId="414" techLevel="0" battlePoint="0" />
+      <data id="441401" soldierType="4" group="1" techId="414" techLevel="1" frontTech="441201;441301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1927_17600|1935_12100|1943_4300" battlePoint="30000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="441500" soldierType="4" group="1" techId="415" techLevel="0" battlePoint="0" />
+      <data id="441501" soldierType="4" group="1" techId="415" techLevel="1" frontTech="441401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1927_35200|1935_24200|1943_8600" battlePoint="30000" baseAtkAttr="4_200" baseHpAttr="4_200" />
+      <data id="442100" soldierType="4" group="2" techId="421" techLevel="0" battlePoint="0" />
+      <data id="442101" soldierType="4" group="2" techId="421" techLevel="1" frontTech="441501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1927_17600|1935_12100" battlePoint="36000" baseAtkAttr="4_100" />
+      <data id="442200" soldierType="4" group="2" techId="422" techLevel="0" battlePoint="0" />
+      <data id="442201" soldierType="4" group="2" techId="422" techLevel="1" frontTech="442101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1935_12100|1943_4300" battlePoint="36000" baseHpAttr="4_100" />
+      <data id="442300" soldierType="4" group="2" techId="423" techLevel="0" battlePoint="0" />
+      <data id="442301" soldierType="4" group="2" techId="423" techLevel="1" frontTech="442201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1927_17600|1943_4300" battlePoint="36000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="442400" soldierType="4" group="2" techId="424" techLevel="0" battlePoint="0" />
+      <data id="442401" soldierType="4" group="2" techId="424" techLevel="1" frontTech="442301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1927_17600|1935_12100|1943_4300" battlePoint="36000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="442500" soldierType="4" group="2" techId="425" techLevel="0" battlePoint="0" />
+      <data id="442501" soldierType="4" group="2" techId="425" techLevel="1" frontTech="442401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1927_35200|1935_24200|1943_8600" battlePoint="36000" baseAtkAttr="4_200" baseHpAttr="4_200" />
+      <data id="443100" soldierType="4" group="3" techId="431" techLevel="0" battlePoint="0" />
+      <data id="443101" soldierType="4" group="3" techId="431" techLevel="1" frontTech="442501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1927_17600|1935_12100" battlePoint="42000" baseAtkAttr="4_100" />
+      <data id="443200" soldierType="4" group="3" techId="432" techLevel="0" battlePoint="0" />
+      <data id="443201" soldierType="4" group="3" techId="432" techLevel="1" frontTech="442501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1935_12100|1943_4300" battlePoint="42000" baseHpAttr="4_100" />
+      <data id="443300" soldierType="4" group="3" techId="433" techLevel="0" battlePoint="0" />
+      <data id="443301" soldierType="4" group="3" techId="433" techLevel="1" frontTech="442501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1927_17600|1943_4300" battlePoint="42000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="443400" soldierType="4" group="3" techId="434" techLevel="0" battlePoint="0" />
+      <data id="443401" soldierType="4" group="3" techId="434" techLevel="1" frontTech="443101;443201;443301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1927_17600|1935_12100|1943_4300" battlePoint="42000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="443500" soldierType="4" group="3" techId="435" techLevel="0" battlePoint="0" />
+      <data id="443501" soldierType="4" group="3" techId="435" techLevel="1" frontTech="443401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1927_35200|1935_24200|1943_8600" battlePoint="42000" baseAtkAttr="4_200" baseHpAttr="4_200" />
+      <data id="444100" soldierType="4" group="4" techId="441" techLevel="0" battlePoint="0" />
+      <data id="444101" soldierType="4" group="4" techId="441" techLevel="1" frontTech="443501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1927_17600|1935_12100" battlePoint="48000" baseAtkAttr="4_100" />
+      <data id="444200" soldierType="4" group="4" techId="442" techLevel="0" battlePoint="0" />
+      <data id="444201" soldierType="4" group="4" techId="442" techLevel="1" frontTech="443501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1935_12100|1943_4300" battlePoint="48000" baseHpAttr="4_100" />
+      <data id="444300" soldierType="4" group="4" techId="443" techLevel="0" battlePoint="0" />
+      <data id="444301" soldierType="4" group="4" techId="443" techLevel="1" frontTech="444101;444201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1927_17600|1943_4300" battlePoint="48000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="444400" soldierType="4" group="4" techId="444" techLevel="0" battlePoint="0" />
+      <data id="444401" soldierType="4" group="4" techId="444" techLevel="1" frontTech="444301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1927_17600|1935_12100|1943_4300" battlePoint="48000" baseAtkAttr="4_100" baseHpAttr="4_100" />
+      <data id="444500" soldierType="4" group="4" techId="445" techLevel="0" battlePoint="0" />
+      <data id="444501" soldierType="4" group="4" techId="445" techLevel="1" frontTech="444401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1927_35200|1935_24200|1943_8600" battlePoint="48000" baseAtkAttr="4_200" baseHpAttr="4_200" />
+      <data id="445500" soldierType="4" group="5" techId="455" techLevel="0" battlePoint="0" />
+      <data id="445501" soldierType="4" group="5" techId="455" techLevel="1" frontTech="444501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="451100" soldierType="5" group="1" techId="511" techLevel="0" battlePoint="0" />
+      <data id="451101" soldierType="5" group="1" techId="511" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1930_15900|1938_10200" battlePoint="30000" baseAtkAttr="5_100" />
+      <data id="451200" soldierType="5" group="1" techId="512" techLevel="0" battlePoint="0" />
+      <data id="451201" soldierType="5" group="1" techId="512" techLevel="1" frontTech="451101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1938_10200|1946_3300" battlePoint="30000" baseHpAttr="5_100" />
+      <data id="451300" soldierType="5" group="1" techId="513" techLevel="0" battlePoint="0" />
+      <data id="451301" soldierType="5" group="1" techId="513" techLevel="1" frontTech="451101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1930_15900|1946_3300" battlePoint="30000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="451400" soldierType="5" group="1" techId="514" techLevel="0" battlePoint="0" />
+      <data id="451401" soldierType="5" group="1" techId="514" techLevel="1" frontTech="451201;451301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1930_15900|1938_10200|1946_3300" battlePoint="30000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="451500" soldierType="5" group="1" techId="515" techLevel="0" battlePoint="0" />
+      <data id="451501" soldierType="5" group="1" techId="515" techLevel="1" frontTech="451401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1930_31800|1938_20400|1946_6600" battlePoint="30000" baseAtkAttr="5_200" baseHpAttr="5_200" />
+      <data id="452100" soldierType="5" group="2" techId="521" techLevel="0" battlePoint="0" />
+      <data id="452101" soldierType="5" group="2" techId="521" techLevel="1" frontTech="451501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1930_15900|1938_10200" battlePoint="36000" baseAtkAttr="5_100" />
+      <data id="452200" soldierType="5" group="2" techId="522" techLevel="0" battlePoint="0" />
+      <data id="452201" soldierType="5" group="2" techId="522" techLevel="1" frontTech="452101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1938_10200|1946_3300" battlePoint="36000" baseHpAttr="5_100" />
+      <data id="452300" soldierType="5" group="2" techId="523" techLevel="0" battlePoint="0" />
+      <data id="452301" soldierType="5" group="2" techId="523" techLevel="1" frontTech="452201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1930_15900|1946_3300" battlePoint="36000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="452400" soldierType="5" group="2" techId="524" techLevel="0" battlePoint="0" />
+      <data id="452401" soldierType="5" group="2" techId="524" techLevel="1" frontTech="452301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1930_15900|1938_10200|1946_3300" battlePoint="36000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="452500" soldierType="5" group="2" techId="525" techLevel="0" battlePoint="0" />
+      <data id="452501" soldierType="5" group="2" techId="525" techLevel="1" frontTech="452401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1930_31800|1938_20400|1946_6600" battlePoint="36000" baseAtkAttr="5_200" baseHpAttr="5_200" />
+      <data id="453100" soldierType="5" group="3" techId="531" techLevel="0" battlePoint="0" />
+      <data id="453101" soldierType="5" group="3" techId="531" techLevel="1" frontTech="452501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1930_15900|1938_10200" battlePoint="42000" baseAtkAttr="5_100" />
+      <data id="453200" soldierType="5" group="3" techId="532" techLevel="0" battlePoint="0" />
+      <data id="453201" soldierType="5" group="3" techId="532" techLevel="1" frontTech="452501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1938_10200|1946_3300" battlePoint="42000" baseHpAttr="5_100" />
+      <data id="453300" soldierType="5" group="3" techId="533" techLevel="0" battlePoint="0" />
+      <data id="453301" soldierType="5" group="3" techId="533" techLevel="1" frontTech="452501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1930_15900|1946_3300" battlePoint="42000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="453400" soldierType="5" group="3" techId="534" techLevel="0" battlePoint="0" />
+      <data id="453401" soldierType="5" group="3" techId="534" techLevel="1" frontTech="453101;453201;453301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1930_15900|1938_10200|1946_3300" battlePoint="42000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="453500" soldierType="5" group="3" techId="535" techLevel="0" battlePoint="0" />
+      <data id="453501" soldierType="5" group="3" techId="535" techLevel="1" frontTech="453401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1930_31800|1938_20400|1946_6600" battlePoint="42000" baseAtkAttr="5_200" baseHpAttr="5_200" />
+      <data id="454100" soldierType="5" group="4" techId="541" techLevel="0" battlePoint="0" />
+      <data id="454101" soldierType="5" group="4" techId="541" techLevel="1" frontTech="453501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1930_15900|1938_10200" battlePoint="48000" baseAtkAttr="5_100" />
+      <data id="454200" soldierType="5" group="4" techId="542" techLevel="0" battlePoint="0" />
+      <data id="454201" soldierType="5" group="4" techId="542" techLevel="1" frontTech="453501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1938_10200|1946_3300" battlePoint="48000" baseHpAttr="5_100" />
+      <data id="454300" soldierType="5" group="4" techId="543" techLevel="0" battlePoint="0" />
+      <data id="454301" soldierType="5" group="4" techId="543" techLevel="1" frontTech="454101;454201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1930_15900|1946_3300" battlePoint="48000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="454400" soldierType="5" group="4" techId="544" techLevel="0" battlePoint="0" />
+      <data id="454401" soldierType="5" group="4" techId="544" techLevel="1" frontTech="454301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1930_15900|1938_10200|1946_3300" battlePoint="48000" baseAtkAttr="5_100" baseHpAttr="5_100" />
+      <data id="454500" soldierType="5" group="4" techId="545" techLevel="0" battlePoint="0" />
+      <data id="454501" soldierType="5" group="4" techId="545" techLevel="1" frontTech="454401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1930_31800|1938_20400|1946_6600" battlePoint="48000" baseAtkAttr="5_200" baseHpAttr="5_200" />
+      <data id="455500" soldierType="5" group="5" techId="555" techLevel="0" battlePoint="0" />
+      <data id="455501" soldierType="5" group="5" techId="555" techLevel="1" frontTech="454501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="461100" soldierType="6" group="1" techId="611" techLevel="0" battlePoint="0" />
+      <data id="461101" soldierType="6" group="1" techId="611" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1929_20900|1937_12100" battlePoint="30000" baseAtkAttr="6_100" />
+      <data id="461200" soldierType="6" group="1" techId="612" techLevel="0" battlePoint="0" />
+      <data id="461201" soldierType="6" group="1" techId="612" techLevel="1" frontTech="461101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1937_12100|1945_3400" battlePoint="30000" baseHpAttr="6_100" />
+      <data id="461300" soldierType="6" group="1" techId="613" techLevel="0" battlePoint="0" />
+      <data id="461301" soldierType="6" group="1" techId="613" techLevel="1" frontTech="461101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1929_20900|1945_3400" battlePoint="30000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="461400" soldierType="6" group="1" techId="614" techLevel="0" battlePoint="0" />
+      <data id="461401" soldierType="6" group="1" techId="614" techLevel="1" frontTech="461201;461301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1929_20900|1937_12100|1945_3400" battlePoint="30000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="461500" soldierType="6" group="1" techId="615" techLevel="0" battlePoint="0" />
+      <data id="461501" soldierType="6" group="1" techId="615" techLevel="1" frontTech="461401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1929_41800|1937_24200|1945_6800" battlePoint="30000" baseAtkAttr="6_200" baseHpAttr="6_200" />
+      <data id="462100" soldierType="6" group="2" techId="621" techLevel="0" battlePoint="0" />
+      <data id="462101" soldierType="6" group="2" techId="621" techLevel="1" frontTech="461501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1929_20900|1937_12100" battlePoint="36000" baseAtkAttr="6_100" />
+      <data id="462200" soldierType="6" group="2" techId="622" techLevel="0" battlePoint="0" />
+      <data id="462201" soldierType="6" group="2" techId="622" techLevel="1" frontTech="462101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1937_12100|1945_3400" battlePoint="36000" baseHpAttr="6_100" />
+      <data id="462300" soldierType="6" group="2" techId="623" techLevel="0" battlePoint="0" />
+      <data id="462301" soldierType="6" group="2" techId="623" techLevel="1" frontTech="462201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1929_20900|1945_3400" battlePoint="36000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="462400" soldierType="6" group="2" techId="624" techLevel="0" battlePoint="0" />
+      <data id="462401" soldierType="6" group="2" techId="624" techLevel="1" frontTech="462301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1929_20900|1937_12100|1945_3400" battlePoint="36000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="462500" soldierType="6" group="2" techId="625" techLevel="0" battlePoint="0" />
+      <data id="462501" soldierType="6" group="2" techId="625" techLevel="1" frontTech="462401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1929_41800|1937_24200|1945_6800" battlePoint="36000" baseAtkAttr="6_200" baseHpAttr="6_200" />
+      <data id="463100" soldierType="6" group="3" techId="631" techLevel="0" battlePoint="0" />
+      <data id="463101" soldierType="6" group="3" techId="631" techLevel="1" frontTech="462501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1929_20900|1937_12100" battlePoint="42000" baseAtkAttr="6_100" />
+      <data id="463200" soldierType="6" group="3" techId="632" techLevel="0" battlePoint="0" />
+      <data id="463201" soldierType="6" group="3" techId="632" techLevel="1" frontTech="462501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1937_12100|1945_3400" battlePoint="42000" baseHpAttr="6_100" />
+      <data id="463300" soldierType="6" group="3" techId="633" techLevel="0" battlePoint="0" />
+      <data id="463301" soldierType="6" group="3" techId="633" techLevel="1" frontTech="462501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1929_20900|1945_3400" battlePoint="42000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="463400" soldierType="6" group="3" techId="634" techLevel="0" battlePoint="0" />
+      <data id="463401" soldierType="6" group="3" techId="634" techLevel="1" frontTech="463101;463201;463301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1929_20900|1937_12100|1945_3400" battlePoint="42000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="463500" soldierType="6" group="3" techId="635" techLevel="0" battlePoint="0" />
+      <data id="463501" soldierType="6" group="3" techId="635" techLevel="1" frontTech="463401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1929_41800|1937_24200|1945_6800" battlePoint="42000" baseAtkAttr="6_200" baseHpAttr="6_200" />
+      <data id="464100" soldierType="6" group="4" techId="641" techLevel="0" battlePoint="0" />
+      <data id="464101" soldierType="6" group="4" techId="641" techLevel="1" frontTech="463501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1929_20900|1937_12100" battlePoint="48000" baseAtkAttr="6_100" />
+      <data id="464200" soldierType="6" group="4" techId="642" techLevel="0" battlePoint="0" />
+      <data id="464201" soldierType="6" group="4" techId="642" techLevel="1" frontTech="463501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1937_12100|1945_3400" battlePoint="48000" baseHpAttr="6_100" />
+      <data id="464300" soldierType="6" group="4" techId="643" techLevel="0" battlePoint="0" />
+      <data id="464301" soldierType="6" group="4" techId="643" techLevel="1" frontTech="464101;464201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1929_20900|1945_3400" battlePoint="48000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="464400" soldierType="6" group="4" techId="644" techLevel="0" battlePoint="0" />
+      <data id="464401" soldierType="6" group="4" techId="644" techLevel="1" frontTech="464301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1929_20900|1937_12100|1945_3400" battlePoint="48000" baseAtkAttr="6_100" baseHpAttr="6_100" />
+      <data id="464500" soldierType="6" group="4" techId="645" techLevel="0" battlePoint="0" />
+      <data id="464501" soldierType="6" group="4" techId="645" techLevel="1" frontTech="464401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1929_41800|1937_24200|1945_6800" battlePoint="48000" baseAtkAttr="6_200" baseHpAttr="6_200" />
+      <data id="465500" soldierType="6" group="5" techId="655" techLevel="0" battlePoint="0" />
+      <data id="465501" soldierType="6" group="5" techId="655" techLevel="1" frontTech="464501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="471100" soldierType="7" group="1" techId="711" techLevel="0" battlePoint="0" />
+      <data id="471101" soldierType="7" group="1" techId="711" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1932_35700|1940_13100" battlePoint="30000" baseAtkAttr="7_100" />
+      <data id="471200" soldierType="7" group="1" techId="712" techLevel="0" battlePoint="0" />
+      <data id="471201" soldierType="7" group="1" techId="712" techLevel="1" frontTech="471101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1940_13100|1948_5400" battlePoint="30000" baseHpAttr="7_100" />
+      <data id="471300" soldierType="7" group="1" techId="713" techLevel="0" battlePoint="0" />
+      <data id="471301" soldierType="7" group="1" techId="713" techLevel="1" frontTech="471101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1932_35700|1948_5400" battlePoint="30000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="471400" soldierType="7" group="1" techId="714" techLevel="0" battlePoint="0" />
+      <data id="471401" soldierType="7" group="1" techId="714" techLevel="1" frontTech="471201;471301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1932_35700|1940_13100|1948_5400" battlePoint="30000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="471500" soldierType="7" group="1" techId="715" techLevel="0" battlePoint="0" />
+      <data id="471501" soldierType="7" group="1" techId="715" techLevel="1" frontTech="471401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1932_71400|1940_26200|1948_10800" battlePoint="30000" baseAtkAttr="7_200" baseHpAttr="7_200" />
+      <data id="472100" soldierType="7" group="2" techId="721" techLevel="0" battlePoint="0" />
+      <data id="472101" soldierType="7" group="2" techId="721" techLevel="1" frontTech="471501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1932_35700|1940_13100" battlePoint="36000" baseAtkAttr="7_100" />
+      <data id="472200" soldierType="7" group="2" techId="722" techLevel="0" battlePoint="0" />
+      <data id="472201" soldierType="7" group="2" techId="722" techLevel="1" frontTech="472101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1940_13100|1948_5400" battlePoint="36000" baseHpAttr="7_100" />
+      <data id="472300" soldierType="7" group="2" techId="723" techLevel="0" battlePoint="0" />
+      <data id="472301" soldierType="7" group="2" techId="723" techLevel="1" frontTech="472201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1932_35700|1948_5400" battlePoint="36000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="472400" soldierType="7" group="2" techId="724" techLevel="0" battlePoint="0" />
+      <data id="472401" soldierType="7" group="2" techId="724" techLevel="1" frontTech="472301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1932_35700|1940_13100|1948_5400" battlePoint="36000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="472500" soldierType="7" group="2" techId="725" techLevel="0" battlePoint="0" />
+      <data id="472501" soldierType="7" group="2" techId="725" techLevel="1" frontTech="472401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1932_71400|1940_26200|1948_10800" battlePoint="36000" baseAtkAttr="7_200" baseHpAttr="7_200" />
+      <data id="473100" soldierType="7" group="3" techId="731" techLevel="0" battlePoint="0" />
+      <data id="473101" soldierType="7" group="3" techId="731" techLevel="1" frontTech="472501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1932_35700|1940_13100" battlePoint="42000" baseAtkAttr="7_100" />
+      <data id="473200" soldierType="7" group="3" techId="732" techLevel="0" battlePoint="0" />
+      <data id="473201" soldierType="7" group="3" techId="732" techLevel="1" frontTech="472501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1940_13100|1948_5400" battlePoint="42000" baseHpAttr="7_100" />
+      <data id="473300" soldierType="7" group="3" techId="733" techLevel="0" battlePoint="0" />
+      <data id="473301" soldierType="7" group="3" techId="733" techLevel="1" frontTech="472501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1932_35700|1948_5400" battlePoint="42000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="473400" soldierType="7" group="3" techId="734" techLevel="0" battlePoint="0" />
+      <data id="473401" soldierType="7" group="3" techId="734" techLevel="1" frontTech="473101;473201;473301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1932_35700|1940_13100|1948_5400" battlePoint="42000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="473500" soldierType="7" group="3" techId="735" techLevel="0" battlePoint="0" />
+      <data id="473501" soldierType="7" group="3" techId="735" techLevel="1" frontTech="473401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1932_71400|1940_26200|1948_10800" battlePoint="42000" baseAtkAttr="7_200" baseHpAttr="7_200" />
+      <data id="474100" soldierType="7" group="4" techId="741" techLevel="0" battlePoint="0" />
+      <data id="474101" soldierType="7" group="4" techId="741" techLevel="1" frontTech="473501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1932_35700|1940_13100" battlePoint="48000" baseAtkAttr="7_100" />
+      <data id="474200" soldierType="7" group="4" techId="742" techLevel="0" battlePoint="0" />
+      <data id="474201" soldierType="7" group="4" techId="742" techLevel="1" frontTech="473501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1940_13100|1948_5400" battlePoint="48000" baseHpAttr="7_100" />
+      <data id="474300" soldierType="7" group="4" techId="743" techLevel="0" battlePoint="0" />
+      <data id="474301" soldierType="7" group="4" techId="743" techLevel="1" frontTech="474101;474201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1932_35700|1948_5400" battlePoint="48000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="474400" soldierType="7" group="4" techId="744" techLevel="0" battlePoint="0" />
+      <data id="474401" soldierType="7" group="4" techId="744" techLevel="1" frontTech="474301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1932_35700|1940_13100|1948_5400" battlePoint="48000" baseAtkAttr="7_100" baseHpAttr="7_100" />
+      <data id="474500" soldierType="7" group="4" techId="745" techLevel="0" battlePoint="0" />
+      <data id="474501" soldierType="7" group="4" techId="745" techLevel="1" frontTech="474401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1932_71400|1940_26200|1948_10800" battlePoint="48000" baseAtkAttr="7_200" baseHpAttr="7_200" />
+      <data id="475500" soldierType="7" group="5" techId="755" techLevel="0" battlePoint="0" />
+      <data id="475501" soldierType="7" group="5" techId="755" techLevel="1" frontTech="474501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+      <data id="481100" soldierType="8" group="1" techId="811" techLevel="0" battlePoint="0" />
+      <data id="481101" soldierType="8" group="1" techId="811" techLevel="1" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1931_14000|1939_15600" battlePoint="30000" baseAtkAttr="8_100" />
+      <data id="481200" soldierType="8" group="1" techId="812" techLevel="0" battlePoint="0" />
+      <data id="481201" soldierType="8" group="1" techId="812" techLevel="1" frontTech="481101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1939_15600|1947_7900" battlePoint="30000" baseHpAttr="8_100" />
+      <data id="481300" soldierType="8" group="1" techId="813" techLevel="0" battlePoint="0" />
+      <data id="481301" soldierType="8" group="1" techId="813" techLevel="1" frontTech="481101" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1931_14000|1947_7900" battlePoint="30000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="481400" soldierType="8" group="1" techId="814" techLevel="0" battlePoint="0" />
+      <data id="481401" soldierType="8" group="1" techId="814" techLevel="1" frontTech="481201;481301" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1931_14000|1939_15600|1947_7900" battlePoint="30000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="481500" soldierType="8" group="1" techId="815" techLevel="0" battlePoint="0" />
+      <data id="481501" soldierType="8" group="1" techId="815" techLevel="1" frontTech="481401" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" techEffect="1931_28000|1939_31200|1947_15800" battlePoint="30000" baseAtkAttr="8_200" baseHpAttr="8_200" />
+      <data id="482100" soldierType="8" group="2" techId="821" techLevel="0" battlePoint="0" />
+      <data id="482101" soldierType="8" group="2" techId="821" techLevel="1" frontTech="481501" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1931_14000|1939_15600" battlePoint="36000" baseAtkAttr="8_100" />
+      <data id="482200" soldierType="8" group="2" techId="822" techLevel="0" battlePoint="0" />
+      <data id="482201" soldierType="8" group="2" techId="822" techLevel="1" frontTech="482101" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1939_15600|1947_7900" battlePoint="36000" baseHpAttr="8_100" />
+      <data id="482300" soldierType="8" group="2" techId="823" techLevel="0" battlePoint="0" />
+      <data id="482301" soldierType="8" group="2" techId="823" techLevel="1" frontTech="482201" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1931_14000|1947_7900" battlePoint="36000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="482400" soldierType="8" group="2" techId="824" techLevel="0" battlePoint="0" />
+      <data id="482401" soldierType="8" group="2" techId="824" techLevel="1" frontTech="482301" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1931_14000|1939_15600|1947_7900" battlePoint="36000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="482500" soldierType="8" group="2" techId="825" techLevel="0" battlePoint="0" />
+      <data id="482501" soldierType="8" group="2" techId="825" techLevel="1" frontTech="482401" techCost="30000_21063005_1200,30000_21063003_600,30000_21063002_600" techEffect="1931_28000|1939_31200|1947_15800" battlePoint="36000" baseAtkAttr="8_200" baseHpAttr="8_200" />
+      <data id="483100" soldierType="8" group="3" techId="831" techLevel="0" battlePoint="0" />
+      <data id="483101" soldierType="8" group="3" techId="831" techLevel="1" frontTech="482501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1931_14000|1939_15600" battlePoint="42000" baseAtkAttr="8_100" />
+      <data id="483200" soldierType="8" group="3" techId="832" techLevel="0" battlePoint="0" />
+      <data id="483201" soldierType="8" group="3" techId="832" techLevel="1" frontTech="482501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1939_15600|1947_7900" battlePoint="42000" baseHpAttr="8_100" />
+      <data id="483300" soldierType="8" group="3" techId="833" techLevel="0" battlePoint="0" />
+      <data id="483301" soldierType="8" group="3" techId="833" techLevel="1" frontTech="482501" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1931_14000|1947_7900" battlePoint="42000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="483400" soldierType="8" group="3" techId="834" techLevel="0" battlePoint="0" />
+      <data id="483401" soldierType="8" group="3" techId="834" techLevel="1" frontTech="483101;483201;483301" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1931_14000|1939_15600|1947_7900" battlePoint="42000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="483500" soldierType="8" group="3" techId="835" techLevel="0" battlePoint="0" />
+      <data id="483501" soldierType="8" group="3" techId="835" techLevel="1" frontTech="483401" techCost="30000_21063005_1400,30000_21063003_700,30000_21063002_700" techEffect="1931_28000|1939_31200|1947_15800" battlePoint="42000" baseAtkAttr="8_200" baseHpAttr="8_200" />
+      <data id="484100" soldierType="8" group="4" techId="841" techLevel="0" battlePoint="0" />
+      <data id="484101" soldierType="8" group="4" techId="841" techLevel="1" frontTech="483501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1931_14000|1939_15600" battlePoint="48000" baseAtkAttr="8_100" />
+      <data id="484200" soldierType="8" group="4" techId="842" techLevel="0" battlePoint="0" />
+      <data id="484201" soldierType="8" group="4" techId="842" techLevel="1" frontTech="483501" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1939_15600|1947_7900" battlePoint="48000" baseHpAttr="8_100" />
+      <data id="484300" soldierType="8" group="4" techId="843" techLevel="0" battlePoint="0" />
+      <data id="484301" soldierType="8" group="4" techId="843" techLevel="1" frontTech="484101;484201" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1931_14000|1947_7900" battlePoint="48000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="484400" soldierType="8" group="4" techId="844" techLevel="0" battlePoint="0" />
+      <data id="484401" soldierType="8" group="4" techId="844" techLevel="1" frontTech="484301" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1931_14000|1939_15600|1947_7900" battlePoint="48000" baseAtkAttr="8_100" baseHpAttr="8_100" />
+      <data id="484500" soldierType="8" group="4" techId="845" techLevel="0" battlePoint="0" />
+      <data id="484501" soldierType="8" group="4" techId="845" techLevel="1" frontTech="484401" techCost="30000_21063005_1600,30000_21063003_800,30000_21063002_800" techEffect="1931_28000|1939_31200|1947_15800" battlePoint="48000" baseAtkAttr="8_200" baseHpAttr="8_200" />
+      <data id="485500" soldierType="8" group="5" techId="855" techLevel="0" battlePoint="0" />
+      <data id="485501" soldierType="8" group="5" techId="855" techLevel="1" frontTech="484501" techCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" battlePoint="30000" />
+</root>

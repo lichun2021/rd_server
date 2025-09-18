@@ -1,0 +1,72 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 捐献类型
+enum DonateType
+{
+	NORMAL = 1;//普通捐赠
+	CRYSTAL = 2;//水晶捐赠
+}
+
+//联盟科技信息
+message GuildScienceInfo
+{
+	required int32 scienceId	= 1; //科技id
+	required int32 level 		= 2; //科技等级
+	required int32 star			= 3; //科技星级
+	required int32 donate		= 4; //科技当前捐献值
+	required bool  recommend	= 5; //是否推荐
+	optional int64 finishTime 	= 6; //研究结束时间
+	optional int64 limitOpenTime= 7; //限制开启时间
+}
+
+//联盟科技信息同步列表
+message GuildScienceInfoSync
+{
+	repeated GuildScienceInfo scienceInfo	= 1;//联盟科技信息
+	optional int32 scienceFloor				= 2; //当前科技层级
+}
+
+
+//获取联盟科技信息
+message GetGuildScienceInfoResp
+{
+	repeated GuildScienceInfo scienceInfo	= 1; //科技信息列表
+	required int32 scienceFloor		= 2; //当前科技层级
+	required int64 contribution 	= 3; //联盟贡献
+	required int32 normalLeftTimes 	= 4; //资源捐献剩余次数
+	required int32 crystalTimes 	= 5; //水晶捐献次数
+	required int64 nextAddTime 		= 6; //资源捐献次数下次恢复时间
+	required int32 resetTimes		= 7; //重置资源捐献次数
+}
+
+
+// 设置联盟推荐科技
+message GuildScienceRecommendReq
+{
+	repeated int32 recommendIds = 1; // 推荐科技ids
+	repeated int32 cancleIds	= 2; // 取消推荐ids
+}
+
+
+// 研究联盟科技
+message GuildScienceResearchReq
+{
+	required int32 scienceId	= 1; //科技id
+}
+
+
+//联盟科技捐献
+message	GuildScienceDonateReq
+{
+	required int32 scienceId		= 1; //科技id
+	required DonateType donateType	= 2; //捐献类型
+}
+
+message	GuildScienceDonateResp
+{	
+	required GetGuildScienceInfoResp scienceInfo = 1; //科技信息
+	required int32 crit			= 2; //暴击倍率 
+	required int32 donate		= 3; //科研值
+	required int32 score		= 4; //联盟积分
+	required int32 contribution	= 5; //联盟贡献
+}

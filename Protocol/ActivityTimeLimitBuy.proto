@@ -1,0 +1,32 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 限时抢购界面信息请求
+message TimeLimitBuyPageInfoReq {
+	required int32 turnId = 1;  // 场次id
+}
+
+message TimeLimitBuyPageInfoResp {
+	required int32 turnId = 1;  // 场次id
+	repeated TimeLimitBuyInfo goodsInfo = 2; // 抢购商品信息
+	required bool closeRemind = 3; // 是否关闭提示
+}
+
+message TimeLimitBuyInfo {
+	required int32 goodsId = 1; // 商品信息
+	required int32 allBuyCount = 2; // 全服购买数量
+	required int32 ownBuyCount = 3; // 本人购买数量
+}
+
+
+// 限时抢购请求(请求成功刷新界面并且推奖励,请求失败弹错误码)
+message TimeLimitBuyReq {
+	required int32 goodsId = 1;  // 物品id
+}
+
+// 限时抢购客户端打点信息
+message TimeLimitLogInfo {
+	required int32 logType = 1; // 1-触发金条不足 2-点击前往确认 3-进入商城点击充值 4-充值完成 5-弹窗1点击其它金额 6-通过5进入商城并且点击充值 7-通过6完成发货
+	optional int32 activityId = 2; // 活动id
+	optional int32 goodsId = 3; // 商品id(购买档位)
+	optional int32 rechargeId = 4; // 充值档位
+}

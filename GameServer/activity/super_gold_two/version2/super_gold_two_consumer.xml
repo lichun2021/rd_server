@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="210001" conditionValue="0" cost="10000_1000_0" rewards="10000_1001_10" />
+      <data achieveId="210002" conditionValue="210001" cost="10000_1000_30" rewards="10000_1001_30" />
+      <data achieveId="210003" conditionValue="210002" cost="10000_1000_60" rewards="10000_1001_60" />
+      <data achieveId="210004" conditionValue="210003" cost="10000_1000_120" rewards="10000_1001_120" />
+      <data achieveId="210005" conditionValue="210004" cost="10000_1000_300" rewards="10000_1001_300" />
+      <data achieveId="210006" conditionValue="210005" cost="10000_1000_680" rewards="10000_1001_680" />
+      <data achieveId="210007" conditionValue="210006" cost="10000_1000_980" rewards="10000_1001_980" />
+      <data achieveId="210008" conditionValue="210007" cost="10000_1000_1280" rewards="10000_1001_1280" />
+      <data achieveId="210009" conditionValue="210008" cost="10000_1000_1580" rewards="10000_1001_1580" />
+      <data achieveId="210010" conditionValue="210009" cost="10000_1000_1980" rewards="10000_1001_1980" />
+      <data achieveId="210011" conditionValue="210010" cost="10000_1000_2580" rewards="10000_1001_2580" />
+      <data achieveId="210012" conditionValue="210011" cost="10000_1000_3280" rewards="10000_1001_3280" />
+</root>

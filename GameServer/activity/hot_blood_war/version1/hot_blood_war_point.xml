@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="3780001" type="1" target="1000" point="15" addPointSoldierID="100101,100301,100501,100701" />
+      <data id="3780002" type="1" target="1000" point="30" addPointSoldierID="100201,100401,100601,100801" />
+      <data id="3780003" type="1" target="1000" point="60" addPointSoldierID="100102,100302,100502,100702" />
+      <data id="3780004" type="1" target="1000" point="120" addPointSoldierID="100202,100402,100602,100802" />
+      <data id="3780005" type="1" target="1000" point="200" addPointSoldierID="100103,100303,100503,100703" />
+      <data id="3780006" type="1" target="1000" point="320" addPointSoldierID="100203,100403,100603,100803" />
+      <data id="3780007" type="1" target="1000" point="500" addPointSoldierID="100104,100304,100504,100704" />
+      <data id="3780008" type="1" target="1000" point="750" addPointSoldierID="100204,100404,100604,100804" />
+      <data id="3780009" type="1" target="1000" point="1050" addPointSoldierID="100105,100305,100505,100705" />
+      <data id="3780010" type="1" target="1000" point="1450" addPointSoldierID="100205,100405,100605,100805" />
+      <data id="3780011" type="1" target="1000" point="1950" addPointSoldierID="100106,100306,100506,100706" />
+      <data id="3780012" type="1" target="1000" point="2500" addPointSoldierID="100206,100406,100606,100806" />
+      <data id="3780013" type="1" target="1000" point="3000" addPointSoldierID="100107,100307,100507,100707,100207,100407,100607,100807" />
+      <data id="3780014" type="2" target="1000" point="15" addPointSoldierID="100101,100301,100501,100701" />
+      <data id="3780015" type="2" target="1000" point="30" addPointSoldierID="100201,100401,100601,100801" />
+      <data id="3780016" type="2" target="1000" point="60" addPointSoldierID="100102,100302,100502,100702" />
+      <data id="3780017" type="2" target="1000" point="120" addPointSoldierID="100202,100402,100602,100802" />
+      <data id="3780018" type="2" target="1000" point="200" addPointSoldierID="100103,100303,100503,100703" />
+      <data id="3780019" type="2" target="1000" point="320" addPointSoldierID="100203,100403,100603,100803" />
+      <data id="3780020" type="2" target="1000" point="500" addPointSoldierID="100104,100304,100504,100704" />
+      <data id="3780021" type="2" target="1000" point="750" addPointSoldierID="100204,100404,100604,100804" />
+      <data id="3780022" type="2" target="1000" point="1050" addPointSoldierID="100105,100305,100505,100705" />
+      <data id="3780023" type="2" target="1000" point="1450" addPointSoldierID="100205,100405,100605,100805" />
+      <data id="3780024" type="2" target="1000" point="1950" addPointSoldierID="100106,100306,100506,100706" />
+      <data id="3780025" type="2" target="1000" point="2500" addPointSoldierID="100206,100406,100606,100806" />
+      <data id="3780026" type="2" target="1000" point="3000" addPointSoldierID="100107,100307,100507,100707,100207,100407,100607,100807" />
+</root>

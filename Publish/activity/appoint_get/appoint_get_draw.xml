@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" weight="100" gainItem="30000_1000005_20" notice="1" />
+      <data id="2" weight="200" gainItem="30000_1400011_100" notice="1" />
+      <data id="3" weight="400" gainItem="30000_21063005_150" notice="1" />
+      <data id="4" weight="2000" gainItem="30000_21063005_30" />
+      <data id="5" weight="1000" gainItem="30000_1000005_5" />
+      <data id="6" weight="2150" gainItem="30000_1400011_30" />
+      <data id="7" weight="2000" gainItem="30000_21063005_45" />
+      <data id="8" weight="2150" gainItem="30000_1400011_20" />
+</root>

@@ -1,0 +1,39 @@
+# 流失时间；单位：秒
+lostTime = 604800
+
+# VIP等级
+vip = 0
+
+# 指挥官等级
+level = 1
+
+# 战斗力达标值
+battlePoint = 1
+
+# 基地等级
+buildlevel = 1
+
+# 每日发送召回次数限制
+recallNumLimit = 20
+
+# 每个被召回玩家只能激活X个玩家的任务数据
+triggerRecallNumLimit = 3
+
+# 召回盟友时间判定条件，单位：秒
+allianceRecallTime = 604800
+
+# 召回盟友刷新时间
+allianceRefreshTime = 600
+
+# 盟友接收次数上限，每日刷新
+receiveLimit = 5
+
+# 召回列表显示人数
+showNumber = 10
+
+# 盟友大本等级最小值
+baseLimit = 26
+
+# 屏蔽新服时间
+serverDelay = 5184000
+

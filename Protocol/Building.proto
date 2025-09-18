@@ -1,0 +1,232 @@
+import "Const.proto";
+import "Queue.proto";
+option java_package	= "com.hawk.game.protocol";
+
+
+message	BuildingPB
+{
+	required string	id				= 1;	// 建筑唯一id
+	required int32	buildCfgId		= 2;	// 建筑配置id
+	required int32	x				= 3;	// x坐标
+	required int32	y				= 4;	// y坐标
+	required BuildingStatus	status	= 5;	// 建筑状态
+	optional int32 hp				= 6;	// 防御建筑血量
+	optional int64 lastRecruitsCollectTime = 7;  // 最近一次收集资源的时间
+	optional string index			= 8;	 // 地标
+}
+
+// 已解锁的区块信息
+message UnlockedAreaPB
+{
+	repeated int32 unlockedArea = 1;
+}
+
+// 单个防御建筑的血量信息
+message	DefenceBuildingHP
+{
+	required string	id		= 1;	// 建筑唯一id
+	required int32 hp		= 2;	// 防御建筑血量
+	required int32 normal	= 3;	// 1表示满血0表示受损
+}
+
+// 防御建筑的（血量）状态信息
+message	DefenceBuildingStatusPB
+{
+	repeated DefenceBuildingHP defBuildHp =	1;
+}
+
+// 建筑建造、升级操作类型
+enum BuildingUpdateOperation
+{
+	BUILDING_UPDATE_COMMON		= 1;	// 普通操作
+	BUILDING_UPDATE_IMMIDIATELY	= 2;	// 立即完成
+}
+
+// 建筑建造、升级完成推送
+message	BuildingUpdatePush
+{
+	required BuildingUpdateOperation operation	= 1;	// 操作类型
+	required BuildingPB	building				= 2;	// 建筑PB
+}
+
+// 建筑拆除消息推送
+message BuildingRemovePushPB
+{
+	required string buildingUuid    = 1;
+}
+
+// 登陆时同步玩家建筑信息
+message	HPBuildingInfoSync
+{
+	repeated BuildingPB	buildings =	1;	//同步玩家建筑列表
+}
+
+//	创建建筑请求体
+message	BuildingCreateReq
+{
+	required int32 buildCfgId	= 1;	// 建筑配置id
+	optional int32	x			= 2;	// x坐标
+	optional int32	y			= 3;	// y坐标
+	optional string index		= 4;	// 地标
+    optional bool immediately	= 5;	// true	立即完成创建
+	optional bool useGold       = 6;    // 非立即创建时，是否用水晶替补不足的资源
+}
+
+// 建筑升级
+message	BuildingUpgradeReq
+{
+	required string	id			= 1;	// 建筑唯一id
+	required bool immediately	= 2;	// true	立即 false 正常升级
+	required int32 buildCfgId	= 3;	// 建筑当前的配置id
+	optional bool useGold       = 4;    // 非立即升级时，是否用水晶替补不足的资源
+	optional int32 multiply     = 5;    // 连续升X级
+}
+
+// 建筑移动请求
+message	BuildingMoveReq
+{
+	required string	id			= 1;	// 建筑唯一id
+	required int32	targetIndex	= 2;	// 目标地块
+}
+
+// 建筑移动请求
+message	BuildingMoveResp
+{
+	required string	changeBuildId 		= 1;	// 操作的建筑id
+	required int32	changeBuildIndex	= 2;	// 操作的建筑移动到的索引
+	optional string	beChangedBuildId 	= 3;	// 被动操作的建筑id
+	optional int32	beChangedBuildIndex	= 4;	// 被动操作的建筑移动到的索引
+}
+
+// 当建筑状态改变时推送建筑的状态信息
+message	PushBuildingStatus
+{
+	required BuildingStatus	status	= 1;	// 建筑状态
+	optional string buildId			= 2;	// 建筑类型
+
+}
+
+// 建筑改建请求
+message	BuildingRebuildReq
+{
+	required string	id			= 1;	// 建筑唯一Id
+	required int32 buildCfgId	= 2;	// 新建筑的配置id
+	required bool immediately	= 3;	// true	立即 false 正常进行
+}
+
+// 防御建筑修复
+message	BuildingRepairReq
+{
+	required string	id			= 1;	// 建筑唯一Id
+	required bool immediately	= 2;	// true	立即 false 正常进行
+}
+
+//收集新兵资源
+message CollectRecruits
+{
+	repeated string id  		= 1; 	//建筑唯一Id
+}
+
+// 资源建筑收取时间信息
+message ResBuildingInfo
+{
+	required string	id  = 1; // 建筑唯一Id
+	required int64 time = 2; // 最后一次收取资源时间
+}
+
+// 同步资源建筑最后收取资源的时间
+message PushLastResCollectTime
+{
+	repeated ResBuildingInfo buildingInfos = 1;
+	optional int32 goudaCrit               = 2; // 是否产生机甲暴击，1是0否
+}
+
+// 解锁区块请求
+message BuildingAreaUnlockReq
+{
+	required int32 areaId = 1;  // 区块Id号
+    required bool immediate = 2; // 是否立即解锁
+}
+
+// 解锁建筑请求
+message BuildingUnlockReq
+{
+	required string uuid = 1;  // 待解锁的建筑id
+}
+
+// 拆除建筑请求
+message BuildingRemoveReq
+{
+	required string uuid = 1;        // 待拆除的建筑id
+    required bool immediately	= 2; // true立即完成拆除
+}
+
+// 城防信息
+message CityDefPB
+{
+    required int32 cityDefVal     = 1;  // 当前城防值
+	optional int64 nextRepairTime = 2;  // 下一次可修复城防的时刻
+    optional int64 onFireEndTime  = 3;  // 城墙着火状态结束时间
+}
+
+// 资源增产作用号专项类型
+enum ResOutputBuffUnitType
+{
+	VIP_BUFF     = 1;   // 贵族加成
+	TALENT_BUFF  = 2;   // 天赋加成
+	TECH_BUFF    = 3;   // 科技加成
+	TOOL_BUFF    = 4;   // 道具加成
+	HERO_BUFF    = 5;   // 英雄加成
+	PLAT_BUFF    = 6;   // 平台特权加成
+	GUILD_MANOR_BUFF  = 7;  // 联盟领地加成
+	OTHER        = 8;  // 其他加成
+}
+
+// 资源田增产作用号数据
+message ResOutputBuffNoId
+{
+	required int32 buffType  = 1; // 作用号类型
+    required int32 buffVal   = 2; // 作用号的值
+}
+
+// 资源田增产作用号数据
+message ResOutputBuffWithId
+{
+	required string targetId           = 1; // 作用号对应的建筑ID
+    required ResOutputBuffNoId buffVal = 2;  // 作用号的值
+}
+
+// 资源田增产作用号专项数据
+message ResOutputBuffUnit
+{
+    required ResOutputBuffUnitType  buffUnit       = 1;   // 作用号专项类型
+    repeated ResOutputBuffNoId  buffDataNoId       = 2;   // 不带建筑ID的作用号数据
+	repeated ResOutputBuffWithId  buffDataWithId   = 3;   // 带建筑ID的作用号数据
+}
+
+// 建筑下作用号专项数据
+message BuildingBuff
+{
+	required BuildingType building       = 1;   // 建筑类型
+	repeated ResOutputBuffUnit unitBuff  = 2;   // 作用号专项数据
+}
+
+// 资源田增产作用号总览
+message ResOutputAddBuffPB
+{
+	repeated BuildingBuff  buff = 1;   // 资源田增产作用号
+}
+
+// 建筑选择性奖励领取信息（客户端请求，服务器推送时共用）
+message BuildingAwardTakePB
+{
+	required int32 cfgId = 1;
+    required int32 awardIndex = 2;
+}
+
+// 服务器推送已领取过的奖励信息
+message BuildingAwardTakeInfo
+{
+	repeated BuildingAwardTakePB awardTakeInfo = 1;
+}
+

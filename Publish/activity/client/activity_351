@@ -1,0 +1,93 @@
+return {
+	prop =
+	{
+		activityId = 351,
+		name = [[庆典演练]],
+		title = [[庆典演练]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">
+1.点击屏幕后，等待一段时间后战舰会自动攻击。<br/>
+2.击中不同的敌人获得不同的积分。<br/>
+3.击中特殊敌人可获得攻击次数+3，游戏时长增加30秒。<br/>
+4.击中敌人核心区域可获得双倍分数。<br/>
+5.获得的分数可转换为积分，可用于兑换商店。<br/>
+6.获得的最高分会计入排行，只有前100名会进入排行<br/> </font>]],
+		priority = 10062,
+		icon = [[Activity_Icon_350_Nor.png]],
+		selecticon = [[Activity_Icon_350_Sel.png]],
+		bigIcon = [[]],
+		doubleKillValue = 5,
+		tripleKillValue = 10,
+		gameCountLimit = 3,
+		buyGameCountCost = [[10000_1000_60;10000_1000_120;10000_1000_240]],
+		buyGameTimes = 3,
+		gameTime = 180,
+		atkValue = 10,
+		scoreItem = [[30000_21070034_1]],
+		lookItem = [[30000_9530000_1]],
+		barrageSize = 30,
+	},
+	shooting_practice_moveLine = [[id	posindex	floatingRange	direction	minTime	maxTime	EnemyGroupOdds	specialEnemyAppear
+1	1	1	1	1	1	2	2
+1	4	0	1	4000	4000	1_100	
+2	3	0	1	5000	5000	2_100	
+3	2	0	1	6000	6000	3_100	
+4	1	0	1	7000	7000	5_100	
+5	1	30	2	100	3500	4_100	2_2000
+]],
+	shooting_practice_enemy = [[enemyId	moveSpeed	scale	enemyccbi	score	doubleScore	shootAddValue	timeAddValue
+1	1	1	2	1	1	1	1
+1001	70	1	RAActivity351BattleMonster1V5.ccbi	3	6	0	0
+1002	64	1	RAActivity351BattleMonster2V5.ccbi	2	4	0	0
+1003	51	1	RAActivity351BattleMonster3V5.ccbi	1	2	0	0
+1004	80	1	RAActivity351BattleMonster4V5.ccbi	4	8	3	3000
+]],
+	shooting_practice_enemyGroup = [[id	enemyList
+1	2
+1	1001_0
+2	1002_0
+3	1003_0
+4	1004_0
+5	1001_0,1003_2200,1002_3000
+]],
+	shooting_practice_achieve = [[achieveId	conditionType	conditionValue	rewards	page	taskText
+1	1	1	2	1	2
+35101001	140900	1	30000_802004_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">登录{0}次(<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{1}/{2}</font>)</font>
+35101002	700014	1	30000_21063005_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">分享周年庆活动{0}次(<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{1}/{2}</font>)</font>
+35101003	35101	1	30000_1300027_1,30000_802004_1,30000_1782103_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">购买游戏次数{0}次(<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{1}/{2}</font>)</font>
+35101004	35101	2	30000_802004_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">购买游戏次数{0}次(<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{1}/{2}</font>)</font>
+35101005	35101	3	30000_21063005_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">购买游戏次数{0}次(<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{1}/{2}</font>)</font>
+35101006	35102	20	30000_1300027_1,30000_802004_1,30000_1782103_1	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计积分<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">20</font>分</font>
+35101007	35102	40	30000_802004_1	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计积分<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">40</font>分</font>
+35101008	35102	60	30000_21063005_1	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计积分<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">60</font>分</font>
+35101009	35102	80	30000_1782103_1	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计积分<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">80</font>分</font>
+35101010	35102	100	30000_800002_1	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计积分<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">100</font>分</font>
+]],
+	shooting_practice_exchange = [[id	needItem	gainItem	times
+1	2	2	1
+1001	30000_21070034_1	30000_1300027_1	200
+1002	30000_21070034_2	30000_802004_1	200
+1003	30000_21070034_3	30000_21063005_1	200
+1004	30000_21070034_4	30000_1782103_1	600
+1005	30000_21070034_5	30000_800002_1	600
+1006	30000_21070034_6	30000_9990032_1	600
+1007	30000_21070034_7	30000_1800001_1	600
+1008	30000_21070034_8	30000_820002_1	400
+1009	30000_21070034_9	30000_800000_1	300
+1010	30000_21070034_10	30000_1300017_1	500
+1011	30000_21070034_11	30000_1800000_1	500
+1012	30000_21070034_12	30000_100050_1	999
+1013	30000_21070034_13	30000_1780045_1	999
+]],
+	shooting_practice_rank_reward = [[id	rankUpper	rankLower	reward	bulletScreenHtml
+1	1	1	2	2
+1	1	1	30000_840165_60,30000_840165_50	Act351Html0001
+2	2	2	30000_840165_60,30000_840165_50	Act351Html0002
+3	3	3	30000_840165_60,30000_840165_50	Act351Html0003
+4	4	10	30000_840165_60,30000_840165_50	Act351Html0004
+5	11	20	30000_840165_60,30000_840165_50	Act351Html0004
+6	21	50	30000_840165_60,30000_840165_50	Act351Html0004
+7	51	70	30000_840165_60,30000_840165_50	Act351Html0004
+8	71	100	30000_840165_60,30000_840165_50	Act351Html0004
+]],
+
+}

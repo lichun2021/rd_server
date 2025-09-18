@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needItem="30000_1780159_1,30000_1780161_1,30000_1780160_2" gainItem="30000_1780162_1" times="999" />
+      <data id="2" needItem="30000_1780159_1" gainItem="30000_840001_1" times="999" />
+      <data id="3" needItem="30000_1780161_1" gainItem="30000_13310002_1" times="999" />
+      <data id="4" needItem="30000_1780160_1" gainItem="30000_1510002_1" times="999" />
+</root>

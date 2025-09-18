@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" recNum="1" redis="2" resourceId="300502" level="1" collectSpeed="0.034" totalRes="20" minRes="1" refreshTime="180,1560,2940" refreshCount="20" collectArmyMin="1" guildHonorRate="10" />
+      <data id="2" recNum="1" redis="2" resourceId="300502" level="2" collectSpeed="0.1" totalRes="50" minRes="1" refreshTime="180,1560,2940" refreshCount="8" collectArmyMin="1" guildHonorRate="10" />
+</root>

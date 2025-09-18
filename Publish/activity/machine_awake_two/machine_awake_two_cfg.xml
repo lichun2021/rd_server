@@ -1,0 +1,15 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 是否每日重置
+isDailyReset = 1
+
+# 个人排行数量
+selfRankLimit = 100
+
+# 联盟排行数量
+guildRankLimit = 10
+
+# 排行刷新周期(毫秒)
+rankPeriod = 60000
+

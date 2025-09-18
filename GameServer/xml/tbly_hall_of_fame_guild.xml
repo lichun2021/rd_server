@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- vipId  明星队员 对应表tbly_hall_of_fame_player.xml 中的id -->
+      <data id="10001" season="1" rank="1" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildLevel ="6" guildName ="贼牛逼" guildPower ="465645" announcement ="困楞国右历历顺要田 是要要人人胗仍我欠人" serverId ="60004" vipId="10001,10002"/>
+</root>

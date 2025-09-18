@@ -1,0 +1,31 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+#每道题的分数
+questionScore = 10
+#题目数量
+questionLimitNum = 30
+
+#排行榜数量
+rankLimit = 20
+
+#排行榜刷新时间秒
+rankRefreshTime = 20
+
+#世界答题记录显示个数
+recordLimt =20
+
+#连续答题额外积分(数_分)
+continueExtreScore = 5_5,4_4,3_3,2_2,1_1
+
+#初始幸运星数量
+luckyStarCount = 3
+
+#使用幸运星倍数
+luckyStarMultiple = 1
+
+#答题前三名额外积分(名_分)
+topThreeExtreScore = 3_1,2_2,1_3
+
+
+

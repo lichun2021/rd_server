@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" min="0" max="30000" rate="2000" />
+      <data id="2" min="30001" max="50000" rate="1500" />
+      <data id="3" min="50001" max="60000" rate="1000" />
+</root>

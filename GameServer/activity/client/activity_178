@@ -1,0 +1,22 @@
+return {
+	prop =
+	{
+		activityId = 178,
+		name = [[军工兑换]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">完成发展冲刺任务可以获得特殊道具“回归勋章”，用于兑换专属宝箱。</font>]],
+		priority = 10003,
+		icon = [[Activity_Icon_178_Nor.png]],
+		selecticon = [[Activity_Icon_178_Sel.png]],
+		bigIcon = [[]],
+	},
+	return_army_exchange = [[id	playerType	title	itemId	limit	price	rewards	icon	exchangeIcon
+1	1	2	1	1	2	2	2	2
+1	1	军工兑换-资源套餐	1150154	10	30000_1150048_5	30000_850009_5,30000_850039_5,30000_850019_5,30000_850029_5	Activity_Icon_178_06.png	Item_Act178.png
+2	1	军工兑换-加速套餐	1150155	10	30000_1150048_5	30000_100050_5,30000_101050_20,30000_104050_10	Activity_Icon_178_02.png	Item_Act178.png
+3	1	军工兑换-英雄套餐	1150156	10	30000_1150048_10	30000_1000005_1,30000_1000003_30,30000_1510003_200,30000_13310003_200	Activity_Icon_178_05.png	Item_Act178.png
+4	1	军工兑换-超武套餐	1150157	10	30000_1150048_10	30000_1782123_20,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2	Activity_Icon_178_17.png	Item_Act178.png
+5	1	军工兑换-辉金套餐	1150158	10	30000_1150048_10	30000_21065001_15,30000_21063005_150,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2	Activity_Icon_178_18.png	Item_Act178.png
+]],
+
+}

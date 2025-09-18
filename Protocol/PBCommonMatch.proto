@@ -1,0 +1,188 @@
+option java_package	= "com.hawk.game.protocol";
+
+enum PBCMWMatchType{
+    XHJZ_SEASON = 1;//星海赛季
+}
+
+enum PBCMWServerType{
+    NEW_SERVER = 1;//新秀
+    OLD_SERVER = 2;//巅峰
+}
+
+enum PBCMWBattleType{
+    QUALIFIER   = 1;//预选赛
+    RANKING     = 2;//排名赛
+}
+
+enum PBCMWGroupType{
+    NOMAL_GROUP		= 0; // 未入选
+	QUALIFIER_GROUP	= 1; // 入围赛
+	S_GROUP			= 2; // S组（王者）
+	A_GROUP 		= 3; // A组（挑战）
+	B_GROUP			= 4; // B组（精英）
+}
+
+enum PBCMWBigState{
+    BIG_COLSE       = 1;//关闭
+    BIG_SIGNUP      = 2;//赛前报名
+    BIG_QUALIFIER   = 3;//入围赛
+    BIG_RANKING     = 4;//排名赛
+    BIG_END_SHOW    = 5;//赛后
+    
+}
+
+enum PBCMWState{
+    PEACE        = 1;//和平阶段
+    SIGNUP       = 2;//报名阶段
+    MATCH_WAIT   = 3;//等待阶段
+    MATCH        = 4;//匹配阶段
+    PREPARE      = 5;//准备阶段
+    BATTLE       = 6;//战斗阶段
+    FINISH       = 7;//结束阶段
+}
+
+//页面信息
+message PBCMWPageInfo{
+    optional PBCMWBigState bigState     = 1;//赛季状态
+    optional int32 termId               = 2;//期数
+    required PBCMWState state           = 3;//活动状态
+    optional int64 endTime              = 4;//结束时间
+    optional PBCMWTeamInfo selfTeam     = 5;//自己的队伍
+    optional int64 seasonStartTime      = 6;//赛季开始时间
+    optional int64 signUpEndTime        = 7;//报名结束时间
+    optional int64 qualifierEndTime     = 8;//入围结束时间
+    optional int64 rankingEndTime       = 9;//排名结束时间
+    optional int64 seasonEndTime        = 10;//赛季结束时间
+    optional int32 qualifierMax         = 11;//入围最大轮次
+    optional int32 rankingEndMax        = 12;//排名最大轮次
+}
+
+//队伍信息
+message PBCMWTeamInfo{
+    required string id                  = 1;//战队id
+	optional string guildId             = 2;//联盟id
+	optional string guildName           = 3;//联盟名字
+	optional string guildTag            = 4;//联盟简称
+	optional int32 guildFlag            = 5;//联盟旗帜
+	optional int64 creatTime            = 6;//创建时间(战队，战绩)
+	optional string name                = 7;//战队名字
+	optional string serverId            = 8;//服务器
+	optional int64 battlePoint          = 9;//参战人员总战力
+	optional int32 memberCnt            = 10;//参战人员数量
+    optional int32 timeIndex            = 11;//报名时间段
+    optional int64 battleStartTime      = 12;//战斗开始时间
+    optional int64 battleEndtime        = 13;//战斗结束时间
+    optional int32 rank                 = 14;//比赛排行
+	optional int64 score                = 15;//比赛积分
+    optional bool isWin                 = 16;//是否获胜
+    optional int32 winCount             = 17;//胜利数
+    optional int32 loseCount            = 18;//失败数
+    optional PBCMWGroupType groupType   = 19;//组别
+}
+
+//对战信息
+message PBCMWBattleInfo{
+    optional PBCMWTeamInfo team1        = 1;//小队1
+    optional PBCMWTeamInfo team2        = 2;//小队2
+    optional int32 termId               = 3;//期数
+    optional int64 battleStartTime      = 4;//战斗开始时间
+    optional int32 winCount             = 5;//胜利数
+}
+
+//时间
+message PBCMWBattleTime{
+    optional PBCMWBattleType type      = 1;//类型
+    optional int64 startTime           = 2;//战斗开始时间
+    optional int64 endTime             = 3;//战斗开始时间
+    repeated PBCMWBattleTimeInfo infos = 4;//时间信息
+}
+
+//时间
+message PBCMWBattleTimeInfo{
+    optional int32 termId               = 1;//期数
+    optional int64 matchEndTime         = 2;//战斗开始时间
+    optional int64 battleStartTime      = 3;//战斗开始时间
+    optional int64 battleEndTime        = 4;//战斗开始时间
+}
+
+//请求页面信息 CMW_PAGE_INFO_REQ 	 = 54081
+message PBCMWPageInfoReq{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+}
+
+//返回页面信息 CMW_PAGE_INFO_RESP 	 = 54082
+message PBCMWPageInfoResp{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+    optional PBCMWPageInfo pageInfo     = 3;//页面信息
+    optional PBCMWServerType selfType   = 4;//服务器类型
+}
+
+//请求排名信息 CMW_RANK_INFO_REQ	 = 54083
+message PBCMWRankInfoReq{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+    optional PBCMWBattleType battleType = 3;//战斗类型
+    optional bool isEnd                 = 4;//最终排名
+}
+
+//返回排名信息 CMW_RANK_INFO_RESP 	 = 54084
+message PBCMWRankInfoResp{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+    optional PBCMWBattleType battleType = 3;//战斗类型
+    optional bool isEnd                 = 4;//最终排名
+    repeated PBCMWTeamInfo rankInfos    = 5;//排名数据
+    optional PBCMWTeamInfo selfInfo    = 6;//自己的数据
+}
+
+//请求对战信息 CMW_BATTLE_INFO_REQ  = 54085
+message PBCMWBattleInfoReq{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+    optional PBCMWBattleType battleType = 3;//战斗类型
+    optional PBCMWGroupType groupType   = 4;//组类型
+    optional int32 termId               = 5;//期数
+    optional bool isSelf                = 6;//只取本小队
+
+}
+
+//返回对战信息 CMW_BATTLE_INFO_RESP = 54086
+message PBCMWBattleInfoResp{
+    optional PBCMWMatchType matchType    = 1;//比赛类型
+    optional PBCMWServerType serverType  = 2;//服务器类型
+    optional PBCMWBattleType battleType  = 3;//战斗类型
+    optional PBCMWGroupType groupType    = 4;//组类型
+    optional int32 termId                = 5;//期数
+    optional bool isSelf                 = 6;//只取本小队
+    repeated PBCMWBattleInfo battleInfos = 7;//对战信息
+    optional int64 battleStartTime       = 8;//战斗开始时间
+}
+
+//请求时间信息 CMW_BATTLE_TIME_REQ		= 54087
+message PBCMWBattleTimeReq{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+}
+
+//返回时间信息 CMW_BATTLE_TIME_RESP	= 54088
+message PBCMWBattleTimeResp{
+    optional PBCMWMatchType matchType    = 1;//比赛类型
+    optional PBCMWServerType serverType  = 2;//服务器类型
+    repeated PBCMWBattleTime timeInfos   = 3;//排期
+}
+
+//请求目标信息 CMW_BATTLE_TARGET_REQ	= 54089
+message PBCMWBattleTargetReq{
+    optional PBCMWMatchType matchType   = 1;//比赛类型
+    optional PBCMWServerType serverType = 2;//服务器类型
+}
+
+//返回目标信息 CMW_BATTLE_TARGET_RESP	= 54090
+message PBCMWBattleTargetResp{
+    optional PBCMWMatchType matchType    = 1;//比赛类型
+    optional PBCMWServerType serverType  = 2;//服务器类型
+    optional int64 score                 = 3;//当前分数
+    repeated int32 sendAwards            = 4;//已经获得的
+}

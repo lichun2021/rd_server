@@ -1,0 +1,23 @@
+return {
+	prop =
+	{
+		activityId = 194,
+		name = [[福船送礼]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动描述：<br/>1.活动期间指挥官可以通过参与端午盛典系列活动获得丰厚奖励。<br/>2.联盟盛典活动是以联盟为单位参与的道具兑换活动。指挥官可以通过消耗道具或金条获得不同的2种兑换道具，同时会为所在联盟获得“奖池经验”来提升联盟奖池的等级。<br/>3.节日兑换活动是将联盟盛典活动中获得的2种兑换道具，兑换成自己心仪道具的活动。<br/>4.端午特惠活动是通过在活动期间的特惠商店购买物品来完成任务并获得道具。<br/>5.福船送礼活动是通过消耗一条行军队列前往大世界中的活动建筑自动领取一份奖励，奖励会在不同的时间刷新固定份数的奖励，刷新时会有公告提示先到先得。<br/>6.节日福袋活动是通过消耗金条获得超多金币的活动，运势越好获得越多。<br/>7.充值粽礼活动是通过完成充值金条任务获得额外道具的活动。<br/></font>]],
+		botTips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">每日12点、18点龙舟送来200份端午节礼包，限时限量不容错过！</font>]],
+		priority = 30000,
+		icon = [[Activity_Icon_194_Nor.png]],
+		selecticon = [[Activity_Icon_194_Sel.png]],
+		refreshTimes = [[12_20]],
+	},
+	dw_main = [[rank	ID	name	icon
+1	1	2	2
+1	192	@ActivityName192	V5Activity_192_Main_Icon_03.png
+2	193	@ActivityName193	V5Activity_192_Main_Icon_01.png
+3	194	@ActivityName194	V5Activity_192_Main_Icon_02.png
+4	195	@ActivityName195	V5Activity_192_Main_Icon_05.png
+5	196	@ActivityName196	V5Activity_192_Main_Icon_04.png
+6	197	@ActivityName197	V5Activity_192_Main_Icon_06.png
+]],
+
+}

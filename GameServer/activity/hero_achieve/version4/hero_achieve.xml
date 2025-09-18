@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="290001" conditionType="131100" conditionValue="1" rewards="30000_1510004_10,30000_13310004_10,30000_800143_10,30000_800110_10" />
+      <data achieveId="290002" conditionType="131100" conditionValue="3" rewards="30000_1510004_20,30000_13310004_20,30000_800143_20,30000_800110_20" />
+      <data achieveId="290003" conditionType="131100" conditionValue="5" rewards="30000_1510004_30,30000_13310004_30,30000_800143_30,30000_800110_30" />
+      <data achieveId="290004" conditionType="131100" conditionValue="8" rewards="30000_1510004_40,30000_13310004_40,30000_800143_40,30000_800110_40,10000_1001_88" />
+      <data achieveId="290005" conditionType="131100" conditionValue="12" rewards="30000_1510004_60,30000_13310004_60,30000_800143_60,30000_800110_60,10000_1001_138" />
+      <data achieveId="290006" conditionType="131100" conditionValue="16" rewards="30000_1510004_80,30000_13310004_80,30000_800143_80,30000_800110_80,10000_1001_188" />
+      <data achieveId="290007" conditionType="131100" conditionValue="20" rewards="30000_1510004_100,30000_13310004_100,30000_800143_100,30000_800110_100,10000_1001_288" />
+      <data achieveId="290008" conditionType="131100" conditionValue="25" rewards="30000_1510004_150,30000_13310004_150,30000_800143_150,30000_800110_150,10000_1001_388" />
+      <data achieveId="290009" conditionType="131100" conditionValue="30" rewards="30000_1510004_200,30000_13310004_200,30000_800143_200,30000_800110_200,10000_1001_588" />
+</root>

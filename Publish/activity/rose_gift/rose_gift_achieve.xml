@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="319101" conditionType="700093" conditionValue="6" rewards="30000_1400009_100" isReset="1" />
+      <data achieveId="319102" conditionType="700093" conditionValue="30" rewards="30000_1400009_100" isReset="1" />
+      <data achieveId="319103" conditionType="700093" conditionValue="68" rewards="30000_1400009_100" isReset="0" />
+      <data achieveId="319104" conditionType="700093" conditionValue="328" rewards="30000_1400009_100" isReset="0" />
+      <data achieveId="319105" conditionType="700093" conditionValue="648" rewards="30000_1400009_100" isReset="0" />
+      <data achieveId="319201" conditionType="700091" conditionValue="100" rewards="30000_1400010_5" isReset="0" />
+      <data achieveId="319202" conditionType="700091" conditionValue="200" rewards="30000_1400010_6" isReset="0" />
+      <data achieveId="319203" conditionType="700091" conditionValue="300" rewards="30000_1400010_7" isReset="0" />
+      <data achieveId="319204" conditionType="700091" conditionValue="400" rewards="30000_1400010_8" isReset="0" />
+      <data achieveId="319205" conditionType="700091" conditionValue="500" rewards="30000_1400010_9" isReset="0" />
+      <data achieveId="319301" conditionType="700092" conditionValue="200" rewards="30000_1780138_30,30000_1300017_90,30000_840194_90,30000_810001_30,30000_850007_3,30000_850037_3,30000_850017_3,30000_850027_3" isReset="0" />
+      <data achieveId="319302" conditionType="700092" conditionValue="300" rewards="30000_1780138_45,30000_1300017_120,30000_840194_120,30000_810001_40,30000_850007_4,30000_850037_4,30000_850017_4,30000_850027_4" isReset="0" />
+      <data achieveId="319303" conditionType="700092" conditionValue="400" rewards="30000_1780138_58,30000_1300017_150,30000_840194_150,30000_810001_50,30000_850007_5,30000_850037_5,30000_850017_5,30000_850027_5" isReset="0" />
+      <data achieveId="319304" conditionType="700092" conditionValue="500" rewards="30000_1780138_78,30000_1300017_180,30000_840194_180,30000_810001_60,30000_850007_6,30000_850037_6,30000_850017_6,30000_850027_6" isReset="0" />
+</root>

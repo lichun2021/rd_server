@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data rewardId="28710001" item="30000_800002_500" Aweight="80" Bweight="1250" />
+      <data rewardId="28710002" item="30000_800002_120" Aweight="200" Bweight="1250" />
+      <data rewardId="28710003" item="30000_800002_80" Aweight="820" Bweight="1250" />
+      <data rewardId="28710004" item="30000_802003_30" Aweight="1200" Bweight="1250" />
+      <data rewardId="28710005" item="30000_1300017_150" Aweight="1500" Bweight="1250" />
+      <data rewardId="28710006" item="30000_1800000_50" Aweight="1800" Bweight="1250" />
+      <data rewardId="28710007" item="30000_810002_2" Aweight="2200" Bweight="1250" />
+      <data rewardId="28710008" item="30000_1780040_2" Aweight="2200" Bweight="1250" />
+</root>

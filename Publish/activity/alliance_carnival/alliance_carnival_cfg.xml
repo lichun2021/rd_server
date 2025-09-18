@@ -1,0 +1,24 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 初始刷新任务数量
+refreshCount = 20
+
+# 默认接受任务数量
+defaultReceiveTime = 10
+
+# 每日购买次数限制
+buyLimit = 1
+
+# 购买金币价格
+buyPrice = 50
+
+# 重复报箱开始领取等级
+awardLvLimit = 30
+
+# 重复报箱每个所需积分数量
+awardScore = 3000
+
+# 重复报箱道具id
+award = 30000_1300017_10,30000_810001_1
+

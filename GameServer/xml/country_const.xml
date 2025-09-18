@@ -1,0 +1,57 @@
+# 任务开始时间
+questOpen = 8:00
+
+# 任务结束时间
+questClose = 23:59
+
+# 单人任务创建数量
+questSingle = 3
+
+# 多人任务创建数量
+questMult = 1
+
+# 每天完成任务次数
+questComplte = 999
+
+# 建筑地格大小
+buildArea = 2
+
+# 司令战后换国策时间（秒）
+changePolicy = 14400
+
+# 默认国策id
+defaultPolicy = 1
+
+# 国家建设值
+buildValue = 5000
+
+# 出征部队数量限制
+marchLimit = 2147483647
+
+# 巡视cd(秒）
+tourCd = 3600
+
+# 巡视奖励（国策经验&物品奖励）
+tourReward = 10000_1022_8000,30000_1300017_10,30000_810000_48,30000_1780030_48
+
+# 巡视奖励（国家积分）
+tourRewardScore = 10000_1023_1000
+
+# 初始技能格
+policyskillnum = 3
+
+# 盟军大厅开放等级
+countryBuildOpen = 15
+
+# 重置国策技能金币价格
+restPolicyPointCost = 10000_1001_200
+
+# 多人任务进入限制（秒）
+questMultTime = 1800
+
+# 出征部队战力转化为国策经验加成系数
+marchBuff = 20000
+
+# 出征战力加成上限（不大于10%）
+marchBuffLimit = 1000
+

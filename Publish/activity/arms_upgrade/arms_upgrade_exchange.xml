@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" boxId="1" needItem="30000_15210001_10" />
+      <data id="2" boxId="1" needItem="30000_15210002_10" />
+      <data id="3" boxId="1" needItem="30000_15210003_10" />
+      <data id="4" boxId="1" needItem="30000_15210004_10" />
+      <data id="5" boxId="1" needItem="30000_15510001_10" />
+      <data id="6" boxId="1" needItem="30000_15510002_10" />
+      <data id="7" boxId="1" needItem="30000_15510003_10" />
+      <data id="8" boxId="1" needItem="30000_15510005_10" />
+      <data id="9" boxId="2" needItem="30000_802001_10" />
+      <data id="10" boxId="2" needItem="30000_802002_10" />
+      <data id="11" boxId="2" needItem="30000_801001_10" />
+      <data id="12" boxId="2" needItem="30000_801002_10" />
+      <data id="13" boxId="3" needItem="30000_1001011_5" />
+      <data id="14" boxId="3" needItem="30000_1001032_5" />
+      <data id="15" boxId="3" needItem="30000_1001016_5" />
+      <data id="16" boxId="3" needItem="30000_1001029_5" />
+      <data id="17" boxId="3" needItem="30000_1001012_5" />
+      <data id="18" boxId="3" needItem="30000_1001013_5" />
+      <data id="19" boxId="3" needItem="30000_1001014_5" />
+      <data id="20" boxId="3" needItem="30000_1001015_5" />
+      <data id="21" boxId="4" needItem="30000_15210001_10" />
+      <data id="22" boxId="4" needItem="30000_15210002_10" />
+      <data id="23" boxId="4" needItem="30000_15210003_10" />
+      <data id="24" boxId="4" needItem="30000_15210004_10" />
+      <data id="25" boxId="4" needItem="30000_15510001_10" />
+      <data id="26" boxId="4" needItem="30000_15510002_10" />
+      <data id="27" boxId="4" needItem="30000_15510003_10" />
+      <data id="28" boxId="4" needItem="30000_15510005_10" />
+      <data id="29" boxId="5" needItem="30000_802001_10" />
+      <data id="30" boxId="5" needItem="30000_802002_10" />
+      <data id="31" boxId="5" needItem="30000_801001_10" />
+      <data id="32" boxId="5" needItem="30000_801002_10" />
+      <data id="33" boxId="6" needItem="30000_1001005_5" />
+      <data id="34" boxId="6" needItem="30000_1001006_5" />
+      <data id="35" boxId="6" needItem="30000_1001007_5" />
+      <data id="36" boxId="6" needItem="30000_1001008_5" />
+      <data id="37" boxId="6" needItem="30000_1001009_5" />
+      <data id="38" boxId="6" needItem="30000_1001010_5" />
+      <data id="39" boxId="6" needItem="30000_1001022_5" />
+      <data id="40" boxId="6" needItem="30000_1001024_5" />
+</root>

@@ -1,0 +1,156 @@
+option java_package	= "com.hawk.game.protocol";
+
+//活动状态
+enum XWState{
+    XW_PEACE        = 1;//和平阶段
+    XW_SIGNUP       = 2;//报名阶段
+    XW_MATCH_WAIT   = 3;//等待阶段
+    XW_MATCH        = 4;//匹配阶段
+    XW_PREPARE      = 5;//准备阶段
+    XW_BATTLE       = 6;//战斗阶段
+    XW_FINISH       = 7;//结束阶段
+}
+
+//玩家角色
+enum XWPlayerAuth{
+    XW_COMMAND        = 1;//指挥官
+    XW_STARTER        = 2;//正选队员
+    XW_CANDIDATE      = 3;//预备队员
+    XW_NO_TEAM        = 4;//未出战
+}
+
+//队伍操作
+enum XWTeamOpt{
+    XW_CREATE        = 1;//创建战队
+    XW_CHANGE_NAME   = 2;//战队改名
+    XW_CHOOSE_TIME   = 3;//报名时段
+    XW_DISMISS       = 4;//解散
+    XW_TEAM_UPDATE   = 5;//成员变化
+}
+
+//战队信息
+message XWTeamInfo{
+    required string id                  = 1;//战队id
+	optional string guildId             = 2;//联盟id
+	optional string guildName           = 3;//联盟名字
+	optional string guildTag            = 4;//联盟简称
+	optional int32 guildFlag            = 5;//联盟旗帜
+	optional int64 creatTime            = 6;//创建时间(战队，战绩)
+	required string name                = 7;//战队名字
+	optional string serverId            = 8;//服务器
+	optional int64 battlePoint          = 9;//参战人员总战力
+	optional int32 memberCnt            = 10;//参战人员数量
+    optional int32 timeIndex            = 11;//报名时间段
+    optional XWState battleState        = 12;//战斗状态
+    optional int64 battleStartTime      = 13;//战斗开始时间
+    optional int64 battleEndtime        = 14;//战斗结束时间
+    optional XWTeamInfo oppTeam         = 15;//对手队伍
+    optional int32 rank                 = 16;//比赛排行
+	optional int64 score                = 17;//比赛积分
+    optional bool isWin                 = 18;//是否获胜
+}
+
+// 玩家信息
+message XWPlayerInfo{
+	required string id		        = 1;//玩家id
+	required string name	        = 2;//玩家名字
+	required string serverId	    = 3;//服务器id
+	optional int32 icon			    = 4;//头像
+	optional string pfIcon		    = 5;//平台头像
+	required string guildId		    = 6;//联盟id
+	required string guildTag	    = 7;//联盟简称
+	optional string teamId		    = 8;//队伍id
+    optional int32 auth             = 9;//联盟阶级
+	required XWPlayerAuth teamAuth	= 10;//权限
+	optional int32 guildOfficer	    = 11;//联盟官职
+	required int64 battlePoint	    = 12;//战力
+}
+
+//商店物品兑换信息
+message XWShopItem{
+	required int32 cfgId      = 1; // 配置ID
+	required int32 times      = 2; // 兑换次数
+}
+
+//状态信息
+message XWStateInfo{
+    required XWState state      = 1;//活动状态
+    optional int64 endTime       = 2;//结束时间
+}
+
+//页面信息 XHJZ_PAGE_INFO_RESP				= 55022;//页面信息返回
+message XWPageInfo{
+    required XWStateInfo stateInfo      = 1;//状态信息
+    repeated XWTeamInfo teamInfos       = 2;//战队信息
+    optional string selfTeamId          = 3;//自己的队伍id
+    repeated XWShopItem shopItems       = 4;//兑换商店
+    optional int64 shopRefreshTime      = 5;//商店刷新时间
+    optional int64 cfgBattleTime        = 6;//战斗配置时间
+}
+
+//队伍管理请求 XHJZ_TEAM_MANAGER_REQ			= 55023;//队伍管理请求
+message XWTeamManagerReq{
+    required XWTeamOpt opt      = 1;//队伍操作
+    optional string teamId      = 2;//队伍id
+    optional string name	    = 3;//队伍名字
+    optional int32 timeIndex	= 4;//队伍名字
+}
+
+//队伍管理返回 XHJZ_TEAM_MANAGER_RESP			= 55024;//队伍管理返回
+message XWTeamManagerResp{
+    required XWTeamInfo teamInfo    = 1;//队伍信息
+    required XWTeamOpt opt          = 2;//队伍操作
+}
+
+//成员管理请求 XHJZ_MEMBER_MANAGER_REQ			= 55025;//成员管理请求
+message XWMemberManagerReq{
+    required string playerId    = 1;//玩家id
+    optional string teamId      = 2;//队伍id
+    optional XWPlayerAuth auth  = 3;//权限
+}
+
+//成员管理返回 XHJZ_MEMBER_MANAGER_RESP		= 55026;//成员管理返回
+message XWMemberManagerResp{
+    required XWPlayerInfo playerInfo    = 1;//玩家信息
+    optional XWPlayerAuth auth          = 2;//权限
+}
+
+//成员列表 XHJZ_MEMBER_LIST_RESP			= 55028;//成员列表返回
+message XWMemberListResp{
+    repeated XWPlayerInfo playerInfos = 1;//成员列表
+}
+
+//小队排行 XHJZ_TEAM_RANK_RESP				= 55030;//队伍排行返回
+message XWTeamRankResp{
+    repeated XWTeamInfo teamInfos       = 1;//战队信息
+    optional string selfTeamId          = 2;//自己的队伍id
+}
+
+//历史战绩 XHJZ_HISTORY_RESP				= 55032;//历史战绩返回
+message XWHistoryResp{
+    repeated XWTeamInfo teamInfos       = 1;//战队信息
+    optional string selfTeamId          = 2;//自己的队伍id
+}
+
+//商店兑换请求 XHJZ_EXCHANGE_REQ				= 55033;//商品兑换请求
+message XWEXchangeReq{
+    required int32 cfgId      = 1; // 配置ID
+	required int32 times      = 2; // 兑换次数
+}
+
+//商店兑换返回 XHJZ_EXCHANGE_RESP				= 55034;//商品兑换返回
+message XWEXchangeResp{
+    required int32 cfgId      = 1; // 配置ID
+	required int32 times      = 2; // 已经兑换次数
+}
+
+
+//请求回到原服的玩家.
+message PBXHJZWarInnerBackServerReq {
+	required string playerId = 1;
+}
+
+//签回玩家.
+message PBXHJZWarMoveBackReq {
+	required string playerId = 1;
+}

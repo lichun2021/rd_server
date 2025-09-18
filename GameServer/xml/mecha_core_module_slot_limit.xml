@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" slotType="1" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+      <data id="2" slotType="2" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+      <data id="3" slotType="3" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+      <data id="4" slotType="4" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+      <data id="5" slotType="5" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+      <data id="6" slotType="6" unlockRankLimit="10" unlockBaseLevelLimit="1" />
+</root>

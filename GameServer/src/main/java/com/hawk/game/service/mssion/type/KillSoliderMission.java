@@ -1,0 +1,31 @@
+package com.hawk.game.service.mssion.type;
+
+import com.hawk.game.item.mission.MissionCfgItem;
+import com.hawk.game.item.mission.MissionEntityItem;
+import com.hawk.game.player.Player;
+import com.hawk.game.player.PlayerData;
+import com.hawk.game.service.mssion.Mission;
+import com.hawk.game.service.mssion.MissionEvent;
+import com.hawk.game.service.mssion.MissionType;
+import com.hawk.game.service.mssion.event.EventKillSolider;
+
+/**
+ * 灭{1}类型敌军{2}个
+ * @author golden
+ *
+ */
+@Mission(missionType = MissionType.MISSION_KILL_SOLIDER_COUNT)
+public class KillSoliderMission implements IMission{
+
+	@Override
+	public <T extends MissionEvent> void refreshGeneralMission(Player player, T missionEvent) {
+		
+	}
+
+	@Override
+	public <T extends MissionEvent> void refreshMission(PlayerData playerData, T missionEvent, MissionEntityItem entityItem, MissionCfgItem cfg) {
+		EventKillSolider event = (EventKillSolider)missionEvent;
+		entityItem.addValue(event.getCount());
+		checkMissionFinish(entityItem, cfg);
+	}
+}

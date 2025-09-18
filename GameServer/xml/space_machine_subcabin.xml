@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="12001" level="1" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_20,30000_820001_5" winEffect="100_50000" />
+      <data id="12002" level="2" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_20,30000_820001_5" winEffect="100_50000" />
+      <data id="12003" level="3" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_20,30000_820001_5" winEffect="100_50000" />
+      <data id="12004" level="4" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_20,30000_820001_5" winEffect="100_50000" />
+      <data id="12005" level="5" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_20,30000_820001_5" winEffect="100_50000" />
+      <data id="12006" level="6" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_30,30000_820001_5" winEffect="100_50000" />
+      <data id="12007" level="7" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_30,30000_820001_5" winEffect="100_50000" />
+      <data id="12008" level="8" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_30,30000_820001_5" winEffect="100_50000" />
+      <data id="12009" level="9" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_30,30000_820001_5" winEffect="100_50000" />
+      <data id="12010" level="10" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_30,30000_820001_5" winEffect="100_50000" />
+      <data id="12011" level="11" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_40,30000_820001_5" winEffect="100_50000" />
+      <data id="12012" level="12" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_40,30000_820001_5" winEffect="100_50000" />
+      <data id="12013" level="13" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_40,30000_820001_5" winEffect="100_50000" />
+      <data id="12014" level="14" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_40,30000_820001_5" winEffect="100_50000" />
+      <data id="12015" level="15" gridCnt="1" blood="2000000" guardLimit="15" winAward="30000_840194_40,30000_820001_5" winEffect="100_50000" />
+</root>

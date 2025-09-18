@@ -1,0 +1,230 @@
+option java_package	= "com.hawk.game.protocol";
+import "Reward.proto";
+
+// 充值条目
+message	GoodsItem 
+{
+	required string	goodsId						= 1;	// 条目ID 
+	required string	saleId						= 2;	// 促销ID
+	optional int32	payOrNot					= 3;	// 是否显示
+	optional int32	payDollar					= 4;	// 美元
+	optional int32	payRMB						= 5;	// 人民币
+	optional int32	gainDia						= 6;	// 获得钻石数目
+	optional int32	hot							= 7;	// 是否热卖0否1热卖
+	optional string showIcon					= 8;	// 显示图标
+	optional int32 group                        = 9;    // 钻石礼包所属的组
+	optional int32 present                      = 10;   // 赠送多少钻石
+    optional bool firstRecharge                 = 11;   // 是否是首充礼包 
+}
+
+// 货币种类
+enum RechargePriceType
+{
+	RMB = 1;	// 人民币
+	USD = 2;	// 美元
+}
+
+// 玩家充值条目信息
+message	RechargeInfoSync
+{	
+	required int32 priceType					= 1;	//	货币种类
+	repeated GoodsItem items					= 2;	//	玩家的充值列表
+}
+
+// 充值成功消息同步
+message	RechargeSuccessSync
+{
+	required bool success =	1;
+	required string	orderId	= 2;
+	required int32 gold	= 3;
+}
+
+// 充值通知请求（客户端向米大师请求前发送）
+message RechargeReq
+{
+	required string goodsId  = 1;
+}
+
+// 充值通知响应（服务器向客户端返回一个订单ID，即充值唯一id）
+message RechargeResp
+{
+	required string rechargeId = 1;  // 订单ID
+	required string goodsId    = 2;  // 充值商品ID
+}
+
+// 客户端充值成功通知请求（客户端向米大师请求成功后发送）
+message	RechargeSuccRequest
+{
+	required string rechargeId      = 1;   // 订单ID
+	required string	goodsId			= 2;   // 充值商品ID
+	optional string	rechargeInfo	= 3;   // 托管充值返回的信息
+}
+ 
+// 客户端充值成功通知响应（服务器告诉客户端充值处理成功了）
+message	RechargeSuccResponse
+{
+	required int32 result 				= 1;	// 参照RechargeSuccRespCode
+	optional string	goodsId				= 2;	// 充值商品ID
+	optional string rechargeId          = 3;    // 订单ID
+}
+
+// 客户端充值成功通知，服务器处理结果
+enum RechargeSuccRespCode
+{
+	RECHARGE_DEAL_SUCCESS  = 0;   // 处理成功
+	RECHARGE_DEAL_FAILED   = -1;  // 服务器处理失败，客户端还不能删除订单信息，还得继续发送通知
+	RECHARGE_INVALID_ORDER = -2;  // 无效订单，服务器已不存在此订单记录，客户端可以把该相应的订单信息删了
+	RECHARGE_PROCESSING    = -3;  // 订单正在处理中，客户端还不能删除订单信息，还得继续发送通知
+}
+
+// 领取累计充值奖励请求
+message	RecievePayAddAwardReq
+{
+	required int32 payAddLevel	= 1;  // 领奖等级
+}
+
+// 钻石兑换水晶的功能
+message	ExchangeDiamondsToGold
+{
+	required int32 exchangeTimes	= 1;  // 兑换倍数
+	optional int32 exchangeCount	= 2;  // 兑换数量
+}
+
+// 礼包直购
+message GiftItem
+{
+	required string	goodsId						= 1;	// 条目ID 
+	required string	saleId						= 2;	// 促销ID
+	optional int32	payOrNot					= 3;	// 是否显示
+	optional int32	payRMB						= 4;	// 人民币
+	optional int32	gainDia						= 5;	// 获得钻石数目
+	optional string showIcon					= 6;	// 显示图标
+	optional int32 alreadyTimes					= 7;	// 已购买次数
+	optional string award						= 8;	// 奖励字符串
+	optional string showPrice					= 9;	// 显示价值
+	optional int32 timesLimit                   = 10;   // 单日可购买的次数上限
+}
+
+// 月卡充值数据
+message MonthCardItem
+{
+	required string goodsId       = 1;  // 充值条目ID
+	optional int32	payOrNot      = 2;	// 是否显示
+	required int32  payRMB        = 3;  // 人民币
+	required int32  monthCardType = 4;  // 月卡类型
+	optional string saleId        = 5;  // 促销ID
+}
+
+// 月卡充值数据同步
+message MonthCardPuchaseInfoSync
+{
+	repeated MonthCardItem monthCardItems  = 1;   // 月卡充值条目
+}
+
+// 礼包条目信息同步
+message	GiftInfoSync
+{	
+	required int32 priceType					= 1;	//	货币种类
+	repeated GiftItem items						= 2;	//	玩家的充值列表
+}
+ 
+// 客户端 道具直购返回码
+enum RechargeBuyItemCode
+{
+	PAYRESULT_ERROR					= -1;		// 支付流程失败
+	PAYRESULT_SUCC 					= 0;		// 支付流程成功
+	PAYRESULT_CANCEL 				= 2;		// 用户取消
+	PAYRESULT_PARAMERROR 			= 3;		// 参数错误
+	PAYRESULT_ORTHER 				= 4;		// 其他
+}
+
+// 道具直购模式，购买请求
+message RechargeBuyItemRequest
+{
+	required string	giftId						= 1;	// 礼包ID
+	optional int32 resultCode					= 2;	// RechargeBuyItemType -- > resultCode 此字段为 不为 PAYRESULT_SUCC 时 表示失败了
+}
+
+// 道具直购返回
+message RechargeBuyItemResp
+{
+	required string	resultInfo					= 1;	// 平台返回信息，此字段为空字符串时有可能是领取免费宝箱
+	optional string goodsId                     = 2;    // 直购物品ID
+	optional bool freeBox                       = 3;    // 是否领取月卡免费宝箱
+}
+
+// 是否首冲过
+message HasFirstRechargeSync
+{
+	required bool hasFirstRecharge	= 1;
+}
+
+// 客户端上报从米大师拉取的充值条目营销活动信息
+message RechargeItemInfoClient
+{
+	required string rechargeItemInfo  = 1;
+}
+
+// 微信券信息同步
+message CouponItemSync
+{
+	repeated HPCouponItem couponItem     = 1; // 可领取的微信券信息
+	repeated HPCouponItem userCouponItem = 2; // 已领取的微信券信息
+}
+
+// 微信券具体条目信息
+message HPCouponItem
+{
+	optional string title               = 1;  // 券名
+	optional int32 couponValue          = 2;  // 面额(分)
+	optional int32 couponThreshold      = 3;  // 使用门槛(分)
+	optional string expiryTimeType      = 4;  // 有效时间  float为领取后生效，fixed 为固定时间 【ExpiryBegin+ ExpiryEnd】
+	optional int32 floatTimeValue       = 5;  // 有效时间值 比如11 expiry_time_type=float时有效
+	optional string floatTimeUnit       = 6;  // 有效时间单位，D天，H小时 expiry_time_type=float时有效
+	optional int32 fixExpiryTimeBegin   = 7;  // 固定有效时间开始，以秒为单位
+	optional int32 fixExpiryTimeEnd     = 8;  // 固定有效时间结束，以秒为单位
+	optional string couponId            = 9;  // 微券id
+	optional string actId               = 10;  // 奖励库中奖励组ID
+	optional string batchId             = 11;  //  微券批量单号
+	optional int32 status               = 12;  // 微券状态
+	optional int32 order                = 13;  // 用于排序
+	optional bool hide                  = 14;  // 是否隐藏
+	optional int32 pool                 = 15;  // 1:我的微券  2:下载微券
+	optional int32 showRange            = 16;  // 可见范围 0:白名单可见  1:全量可见 2:微券已经全部发完,全量不可见
+	optional int32 begintime            = 17;  // 券使用有效期开始时间，以秒为单位
+	optional int32 endtime              = 18;  // 券使用有效期结束时间，以秒为单位
+	optional int32 presentTime          = 19;  // 下发时间，以秒为单位
+	repeated HPCouponCondition condition  = 20;  // 领取条件
+	optional HPCouponAppInfo  appInfo     = 21;  // 应用信息	
+}
+
+// 微信券领取条件
+message HPCouponCondition
+{
+	optional int32   type = 1;  // 条件类型：0:无条件领取 1:指定时间段注册可领 2:最近X天内登录游戏 3:最近X天未登录游戏 4:单游戏付费 5:任意游戏付费 6:绑包用户可领 7:指定时间段注册不可领
+}
+
+// 应用信息
+message HPCouponAppInfo
+{
+	optional string appid    = 1;  // 游戏AppId
+	optional string appuin   = 2;  // 游戏appuin
+	optional string appname  = 3;  // 游戏名称
+	optional string appicon  = 4;  // 游戏图标
+}
+
+// 一键领取微信券请求
+message HPTakeCouponReq
+{
+	repeated HPTakeCouponParam coupon = 1; 
+}
+
+// 领取微信券请求参数
+message HPTakeCouponParam
+{
+	required string couponId            = 9;  // 微券id
+	required string actId               = 10;  // 奖励库中奖励组ID
+}
+
+
+

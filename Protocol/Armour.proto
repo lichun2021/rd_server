@@ -1,0 +1,355 @@
+option java_package = "com.hawk.game.protocol";
+
+// 铠甲信息
+message ArmourInfo
+{
+	required string armourId		 = 1; // 铠甲id(uuid)
+	required int32	cfgId 			 = 2; // 铠甲配置id
+	required int32 level			 = 3; // 铠甲等级
+	required int32 quality			 = 4; // 铠甲品质
+	repeated ArmourSuitType suit	 = 5; // 套装
+	repeated ArmourAttr attr		 = 6; // 铠甲属性
+	optional bool isLock			 = 7; // 铠甲是否锁定
+	optional int64 endTime			 = 8; // 结束时间(神器用)
+	
+	optional int32 starLevel		 = 9; // 星级(灌注等级)
+	repeated ArmourAttr starAttr	 = 10; // 星级属性(额外属性)
+	optional int32 starAttrNum	 = 11; // 星级属性数量(额外属性)
+	optional int32 quantumLevel		 = 12; // 量子等级级(槽位等级)
+}
+
+
+// 套装类型
+enum ArmourSuitType
+{
+	ARMOUR_NONE 	= 0; // 未穿戴
+	ONE 	= 1; // 第一套套装
+	TWO 	= 2; // 第二套套装
+	THREE 	= 3; // 第三套套装
+	FOUR 	= 4; // 第四套套装
+	FIVE 	= 5; // 第五套套装
+	SIX 	= 6; // 第六套套装
+	SEVEN 	= 7; // 第七套套装
+	EIGHT 	= 8; // 第八套套装
+}
+
+
+// 套装信息
+message ArmourSuit
+{
+	required ArmourSuitType type = 1;
+	optional string name 		 = 2;
+	
+}
+
+
+// 铠甲属性
+message ArmourAttr
+{
+	required int32 attrId 		= 1; // 属性id
+	required int32 attrType 	= 2; // 属性作用号类型
+	optional int32 attrValue  	= 3; // 属性作用号值(发的是乘以100以后的)
+	required ArmourAttrType type = 4; // 属性类型
+	
+	optional int32 rate	= 5; // 属性强化进度(属性充能使用)
+	optional int32 replaceAttrId = 6; // 替换属性id
+	optional int32 breakthrough = 7; // 是否突破过 0-普通 1-高级 2-红色
+}
+
+
+// 铠甲属性类型
+enum ArmourAttrType
+{
+	BASE = 0; // 基础属性
+	EXTR = 1; // 额外属性
+	SUPER_EXTR = 2; // 神器额外属性
+	SPECIAL = 3; 	//特技
+	STAR_BASE = 4; //星级主属性
+	STAR_EXTR = 5; //星级额外属性
+}
+
+
+// 获取所有铠甲信息返回 ARMOUR_ALL_INFO_RESP
+message ArmourAllInfoResp
+{
+	repeated ArmourInfo armourInfo	= 1;
+}
+
+
+// 穿戴铠甲请求 ARMOUR_PUT_ON_REQ
+message ArmourPutOnReq
+{
+	required string armourId 	 = 1; // 铠甲id
+	required ArmourSuitType suit = 2; // 套装
+}
+
+
+// 卸下铠甲请求 ARMOUR_TAKE_OFF_REQ
+message ArmourTakeOffReq
+{
+	required string armourId 	 = 1; // 铠甲id
+	required ArmourSuitType suit = 2; // 套装
+}
+
+
+// 铠甲强化请求 ARMOUR_INTENSIFY_REQ
+message ArmourIntensifyReq
+{
+	required string armourId 	 = 1; // 铠甲id
+}
+
+
+// 铠甲突破请求 ARMOUR_BREAKTHROUGH_REQ
+message ArmourBreakthroughReq
+{
+	required string armourId 	 = 1; // 铠甲id
+}
+
+
+// 铠甲传承请求 ARMOUR_INHERIT_REQ   A铠甲的属性传承到B铠甲上面
+message ArmourInheritReq
+{
+	required string armourId 	 = 1; 		// B铠甲id
+	required string beArmourId 	 = 2; 		// A被传承铠甲id
+	optional ArmourAttr armourAttr = 3; 	// B传承的铠甲属性
+	required ArmourAttr beArmourAttr = 4; 	// A被传承的铠甲属性
+}
+
+// 铠甲分解请求 ARMOUR_RESOLVE_REQ
+message ArmourResolveReq
+{
+	repeated string armourId 	 = 1; // 铠甲id
+}
+
+// 铠甲分解(通过品质)请求 ARMOUR_RESOLVE_BY_QUALITY_REQ
+message ArmourResolveByQualityReq
+{
+	repeated int32 quality = 1; // 铠甲品质
+}
+
+// 铠甲分解返回 ARMOUR_RESOLVE_RESP
+message ArmourResolveResp
+{
+	repeated string armourId 	 = 1; // 铠甲id
+}
+
+// 单个铠甲信息推送(添加/更新) ARMOUR_SINGLE_PUSH
+message ArmourSingleUpdate
+{
+	repeated ArmourInfo armourInfo	= 1; // 铠甲id
+}
+
+
+// 铠甲套装信息返回 ARMOUR_SUIT_INF_RESP
+message ArmourSuitInfoResp
+{
+	repeated ArmourSuit suit = 1; // 套装信息
+}
+
+// 铠甲套装改名 ARMOUR_SUIT_CHANGE_NAME
+message ArmourSuitChangeName
+{
+	required ArmourSuitType suitType = 1; // 套装
+	optional string name			 = 2; // 名字
+}
+
+// 锁定 ARMOUR_LOCK_REQ
+message ArmourLockReq
+{
+	repeated string armourId 	 = 1; // 铠甲id
+}
+
+// 套装切换 ARMOUR_SUIT_CHANGE_REQ
+message ArmourSuitChangeReq
+{
+	required ArmourSuitType suit = 1; // 套装id
+}
+
+// 解锁 ARMOUR_UNLOCK_REQ
+message ArmourUnLockReq
+{
+	repeated string armourId 	 = 1; // 铠甲id
+}
+
+// 获取玩家铠甲简要信息(只返回当前套装的)
+message ArmourBriefInfo
+{
+	repeated ArmourInfo armourInfo	= 1;
+	optional ArmourSuitType suitType = 2;
+	repeated ArmourTechInfo armourTechInfo = 3;
+	optional int32 armourStarAttrProtectValue = 4; // 装备星级属性个保法开关 0可以显示1不可以显示
+}
+
+// 装备删除 ARMOUR_DELETE_RESP
+message ArmourDeleteResp
+{
+	repeated string armourId = 1; // 铠甲id
+}
+
+
+
+
+//-----------------------------装备科技------------------------
+
+// 铠甲科技信息推送
+message ArmourTechInfoPush
+{
+	repeated ArmourTechInfo techInfo = 1; // 铠甲科技信息
+	repeated ArmourTechAwardInfo awardInfo = 2; // 铠甲科技奖励领取信息
+	optional bool unlock = 3; // 是否解锁
+	optional int32 show = 4; // 是否显示
+}
+
+// 铠甲科技信息
+message ArmourTechInfo
+{
+	required int32 armourTechId = 1; // 铠甲科技id
+	required int32 armourTechLevel = 2; // 铠甲科技等级
+}
+
+// 铠甲科技奖励领取信息
+message ArmourTechAwardInfo
+{
+	required int32 armourTechId = 1; // 铠甲科技id
+	required int32 rewardLevel = 2; // 已经领取奖励的等级
+}
+
+
+// 铠甲科技升级请求  (返回：通用成功，ArmourTechInfoPush)
+message ArmourTechLevelUpReq
+{
+	required int32 armourTechId = 1; // 铠甲科技id
+	required bool immediate = 2; // 立即升级
+}
+
+// 铠甲科技领奖请求  (返回：通用成功，ArmourTechInfoPush)
+message ArmourTechAwardReq
+{
+	required int32 armourTechId = 1; // 铠甲科技id
+	required int32 level = 2; // 要领取的等级
+}
+
+// 是否显示装备科技
+message ArmourTechShowReq
+{
+	required bool show = 1; // 是否显示装备科技
+}
+
+
+//-----------------------------泰能装备------------------------
+
+// 装备升星请求(泰能灌注) 请求:ARMOUR_STAR_UP_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourStarUpReq
+{
+	required string armourId 	 = 1; // 装备id
+}
+
+
+// 装备星级属性激活 请求:ARMOUR_STAR_ATTR_OPEN_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourStarAttrOpenReq
+{
+	required string armourId 	 = 1; // 装备id
+}
+
+message ArmourStarAttrOpenResp
+{
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId	 	 = 2; // 属性id
+}
+
+// 装备星级属性升级(泰能属性充能) 请求:ARMOUR_STAR_ATTR_UP_REQ,ARMOUR_STAR_ATTR_UP_TEN_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourStarAttrUpReq
+{
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId  	 = 2; // 属性id
+}
+
+message ArmourStarAttrUpResp
+{
+	required string armourId = 1; // 装备id
+	required int32 attrId = 2; // 属性id
+	repeated int32 addRate = 3; // 每次增加的进度
+}
+
+// 装备星级属性替换 请求:ARMOUR_STAR_ATTR_REPLACE_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourStarAttrReplaceReq
+{	
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId  	 = 2; // 属性id
+}
+
+message ArmourStarAttrReplaceResp
+{	
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId  	 = 2; // 属性id
+	required int32 replaceAttrId  = 3; // 替换的属性id
+}
+
+// 装备星级属性随机 请求:ARMOUR_STAR_ATTR_RANDOM_REQ  返回:ARMOUR_SINGLE_PUSH,SYN_PLAYER_DAILY_DATA_VALUE
+message ArmourStarAttrRandomReq
+{
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId  	 = 2; // 属性id
+}
+
+// 装备星级属性随机 请求:ARMOUR_ATTR_BREAKTHROUGH_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourAttrBreakthroughReq
+{
+	required string armourId 	 = 1; // 装备id
+	required int32 attrId  	 = 2; // 属性id
+}
+
+// 泰能装备外显
+message ArmourStarShowInfo
+{
+	required int32 show = 1; // 显示套装
+	required bool openShow = 2; // 是否开启显示
+}
+
+// 装备升星请求(泰能灌注) 请求:ARMOUR_QUANTUM_UP_REQ  返回:ARMOUR_SINGLE_PUSH
+message ArmourQuantumUpReq
+{
+	required string armourId 	 = 1; // 装备id
+}
+
+
+// 星能探索信息同步
+message ArmourStarExploreInfoSync {
+	repeated ArmourStarExploreInfo info = 1;
+	repeated ArmourStarExploreCollectInfo collectInfo = 2;
+	optional int32 starExploreShow = 3; // 星能探索外显
+	optional int32 isActive = 4; // 星能探索入口
+}
+
+// 星球信息
+message ArmourStarExploreInfo {
+	required int32 starId = 1; // 星球ID(1,2,3,4,5,6,7)
+	repeated ArmourStarExploreAttrInfo attrInfo = 2;
+}
+
+// 星球属性信息
+message ArmourStarExploreAttrInfo {
+	required int32 attrIndex = 1; // 属性下标(1,2,3)
+	required int32 attrValue = 2; // 属性值
+}
+
+// 技术研究奖励信息
+message ArmourStarExploreCollectInfo {
+	required int32 id = 1; // 研究ID(1,2,3,4,5,6,7)
+	repeated ArmourStarExploreAttrInfo fixedInfo = 2;
+	repeated ArmourStarExploreAttrInfo randomInfo = 3;
+	repeated ArmourStarExploreAttrInfo tmpInfo = 4;
+}
+
+// 星能探索升级请求
+message ArmourStarExploreUpReq {
+	required int32 starId = 1; // 星球ID
+	optional bool once = 2; // true探索一次 false一键探索
+	optional int32 times = 3; // 升级几次 最大次数为：min(（最大等级-当前等级），当前拥有道具可升级的等级)
+
+}
+
+// 星能探索跃迁请求
+message ArmourStarExploreJumpReq {
+	required int32 id = 1; // 研究ID(1,2,3,4,5,6,7)
+}

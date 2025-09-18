@@ -1,0 +1,14 @@
+return {
+	prop =
+	{
+		activityId = 147,
+		name = [[冲破枷锁]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1、活动开启期间,玩家更换天赋时可选择天赋分类进行更换，分类天赋库比默认天赋库小；<br/>2、更换天赋的天赋库仅限S和SS品质军事英雄；<br/>3、点击前往可以直接跳转至英雄列表界面。</font>]],
+		priority = 10055,
+		icon = [[Activity_Icon_147_Nor.png]],
+		selecticon = [[Activity_Icon_147_Sel.png]],
+		serverDelay = 1728000,
+	},
+
+}

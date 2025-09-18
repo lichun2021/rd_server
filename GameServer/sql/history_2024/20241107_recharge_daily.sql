@@ -1,0 +1,22 @@
+CREATE TABLE `recharge_daily` (
+  `billno` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `type` int(11) NOT NULL,
+  `diamonds` int(11) NOT NULL DEFAULT '0',
+  `time` bigint(20) NOT NULL DEFAULT '0',
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `serverId` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `playerId` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `puid` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `goodsId` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `goodsPrice` int(11) NOT NULL DEFAULT '0',
+  `payMoney` int(11) NOT NULL DEFAULT '0',
+  `currency` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `awardItems` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `createTime` bigint(20) NOT NULL DEFAULT '0',
+  `updateTime` bigint(20) NOT NULL DEFAULT '0',
+  `invalid` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`billno`),
+  KEY `playerId_index` (`playerId`) USING BTREE,
+  KEY `puid_index` (`puid`) USING BTREE,
+  KEY `goodsId_index` (`goodsId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

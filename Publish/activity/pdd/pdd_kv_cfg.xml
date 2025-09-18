@@ -1,0 +1,14 @@
+# 活动id
+activityId = 324
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 连续拼单失败多少次则下一单必定成功
+failNum = 2
+
+# 发送拼单信息到联盟的CD时间，单位：秒
+shareCdTime = 180
+
+# 发送拼单信息到联盟的次数上限
+shareDailyNum = 3

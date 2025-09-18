@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10101" factoryType="1" level="1" frontBuild="20103500" postStage="10102" itemPerDay="10" itemId="1300017" itemLimit="20" />
+      <data id="10102" factoryType="1" level="2" frontBuild="20103500" frontStage="10101" postStage="10103" buildCost="30000_1300017_50" itemPerDay="15" itemId="1300017" itemLimit="30" />
+      <data id="10103" factoryType="1" level="3" frontBuild="20103500" frontStage="10102" postStage="10104" buildCost="30000_1300017_75" itemPerDay="20" itemId="1300017" itemLimit="40" />
+      <data id="10104" factoryType="1" level="4" frontBuild="20103500" frontStage="10103" postStage="10105" buildCost="30000_1300017_100" itemPerDay="25" itemId="1300017" itemLimit="50" />
+      <data id="10105" factoryType="1" level="5" frontBuild="20103500" frontStage="10104" postStage="10106" buildCost="30000_1300017_125" itemPerDay="30" itemId="1300017" itemLimit="60" />
+      <data id="10106" factoryType="1" level="6" frontBuild="20103500" frontStage="10105" postStage="10107" buildCost="30000_1300017_150" itemPerDay="35" itemId="1300017" itemLimit="70" />
+      <data id="10107" factoryType="1" level="7" frontBuild="20103500" frontStage="10106" postStage="10108" buildCost="30000_1300017_175" itemPerDay="40" itemId="1300017" itemLimit="80" />
+      <data id="10108" factoryType="1" level="8" frontBuild="20103500" frontStage="10107" postStage="10109" buildCost="30000_1300017_200" itemPerDay="45" itemId="1300017" itemLimit="90" />
+      <data id="10109" factoryType="1" level="9" frontBuild="20103500" frontStage="10108" postStage="10110" buildCost="30000_1300017_225" itemPerDay="50" itemId="1300017" itemLimit="100" />
+      <data id="10110" factoryType="1" level="10" frontBuild="20103500" frontStage="10109" postStage="10111" buildCost="30000_1300017_250" itemPerDay="55" itemId="1300017" itemLimit="110" />
+      <data id="10111" factoryType="1" level="11" frontBuild="20103600" frontStage="10110" postStage="10112" buildCost="30000_1300017_275" itemPerDay="60" itemId="1300017" itemLimit="120" />
+      <data id="10112" factoryType="1" level="12" frontBuild="20103600" frontStage="10111" postStage="10113" buildCost="30000_1300017_300" itemPerDay="65" itemId="1300017" itemLimit="130" />
+      <data id="10113" factoryType="1" level="13" frontBuild="20103600" frontStage="10112" postStage="10114" buildCost="30000_1300017_325" itemPerDay="70" itemId="1300017" itemLimit="140" />
+      <data id="10114" factoryType="1" level="14" frontBuild="20103600" frontStage="10113" postStage="10115" buildCost="30000_1300017_350" itemPerDay="75" itemId="1300017" itemLimit="150" />
+      <data id="10115" factoryType="1" level="15" frontBuild="20103600" frontStage="10114" postStage="10116" buildCost="30000_1300017_375" itemPerDay="80" itemId="1300017" itemLimit="160" />
+      <data id="10116" factoryType="1" level="16" frontBuild="20103700" frontStage="10115" postStage="10117" buildCost="30000_1300017_400" itemPerDay="85" itemId="1300017" itemLimit="170" />
+      <data id="10117" factoryType="1" level="17" frontBuild="20103700" frontStage="10116" postStage="10118" buildCost="30000_1300017_425" itemPerDay="90" itemId="1300017" itemLimit="180" />
+      <data id="10118" factoryType="1" level="18" frontBuild="20103700" frontStage="10117" postStage="10119" buildCost="30000_1300017_450" itemPerDay="95" itemId="1300017" itemLimit="190" />
+      <data id="10119" factoryType="1" level="19" frontBuild="20103700" frontStage="10118" postStage="10120" buildCost="30000_1300017_475" itemPerDay="100" itemId="1300017" itemLimit="200" />
+      <data id="10120" factoryType="1" level="20" frontBuild="20103700" frontStage="10119" postStage="10121" buildCost="30000_1300017_500" itemPerDay="105" itemId="1300017" itemLimit="210" />
+      <data id="10121" factoryType="1" level="21" frontBuild="20103800" frontStage="10120" postStage="10122" buildCost="30000_1300017_550" itemPerDay="110" itemId="1300017" itemLimit="220" />
+      <data id="10122" factoryType="1" level="22" frontBuild="20103800" frontStage="10121" postStage="10123" buildCost="30000_1300017_600" itemPerDay="115" itemId="1300017" itemLimit="230" />
+      <data id="10123" factoryType="1" level="23" frontBuild="20103800" frontStage="10122" postStage="10124" buildCost="30000_1300017_650" itemPerDay="120" itemId="1300017" itemLimit="240" />
+      <data id="10124" factoryType="1" level="24" frontBuild="20103800" frontStage="10123" postStage="10125" buildCost="30000_1300017_700" itemPerDay="125" itemId="1300017" itemLimit="250" />
+      <data id="10125" factoryType="1" level="25" frontBuild="20103800" frontStage="10124" buildCost="30000_1300017_750" itemPerDay="130" itemId="1300017" itemLimit="260" />
+      <data id="10201" factoryType="2" level="1" frontBuild="20103700" postStage="10202" itemPerDay="2" itemId="21063002" itemLimit="4" />
+      <data id="10202" factoryType="2" level="2" frontBuild="20103700" frontStage="10201" postStage="10203" buildCost="30000_1300017_100" itemPerDay="2.5" itemId="21063002" itemLimit="5" />
+      <data id="10203" factoryType="2" level="3" frontBuild="20103700" frontStage="10202" postStage="10204" buildCost="30000_1300017_150" itemPerDay="3" itemId="21063002" itemLimit="6" />
+      <data id="10204" factoryType="2" level="4" frontBuild="20103700" frontStage="10203" postStage="10205" buildCost="30000_1300017_200" itemPerDay="3.5" itemId="21063002" itemLimit="7" />
+      <data id="10205" factoryType="2" level="5" frontBuild="20103700" frontStage="10204" postStage="10206" buildCost="30000_1300017_250" itemPerDay="4" itemId="21063002" itemLimit="8" />
+      <data id="10206" factoryType="2" level="6" frontBuild="20103700" frontStage="10205" postStage="10207" buildCost="30000_1300017_300" itemPerDay="4.5" itemId="21063002" itemLimit="9" />
+      <data id="10207" factoryType="2" level="7" frontBuild="20103700" frontStage="10206" postStage="10208" buildCost="30000_1300017_350" itemPerDay="5" itemId="21063002" itemLimit="10" />
+      <data id="10208" factoryType="2" level="8" frontBuild="20103700" frontStage="10207" postStage="10209" buildCost="30000_1300017_400" itemPerDay="6" itemId="21063002" itemLimit="12" />
+      <data id="10209" factoryType="2" level="9" frontBuild="20103700" frontStage="10208" postStage="10210" buildCost="30000_1300017_450" itemPerDay="7" itemId="21063002" itemLimit="14" />
+      <data id="10210" factoryType="2" level="10" frontBuild="20103700" frontStage="10209" postStage="10211" buildCost="30000_1300017_500" itemPerDay="8" itemId="21063002" itemLimit="16" />
+      <data id="10211" factoryType="2" level="11" frontBuild="20103800" frontStage="10210" postStage="10212" buildCost="30000_1300017_550" itemPerDay="9" itemId="21063002" itemLimit="18" />
+      <data id="10212" factoryType="2" level="12" frontBuild="20103800" frontStage="10211" postStage="10213" buildCost="30000_1300017_600" itemPerDay="10" itemId="21063002" itemLimit="20" />
+      <data id="10213" factoryType="2" level="13" frontBuild="20103800" frontStage="10212" postStage="10214" buildCost="30000_1300017_650" itemPerDay="11" itemId="21063002" itemLimit="22" />
+      <data id="10214" factoryType="2" level="14" frontBuild="20103800" frontStage="10213" postStage="10215" buildCost="30000_1300017_700" itemPerDay="12" itemId="21063002" itemLimit="24" />
+      <data id="10215" factoryType="2" level="15" frontBuild="20103800" frontStage="10214" buildCost="30000_1300017_750" itemPerDay="13" itemId="21063002" itemLimit="26" />
+      <data id="10301" factoryType="3" level="1" frontBuild="20103700" postStage="10302" itemPerDay="2" itemId="21063003" itemLimit="4" />
+      <data id="10302" factoryType="3" level="2" frontBuild="20103700" frontStage="10301" postStage="10303" buildCost="30000_1300017_100" itemPerDay="2.5" itemId="21063003" itemLimit="5" />
+      <data id="10303" factoryType="3" level="3" frontBuild="20103700" frontStage="10302" postStage="10304" buildCost="30000_1300017_150" itemPerDay="3" itemId="21063003" itemLimit="6" />
+      <data id="10304" factoryType="3" level="4" frontBuild="20103700" frontStage="10303" postStage="10305" buildCost="30000_1300017_200" itemPerDay="3.5" itemId="21063003" itemLimit="7" />
+      <data id="10305" factoryType="3" level="5" frontBuild="20103700" frontStage="10304" postStage="10306" buildCost="30000_1300017_250" itemPerDay="4" itemId="21063003" itemLimit="8" />
+      <data id="10306" factoryType="3" level="6" frontBuild="20103700" frontStage="10305" postStage="10307" buildCost="30000_1300017_300" itemPerDay="4.5" itemId="21063003" itemLimit="9" />
+      <data id="10307" factoryType="3" level="7" frontBuild="20103700" frontStage="10306" postStage="10308" buildCost="30000_1300017_350" itemPerDay="5" itemId="21063003" itemLimit="10" />
+      <data id="10308" factoryType="3" level="8" frontBuild="20103700" frontStage="10307" postStage="10309" buildCost="30000_1300017_400" itemPerDay="6" itemId="21063003" itemLimit="12" />
+      <data id="10309" factoryType="3" level="9" frontBuild="20103700" frontStage="10308" postStage="10310" buildCost="30000_1300017_450" itemPerDay="7" itemId="21063003" itemLimit="14" />
+      <data id="10310" factoryType="3" level="10" frontBuild="20103700" frontStage="10309" postStage="10311" buildCost="30000_1300017_500" itemPerDay="8" itemId="21063003" itemLimit="16" />
+      <data id="10311" factoryType="3" level="11" frontBuild="20103800" frontStage="10310" postStage="10312" buildCost="30000_1300017_550" itemPerDay="9" itemId="21063003" itemLimit="18" />
+      <data id="10312" factoryType="3" level="12" frontBuild="20103800" frontStage="10311" postStage="10313" buildCost="30000_1300017_600" itemPerDay="10" itemId="21063003" itemLimit="20" />
+      <data id="10313" factoryType="3" level="13" frontBuild="20103800" frontStage="10312" postStage="10314" buildCost="30000_1300017_650" itemPerDay="11" itemId="21063003" itemLimit="22" />
+      <data id="10314" factoryType="3" level="14" frontBuild="20103800" frontStage="10313" postStage="10315" buildCost="30000_1300017_700" itemPerDay="12" itemId="21063003" itemLimit="24" />
+      <data id="10315" factoryType="3" level="15" frontBuild="20103800" frontStage="10314" buildCost="30000_1300017_750" itemPerDay="13" itemId="21063003" itemLimit="26" />
+</root>

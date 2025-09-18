@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" areaId="1" zone="0" team="0" serverIdList="10959,10966,10961,10964,10960,10965,10962,10963" />
+      <data id="2" areaId="1" zone="1" team="0" serverIdList="10959,10966,10961,10964" />
+      <data id="3" areaId="1" zone="1" team="1" serverIdList="10959,10966" />
+      <data id="4" areaId="1" zone="1" team="2" serverIdList="10961,10964" />
+      <data id="7" areaId="1" zone="2" team="0" serverIdList="10960,10965,10962,10963" />
+      <data id="8" areaId="1" zone="2" team="1" serverIdList="10960,10965" />
+      <data id="9" areaId="1" zone="2" team="2" serverIdList="10962,10963" />
+</root>

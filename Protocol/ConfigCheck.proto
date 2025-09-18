@@ -1,0 +1,16 @@
+option java_package = "com.hawk.game.protocol";
+
+// 配置信息
+message CfgInfo{
+	required string name	= 1;
+	optional string md5		= 2;
+}
+
+// Debug模式下配置校验
+message CfgCheckReq{
+	repeated CfgInfo cfgInfo = 1; // 战斗相关配置信息
+}
+
+message CfgCheckResp{
+	repeated string cfgName = 1; //前后端不匹配的配置信息
+}

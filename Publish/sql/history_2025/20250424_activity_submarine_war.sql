@@ -1,0 +1,1 @@
+ALTER TABLE `activity_submarine_war` ADD COLUMN `orderInfo` text COLLATE utf8mb4_unicode_ci NOT NULL;

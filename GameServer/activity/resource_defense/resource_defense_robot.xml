@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" type="1" level="25" resourceInfo="1780223_35,1780224_15" showStationType="1_1,2_1,3_0,4_0" pickupWeight="5000" pickupExp="750" refreshType="1" refreshWeight="10000" />
+      <data id="2001" type="2" level="45" resourceInfo="1780224_7,1780225_3" showStationType="1_1,2_0,3_0,4_1" pickupWeight="5000" pickupExp="900" refreshType="1" refreshWeight="10000" />
+      <data id="3001" type="3" level="35" resourceInfo="1780226_1" showStationType="1_0,2_0,3_1,4_0" pickupWeight="5000" pickupExp="1200" refreshType="2" refreshWeight="10000" />
+</root>

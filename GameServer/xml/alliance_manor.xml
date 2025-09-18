@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" defaultName="联盟堡垒1" peopleLimit="1" powerLimit="100" scienceLimit="0" buildingInitial="1" resetBuilding="36000" buildingUpLimit="10" towerCount="4" />
+      <data id="2" defaultName="联盟堡垒2" peopleLimit="50" powerLimit="5000000" scienceLimit="0" buildingInitial="1" resetBuilding="36000" buildingUpLimit="180000" towerCount="3" />
+      <data id="3" defaultName="联盟堡垒3" peopleLimit="60" powerLimit="10000000" scienceLimit="40" buildingInitial="1" resetBuilding="36000" buildingUpLimit="180000" towerCount="2" />
+      <data id="4" defaultName="联盟堡垒4" peopleLimit="70" powerLimit="20000000" scienceLimit="60" buildingInitial="1" resetBuilding="36000" buildingUpLimit="180000" towerCount="2" />
+      <data id="5" defaultName="联盟堡垒5" peopleLimit="80" powerLimit="25000000" scienceLimit="80" buildingInitial="1" resetBuilding="36000" buildingUpLimit="180000" towerCount="2" />
+</root>

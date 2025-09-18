@@ -1,0 +1,39 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 刮奖消耗
+lotteryCost = 30000_21070027_1
+
+# 刮多少张更换奖池权重
+randomWeightLimit = 2
+
+# 彩票上面抽奖位置个数
+lotteryPosCount = 9
+
+# 每个玩家每日可接受的代刮数
+assistLimit = 30
+
+# 代刮邀请时间限制 秒
+assistOutTime = 28800
+
+# 活动结束前多长时间不可以代刮 秒
+assistTimeLimit = 43200
+
+# 活动结束回收道具
+recoverItem = 30000_21070027_1
+
+# 回收道具获得
+recoverItemGain = 10000_1001_100
+
+# 每次翻牌的额外奖励
+extReward = 30000_840172_1
+
+# 没中奖最大数字
+randomFrom = 1
+
+# 没中奖最小数字
+randomTo = 65
+
+# 弹幕数量
+barrageSize = 50
+

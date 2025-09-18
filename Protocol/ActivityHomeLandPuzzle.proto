@@ -1,0 +1,69 @@
+option java_package	= "com.hawk.game.protocol";
+import "Reward.proto";
+import "Activity.proto";
+//图案类型
+enum HomeLandPuzzleItemType
+{
+	NORMAL = 1; 	//普通
+	COMBINE = 2;    //组合
+	PRIZE = 3;		//大奖
+}
+// 心愿庄园拼图活动界面信息
+message HomeLandPuzzlePageInfo {
+	required int32 freeTimes = 1;    						// 免费刮奖次数
+	repeated int32 combinations = 2;  						// 组合图案列表
+	optional int32 grandPrize = 3;   						// 大奖次数
+	repeated HomeLandPuzzleRecordPB record = 4; 			// 获奖记录
+	repeated HomeLandPuzzleShopItemPB shopItem = 5; 		// 商店已购买
+	required int32 scratchTimes = 6;						// 刮奖总次数
+	repeated HomeLandPuzzleShopItemPB exchangeItem = 7;		// 兑换商店已兑换
+	repeated GeneralExchangeTip tips = 8; 					// 通用兑换红点
+} 
+// 抽奖记录
+message HomeLandPuzzleRecordPB{
+	optional int64 time = 1;						//获取时间
+	repeated HomeLandPuzzleItemPB normal = 2;		//普通记录
+	repeated HomeLandPuzzleItemPB combine = 3;		//组合记录
+	repeated HomeLandPuzzleItemPB prize = 4;		//大奖记录
+}
+// 组合图案
+message HomeLandPuzzleItemPB {
+	required int32 cfgId = 1; 					//图案id		
+	required int32 itemCount = 2; 				//图案数量
+	optional int32 combinations = 3;  			//组合图案次数
+	optional int32 grandPrize = 4;   			//大奖次数
+	repeated RewardItem reward = 5;				//通用奖励
+}
+// 商店item结构
+message HomeLandPuzzleShopItemPB {
+	required int32 cfgId = 1; 					//id		
+	optional int32 itemCount = 2; 				//数量
+}
+//****************************************************刮奖************************************************
+// 刮奖
+message HomeLandPuzzleScratchReq {
+	required int32 count = 1;
+}
+// 刮奖返回信息
+message HomeLandPuzzleScratchRsp {
+	required int32 count = 1; //数量
+	optional HomeLandPuzzleRecordPB reward = 2; //奖励物品
+}
+//****************************************************商店购买************************************************
+//购买
+message HomeLandPuzzleShopBuyReq {
+	required int32 cfgId = 1;
+	required int32 count = 2;
+	
+}
+//****************************************************兑换商店************************************************
+//勾选提醒
+message HomeLandPuzzleTipsInfoReq
+{
+    repeated GeneralExchangeTip tips   = 1;
+}
+//兑换
+message HomeLandPuzzleShopExchangeReq {
+	required int32 cfgId = 1;
+	required int32 count = 2;
+}

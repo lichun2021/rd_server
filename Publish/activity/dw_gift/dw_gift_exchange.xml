@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pay="30000_1789001_1" gain="30000_1789002_1" expGain="10" exchangeLimit="0" />
+      <data id="2" pay="10000_1000_80" gain="30000_1789003_1" expGain="50" exchangeLimit="1000" />
+</root>

@@ -1,0 +1,19 @@
+return {
+	prop =
+	{
+		activityId = 82,
+		name = [[手机绑定]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">玩家可在活动页面绑定手机获得奖励，每个月重新绑定1次获得额外奖励</font>]],
+		priority = 11270,
+		icon = [[Activity_Icon_82_Nor.png]],
+		selecticon = [[Activity_Icon_82_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20240929xni9is/]],
+		urlWX = [[https://hongjing.qq.com/cp/a20240929xni9is/]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20240929xni9is/]],
+		platform = [[]],
+		urlDailyReward = [[]],
+	},
+
+}

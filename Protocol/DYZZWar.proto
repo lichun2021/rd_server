@@ -1,0 +1,315 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Hero.proto";
+import "Army.proto";
+import "DYZZ.proto";
+
+// 活动阶段
+enum PBDYZZWarState{
+	DYZZ_SHOW	=	1; //展示
+	DYZZ_OPEN	=	2; //开启
+	DYZZ_CLOSE	=	3; //关闭
+	DYZZ_HIDDEN	= 	4; //隐藏
+}
+
+
+
+//时间点
+message PBDYZZTime{
+	required int64 showTime    = 1;
+	required int64 openTime    = 2;
+	required int64 closeTime   = 3;
+	required int64 hiddenTime  = 4;
+}
+
+//活动开启状态
+message PBDYZZWarOpenInfo{
+	required int32 open = 1;  //是否开启
+}
+
+
+//活动信息
+message PBDYZZWarInfo{
+	required int32 termId       = 1;   //期数
+	required PBDYZZWarState state = 2;   //状态
+	optional PBDYZZTime  time     = 3;   //时间
+	optional int32 awardCount   = 4;   //奖励次数
+	optional PBDYZZTeamInfo team  = 5;   //队伍信息
+	optional int32 fistReward = 6;  //首胜奖励
+}
+
+
+// 活动阶段
+enum PBDYZZTeamState{
+	DYZZ_TEAM_FREE    	    =	1; //自由状态
+	DYZZ_TEAM_MATCHING	    =	2; //匹配状态
+	DYZZ_TEAM_MATCH_CANCEL	=	3; //取消匹配状态
+	DYZZ_TEAM_GAMING     	= 	4; //战斗中
+}
+
+
+//队伍信息
+message PBDYZZTeamInfo{
+	required string teamId          = 1;  //队伍Id
+	required string leader          = 2;  //队长
+	repeated PBDYZZTeamMember members = 3;  //成员列表
+	required PBDYZZTeamState state    = 4;  //队伍状态
+	optional int64 matchTime        = 5;  //匹配开始时间
+	required int64 createTime       = 6;  //创建时间
+
+}
+
+//成员信息
+message PBDYZZTeamMember{
+	required string playerId        = 1;
+	required string playerName      = 2;
+	required int32 icon             = 3;
+	optional string pfIcon          = 4;
+	optional int64 battlePoint      = 5;
+	required string serverId        = 6;
+	repeated int32 heros            = 7;
+	repeated PBDYZZSoldier soldiers = 8;
+	optional int32 seasonScore      = 9;
+	optional int32 winCount         = 10;
+}
+
+
+
+//英雄状态
+enum PBDYZZHeroState{
+	DYZZ_HERO_NORMAL     = 1;   //正常状态
+	DYZZ_HERO_EXPERIENCE = 2;   //体验
+	DYZZ_HERO_DISABLE    = 3;   //禁用
+	DYZZ_HERO_LOSS       = 4;   //未获得
+}
+
+
+//英雄信息
+message PBDYZZHero{
+	required PBHeroInfo hero     = 1;  //英雄数据
+	required PBDYZZHeroState state = 2;  //英雄状态
+}
+
+
+//英雄管理信息
+message PBDYZZHeroManageInfo{
+	repeated PBDYZZHero heros = 1; //英雄列表
+}
+
+//士兵信息
+message PBDYZZSoldier{
+	required int32 soldierId = 1;  //士兵ID
+	required int32 count     = 2;  //士兵数量
+}
+
+
+//士兵管理信息
+message PBDYZZSoldierManageInfo{
+	repeated ArmyInfoPB soldiers = 1;  //士兵列表
+}
+
+
+//历史记录
+message PBDYZZBattleHistoryInfo{
+	required int32 total  = 1;   //总量
+	required int32 winPer = 2;   //胜率
+	required int32 mvp    = 3;   //mvp 数量
+	repeated PBDYZZGameInfoSync records = 4;  //记录列表
+
+}
+
+
+
+//商店商品信息
+message PBDYZZShopItem
+{
+	required int32 id  = 1;  // 商品Id
+	required int32 buyCount = 2; // 已购买次数
+}
+
+
+//商店购买信息
+message PBDYZZShopInfo 
+{
+	optional int64 score            = 1; // 个人积分
+	repeated PBDYZZShopItem buyItems 	= 2; // 已购买商品的购买次数
+	optional int64 nextRefreshTime	= 3; // 下次重置时间
+}
+
+
+
+
+
+//加入队伍请求
+message PBDYZZJoinTeamReq{
+	required string teamId = 1;  //队伍ID
+}
+
+//提出队伍请求
+message PBDYZZKickOutTeamReq{
+	required string memberId = 1;  //成员玩家id
+}
+
+
+
+//积分商店购买
+message PBDYZZBuyItemReq{
+	required int32 id		= 1;
+	required int32 count 	= 2;
+}
+
+
+
+
+
+
+//请求回到原服的玩家.
+message PBDYZZWarInnerBackServerReq {
+	required string playerId = 1;
+}
+
+//签回玩家.
+message PBDYZZWarMoveBackReq {
+	required string playerId = 1;
+}
+
+
+//*****************下面是跨服匹配专用，和客户端无关************************
+
+//匹配数据
+message PBDYZZTeamMatchData{
+	required string serverId          = 1;   //服务器ID
+	required string teamId            = 2;   //队伍ID
+	required string leader            = 3;   //队长ID
+	repeated PBDYZZTeamMember members = 4;   //成员列表
+}
+
+
+
+//取消匹配数据
+message PBDYZZCancelTeamMatchData{
+	required string serverId        = 1;   //服务器ID
+	required string teamId          = 2;   //队伍ID
+}
+
+
+
+//房间状态
+message PBDYZZTeamRoomStateData{
+	required string teamId         = 1; //房间ID
+	required PBDYZZTeamNotify state = 2; //房间状态
+	optional string gameId         = 3; //游戏ID 
+}
+
+
+enum PBDYZZTeamNotify{
+	DYZZ_TEAM_NOTIFY_MATCHING        = 1;   //匹配中
+	DYZZ_TEAM_NOTIFY_CANCEL_MATCHING = 2;   //取消中
+	DYZZ_TEAM_NOTIFY_CANCEL_SUCESS   = 3;   //取消成功
+	DYZZ_TEAM_NOTIFY_GAME_START      = 4;   //开战
+	DYZZ_TEAM_NOTIFY_GAME_OVER       = 5;   //战场结束
+	
+}
+
+//副本完成
+message PBDYZZWarFinish{
+	required string gameId = 1;
+}
+
+
+
+enum PBDYZZGameRoomState{
+	DYZZ_GAME_INIT    = 1;   //初始
+	DYZZ_GAME_GAMING  = 2;   //开启战斗
+	DYZZ_GAME_OVER    = 3;   //结束
+}
+
+//*****************上面是跨服匹配专用，和客户端无关************************
+
+
+
+//*****************达雅之战-赛季************************
+
+// 活动阶段
+enum PBDYZZSeasonState{
+	DYZZ_SEASON_SHOW	=	1; //展示
+	DYZZ_SEASON_OPEN	=	2; //开启
+	DYZZ_SEASON_CLOSE	=	3; //关闭
+	DYZZ_SEASON_HIDDEN	= 	4; //隐藏
+}
+
+
+//赛季时间
+message PBYZZSeasonTime{
+	required int32 termId            = 1; //期数
+	required PBDYZZSeasonState state = 2; //阶段
+	optional int64 showTime          = 3; //展示时间
+	optional int64 startTime         = 4; //开始时间
+	optional int64 endTime           = 5; //结束时间
+	optional int64 hiddenTime        = 6; //隐藏时间
+}
+
+//赛季信息
+message PBDYZZSeasonData{
+	required PBYZZSeasonTime seasonTime  = 1; //赛季状态信息
+	required int32 score                 = 2; //赛季积分
+}
+
+
+
+//积分排行榜
+message PBDYZZSeasonScoreRank{
+	repeated PBDYZZSeasonScoreRankMember members = 1; //榜成员
+	required PBDYZZSeasonScoreRankMember self = 2;  //自己
+}
+
+
+//积分排行榜成员
+message PBDYZZSeasonScoreRankMember{
+	required string playerId      = 1;   //玩家ID
+	required string playerName    = 2;   //名字
+	required int32 icon           = 3;   //头像
+	optional string pfIcon        = 4;   //头像
+	required string serverId      = 5;   //服务器ID
+	required int32 rank           = 6;   //排行
+	required int32 score          = 7;   //积分
+}
+
+//赛季战令
+message PBDYZZSeasonOrder{
+	required int32 termId              = 1; //期数
+	required int32 score               = 2; //积分
+	required int32 advanceBuy          = 3; //是否购买进阶礼包
+	repeated int32 rewardLevels        = 4; //已经领奖的等级
+	repeated int32 advanceRewardLevels = 5; //进阶已经领奖的等级
+	repeated PBDYZZSeasonOrderChoose rewardChoose = 6;//奖励选择
+}
+
+message PBDYZZSeasonOrderChoose{
+	required int32 level	= 1; //等级
+	required int32 choose	= 2; //选择
+	required int32 type		= 3; //类型（1，普通 2，进阶）
+}
+
+
+
+
+//赛季战令领奖
+message PBDYZZSeasonOrderRewardAchiveReq{
+	required int32 rewardType  = 1; //1普通奖励  2 进阶奖励  3全部领取
+	optional int32 rewardlevel = 2; //领取ID
+	
+}
+
+
+
+//赛季战令领奖
+message PBDYZZSeasonShareReq{
+	required int32 shareType   = 1; //1世界  2联盟
+	
+}
+
+
+
+//*****************达雅之战-赛季************************
+

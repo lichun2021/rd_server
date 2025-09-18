@@ -1,0 +1,42 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 5184000
+
+# 邀请列表人数
+inviteCount = 10
+
+# 邮件掉落宝箱
+dropMax = 3
+
+# 瓜分消耗，三段式
+partitionCost = 30000_21070036_1
+
+# 回归玩家每日抽奖，箱子奖励id
+boxRewards = 1229004
+
+# 抽奖进入联盟cd 秒
+luckDrawCD = 3600
+
+# 瓜分奖池进入联盟cd 秒
+divideJackpotCD = 86400
+
+# 回归积分道具
+valueProp = 30000_21070035_1
+
+# 回归特贡礼盒每期获得数量上限
+boxMax = 30
+
+# 金币奖池初始数值
+startCoinsValue = 2000
+
+# 体力奖池初始数值
+startVitValue = 1000
+
+# 玩家可以注入的基地等级，大于等于
+baseLevel = 30
+
+# 本期活动可累计注入的金币上限
+coinMax = 400000
+
+# 本期活动可累计注入的体力上限
+vitMax = 150000
+

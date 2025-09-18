@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="5910101" conditionType1="5900001" conditionValue1="20" rewards="30000_500202_2,30000_1300017_20,30000_500301_5,30000_500302_5" />
+      <data achieveId="5910102" conditionType1="5900001" conditionValue1="50" rewards="30000_500202_3,30000_1300017_30,30000_500301_5,30000_500303_5" />
+      <data achieveId="5910103" conditionType1="5900001" conditionValue1="80" rewards="30000_500202_4,30000_1300017_40,30000_500302_5,30000_500304_5" />
+      <data achieveId="5910104" conditionType1="5900001" conditionValue1="120" rewards="30000_500202_5,30000_1300017_50,30000_500303_5,30000_500304_5" />
+      <data achieveId="5910105" conditionType1="5900001" conditionValue1="200" rewards="30000_500202_8,30000_1300017_80,30000_500301_5,30000_500302_5,30000_500303_5,30000_500304_5" />
+      <data achieveId="5910106" conditionType1="5900002" conditionValue1="30000" rewards="30000_800110_2,30000_500202_2,30000_500301_5,30000_500302_5" />
+      <data achieveId="5910107" conditionType1="5900002" conditionValue1="50000" rewards="30000_800110_5,30000_500202_3,30000_500303_5,30000_500304_5" />
+      <data achieveId="5910108" conditionType1="5900002" conditionValue1="100000" conditionType2="5900003" conditionValue2="11,50000" rewards="30000_800110_10,30000_500202_4,30000_500301_5,30000_500302_5,30000_500303_5,30000_500304_5" />
+      <data achieveId="5910109" conditionType1="5900002" conditionValue1="150000" conditionType2="5900003" conditionValue2="11,150000" rewards="30000_1000003_2,30000_500202_5,30000_500301_8,30000_500302_8,30000_500303_8,30000_500304_8" />
+      <data achieveId="5910110" conditionType1="5900002" conditionValue1="200000" conditionType2="5900003" conditionValue2="11,300000" rewards="30000_1000003_5,30000_500202_8,30000_500301_10,30000_500302_10,30000_500303_10,30000_500304_10" />
+      <data achieveId="5910111" conditionType1="5900004" conditionValue1="1,60" conditionType2="5900002" conditionValue2="20000" rewards="30000_1300017_20,30000_21063003_5,30000_21063002_5,30000_1780035_5" />
+      <data achieveId="5910112" conditionType1="5900004" conditionValue1="2,60" conditionType2="5900002" conditionValue2="30000" rewards="30000_1300017_30,30000_21063003_10,30000_21063002_10,30000_1780035_10" />
+      <data achieveId="5910113" conditionType1="5900004" conditionValue1="3,4,5,60" conditionType2="5900002" conditionValue2="50000" rewards="30000_21063005_10,30000_1300017_50,30000_21063003_10,30000_21063002_10,30000_1780035_15" />
+      <data achieveId="5910114" conditionType1="5900004" conditionValue1="6,60" conditionType2="5900002" conditionValue2="80000" rewards="30000_21063005_15,30000_1300017_80,30000_21063003_10,30000_21063002_10,30000_1780035_20" />
+</root>

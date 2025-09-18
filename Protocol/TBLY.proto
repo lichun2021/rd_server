@@ -1,0 +1,188 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+// TBLY_GAME_SYNC			= 483; // 副本信息同步
+message PBTBLYGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBGuildInfo guildInfo = 3; 
+	repeated PBPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; // 野怪剩余个数
+	repeated PBTBLYTechonolgyLabEffect labBuff = 7; // 秘密实验室 随机buff
+	repeated PBTBLYBuff tblyBuff = 8; // 战场天气
+	repeated PBPlayerInfo playerNotJoin = 9; // 未进入战场
+	optional int64 gameCreateTime = 10; // 结束时间
+	optional int32 winCamp = 11; // 胜利方。 战场结束后才有意义
+}
+
+message PBTBLYBuff{
+	optional int32 buffId = 1; // tbly_buff.xml  id
+	optional int64 startTime = 2;
+}
+
+// 秘密实验室 随机buff
+message PBTBLYTechonolgyLabEffect{
+	repeated PBTBLYEffect effect = 1;
+	optional int32 index = 2;
+	optional int32 camp = 3; // 阵营
+	optional int32 skillId = 4; // build_skill
+	optional int64 startTime = 5; 
+	optional int64 endTime = 6;
+}
+
+//作用号信息
+message PBTBLYEffect{
+	required int32 effId				= 1;  //作用号
+	required int32 effVal				= 2;  //作用值
+}
+
+// 泰博利亚小地图
+message PBTBLYSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;
+	optional int32 monsterCount = 6; // 野怪剩余个数
+	optional int64 nextMonsterRefresh = 7; // 下次刷怪时间, 为0 代表最后一波刷完
+	optional int32 monsterTurn = 8; // 当前刷新过多少波
+	repeated PBTBLYBuildSkill orderBuffs = 9;// 建筑生效buff
+}
+
+message PBGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int32 killHonor = 13;
+	optional int32 collectHonor = 14;
+	optional int32 nuclearCount = 15; // 核弹发射次数
+	optional bool nuclearReady = 16; // 核弹是否可用
+	optional int64 nuclearControlTime = 17; // 核弹累计准备时间
+	optional string nuclearBuildLeaderid = 18; // 控制核弹建筑队长id
+	optional int32 nianKillCnt = 19; // 机甲击杀数
+	optional int32 guildOrder = 20; // 号令点数
+	optional int32 extryHonor = 21; // 悬赏分
+	optional bool chronoReady = 22; // 超时空是否可用
+	optional int64 chronoControlTime = 23; // 超时空累计准备时间
+	optional string chronoBuildLeaderid = 24; // 超时空装置建筑队长id
+	optional int64 nuclearReadyTime = 25; // 核弹冷却时间
+	optional int64 nuclearStartTime = 26; // 核弹发射时间
+	optional int64 chronoReadyTime = 27; // 超时空冷却时间
+	optional int64 chronoStartTime = 28; // 超时空发射时间
+	optional int32 firstControlHonor = 29; // 首占建筑得分 
+}
+
+message PBPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killhonor = 7;
+	optional int32 hurthonor = 8;
+	optional int32 buildhonor = 9;
+	optional int32 collectGuildHonor = 10; // 采集获得联盟积分
+	optional int32 killMonster = 11; // 击杀野怪数
+	optional int32 cityLevel = 12;
+	repeated WorldShowDress dressShow		= 13;	// 装扮显示
+	optional int32 icon = 14;
+	optional string pfIcon = 15;
+}
+
+
+//TBLY_GAME_OVER			= 472; // 游戏结束
+message PBTBLYGameOver{ 
+	optional int64 playerHonor = 1; // 个人积分
+	optional bool win = 2; 
+	optional int32 quitReson = 3; //正常结束 0  主动退出 1
+}
+
+message PBTBLYKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// TBLY_PLAYER_QUIT			= 477; // 有玩家退出
+message PBTBLYPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBTBLYPlayerMoveCitySync{
+	optional int64 tblyMoveCityCD = 1;  // 免费迁城
+	optional int32 tblyMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+message PBTBLYNuclearStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 立即占领. 建筑在占领中, 且为盟友占领
+message PBTBLYChronoStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 广播核弹发射
+message PBTBLYNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int64 fromX = 6;
+	optional int64 fromY = 7;
+}
+
+message PBTBLYAnchorJoinReq{
+	optional string battleId = 1;
+}
+
+// 主播请求建筑内邮件. 
+message PBTBLYAnchorListMailReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 type = 3;  // 0 战斗邮件, 1 侦查邮件
+}
+
+message PBTBLYAnchorGetGuildWarInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+}
+
+
+message PBTBLYAnchorGetGuildWarCellInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+	optional string marchId = 2; // 
+}
+
+//号令
+message PBTBLYOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+}
+
+//使用号令
+message PBTBLYOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+	optional int32 x = 2;  // 对建筑使用
+	optional int32 y = 3; 
+}
+
+//号令同步
+message PBTBLYOrderSyncResp{
+	repeated PBTBLYOrder orders = 1;  //号令列表
+}

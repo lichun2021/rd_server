@@ -1,0 +1,45 @@
+return {
+	prop =
+	{
+		activityId = 324,
+		name = [[拼单福利]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">拼着买更划算，2人即可成团拼!</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_319_Nor.png]],
+		selecticon = [[Activity_Icon_319_Sel.png]],
+	},
+	pdd_achieve = [[achieveId	conditionType	conditionValue	rewards	isReset	title	gotoType	gotoValue
+1	1	1	2	1	2	1	2
+324101	140900	1	30000_1000003_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日登录游戏<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>	-1	
+324102	170100	150	30000_1782103_6	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+324103	170100	300	30000_1300017_20	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+324104	700093	6	30000_1800001_3	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324105	700093	30	30000_1400009_18	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324106	700093	68	30000_1400009_33	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324107	700093	100	30000_1400009_30	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324108	700093	300	30000_1400009_60	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324109	700093	600	30000_1400009_90	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324110	700093	1000	30000_1400009_120	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324111	700093	2000	30000_1400009_300	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+324112	700093	3000	30000_1400009_399	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+]],
+	pdd_shop = [[id	day	aloneNeedItem	needItem	value	showType	gainItem	times	endTime
+1	1	2	2	2	1	2	1	1
+1001	1	10000_1000_10	10000_1000_5	10000_1000_100	1	30000_1000003_1	1	180
+1002	1	10000_1000_50	10000_1000_25	10000_1000_500	2	30000_1782103_6	5	180
+1003	1	10000_1000_100	10000_1000_50	10000_1000_1000	3	30000_1300017_20	10	180
+1004	1	10000_1000_10	10000_1000_5	10000_1000_100		30000_1800001_3	20	180
+1005	1	10000_1000_50	10000_1000_25	10000_1000_500		30000_1800000_25	1	180
+1006	2	10000_1000_100	10000_1000_50	10000_1000_1000	1	30000_800002_4	5	180
+1007	2	10000_1000_10	10000_1000_5	10000_1000_100	2	30000_802003_4	10	180
+1008	2	10000_1000_50	10000_1000_25	10000_1000_500	3	30000_800000_4	20	180
+1009	2	10000_1000_10	10000_1000_5	10000_1000_1000		30000_1800001_3	20	180
+1010	2	10000_1000_50	10000_1000_25	10000_1000_100		30000_1800000_25	1	180
+1011	3	10000_1000_10	10000_1000_5	10000_1000_500	1	30000_1000003_1	1	180
+1012	3	10000_1000_50	10000_1000_25	10000_1000_1000	2	30000_1782103_6	5	180
+1013	3	10000_1000_100	10000_1000_50	10000_1000_100	3	30000_1300017_20	10	180
+1014	3	10000_1000_10	10000_1000_5	10000_1000_500		30000_1800001_3	20	180
+1015	3	10000_1000_50	10000_1000_25	10000_1000_1000		30000_1800000_25	1	180
+]],
+
+}

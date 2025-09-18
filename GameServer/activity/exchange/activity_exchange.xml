@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needItem="30000_1150141_750" gainItem="30000_14710136_1" dailyTimes="1" />
+      <data id="2" needItem="30000_1150141_180" gainItem="30000_14710131_1" dailyTimes="3" />
+      <data id="3" needItem="30000_1150141_45" gainItem="30000_14710130_1" dailyTimes="10" />
+      <data id="4" needItem="30000_1150141_25" gainItem="30000_800110_1" dailyTimes="10" />
+      <data id="5" needItem="30000_1150141_20" gainItem="30000_810001_1" dailyTimes="10" />
+      <data id="6" needItem="30000_1150141_10" gainItem="30000_850006_2" dailyTimes="10" />
+      <data id="7" needItem="30000_1150141_10" gainItem="30000_850036_2" dailyTimes="10" />
+      <data id="8" needItem="30000_1150141_1" gainItem="30000_1510002_2" dailyTimes="99" />
+      <data id="9" needItem="30000_1150141_1" gainItem="30000_13310002_2" dailyTimes="99" />
+</root>

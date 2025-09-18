@@ -1,0 +1,199 @@
+  option java_package = "com.hawk.game.protocol";
+  import "World.proto";
+  import "GuildChampionship.proto";
+
+// 服务器间通信 
+message PBMaterialServiceReq{
+	optional int32 protoclType = 1; // 协议id 用来解析pb
+	optional bytes req = 2; // 协议体 
+}
+
+
+
+//车 结构体
+message PBMTTruck {
+	optional string id = 1;
+	optional int32 index = 2;
+	optional int32 state = 3; // 1 准备 , 2 行军中  3 已完成
+	optional int32 type = 4; // 1 个人, 2 联盟, 3 豪华
+	optional string guildId = 5;
+	optional string playerId = 6;// 发车人
+	optional string serverId = 7;
+	optional int64 startTime = 8;
+	optional int64 endTime = 9;
+	optional PBMTPlayer leader = 10; // 车长id 个人车== playerId, 联盟车可指定他人
+	optional int32 robCnt = 12; // 被抢次数
+	optional string trainReward = 13;// 联盟车头奖励. 固定
+	repeated PBMTTruckGroup compartments = 14;// 车厢,    个人车只有1号车箱.  联盟4个
+	repeated PBMTTruckBattleRecord battleRecord = 15; // 被掠夺记录
+	optional int32 origionX					= 16;	// 起点坐标
+	optional int32 origionY					= 17;	// 起点坐标
+	optional int32 terminalX				= 18;	// 目标x
+	optional int32 terminalY				= 19;	// 目标y
+	optional string guildName				= 20; // 联盟名
+}
+
+// 车厢 内有奖励
+message PBMTTruckGroup{
+	optional int32 index = 1;
+	repeated PBTruckReward rewards = 2;// 30000_1001_333,
+	optional int32 refreshCnt = 3; // 刷新数
+	repeated PBMTPlayer members = 4; // 排队人员
+	optional int32 groupCfgId = 5;
+}
+
+message PBTruckReward{
+	optional int32 rewardCfgId = 1;
+	optional int32 robCnt = 2;
+}
+
+// 战斗记录 
+message PBMTTruckBattleRecord{
+	repeated PBMTPlayer atker = 1; // 个人一个, 联盟多个
+	optional int64 battleTime = 2; //
+	optional string rewardGet = 4; // 抢夺奖励.   超次 ,或战败为空
+	optional bool win = 5;
+	optional string mailUUID = 6;// 
+}
+
+message PBMTPlayer{
+	optional string playerId = 1;
+	optional string name = 2;
+	optional int32 icon = 3;
+	optional string pfIconf = 4;
+	optional string server = 5;
+	optional int64 power = 6;
+	optional PBChampionPlayer battleData = 7;
+	optional int32 robState = 8; // 0 成功获得PBMTTruckBattleRecord.rewardGet.   非 0 没有获得, 值为当日参与抢夺数数
+}
+
+
+// 同步活动信息
+message PBMTAcvityInfoSync{
+	//# 每日普通货车发车次数
+ 	optional int32 truckNumber = 1;
+	//# 联盟每日普通列车发车次数
+	optional int32 allianceCommonTrainNumber = 2;
+	// # 联盟每日豪华列车发车次数
+	optional int32 allianceSpecialTrainNumber = 3;
+	// # 个人每日联盟列车参与次数
+	optional int32 trainNumber = 4;
+	// # 每日普通货车抢夺次数
+	optional int32 truckRobNumber = 5;
+	// # 每日联盟列车抢夺次数
+	optional int32 trainRobNumber = 6;
+	// 同组服
+	repeated string serverlist = 7;
+	// 每日豪华联盟车参与次数
+	optional int32 specialTrainNumber = 8;
+}
+
+// 请求展示
+message PBMTTruckListReq{
+
+}
+
+// 展示他人货车,  我的货车 联盟列车
+message PBMTTruckListResp{
+	repeated PBMTTruck otherTrucks = 1;
+	repeated PBMTTruck selfTrucks = 2;
+	optional PBMTTruck guildTruck = 3;
+	repeated PBMTTruckRob massMarch = 4; // 联盟集结中的
+}
+
+// 联盟集结
+message PBMTTruckRob{
+	optional PBMTTruck target = 1;
+	repeated PBMTPlayer members = 2; // 参与集结者
+	optional int64 startTime = 3;
+	optional int64 endTime = 4;
+	optional string robId = 5; 
+}
+
+// 刷新他人车量
+message PBMTOtherTruckRefrashReq{
+	optional int32 type = 1; // 0 全部车 , 1 非本服车
+}
+
+
+// 创建个人车
+message PBSelfTruckCreateReq{
+	optional int32 index = 1; // 1 左 2右
+}
+// 刷奖
+message PBSelfTruckRefreshReq{
+	optional int32 index = 1; // 1 左 2右
+}
+// 个人发车
+message PBSelfTruckStartReq{
+	optional int32 index = 1; // 1 左 2右
+}
+
+// 抢个人车
+message PBSelfTruckRobReq{
+	optional string truckId = 1; // 个人车id
+}
+
+message PBSelfTruckRobResp{
+	optional PBMTTruckBattleRecord battleRecord = 1;  // 战斗结果.   
+	optional string target = 2; // 被攻击车
+	// 其他信息...
+}
+
+/**预设  998 跟车行军  688  掠夺行军**/
+message PBTRUCKPreMarchResp{
+	optional string playerId = 1;
+	optional PresetMarchInfo caijiMarch = 2; // 队列688
+	optional PresetMarchInfo quganMarch = 3; // 队列998
+}
+
+
+
+// 创建联盟车
+message PBGuildTruckCreateReq{
+	optional int32 type = 1; // 2 普通,  3 豪华
+}
+
+// 更换车头
+message PBGuildTruckLeaderReq{
+	optional string playerId = 1; 
+}
+
+// 排队联盟车厢
+message PBGuildTruckPaiDuiReq{
+	optional string truckId = 1;
+	optional int32 groupIndex = 2; // 车厢号
+}
+
+// 联盟车刷奖
+message PBGuildTruckRefreshReq{
+	optional string truckId = 1;
+	optional int32 index = 2; // 车箱 PBMTTruckGroup index
+}
+
+// 集结抢夺联盟车
+message PBGuildTruckMassRobReq{
+	optional string truckId = 1;
+	optional string robId = 2; // 加入集结 必填
+}
+
+// 历史记录
+message PBMTHistoryReq{
+	optional int32 type = 1; // 1 抵达 2 抢夺
+}
+
+// 历史记录
+message PBMTHistoryResp{
+	optional int32 type = 1; // 1 抵达 2 抢夺
+	repeated PBMTTruck trucks = 2; 
+}
+
+// 分享
+message PBMTTruckShareReq{
+	optional string truckId = 1;
+}
+
+// 刷新券直接金币买
+message PBMTRefreshItemBuyReq{
+	optional int32 count = 1;
+}

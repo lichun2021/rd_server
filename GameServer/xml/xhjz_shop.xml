@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" cost="30000_21063068_105" item="30000_1000005_1" numLimit="5" />
+      <data id="2" cost="30000_21063068_100" item="30000_9990062_1" numLimit="10" />
+      <data id="3" cost="30000_21063068_8" item="30000_9990042_1" numLimit="100" />
+      <data id="4" cost="30000_21063068_15" item="30000_9990052_1" numLimit="40" />
+      <data id="5" cost="30000_21063068_12" item="30000_1782103_10" numLimit="100" />
+      <data id="6" cost="30000_21063068_10" item="30000_9990032_10" numLimit="100" />
+      <data id="7" cost="30000_21063068_18" item="30000_802004_10" numLimit="100" />
+      <data id="8" cost="30000_21063068_60" item="30000_1782106_10" numLimit="50" />
+      <data id="9" cost="30000_21063068_15" item="30000_820002_1" numLimit="100" />
+      <data id="10" cost="30000_21063068_4" item="30000_810001_1" numLimit="200" />
+      <data id="11" cost="30000_21063068_1" item="30000_1780025_1" numLimit="9999" />
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="300100" resType="1007" level="1" resNum="300" resRefreshNum="300" lifeTime="21600" newly="1" />
+      <data id="300101" resType="1007" level="1" resNum="27000" resRefreshNum="5400" lifeTime="21600" newly="0" />
+      <data id="300102" resType="1007" level="2" resNum="36000" resRefreshNum="7200" lifeTime="32400" newly="0" />
+      <data id="300103" resType="1007" level="3" resNum="72000" resRefreshNum="14400" lifeTime="43200" newly="0" />
+      <data id="300104" resType="1007" level="4" resNum="126000" resRefreshNum="25200" lifeTime="54000" newly="0" />
+      <data id="300105" resType="1007" level="5" resNum="198000" resRefreshNum="39600" lifeTime="64800" newly="0" />
+      <data id="300106" resType="1007" level="6" resNum="288000" resRefreshNum="57600" lifeTime="75600" newly="0" />
+      <data id="300107" resType="1007" level="7" resNum="396000" resRefreshNum="79200" lifeTime="86400" newly="0" />
+      <data id="300108" resType="1007" level="8" resNum="522000" resRefreshNum="104400" lifeTime="97200" newly="0" />
+      <data id="300201" resType="1008" level="1" resNum="27000" resRefreshNum="5400" lifeTime="21600" newly="0" />
+      <data id="300202" resType="1008" level="2" resNum="36000" resRefreshNum="7200" lifeTime="32400" newly="0" />
+      <data id="300203" resType="1008" level="3" resNum="72000" resRefreshNum="14400" lifeTime="43200" newly="0" />
+      <data id="300204" resType="1008" level="4" resNum="126000" resRefreshNum="25200" lifeTime="54000" newly="0" />
+      <data id="300205" resType="1008" level="5" resNum="198000" resRefreshNum="39600" lifeTime="64800" newly="0" />
+      <data id="300206" resType="1008" level="6" resNum="288000" resRefreshNum="57600" lifeTime="75600" newly="0" />
+      <data id="300207" resType="1008" level="7" resNum="396000" resRefreshNum="79200" lifeTime="86400" newly="0" />
+      <data id="300208" resType="1008" level="8" resNum="522000" resRefreshNum="104400" lifeTime="97200" newly="0" />
+      <data id="300301" resType="1009" level="1" resNum="1125" resRefreshNum="225" lifeTime="21600" newly="0" />
+      <data id="300302" resType="1009" level="2" resNum="1500" resRefreshNum="300" lifeTime="32400" newly="0" />
+      <data id="300303" resType="1009" level="3" resNum="3000" resRefreshNum="600" lifeTime="43200" newly="0" />
+      <data id="300304" resType="1009" level="4" resNum="5250" resRefreshNum="1050" lifeTime="54000" newly="0" />
+      <data id="300305" resType="1009" level="5" resNum="8250" resRefreshNum="1650" lifeTime="64800" newly="0" />
+      <data id="300306" resType="1009" level="6" resNum="12000" resRefreshNum="2400" lifeTime="75600" newly="0" />
+      <data id="300307" resType="1009" level="7" resNum="16500" resRefreshNum="3300" lifeTime="86400" newly="0" />
+      <data id="300308" resType="1009" level="8" resNum="21750" resRefreshNum="4350" lifeTime="97200" newly="0" />
+      <data id="300401" resType="1010" level="1" resNum="4500" resRefreshNum="900" lifeTime="21600" newly="0" />
+      <data id="300402" resType="1010" level="2" resNum="6000" resRefreshNum="1200" lifeTime="32400" newly="0" />
+      <data id="300403" resType="1010" level="3" resNum="12000" resRefreshNum="2400" lifeTime="43200" newly="0" />
+      <data id="300404" resType="1010" level="4" resNum="21000" resRefreshNum="4200" lifeTime="54000" newly="0" />
+      <data id="300405" resType="1010" level="5" resNum="33000" resRefreshNum="6600" lifeTime="64800" newly="0" />
+      <data id="300406" resType="1010" level="6" resNum="48000" resRefreshNum="9600" lifeTime="75600" newly="0" />
+      <data id="300407" resType="1010" level="7" resNum="66000" resRefreshNum="13200" lifeTime="86400" newly="0" />
+      <data id="300408" resType="1010" level="8" resNum="87000" resRefreshNum="17400" lifeTime="97200" newly="0" />
+</root>

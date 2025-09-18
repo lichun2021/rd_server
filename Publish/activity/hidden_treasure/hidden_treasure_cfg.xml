@@ -1,0 +1,33 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 免费刷新CD（s）
+freeRefreshTimes = 43200
+
+# 刷新次数-周期
+refreshTimes = 100
+
+# 刷新消耗道具
+refreshCost = 30000_30000001_1
+
+# 单个宝箱开启花费道具
+openTreasureCost = 30000_30000001_3
+
+# 道具购买花费
+purchaseItemCost = 10000_1000_99
+
+# 道具可购买次数
+purchaseItemTimes = 3000
+
+# 道具ID
+accelerateItemId = 30000_30000001_1
+
+# 首次抽取宝箱ID
+firstExtraction = 
+
+# 称号ID
+modelType = 13
+
+# 滚动条物品. >= 全服滚动播报
+noticeItem = 30000_30000002_200
+

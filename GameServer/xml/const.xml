@@ -1,0 +1,2772 @@
+# 新手保护时间
+newProtectTime = 172800
+
+# 新手默认体力
+newVitPoint = 100
+
+# 新手初始化部队（id_数量,id_数量,id_数量）
+newSoldier = 100101_400,100301_400,100501_400
+
+# 造兵上限初始值
+newTrainQuantity = 10
+
+# 新手造兵的最大人口上限（服务端做安全性处理用）
+newTrainSafeNum = 2000
+
+# 主城等级低于此值，保护罩不会消失(避免强指引过程中被攻击，玩家数据发生意向不到的变化导致卡死)
+protectNotDisLevel = 3
+
+# 玩家名称最短最长（字符数）
+playerNameMinMax = 2_15
+
+# 登录获得vip积分（未激活vip时获得积分_激活vip时倍数）
+loginVipPointAdd = 0_2
+
+# 聊天屏蔽玩家上限
+blockListLimit = 100
+
+# 免费时间（秒）
+freeTime = 420
+
+# 使用道具加速时，决定推荐数量取整方式的时间阈值，单位：秒
+itemSpeedUpTimeThresholdValue = 300
+
+# 玩家主城最大座标
+maxCoordinate = 31_63
+
+# 酒馆每日刷新时间，整点时间
+tavernRefreshTime = 0
+
+# 购买建造队列
+buyBuildQueue = 10000_1001_50_172800
+
+# 兵种头顶可领取奖励的气泡(气泡类型1;资源类型_资源ID_资源数量;每日最大领取次数上限）
+rondaAwardBubble = 1;10000_1008_1000,10000_1007_1000;20
+
+# 建筑头顶气泡(气泡类型2;资源类型_资源ID_资源数量;每日最大领取次数上限）
+buildAwardBubble = 2;10000_1008_1000,10000_1007_1000;10
+
+# 城外区域
+outOfTownArea = 3,4,5,6
+
+# 水晶秒时间通用算式：lower1_k1_b1,lower2_k2_b2……（分段线性公式）
+speedUpCost = 0_10000_1000000,300_10910_727000,3600_9723_4997201,7200_8565_13332000,28800_7987_29974400,43200_7524_49963200,86400_7147_82499200
+
+# 城建时间价值水晶的权重
+buildingTimeWeight = 1
+
+# 造兵时间价值水晶的权重
+trainSoldierTimeWeight = 1
+
+# 部队治疗时间价值水晶的权重
+cureSoldierTimeWeight = 1
+
+# 科技研究时间价值水晶的权重
+techResearchTimeWeight = 1
+
+# 英雄训练时间价值水晶的权重
+trainHeroTimeWeight = 0.1
+
+# 英雄治疗时间价值水晶的权重
+cureHeroTimeWeight = 1
+
+# 宝藏加速时间系数
+speedUpCoefficient = 1
+
+# 装备打造、升品、拆解时间价值水晶的权重
+equipQueueTimeWeight = 1
+
+# 装备研究时间价值水晶的权重
+equipResearchQueueTimeWeight = 1
+
+# 水晶秒资源通用算式：lower1_k1_b1,lower2_k2_b2……（分段线性公式）
+buyResCost = 0_300_1000000,10000_300_1000000,50000_300_1000000,150000_300_1000000,500000_270_16000000,1500000_240_61000000,5000000_210_211000000
+
+# 黄金资源价值水晶的权重
+goldResWeight = 1
+
+# 石油资源价值水晶的权重
+oilResWeight = 1
+
+# 合金资源价值水晶的权重
+soilResWeight = 6
+
+# 铀矿资源价值水晶的权重
+uraniumResWeight = 24
+
+# 首次加入联盟奖励
+firstJoinGuildReward = 10000_1001_50,30000_800134_1
+
+# 搜索输入最短限制
+searchWordMinimum = 4
+
+# 搜索时，精确匹配开关。=1时为精确匹配，=0时为模糊匹配
+searchPrecise = 1
+
+# 战斗最大回合数（标准为50）
+battleRoundMax = 50
+
+# 掠夺系数（用前除1000）
+grabWeightKey = 1000
+
+# 体力点数恢复时间间隔（秒）
+vitPointAddTime = 360
+
+# 初始装备
+initialEquipments = 751100_752100_753100_754100_755100_756100_757100_758100
+
+# VIP等级提升奖励VIP激活时间（秒）
+vipTimeReward = 86400
+
+# 贵族商城vip等级和可购买物品个数
+vipShopItem = 3_4,4_4,5_6,6_6,7_11,8_8,9_9,10_7,11_8,12_7,13_12,14_6,15_8,16_7,17_9,18_7
+
+# vip0级时的免费编队个数（现版本与vip无关，只读取此值）
+iniTroopTeamNum = 4
+
+# 新手赠送免费VIP时间
+freshPlayerFreeVipTime = 86400
+
+# 新手期普通造兵时间
+guideFirstTrainSoldierTime = 3
+
+# 【超级武器】功能解锁所需大本等级；绝对值
+manhattanUnlockLevel = 30
+
+# 【11041】生效时，针对各兵种的修正系数；万分比
+effect11041DamageAdjust = 1_10000,2_10000,3_10000,4_10000,5_20000,6_20000,7_10000,8_10000
+
+# 【11042】生效时，持续回合数；绝对值
+effect11042ContinueRound = 10
+
+# 【11042】生效时，针对各兵种的修正系数；万分比
+effect11042Adjust = 1_10000,2_10000,3_20000,4_20000,5_10000,6_10000,7_10000,8_10000
+
+# 【11043】生效时，持续回合数；绝对值
+effect11043ContinueRound = 10
+
+# 【11043】生效时，针对各兵种的修正系数；万分比
+effect11043Adjust = 1_10000,2_10000,3_20000,4_20000,5_10000,6_10000,7_10000,8_10000
+
+# 【11044】生效时，可召唤的部队上限；绝对值
+effect11044MaxNum = 1000000
+
+# 超能强化和超能抵御，对应的属性调整系数；万分比
+superDamageCof = 1000
+
+# 超能强化和超能抵御，对应的属性调整最终数值的限制区间；万分比
+superDamageLimit = -2000_2000
+
+# 邮件上限
+mailLimit = 50
+
+# 邮件生存时间(邮件到期后，做删除处理，有附件的不删除)
+mailEffectTime  = 1296000
+
+# 训练取消返还资源比率。万分比
+trainCancelReclaimRate = 5000
+
+# 治疗取消返还资源比率。万分比
+recoverCancelReclaimRate = 5000
+
+# 升级取消返还资源比率。万分比
+buildCancelReclaimRate = 5000
+
+# 改建取消返还资源比率。万分比
+reBuildCancelReclaimRate = 5000
+
+# 研究取消返还资源比率。万分比
+researchCancelReclaimRate = 5000
+
+# 聊天邮件保存条数
+chatMessage = 50
+
+# 是否开启世界资源刷新	 	
+openWorldResourceUpdate = true
+
+# 战斗异常时，是否开启返还玩家钻石道具的功能
+isOpenfightUnusualReturnDia = false
+
+# 王城驻扎人口上限
+presidentOfficeDefencePopulation = 800000
+
+# 主城低于此等级，多日不上线，其城堡会在世界场景内被清除
+rebuildLevel = 7
+
+# 主城低于配置等级，达到配置时间不上线，其城堡会在世界场景内被清除（单位：秒）
+rebuildTime = 259200
+
+# 实际体力上限，卡住所有体力获取渠道
+actualVitLimit = 999
+
+# 购买体力每次获得体力值
+buyEnergyAdd = 50
+
+# 购买体力每次消耗水晶数
+buyEnergyCost = 10000_1001_100
+
+# 初始可购买体力次数
+initBuyEnergyTimes = 5
+
+# 攻击新版野怪返还体力系数（万分比）
+physicalPowerReturnCoe = 5000
+
+# 每日购买体力上限次数
+dailyBuyEnergyTimesLimit = 10
+
+# 充值钻石转换vip经验系数（百分比数据）
+diaExchangeVipExpCof = 100
+
+# 每日活跃任务的刷新时间
+dailyMissionTime = 5
+
+# 双货币固定兑换数量
+exchangeValue = 100
+
+# 商城礼包指定每日刷新时间，上午
+giftRefreshAM = 5
+
+# 商城礼包指定每日刷新时间，下午
+giftRefreshPM  = 17
+
+# 迁移城数据保存最大条数
+cityMoveRecordLimit = 30
+
+# 加入联盟激活v5
+vipActiveLevel = 5
+
+# 单次修复城墙增加城防值
+onceWallRepair = 80
+
+# 修复城墙间隔时间（秒）
+wallRepairCd = 1800
+
+# 着火状态下，普通土地上的燃烧速度（点/千秒）
+wallFireSpeed = 56
+
+# 着火状态下，黑土地上的燃烧速度（点/千秒）
+wallFireSpeedOnBlackLand = 27778
+
+# 城墙着火时间上限值（秒）
+wallFireMaxTime = 259200
+
+# 单次攻击城墙造成的燃烧时间（秒）
+onceAttackWallFireTime = 1800
+
+# 灭火消耗资源（type_id_count）
+outFireCost = 10000_1001_20
+
+# 取消陷阱制造资源返还比例(万分比)
+cancelTrapResourceReturn = 5000
+
+# 制造陷阱单次最大时间上限（秒）
+trapTrainMaxTime = 36000
+
+# 许愿池获取资源数值变化表达式，x1:基础值 x2:今日许愿次数
+wishingAddValueExpr = x1*(1+0.3*(x2-1)/100)
+
+# 许愿池消耗资源数值变化表达式，x1:基础值 x2:今日许愿次数
+wishingCostValueExpr = x1+(x2-1)*1
+
+# 许愿池消耗资源类型id
+wishingCostResType = 1001
+
+# 许愿池暴击概率(千分比)，格式：倍数:概率;倍数:概率
+wishingCritRate = 1:630;2:200;5:120;10:50
+
+# 天赋重置道具在商城（shop）中对应的id数据
+talentResetItemSaleId = 902002
+
+# 天赋切换道具在商城（shop）中对应的id数据
+talentExchangeItemSaleId = 902003
+
+# 解锁天赋路线2所需大本等级
+unlockTalentLine2NeedCityLevel = 0
+
+# 解锁天赋路线3所需大本等级
+unlockTalentLine3NeedCityLevel = 10
+
+# 解锁天赋路线4所需大本等级
+unlockTalentLine4NeedCityLevel = 10
+
+# 解锁天赋路线5所需大本等级
+unlockTalentLine5NeedCityLevel = 10
+
+# 解锁天赋路线6所需大本等级
+unlockTalentLine6NeedCityLevel = 10
+
+# 解锁天赋路线7所需大本等级
+unlockTalentLine7NeedCityLevel = 10
+
+# 解锁天赋路线8所需大本等级
+unlockTalentLine8NeedCityLevel = 10
+
+# 批量招募英雄的次数上限
+batchHeroMax = 100
+
+# 批量研究芯片的次数上限
+batchChipMax = 100
+
+# 批量打造装备的次数上限
+batchEquipmentMax = 100
+
+# 霸主赐福活动行军位置：即雕像的位置
+statueCoordinates = 386_114
+
+# 玩家每日参与185入侵Boss最大收益次数
+bossDailyLootTimeLimit185 = 50;50
+
+# 185入侵Boss的enemyID列表
+bossEnemyIdList185 = 601001_601002_601003_602001_602002_602003;603001_603002_603003
+
+# 184入侵Boss的enemyID列表
+bossEnemyIdList184 = 600001_600002_600003
+
+# 黑市商店每日系统刷新时间整点
+travelShopRefreshTime = 9_12_18_21
+
+# 系统刷新后，重置的免费刷新次数
+travelShopFreeRefreshTimes = 1
+
+# 系统刷新后，重置的水晶刷新次数和消耗
+travelShopCrystalRefreshCost = 25_50_75_100_125
+
+# 黑市商店普通礼包每日限购次数
+travelGiftBuyTimesLimit = 30
+
+# 激活黑市商店普通礼包的初始概率；万分比
+travelGiftActivateInitProb = 1600
+
+# 激活黑市商店普通礼包的递增概率；万分比
+travelGiftActivateAddProb = 300
+
+# 黑市商店作用号专属礼包每日限购次数
+specialTravelGiftBuyTimesLimit = 30
+
+# 激活黑市商店作用号专属礼包的初始概率；万分比
+specialTravelGiftActivateInitProb = 2000
+
+# 激活黑市商店作用号专属礼包的递增概率；万分比
+specialTravelGiftActivateAddProb = 2000
+
+# 召回推送的累计时间点
+recallPushTimeInterval = 3600_14400_86400_259200
+
+# 账号不上线XX秒后，不再进行任意推送信息
+pushEffectiveTime = 604800
+
+# 研究基础免费时间，单位：秒
+scienceFreeTime = 0
+
+# 好友每日收礼上限（个数）
+friendGift = 100
+
+# 亲密度区间与好友礼包映射(亲密度a,物品ID2;亲密度b,物品ID2)
+friendGiftIntimacy = 0,2500000;100,2500000;500,2500001
+
+# 好友上限（个数）
+friendUpperLimit = 100
+
+# 申请列表容纳上限（个数）
+friendApplyLimit = 99
+
+# 推荐好友出现条件（当好友数量低于这个值时出现推荐好友）
+friendMinimumValue = 10
+
+# 每次推荐好友个数
+friendRecommendCount = 5
+
+# 亲密度上限
+friendIntimacyLimit = 21900
+
+# 赠送一次礼包互相增加多少亲密度
+friendIntimacy = 10
+
+# 查找陌生人好友每次抓取上限
+friendFindLimit = 20
+
+# 联盟传送离盟主的距离
+allianceTransfer = 20
+
+# 小于计算周期时好友活跃度参考系数百分比（对比值=实际登录天数/已开服天数）
+friendActivePer = 0.5
+
+# 好友活跃度计算周期
+friendCycle = 7
+
+# 好友活跃度计算周期对比天数(高于这个天数则为活跃）
+friendCycleCom = 3
+
+# 英雄属性点重置消耗
+heroAttrResetCost = 10000_1001_300
+
+# 作用号366，采集时额外掉落资源宝箱，取的award表中的id
+effect366LinkToAwardId = 3300001
+
+# 作用号377，打怪时额外掉落经验道具，取的award表中的id
+effect377LinkToAwardId = 3300002
+
+# 作用号1664，荣耀所罗门【光环】部队攻击，数值叠加上限；万分比
+effect1664Maxinum = 6000
+
+# 作用号1665，荣耀所罗门【光环】部队防御，数值叠加上限；万分比
+effect1665Maxinum = 6000
+
+# 用于判定是否使用资源生产道具的作用号序列
+effectQueueForResUp = 302_304_306_308
+
+# 判断是否大胜的条件，战斗力损失的阈值
+battleReportPower = 1.5
+
+# 判断是否险胜的条件，双方交战回合数的阈值
+battleReportBout = 1
+
+# 判断是否险胜的条件，失败方和胜利方战力的比值
+battleReportspecific = 1.05
+
+# 判断兵种是否单一条件，敌方兵种种类的阈值
+battleReportKind = 2
+
+# 判断是否缺盾兵，盾兵的占比的阈值
+battleReportTank = 0.2
+
+# 全服buff
+allSeverBuff = 6_23093;6_23094;8_23097;8_23098;12_23095;12_23096;14_23097;14_23098
+
+# 伤兵补偿每日次数
+injuredSoldierTimes = 5
+
+# 死兵补偿每日次数
+deadSoldierTimes = 5
+
+# 伤兵补偿最低战力
+injuredSoldierPower = 60000
+
+# 死兵补偿最低战力
+deadSoldierPower = 30000
+
+# 伤兵补偿加速道具系数
+injuredSoldierSpeedUpCoefficient = 0.6
+
+# 伤兵补偿资源系数
+injuredSoldierResourceCoefficient = 0.6
+
+# 死兵补偿加速道具系数
+deadSoldierSpeedUpCoefficient = 0.6
+
+# 死兵补偿资源系数
+deadSoldierResourceCoefficient = 0.6
+
+# 5分钟伤兵加速道具id
+injuredSoldierUpSpeedItem = 810012
+
+# 5分钟训练加速道具id
+trainSoldierUpSpeedItem = 810010
+
+# 1000黄金
+compensationGold = 850010
+
+# 1000石油
+compensationOil = 850040
+
+# 150合金
+compensationMetal = 850020
+
+# 40铀矿
+compensationUranium = 850030
+
+# 联盟关怀触发的联盟帮助的可帮助次数
+allianceCareHelpNumber = 15
+
+# 联盟关怀触发的联盟帮助的可持续时间，单位是秒
+allianceCareHelpTime = 600
+
+# 联盟关怀每次帮助的补偿系数
+allianceCareHelpCoefficient = 0.01
+
+# 联盟悬赏可持续时间（单位秒）
+allianceCareHelpSustainTime = 864000
+
+# 联盟悬赏的最多条数
+allianceCareHelpQuantityUpLimit = 50
+
+# 同一封邮件分享到联盟聊天有间隔时间，单位是秒
+shareTime = 600
+
+# 联盟邀请函过期时间
+allianceInvitationOverTime = 86400
+
+# 装备最高品质
+equipMaxQuality = 5
+
+# 指挥官装备位配置
+equipSlotLimit = 1_1_1,2_2_1,3_3_1,4_4_1,5_5_1,6_6_1,7_7_1,8_7_1
+
+# 一键材料分解上限（最多一次获得材料数）
+quickBreakUpperLimit = 1000
+
+# 兵种晋升资源系数（出售兵种打的折扣z）晋升消耗公式=xb-(Xa×z)
+promotionVariate = 0.5
+
+# 兵种晋升时间系数
+promotionTimeVariate = 0.8
+
+# 迷雾宝箱最大空位
+foggyBoxMaxSpace = 3
+
+# 迷雾要塞每日奖励次数
+foggyAttackMaxTimes = 3
+
+# 进入防空洞时间
+shelterRecall = 3600_7200_14400_28800
+
+# 首充礼包消失后，取代其位置的破冰礼包id
+breakIceHeroPackageId = 0
+
+# 新服专属推送礼包只对在此时间节点之后新开的服务器生效
+newPushGiftStartTime = 2030-07-28 00:00:00
+
+# 聊天功能屏蔽（大本小于或等于XX等级时，无法发送聊天信息）
+chatBlockByMainCityLevel = 4
+
+# 世界聊天同样内容连续发送次数（大于3次不能发送，并弹出提示条）
+chatSameContentTimes = 3
+
+# 连续发送同样内容时间限制
+chatSameContentCD = 60
+
+# 世界聊天连续发送间隔时间
+chatSendTimeCD = 3
+
+# 超值礼包系统刷新时间间隔；单位：秒
+giftResetTimeInterval = 5400
+
+# 强制修改玩家昵称后赠送道具给玩家
+LoginandRename = 30000_800103_2
+
+# 每日发送改名道具次数上限
+LoginandRenameDailyTime = 3
+
+# 屠城作用号触发概率
+effect1060 = 2500
+
+# 更改个性签名vip限制
+signatureVipLimit = 1
+
+# 个性签名长度限制
+signatureLengthLimit = 20
+
+# 每日使用道具获取金币的数量上限
+gainCrystalLimitByUseItem = 80000
+
+# QQ关系涟礼物
+giveFriendGift = 10000_1007_1000,10000_1008_1000
+
+# QQ启动加成
+qqStartUp = 301_200
+
+# 微信游戏启动加成
+wxStartUp = 301_200
+
+# 超级会员
+svipStartUp = 301_300
+
+# 超时空急救冷却时间(秒)
+superTimeRescueCd = 600,1800,14400,28800,28800,28800
+
+# 针对所有资源的作用号配置
+resOutputBuffAll = 300,301
+
+# 针对矿石的作用号
+resOutputBuff1007 = 302,303
+
+# 针对石油的作用号
+resOutputBuff1008 = 304,305
+
+# 针对合金的作用号
+resOutputBuff1010 = 306,307
+
+# 针对稀土的作用号
+resOutputBuff1009 = 308,309
+
+# QQ密友拉取数量
+qqFriend = 20
+
+# QQ密友邀请时间
+qqFriendTime = 259200
+
+# 热销商城期数--该数据用于同步服务器热销商城是否有新商品上架
+shopTerm = 8
+
+# 指定大本等级范围；lvMin_LvMax
+resCollectExtraDropLevelLimit = 17_99
+
+# 采集自然时间（单位：秒）
+resCollectExtraDropTime = 5400
+
+# 额外掉落awardId（关联至award掉落表）
+resCollectExtraDropAward = 4950106
+
+# 每日限定掉落次数
+resCollectExtraDropTimesLimit = 20
+
+# 一键建群开关
+openOneKeyCreateGroup = true
+
+# 密友邀请开关
+openFriendsInvite = true
+
+# 密友邀请活动，1个被邀请玩家只能激活X个发起邀请的玩家的任务数据
+closeFriendNumLimit = 3
+
+# 好友界面，平台好友页签开关
+openPlatformFriends = true
+
+# 分享开关
+openShare = true
+
+# 社区入口开关1_2_3_4_5_6_7_8_9
+openPlat = 1_2_3_4_5_6_7_8_9_10_11_12_13_14
+
+# IOS社区入口开关1_2_3_4_5_6_7_8_9
+ios_openPlat = 1_2_3_4_5_6_7_8_9_10_11_12_13_14
+
+# 启动特权加成开关
+openLoginWay = true
+
+# 安卓主界面左上角平台能力#格式1_2_3_4_5
+openPlatformPrivilegeIds = 1_2_5_8_9_10_11
+
+# IOS主界面左上角平台能力#格式1_2_3_4_5
+ios_openPlatformPrivilegeIds = 1_2_5_8_9_10_11
+
+# 好友界面赠送好礼
+openPlatformFriendsGift = true
+
+# 攻略入口
+openStrategy = true
+
+# 分享福袋开关
+openQuestShare = true
+
+# CR英雄试练每日领奖次数限制
+crRewardLimit = 3
+
+# 指挥集结队伍名字长度
+rallySetTeamName = 2_8
+
+# 机甲生产暴击概率
+gouda_crit = 1200
+
+# 机甲解锁时，给全体玩家发放道具
+grantItemForUnlockMecha = 30000_15210001_2;30000_15210002_2;30000_15210003_2;30000_15210004_2
+
+# 机甲比例
+gouda_percent = 2000
+
+# 跨服需要消耗的道具
+crossCostItems = 30000_800101_1
+
+# 跨服需要的大本等级
+crossCityLevel = 10
+
+# 联合军演聊天频道邀请信息冷却时间
+cdTimeSecond = 30
+
+# 每日分享战报金币奖励数值
+shareReward = 10000_1001_10
+
+# 大版本奖励机制邮件id
+versionUpRewardMailId = 2013031
+
+# 联盟语音房间开关（不是联盟语音）
+openGuildVoice = false
+
+# 雷达额外侦查队列功能配置雷达等级
+extraSpyRadarLv = 35
+
+# 精英对决死转伤比例，万分比
+dieBecomeInjury = 3000
+
+# 莉塔系数
+litaRatio = 9500
+
+# 自动打野时间
+startAutoTime = 180
+
+# 英雄天赋更换每日花费金币递增
+heroTalentChangeCost = 10000_1001_0,10000_1001_0,10000_1001_5,10000_1001_10,10000_1001_15,10000_1001_20,10000_1001_25,10000_1001_30,10000_1001_35,10000_1001_40,10000_1001_45,10000_1001_50,10000_1001_55,10000_1001_60,10000_1001_65,10000_1001_70,10000_1001_75,10000_1001_80,10000_1001_85,10000_1001_90,10000_1001_95,10000_1001_100
+
+# 英雄天赋强化分段增加百分比及概率
+heroTalentLevelupRateProbability = 3333#10_10|20_10|30_10|40_10|50_10|60_10|70_10|80_10|90_10,6666#10_10|15_10|20_10|25_10|30_10|35_10|40_10|45_10|50_10,10000#9_20|12_30|15_30|18_30
+
+# 新兵救援等级上限
+recruitslevelLimit = 6
+
+# 新兵救援单日领取上限
+dayclaimLimt = 30000
+
+# 新兵救援总领取上限
+totalclaimLimt = 300000
+
+# 功能开启时间限制
+rescueDuration = 2592000
+
+# 限时商店的每日触发次数
+timeLimitShopTriggerTimes = 3
+
+# 复仇商店刷新周期
+revengeShopRefresh = 604800
+
+# 复仇商店存在时长
+revengeShopDuration = 86400
+
+# 复仇商店功能触发时长
+revengeShopTriggerTime = 3600
+
+# 复仇商店功能触发死兵数量
+revengeShopTriggerNum = 100000
+
+# 复仇商店的有效兵种最低等级
+revengeShopTroopsLevel = 7
+
+# 复仇商店开关
+revengeShopOpen = 1
+
+# 隐藏哪个英雄“_”分隔
+heroHide = 1040
+
+# 隐藏哪个英雄皮肤
+heroSkinHide = 40002
+
+# 英雄试炼提前领奖花费金币系数
+heroTrialQueueTimeWeight = 1
+
+# 每日分享活跃福袋金币奖励数值
+activeShareReward = 10000_1001_10
+
+# 爱莉莎专属芯片作用号【1508】触发概率；万分比
+effect1508Prob = 5500
+
+# 希伯特专属芯片作用号【1512】触发概率；万分比
+effect1512Prob = 5500
+
+# 希伯特专属芯片贯穿伤害--站位距离衰减系数；万分比
+effect1512DisDecayCof = 1000
+
+# 希伯特专属芯片贯穿伤害--站位距离衰减后最小伤害系数；万分比
+effect1512DisDecayMin = 3000
+
+# 突击步兵专属芯片（扭曲力场）触发概率；万分比
+effect1121Prob = 5000
+
+# 马克西恩专属芯片作用号【1562】随目标数量的伤害衰减
+effect1562DamageParam = 1_15000,2_12000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000,9_10000,10_10000
+
+# 马克西恩专属芯片作用号【1562】触发的能量豆上限
+effect1562TimesLimit = 50
+
+# 马克西恩专属芯片作用号【1562】触发时对坦克部队的额外伤害倍率
+effect1562DamageUpParam = 10000
+
+# 爱拉泽曼专属芯片作用号【1610】高于敌方部队数量的绝对值参数
+effect1610NumParam = 50000
+
+# 爱拉泽曼专属芯片作用号【1611】高于敌方部队数量的绝对值参数
+effect1611NumParam = 50000
+
+# 爱拉泽曼专属芯片作用号【1612】高于敌方部队数量的绝对值参数
+effect1612NumParam = 50000
+
+# 拉斐尔专属芯片作用号【4036】坦克兵种额外获取比例；万分比
+effect4036RatioParam = 2000
+
+# 拉斐尔专属芯片作用号【4037】空军兵种额外获取比例；万分比
+effect4037RatioParam = 2000
+
+# 拉斐尔专属芯片作用号【4038】步兵兵种额外获取比例；万分比
+effect4038RatioParam = 2000
+
+# 拉斐尔专属芯片作用号【4039】战车兵种额外获取比例；万分比
+effect4039RatioParam = 2000
+
+# 娜塔莉专属芯片作用号【1617】狙击兵攒豆触发效果；绝对值
+effect1617TimesLimit = 3
+
+# 【1620】作用号叠加层数上限；绝对值
+effect1620Maxinum = 20
+
+# 【1621】作用号叠加层数上限；绝对值
+effect1621Maxinum = 20
+
+# 【1622】作用号叠加层数上限；绝对值
+effect1622Maxinum = 20
+
+# 【1623】作用号叠加层数上限；绝对值
+effect1623Maxinum = 20
+
+# 【1624】作用号叠加层数上限；绝对值
+effect1624Maxinum = 20
+
+# 【1625】作用号叠加层数上限；绝对值
+effect1625Maxinum = 20
+
+# 【1633】作用号生效回合；绝对值
+effect1633TimesLimit = 20
+
+# 装备研究二期，专属技能对应作用号常量
+effect11003TimesLimit = 10
+
+# 
+effect11004TimesLimit = 100
+
+# 
+effect11005TimesLimit = 3
+
+# 
+effect11009TimesLimit = 10
+
+# 
+effect11010TimesLimit = 10
+
+# 
+effect11012TimesLimit = 3
+
+# 
+effect11013TimesLimit = 20
+
+# 【1681】作用号采矿车数量的生效阈值；万分比
+effect1681AllNumLimit = 500
+
+# 【1681】作用号泰能采矿车数量的生效阈值；万分比
+effect1681SelfNumLimit = 5000
+
+# 【1681】作用号泰能采矿车生效后的属性倍率参数；万分比
+effect1681RateValue = 20000
+
+# 【1681】作用号叠加数值上限；万分比
+effect1681MaxValue = 10000
+
+# 【1682】作用号泰能攻城车数量的生效阈值；万分比
+effect1682SelfNumLimit = 5000
+
+# 【1682】作用号泰能攻城车生效后的属性倍率参数；万分比
+effect1682RateValue = 20000
+
+# 【1683】作用号泰能攻城车数量的生效阈值；万分比
+effect1683SelfNumLimit = 5000
+
+# 【1683】作用号泰能攻城车生效后的属性倍率参数；万分比
+effect1683RateValue = 20000
+
+# 【1684】作用号泰能攻城车数量的生效阈值；万分比
+effect1684SelfNumLimit = 5000
+
+# 【1684】作用号泰能攻城车生效后的属性倍率参数；万分比
+effect1684RateValue = 20000
+
+# 【12001】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12001AllNumLimit = 500
+
+# 【12001】作用号采矿车占自身部队数量的生效阈值；万分比
+effect12001SelfNumLimit = 5000
+
+# 【12001】作用号叠加层数上限；绝对值
+effect12001Maxinum = 2
+
+# 【12002】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12002AllNumLimit = 500
+
+# 【12002】作用号采矿车占自身部队数量的生效阈值；万分比
+effect12002SelfNumLimit = 5000
+
+# 【12002】作用号叠加层数上限；绝对值
+effect12002Maxinum = 2
+
+# 【12003】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12003AllNumLimit = 500
+
+# 【12003】作用号采矿车占自身部队数量的生效阈值；万分比
+effect12003SelfNumLimit = 5000
+
+# 【12003】作用号叠加层数上限；绝对值
+effect12003Maxinum = 2
+
+# 【12004】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12004AllNumLimit = 500
+
+# 【12004】作用号采矿车占自身部队数量的生效阈值；万分比
+effect12004SelfNumLimit = 5000
+
+# 【12004】作用号叠加层数上限；绝对值
+effect12004Maxinum = 2
+
+# 【12005】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12005AllNumLimit = 500
+
+# 【12005】作用号采矿车占自身部队数量的生效阈值；万分比
+effect12005SelfNumLimit = 5000
+
+# 【12005】作用号生效后，每X回合进行额外攻击；绝对值
+effect12005AtkRound = 5
+
+# 【12005】作用号生效后，进行额外攻击的敌方目标数量；绝对值
+effect12005AtkNum = 5
+
+# 【12005】作用号生效后，对敌方施加的【点燃状态】的持续回合数；绝对值
+effect12005ContinueRound = 1
+
+# 【12005】作用号叠加层数上限；绝对值
+effect12005Maxinum = 2
+
+# 【12006】作用号生效后，降低敌方目标攻击加成的上限数值；万分比
+effect12006MaxValue = 60000
+
+# 【12007】作用号生效后，降低敌方目标防御加成的上限数值；万分比
+effect12007MaxValue = 60000
+
+# 【12008】作用号生效后，降低敌方目标生命加成的上限数值；万分比
+effect12008MaxValue = 60000
+
+# 【12011】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12011AllNumLimit = 500
+
+# 【12011】作用号攻城车占自身部队数量的生效阈值；万分比
+effect12011SelfNumLimit = 5000
+
+# 【12011】作用号叠加层数上限；绝对值
+effect12011Maxinum = 2
+
+# 【12012】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12012AllNumLimit = 500
+
+# 【12012】作用号攻城车占自身部队数量的生效阈值；万分比
+effect12012SelfNumLimit = 5000
+
+# 【12012】作用号叠加层数上限；绝对值
+effect12012Maxinum = 2
+
+# 【12013】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12013AllNumLimit = 500
+
+# 【12013】作用号攻城车占自身部队数量的生效阈值；万分比
+effect12013SelfNumLimit = 5000
+
+# 【12013】作用号叠加层数上限；绝对值
+effect12013Maxinum = 2
+
+# 【12014】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12014AllNumLimit = 500
+
+# 【12014】作用号攻城车占自身部队数量的生效阈值；万分比
+effect12014SelfNumLimit = 5000
+
+# 【12014】作用号叠加层数上限；绝对值
+effect12014Maxinum = 2
+
+# 【12015】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12015AllNumLimit = 500
+
+# 【12015】作用号攻城车占自身部队数量的生效阈值；万分比
+effect12015SelfNumLimit = 5000
+
+# 【12005】作用号生效后，每X回合进行额外攻击；绝对值
+effect12015AtkRound = 5
+
+# 【12005】作用号生效后，额外攻击发动的轮次；绝对值
+effect12015AtkTimes = 2
+
+# 【12005】作用号生效后，进行额外攻击的敌方目标数量；绝对值
+effect12015AtkNum = 6
+
+# 【12005】作用号生效后，限制自身攻击效果的持续回合数；绝对值
+effect12015ContinueRound = 3
+
+# 【12015】作用号叠加层数上限；绝对值
+effect12015Maxinum = 2
+
+# 【12031】作用号生效回合区间
+effect12031EffectiveRound = 1_25
+
+# 【12033】作用号生效层数上限
+effect12033Maxinum = 2
+
+# 【12034】作用号生效层数上限
+effect12034Maxinum = 2
+
+# 【12035】作用号生效层数上限
+effect12035Maxinum = 10
+
+# 【12036】作用号生效回合区间
+effect12036EffectiveRound = 1_25
+
+# 【12039】作用号生效层数上限
+effect12039Maxinum = 10
+
+# 【12040】作用号覆盖友军单位数量
+effect12040Nums = 3
+
+# 【12040】作用号生效层数上限
+effect12040Maxinum = 20
+
+# 【12041】作用号生效回合数
+effect12041ContinueRound = 2
+
+# 【12051】作用号轰炸机占自身出征数量的生效阈值；万分比
+effect12051SelfNumLimit = 5000
+
+# 【12051】作用号生效后，每X回合进行额外攻击；绝对值
+effect12051AtkRound = 5
+
+# 【12051】作用号生效后，【集结】战斗时基础攻击次数；绝对值
+effect12051AtkTimesForMass = 18
+
+# 【12051】作用号生效后，【个人】战斗时基础攻击次数；绝对值
+effect12051AtkTimesForPerson = 9
+
+# 【12053】作用号轰炸机占自身出征数量的生效阈值；万分比
+effect12053SelfNumLimit = 5000
+
+# 【12054】作用号轰炸机占自身出征数量的生效阈值；万分比
+effect12054SelfNumLimit = 5000
+
+# 【12061】作用号直升机占集结部队数量的生效阈值；万分比
+effect12061AllNumLimit = 500
+
+# 【12061】作用号直升机占自身部队数量的生效阈值；万分比
+effect12061SelfNumLimit = 5000
+
+# 【12061】作用号生效后可叠加，此处为叠加数值上限；万分比
+effect12061MaxValue = 2500
+
+# 【12061】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12061Maxinum = 2
+
+# 【12062】作用号直升机占集结部队数量的生效阈值；万分比
+effect12062AllNumLimit = 500
+
+# 【12062】作用号直升机占自身部队数量的生效阈值；万分比
+effect12062SelfNumLimit = 5000
+
+# 【12062】作用号生效后，攻击目标的随机权重；多段式
+effect12062RoundWeight = 4_1500,5_3000,6_4000,7_1500
+
+# 【12062】作用号生效后，单轮攻击目标数量；绝对值
+effect12062AtkNum = 3
+
+# 【12062】作用号生效后，可攻击轮次；绝对值
+effect12062AtkTimes = 1
+
+# 【12062】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12062Maxinum = 2
+
+# 【12063】作用号生效后，降低敌方目标攻击加成的上限数值；万分比
+effect12063MaxValue = 75000
+
+# 【12064】作用号生效后，降低敌方目标防御加成的上限数值；万分比
+effect12064MaxValue = 75000
+
+# 【12065】作用号生效后，降低敌方目标生命加成的上限数值；万分比
+effect12065MaxValue = 75000
+
+# 【12066】作用号直升机占集结部队数量的生效阈值；万分比
+effect12066AllNumLimit = 500
+
+# 【12066】作用号直升机占自身部队数量的生效阈值；万分比
+effect12066SelfNumLimit = 5000
+
+# 【12066】作用号生效后，使【12051】作用号生效时，可攻击轮次增加；绝对值
+effect12066AtkTimes = 3
+
+# 【12066】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12066Maxinum = 2
+
+# 【12081】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12081SelfNumLimit = 5000
+
+# 【12082】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12082SelfNumLimit = 5000
+
+# 【12083】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12083SelfNumLimit = 5000
+
+# 【12081】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12081AllNumLimit = 500
+
+# 【12082】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12082AllNumLimit = 500
+
+# 【12083】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12083AllNumLimit = 500
+
+# 【12081】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12081Maxinum = 2
+
+# 【12082】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12082Maxinum = 2
+
+# 【12083】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12083Maxinum = 2
+
+# 【12084】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12084SelfNumLimit = 5000
+
+# 【12084】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12084AllNumLimit = 500
+
+# 【12084】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12084Maxinum = 2
+
+# 【12085】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12085SelfNumLimit = 5000
+
+# 【12085】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12085AllNumLimit = 500
+
+# 【12085】作用号，数量最多的防御坦克每X回合进行一轮套盾
+effect12085AtkRound = 5
+
+# 【12085】作用号，数量最多的防御坦克每5回合对X个友军远程进行套盾
+effect12085EffectNum = 2
+
+# 【12085】作用号，计算时防御坦克当前数量至多XXX
+effect12085NumLimit = 1000000
+
+# 【12085】作用号施加后，身上套盾的单位至多持续X回合
+effect12085ContinueRound = 2
+
+# 【12085】作用号施加后，同一单位至多叠加X层护盾
+effect12085GetLimit = 2
+
+# 【12085】作用号生效后，集结战斗中本方至多有X个玩家生效；绝对值
+effect12085Maxinum = 2
+
+# 【12086】作用号生效后，【防御坦克属性加成/攻击方属性加成】的最小比率
+effect12086RateMin = 5000
+
+# 【12086】作用号生效后，【防御坦克属性加成/攻击方属性加成】的最大比率
+effect12086RateMax = 20000
+
+# 【12086】作用号生效后，将远程战损转至近战部队的比率
+effect12086TransferRate = 2500
+
+# 【12104】作用号生效时，计算敌方空军单位数的最高数量限制
+effect12104MaxNum = 5
+
+# 【12113】作用号生效回合区间
+effect12113ContinueRound = 10
+
+# 【12114】作用号战损比率阈值；万分比
+effect12114LossThresholdValue = 500
+
+# 【12116】作用号，生效时的间隔回合数；绝对值
+effect12116IntervalRound = 5
+
+# 【12116】作用号，生效后的持续回合数；绝对值
+effect12116ContinueRound = 3
+
+# 【12116】作用号，集结时的叠加层数上限；绝对值
+effect12116Maxinum = 10
+
+# 【12122】作用号采矿车占集结部队总数的比率阈值；万分比
+effect12122AllNumLimit = 1000
+
+# 【12122】作用号生效时，基础固定数值；万分比
+effect12122BaseVaule = 35
+
+# 【12122】作用号生效时，叠加层数上限；绝对值
+effect12122Maxinum = 7
+
+# 【12123】作用号攻城车占集结部队总数的比率阈值；万分比
+effect12123AllNumLimit = 1000
+
+# 【12123】作用号生效时，基础固定数值；万分比
+effect12123BaseVaule = 650
+
+# 【12123】作用号生效时，叠加层数上限；绝对值
+effect12123Maxinum = 7
+
+# 【12132】作用号生效后，持续X回合
+effect12132ContinueRound = 50
+
+# 【12134】作用号施加后，受到debuff的单位至多持续X回合
+effect12134ContinueRound = 2
+
+# 【12151】作用号防御坦克占集结部队总数的比率阈值；万分比
+effect12151AllNumLimit = 1000
+
+# 【12151】作用号生效时，基础固定数值；万分比
+effect12151BaseVaule = 650
+
+# 【12151】作用号生效时，叠加层数上限；绝对值
+effect12151Maxinum = 7
+
+# 【12152】作用号生效时，叠加层数上限；绝对值
+effect12152Maxinum = 50
+
+# 【12153】作用号生效后，持续X回合
+effect12153ContinueRound = 2
+
+# 【12154】作用号生效时，叠加层数上限；绝对值
+effect12154MaxNum = 5
+
+# 【12154】作用号生效后，持续X回合
+effect12154ContinueRound = 2
+
+# 【12161】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12161AllNumLimit = 500
+
+# 【12161】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12161SelfNumLimit = 5000
+
+# 【12161】作用号生效后，敌方部队debuff效果持续回合数；绝对值
+effect12161ContinueRound = 5
+
+# 【12161】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12161Maxinum = 2
+
+# 【12162】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12162AllNumLimit = 500
+
+# 【12162】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12162SelfNumLimit = 5000
+
+# 【12162】作用号生效时，持续X个回合进行鼓风；绝对值
+effect12162NextRound = 4
+
+# 【12162】作用号生效时，每次鼓风生效的敌方单位数；绝对值
+effect12162EffectiveUnit = 1
+
+# 【12162】作用号生效后，敌方部队debuff效果持续回合数；绝对值
+effect12162ContinueRound = 5
+
+# 【12162】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12162Maxinum = 2
+
+# 【12163】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12163AllNumLimit = 500
+
+# 【12163】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12163SelfNumLimit = 5000
+
+# 【12163】作用号生效后，单轮攻击目标数量；绝对值
+effect12163AtkNum = 5
+
+# 【12163】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12163Maxinum = 2
+
+# 【12164】作用号生效后，敌方debuff持续回合数；绝对值
+effect12164ContinueRound = 5
+
+# 【12165】作用号生效后，敌方debuff持续回合数；绝对值
+effect12165ContinueRound = 5
+
+# 【12166】作用号生效后，敌方debuff持续回合数；绝对值
+effect12166ContinueRound = 5
+
+# 【12167】作用号生效后，敌方debuff持续回合数；绝对值
+effect12167ContinueRound = 5
+
+# 【12168】作用号生效后，敌方debuff持续回合数；绝对值
+effect12168ContinueRound = 5
+
+# 【12169】作用号生效后，敌方debuff持续回合数；绝对值
+effect12169ContinueRound = 5
+
+# 【12170】作用号生效后，敌方debuff持续回合数；绝对值
+effect12170ContinueRound = 5
+
+# 【12171】作用号生效后，敌方debuff持续回合数；绝对值
+effect12171ContinueRound = 5
+
+# 【12172】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12172AllNumLimit = 500
+
+# 【12172】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12172SelfNumLimit = 5000
+
+# 【12172】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12172Maxinum = 2
+
+# 【12173】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12173AllNumLimit = 500
+
+# 【12173】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12173SelfNumLimit = 5000
+
+# 【12173】作用号生效时，在计算敌方处于【燃烧状态】单位的数量上限限制；绝对值
+effect12173MaxNum = 10
+
+# 【12173】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12173Maxinum = 2
+
+# 【12191】作用号直升机占集结部队数量的比率阈值；万分比
+effect12191AllNumLimit = 1000
+
+# 【12191】作用号生效时，基础固定数值；万分比
+effect12191BaseVaule = 650
+
+# 【12191】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12191Maxinum = 7
+
+# 【12192】作用号直升机占集结部队数量的比率阈值；万分比
+effect12192AllNumLimit = 1000
+
+# 【12192】作用号生效时，基础固定数值；万分比
+effect12192BaseVaule = 225
+
+# 【12192】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12192Maxinum = 7
+
+# 【12193】作用号生效时，可叠加层数上限；绝对值
+effect12193Maxinum = 20
+
+# 【12194】作用号生效时，可叠加层数上限；绝对值
+effect12194Maxinum = 20
+
+# 【12201】作用号，突击步兵命中非防御坦克单位时，蓄能值增加；绝对值
+effect12201BasePoint = 10
+
+# 【12201】作用号，突击步兵命中非防御坦克单位且处于【燃烧状态】时，蓄能值额外增加；绝对值
+effect12201ExtraPoint = 3
+
+# 【12201】作用号，蓄能值数值上限；绝对值
+effect12201MaxPoint = 200
+
+# 【12202】作用号，每第X回合开始时进行判定；绝对值
+effect12202AtkRound = 5
+
+# 【12002】作用号触发所需蓄能值下限；绝对值
+effect12202AtkThresholdValue = 100
+
+# 【12202】作用号触发时，攻击轮次；绝对值
+effect12202AtkTimes = 3
+
+# 【12202】作用号触发时，各兵种伤害率修正系数；万分比
+effect12202DamageAdjust = 30000_10000_8000_10000_10000_10000_10000_10000
+
+# 【12206】作用号叠加层数上限；绝对值
+effect12206Maxinum = 40
+
+# 【12208】作用号，计算【损坏状态】的敌方单位时，数量上限限制；绝对值
+effect12208MaxNum = 10
+
+# 【12221】作用号判定敌方出征远程部队数量的阈值；绝对值
+effect12221NumLimit = 200000
+
+# 【12221】作用号生效后的可叠加次数上限；绝对值
+effect12221Maxinum = 30
+
+# 【12222】作用号判定敌方出征近战部队数量的阈值；绝对值
+effect12222NumLimit = 200000
+
+# 【12222】作用号生效后的可叠加次数上限；绝对值
+effect12222Maxinum = 30
+
+# 【12223】作用号生效后的可叠加次数上限；绝对值
+effect12223Maxinum = 100
+
+# 【12224】作用号生效后的可叠加次数上限；绝对值
+effect12224Maxinum = 100
+
+# 【12231】作用号改变原作用号【1657】生效的目标数量；绝对值
+effect12231ArmyNum = 3
+
+# 【12251】作用号改变原作用号【1669】生效的次数上限；绝对值
+effect12251AtkTimes = 4
+
+# 【12253】作用号生效时，针对兵种的修正系数；万分比
+effect12253SoldierAdjust = 6_10000,5_10000
+
+# 【12253】作用号改变原作用号【1672】生效的次数上限；绝对值
+effect12253HoldTimes = 6_4,5_4
+
+# 【12254】作用号，在原【1669】作用号发动时，叠加减伤效果的层数上限；绝对值
+effect12254Maxinum = 50
+
+# 【12261】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12261AllNumLimit = 500
+
+# 【12261】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12261SelfNumLimit = 5000
+
+# 【12261】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12261Maxinum = 2
+
+# 【12262】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12262AllNumLimit = 500
+
+# 【12262】作用号攻城车占自身出征数量的生效阈值；万分比
+effect12262SelfNumLimit = 5000
+
+# 【12262】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12262Maxinum = 2
+
+# 【12264】作用号改变原作用号【12023】生效的次数上限；绝对值
+effect12264HoldTimes = 2
+
+# 【12271】作用号改变原作用号【12051】于集结环境下的攻击轮次；绝对值
+effect12271AtkTimesForMass = 20
+
+# 【12271】作用号改变原作用号【12051】于单人环境下的攻击轮次；绝对值
+effect12271AtkTimesForPerson = 12
+
+# 【12272】作用号生效时，其数值叠加上限；万分比
+effect12272MaxValue = 50000
+
+# 【12281】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12281AllNumLimit = 500
+
+# 【12281】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12281SelfNumLimit = 5000
+
+# 【12281】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12281Maxinum = 2
+
+# 【12282】作用号防御坦克占集结部队数量的生效阈值；万分比
+effect12282AllNumLimit = 500
+
+# 【12282】作用号防御坦克占自身出征数量的生效阈值；万分比
+effect12282SelfNumLimit = 5000
+
+# 【12282】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12282Maxinum = 2
+
+# 【12292】作用号改变原作用号【12131】生效的目标数量；绝对值
+effect12292AtkNum = 2
+
+# 【12293】作用号生效后的可叠加次数上限；绝对值
+effect12293Maxinum = 100
+
+# 【12301】作用号生效时，于集结环境下的修正比率；万分比
+effect12301AdjustForMass = 20000
+
+# 【12302】作用号采矿车占集结部队数量的生效阈值；万分比
+effect12302AllNumLimit = 500
+
+# 【12302】作用号采矿车占自身出征数量的生效阈值；万分比
+effect12302SelfNumLimit = 5000
+
+# 【12302】作用号，受到增益的己方近战单位的数量上限；绝对值
+effect12302AffectNum = 5
+
+# 【12302】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12302MaxTimes = 100
+
+# 【12302】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12302Maxinum = 2
+
+# 【12311】作用号生效时，对敌方指定兵种的调整系数；万分比
+effect12311DamageAdjust = 20000_20000_20000_10000_10000_10000_10000_20000
+
+# 【12312】作用号生效时，改变【12202】的攻击轮次上限；绝对值
+effect12312AtkNum = 4
+
+# SSS英雄军魂功能，关联动态头像解锁品阶；绝对值
+heroSoulTroopImageUnlockStage = 2
+
+# SSS英雄军魂功能，关联行军头像动效解锁品阶；绝对值
+heroSoulMarchImageUnlockStage = 4
+
+# SSS英雄军魂功能，关联专属皮肤解锁品阶；绝对值
+heroSoulSkinUnlockStage = 6
+
+# 【12331】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12331AllNumLimit = 500
+
+# 【12331】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12331SelfNumLimit = 5000
+
+# 【12331】作用号，每命中敌方1次，增加X点援护值；绝对值
+effect12331AddEscortPoint = 1
+
+# 援护值基础上限；绝对值
+effect12331MaxEscortPoint = 10
+
+# 【12331】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12331Maxinum = 2
+
+# 【12333】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12333AllNumLimit = 500
+
+# 【12333】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12333SelfNumLimit = 5000
+
+# 【12333】作用号生效时，可覆盖的己方友军数量上限；绝对值
+effect12333AffectNum = 2
+
+# 【12333】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12333Maxinum = 2
+
+# 【12335】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12335AllNumLimit = 500
+
+# 【12335】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12335SelfNumLimit = 5000
+
+# 【12335】作用号，每受到1次攻击后，增加X点火力值；绝对值
+effect12335AddFirePoint = 1
+
+# 火力值基础上限；绝对值
+effect12335MaxFirePoint = 10
+
+# 【12335】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12335Maxinum = 2
+
+# 【12337】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12337AllNumLimit = 500
+
+# 【12337】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12337SelfNumLimit = 5000
+
+# 【12337】作用号生效时，可覆盖的己方友军数量上限；绝对值
+effect12337AffectNum = 2
+
+# 【12337】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12337Maxinum = 2
+
+# 【12339】作用号攻城车占集结部队数量的生效阈值；万分比
+effect12339AllNumLimit = 500
+
+# 【12339】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12339SelfNumLimit = 5000
+
+# 【12339】作用号生效时，回溯的回合数；绝对值
+effect12339CountRound = 2
+
+# 【12339】作用号，集结战斗中本方至多有X个玩家生效；绝对值
+effect12339Maxinum = 2
+
+# 【12355】作用号生效时，增加目标友军数量；绝对值
+effect12355AddNum = 1
+
+# 【12356】作用号生效时，增加目标友军数量；绝对值
+effect12356AddNum = 1
+
+# 【12361】作用号生效基础概率；万分比
+effect12361BasePro = 6000
+
+# 【12361】作用号生效后，越过防坦攻击其他兵种的概率权重；绝对值
+effect12361TargetWeight = 2_10,3_10,4_10,5_60,6_40,7_10,8_10
+
+# 【12361】作用号生效后，攻击命中其他兵种时的伤害修正系数；绝对值
+effect12361DamageAdjust = 1_10000,2_10000,3_10000,4_10000,5_18000,6_10000,7_10000,8_10000
+
+# 【12362】作用号生效基础概率；万分比
+effect12362BasePro = 10000
+
+# 【12362】作用号生效后，对应其他兵种时的实际效果修正系数；绝对值
+effect12362Adjust = 1_10000,2_10000,3_10000,4_10000,5_15000,6_10000,7_10000,8_10000
+
+# 【12362】作用号生效后，持续回合数；绝对值
+effect12362ContinueRound = 2
+
+# 【12363】作用号生效后，攻击命中其他兵种时的概率权重；绝对值
+effect12363TargetWeight = 1_10,2_30,3_30,4_30,5_30,6_10,7_10,8_10
+
+# 【12363】作用号生效后，范围攻击命中的敌方单位数；绝对值
+effect12363TargetNum = 2
+
+# 【12365】作用号生效时，取友军攻城车出征部队数量的上限数值；绝对值
+effect12365MaxNum = 1000000
+
+# 【12382】作用号生效后，增加【12363】作用号的可选择敌方单位数量；绝对值
+effect12383AddNum = 1
+
+# 【12393】作用号判定生效的血量范围；万分比
+effect12393Maxinum = 7000
+
+# 【12394】作用号判定生效的血量范围；万分比
+effect12394Maxinum = 3000
+
+# 【军魂】功能是否开启重置功能开关；绝对值
+heroSoulResetOpen = 1
+
+# 【军魂】重置后，时间CD；绝对值/单位：秒
+heroSoulResetTimeLimit = 604800
+
+# 【12451】作用号，战损每达到一定比率的阈值；万分比
+effect12451ConditionalRatio = 100
+
+# 【12451】作用号，生效时实际针对各兵种的修正系数；万分比
+effect12451DamageAdjust = 1_10000,2_10000,3_5000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12451】作用号，生效时的可叠加层数上限；绝对值
+effect12451Maxinum = 100
+
+# 【12401】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12401Maxinum = 10
+
+# 【12402】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12402Maxinum = 10
+
+# 【12403】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12403Maxinum = 10
+
+# 【12404】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12404Maxinum = 10
+
+# 【12412】作用号，生效时单轮可攻击目标单位数量；绝对值
+effect12412AtkNums = 2
+
+# 【12412】作用号，生效时可攻击轮次；绝对值
+effect12412AtkTimes = 1
+
+# 【12413】作用号，生效时持续回合数；绝对值
+effect12413ContinueRound = 3
+
+# 【12414】作用号，生效时增加的轮番轰炸轮次数量；绝对值
+effect12414AtkTimesForPerson = 11
+
+# 【12414】作用号，生效时实际针对各兵种的修正系数；万分比
+effect12414Adjust = 1_10000,2_14000,3_18000,4_10000,5_15000,6_10000,7_10000,8_20000
+
+# 【12414】作用号，生效时的可叠加层数上限；绝对值
+effect12414Maxinum = 50
+
+# 【12433】作用号，生效时增加的目标单位数量；绝对值
+effect12433AddAtkNum = 1
+
+# 【12441】作用号直升机占自身出征部队数量的生效阈值；万分比
+effect12441AllNumLimit = 1000
+
+# 【12441】作用号，增益的基础数值；万分比
+effect12441BaseVaule = 800
+
+# 【12441】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12441Maxinum = 7
+
+# 【12442】作用号，每层增益生效需要的空军数量；绝对值
+effect12442NumLimit = 50000
+
+# 【12442】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12442Maxinum = 40
+
+# 【12443】作用号，生效持续回合数；绝对值
+effect12443ContinueRound = 3
+
+# 【12491】作用号，回合衰减系数 ；万分比
+effect12491RoundAdjust = 1_1_10000,2_2_9000,3_3_8000,4_4_7000,5_5_6000,6_6_5000,7_7_4000,8_8_3000,9_9_2000,10_10_1000,11_99_0
+
+# 【12491】作用号，生效时实际针对各兵种的修正系数；万分比
+effect12491SoldierAdjust = 1_10000,2_10000,3_8000,4_8000,5_10000,6_10000,7_10000,8_10000
+
+# 【12461】作用号直升机占集结出征部队数量的生效阈值；万分比
+effect12461AllNumLimit = 500
+
+# 【12461】作用号直升机占自身出征部队数量的生效阈值；万分比
+effect12461SelfNumLimit = 5000
+
+# 【12461】作用号，生效间隔回合数；绝对值
+effect12461AtkRound = 5
+
+# 【12461】作用号，基础可选缠斗数；绝对值
+effect12461InitChooseNum = 1
+
+# 【12461】作用号，直升机分摊比率的固定数值；万分比
+effect12461ShareBaseVaule = 2000
+
+# 【12461】作用号，计算敌方空军单位数的上限；绝对值
+effect12461ShareCountMaxinum = 10
+
+# 【12461】作用号，直升机实际分摊比率的基础数值；万分比
+effect12461AdjustCof = 4000
+
+# 【12461】作用号，直升机实际分摊比率的成长数值；万分比
+effect12461GrowCof = 300
+
+# 【12461】作用号，计算敌方空军单位数的上限；绝对值
+effect12461AdjustCountMaxinum = 10
+
+# 【12461】作用号，生效持续回合数；绝对值
+effect12461ContinueRound = 3
+
+# 【12461】作用号，集结战斗中可生效此作用号的玩家数量；绝对值
+effect12461Maxinum = 2
+
+# 【12464】作用号，空军和步兵三维增加固定数值；万分比
+effect12464BaseVaule = 20000
+
+# 【12464】作用号，生效时的可叠加层数上限；绝对值
+effect12464Maxinum = 2
+
+# 【12465】作用号，每次命中增加磁能；绝对值
+effect12465AddFirePoint = 10
+
+# 【12465】作用号，生效间隔回合数；绝对值
+effect12465AtkRound = 5
+
+# 【12465】作用号，磁能效果触发条件；绝对值
+effect12465AtkThresholdValue = 100
+
+# 【12465】作用号，空域护航基础可选上限；绝对值
+effect12465InitChooseNum = 2
+
+# 【12465】作用号，空域护航伤害减少固定值；万分比
+effect12465BaseVaule = 0
+
+# 【12465】作用号，伤害减少成长值；万分比
+effect12465GrowCof = 300
+
+# 【12465】作用号，计算敌方空军单位数的上限；绝对值
+effect12465AirForceCountMaxinum = 10
+
+# 【12465】作用号，空域护航伤害减少修正系数；万分比
+effect12465Adjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_20000,7_10000,8_10000
+
+# 【12465】作用号，生效持续回合数；绝对值
+effect12465ContinueRound = 3
+
+# 【12465】作用号，己方远程单位计数上限；绝对值
+effect12465CountMaxinum = 8
+
+# 【12465】作用号，集结战斗中可生效此作用号的玩家数量；绝对值
+effect12465Maxinum = 2
+
+# 【12468】作用号生效后，攻击目标的随机权重；万分比
+effect12468RoundWeight = 1_1000,8_1000,2_4000,3_4000
+
+# 【12468】作用号，额外选取近战单位数量；绝对值
+effect12468AtkNum = 3
+
+# 【12466】作用号，生效时的叠加上限；绝对值
+effect12466Maxinum = 2
+
+# 【12469】作用号，减伤修正系数；万分比
+effect12469Adjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12469】作用号，生效时的叠加上限；绝对值
+effect12469Maxinum = 50
+
+# 【12481】作用号，额外索敌概率固定值；万分比
+effect12481BaseVaule = -4000
+
+# 【12482】作用号，生效时的基础数值；万分比
+effect12482BaseVaule = 0
+
+# 【12482】作用号，计算敌方空军单位数的上限；绝对值
+effect12482CountMaxinum = 10
+
+# 【12501】作用号步兵占自身出征部队数量的生效阈值；万分比
+effect12501AllNumLimit = 1000
+
+# 【12501】作用号，步兵减伤固定数值；万分比
+effect12501BaseVaule = 650
+
+# 【12501】作用号，生效时的可叠加层数上限；绝对值
+effect12501Maxinum = 7
+
+# 【12502】作用号敌方数量最多兵种的生效阈值；绝对值
+effect12502AllNumLimit = 50000
+
+# 【12502】作用号，生效时的可叠加层数上限；绝对值
+effect12502Maxinum = 100
+
+# 【12503】作用号自身突击步兵出阵数量生效阈值；绝对值
+effect12503NumLimit = 50000
+
+# 【12503】作用号，生效时的可叠加层数上限；绝对值
+effect12503Maxinum = 30
+
+# 【12504】作用号自身狙击兵出阵数量生效阈值；绝对值
+effect12504NumLimit = 50000
+
+# 【12504】作用号，生效时的可叠加层数上限；绝对值
+effect12504Maxinum = 30
+
+# 【12511】作用号，每次暴击增加涌动值；绝对值
+effect12511AddFirePoint = 10
+
+# 【12511】作用号，命中主战坦克额外涌动值；绝对值
+effect12511AddFirePointExtra = 0
+
+# 【12511】作用号，生效间隔回合数；绝对值
+effect12511AtkRound = 5
+
+# 【12511】作用号，磁能效果触发条件；绝对值
+effect12511AtkThresholdValue = 100
+
+# 【12511】作用号，能量激荡状态持续回合数；绝对值
+effect12511ContinueRound = 3
+
+# 【12511】作用号，生效时的基础数值；万分比
+effect12511BaseVaule = 20000
+
+# 【12511】作用号，计算敌方空军单位数的上限；绝对值
+effect12511CountMaxinum = 10
+
+# 【12512】作用号叠加一层需要的暴击次数；绝对值
+effect12512CritTimes = 1
+
+# 【12512】作用号，生效时的叠加上限；绝对值
+effect12512Maxinum = 30
+
+# 【12512】作用号，减伤修正系数；万分比
+effect12512SoldierAdjust = 1_17700,2_17700,3_17700,4_17700,5_17700,6_20000,7_17700,8_17700
+
+# 【12513】作用号，额外追击空军单位数量；绝对值
+effect12513AtkNum = 1
+
+# 【12513】作用号，额外追击空军单位次数；绝对值
+effect12513AtkTimes = 1
+
+# 【12513】作用号，生效时的基础数值；万分比
+effect12513BaseVaule = 5000
+
+# 【12513】作用号，计算敌方空军单位数的上限；绝对值
+effect12513CountMaxinum = 10
+
+# 【12514】作用号，攻击目标的随机权重；万分比
+effect12514RoundWeight = 1_10000,8_10000,2_10000,3_10000
+
+# 【12515】作用号，重力缠绕次数上限；绝对值
+effect12515Maxinum = 999
+
+# 【12515】作用号，伤害修正系数；万分比
+effect12515SoldierAdjust = 1_15000,2_10000,3_10000,4_10000,5_10000,6_20000,7_10000,8_15000
+
+# 【12517】作用号，生效时的叠加上限；绝对值
+effect12517Maxinum = 50
+
+# 【12517】作用号，伤害效率降低修正系数；万分比
+effect12517SoldierAdjust = 1_5000,2_5000,3_5000,4_5000,5_6000,6_8000,7_5000,8_5000
+
+# 【12518】作用号，生效时的叠加上限；绝对值
+effect12518Maxinum = 20
+
+# 【12518】作用号，减伤修正系数；万分比
+effect12518SoldierAdjust = 1_14000,2_10000,3_2000,4_0,5_0,6_16500,7_2000,8_0
+
+# 【12532】作用号，生效时的基础数值；万分比
+effect12532BaseVaule = 2000
+
+# 【12532】作用号，计算敌方空军单位数的上限；绝对值
+effect12532CountMaxinum = 4
+
+# 【12541】作用号，生效间隔回合数；绝对值
+effect12541AtkRound = 5
+
+# 【12541】作用号，额外攻击次数；绝对值
+effect12541AtkNum = 1
+
+# 【12541】作用号，减伤修正系数；万分比
+effect12541LoseAdjust = 1000
+
+# 【12551】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12551AllNumLimit = 500
+
+# 【12551】作用号，远程三维基础数值；万分比
+effect12551BaseVaule = 650
+
+# 【12551】作用号，生效时的可叠加层数上限；绝对值
+effect12551Maxinum = 7
+
+# 【12552】作用号采矿车占自身出征部队数量的生效阈值；万分比
+effect12552AllNumLimit = 500
+
+# 【12552】作用号，近战三维基础数值；万分比
+effect12552BaseVaule = 650
+
+# 【12552】作用号，生效时的可叠加层数上限；绝对值
+effect12552Maxinum = 7
+
+# 【12553】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12553AllNumLimit = 500
+
+# 【12553】作用号，三维降低基础数值；万分比
+effect12553BaseVaule = 100
+
+# 【12553】作用号，生效时的单位上限；绝对值
+effect12553Maxinum = 2
+
+# 【12553】作用号，生效时的数值上限；绝对值
+effect12553MaxValue = 28400
+
+# 【12553】作用号，生效时的友方艾拉计数上限；绝对值
+effect12553CountMaxinum = 7
+
+# 【12554】作用号采矿车占自身出征部队数量的生效阈值；万分比
+effect12554AllNumLimit = 500
+
+# 【12554】作用号，三维降低基础数值；万分比
+effect12554BaseVaule = 50
+
+# 【12554】作用号，生效时的单位上限；绝对值
+effect12554Maxinum = 2
+
+# 【12554】作用号，生效时的数值上限；绝对值
+effect12554MaxValue = 28920
+
+# 【12554】作用号，生效时的友方艾拉计数上限；绝对值
+effect12554CountMaxinum = 7
+
+# 【12555】作用号，每层增益生效需要的攻城车数量；绝对值
+effect12555NumLimit = 50000
+
+# 【12555】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12555Maxinum = 20
+
+# 【12556】作用号，每层增益生效需要的采矿车数量；绝对值
+effect12556NumLimit = 50000
+
+# 【12556】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12556Maxinum = 20
+
+# 【1325】机甲核心作用号，队伍核心品阶总和系数；万分比
+effect1325RankRatio = 2500
+
+# 【1325】机甲核心作用号，品阶总和上限；绝对值
+effect1325Maxinum = 80
+
+# 【1325】机甲核心作用号，兵种修正系数；万分比
+effect1325SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_20000,7_10000,8_10000
+
+# 【12561】作用号，生效间隔回合数；绝对值
+effect12561AtkRound = 5
+
+# 【12561】作用号，生效时的基础数值；绝对值
+effect12561BaseVaule = 10000
+
+# 【12561】作用号，持续回合数；绝对值
+effect12561ContinueRound = 2
+
+# 【12561】作用号，兵种修正系数；绝对值
+effect12561SoldierAdjust = 1_20000,2_20000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12571】作用号采矿车占集结出征部队数量的生效阈值；万分比
+effect12571AllNumLimit = 500
+
+# 【12571】作用号采矿车占自身出征部队数量的生效阈值；万分比
+effect12571SelfNumLimit = 5000
+
+# 【12571】作用号，生效时的可生效单位上限；绝对值
+effect12571Maxinum = 2
+
+# 【12571】作用号，生效时的基础数值；万分比
+effect12571BaseVaule = 7200
+
+# 【12571】作用号，每次生效增加的震慑值；绝对值
+effect12571AddFirePoint = 1
+
+# 【12571】作用号，损坏效果触发条件；绝对值
+effect12571AtkThresholdValue = 10
+
+# 【12571】作用号，损坏状态持续回合数；绝对值
+effect12571ContinueRound = 5
+
+# 【12573】作用号，生效时的基础数值；万分比
+effect12573BaseVaule = 900
+
+# 【12573】作用号，伤害修正系数；万分比
+effect12573SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12573】作用号，损坏追惩持续回合数；绝对值
+effect12573ContinueRound = 3
+
+# 【12574】作用号，生效间隔回合数；绝对值
+effect12574AtkRound = 5
+
+# 【12574】作用号，基础可选施加聚焦单位数；绝对值
+effect12574InitChooseNum = 2
+
+# 【12574】作用号，聚焦效果持续回合数；绝对值
+effect12574ContinueRound = 3
+
+# 【12574】作用号，选择目标的随机权重；万分比
+effect12574RoundWeight = 2_10000,3_10000
+
+# 【12574】作用号，三维增加基础数值；万分比
+effect12574BaseVaule = 21600
+
+# 【12575】作用号，超能攻击增加基础数值；万分比
+effect12575BaseVaule = 9600
+
+# 【12576】作用号，抵挡震慑值增加数量；绝对值
+effect12576ReduceFirePoint = 5
+
+# 【12576】作用号，减伤修正系数；万分比
+effect12576SoldierAdjust = 2_10000,3_35000
+
+# 【12577】作用号，生效时的基础数值；万分比
+effect12577BaseVaule = 11200
+
+# 【12577】作用号，伤害修正系数；万分比
+effect12577Adjust = 9000
+
+# 【12578】作用号，生效时的基础数值；万分比
+effect12578BaseVaule = 11200
+
+# 【12578】作用号，伤害修正系数；万分比
+effect12578Adjust = 400
+
+# 【12601】作用号主战坦克占自身出征部队数量的生效阈值；万分比
+effect12601AllNumLimit = 1000
+
+# 【12601】作用号，三维基础数值；万分比
+effect12601BaseVaule = 650
+
+# 【12601】作用号，生效时的可叠加层数上限；绝对值
+effect12601Maxinum = 7
+
+# 【12601】作用号，自身兵种修正系数；万分比
+effect12601SoldierAdjust = 1_10000,2_10000,3_10000,4_0,5_0,6_0,7_0,8_10000
+
+# 【12602】作用号己方全队坦克损失阈值；万分比
+effect12602AllNumLimit = 1000
+
+# 【12602】作用号，生命增加基础数值；万分比
+effect12602BaseVaule = 420
+
+# 【12602】作用号，生效时的可叠加层数上限；绝对值
+effect12602Maxinum = 10
+
+# 【12602】作用号，生效时友方索拉娜计数上限；万分比
+effect12602CountMaxinum = 7
+
+# 【12602】作用号，自身兵种修正系数；万分比
+effect12602SoldierAdjust = 1_10000,2_10000,3_20000,4_3000,5_10000,6_0,7_10000,8_10000
+
+# 【12603】作用号，每层增益生效需要的主战坦克数量；绝对值
+effect12603NumLimit = 50000
+
+# 【12603】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12603Maxinum = 20
+
+# 【12604】作用号，每层增益生效需要的防御坦克数量；绝对值
+effect12604NumLimit = 50000
+
+# 【12604】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12604Maxinum = 20
+
+# 【12611】作用号，生效时的基础数值；万分比
+effect12611BaseVaule = 9000
+
+# 【12611】作用号，目标单位数量；绝对值
+effect12611AtkNums = 1
+
+# 【12611】作用号，目标单位的攻击次数；绝对值
+effect12611AtkTimes = 1
+
+# 【12611】作用号，【雷感状态】持续回合数；绝对值
+effect12611ContinueRound = 3
+
+# 【12611】作用号，每个单位【雷感状态】叠加次数；绝对值
+effect12611Maxinum = 99
+
+# 【12611】作用号，选择目标的随机权重；万分比
+effect12611RoundWeight = 1_30000,2_50000,3_10000,4_10000,5_10000,6_10000,7_10000,8_30000
+
+# 【12612】作用号，生效时的基础数值；万分比
+effect12612BaseVaule = 650
+
+# 【12612】作用号，伤害修正系数；万分比
+effect12612SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12613】作用号，每个【雷感状态】每回合触发次数；绝对值
+effect12613Maxinum = 5
+
+# 【12614】作用号，生效时的基础数值；万分比
+effect12614BaseVaule = 1500
+
+# 【12615】作用号，磁流强化生效间隔回合；绝对值
+effect12615AtkRound = 5
+
+# 【12615】作用号，生效时的基础数值；万分比
+effect12615BaseVaule = 900
+
+# 【12615】作用号，磁流强化生效次数上限；绝对值
+effect12615Maxinum = 10
+
+# 【12616】作用号，感应防域生效间隔回合；绝对值
+effect12616AtkRound = 5
+
+# 【12616】作用号，感应防域持续回合数；绝对值
+effect12616ContinueRound = 2
+
+# 【12616】作用号，生效时的基础数值；万分比
+effect12616BaseVaule = 20
+
+# 【12616】作用号，减伤叠加每回合次数上限；绝对值
+effect12616MaxTimes = 10
+
+# 【12616】作用号，减伤叠加最大次数上限；绝对值
+effect12616Maxinum = 100
+
+# 【12616】作用号，减伤修正系数；万分比
+effect12616SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12617】作用号，叠加次数上限；绝对值
+effect12617Maxinum = 5
+
+# 【12617】作用号，减伤修正系数；万分比
+effect12617SoldierAdjust = 1_12000,2_15000,3_12000,4_12000,5_10000,6_15000,7_12000,8_18000
+
+# 【12641】作用号，三维降低持续回合数；绝对值
+effect12641ContinueRound = 10
+
+# 【12641】作用号，减伤修正系数；万分比
+effect12641SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12651】作用号，生效间隔回合数；绝对值
+effect12651AtkRound = 5
+
+# 【12651】作用号，持续回合数；绝对值
+effect12651ContinueRound = 1
+
+# 【12651】作用号，兵种修正系数；绝对值
+effect12651SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12661】作用号空军占自身出征部队数量的生效阈值；万分比
+effect12661AllNumLimit = 1000
+
+# 【12661】作用号，远程三维基础数值；万分比
+effect12661BaseVaule = 650
+
+# 【12661】作用号，生效时的可叠加层数上限；绝对值
+effect12661Maxinum = 7
+
+# 【12661】作用号，自身兵种修正系数；万分比
+effect12661SoldierAdjust = 1_10000,2_10000,3_10000,4_0,5_0,6_0,7_0,8_10000
+
+# 【12662】作用号，自身攻击增加基础数值；万分比
+effect12662BaseVaule = 70
+
+# 【12662】作用号，生效时的可叠加层数上限；绝对值
+effect12662Maxinum = 10
+
+# 【12662】作用号，生效时的友方乔希计数上限；绝对值
+effect12662CountMaxinum = 7
+
+# 【12662】作用号，自身兵种攻击增加修正系数；万分比
+effect12662SoldierAdjust = 1_0,2_15000,3_15000,4_0,5_0,6_0,7_0,8_0
+
+# 【12663】作用号，每层增益生效需要的直升机数量；绝对值
+effect12663NumLimit = 50000
+
+# 【12663】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12663Maxinum = 20
+
+# 【12664】作用号，每层增益生效需要的轰炸机数量；绝对值
+effect12664NumLimit = 50000
+
+# 【12664】作用号，受到增益的单位的叠加层数上限；绝对值
+effect12664Maxinum = 20
+
+# 【12671】作用号攻城车占集结出征部队数量的生效阈值；万分比
+effect12671AllNumLimit = 500
+
+# 【12671】作用号攻城车占自身出征部队数量的生效阈值；万分比
+effect12671SelfNumLimit = 5000
+
+# 【12671】作用号，生效时的可生效单位上限；绝对值
+effect12671Maxinum = 2
+
+# 【12671】作用号，自身火力值上限增加；绝对值
+effect12671PlusFirePoint = 20
+
+# 【12672】作用号，自身火力值上限增加；绝对值
+effect12672PlusEscortPoint = 20
+
+# 【12671】作用号，火力联合奇数回合增加火力值；绝对值
+effect12671AddFirePoint = 2
+
+# 【12672】作用号，火力联合偶数回合增加援护值；绝对值
+effect12672AddEscortPoint = 2
+
+# 【12671】作用号，火力值触发条件；绝对值
+effect12671AtkThresholdValue = 15
+
+# 【12672】作用号，援护值触发条件；绝对值
+effect12672AtkThresholdValue = 15
+
+# 【12671】作用号，无视生命加成基础系数；万分比
+effect12671BaseVaule = 2000
+
+# 【12672】作用号，无视攻击加成基础系数；万分比
+effect12672BaseVaule = 2000
+
+# 【12671】作用号，敌方兵种修正系数；万分比
+effect12671SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12672】作用号，敌方兵种修正系数；万分比
+effect12672SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12673】作用号，生效时的基础数值；万分比
+effect12673BaseVaule = 1000
+
+# 【12673】作用号，生效时的对1543额外数值；万分比
+effect12673BaseVaule1543 = 8000
+
+# 【12673】作用号，生效时的对1544额外数值；万分比
+effect12673BaseVaule1544 = 8000
+
+# 【12674】作用号，协同攻击生效间隔回合；绝对值
+effect12674AtkRound = 5
+
+# 【12674】作用号，协同攻击的攻击次数；绝对值
+effect12674AtkTimes = 1
+
+# 【12674】作用号，生效时的基础数值；万分比
+effect12674BaseVaule1 = 50000
+
+# 【12674】作用号，生效时的基础数值；万分比
+effect12674BaseVaule2 = 10000
+
+# 【12674】作用号，协同攻击负面效果持续回合数；绝对值
+effect12674ContinueRound = 2
+
+# 【12674】作用号，协同攻击负面效果叠加层数；绝对值
+effect12674Maxinum = 2
+
+# 【12674】作用号，敌方兵种修正系数；万分比
+effect12674SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 【12674】作用号，火力值和援护值触发条件；绝对值
+effect12674AtkThresholdValue = 30
+
+# 【12675】作用号，生效时的基础数值；万分比
+effect12675BaseVaule = 30000
+
+# 【12675】作用号，锐利同步效果持续回合数；绝对值
+effect12675ContinueRound = 1
+
+# 【12675】作用号，锐利同步效果叠加层数；绝对值
+effect12675Maxinum = 2
+
+# 【12675】作用号，己方兵种修正系数；万分比
+effect12675SoldierAdjust = 4_10000,5_10000,6_10000,7_10000
+
+# 【12676】作用号，生效时的基础数值；万分比
+effect12676BaseVaule = 30000
+
+# 【12676】作用号，锐利同步效果持续回合数；绝对值
+effect12676ContinueRound = 1
+
+# 【12676】作用号，锐利同步效果叠加层数；绝对值
+effect12676Maxinum = 2
+
+# 【12676】作用号，己方兵种修正系数；万分比
+effect12676SoldierAdjust = 4_10000,5_10000,6_10000,7_10000
+
+# 【12701】作用号，生效间隔回合数；绝对值
+effect12701AtkRound = 5
+
+# 【12701】作用号，持续回合数；绝对值
+effect12701ContinueRound = 2
+
+# 【12701】作用号，敌方兵种修正系数；万分比
+effect12701SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10052】作用号，兵种修正系数；万分比
+effect10052SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10053】作用号，兵种修正系数；万分比
+effect10053SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10054】作用号，兵种修正系数；万分比
+effect10054SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10055】作用号，兵种修正系数；万分比
+effect10055SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10056】作用号，兵种修正系数；万分比
+effect10056SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10057】作用号，兵种修正系数；万分比
+effect10057SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10058】作用号，兵种修正系数；万分比
+effect10058SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10059】作用号，兵种修正系数；万分比
+effect10059SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10060】作用号，兵种修正系数；万分比
+effect10060SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10061】作用号，兵种修正系数；万分比
+effect10061SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10062】作用号，兵种修正系数；万分比
+effect10062SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10063】作用号，兵种修正系数；万分比
+effect10063SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10064】作用号，兵种修正系数；万分比
+effect10064SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10065】作用号，兵种修正系数；万分比
+effect10065SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10066】作用号，兵种修正系数；万分比
+effect10066SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10067】作用号，兵种修正系数；万分比
+effect10067SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10068】作用号，兵种修正系数；万分比
+effect10068SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10069】作用号，兵种修正系数；万分比
+effect10069SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10070】作用号，兵种修正系数；万分比
+effect10070SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10076】作用号，兵种修正系数；万分比
+effect10076SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 先驱回响【10077】作用号，兵种修正系数；万分比
+effect10077SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# 野怪掉落限制awardid（仅掉落限制 用 | 隔开）
+blazeMedalAward = 2701046,2701047,2701048,2701049,2701050
+
+# 掉落限制的物品id和数量
+blazeMedalLimit = 1300037_3
+
+# 精英决斗技能战力初始值
+duelInitPower = 10000000
+
+# 检测时间间隔（单位：天数）
+duelPowerCheckTimeInterval = 7
+
+# 取参考战力的排名区间（排名靠前_排名靠后）
+duelPowerRankInterval = 45_55
+
+# 单次增长最高比率（万分比）
+duelPowerOnceAddLimit = 10500
+
+# 密友6周年活动开启时间
+wechatFriendsStartTime = 2019-8-16 00:00:00
+
+# 密友7周年活动结束时间
+wechatFriendsEndTime = 2019-8-22 23:59:00
+
+# 二级密码审核时间
+secPasswordExamineTime = 259200
+
+# 11兵科技-精锐部队开放服务器
+scienceOpenServers = 
+
+# 克瑞斯专属芯片作用号【1524】最大单位
+effect1524Maximum = 8
+
+# 克瑞斯专属芯片作用号【1525】输出常量
+effect1525Power = 0,10000,13000,15000,15800,16600
+
+# 仇敌系统排行榜展示个数（展示）
+hateRankShowNum  = 20
+
+# 仇敌系统存储限制个数（不展示）
+hateRankNumLimit = 100
+
+# 仇敌系统仇敌最低双方战损记录条件（展示）
+hatePowerLoseLimit = 100000
+
+# 帕克专属芯片作用号【1528】触发概率
+effect1528Prob = 4000
+
+# 帕克专属芯片作用号【1528】幂强度系数
+effect1528Power1 = 5500
+
+# 帕克专属芯片作用号【1528】强度系数
+effect1528Power2 = 10000
+
+# 帕克专属芯片作用号【1529】生命debuff层数上限
+effect1529Maximum = 30
+
+# 帕克专属芯片作用号【1530】防御debuff层数上限
+effect1530Maximum = 30
+
+# 黑武士装甲作用号【1312】暴击buff层数上限
+effect1312Maxinum = 25
+
+# 勋章6-8开放开关
+honorSevenOpen = 1
+
+# 【1535】目标选取权重
+effect1535mum = 5000,3000,1000,1000
+
+# 【1535】士兵吞噬别人士兵的比例
+effect1535power = 5000
+
+# 雪球单次攻击城墙造成的燃烧时间（秒）
+snowballAtkFireTime = 180
+
+# 茉碧乌丝专属芯片作用号【1540】触发几率基数
+effect1540Prob1 = 1200
+
+# 茉碧乌丝专属芯片作用号【1540】触发几率根据敌方目标追加概率
+effect1540Prob2 = 900
+
+# 茉碧乌丝专属芯片作用号【1541】叠加层数上限
+effect1541Maxinum = 30
+
+# 茉碧乌丝专属芯片作用号【1541】自毁杀伤比例
+effect1541Power = 600
+
+# 大天使直升机发动几率作用号【1315】上限层数
+effect1315Maxinum = 15
+
+# 门多萨专属芯片作用号【1543】强度系数
+effect1543Power = 4200
+
+# 莉塔专属芯片【1423】效果上限控制参数
+effect1413SuperiorLimit = 775
+
+# M4英雄专属芯片作用号【1546】叠加最高士兵数量
+effect1546Power = 200000
+
+# M4英雄专属芯片作用号【1547】生效最高层数
+effect1547Maxinum = 20
+
+# 账号注销请求CD（秒）
+accountCancReqCd = 0
+
+# 账号注销持续时间，审核多久生效（秒）
+accountCancContinue = 1296000
+
+# M5英雄专属芯片作用号【1548】生效最高层数
+effect1548Maxinum = 10
+
+# M5英雄专属芯片作用号【1549】生效最高层数
+effect1549Maxinum = 10
+
+# M6英雄专属芯片作用号【1554】生效最高几率
+effect1554limit = 2500
+
+# 突击步兵二代机甲作用号【1321】触发概率
+effect1321Prob = 3000
+
+# M10英雄专属芯片作用号【1628】生效最高层数
+effect1628Maxinum = 40
+
+# M10英雄专属芯片作用号【1631】生效最多次数
+effect1631Maxinum = 3
+
+# M10英雄专属芯片作用号【1631】基础概率
+effect1631Per = 500
+
+# M12英雄专属芯片作用号【1634】生效最多次数
+effect1634Maxinum = 50
+
+# M12英雄专属芯片作用号【1635】基础效果
+effect1635BaseVal = 10
+
+# M12英雄专属芯片作用号【1635】主战>=防坦的比例
+effect1635Maxinum = 5000
+
+# M1英雄专属芯片作用号【1637】突击>=狙击的比例
+effect1637Per = 8000
+
+# M1英雄专属芯片作用号【1637】效果上限
+effect1637Maxinum = 1000
+
+# M1英雄专属芯片作用号【1638】狙击>=突击的比例
+effect1638Per = 8000
+
+# M1英雄专属芯片作用号【1638】效果上限
+effect1638Maxinum = 1000
+
+# M2英雄专属芯片作用号【1639】基础CD_每满足N个目标-1回合CD_最低CD
+effect1639Parametric = 5_10_2
+
+# M2英雄专属芯片作用号【1639】超过士兵总量百分比
+effect1639Per = 500
+
+# M2英雄专属芯片作用号【1639】干扰各种类型士兵的权重值
+effect1639SoldierPer = 1_5,2_15,3_75,8_5
+
+# M2英雄专属芯片作用号【1639】干扰上限
+effect1639Maxinum = 3
+
+# M2英雄专属芯片作用号【1640】减少【1529】【1530】单排采矿车士兵比例
+effect1640Parametric = 500
+
+# M3英雄专属芯片作用号【1641】出兵比例
+effect1641Per = 500
+
+# M3英雄专属芯片作用号【1641】生命叠加上限
+effect1641Maxinum = 4000
+
+# M3英雄专属芯片作用号【1642】出兵比例
+effect1642Per = 500
+
+# M3英雄专属芯片作用号【1642】攻击叠加上限
+effect1642Maxinum = 4000
+
+# M3英雄专属芯片作用号【1642】触发双倍效果的士兵比例
+effect1642SoldierPer = 3000
+
+# M4英雄专属芯片作用号【1643】触发双倍效果的士兵比例
+effect1643SoldierPer = 5000
+
+# M4英雄专属芯片作用号【1643】攻击叠加上限
+effect1643Maxinum = 10000
+
+# M4英雄专属芯片作用号【1644】触发双倍效果的士兵比例
+effect1644SoldierPer = 5000
+
+# M4英雄专属芯片作用号【1644】攻击叠加上限
+effect1644Maxinum = 10000
+
+# M6英雄专属芯片作用号【1647】守城伤害叠加上限
+effect1647Maxinum = 10000
+
+# M6英雄专属芯片作用号【1648】攻击城伤害叠加上限
+effect1648Maxinum = 10000
+
+# M7英雄专属芯片作用号【1649】步兵需求比例
+effect1649Per  = 6000
+
+# M7英雄专属芯片作用号【1649】泰能步兵需求比例
+effect1649Per2 = 5000
+
+# M8英雄专属芯片作用号【1650】泰能防御坦克需求比例
+effect1650Per = 5000
+
+# M8英雄专属芯片作用号【1651】泰能主战坦克需求比例
+effect1651Per = 5000
+
+# M9英雄专属芯片作用号【1652】铁幕生效上限
+effect1652Num = 6
+
+# M10英雄专属芯片作用号【1656】负面效果基础概率
+effect1656Per = 1000,1500,2000,2500,3500
+
+# 稀有芯片【战地抢救】基础概率
+effect1658Per = 1000
+
+# 稀有芯片【战地抢救】特殊概率
+effect1658Per2 = 7000
+
+# M11英雄专属芯片作用号【1661】层数上限
+effect1661Num = 6
+
+# M11英雄专属芯片作用号【1659】层数上限
+effect1659Num = 6
+
+# 集结战全部友军受到伤害减少【1685】层数上限
+effect1685Maxinum = 6
+
+# 玩家流失时间（ 基本限定，符合此条件登录则为回归玩家）(天)
+playerLossDays = 7
+
+# 玩家流失天数消息推送ID（根据玩家流失天数，确定推送消息ID(好友push)）
+playerLossPushNotice = 7_14_155;15_28_156;29_100_157
+
+#  玩家账号？天内只收一条推送  （全局push）
+PlayerLossPushCD = 5
+
+# 推荐流失玩家数量(好友push)
+playerLossRecommendNum = 3
+
+# 玩家每日接收流失消息上限(好友push)
+playerFriendLossPushReceiveNum = 5
+
+# 好友7天未登陆发送push(好友push)
+playerFriendLossDaysPush = 7
+
+# 推送生效标志
+pushWorkFlag = 1
+
+# 推送生效服务器
+pushServers  = 
+
+# 流失push时间点
+lossPushTime = 4
+
+# 密友邀请前段拉起接口CD时间（单位秒）
+goodFriendInviteCD = 600
+
+# 装备技术研究中，基地光环解锁的条件（每2467个部件满级后解锁）
+equipResearchShowUnlock = 2_4_6_7
+
+# 祝福语活动图片列表
+blessingImg = V5Activity_219_Icon_HTML_01.png,V5Activity_219_Icon_HTML_02.png,V5Activity_219_Icon_HTML_03.png,V5Activity_219_Icon_HTML_04.png,V5Activity_219_Icon_HTML_05.png,V5Activity_219_Icon_HTML_06.png,V5Activity_219_Icon_HTML_07.png,V5Activity_219_Icon_HTML_08.png,V5Activity_219_Icon_HTML_09.png,V5Activity_219_Icon_HTML_10.png,V5Activity_219_Icon_HTML_11.png,V5Activity_219_Icon_HTML_12.png,V5Activity_219_Icon_HTML_13.png,V5Activity_219_Icon_HTML_14.png,V5Activity_219_Icon_HTML_15.png
+
+# 卡维利珍藏伪随机掉落
+cavilliPseudorandom = 840600_4_1000005_4400042
+
+# 金币特权主界面按钮出现时长
+goldPrivilegeButtonTime = 86400
+
+# 金币特权半价券道具ID
+goldPrivilegeDiscountItem = 21063001
+
+# 金币特权半价payGiftId-ios
+goldPrivilegePayGiftIdIos = 236001
+
+# 金币特权半价payGiftId-Android
+goldPrivilegePayGiftIdAndroid = 236002
+
+# 金币特权半价券生效的特权类型
+goldPrivilegeType = 1
+
+# 控制在QA服，分享后的图片是否带有二维码，填写0则不带有，1则带有二维码-用于平台上架
+QAshareQRCode = 0
+
+# 控制客户端是否全部显示隐私设置相关内容，填写0表示不受客户端开关控制全部显示，填写1表示收客户端开关控制，正常值应该为1
+privacyDisplay = 1
+
+# 线上服是否显示玩家的IP属地，0不显示，1显示
+showIpOnline = 0
+
+# 是这个buildNo时，privacyDisplay以及QAshareQRCode固定返回0，不是这个buildNo，则privacyDisplay以及QAshareQRCode返回配置值
+verifyBuildNo = 9029,9031
+
+# 参谋技能比大小人数
+staffOffice4Max = 15
+
+# 机甲图纸道具id
+mechaRepairItem = 30000_15900001_1
+
+# 空投宝箱解锁条件（前置建筑类型_前置建筑等级）
+airdropUnlock = 2010_7
+
+# 获取道具的任务类型；绑定的道具序列
+recordItems = 15900001
+
+# 自动生成野怪的距离位置
+worldEnemyDistance = 2_10
+
+# 自动生成野怪的最高等级
+worldEnemyLevel = 12
+
+# 虚拟野怪最大击杀次数（剧情任务里面的野怪是前端请求告诉后端生成的，这个值是为了防止刷）
+fakeMonsterMaxKillTime = 100
+
+# 新手版本更新时间，在这之前注册的账号都被认为是老帐号
+newbieVersionTime = 2024-10-12 06:00:00
+
+# 特惠商人购买获得好感度数量
+travelShopFriendly = 1001_15,1007_10,1008_10,1009_10,1010_10
+
+# 黑市商店友好度特权卡持续时间(s)
+travelShopFriendlyCardTime = 604800
+
+# 黑市商店友好度奖励领取消耗友好度(int值)
+travelShopFriendlyAwardCost = 1500
+
+# 黑市商店友好度奖励(三段式)
+travelShoFriendlyCommonAward = 30000_810001_2,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5
+
+# 特惠商人好感度特权卡购买后，每次购物获得好感度提升%（配置千分比）
+travelShopFriendlyUpRate = 1000
+
+# 特惠商人普通礼盒随机奖励对应类型
+travelShopFriendlyAwardCommType = 1
+
+# 特惠商人特权礼盒随机奖励对应类型
+travelShopFriendlyAwardPrivilegeType = 2
+
+# 特惠商人特权礼盒默认随机奖励组
+travelShopFriendlyAwardPrivilegeGroup = 1
+
+# 琳琅特惠购买商品时，全局权重提升%最大值（万分比）
+travelShopAssistRateRise = 40000
+
+# 超时空道具
+spaceProp = 30000_1140001_1,30000_1140002_1,30000_1140003_1
+
+# 超时空空置时间
+spacePropVacant = 600000
+
+# 额外触发俯冲轰炸次数
+effect1645Maxinum = 3
+
+# 额外触发俯冲轰炸伤害
+effect1645Power = 3500
+
+# 机甲精神赋能人数上限
+effect5001Cnt = 15
+
+# 活跃任务积分要求
+integral = 420
+
+# 活跃任务奖励会员经验数
+rewardExperience = 300
+
+# 每日登录基础经验及递增值
+dailyLogin = 100,50
+
+# 每日登录任务最大值
+loginMaximum = 300
+
+# 行军加速返送累计多少个会返送
+effect628Num = 100
+
+# 第二城建队列时间
+secondBuildDefaultOpenTime = 2022-11-10 23:59:59
+
+# 档案中心开放等级
+heroArchivesOpenLv = 35
+
+# 档案中心开放礼包
+heroArchivesOpenAward = 30000_2110001_1
+
+# 第二城建礼包根据开服时间弹出
+secondBuildGiftGroupId = 66655
+
+# 称号兑换（1是类型,然后是什么道具,可以换什么物品）类型目前只有1后续可加
+PropExchange = 1,30000_9716000_1,30000_1400011_1000;1,30000_9716030_1,30000_1400011_100;1,30000_9716060_1,30000_1400011_200;1,30000_9702000_1,30000_1400011_1000;1,30000_9702030_1,30000_1400011_100;1,30000_9702060_1,30000_1400011_200;1,30000_9722000_1,30000_1400011_1000;1,30000_9722030_1,30000_1400011_100;1,30000_9722060_1,30000_1400011_200
+
+# 神话装扮功能开关
+isDressGodOpenTime = 2023-10-17 12:00:00
+
+# 指定道具消耗
+givenItemCostEvent = 21070054
+
+# 装扮每周可获赠次数
+getDressNumLimit = 7
+
+# 一次性获得超过上限道具时，服务器拦截，前端提示
+maxAddItemNum = 250000
+
+# 使用接口cd时间（秒）
+moveCityFixAramCD = 86400
+
+# 联盟中通过成员集结进攻幽灵基地发放的联盟礼的个数上限
+massFoggyAllianceGiftLimit = 360
+
+# 幽灵基地（迷雾要塞）队员参与集结胜利获得的奖励次数
+assembleRewardGetLimit = 10
+
+# 幽灵基地（迷雾要塞）队长发动集结胜利获得的奖励次数
+startAssembleRewardGetLimit = 3
+
+# 军备载体技能作用号7004的防御buff最大堆叠层数
+effect7004Maximum = 20
+
+# 军备载体技能作用号7010的最大伤病阈值比例
+effect7010Maximum = 12
+
+# 军备载体技能作用号7011的回合数间隔
+effect7011RoundBegin = 3
+
+# 军备载体技能作用号7012的部队数量阈值
+effect7012TroopNums = 2
+
+# 军备载体技能作用号7014的buff维持回合数
+effect7014Round = 3
+
+# 军备载体技能作用号7015的部队数量阈值
+effect7015TroopNums = 6
+
+# 军备载体技能作用号7016的部队数量阈值
+effect7016TroopNums = 6
+
+# 军备载体技能作用号7018的最大堆叠层数
+effect7018Maximum = 30
+
+# 军备载体技能作用号7019的最大堆叠层数
+effect7019Maximum = 30
+
+# 军备载体技能作用号7020的最大堆叠层数
+effect7020Maximum = 10
+
+# 军备载体技能作用号7021的最大堆叠层数
+effect7021Maximum = 5
+

@@ -1,0 +1,129 @@
+option java_package = "com.hawk.game.protocol";
+
+import "Rank.proto";
+
+// 迁服活动信息(只有活动用)
+message ImmgrationActivityInfo {
+	required int32 currentNum = 1; // 当前人数
+	required int32 numLimit = 2; // 人数限制
+	required int64 currentPower = 3; // 当前战力限制
+	required int64 powerLimit = 4; // 战力最高限制
+	required int64 powerMinLimit = 5; // 战力最低限制
+	optional string presidentGuildTag = 6; // 盟军司令联盟简称
+	optional string presidentName = 7; // 盟军司令名字
+	optional bool alreadyImmgration = 8; // 是否已经迁过服
+}
+
+// 服务器列表信息
+message ImmgrationActivityInfoResp
+{
+	repeated ImmgrationServerInfo serverInfo = 1; // 服务器信息
+}
+
+// 迁服服务器信息
+message ImmgrationServerInfo {
+	required string serverId = 1; // 服务器id
+	required string serverName = 2; // 服务器名字
+	required ImmgrationServerType serverType = 3; // 服务器状态
+	optional int32 icon	=4; //头像
+	optional string pfIcon =5; //平台头像
+	optional int32 cityLevel = 6; //大本等级
+}
+
+
+// 请求服务器详细信息
+message ImmgrationServerInfoDetailReq
+{
+	required string serverId = 1; // 服务器id
+}
+
+message ImmgrationServerInfoDetailResp {
+	required string serverId = 1; // 服务器id
+	required string serverName = 2; // 服务器名字
+	required ImmgrationServerType serverType = 3; // 服务器状态
+	required int32 numLimit = 4; // 人数限制
+	required int32 powerLimit = 5; // 战力限制
+	required int32 currentNum = 6; // 当前人数
+	repeated RankInfo rankInfo = 7; // 排行榜
+	optional int32 immgrationCost = 8; // 移民消耗
+}
+
+
+// 真正的迁服请求
+message ImmgrationServerReq {
+	required string tarServerId = 1; // 目标服id
+	optional string playerId = 2; // 玩家id
+}
+
+message ImmgrationServerResp {
+	required int32 code = 1; // 返回 0-成功 其它待定
+	optional string tarServerId = 2; // 迁服目标服serverId
+}
+
+
+// 迁服战力设置
+message ImmgrationPowerSetReq {
+	required int64 power = 1; // 战力
+}
+
+// 迁服服务器状态
+enum ImmgrationServerType {
+	MAIN_SERVER = 1; // 当前区服
+	OWN_SERVER = 2; // 自己注册过账号的区服
+	CAN_IMMGRATION = 3; // 可以迁过去的区服
+	POWER_LIMIT = 4; // 战力限制的区服
+	NUM_LIMIT = 5; // 人数限制的区服
+}
+
+
+
+
+
+//*********回流移民活动***************************************
+
+
+
+//移民服务器列表
+message PBBackImmgrationServerListResp{
+	repeated string servers = 1;  //服务器ID列表
+}
+
+//排行榜数据
+message PBBackImmgrationTargetServerRankReq{
+	required string serverId = 1; //服务器ID
+}
+
+
+
+//排行榜数据
+message PBBackImmgrationTargetServerRankResp{
+	required string playerId       = 1; //玩家ID
+	repeated RankInfo cityRank     = 2; //基地排行榜
+	required int32 cityRankSelf    = 3; //自己的排名
+	repeated RankInfo powerRank    = 4; //战力排行
+	required int32 powerRankSelf   = 5; //自己的排名
+}
+
+
+
+
+
+// 迁服
+message PBBackImmgrationActionReq {
+	required string tarServerId = 1; // 目标服id
+	optional string playerId = 2; // 玩家id
+}
+
+
+
+
+
+//*****请求目标服排行榜数据---服务器专用，客户端不要用***
+message PBCrossBackImmgrationTargetServerRankReq{
+	required string playerId = 1;
+	optional int64 power     = 2; //战力
+	optional int32 cityLevel = 3; //主城等级
+}
+
+
+//***************************************************************

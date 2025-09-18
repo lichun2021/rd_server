@@ -1,0 +1,24 @@
+# 活动id
+activityId = 145
+
+# 活动名称
+name = 攻防模拟战
+
+# 活动标题
+title = 活动详情
+
+# 活动描述
+tips = <font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">【活动流程】<br/>1. 个人报名阶段: <br/>a. 联盟成员各自报名并调整<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">出征位置和编队</font>；<br/>b. 每人最多可报名<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 3 </font>个编队；<br/>c. 每个编队的英雄<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">不可复用</font>；<br/>d. 每条线路战力排序前<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 100 </font>个队列出战，只有最终出战的指挥官才会获得奖励。<br/><br/>2. 官员调整阶段: <br/>a. 盟主或4位联盟官员有权利调整报名路线的<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">出战顺序</font>；<br/>b. <font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">不可换线及解散</font>其他成员的编队；<br/>c. 所有成员可以进行助威，助威可增加联盟所有编队的部队攻击属性，全联盟最多可助威<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 80 </font>次。<br/><br/>3. 行军阶段<br/>a. 根据最终所有区服的参赛联盟，进行<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">随机</font>对手匹配；<br/>b. 如遇到匹配为空的情况，将自动获得<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 三路全胜 </font>奖励。<br/><br/>4. 战斗阶段<br/>可查看具体的交战情况及<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">详细战报</font>。<br/><br/>5. 展示阶段<br/>a. 展示双方交战结果；<br/>b. 展示三路战斗中个人表现第一名的指挥官；<br/>c. 胜利或失败的奖励通过<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">系统邮件</font>发放。<br/><br/>【参与条件】<br/>1. 必须加入联盟；<br/>2. 指挥官基地等级不少于<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 15 </font>级；<br/>3. 报名的联盟不少于<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 45 </font>个编队才会参与到匹配阶段。<br/><br/>【胜利规则】<br/>1. 获得<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 2条及以上 </font>路线胜利的联盟获胜；<br/>2. 当出现两个联盟平局的情况（空、胜、负）时，<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">报名总队列数最多</font>的联盟获得空路获胜；<br/>3. 当出现空路的情况（空、胜、空）时，胜利的联盟获得空路获胜，胜利方赢得3路。<br/><br/>【其他说明】<br/>1. 联盟中有指挥官路线报名后，联盟在活动期间<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无法解散</font>；<br/>2. 活动进入到匹配阶段时个人退盟，活动结算时也会领取到对应奖励。</font>
+
+# 活动排序
+priority = 10001
+
+# 活动图标
+icon = Activity_Icon_145_Nor.png
+
+# 选中图标
+selecticon = Activity_Icon_145_Sel.png
+
+# 活动气氛图
+bigIcon = Activity_SuperWeapon_u_Rendered.png
+

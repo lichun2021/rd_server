@@ -1,0 +1,19 @@
+return {
+	prop =
+	{
+		activityId = 36,
+		icon = [[Activity_Icon_35_Nor.png]],
+		selecticon = [[Activity_Icon_35_Sel.png]],
+		title = [[活动详情]],
+		name = [[充值豪礼]],
+		priority = 20650,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，累计充值到达指定金额即可领取奖励。<br/>2. 具体奖励详情，指挥官可返回活动页面查看奖励详情。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">注意: 仅在充值福利页面进行的充值计入累计额度。每日必买、周卡月卡、直购礼包等内容不计入充值额度。</font></font>]],
+	},
+	recharge_gift = [[achieveId	conditionType	conditionValue	name	ccbfile	title	rewards	rechargeBannerA	rechargeBannerB
+1	2	1	2	2	2	2	2	2
+360001	160300	360	资源礼包	RAActivity36NodeAV5.ccbi	RechargeGift1	30000_9020307_1,30000_1780207_10,30000_850007_5,30000_850037_5,30000_850017_5,30000_850027_5	V5Store_BG_01_A.png	V5Store_BG_01_B.png
+360002	160300	1040	加速礼包	RAActivity36NodeBV5.ccbi	RechargeGift2	30000_1780207_20,30000_810001_25,30000_810000_25,30000_101050_25,30000_103050_25,30000_104050_25	V5Store_BG_02_A.png	V5Store_BG_02_B.png
+360003	160300	2320	培养礼包	RAActivity36NodeCV5.ccbi	RechargeGift3	30000_1780207_40,30000_1000002_40,30000_800110_40,30000_800143_40,30000_1510004_40,30000_1510003_40	V5Store_BG_03_A.png	V5Store_BG_03_B.png
+]],
+
+}

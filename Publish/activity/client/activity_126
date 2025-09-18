@@ -1,0 +1,73 @@
+return {
+	prop =
+	{
+		activityId = 126,
+		name = [[幸运折扣]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动开启期间，玩家可以在幸运折扣商城抽取幸运折扣并购买稀有道具。 <br/>2.不同折扣对应不同种类的8种商品。<br/>3.折扣商品限时限量出售，重置倒计时结束将重置幸运折扣商城，所有商品将会消失，需要重新抽取折扣。<br/>4.每天0点重置免费抽取折扣的资格。<br/>5.抽取折扣所需的道具“幸运券”可在幸运福利活动中获取。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幸运折扣概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3折30%概率<br/>2折40%概率<br/>1折18%概率<br/>0.5折9%概率<br/>0.3折3%概率</font>]],
+		priority = 20010,
+		icon = [[Activity_Icon_126_Nor.png]],
+		selecticon = [[Activity_Icon_126_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		discountMax = 5,
+		messageKey = [[Act126Tips2]],
+		needItem = [[30000_1150093_1]],
+		refresh = 1,
+		resetTime = 7200,
+	},
+	luckydiscount_shop = [[id	pool	item	limitNum	oldPrice	newPrice	tag	discount
+1	1	2	1	1	2	2	2
+1	1	30000_850048_1	5	100	10000_1000_30	V5Activity_126_u_Num_BG_03.png	3
+2	1	30000_850078_1	50	30	10000_1000_9	V5Activity_126_u_Num_BG_03.png	3
+3	1	30000_1510004_1	100	30	10000_1000_9	V5Activity_126_u_Num_BG_03.png	3
+4	1	30000_13310004_1	100	30	10000_1000_9	V5Activity_126_u_Num_BG_03.png	3
+5	1	30000_104050_2	50	150	10000_1000_45	V5Activity_126_u_Num_BG_03.png	3
+6	1	30000_1490005_1	3	500	10000_1000_150	V5Activity_126_u_Num_BG_03.png	3
+7	1	30000_1800001_1	30	100	10000_1000_30	V5Activity_126_u_Num_BG_03.png	3
+8	1	30000_802003_1	100	200	10000_1000_60	V5Activity_126_u_Num_BG_03.png	3
+9	2	30000_850048_1	1	100	10000_1000_20	V5Activity_126_u_Num_BG_02.png	2
+10	2	30000_850078_1	40	30	10000_1000_6	V5Activity_126_u_Num_BG_02.png	2
+11	2	30000_103050_2	40	150	10000_1000_30	V5Activity_126_u_Num_BG_02.png	2
+12	2	30000_104050_2	40	150	10000_1000_30	V5Activity_126_u_Num_BG_02.png	2
+13	2	30000_802003_1	60	200	10000_1000_40	V5Activity_126_u_Num_BG_02.png	2
+14	2	30000_1490005_1	2	500	10000_1000_100	V5Activity_126_u_Num_BG_02.png	2
+15	2	30000_1800000_10	30	100	10000_1000_20	V5Activity_126_u_Num_BG_02.png	2
+16	2	30000_1800001_1	20	100	10000_1000_20	V5Activity_126_u_Num_BG_02.png	2
+17	3	30000_850048_1	1	100	10000_1000_10	V5Activity_126_u_Num_BG_02.png	1
+18	3	30000_850078_1	30	30	10000_1000_3	V5Activity_126_u_Num_BG_02.png	1
+19	3	30000_104050_2	30	150	10000_1000_15	V5Activity_126_u_Num_BG_02.png	1
+20	3	30000_802003_1	30	200	10000_1000_20	V5Activity_126_u_Num_BG_02.png	1
+21	3	30000_1490005_1	1	500	10000_1000_50	V5Activity_126_u_Num_BG_02.png	1
+22	3	30000_1800000_10	20	100	10000_1000_10	V5Activity_126_u_Num_BG_02.png	1
+23	3	30000_1800001_1	10	100	10000_1000_10	V5Activity_126_u_Num_BG_02.png	1
+24	3	30000_840299_2	300	100	10000_1000_10	V5Activity_126_u_Num_BG_02.png	1
+25	4	30000_850048_1	1	100	10000_1000_5	V5Activity_126_u_Num_BG_01.png	0.5
+26	4	30000_802003_1	10	200	10000_1000_10	V5Activity_126_u_Num_BG_01.png	0.5
+27	4	30000_1300017_20	50	500	10000_1000_25	V5Activity_126_u_Num_BG_01.png	0.5
+28	4	30000_1800000_10	10	100	10000_1000_5	V5Activity_126_u_Num_BG_01.png	0.5
+29	4	30000_800000_5	20	640	10000_1000_32	V5Activity_126_u_Num_BG_01.png	0.5
+30	4	30000_840299_2	150	100	10000_1000_5	V5Activity_126_u_Num_BG_01.png	0.5
+31	4	30000_840514_1	2	1000	10000_1000_50	V5Activity_126_u_Num_BG_01.png	0.5
+32	4	30000_840513_1	2	500	10000_1000_25	V5Activity_126_u_Num_BG_01.png	0.5
+33	5	30000_850048_1	1	100	10000_1000_3	V5Activity_126_u_Num_BG_01.png	0.3
+34	5	30000_840194_10	200	100	10000_1000_3	V5Activity_126_u_Num_BG_01.png	0.3
+35	5	30000_1300017_20	25	500	10000_1000_15	V5Activity_126_u_Num_BG_01.png	0.3
+36	5	30000_800000_5	10	640	10000_1000_19	V5Activity_126_u_Num_BG_01.png	0.3
+37	5	30000_1780080_1	10	1000	10000_1000_30	V5Activity_126_u_Num_BG_01.png	0.3
+38	5	30000_1780083_1	10	1000	10000_1000_30	V5Activity_126_u_Num_BG_01.png	0.3
+39	5	30000_840514_1	1	1000	10000_1000_30	V5Activity_126_u_Num_BG_01.png	0.3
+40	5	30000_840513_1	1	500	10000_1000_15	V5Activity_126_u_Num_BG_01.png	0.3
+]],
+	luckydiscount_pool = [[discount
+1
+3
+2
+1
+0.5
+0.3
+1
+0.5
+0.3
+]],
+
+}

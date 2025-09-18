@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" phaseTwo="0" />
+      <data id="2" phaseTwo="0" unlock="1_120" />
+      <data id="3" phaseTwo="0" unlock="2_80" />
+      <data id="4" phaseTwo="0" unlock="3_80" />
+      <data id="5" phaseTwo="0" unlock="4_80" />
+      <data id="6" phaseTwo="0" unlock="5_80" />
+      <data id="7" phaseTwo="0" unlock="6_80" />
+      <data id="8" phaseTwo="1" unlock="7_100" />
+      <data id="9" phaseTwo="1" unlock="7_100" />
+</root>

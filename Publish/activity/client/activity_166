@@ -1,0 +1,47 @@
+return {
+	prop =
+	{
+		activityId = 166,
+		name = [[命运左轮枪]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动描述：<br/>1.完成任务可以获取左轮枪子弹，任务活动期间每日0点重置；<br/>2.左轮枪子弹可在活动界面购买，每日限购7次，每个50金币。该道具可用于左轮枪开火；每次开火后，转到击发位置（顶部）可以获取对应奖励。<br/>3.其中左轮枪开火抽中翻牌机会后，可获得参与塔罗牌翻牌的机会（不会直接获取奖励）；<br/>4.每开火累计7次，必得1轮塔罗牌翻牌机会；<br/>5.每轮塔罗牌首次翻牌免费，第2次及之后翻牌需要花费金币；<br/>6.每轮翻牌存在倒计时，倒计时结束时，视为放弃本轮翻牌机会，回到左轮枪开火界面；<br/>7.可主动放弃本轮翻牌机会回到左轮枪开火界面<br/>8.左轮枪抽奖概率公示:<br/>150万自选资源*1  22.50%<br/>通用加速2小时*2  22.50%<br/>高级招募券*1  22.50%<br/>装备抽卡券*1  22.50%<br/>命运塔罗牌  10.00%<br/>9.塔罗牌翻牌花费金币数量公示:<br/>抽卡次数:1   消耗金币:0<br/>抽卡次数:2   消耗金币:78<br/>抽卡次数:3   消耗金币:234<br/>抽卡次数:4   消耗金币:624<br/>抽卡次数:5   消耗金币:1014<br/>抽卡次数:6   消耗金币:1404<br/>抽卡次数:7   消耗金币:1950<br/>抽卡次数:8   消耗金币:2574<br/>抽卡次数:9   消耗金币:3276<br/>10.每轮塔罗牌第1次翻牌概率公示:<br/>荣誉勋章*18   概率:28.68%<br/>荣誉勋章*48   概率:25.81%<br/>荣誉勋章*88   概率:22.94%<br/>下次翻牌双倍   概率:11.47%<br/>高级自选英雄*3   概率:5.74%<br/>荣誉勋章*168   概率:2.87%<br/>荣誉勋章*288   概率:1.72%<br/>高级自选英雄*10   概率:0.57%<br/>荣誉勋章*888   概率:0.19%<br/></font>]],
+		priority = 11001,
+		icon = [[Activity_Icon_166_Nor.png]],
+		selecticon = [[Activity_Icon_166_Sel.png]],
+		fiveCost = [[30000_1150116_1]],
+		nineCost = [[30000_1150117_0;30000_1150117_1;30000_1150117_3;30000_1150117_8;30000_1150117_13;30000_1150117_18;30000_1150117_25;30000_1150117_33;30000_1150117_42]],
+		fivePrice = [[10000_1001_50]],
+		ninePrice = [[10000_1001_78]],
+		extReward = [[30000_840172_1]],
+	},
+	destiny_revolver_five_reward = [[id	weight	reward	jackpot
+1	1	2	1
+1	1000	30000_1150143_1	1
+2	2250	30000_1780045_1	0
+3	2250	30000_100050_2	0
+4	2250	30000_800110_1	0
+5	2250	30000_800000_1	0
+]],
+	destiny_revolver_achieve = [[achieveId	conditionValue	gotoType	gotoValue	rewards	title
+1	1	1	2	2	2
+16600001	1	-1		30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计登录<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>天</font>
+16600002	20	200	2_0	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">击败任意等级野外敌军<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>次</font>
+16600003	50	200	2_0	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">击败任意等级野外敌军<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>次</font>
+16600004	500000	31	1_1_1007	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">采集任意资源<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>点</font>
+16600005	1500000	31	1_1_1007	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">采集任意资源<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>点</font>
+16600006	3000	23	2012	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练任意兵种<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>个</font>
+16600007	3	31	16_1	30000_1150116_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">战胜幽灵基地<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>次</font>
+]],
+	destiny_revolver_nine_reward = [[id	weight	reward
+1	1	2
+1	150	30000_1300017_18
+2	135	30000_1300017_48
+3	120	30000_1300017_88
+4	60	30000_1150142_2
+5	30	30000_1780083_3
+6	15	30000_1300017_168
+7	9	30000_1300017_288
+8	3	30000_1780083_10
+9	1	30000_1300017_888
+]],
+
+}

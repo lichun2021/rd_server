@@ -1,0 +1,27 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 2592000
+
+# 消耗1金条获得幸运币
+scoreAdd = 30000_21062498_1
+
+# 中奖范围最小值
+awardPoolRandomStart  = 2
+
+# 中奖范围最大值
+awardPoolRandomEnd = 12
+
+# 骰子最小值
+randomStart = 1
+
+# 骰子最大值
+randomEnd = 6
+
+# 重置消耗
+resetCost = 10000_1001_50
+
+# 重置次数
+resetCountLimit = 20
+
+# 不中奖向外延伸格子数
+extendCount = 1
+

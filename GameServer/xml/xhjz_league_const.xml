@@ -1,0 +1,30 @@
+# 小队初始积分
+initPoint = 0
+
+# 胜利基础分
+winPoint = 2000
+
+# 胜利比赛分转化系数
+winPointPara = 400
+
+# 失败基础分
+losrPoint = 1000
+
+# 失败比赛分转化系数
+losrPointPara = 400
+
+# 入围王者组的排名段
+groupS = 1_256
+
+# 入围挑战组的排名段
+groupA = 257_512
+
+# 入围精英组的排名段
+groupB = 513_768
+
+# 排名赛自动报名第几个时段（13:00_20:00_21:00_22:00）
+seasonTimeIndex = 2
+
+# 星海联赛哪些服强制设为巅峰区
+onlyOldServers = 20001-29999
+

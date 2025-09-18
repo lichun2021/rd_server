@@ -1,0 +1,129 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "Cross.proto";
+
+message HPLogin
+{	
+	required string platform = 1;
+	required string channel = 2;
+	required string country = 3;	
+	required string deviceId = 4;
+	required string lang = 5;
+	required string phoneInfo = 6;
+	required string version = 7;
+	optional string playerId = 8;
+	optional string puid = 9;
+	required string serverId = 10;
+	// 标识为重连还是直接登录连接(0: 启动连接, 1: 断线重连)
+	optional int32 flag = 11;
+	// 平台的token信息
+	optional string pfToken = 12;
+	// {pf:getui或xinge或pubnub,pushDeviceId:*,phoneType:ios或android}
+	optional string pushInfo = 13;
+	// 额外信息
+	optional string extData = 14;
+	optional string channelId = 15;
+	optional LoginWay loginWay = 16;  // 0表示普通登录，1表示通过游戏中心启动登录
+	optional InnerEnterCrossMsg innerEnterCrossMsg = 17; //A->B A收到客户端的消息会往B发送这条这条协议，所以在这条协议里面塞入一些跨服的信息.
+	optional string asaInfo   = 18;   // 买量业务数据上报需要的信息，是一个json串，里面包含所需要的caid（安卓用户对应Android_OAID，ios用户对应Ios_CAID）等各具体字段 
+	optional int32 gamematrix = 19;   // 标识是否为先锋云游戏，1-是，0-否。
+	optional int32 robot      = 20;   // 标识是否为robot号，1-是，0否（只有特定的测试环境下才用到）
+}
+ 
+message HPLoginRet
+{
+	required int32 errCode = 1;
+	optional string playerId = 2;
+	optional string puid = 3;
+	optional int64 timeStamp = 4;
+	optional int64 serverOpenTime = 5;
+	optional int32 flag = 6;
+	optional int32 waitingNum     = 7;  // 当前共有多少人在排队
+	optional int32 waitingIndex   = 8;  // 自己当前所处的排队位次
+	optional string banReason	  = 9;	// 封号原因
+	optional string zoneId        = 10; // 大区id, 玩家第一次登录注册时所在的服务器ID，涉及充值、支付相关接口传zoneId而非serverId
+	optional string billboard     = 11; // 公告信息
+	optional string version		  = 12; // 当前版本信息
+	optional int64 banTimeDiff    = 13; // 当前距离封号结束的时间差，以毫秒为单位
+    optional string serverId      = 14; // 玩家当前所在服的服务器ID
+	optional string zkTitle       = 15; // 中控禁玩时的提示标题
+	optional string zkMsg         = 16; // 中控禁玩时的提示内容
+	optional string crossServerId = 17; //玩家跨服所在ID
+	optional int32  crossType 	  = 18; //@sess cross. CrossType;
+	optional int32 areaId         = 19; //大区ID
+	optional int32 wxServer       = 20; // 是否是微信服，1是0否
+	repeated HPServerInfo serverInfo = 21; //区服列表信息
+}
+
+// 买量业务数据上报需要的信息（客户端给服务器同步）
+message HPASAInfoNotify
+{ 
+	optional string iosASA        = 1;   
+}
+
+message HPActiveDevice
+{
+	required string deviceId = 1;
+	required string activeToken = 2;
+}
+
+message HPActiveDeviceRet
+{
+	required string deviceId = 1;
+	required int32 code = 2;
+}
+
+message HPAssembleFinish
+{
+	required string  playerId = 1;
+	optional string  token = 2;
+	optional bool isDailyFirstLogin = 3; // 是否是当日首次登录
+	optional string billboard = 4; // 公告信息
+}
+
+message HPPlayerKickout
+{
+	required int32 reason	= 1;
+	optional string msg		= 2; // 踢出下线详细原因
+}
+
+message HPWaitLogin
+{
+	required int32 waitLoginCode  = 1;  // 参照Status.proto中的WaitLoginCode
+	optional int32 waitingNum     = 2;  // 当前共有多少人在排队
+	optional int32 waitingIndex   = 3;  // 自己当前所处的排队位次
+}
+
+message HPBackgroundNotice
+{
+    required bool switchToBackground = 1;  // true表示从前台切入到后台，false表示从后台回到前台
+}
+
+// 登录时检测到名字中包含敏感词, 服务器自动修改
+message LoginandRename
+{
+	required string beforeName  = 1;  // 修改前的名字
+	required string afterName   = 2;  // 修改后的名字
+}
+
+
+
+//返回合服信息, 取玩家身上的serverId的合服信息(需要考虑跨服)
+message MergeServerInfoSync {
+	optional MergeServerInfo mergeServerInfo = 1; //合服信息 没有传说明没有合服,
+}
+
+message MergeServerInfo {
+	required string mainServerId = 1; //主服Id
+	repeated string mergeServerIds = 2; //从服Id可能会有多个从服.
+}
+
+//单个区服信息
+message HPServerInfo
+{
+	required string serverId   = 1; //服务器id
+	required string serverName = 2; //服务器名称
+	optional string platformName = 3; 
+	optional int32 areaId = 4;
+	optional int32 isQQ   = 5;
+}

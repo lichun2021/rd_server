@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buildTypeId="1" gridCnt="5" peaceTime="180" allianceScoreControl="3000" allianceScore="10" allianceOrder="0" playerScore="0.6" playerFirstScore="0" collectArmyMin="1" occupyTime="150" />
+      <data buildTypeId="2" gridCnt="4" peaceTime="180" allianceScoreControl="1000" allianceScore="3.333333" allianceOrder="6.666666" playerScore="0.5" playerFirstScore="0" collectArmyMin="1" buildEffect="10055_160000,10056_40000,10057_4000,10076_250" occupyTime="120" />
+      <data buildTypeId="3" gridCnt="3" peaceTime="180" allianceScoreControl="500" allianceScore="1.666667" allianceOrder="3.333333" playerScore="0.416667" playerFirstScore="0" collectArmyMin="1" buildEffect="10055_320000,10056_80000,10057_8000,10076_500" occupyTime="90" />
+</root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" awardWeight="1000_1000_1000" awards1="30000_1300027_368" awards2="30000_802005_88" awards3="30000_21063005_188" normalWeight="30" upWeight="50" />
+      <data id="2" awardWeight="1000_1000_1000" awards1="30000_1300027_128" awards2="30000_802005_28" awards3="30000_21063005_68" normalWeight="100" upWeight="150" />
+      <data id="3" awardWeight="1000_1000_1000" awards1="30000_1300027_58" awards2="30000_802005_10" awards3="30000_21063005_28" normalWeight="350" upWeight="300" />
+      <data id="4" awardWeight="1000_1000_1000" awards1="30000_1300027_28" awards2="30000_802005_5" awards3="30000_21063005_12" normalWeight="520" upWeight="500" />
+</root>

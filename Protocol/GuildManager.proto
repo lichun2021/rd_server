@@ -1,0 +1,880 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+import "Const.proto";
+
+message	HPGuildInfoSync
+{
+	optional string	guildId	= 1;//联盟Id
+	optional int32 guildFlag = 2;//联盟旗帜
+	optional string	guildTag = 3;//联盟缩写
+	optional int32 guildLevel =	4;//联盟等级
+	optional int32 guildAuthority =	5;//权限
+	required bool joinedGuild =	6;//是否加入联盟
+	optional int64 quitGuildTime = 7;//退出联盟时间
+	optional int32 helpNum = 9;//联盟帮助个数
+	optional int64 applyNum	= 10;//联盟申请个数
+	optional string	guildName =	11;	//联盟名称
+	optional int64 joinTime = 12; // 加入联盟时间
+	optional string numTypeGuildId = 13; // 手Q一键建群需要用到的联盟id，要求是数值类型的值
+	repeated GuildAuthInfo authInfo = 14; // 自定义联盟权限信息
+	repeated GuildSign	signInfo	= 15; // 联盟标记信息
+	optional int32	applyOfficerId	= 16; // 申请的联盟官员id
+	optional int32	guildOfficeId	= 17; // 联盟官员id
+	optional int32 guildScience = 18;//联盟科技总值
+	optional string serverId    = 19;//联盟创建时所在的区服ID
+	optional int32 xzqTickets = 20; //小战区门票
+}
+
+message	HPGuildApplyNumSync
+{
+	required int64 applyNum	= 1;//联盟申请个数
+}
+
+
+//获得联盟信息
+message	GetGuildInfoResp
+{
+	required string	id = 1;//联盟Id
+	required string	name = 2;//联盟名称
+	required string	leaderName = 3;//盟主名字
+	required int64 power = 4;//联盟战力
+	required int32 memberNum = 5;//联盟人数
+	required int32 memberMaxNum	= 6;//联盟最大人数
+	required string	language = 7;//联盟语言Id
+	required int32 level = 8;//联盟等级
+	required int32 flag	= 9;//联盟旗帜Id
+	required string	tag	= 10;//联盟简称
+	required bool openRecurit =	11;//公开招募
+
+	optional string	announcement = 12;//联盟宣言
+	optional string	notice = 13;//联盟公告
+	optional string	coleaderName = 14;//联盟外交官名字
+
+	optional int32 needBuildingLevel = 15;//大本等级
+	optional int32 needCommonderLevel =	16;//指挥官等级
+	optional int32 needPower = 17;//战力
+	optional string	L1Name = 18;//联盟阶级称谓
+	optional string	L2Name = 19;//联盟阶级称谓
+	optional string	L3Name = 20;//联盟阶级称谓
+	optional string	L4Name = 21;//联盟阶级称谓
+	optional string	L5Name = 22;//联盟阶级称谓
+	optional string	needLanguage = 23;//加入需要的语言
+	required int32 leaderIcon = 25;//盟主头像
+	optional string leaderPfIcon = 26; //盟主平台头像
+	optional int32 leaderVipLvl	= 27; //盟主vip等级
+	optional bool hasChangeTag = 28; //是否修改过联盟简称
+	required string leaderId = 29; // 盟主id
+	optional string numTypeGuildId = 30; // 手Q一键建群需要用到的联盟id，要求是数值类型的值
+	optional PlayerCommon common 	= 31; // 玩家通用数据
+	optional int32 xzqTickets = 32; //小战区门票
+}
+
+// 同步联盟积分
+message	GuildScoreSync
+{
+	required int64 allianScore = 1;
+}
+
+//创建联盟
+message	CreateGuildReq
+{
+	required string	name = 1;//联盟名称
+	required string	tag	= 2;//联盟简称
+	required string	language = 3;//联盟语言
+	optional string	announcement = 4;//联盟宣言
+}
+
+//获得联盟信息
+message	CreateGuildResp
+{
+	required GetGuildInfoResp info = 1;
+}
+
+//检测联盟名称合法
+message	CheckGuildNameReq
+{
+	required string	guildName =	1;//联盟名称
+}
+
+//检测联盟简称合法
+message	CheckGuildTagReq
+{
+	required string	guildTag = 1;//联盟简称
+}
+
+//改变联盟简称
+message	ChangeGuildTagReq
+{
+	required string	guildTag = 1;//联盟简称
+}
+
+//改变联盟名称
+message	ChangeGuildNameReq
+{
+	required string	guildName =	1;//联盟名称
+}
+
+//改变联盟名称
+message	ChangeGuildApplyPermitonReq
+{
+	required bool isOpen = 1;//是否开启
+	optional int32 buildingLevel = 2;//大本等级
+	optional int32 power = 3;//限制战力
+	optional int32 commonderLevel =	4;//指挥官等级
+	optional string	lang = 5;//语言
+}
+
+//改名联盟旗帜
+message	ChangeGuildFlagReq
+{
+	required int32 guildFlag = 1;//旗帜
+}
+
+//改变联盟语言
+message	ChangeGuildLangReq
+{
+	required string	guildLang =	1;//联盟语言
+}
+
+//获得推荐联盟
+message	GetRecommendGuildListReq
+{
+	required int32 pageNum = 1;//当前显示页数
+}
+
+//获得推荐联盟
+message	GetRecommendGuildListResp
+{
+	repeated GetGuildInfoResp info = 1;//联盟信息
+}
+
+//获得其他联盟
+message	GetOtherGuildReq
+{
+	required int32 pageNum = 1;//当前显示页数
+}
+
+//获得其他联盟
+message	GetOtherGuildResp
+{
+	repeated GetGuildInfoResp info = 1;//联盟信息
+}
+
+//搜索联盟
+message	GetSearchGuildListReq
+{
+	required string	name = 1;//联盟名称
+}
+
+//搜索联盟回复
+message	GetSearchGuildListResp
+{
+	repeated GetGuildInfoResp info = 1;//联盟信息
+	optional string msg  = 2;//提示信息，当这个字段不为空时，不管info，直接按msg弹框提示
+}
+
+//获得玩家收到的联盟邀请
+message	GetPlayerGuildInviteInfo
+{
+	repeated GetGuildInfoResp info = 1;//联盟信息
+}
+
+//申请联盟
+message	ApplyGuildReq
+{
+	required string	guildId	= 1;//联盟Id
+}
+
+//取消申请联盟
+message	CancelApplyReq
+{
+	required string	guildId	= 1;//联盟Id
+}
+
+//取消申请联盟
+message	CancelInviteReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//接受联盟申请
+message	AcceptApplyReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//拒绝联盟申请
+message	RefuseApplyReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//邀请加入联盟
+message	InviteGuildReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//接受联盟邀请
+message	AcceptInviteReq
+{
+	required string	mailId	= 1;//邮件Id
+}
+
+//拒绝联盟邀请
+message	RefuseInviteReq
+{
+	required string	mailId	= 1;//邮件Id
+}
+
+//发布联盟宣言
+message	PostAnnouncementReq
+{
+	required string	announcement = 1;//联盟宣言
+}
+
+//发布联盟公告
+message	PostNoticeReq
+{
+	required string	notice = 1;//联盟公告
+}
+
+//获得联盟留言
+message	GetGuildMessageReq
+{
+	required string	guildId	= 2;//联盟Id
+}
+
+//发布联盟留言
+message	PostMessageReq
+{
+	required string	message	= 1;//联盟留言
+	required string	guildId	= 2;//联盟Id
+}
+
+//改变联盟成员权限
+message	ChangeGuildLevelReq
+{
+	required string	playerId = 1;//玩家Id
+	required int32 level = 2;//权限
+}
+
+//改变联盟权限名称
+message	ChangeLevelNameReq
+{
+	optional string	L1Name = 1;
+	optional string	L2Name = 2;
+	optional string	L3Name = 3;
+	optional string	L4Name = 4;
+	optional string	L5Name = 5;
+}
+
+//踢出联盟成员
+message	KickMemberReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//让出联盟盟主
+message	DimiseLeaderReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//设置联盟外交官
+message	GrantColeaderReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+//联盟帮助队列信息
+message	GuildHelpQueue
+{
+	required string	queueId		= 1; //联盟帮助的唯一ID
+	required string	applyId		= 2; //申请者玩家ID
+	required string	applyName	= 3; //申请者玩家名称
+	required int32 applyIcon	= 4; //申请者玩家头像
+	required int32 curCount		= 5; //当前数目
+	required int32 totalCount	= 6; //总申请数目
+	required int32 queueType	= 7; //队列类型
+	optional int32 itemId		= 8; //建筑ID或科技ID
+	required int32 queueStatus 	= 9; // 队列状态
+	optional string pfIcon  	= 10; // 平台头像
+	optional int32 totalDisTime	= 11; //帮助共减少时间
+	repeated string params 		= 12; // 额外参数
+}
+
+//查看联盟帮助队列返回
+message	CheckGuildHelpQueueRes
+{
+	repeated GuildHelpQueue	queue	 = 1; //队列
+}
+
+//申请联盟帮助
+message	ApplyGuildHelpReq
+{
+	required string	queueId	 = 1; //队列ID
+}
+
+//刷新联盟帮助队列数目
+message	RefreshGuildHelpQueueNumRes
+{
+	required int32 num	= 1; //当前联盟队列数目
+	optional GuildHelpQueue addHelpQueue = 2; // 帮助
+	optional string removeQueueId = 3;
+}
+
+//帮助联盟队列
+message	HelpGuildQueueReq
+{
+	required string	queueId	 = 1; //队列ID
+}
+
+//帮助联盟队列返回
+message	HelpGuildQueueRes
+{
+	required string	queueId	 = 1; //队列ID
+}
+
+//被帮助消息
+message	BeGuildHelpedRes
+{
+	required string	helperName	= 1; //帮助者名字
+	required int32 queueType	= 2; //队列类型
+	optional int32 itemId		= 3; //建筑ID或科技ID
+	required int32 queueStatus	= 4; //队列状态
+	optional int64 disTime		= 5; //本次帮助减少的时间
+	optional string queueId		= 6; //队列ID 
+}
+
+//联盟留言
+message	GuildBBSMessage
+{
+	required int32 icon	= 1;
+	optional string	guildTag = 2;
+	required string	playerName = 3;
+	required string	playerId = 4;
+	required int64 time	= 5;
+	required string	message	= 6;
+	required int64 power = 7;
+	optional string pfIcon  = 8;  // 平台头像
+	optional int32 vipLvl = 9;
+	optional PlayerCommon common = 10; // 玩家通用数据
+}
+
+//获得联盟留言
+message	GetGuildBBSMessageResp
+{
+	repeated GuildBBSMessage message = 1;
+	required bool isForbiden = 2;
+}
+
+//联盟成员信息
+message	GuildMemeberInfo
+{
+	required string	playerId = 1;
+	required string	playerName = 2;
+	required int32 authority = 3;
+	required int64 power = 4;
+	required int32 icon	= 5;
+	required bool online = 6;
+	required int64 offlineTime = 7;
+	required int32 x = 8;
+	required int32 y = 9;
+	required int32 buildingLevel = 10;
+	optional int32 officer = 11;   // 官职(总统府官职)
+	optional bool isSendGift = 12; // 是否可以发送王战礼包
+	optional string pfIcon  = 13;  // 平台头像
+	optional int32 vipLvl		= 14;  // VIP等级
+	optional PlayerCommon common = 15; // 玩家通用数据
+	optional int32 guildOfficer = 16; //联盟官职
+	optional int32 mtpremarch = 17; //  有押镖玩法预设行军. 可指定为车头, 参与抢夺等
+}
+
+//获得联盟成员信息
+message	GetGuildMemeberInfoReq
+{
+	optional string	guildId	= 1;
+	optional string playerId = 2; // 查看平台好友联盟信息时，需要带上好友的playerId
+}
+
+//获得联盟成员信息
+message	GetGuildMemeberInfoResp
+{
+	repeated GuildMemeberInfo info = 1;
+	optional string	l1Name = 2;
+	optional string	l2Name = 3;
+	optional string	l3Name = 4;
+	optional string	l4Name = 5;
+	optional string	l5Name = 6;
+}
+
+//获得推荐邀请玩家请求
+message	GetRecommendInvitePlayerReq
+{
+	required int32 page	= 1;
+}
+
+//获得推荐邀请玩家请求
+message	GetRecommendInvitePlayerResp
+{
+	repeated GuildApplyInfo	info = 1;
+}
+
+//联盟申请信息
+message	GuildApplyInfo
+{
+	required string	playerId = 1;
+	optional string	playerName = 2;
+	optional int64 power = 3;
+	optional int32 vip = 4;
+	optional string	language = 5;
+	optional int32 icon	= 6;
+	optional int32 buildingLevel = 7;
+	optional int32 commonderLevel =	8;
+	optional string	guildTag = 9;
+	optional bool vipStatus	= 10;
+	optional int64 killEnemy = 11;
+	optional string pfIcon = 12; //平台头像
+	optional PlayerCommon common = 13; // 玩家通用数据
+}
+
+//获得联盟收到的申请
+message	GetGuildPlayerApplyResp
+{
+	repeated GuildApplyInfo	info = 1;
+}
+
+//获得联盟发出的邀请
+message	GetGuildPlayerInviteResp
+{
+	repeated GuildApplyInfo	info = 1;
+}
+
+//屏蔽玩家留言
+message	ForbidPlayerPostMessageReq
+{
+	required string	playerId = 1;
+}
+
+//屏蔽玩家列表
+message	GetForbidPlayerListResp
+{
+	repeated GuildApplyInfo	info = 1;
+}
+
+//取消屏蔽玩家
+message	CancelForbinPlayerReq
+{
+	required string	playerId = 1;
+}
+
+message	GetPlayerGuildApplyResp
+{
+	repeated GetGuildInfoResp info = 1;
+}
+
+//联盟快照
+message	HPGuildSnapshot
+{
+	required GetGuildInfoResp info = 1;
+}
+
+//联盟日志类型
+enum GuildLogType
+{
+	CREATE = 1;//创建
+	JOIN = 2;//加入
+	KICK = 3;//踢出
+	QUIT = 4;//退出
+	KICK_OUT = 5;//踢出(新,包含操作人员信息)
+	BUILD_RES = 6;//建矿
+	REMOVE_RES = 7;//拆矿
+}
+
+//联盟日志
+message	HPGuildLog
+{
+	required GuildLogType logType =	1;
+	required string	param =	2;
+	required int64 time	= 3;
+	repeated string params = 4;//新增参数字段,从类型5及以后的日志采用此字段
+}
+
+
+//获得联盟日志
+message	GetGuildLog
+{
+	repeated HPGuildLog	info = 1;
+}
+
+//获取盟友援助信息
+message	GetGuildAssistenceInfoReq
+{
+	required string	playerId = 1;//玩家Id
+}
+
+message	GetGuildAssistenceInfoResp
+{
+	optional int32 maxCnt =	1;//最大援助数
+	optional int32 curCnt =	2;//当前援助数
+}
+
+//联盟商店商品信息
+message	HPGuildShopItem
+{
+	required int32 itemId		= 1; //商品id
+	required int32 count		= 2; //可购买数量
+	required int32 price		= 3; //兑换价格
+}
+
+//联盟商店信息
+message	HPGetGuildShopInfoResp{
+	repeated HPGuildShopItem shopItem 	= 1; //商品列表
+	required int64 guildScore			= 2; //联盟积分
+	required int64 contribution			= 3; //联盟贡献
+}
+
+//购买/补充联盟商店道具
+message	HPGuildShopBuyReq
+{
+	required int32 itemId	= 1;
+	required int32 count	= 2;
+}
+
+// 通知联盟商店补货
+message HPInviteAddShopItem
+{
+	required string itemName	= 1;//商品名称
+}
+
+//联盟商店购买/补货记录
+message	GuildShopLog
+{
+	required string	name	= 1;
+	required int32 itemId	= 2;
+	required int32 count	= 3;
+	required int32 cost		= 4;
+	required int64 time		= 5;
+}
+
+//获取购买/补货记录信息
+message	HPGetGuildShopLogResp
+{
+	repeated GuildShopLog shopLog =	1;
+}
+
+//联盟贡献排行类型
+enum DonateRankType
+{
+	DAILY_RANK	= 1; //日排行
+	WEEK_RANK	= 2; //周排行
+	TOTAL_RANK	= 3; //总排行
+}
+
+//联盟捐献排行信息
+message	GuildDonateRankInfo
+{
+	required string	playerId	= 1; // 玩家Id
+	required string	playerName	= 2; // 玩家名
+	required int32 icon			= 3; // 头像
+	optional string pfIcon		= 4; // 平台头像
+	required int32 authority	= 5; // 权限等级
+	required int32 donate		= 6; // 捐献科技值
+	required int64 contribution	= 7; // 联盟贡献
+
+}
+
+//获取联盟贡献排行
+message	GuildGetDonateRank
+{
+	required DonateRankType rankType	= 1; //排行类型
+}
+
+message	GuildGetDonateRankResp
+{
+	repeated GuildDonateRankInfo rankInfo	= 1;
+	required int64 nextRefreshTime		= 2; //排行更新时间
+	required DonateRankType rankType	= 3; //排行类型
+}
+
+//联盟排行类型
+enum GuildRankType
+{
+	GR_DAY_KILL	 		 = 1;  //今日击杀
+	GR_DAY_KILLED	     = 2;  //今日战损
+	GR_DAY_RES_ROB	     = 3;  //今日资源掠夺
+	GR_DAY_RES_LOST	     = 4;  //今日资源被掠夺
+	GR_DAY_ONLINE_TM	 = 5;  //今日在线
+	GR_GUILD_JOIN_TM	 = 6;  //入盟时间
+	GR_AVG_ONLINE		 = 7;  //三日平均在线
+	GR_GUILD_D_CONTRI    = 8;  //日捐献排行
+	GR_GUILD_W_CONTRI    = 9;  //周捐献排行
+	GR_GUILD_CONTRI	     = 10; //总捐献排行
+	GR_GUILD_BOUNTY		 = 11; //悬赏排行
+	GR_GUILD_AWD_BOUNTY	 = 12; //领取赏金排行
+	GR_GUILD_COUNTER_ATK = 13; //反击排行
+	GR_KILL	 		 	 = 14; //总击杀
+	GR_KILLED	     	 = 15; //总战损
+	GR_RES_ROB	     	 = 16; //总资源掠夺
+	GR_RES_LOST	     	 = 17; //总资源被掠夺
+	GR_HELP			 	 = 18; //联盟帮助
+	GR_MASS     	 	 = 19; //联盟集结
+	GR_TREASURE		     = 20; //联盟宝箱
+	GR_GATHER		     = 21; //联盟采集
+	GR_KILLMONSTER	     = 22; //联盟杀野怪
+}
+//联盟排行信息
+message	GuildRankInfo
+{
+	required string	playerId	= 1; // 玩家Id
+	required string	playerName	= 2; // 玩家名
+	required int32 icon			= 3; // 头像
+	optional string pfIcon		= 4; // 平台头像
+	required int32 authority	= 5; // 权限等级
+	required int64 score	    = 6; // 分数
+	optional int32 officeId     = 7; // 职位id
+
+}
+//获取联盟排行
+message	GuildGetRank
+{
+	required GuildRankType rankType	= 1; //排行类型
+}
+
+message	GuildGetRankResp
+{
+	repeated GuildRankInfo rankInfo	= 1;
+	optional GuildRankType rankType	= 2; //排行类型
+}
+
+//邀请联盟成员迁城
+message	InviteMoveCityReq
+{
+	required string	inviteeId =	1;//被邀请者id
+}
+
+// 联盟邀请函
+message InvitationLetter
+{
+	required string guildId		= 1;
+	required string guildName 	= 2; 
+	required string guildTag 	= 3;
+	required int32 guildFlag	= 4;
+	required int32 icon			= 5; //盟主头像
+	optional string pfIcon		= 6; //盟主平台头像
+	required int64 createTime	= 7; //邀请函创建时间
+	optional int32 vipLvl		= 8; //盟主vip等级
+	optional PlayerCommon common = 9; // 玩家通用数据
+	optional GuildRecommendType recommendType = 10; //推送类型
+}
+
+// QQ公会绑群groupOpenid信息
+message GroupOpenIdInfoPB
+{
+	required bool binded         = 1;  // 玩家所在联盟是否已绑定群
+	optional string groupOpenid  = 2;  // 和游戏联盟ID绑定的QQ群的group_openid
+	optional string groupKey     = 3;  // 和游戏联盟ID绑定的QQ群的group_key
+	optional int32 relation      = 4;  // 用户与群的关系，1:群主，2:管理员，3:普通成员，4:非成员
+	optional int32 errorCode     = 5;  // 请求返回错误码
+	optional string desc         = 6;  // 请求错误描述
+	optional string gc           = 7;  // 群号
+}
+
+// 联盟绑定的qq群或微信群信息
+message GuildBoundInfoPB
+{
+	required string guildBoundId  = 1;  // 联盟绑定的qq群或微信群群号
+    optional int32  noticeType    = 2;  // 值为0或不传此字段表示盟主刚建完群的时候通知；值非0表示点击时通知
+}
+
+// 发送qq群消息请求信息
+message SendQQGroupMsgReq
+{
+	required string groupOpenid = 1; // 分享指定群的key(群openid)
+	required string title       = 2; // 消息标题，最长45字节
+	required string desc        = 3; // 消息摘要，最长60字节
+	required string imageUrl    = 4; // 消息左侧缩略图URL
+}
+
+// 自定义玩家权限信息
+message GuildAuthInfo
+{
+	required int32 id		= 1;
+	repeated int32 authLvl	= 2;
+}
+
+// 修改联盟权限信息
+message ChangeAuthInfoReq
+{
+	repeated GuildAuthInfo authInfo = 1;
+}
+
+enum AuthId
+{
+	CREAT_ALLIANCE				= 1;	// 创建联盟
+	EDIT_ALLIANCE_NAME			= 2;	// 修改联盟名称
+	EDIT_ALLIANCE_SHORTNAME		= 3;	// 修改联盟简称
+	DISSOLVE_ALLIANCE			= 4;	// 解散联盟
+	ASSIGN_DIPLOMAT				= 5;	// 认命联盟外交官
+	ALLIANCE_LEADERSHIP_CHANGE	= 6;	// 联盟盟主转让
+	EDIT_ALLIANCE_FLAG			= 7;	// 修改联盟旗帜
+	EDIT_MEMBER_LEVEL_NAME		= 8;	// 修改联盟成员等级名称
+	EDIT_ALLIANCE_ANNOUNCEMENT	= 9;	// 编辑联盟宣言
+	EDIT_PUBLIC_RECRUIT			= 10;	// 开启公开招募
+	ALLIANCE_STORE_REPLENISH	= 11;	// 联盟商店补货
+	ALLIANCE_MANOR_SET			= 12;	// 联盟领地放置(拆除,遣返等通用)
+	PUBLICRECRUIT				= 13;	// 联盟公开招募权限
+	YURIREVENGE					= 14;	// 开启尤里复仇
+	ALLIANCE_SCIENCE_RESEARCH	= 15;	// 研究联盟科技(推荐科技通用)
+	EDIT_ALLIANCE_NOTICE		= 16;	// 修改联盟公告
+	INVITE_TO_JOIN_ALLIANCE		= 17;	// 邀请加入联盟(批准/拒绝申请通用)
+	EXPEL_ALLIANCE				= 18;	// 踢出联盟
+	ALLIANCE_SETTING			= 19;	// 联盟设置
+	MESSAGE_LEAVING_AUTHORITY	= 20;	// 联盟留言
+	CLEARRESOUCE				= 21;	// 清理资源点
+	SUPER_WEAPON_SIGN_UP		= 22;	// 超级武器报名
+	ALLIANCEBEATBACKCLEARRECORD	= 23;	// 清理联盟悬赏记录
+	AMEND_MEMBER_AUTHORITY		= 24;	// 修改别人的权限
+	CHANGE_MEMBER_LEVEL			= 25;	// 修改联盟成员等级
+	QUIT_ALLIANCE				= 26;	// 退出联盟
+	INVITE_TO_MOVE				= 28;	// 邀请迁城
+	MEMBER_LIST					= 29;	// 查看联盟成员
+	AUTHORITY_INFO				= 32;	// 查看权限
+	ALL_MEMBER_MAIL				= 33;	// 全体邮件
+	MEMBER_ONLINE				= 34;	// 在线情况
+	MEMBER_POSITION				= 35;	// 成员分布
+	ALLIANCE_SIGN				= 36;	// 联盟标记
+	SNED_SUPER_WEAPON_GIFT		= 37;	// 颁发超级武器礼包
+	APPOINT_OFFICER				= 38;	// 任命官员
+	REPLACE_LEADER				= 39;	// 取代联盟盟主
+	RECV_RANKMAIL				= 40;   // 收取联盟排行邮件
+	REPLACE_LEADER_ADVANCE		= 41;	// 提前取代联盟盟主
+	GUILD_CHAT_PERMISSION		= 42;	// 联盟聊天权限
+	GUILD_REPORT_PERMISSION		= 43;	// 联盟聊天战报分享权限
+	WAR_FLAG_AUTH				= 44;	// 战旗插旗和拆除
+	WAR_FLAG_MARCH				= 45;	// 建造遣返及任命
+	VOICE_ROOM_MODEL_CHANGE		= 47;	// 修改语音聊天室权限
+	DICTATE_MODEL_CHAT			= 48;	// 指挥模式下发言
+	TIBERIUM_WAR_MANGER			= 49;	// 泰伯利亚之战管理权限
+	ALLIANCE_CARNIVAL_DELETE	= 50;   // 联盟总动员删除任务
+	
+	XZQ_SIGN_UP                 = 52;   //小站区报名
+	SPACE_MECHA_PLACE_AUTH   	= 53;	//星甲召唤玩法放置舱体
+	SPACE_MECHA_NOTICE_AUTH     = 54;   //星甲召唤联盟官员号召盟友
+	
+	GUILD_DRAGON_ATK_OPEN       = 55;    //开启巨龙来袭
+	SCHEDULE_EDIT_AUTH          = 56;    //待办事项编辑权限
+}
+
+// 联盟标记信息
+message GuildSign
+{
+	required int32 id		= 1;	// 标记id
+	required int32 posX		= 2;	// 标记X坐标
+	required int32 posY		= 3;	// 标记Y坐标
+	optional string	info	= 4;	// 标记内容
+}
+
+// 添加联盟标记
+message GuildAddSignReq
+{
+	required  GuildSign signInfo	= 1;
+}
+
+// 移除联盟标记
+message GuildRemoveSignReq
+{
+	required  int32	signId	= 1;
+}
+
+//无盟玩家响应联盟推荐
+message NoGuildMemberApplyRecommend
+{
+    required string guildId         = 1; //联盟ID
+}
+
+//死盟玩家响应联盟推荐
+message DeadGuildMemberApplyRecommend
+{
+    required int32 result           = 1; //加入还是拒绝（0拒绝，1表示加入）
+	optional string guildId         = 2; //联盟ID
+}
+
+//联盟推荐类型
+enum GuildRecommendType
+{
+     NOGUILD     = 1; //野人玩家推送
+	 DEADGUILDA  = 2; //死盟A玩家推送
+	 DEADGUILDB  = 3; //死盟B玩家推送
+}
+
+
+// 申请联盟官员
+message ApplyGuildOfficerReq
+{
+	required int32 officerId = 1;
+}
+
+
+// 获取联盟官员申请列表
+message GetOfficerApplyListReq
+{
+	required int32 officerId = 1;
+}
+
+message GetOfficerApplyListResp
+{
+	repeated GuildMemeberInfo applicant = 1;
+}
+
+
+// 任命联盟官员
+message AppointGuildOfficerReq
+{
+	required string tarPlayerId = 1;
+	required int32	officerId	= 2;
+}
+
+
+// 解除联盟官员
+message DismissGuildOfficerReq
+{
+	required string tarPlayerId = 1;
+}
+
+//联盟语音聊天模式
+enum VoiceRoomModel
+{
+     LIBERTY    = 0; // 自由模式
+	 DICTATE    = 1; // 指挥模式
+}
+
+// 修改联盟语音房间模式
+message GuildVoiceChangeModelReq
+{
+	required VoiceRoomModel model	= 1;
+}
+
+// 同步联盟语音房间信息
+message GuildVoiceRoomInfoNtfResp
+{
+	optional int32 memberCount		= 1;
+	optional VoiceRoomModel model	= 2;
+}
+
+// 主力部队信息	
+message MainForceInfo{
+	repeated SoldierType type	= 1;
+}
+
+// 编辑主战兵种
+message EditMainForce{
+	required int32 opType 	= 1; // 1 设置 2 取消
+	required SoldierType type = 2;
+}
+
+message GuildRewardFlag{
+	repeated int32 flagIds = 1;//已解锁的奖励旗帜id
+}

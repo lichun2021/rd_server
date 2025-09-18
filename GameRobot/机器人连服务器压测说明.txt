@@ -1,0 +1,59 @@
+
+1. game/cfg/app.cfg中需要修改的配置项
+
+# 调试模式
+isDebug = true
+
+# 机器人模式
+robotMode = true 
+
+# 协议安全
+protocolSecure = false
+
+# 单服总最大注册人数
+registerMaxNum = 10000 【可改可不改，看压测需求】
+
+# 同时会话数限制
+sessionMaxSize = 6000 【可改可不改，看压测需求】
+
+# 回话安全协议频率
+sessionPPS = 0
+
+# 连接速度控制
+connectSpeed = 0
+
+# 会话空闲超时(60s)
+sessionIdleTime = 60000 【robot端与game端保持一致，不要设得太低】
+
+
+2. robot/cfg/app.cfg中需要修改的配置项
+
+# 服务器ip和端口
+server = 10.0.2.56:9595
+
+# 服务器编号
+serverId = 60005
+
+# 机器人起始id
+robotStartId = 0
+
+# 机器人在线数量
+robotOnlineCnt = 10
+
+# 机器人注册总数
+robotRegisterCnt = 20
+
+# 机器人在线人数与在线人数上限的差值
+robotOnlineCntGap = 2 【允许实际在线机器人数与 robotOnlineCnt 配置数量之间存在的差值上限。当实际注册的机器人数量未达到 robotRegisterCnt 配置数，
+                        且实际在线的机器人数已达到 robotOnlineCnt 数量（实际是 robotOnlineCnt - robotOnlineCntGap），后面注册进来的机器人直接做下线处理，
+						即保证实际在线机器人数量不会超过配置上限】
+
+# 限定时间内导入玩家，单位分钟
+registerTimeLimit = 1 【这里表示1分钟内导入20个机器人】
+
+
+
+
+
+
+

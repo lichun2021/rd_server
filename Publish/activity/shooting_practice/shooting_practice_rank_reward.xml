@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rankUpper="1" rankLower="1" reward="30000_840165_60,30000_840165_50" />
+      <data id="2" rankUpper="2" rankLower="2" reward="30000_840165_60,30000_840165_50" />
+      <data id="3" rankUpper="3" rankLower="3" reward="30000_840165_60,30000_840165_50" />
+      <data id="4" rankUpper="4" rankLower="10" reward="30000_840165_60,30000_840165_50" />
+      <data id="5" rankUpper="11" rankLower="20" reward="30000_840165_60,30000_840165_50" />
+      <data id="6" rankUpper="21" rankLower="50" reward="30000_840165_60,30000_840165_50" />
+      <data id="7" rankUpper="51" rankLower="70" reward="30000_840165_60,30000_840165_50" />
+      <data id="8" rankUpper="71" rankLower="100" reward="30000_840165_60,30000_840165_50" />
+</root>

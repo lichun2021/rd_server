@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" material1="30000_9990017_1" material2="30000_802002_3" target="30000_802003_1" limit="2000" />
+      <data id="2" material1="30000_9990018_1" material2="30000_802001_3" target="30000_802002_1" limit="2000" />
+      <data id="3" material1="30000_9990017_2" material2="30000_801003_2" target="30000_801004_1" limit="2000" />
+      <data id="4" material1="30000_9990018_2" material2="30000_801002_2" target="30000_801003_1" limit="2000" />
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="270001" giftStage="1" channelType="android" />
+      <data giftId="270002" giftStage="2" channelType="android" />
+      <data giftId="270003" giftStage="3" channelType="android" />
+      <data giftId="270004" giftStage="4" channelType="android" />
+      <data giftId="270005" giftStage="5" channelType="android" />
+      <data giftId="270006" giftStage="6" channelType="android" />
+      <data giftId="280001" giftStage="1" channelType="ios" />
+      <data giftId="280002" giftStage="2" channelType="ios" />
+      <data giftId="280003" giftStage="3" channelType="ios" />
+      <data giftId="280004" giftStage="4" channelType="ios" />
+      <data giftId="280005" giftStage="5" channelType="ios" />
+      <data giftId="280006" giftStage="6" channelType="ios" />
+</root>

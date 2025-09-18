@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data Id="3160001" taskType="1036" conditionValue="1" exp="30" expLimit="90" />
+      <data Id="3160002" taskType="1020" conditionValue="0_1000" exp="3" expLimit="300" />
+      <data Id="3160003" taskType="1019" conditionValue="1_99_1" exp="1" expLimit="400" />
+      <data Id="3160004" taskType="1037" conditionValue="260" exp="30" expLimit="90" />
+      <data Id="3160005" taskType="1035" conditionValue="1" exp="1" expLimit="200" />
+</root>

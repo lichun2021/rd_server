@@ -1,0 +1,28 @@
+option java_package = "com.hawk.game.protocol";
+
+// 问卷信息
+message QuestionnaireInfo{
+	required int32 id = 1;	//问卷id 
+}
+
+
+// 推送问卷信息
+message SurveyInfo{
+	required int32 surveyId		= 1; // 问卷id
+	required int32 createTime	= 2; // 问卷创建时间	
+}
+
+//推送问卷列表
+message PushSurverInfo{
+	repeated SurveyInfo surveyInfo = 1;
+}
+
+// 获取问卷内容
+message GetSurveyInfoReq{
+	required int32 id = 1;	// 问卷id
+}
+
+message GetSurveyInfoResp{
+	required string surveyUrl = 1;	// 问卷url
+	optional string enterTips = 2;	// 问卷引导提示
+}

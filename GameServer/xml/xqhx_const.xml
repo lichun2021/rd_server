@@ -1,0 +1,48 @@
+# 小队正式队员数量上限
+teamMemberLimit = 40
+
+# 小队的数量
+teamNumLimit = 3
+
+# 报名时间
+warTimeHour = 13:00_20:00_21:00_22:00
+
+# 玩家主动退出副本,或弹出结算界面之后 多长时间强制回签原服 （时间短点比较好）
+forceMoveBackTime = 10
+
+# 小队名字的长度
+teamNameNumLimit = 1_8
+
+# 报名战队排行条件
+signRankLimit = 100
+
+# 开服时长不足的服务器不参与先驱回响(单位:秒)
+serverDelay = 1209600
+
+# 战绩评分参数
+recordPointParam = 0.1
+
+# 战绩评分限制（-3000;3000）
+recordPointLimit = -0.3;0.3
+
+# 近多少场参与战绩评分计算
+recordPointCount = 10
+
+# 第2~K名的小队随机一个作为队伍
+matchParam = 15
+
+# 灰度的服务器列表，逗号分割。为空则全开
+openServer = 
+
+# 比赛时长，单位：秒
+battleTime = 2400
+
+# 战队人数大于等于该人数，才可报名比赛
+memberSignupLimit = 10
+
+# 天赋点上限
+talentMax = 25
+
+# 天赋点道具ID
+talentItemId = 21063074
+

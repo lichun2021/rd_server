@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="930001" conditionType="600005" conditionValue="1480001_20" rewards="30000_1490006_2,30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2" />
+      <data achieveId="930002" conditionType="600005" conditionValue="1480001_50" rewards="30000_1480001_50,30000_850006_4,30000_850036_4,30000_850016_4,30000_850026_4" />
+      <data achieveId="930003" conditionType="600005" conditionValue="1480001_100" rewards="30000_1480001_100,30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6" />
+</root>

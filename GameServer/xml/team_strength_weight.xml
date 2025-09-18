@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="10" rankUpper="1" rankLower="1" weightValue="10000" />
+      <data id="2" type="10" rankUpper="2" rankLower="2" weightValue="10000" />
+      <data id="3" type="10" rankUpper="3" rankLower="3" weightValue="10000" />
+      <data id="4" type="10" rankUpper="4" rankLower="4" weightValue="10000" />
+      <data id="5" type="10" rankUpper="5" rankLower="5" weightValue="10000" />
+      <data id="6" type="10" rankUpper="6" rankLower="6" weightValue="10000" />
+      <data id="7" type="10" rankUpper="7" rankLower="7" weightValue="10000" />
+      <data id="8" type="10" rankUpper="8" rankLower="8" weightValue="10000" />
+      <data id="9" type="10" rankUpper="9" rankLower="9" weightValue="10000" />
+      <data id="10" type="10" rankUpper="10" rankLower="10" weightValue="10000" />
+      <data id="11" type="10" rankUpper="11" rankLower="11" weightValue="8000" />
+      <data id="12" type="10" rankUpper="12" rankLower="12" weightValue="8000" />
+      <data id="13" type="10" rankUpper="13" rankLower="13" weightValue="8000" />
+      <data id="14" type="10" rankUpper="14" rankLower="14" weightValue="8000" />
+      <data id="15" type="10" rankUpper="15" rankLower="15" weightValue="8000" />
+      <data id="16" type="10" rankUpper="16" rankLower="16" weightValue="6000" />
+      <data id="17" type="10" rankUpper="17" rankLower="17" weightValue="6000" />
+      <data id="18" type="10" rankUpper="18" rankLower="18" weightValue="6000" />
+      <data id="19" type="10" rankUpper="19" rankLower="19" weightValue="6000" />
+      <data id="20" type="10" rankUpper="20" rankLower="99" weightValue="6000" />
+      <data id="21" type="20" rankUpper="1" rankLower="10" weightValue="10000" />
+      <data id="22" type="20" rankUpper="11" rankLower="20" weightValue="8000" />
+      <data id="23" type="20" rankUpper="21" rankLower="30" weightValue="6000" />
+      <data id="24" type="20" rankUpper="31" rankLower="40" weightValue="4000" />
+      <data id="25" type="20" rankUpper="41" rankLower="99" weightValue="3000" />
+      <data id="26" type="30" rankUpper="1" rankLower="10" weightValue="10000" />
+      <data id="27" type="30" rankUpper="11" rankLower="20" weightValue="10000" />
+      <data id="28" type="30" rankUpper="21" rankLower="30" weightValue="8000" />
+      <data id="29" type="30" rankUpper="31" rankLower="40" weightValue="8000" />
+      <data id="30" type="30" rankUpper="41" rankLower="60" weightValue="6000" />
+      <data id="31" type="30" rankUpper="61" rankLower="80" weightValue="4000" />
+      <data id="32" type="30" rankUpper="81" rankLower="100" weightValue="3000" />
+      <data id="33" type="30" rankUpper="101" rankLower="99999" weightValue="0" />
+      <data id="34" type="40" rankUpper="1" rankLower="10" weightValue="10000" />
+      <data id="35" type="40" rankUpper="11" rankLower="20" weightValue="10000" />
+      <data id="36" type="40" rankUpper="21" rankLower="30" weightValue="8000" />
+      <data id="37" type="40" rankUpper="31" rankLower="40" weightValue="8000" />
+      <data id="38" type="40" rankUpper="41" rankLower="60" weightValue="6000" />
+      <data id="39" type="40" rankUpper="61" rankLower="80" weightValue="4000" />
+      <data id="40" type="40" rankUpper="81" rankLower="100" weightValue="3000" />
+      <data id="41" type="40" rankUpper="101" rankLower="99999" weightValue="0" />
+</root>

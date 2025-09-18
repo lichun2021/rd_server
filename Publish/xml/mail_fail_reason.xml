@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data 0="1" @TargetNotExist="@TargetChange" 0="0" />
+      <data 0="2" @TargetNotExist="@TargetProtected" 0="0" />
+      <data 0="3" @TargetNotExist="@TargetNotSameAlliance" 0="0" />
+      <data 0="4" @TargetNotExist="@TargetMoved" 0="0" />
+      <data 0="5" @TargetNotExist="@TeamSetOut" 0="0" />
+      <data 0="6" @TargetNotExist="@TeamFull" 0="0" />
+      <data 0="7" @TargetNotExist="@AssistanceFull" 0="0" />
+      <data 0="8" @TargetNotExist="@CancelBuildUpTitleSub" 0="0" />
+      <data 0="9" @TargetNotExist="@ResRecieve" 0="0" />
+      <data 0="100" @TargetNotExist="@TortureTimeToCaptureReason" 0="0" />
+      <data 0="101" @TargetNotExist="@HandReleaseTimeToCaptureReason" 0="0" />
+      <data 0="102" @TargetNotExist="@AutoReleaseTimeToMasterReason" 0="0" />
+      <data 0="103" @TargetNotExist="@SaveReleaseTimeToMasterReason" 0="0" />
+      <data 0="104" @TargetNotExist="@SaveReleaseTimeToCaptureReason" 0="0" />
+      <data 0="105" @TargetNotExist="@ReachHomeToCaptureReason" 0="0" />
+      <data 0="106" @TargetNotExist="@StartKillToCaptureReason" 0="0" />
+      <data 0="107" @TargetNotExist="@KilledToMasterReason" 0="0" />
+      <data 0="108" @TargetNotExist="@KilledToCaptureReason" 0="0" />
+      <data 0="109" @TargetNotExist="@BasitonChangeReason" 0="0" />
+      <data 0="110" @TargetNotExist="@BasitonOccupyReason" 0="0" />
+      <data 0="111" @TargetNotExist="@BasitonLostReason" 0="0" />
+      <data 0="112" @TargetNotExist="@SuperMineChangeReason" 0="0" />
+      <data 0="113" @TargetNotExist="OccupyGuildManorReason" 0="1" />
+      <data 0="114" @TargetNotExist="@BrokenGuildPointReason" 0="0" />
+      <data 0="115" @TargetNotExist="NuclearVoteStartReason" 0="1" />
+      <data 0="116" @TargetNotExist="@NuclearVotePassReason" 0="0" />
+      <data 0="117" @TargetNotExist="@NuclearVoteCancelReason" 0="0" />
+      <data 0="118" @TargetNotExist="WeatherControllerVoteStartReason" 0="1" />
+      <data 0="119" @TargetNotExist="@WeatherControllerVotePassReason" 0="0" />
+      <data 0="120" @TargetNotExist="@WeatherControllerVoteCancelReason" 0="0" />
+      <data 0="121" @TargetNotExist="@payMailReason" 0="0" />
+      <data 0="122" @TargetNotExist="RoundRankReason" 0="0" />
+      <data 0="123" @TargetNotExist="RoundStageRankReason" 0="0" />
+      <data 0="124" @TargetNotExist="RoundScoreReason" 0="0" />
+      <data 0="125" @TargetNotExist="@ThunderStormBoomReason" 0="0" />
+      <data 0="126" @TargetNotExist="@BeHitByThunderStormReason" 0="0" />
+</root>

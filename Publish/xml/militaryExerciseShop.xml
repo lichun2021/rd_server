@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" unlockTime="0" cost="10000_1019_40" item="30000_810001_1" convertUpLimit="50" />
+      <data id="2" unlockTime="0" cost="10000_1019_120" item="30000_850007_1" convertUpLimit="999" />
+      <data id="3" unlockTime="0" cost="10000_1019_120" item="30000_850037_1" convertUpLimit="999" />
+      <data id="4" unlockTime="0" cost="10000_1019_120" item="30000_850017_1" convertUpLimit="999" />
+      <data id="5" unlockTime="0" cost="10000_1019_120" item="30000_850027_1" convertUpLimit="999" />
+      <data id="6" unlockTime="0" cost="10000_1019_100" item="30000_830001_1" convertUpLimit="3" />
+      <data id="7" unlockTime="0" cost="10000_1019_200" item="30000_1000002_1" convertUpLimit="20" />
+      <data id="8" unlockTime="0" cost="10000_1019_300" item="30000_800101_1" convertUpLimit="3" />
+      <data id="9" unlockTime="0" cost="10000_1019_75" item="30000_105050_1" convertUpLimit="20" />
+      <data id="10" unlockTime="0" cost="10000_1019_300" item="30000_800000_1" convertUpLimit="10" />
+      <data id="11" unlockTime="0" cost="10000_1019_30" item="30000_800001_1" convertUpLimit="100" />
+      <data id="12" unlockTime="0" cost="10000_1019_225" item="30000_820002_1" convertUpLimit="10" />
+      <data id="13" unlockTime="0" cost="10000_1019_500" item="30000_1800001_1" convertUpLimit="10" />
+      <data id="14" unlockTime="0" cost="10000_1019_50" item="30000_1800000_1" convertUpLimit="100" />
+</root>

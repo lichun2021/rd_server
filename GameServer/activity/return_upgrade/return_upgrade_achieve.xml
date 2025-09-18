@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="3461001" achieveType="1" conditionType="500011" conditionValue="0_99_20" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461002" achieveType="1" conditionType="31100" conditionValue="0_1000000" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461003" achieveType="1" conditionType="230100" conditionValue="10" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461004" achieveType="1" conditionType="20100" conditionValue="0_1000" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461005" achieveType="1" conditionType="112100" conditionValue="20" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461006" achieveType="1" conditionType="111100" conditionValue="10" rewards="30000_3460001_20,30000_1300017_20,30000_810001_2,30000_1780040_2" />
+      <data achieveId="3461007" achieveType="2" conditionType="170204" conditionValue="346_2" rewards="30000_3460001_100,30000_1300017_100,30000_810001_10,30000_1780040_10" />
+      <data achieveId="3461008" achieveType="2" conditionType="170204" conditionValue="346_4" rewards="30000_3460001_200,30000_1300017_200,30000_810001_20,30000_1780040_20" />
+      <data achieveId="3461009" achieveType="2" conditionType="170204" conditionValue="346_6" rewards="30000_3460001_500,30000_1300017_500,30000_810001_50,30000_1780040_50" />
+      <data achieveId="3461010" achieveType="2" conditionType="151100" conditionValue="1001_500" rewards="30000_3460001_200,30000_1300017_200,30000_810001_20,30000_1780040_20" />
+      <data achieveId="3461011" achieveType="2" conditionType="151100" conditionValue="1001_1000" rewards="30000_3460001_400,30000_1300017_400,30000_810001_40,30000_1780040_40" />
+      <data achieveId="3461012" achieveType="2" conditionType="151100" conditionValue="1001_2000" rewards="30000_3460001_1000,30000_1300017_1000,30000_810001_100,30000_1780040_100" />
+      <data achieveId="3461013" achieveType="2" conditionType="151100" conditionValue="1000_300" rewards="30000_3460001_200,30000_1300017_200,30000_810001_20,30000_1780040_20" />
+      <data achieveId="3461014" achieveType="2" conditionType="151100" conditionValue="1000_600" rewards="30000_3460001_400,30000_1300017_400,30000_810001_40,30000_1780040_40" />
+      <data achieveId="3461015" achieveType="2" conditionType="151100" conditionValue="1000_1000" rewards="30000_3460001_1000,30000_1300017_1000,30000_810001_100,30000_1780040_100" />
+</root>

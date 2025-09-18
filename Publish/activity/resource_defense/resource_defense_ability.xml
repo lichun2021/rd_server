@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1101" skillType="1" quality="3" group="1" randomWeight="1000" effectNum="1" para="10000" />
+      <data id="1102" skillType="2" quality="3" group="1" randomWeight="1000" effectNum="1" para="2000" />
+      <data id="1103" skillType="3" quality="3" group="1" randomWeight="1000" effectNum="1" />
+      <data id="1104" skillType="4" quality="3" group="1" randomWeight="1000" effectNum="1" para="10000" />
+      <data id="1105" skillType="5" quality="3" group="1" randomWeight="1000" effectNum="1" />
+      <data id="2201" skillType="1" quality="4" group="2" randomWeight="1000" effectNum="2" para="10000" />
+      <data id="2202" skillType="2" quality="4" group="2" randomWeight="1000" effectNum="2" para="2000" />
+      <data id="2203" skillType="3" quality="4" group="2" randomWeight="1000" effectNum="2" />
+      <data id="2204" skillType="4" quality="4" group="2" randomWeight="1000" effectNum="2" para="10000" />
+      <data id="2205" skillType="5" quality="4" group="2" randomWeight="1000" effectNum="2" />
+      <data id="3301" skillType="1" quality="5" group="3" randomWeight="1000" effectNum="3" para="10000" />
+      <data id="3302" skillType="2" quality="5" group="3" randomWeight="1000" effectNum="3" para="2000" />
+      <data id="3303" skillType="3" quality="5" group="3" randomWeight="1000" effectNum="3" />
+      <data id="3304" skillType="4" quality="5" group="3" randomWeight="1000" effectNum="3" para="10000" />
+      <data id="3305" skillType="5" quality="5" group="3" randomWeight="1000" effectNum="3" />
+</root>

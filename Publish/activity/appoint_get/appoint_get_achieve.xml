@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="331001" conditionType="140900" conditionValue="1" rewards="30000_1400009_1" isReset="1" />
+      <data achieveId="331002" conditionType="170100" conditionValue="150" rewards="30000_1400009_1" isReset="1" />
+      <data achieveId="331003" conditionType="170100" conditionValue="300" rewards="30000_1400009_1" isReset="1" />
+      <data achieveId="331004" conditionType="700093" conditionValue="6" rewards="30000_1400009_4" isReset="1" />
+      <data achieveId="331005" conditionType="700093" conditionValue="30" rewards="30000_1400009_18" isReset="1" />
+      <data achieveId="331006" conditionType="700093" conditionValue="68" rewards="30000_1400009_33" isReset="1" />
+      <data achieveId="331007" conditionType="700093" conditionValue="100" rewards="30000_1400009_30" isReset="0" />
+      <data achieveId="331008" conditionType="700093" conditionValue="300" rewards="30000_1400009_60" isReset="0" />
+      <data achieveId="331009" conditionType="700093" conditionValue="600" rewards="30000_1400009_90" isReset="0" />
+      <data achieveId="331010" conditionType="700093" conditionValue="1000" rewards="30000_1400009_120" isReset="0" />
+      <data achieveId="331011" conditionType="700093" conditionValue="2000" rewards="30000_1400009_300" isReset="0" />
+      <data achieveId="331012" conditionType="700093" conditionValue="3000" rewards="30000_1400009_399" isReset="0" />
+</root>

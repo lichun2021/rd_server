@@ -1,0 +1,30 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 老角色vip等级要求
+vipLimit = 5
+
+# 老角色基地等级要求
+baseLimit = 20
+
+# 新角色和账号注册时间的时间间隔（天）
+timeLimit = 1
+
+# 活动触发后持续时间 （秒）
+lastTime = 1296000
+
+# 触发基地等级
+openLimit = 10
+
+# 触发间隔（秒）
+intervalTime = 1728000
+
+# 取不到值时默认赋予一个五星英雄数量
+defaultHero = 20
+
+# 取不到值时默认赋予一个机甲最高阶
+defaultMecha = 8
+
+# 取不到值时默认赋予一个装备研究总等级
+defaultTech = 1000
+

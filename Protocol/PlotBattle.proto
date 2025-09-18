@@ -1,0 +1,90 @@
+option java_package	= "com.hawk.game.protocol";
+
+//请求剧情战役信息
+message PlotBattleInfoReq {	
+	
+}
+
+//请求的时候同步, 以及服务器主动推送. 当客户端上传之后会同步该条协议
+message SynPlotBattleInfo {
+	optional LevelStatusMsg msg = 1; //关卡
+}
+
+
+//关卡状态 如果关卡1已经是打通过的，不同步该协议   第一次打通关卡1的时候 如果有下一关&& 下一关是可开启的发关卡2状态为OPEN. 否则 发关卡1CROSSED的状态.
+message LevelStatusMsg {
+	optional int32 levelId = 1; // 关卡ID
+	optional LevelState  state = 2; //状态
+}
+
+//上传战斗 服务器会存入一个临时变量 记录上次上传的时间，如果上次上传的时间 +　花费的时间，小于当前的系统时间．　那么也判断属于作弊．
+message UploadBattleReq {
+	optional int32 levelsId = 1; //关卡ID
+	optional int32 costTime = 3; //花费的时间秒数. 
+}
+
+//上传战斗的结果返回
+message UploadBattleResp {
+	optional int32 levelsId = 1; //关卡ID
+	optional BattleResult battleResult = 2; // 同步上传的战斗成功失败 
+}
+
+
+message UploadActionLogReq {
+	required ActionType type = 1; //行为类型
+	required int32 levelsId = 2; //关卡ID
+}
+
+enum ActionType {
+	SUCCESS_QUIT		= 0; //成功退出
+	PROGRESS_QUIT 		= 1; //进度条中
+	ACCORD_QUIT	  		= 2; //主动退出
+	EXCEPTION_QUIT		= 3; //异常退出
+	TIMEOUT_QUIT		= 4; //超时退出
+	ALL_DEAD_QUIT		= 5; //全兵死亡退出
+	ENTER_BATTLEGROUD	= 6; //进入战场
+	
+}
+
+//战斗状态
+enum BattleResult {
+	SUCCESS = 1;//成功
+	FAIL    = 2; //失败
+}
+
+//关卡状态
+enum LevelState {
+	OPEN   =1;  //开启未通关
+	CROSSED = 2;//通关. 
+}
+
+// 领取cr英雄试练奖励
+message CrMissionRewardReq{
+	required int32 score	    = 1;
+	optional bool sus           = 2; //是否挑战成功
+	optional string playerId    = 3; //被挑战者的名字
+}
+
+//联盟排行信息
+message	CRRankPlayerInfo
+{
+    required RankElement element = 1; 
+	optional string	playerId	 = 2; // 玩家Id
+	optional string	playerName	 = 3; // 玩家名
+	optional int32 icon			 = 4; // 头像
+	optional string pfIcon		 = 5; // 平台头像
+	optional int32 authority	 = 6; // 权限等级
+	optional int64 score	     = 7; // 分数
+	optional int32 officeId      = 8; // 职位id
+
+}
+
+enum RankElement{
+    Player = 1;
+	NPC = 2;
+}
+
+message	CRRankResp
+{
+	repeated CRRankPlayerInfo rankInfo	= 1;
+}

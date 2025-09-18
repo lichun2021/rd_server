@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data swId="1001" type="1" unlockConsumption="30000_9990061_100" showTime="2024-08-31 00:00:00" />
+      <data swId="1002" type="1" unlockConsumption="30000_9990062_100" showTime="2024-08-31 00:00:00" />
+      <data swId="1003" type="1" unlockConsumption="30000_9990065_100" showTime="2024-08-31 00:00:00" />
+      <data swId="1004" type="1" unlockConsumption="30000_9990067_100" showTime="2024-08-31 00:00:00" />
+      <data swId="1005" type="1" unlockConsumption="30000_9990069_100" showTime="2024-08-31 00:00:00" />
+      <data swId="1006" type="1" unlockConsumption="30000_9990071_100" showTime="2024-08-31 00:00:00" />
+      <data swId="2001" type="2" showTime="2024-08-31 00:00:00" />
+      <data swId="2002" type="2" unlockConsumption="30000_9990064_100" showTime="2024-08-31 00:00:00" />
+      <data swId="2003" type="2" unlockConsumption="30000_9990066_100" showTime="2024-08-31 00:00:00" />
+      <data swId="2004" type="2" unlockConsumption="30000_9990068_100" showTime="2024-08-31 00:00:00" />
+      <data swId="2005" type="2" unlockConsumption="30000_9990070_100" showTime="2099-08-31 00:00:00" />
+</root>

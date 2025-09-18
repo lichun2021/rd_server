@@ -1,0 +1,24 @@
+return {
+	prop =
+	{
+		activityId = 341,
+		name = [[邀请合服]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">临时介绍文本</font>]],
+		priority = 20000,
+		icon = [[Activity_Icon_305_Nor.png]],
+		selecticon = [[Activity_Icon_305_Sel.png]],
+		votingPlayerNum = 100,
+	},
+	merge_invite_server_rank = [[id	areaId	serverId	power	rank	isKing
+1	1	1	1	1	1
+10001	1	10001	90000000	1	1
+10002	1	10002	80000000	2	1
+10003	1	10003	70000000	3	0
+10004	1	10004	60000000	4	0
+20001	2	10001	90000000	1	1
+20002	2	10002	80000000	2	0
+20003	2	10003	70000000	3	0
+20004	2	10004	60000000	4	0
+]],
+
+}

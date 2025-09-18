@@ -1,0 +1,66 @@
+# 小队指挥官数量上限
+teamCommanderLimit = 2
+
+# 小队正式队员数量上限
+teamMemberLimit = 28
+
+# 小队预备队员数量上限
+teamPreparationLimit = 10
+
+# 小队的数量
+teamNumLimit = 4
+
+# 报名时间
+warTimeHour = 13:00_20:00
+
+# 玩家主动退出副本,或弹出结算界面之后 多长时间强制回签原服 （时间短点比较好）
+forceMoveBackTime = 10
+
+# 小队名字的长度
+teamNameNumLimit = 1_8
+
+# 创建小队消耗
+createTeamCost = 10000_1001_200
+
+# 报名战队排行条件
+signRankLimit = 100
+
+# 开服时长不足的服务器不参与星海激战(单位:秒)
+serverDelay = 777600
+
+# 战绩评分参数
+recordPointParam = 0.1
+
+# 战绩评分限制（-3000;3000）
+recordPointLimit = -0.3;0.3
+
+# 近多少场参与战绩评分计算
+recordPointCount = 10
+
+# 第2~K名的小队随机一个作为队伍
+matchParam = 15
+
+# 商店初始化时间
+shopStartTime = 2024-8-26 00:00:00
+
+# 商店重置周期（天）
+shopRefreshTime = 7
+
+# 灰度的服务器列表，逗号分割。为空则全开
+openServer = 
+
+# 比赛时长，单位：秒
+battleTime = 2400
+
+# 前X秒预备队员无法进入战场，单位：秒
+preparationTime = 300
+
+# 累计进入战场的人数，注意是累计
+playerMax = 30
+
+# 战队人数大于等于该人数，才可报名比赛
+memberSignupLimit = 10
+
+# 根据开服时间划分不同匹配池
+serverMatchOpenDays = 1_90,91_365,366_2190,2191_999999
+

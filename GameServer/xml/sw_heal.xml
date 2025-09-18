@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" deadNumMin="0" deadNumMax="999999" healRate="0" />
+      <data id="1002" deadNumMin="1000000" deadNumMax="1999999" healRate="0" />
+      <data id="1003" deadNumMin="2000000" deadNumMax="2999999" healRate="0" />
+      <data id="1004" deadNumMin="3000000" deadNumMax="4999999" healRate="0" />
+      <data id="1005" deadNumMin="5000000" deadNumMax="6999999" healRate="0" />
+      <data id="1006" deadNumMin="7000000" deadNumMax="9999999" healRate="0" />
+      <data id="1007" deadNumMin="10000000" deadNumMax="999999999" healRate="0" />
+</root>

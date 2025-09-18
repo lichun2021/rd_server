@@ -1,0 +1,48 @@
+return {
+	prop =
+	{
+		activityId = 75,
+		name = [[幸运星]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官在活动界面可购买礼包，礼包内有超值道具和抽奖次数。<br/>2. 获得抽奖次数后可在上方抽奖区域消耗抽奖次数进行抽奖。<br/>3. 礼包为直购礼包，购买消耗的金额不计入首充、累充等活动中。<br/>4. 活动期间，礼包每日重置。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 传说通用碎片数量3概率1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 装备打造券数量15概率12%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 未来机甲宝箱数量300概率16%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 装备打造券数量75概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 1级能量源数量300概率16%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 荣誉勋章数量600概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">7. 研究晶体数量120概率12%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">8. 荣誉勋章数量120概率12%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">9. 研究晶体数量600概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">10. 加速8小时数量1概率16%。</font>]],
+		priority = 20220,
+		icon = [[Activity_Icon_75_Nor.png]],
+		selecticon = [[Activity_Icon_75_Sel.png]],
+		bigIcon = [[Activity_u_Banner_Render_01.png]],
+		typeName = [[]],
+		lotteryCnt = 10,
+		rewardId = 1,
+		cost = [[30000_9990005_1]],
+	},
+	lucky_star_package = [[payGiftId	platform	showRMB
+2	1	1
+250001	2	38800
+250002	2	58800
+250003	2	68800
+250004	2	88800
+250005	2	168800
+260001	1	38800
+260002	1	58800
+260003	1	68800
+260004	1	88800
+260005	1	168800
+]],
+	lucky_star_lottery = [[id	rewards	singleWeight
+1	2	1
+1	30000_1000003_3	100
+2	30000_800000_15	1200
+3	30000_840194_300	1600
+4	30000_800000_75	500
+5	30000_1480001_300	1600
+6	30000_1300017_600	500
+7	30000_1800000_120	1200
+8	30000_1300017_120	1200
+9	30000_1800000_600	500
+10	30000_810002_1	1600
+]],
+	lucky_star_gift = [[id	award
+1	2
+1	10000_1007_1000,10000_1008_1000
+]],
+
+}

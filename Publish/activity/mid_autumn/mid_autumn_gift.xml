@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" chooseItems="5" cost="10000_1000_60" />
+      <data giftId="2" chooseItems="5" cost="10000_1000_300" />
+      <data giftId="3" chooseItems="5" cost="10000_1000_680" />
+      <data giftId="4" chooseItems="5" cost="10000_1000_1280" />
+      <data giftId="5" chooseItems="5" cost="10000_1000_3280" />
+      <data giftId="6" chooseItems="5" cost="10000_1000_6480" />
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" poolId="1" weight="5" gainItem="30000_1000003_6" isCore="1" />
+      <data id="1002" poolId="1" weight="10" gainItem="30000_1800001_60" />
+      <data id="1003" poolId="1" weight="20" gainItem="30000_1800001_60" />
+      <data id="1004" poolId="1" weight="30" gainItem="30000_1800001_80" />
+      <data id="1005" poolId="1" weight="50" gainItem="30000_1000003_6" />
+      <data id="1006" poolId="1" weight="60" gainItem="30000_21063005_5" />
+      <data id="1007" poolId="1" weight="70" gainItem="30000_21063005_10" />
+      <data id="1008" poolId="1" weight="80" gainItem="30000_21063005_15" />
+      <data id="1009" poolId="1" weight="90" gainItem="30000_21063005_30" />
+      <data id="1010" poolId="1" weight="100" gainItem="30000_1000005_5" />
+      <data id="2001" poolId="2" weight="5" gainItem="30000_800000_12" isCore="1" />
+      <data id="2002" poolId="2" weight="10" gainItem="30000_800000_18" />
+      <data id="2003" poolId="2" weight="20" gainItem="30000_800000_25" />
+      <data id="2004" poolId="2" weight="30" gainItem="30000_800000_30" />
+      <data id="2005" poolId="2" weight="50" gainItem="30000_1800001_80" />
+      <data id="2006" poolId="2" weight="60" gainItem="30000_1800000_50" />
+      <data id="2007" poolId="2" weight="70" gainItem="30000_1800000_100" />
+      <data id="2008" poolId="2" weight="80" gainItem="30000_1800000_150" />
+      <data id="2009" poolId="2" weight="90" gainItem="30000_1800000_200" />
+      <data id="2010" poolId="2" weight="100" gainItem="30000_21063005_50" />
+</root>

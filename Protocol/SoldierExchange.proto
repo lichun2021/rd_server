@@ -1,0 +1,85 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Const.proto";
+import "SuperSoldier.proto";
+import "PlantSoldierSchool.proto";
+import "Building.proto";
+import "Army.proto";
+import "Armour.proto";
+import "Player.proto";
+import "PlantFactory.proto";
+import "Mail.proto";
+import "MechaCore.proto";
+
+
+// 请求转换 预览, 和真实请求同pb hp不同 返回 PBSEResp
+message PBSEReq{
+	optional SoldierType fromType = 1;
+	optional SoldierType toType = 2;
+}
+
+// 转换 
+message PBSEResp{
+	optional SoldierType fromType = 1;
+	optional SoldierType toType = 2;
+	optional PBSEInfo fromInfo = 3; // 转换前
+	optional PBSEInfo toInfo = 4;  // 后
+	optional int64 createTime = 5; // 时间
+	repeated int32 checkErr = 9; // 在预览模式下, 不满足条件id
+}
+
+
+// 兵种转换详情
+message PBSEInfo{
+	
+	repeated EffectPB effects = 2; // 属性们
+	repeated PBSuperSoldierInfo superSoldiers = 3; // 涉及机甲
+	optional PBPlantSodlierSync plantSoldier = 4; // 泰能强化
+	repeated BuildingPB building 			= 5; // 涉及建筑
+	repeated MailSoldierPB armyInfos 		= 6; // 兵
+	optional ArmourBriefInfo armours 		= 7; // 装备 () 
+	repeated PBPlantTech plantTechs			= 8; // 泰能强化建筑
+	optional MechaCoreInfoSync mechaCore    = 9; // 机甲核心
+	repeated NationHospitalArmy nhArmyInfo  = 10; //国家医院中的死兵信息
+}
+
+message NationHospitalArmy
+{
+	optional MailSoldierPB armyInfos   = 1; //兵
+	optional int32 nationHospitalComm1 = 2; //国家医院中待恢复的普通死兵数量
+	optional int32 nationHospitalComm2 = 3; //国家医院中待收领的普通死兵数量
+	optional int32 nationHospitalTSZZ1 = 4; //国家医院中待恢复的统帅之战死兵数量
+	optional int32 nationHospitalTSZZ2 = 5; //国家医院中待收领的统帅之战死兵数量
+}
+
+// 请求购买商店 返回success 并刷新活动sync  HP.code2.SOLDIER_EXCHANGE_BUY_REQ
+message PBSEShopBuyReq{
+	optional int32 shopId = 1;
+	optional int32 cnt = 2;
+}
+
+// 活动sync HP.code2.SOLDIER_EXCHANGE_INFO_SYNC
+message PBSEActivitySync{
+	optional int32 exchangeTimes = 1; // 已转换次数 
+	optional SoldierType lastExchangeType = 2; // 上次转换, 可买对应商店内容
+	repeated PBSEShopBuyCnt shopBuycnt = 3; 
+	repeated string histroyId = 4; // 历史转换记录id列表
+	repeated PBSEResp histroyDetail = 5; // 历史转换记录详细
+	optional int64 cd = 6; // 下次冷却时刻
+}
+
+message PBSEShopBuyCnt{
+	optional int32 shopId = 1;
+	optional int32 buyCnt = 2;
+}
+
+// 请求历史记录 HP.code2.SOLDIER_EXCHANGE_HISTORY_C . 返回 PBSEResp
+message PBSEHistoryReq{
+	optional string exchangeId = 1; // 历史记录id
+}
+
+// 通知跳转机甲/泰能页面
+message PBSEOpenPageReq{
+	optional int32 page = 1; // 1,2,3,4 看策划定
+}
+

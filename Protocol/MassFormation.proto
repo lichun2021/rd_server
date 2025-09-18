@@ -1,0 +1,114 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "World.proto";
+
+// 集结编队枚举
+enum MassFormationIndex
+{
+	FORMATION_1 = 1;
+	FORMATION_2 = 2;
+	FORMATION_3 = 3;
+	FORMATION_4 = 4;
+	FORMATION_5 = 5;
+	FORMATION_6 = 6;
+}
+
+// 编队简要信息页
+message FormationBriefPage
+{
+	repeated FormationBriefInfo info = 1; 
+}
+
+// 编队简要信息
+message FormationBriefInfo
+{
+	required MassFormationIndex index = 1; // 编号
+	optional string name = 2; // 编队名字
+	optional int32 ldIcon = 3; // 队长头像
+	optional string ldName = 4; // 队长名字
+	optional string ldPfIcon = 5; // 队长平台头像
+	optional int32 memberCount = 6; // 成员数量
+	optional int64 updateTime = 7; // 更新时间
+	optional bool leader = 8; // 是否是队长
+	optional bool joine = 9; // 是否是自己加入的
+	optional int32 massCount = 10; // 集结数量上限
+}
+
+// 编队详细信息
+message FormationDetialInfo
+{
+	required MassFormationIndex index = 1; // 编号
+	optional string name = 2; // 编队名字
+	repeated FormationMemberInfo memberInfo = 3; // 成员信息
+}
+
+// 编队成员信息
+message FormationMemberInfo
+{
+	required string playerId = 1;
+	required string playerName = 2;
+	required int32 icon = 3;
+	required string pfIcon = 4;
+	required int64 power = 5;
+	required int32 authory = 6; // 联盟阶级
+	required int32 officer = 7; // 联盟官职
+	required bool fight = 8; // 是否出战 
+	required bool isLeader = 9; // 是否是队长 
+}
+
+// 编队操作类型
+enum FormationOperType 
+{
+	SET_LEADER = 1; // 设置队长
+	SET_FIGHT = 2; // 设置出战
+	DEL_FIGHT = 3; // 取消出战
+	SET_NAME = 4; // 设置编队名字
+	FORMATION_DETIAL = 5; // 请求编队信息详情
+	FORMATION_BRIEF = 6; // 请求编队简要信息信息
+	FORMATION_LEADER_BRIEF = 7; // 请求队长简要编队信息(用于出征)
+	DEL_RED = 8; // 取消红点
+	FORMATION_MASS = 9; // 发起集结
+}
+
+// 编队操作
+message FormationOper
+{
+	required FormationOperType type = 1;
+	optional MassFormationIndex index = 2;
+	optional string param = 3; // 玩家id or 编队名字
+}
+
+// 需要加入的编队推送
+message FormationJoinNoticePush
+{
+	repeated FormationJoinNotice info = 1;
+}
+
+message FormationJoinNotice
+{
+	required MassFormationIndex index = 1;
+	required string marchId = 2;
+	optional bool isLeader = 3;
+	required string name = 4;
+	optional WorldMarchStatus status = 5;
+	optional int64 massStartTime = 6;
+}
+
+// 玩家集结数量上限
+message MassPlyerCountReq
+{
+	required string tarPlayerId = 1;
+	optional bool isNation = 2; // 是否是国家行军
+}
+
+// 小红点推送
+message FormationRedPush
+{
+	repeated MassFormationIndex index = 1;
+}
+
+// 忽略集结邀请
+message RemoveFormationNotice
+{
+	required string marchId = 1;
+}

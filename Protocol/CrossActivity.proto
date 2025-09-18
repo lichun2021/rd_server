@@ -1,0 +1,632 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Activity.proto";
+
+// 联盟信息
+message CGuildInfo{
+	required string id		= 1;
+	required string name	= 2; //名称
+	required string tag		= 3; //简称
+	required int32 guildFlag = 4; //联盟旗帜
+	required string serverId = 5;
+}
+
+// 玩家信息
+message CPlayerInfo{
+	required string id		= 1;
+	required string name	= 2;
+	required string serverId = 3;
+	optional string guildId	= 4;
+	optional int32 guildAuth = 5;
+	optional int32  icon     = 6; //头像
+	optional string pfIcon 	 = 7; //平台头像 
+	
+}
+
+enum CrossActivityState{
+	C_SHOW		=	1; //预热阶段
+	C_OPEN		=	2; //开启阶段
+	C_END		=	3; //结果展示阶段
+	C_HIDDEN	=	4; //关闭隐藏阶段
+}
+
+// 跨服活动状态信息
+message CrossStateInfo{
+	required CrossActivityState state 	= 1;
+	optional int32 stage			= 2;//活动进行次数
+	optional int64 showTime			= 5;//活动显示时间(ms)
+	optional int64 startTime		= 6;//活动开始时间(ms)
+	optional int64 endTime			= 7;//活动结束时间(ms)
+	optional int64 hiddenTime		= 8;//活动隐藏时间(ms)
+}
+
+// 活动界面信息
+message GetCrossPageInfoResp{
+	optional CrossStateInfo stateInfo	= 1; //活动状态信息
+	repeated CrossRankInfo 	serverRank	= 2; //区服排行
+	optional int32 selfRank				= 3; //个人排行名次
+	optional int32 selfGuildRank		= 4; //联盟名次
+	repeated CAchieveInfo taskInfo 		= 5; //成就信息列表
+	optional int64 crossBackTime		= 6; //上次迁回时间
+	
+	repeated FortressOccupyInfo occupyInfo = 7; //要塞占领信息
+	
+}
+
+// 跨服活动结果推送
+message CrossResultSync{
+	repeated CrossRankInfo	serverRank	= 1;
+	repeated CrossRankInfo	selfRank	= 2;
+	repeated CrossRankInfo	guildRank	= 3;
+}
+
+
+/********************跨服活动成就***********************/
+// 跨服活动成就状态
+enum CAchieveStatus
+{
+	C_NOT_REACH			= 0;	// 未达成
+	C_NOT_REWARD		= 1;	// 已达成未领取
+	C_TOOKEN			= 2;	// 已领取
+}
+
+// 跨服活动成就信息
+message CAchieveInfo
+{
+	required int32 achieveId		= 1; //成就id
+	required int64 value 	= 2; //进度
+	required CAchieveStatus status	= 3; //状态 
+}
+
+// 跨服成就信息列表
+message CAchieveInfoList
+{
+	repeated CAchieveInfo taskInfo = 1;
+}
+
+// 领取跨服成就奖励
+message GetCAchieveRewardReq
+{
+	required int32 achieveId	= 1; //任务id
+}
+/********************跨服活动成就***********************/
+
+/********************跨服活动排行***********************/
+
+// 排行类型
+enum CrossRankType{
+	C_SELF_RANK		= 1; // 积分比拼个人排行	
+	C_GUILD_RANK	= 2; // 积分比拼联盟排行
+	C_SERVER_RANK	= 3; // 积分比拼区服排行
+	C_TALENT_RANK	= 4; // 战略点个人排行
+	C_TALENT_GUILD_RANK = 5; // 战略点联盟排行
+}
+
+// 排行信息
+message CrossRankInfo{
+	required int32 rank			= 1;
+	required string serverId	= 3; //区服id
+	optional string name		= 2; //玩家/联盟名称
+	optional string guildTag	= 4; //联盟简称
+	required int64 score		= 5; //积分
+	optional string playerId    = 6; //玩家ID
+    repeated int32 personalProtectSwitch = 7; // playerId那个player对应的个保法开关
+	optional int32  icon     = 8; //头像
+	optional string pfIcon 	 = 9; //平台头像 
+	optional string pguild 	 = 10;//玩家联盟 
+}
+
+// 获取跨服积分排行榜信息
+message GetCrossRankInfoReq{
+	required CrossRankType rankType = 1;
+}
+
+message GetCrossRankResp{
+	repeated CrossRankInfo rankInfo = 1; //排行信息
+	optional CrossRankInfo selfRank = 2; //己方个人/联盟排行
+	required CrossRankType rankType = 3;
+	
+}
+
+/********************跨服活动排行***********************/
+
+
+
+
+/********************跨服二期(要塞)***********************/
+
+
+// 航海之星排名信息返回
+message CrossStarRankResp
+{
+	repeated CrossStarRankInfo rankInfo = 1; // 排名信息
+	repeated CrossConquerRankInfo conquerRankInfo = 2; // 征服排行榜
+	optional int64 endTime = 3;//结束时间
+}
+
+// 航海之星排名信息
+message CrossStarRankInfo
+{
+	required string serverId = 1; // 区分id
+	required int32 count 	 = 2; // 勋章数量
+}
+
+// 跨服征服排行榜
+message CrossConquerRankInfo
+{
+	required string serverId = 1; // 区分id
+	required int32 count 	 = 2; // 征服次数
+}
+
+// 航海之星记录信息返回
+message CrossRecordResp
+{
+	repeated CrossRecordInfo record = 1; //航海之星记录信息
+}
+
+// 航海之星记录信息
+message CrossRecordInfo
+{
+	required int32 turn  = 1;// 期数
+	required int32 rank  = 2;// 排名
+	required int32 count = 3;// 数量
+}
+
+// 要塞占领信息
+message FortressOccupyInfo
+{
+	required string fortressServerId = 1; //要塞所属区分
+	required string occupyServerId   = 2; //当前占领区分
+	required bool hasNpc 			 = 3; //是否有npc 默认按照true显示
+	required int32 posX 			 = 4; //坐标x
+	required int32 posY 			 = 5; //坐标y
+}
+/********************跨服要塞***********************/
+
+
+
+/********************跨服三期***********************/
+
+// 远征充能界面信息
+message CrossChargePageInfo
+{
+	required CrossFightPeriod period 		= 1; // 当前阶段
+	repeated CrossRankInfo serverScoreRankInfo = 2; // 服务器积分排行信息
+	optional string openPresidentServer		= 6; // 开启王战的服务器
+	optional CrossStateInfo stateInfo		= 7; // 活动状态信息
+	repeated AchieveItemPB item				= 8; // 跨服任务
+	optional string presidentServer			= 9; // 总统区服
+	optional string presidentTag			= 10;// 总统联盟
+	optional string presidentName			= 11;// 总统名字
+	optional int32 presidentIcon			= 12;// 总统头像
+	optional string presidentPfIcon			= 13;// 总统头像
+	optional int32 fightShowTime 			= 14;// 展示阶段开始时间,距离活动开启时间(s) 
+	optional int32 fightScoreTime  			= 15;// 积分比拼阶段开始时间,距离活动开启时间(s) 
+	optional int32 fightPrepareTime  		= 16;// 备战阶段开始时间,距离活动开启时间(s) 
+	optional int32 fightPresidentTime  		= 17;// 王战开始时间,距离活动开启时间(s)
+	optional int32 fightShowEndTime  		= 18;// 结果展示阶段开始时间,距离活动开启时间间(s) 
+	optional int32 ownRank = 20; // 个人积分排名
+	optional int64 ownRankScore = 21; // 个人积分
+	optional int32 guildRank = 22; // 联盟积分排名
+	optional int64 guildRankScore = 23;// 联盟积分
+	repeated CrossOccupyFortressCount fortressInfo = 24; // 占领远征要塞数量
+	optional int32 ownTalentPoint = 25; // 个人获得的战略点
+	optional int32 officeId = 26; // 官职id
+	optional int32 remainTotalTalentPoint = 27; // 国家剩余战略点
+	optional bool isFightPresident = 28; // 是否是战时司令
+	optional int64 rewardTime = 29; // 领奖时间
+	optional string presidentId			= 30;// 总统ID
+}
+
+// 占领远征要塞数量
+message CrossOccupyFortressCount
+{
+	required string serverId = 1;
+	required int32 count = 2;
+}
+
+// 远征充能
+message CrossDoChargeReq
+{
+	required int32 chargeCount = 1; // 充能数量
+}
+
+// 投票
+message CrossDoVoteReq
+{
+	required string serverId = 1; // 投票目标服
+}
+
+// 跨服战斗阶段细分
+enum CrossFightPeriod
+{
+	CROSS_FIGHT_SCORE = 1; // 积分比拼阶段
+	CROSS_FIGHT_PREPARE = 2; // 备战阶段
+	CROSS_FIGHT_PRESIDENT = 3; // 王战阶段
+	CROSS_FIGHT_SHOW_END = 4; // 等待结束阶段
+	CROSS_FIGHT_ACTIVITY_END = 5; // 活动结束了
+}
+
+// 跨服税收记录类型
+enum CrossTaxRecordType
+{
+	CROSS_TAX_SEND = 1; // 交税
+	CROSS_TAX_RECEIVED = 2; // 收税
+}
+
+// 跨服收税信息
+message CrossTaxInfo
+{
+	required int32 resType = 1; // 资源类型
+	required int64 resValue = 2;// 资源数量
+}
+
+// 跨服税收记录
+message CrossTaxRecord
+{
+	required CrossTaxRecordType type = 1; // 记录类型
+	required string fromServerId = 2; //从哪个服
+	required string toServerId = 3; //交到哪个服
+	repeated CrossTaxInfo tax = 4; //税收信息
+	optional int64 time = 5; // 时间戳
+}
+
+// 记录类型
+enum CorssRecordType
+{
+	CROSS_SEND_TAX = 1; // 颁发税收
+	CROSS_SKILL = 3; // 司令技能
+}
+
+// 跨服税收颁发记录
+message CrossTaxSendRecord
+{
+	repeated CrossTaxInfo tax = 1; //颁发信息
+	optional int64 time = 2; // 时间戳
+	optional string fromPlayerName = 3;
+	optional string toPlayerName = 4;
+	optional CorssRecordType type = 5;
+	optional CrossSkillSendInfo crossSkill= 6; // 司令技能释放
+}
+
+message CrossSkillSendInfo{
+	optional string crossSkillId = 1;
+	optional int64 time = 2; // 时间戳
+	optional string fromPlayerName = 3; 
+}
+
+// 跨服税收颁发记录回包
+message CrossTaxSendRecordResp
+{
+	repeated CrossTaxSendRecord record = 1;
+}
+
+// 请求颁发税
+message CrossTaxSendReq
+{
+	repeated CrossTaxInfo tax = 1; //颁发信息
+	required string targetPlayerId = 2; //目标玩家
+}
+
+// 跨服税收(仓库)界面信息
+message CrossTaxPageInfo
+{
+	repeated CrossTaxInfo tax = 1; // 当前仓库里的
+	repeated CrossTaxRecord record = 2; //交税记录
+}
+
+// 获取任务奖励
+message GetCrossMissionAward
+{
+	required int32 missionId = 1; // 任务id
+}
+
+message CrossHospitalArmy
+{
+	required int32 armyId = 1;
+	required int32 count = 2;
+}
+
+// 医院界面信息
+message CrossHospitalPageInfo
+{
+	repeated CrossHospitalArmy armys = 1;
+	optional int64 endTime = 2;
+}
+
+// 请求恢复医院死兵
+message CrossHospitalRecoverReq
+{
+	repeated CrossHospitalArmy armys = 1;
+}
+
+/********************跨服三期***********************/
+
+/********************跨服四期***********************/
+
+
+// 跨服礼包信息
+message CrossGiftInfoPush
+{
+	repeated CrossGiftInfo giftInfo = 1; // 礼包信息(有发放记录的从才推)
+	repeated CrossGiftRecord record = 2; // 礼包发放信息
+}
+
+message CrossGiftInfo
+{
+	required int32 giftId = 1;
+	required int32 sendCount = 2;
+}
+
+// 礼包发放请求
+message CrossGiftSendReq
+{
+	required int32 giftId = 1;
+	repeated string targetPlayerId = 2;
+}
+
+// 礼包记录请求
+message CrossGiftRecordReq
+{
+	required int32 type = 1; // 礼包类型
+}
+
+// 礼包记录返回
+message CrossGiftRecordResp
+{
+	repeated CrossGiftRecord record = 1; // 礼包类型
+}
+
+// 礼包记录
+message CrossGiftRecord
+{
+	required int64 sendTime = 1; // 礼包发放时间
+	required int32 giftId = 2; // 礼包ID
+	required string sendPlayerName = 3; // 发礼包玩家名字
+	required string playerName = 4; // 收礼包玩家名字
+	required string playerId = 5; // 收礼包玩家ID
+	optional string guildTag = 6; // 收礼包玩家工会名称
+	required string serverId = 7; // 收礼包玩家区分id	
+}
+
+// 能量塔信息同步
+message CrossPylonInfo
+{
+	required int32 currentCount = 1; // 世界上当前能量塔数量
+	required int64 nextRefreshTime = 2; // 下次刷新能量塔时间
+	required int32 occupyCount = 3; // 当前本服占领能量塔数量
+}
+
+// 跨服出战联盟信息返回
+message CrossFightGuildInfoResp
+{
+	repeated CrossFightGuildInfo info = 1; // 出战联盟信息
+	repeated CrossFightGuildInfo fightApplyInfo = 2; // 出战申请信息(只有战时司令显示)
+	optional bool hasInviteInfo = 3; // 是否有出战邀请(只有盟主显示)
+	required bool isFightPresident = 4; // 是否是战时司令
+	required bool isGuildLeader = 5; // 是否是联盟盟主
+	optional int64 lastApplyTime = 6; // 上次申请时间
+}
+
+// 跨服出战联盟信息
+message CrossFightGuildInfo
+{
+	required string guildId = 1; // 联盟id
+	required string guildTag = 2; // 联盟简称
+	required string guildName = 3; // 联盟名字
+	required string leaderId = 4; // 盟主id
+	required string leaderName = 5; // 盟主名字
+	required int32 guildFlag = 6; // 联盟旗帜
+	required int64 power = 7; // 联盟战力
+	required int32 currentCount = 8; // 当前人数
+	required int32 maxCount = 9; // 最大人数
+	required bool fight = 10; // 是否出战
+	optional int64 lastInvateTime = 11; // 上次邀请时间
+}
+
+// 改变联盟出战请求 返回通用成功
+message CrossFightGuildChageReq
+{
+	required string guildId = 1; // 联盟id
+	required bool fight = 2; // 是否出战
+}
+
+// 远征要塞排行信息请求
+message CrossFortressRankInfoReq {
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+message CrossFortressRankInfoResp
+{
+	repeated CrossFortressRankInfo info = 1; // 占领信息
+	required string owner = 2; // 当前归属
+}
+message CrossFortressRankInfo
+{
+	required string serverId = 1; // 服务器id
+	required int32 occupyTime = 2; // 占领时长
+}
+
+// 跨服礼包搜索玩家请求
+message CrossGiftSearchReq
+{
+	required string name = 1;
+	required int32 type = 2;
+}
+
+// 跨服礼包搜索成员信息
+message CrossGiftMemeberInfo
+{	
+	required CrossGiftMiniPlayerMsg miniPlayer = 1; //玩家的基础信息
+	required int32 officer = 5;
+	required bool isSendGift = 6; // 是否可以发送王战礼包
+	required int32 buildingLevel = 9;
+}
+
+// 跨服礼包中搜索玩家响应
+message CrossGiftSearchRes
+{
+	repeated CrossGiftMemeberInfo memeberInfo = 1;
+	optional string msg  = 2;//提示信息，当这个字段不为空时，不管memeberInfo，直接按msg弹框提示
+}
+
+message CrossGiftMiniPlayerMsg {
+	optional string playerId 			= 1;  //玩家ID
+	optional string playerName 			= 2; //玩家名字
+	optional int64 power 	  			=3;  //战力
+	optional int32  icon 				=4; //头像
+	optional string pfIcon 				=5; //平台头像
+	optional int32  offlineTime				=6; //离线时间  0为在线
+}
+
+/********************跨服四期***********************/
+
+/********************跨服四期优化***********************/
+
+// 跨服出战邀请/申请通用
+message CrossFightGuildCommon
+{
+	required string tarGuildId = 1; // 目标服联盟id
+}
+
+// 跨服出战通用
+message CrossFightCommon
+{
+	required bool approve = 1; // 是否同意出战邀请/申请
+	optional string guildId = 2; // 联盟id
+}
+
+// 跨服电塔归属国修改
+message CrossTowerOwnerChangeReq
+{
+	required int32 posX = 1; // 电塔坐标
+	required int32 posY = 2;
+	required string serverId = 3; // 服务器id
+}
+/********************跨服四期优化***********************/
+
+
+
+
+//联盟占领盟总时间同步
+message GuildOccupyAccumulateDataResp{
+	required string serverId  = 1; //当前占领区服ID
+	required string guildId   = 2; //当前占领联盟ID
+	required string guildName = 3; //当前占领联盟名称
+	required int64 occupyStartTime = 4; //当前占领开始占领时间
+	repeated GuildOccupyAccumulateData accumulates = 5; //联盟占领盟总统计时间数据
+	
+}
+
+//联盟占领盟主统计数据
+message GuildOccupyAccumulateData{
+	required string serverId  = 1; //区服ID
+	required string guildId   = 2; //联盟ID
+	required string guildName = 3; //联盟名称
+	required int32 occupyTime = 4; //占领累积时间
+
+} 
+
+
+
+// 能量塔信息同步
+message CrossPylonOccupyResp
+{
+	repeated CrossPylonData datas = 1; // 服务器攻占数量
+}
+
+message CrossPylonData{
+	required string serverId   = 1; //服务器ID
+	required int32 occupyCount = 2; //攻占数量
+
+}
+
+
+
+
+
+
+
+/**********************赛季相关************************************/
+
+//赛季数据推送
+message CrossActivitySeasonInfoResp{
+	required CrossActivitySeasonStateData stateData  =1; //状态数据
+}
+
+//积分数据
+message CrossActivitySeasonScoreDataResp{
+	required int32 score                             = 1; //当前分数
+	repeated  CrossActivitySeasonScoreRecord records = 2; //变化列表
+}
+
+
+//排行榜
+message CrossActivitySeasonScoreRankResp{
+	repeated  CrossActivitySeasonScoreRank ranks    = 1; //排行榜
+	optional  CrossActivitySeasonScoreRank selfRank = 2; //自己排行
+}
+
+
+
+
+
+
+//状态数据
+message CrossActivitySeasonStateData{
+	required CrossActivitySeasonState state 	= 1;//状态
+	optional int32 season                       = 2;//赛季
+	optional int64 showTime		            	= 3;//活动显示时间(ms)
+	optional int64 openTime	                	= 4;//活动开始时间(ms)
+	optional int64 endTime		            	= 5;//活动结束时间(ms)
+	optional int64 hiddenTime	             	= 6;//活动隐藏时间(ms)
+}
+
+
+
+
+//赛季状态
+enum CrossActivitySeasonState{
+	C_SEASON_SHOW		=	1; //预热阶段
+	C_SEASON_OPEN		=	2; //开启阶段
+	C_SEASON_END		=	3; //结果展示阶段
+	C_SEASON_HIDDEN	    =	4; //关闭隐藏阶段
+}
+
+
+
+
+//积分记录
+message CrossActivitySeasonScoreRecord{
+	required string targetServerId = 1;
+	required int32 win             = 2;
+	required int32 score           = 3;
+	required int64 time            = 4;
+	required int64 camp            = 5; //1攻击方  2防守方
+}
+
+
+// 排行信息
+message CrossActivitySeasonScoreRank{
+	required int32 rank			= 1; //排行
+	required string serverId	= 2; //区服id
+	required int64 score		= 3; //积分
+}
+
+
+
+//能量塔占领榜
+message CrossActivityPylonRankReq{
+	required string serverId = 1;
+
+}
+
+//能量塔占领榜
+message CrossActivityPylonRankResp{
+	required string serverId = 1;
+	repeated CrossRankInfo rankInfo = 2; //排行信息
+	optional CrossRankInfo selfRank = 3; //己方个人/联盟排行
+}
+
+/**********************赛季相关************************************/

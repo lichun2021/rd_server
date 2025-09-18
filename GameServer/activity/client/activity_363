@@ -1,0 +1,75 @@
+return {
+	prop =
+	{
+		activityId = 363,
+		name = [[秘境寻宝]],
+		title = [[秘境寻宝]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">
+1.活动期间，玩家可预设前进路线。设定完成后可消耗骰子前进，根据骰子的结果前进相应步数。路过宝箱时可获得奖励。达到路线终点后可进入新一轮游戏。<br/>
+2.在活动期间，完成指定任务可获得骰子。花费金条可购买骰子。当期活动未使用的骰子会保留到下期活动。<br/>
+3获得宝箱奖励时额外获得寻宝积分，积分累积到一定进度可额外获得奖励。活动结束时寻宝积分累积进度清零。<br/>
+4.寻宝积分可在兑换商店兑换奖励。兑换时消耗的寻宝积分不影响积分累积进度的统计。未使用的寻宝积分将在活动结束时按照1:1的比例兑换成初级自选资源。<br/>
+5.每期最多完成120轮活动。<br/>
+
+<br/><br/>物品列表及概率<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">高级宝箱 固定获得300寻宝积分</font><br/>随机获得以下数量泰能辉金：<br/>泰能辉金*128    概率0.1%<br/>泰能辉金*68    概率0.3%<br/>泰能辉金*38    概率0.6%<br/>泰能辉金*18    概率1%<br/>泰能辉金*10    概率3%<br/>泰能辉金*6    概率5%<br/>泰能辉金*3    概率10%<br/>泰能辉金*1    概率80%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">中级宝箱 固定获得100寻宝积分</font><br/>随机获得以下奖励：<br/>泰能辉金*18    概率0.2%<br/>泰矿母体*100   概率0.6%<br/>泰能辉金*12   概率1.2%<br/>泰矿母体*50    概率2%<br/>泰能辉金*4   概率6%<br/>泰矿母体*20   概率10%<br/>泰能辉金*1    概率20%<br/>泰矿母体*10    概率60%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">初级宝箱 固定获得50寻宝积分</font><br/>随机获得以下数量泰矿母体：<br/>泰矿母体*100    概率1%<br/>泰矿母体*60   概率2%<br/>泰矿母体*40   概率3%<br/>泰矿母体*30    概率4%<br/>泰矿母体*20    概率5%<br/>泰矿母体*15    概率10%<br/>泰矿母体*10    概率25%<br/>泰矿母体*5    概率50%
+ </font>]],
+		priority = 10062,
+		icon = [[Activity_Icon_363_Nor.png]],
+		selecticon = [[Activity_Icon_363_Sel.png]],
+		bigIcon = [[]],
+		gameMapRange = [[7,9]],
+		home = [[3,4]],
+		chooseCount = 15,
+		gameRefreshCount = 120,
+		randomItem = 1363002,
+		dicePrice = [[10000_1000_40]],
+		quickOpen = 5,
+		scoreItem = 1363001,
+	},
+	quest_treasure_achieve = [[achieveId	type	conditionType	conditionValue	rewards	title	gotoType	gotoValue
+1	1	1	1	2	2	1	2
+36310001	1	36102	750	30000_21065001_18,30000_9990042_16,30000_9990052_9,30000_21063005_100,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310002	1	36102	2000	30000_21065001_36,30000_9990042_32,30000_9990052_18,30000_21063005_200,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310003	1	36102	6000	30000_21065001_72,30000_9990042_48,30000_9990052_27,30000_21063005_300,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310004	1	36102	13000	30000_21065001_90,30000_9990042_64,30000_9990052_36,30000_21063005_400,30000_1780040_15	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310005	1	36102	24000	30000_21065001_99,30000_9990042_80,30000_9990052_45,30000_21063005_500,30000_1780040_15	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310006	1	36102	44000	30000_21065001_108,30000_9990042_96,30000_9990052_54,30000_21063005_600,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310007	1	36102	68000	30000_21065001_126,30000_9990042_112,30000_9990052_63,30000_21063005_700,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310008	1	36102	96000	30000_21065001_144,30000_9990042_128,30000_9990052_72,30000_21063005_800,30000_1780040_25	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36310009	1	36102	128000	30000_21065001_162,30000_9990042_144,30000_9990052_81,30000_21063005_900,30000_1780040_25	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">寻宝积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分</font>	-1	-1
+36320001	2	140900	1	30000_1363002_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{1}</font>天</font>	-1	-1
+36320002	2	700110	3	30000_1363002_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次军情任务</font>	2003	2003
+36320003	2	700110	10	30000_1363002_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次军情任务</font>	2003	2003
+36320004	2	700110	24	30000_1363002_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次军情任务</font>	2003	2003
+36330001	3	151100	40	30000_1363002_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+36330002	3	151100	120	30000_1363002_2,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+36330003	3	151100	300	30000_1363002_3,30000_850007_3,30000_850037_3,30000_850017_3,30000_850027_3	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+36330004	3	151100	600	30000_1363002_5,30000_850007_5,30000_850037_5,30000_850017_5,30000_850027_5	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+36330005	3	151100	1200	30000_1363002_8,30000_850007_8,30000_850037_8,30000_850017_8,30000_850027_8	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+36330006	3	151100	2400	30000_1363002_12,30000_850007_12,30000_850037_12,30000_850017_12,30000_850027_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>金条</font>	-1	-1
+]],
+	quest_treasure_shop = [[id	needItem	gainItem	times
+1	2	2	1
+1001	30000_1363001_6250	30000_1000005_5	1
+1002	30000_1363001_3000	30000_9990041_300	6
+1003	30000_1363001_3000	30000_9990051_150	6
+1004	30000_1363001_1500	30000_802005_55	15
+1005	30000_1363001_1500	30000_1300027_188	15
+1006	30000_1363001_750	30000_21063005_50	30
+1007	30000_1363001_750	30000_802004_50	30
+1008	30000_1363001_750	30000_800002_100	30
+1009	30000_1363001_750	30000_1782103_100	30
+1010	30000_1363001_750	30000_9990032_85	30
+1011	30000_1363001_750	30000_1300017_480	30
+1012	30000_1363001_750	30000_800000_45	30
+1013	30000_1363001_50	30000_810001_1	9999
+1014	30000_1363001_50	30000_1780045_1	9999
+]],
+	quest_treasure_box = [[id	name	count	coordinate	reward	boxScore
+1	2	2	2	2	1
+1	@Act363Box1	3,3	0_1,1_7,2_0,4_8,5_1,6_7	3630001	300
+2	@Act363Box2	12,12		3630002	100
+3	@Act363Box3	12,12		3630003	50
+]],
+
+}

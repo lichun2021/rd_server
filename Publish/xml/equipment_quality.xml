@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data qualityId="1" qualityUpEquipNum="1" gradeUpMaterialId="1158001" />
+      <data qualityId="2" qualityUpEquipNum="2" gradeUpMaterialId="1158002" />
+      <data qualityId="3" qualityUpEquipNum="3" gradeUpMaterialId="1158003" />
+      <data qualityId="4" qualityUpEquipNum="3" gradeUpMaterialId="1158004" />
+      <data qualityId="5" qualityUpEquipNum="3" gradeUpMaterialId="1158005" />
+      <data qualityId="6" gradeUpMaterialId="1158006" />
+</root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10020" cycle="1" orderType="1030" conditionVal="10" exp="5000" repeatVal="2" />
+      <data id="10090" cycle="1" orderType="1020" conditionVal="0_2000" exp="1000" repeatVal="15" />
+      <data id="10080" cycle="1" orderType="1017" conditionVal="301_310_10" exp="2000" repeatVal="6" />
+      <data id="10010" cycle="1" orderType="1010" conditionVal="1" exp="5000" repeatVal="2" />
+      <data id="10030" cycle="1" orderType="1017" conditionVal="401_410_10" exp="2000" repeatVal="5" />
+      <data id="10040" cycle="1" orderType="1012" conditionVal="8000_1" exp="2000" repeatVal="5" />
+      <data id="10050" cycle="1" orderType="1014" conditionVal="3" exp="3000" repeatVal="3" />
+      <data id="10060" cycle="1" orderType="1035" conditionVal="20" exp="600" repeatVal="15" />
+      <data id="10070" cycle="1" orderType="1028" conditionVal="0_200000" exp="1000" repeatVal="9" />
+      <data id="10100" cycle="1" orderType="1019" conditionVal="1_99_10" exp="200" repeatVal="25" />
+      <data id="20010" cycle="2" orderType="1006" conditionVal="0_1" exp="5000" repeatVal="2" />
+      <data id="20020" cycle="2" orderType="1030" conditionVal="10" exp="5000" repeatVal="2" />
+      <data id="20080" cycle="2" orderType="1013" conditionVal="10" exp="500" repeatVal="40" />
+      <data id="20070" cycle="2" orderType="1011" conditionVal="1" exp="2000" repeatVal="8" />
+      <data id="20050" cycle="2" orderType="1033" conditionVal="1" exp="500" repeatVal="24" />
+      <data id="20040" cycle="2" orderType="1036" conditionVal="1" exp="275" repeatVal="40" />
+      <data id="20090" cycle="2" orderType="1017" conditionVal="201_210_10" exp="2000" repeatVal="5" />
+      <data id="20100" cycle="2" orderType="1018" conditionVal="6000" exp="200" repeatVal="50" />
+      <data id="20060" cycle="2" orderType="1034" conditionVal="1" exp="800" repeatVal="10" />
+      <data id="20030" cycle="2" orderType="1010" conditionVal="1" exp="5000" repeatVal="1" />
+      <data id="30010" cycle="3" orderType="1030" conditionVal="10" exp="5000" repeatVal="2" />
+      <data id="30080" cycle="3" orderType="1017" conditionVal="301_310_10" exp="2000" repeatVal="20" />
+      <data id="30090" cycle="3" orderType="1020" conditionVal="0_2000" exp="1000" repeatVal="20" />
+      <data id="30050" cycle="3" orderType="1027" conditionVal="10" exp="3000" repeatVal="5" />
+      <data id="30060" cycle="3" orderType="1014" conditionVal="3" exp="3000" repeatVal="5" />
+      <data id="30070" cycle="3" orderType="1019" conditionVal="1_99_10" exp="300" repeatVal="50" />
+      <data id="30030" cycle="3" orderType="1031" conditionVal="1200_1" exp="11000" repeatVal="1" />
+      <data id="30100" cycle="3" orderType="1028" conditionVal="0_200000" exp="1000" repeatVal="10" />
+      <data id="30020" cycle="3" orderType="1037" conditionVal="1" exp="300" repeatVal="30" />
+      <data id="30040" cycle="3" orderType="1021" conditionVal="1" exp="3000" repeatVal="3" />
+      <data id="40010" cycle="4" orderType="1006" conditionVal="0_1" exp="5000" repeatVal="2" />
+      <data id="40020" cycle="4" orderType="1030" conditionVal="10" exp="5000" repeatVal="2" />
+      <data id="40080" cycle="4" orderType="1013" conditionVal="10" exp="750" repeatVal="60" />
+      <data id="40090" cycle="4" orderType="1017" conditionVal="201_210_10" exp="2000" repeatVal="20" />
+      <data id="40100" cycle="4" orderType="1018" conditionVal="6000" exp="200" repeatVal="90" />
+      <data id="40040" cycle="4" orderType="1033" conditionVal="1" exp="640" repeatVal="25" />
+      <data id="40070" cycle="4" orderType="1011" conditionVal="1" exp="2000" repeatVal="8" />
+      <data id="40030" cycle="4" orderType="1032" conditionVal="1200_1" exp="11000" repeatVal="1" />
+      <data id="40050" cycle="4" orderType="1034" conditionVal="1" exp="1000" repeatVal="10" />
+      <data id="40060" cycle="4" orderType="1021" conditionVal="1" exp="3000" repeatVal="3" />
+</root>

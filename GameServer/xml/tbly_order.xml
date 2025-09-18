@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="7" powerCost="50" effectTime="90" coolingTime="210" orderEffect="1717_5000" />
+      <data id="8" powerCost="50" effectTime="300" coolingTime="600" orderEffect="1718_20000" />
+      <data id="9" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1701_2000" exclusions="1,2,3,9,10,11,12,13,14,15,16" />
+      <data id="10" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1702_2000" exclusions="1,2,3,9,10,11,12,13,14,15,16" />
+      <data id="11" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1703_2000" exclusions="1,2,3,9,10,11,12,13,14,15,16" />
+      <data id="12" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1704_2000" exclusions="1,2,3,9,10,11,12,13,14,15,16" />
+      <data id="13" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1705_2000" exclusions="9,10,11,12,13,14,15,16" />
+      <data id="14" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1706_2000" exclusions="9,10,11,12,13,14,15,16" />
+      <data id="15" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1707_2000" exclusions="9,10,11,12,13,14,15,16" />
+      <data id="16" powerCost="300" effectTime="90" coolingTime="510" orderEffect="1708_2000" exclusions="9,10,11,12,13,14,15,16" />
+      <data id="17" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1709_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="18" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1710_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="19" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1711_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="20" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1712_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="21" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1713_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="22" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1714_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="23" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1715_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="24" powerCost="300" effectTime="135" coolingTime="465" orderEffect="1716_1500" exclusions="17,18,19,20,21,22,23,24" />
+      <data id="10001" powerCost="200" effectTime="90" coolingTime="510" />
+      <data id="10002" powerCost="100" effectTime="120" coolingTime="180" />
+      <data id="10003" powerCost="100" effectTime="120" coolingTime="180" />
+      <data id="10004" powerCost="800" coolingTime="600" />
+      <data id="10005" powerCost="300" coolingTime="900" />
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" giftId="1" reward="30000_800110_2" defaultChoose="1" />
+      <data id="2" giftId="1" reward="30000_800143_3" defaultChoose="0" />
+      <data id="3" giftId="1" reward="30000_1510003_15" defaultChoose="0" />
+      <data id="4" giftId="1" reward="30000_13310003_15" defaultChoose="0" />
+      <data id="5" giftId="1" reward="30000_810001_2" defaultChoose="0" />
+      <data id="6" giftId="2" reward="30000_800000_6" defaultChoose="1" />
+      <data id="7" giftId="2" reward="30000_1300017_36" defaultChoose="0" />
+      <data id="8" giftId="2" reward="30000_840194_72" defaultChoose="0" />
+      <data id="9" giftId="2" reward="30000_1480001_180" defaultChoose="0" />
+      <data id="10" giftId="2" reward="30000_1800000_30" defaultChoose="0" />
+      <data id="11" giftId="3" reward="30000_800000_20" defaultChoose="1" />
+      <data id="12" giftId="3" reward="30000_1300017_108" defaultChoose="0" />
+      <data id="13" giftId="3" reward="30000_840194_216" defaultChoose="0" />
+      <data id="14" giftId="3" reward="30000_1480001_540" defaultChoose="0" />
+      <data id="15" giftId="3" reward="30000_1800000_90" defaultChoose="0" />
+      <data id="16" giftId="4" reward="30000_800000_36" defaultChoose="1" />
+      <data id="17" giftId="4" reward="30000_1300017_192" defaultChoose="0" />
+      <data id="18" giftId="4" reward="30000_840194_384" defaultChoose="0" />
+      <data id="19" giftId="4" reward="30000_1480001_960" defaultChoose="0" />
+      <data id="20" giftId="4" reward="30000_1800000_160" defaultChoose="0" />
+      <data id="21" giftId="5" reward="30000_800000_45" defaultChoose="1" />
+      <data id="22" giftId="5" reward="30000_1300017_240" defaultChoose="0" />
+      <data id="23" giftId="5" reward="30000_1800000_210" defaultChoose="0" />
+      <data id="24" giftId="5" reward="30000_1800001_15" defaultChoose="0" />
+      <data id="25" giftId="5" reward="30000_1782103_25" defaultChoose="0" />
+      <data id="26" giftId="6" reward="30000_800000_55" defaultChoose="1" />
+      <data id="27" giftId="6" reward="30000_1300017_300" defaultChoose="0" />
+      <data id="28" giftId="6" reward="30000_1800000_260" defaultChoose="0" />
+      <data id="29" giftId="6" reward="30000_1800001_18" defaultChoose="0" />
+      <data id="30" giftId="6" reward="30000_1782103_30" defaultChoose="0" />
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rank="1" range="1200" awardPack="30000_883001_1,10000_1031_100000" />
+      <data id="2" rank="1" range="900_1199" awardPack="30000_883002_1,10000_1031_60000" />
+      <data id="3" rank="1" range="600_899" awardPack="30000_883003_1,10000_1031_40000" />
+      <data id="4" rank="1" range="300_599" awardPack="30000_883004_1,10000_1031_30000" />
+      <data id="5" rank="1" range="0_299" awardPack="30000_883005_1,10000_1031_20000" />
+      <data id="6" rank="2" range="1200" awardPack="30000_883006_1,10000_1031_80000" />
+      <data id="7" rank="2" range="900_1199" awardPack="30000_883007_1,10000_1031_48000" />
+      <data id="8" rank="2" range="600_899" awardPack="30000_883008_1,10000_1031_32000" />
+      <data id="9" rank="2" range="300_599" awardPack="30000_883009_1,10000_1031_24000" />
+      <data id="10" rank="2" range="0_299" awardPack="30000_883010_1,10000_1031_16000" />
+      <data id="11" rank="3" range="1200" awardPack="30000_883011_1,10000_1031_70000" />
+      <data id="12" rank="3" range="900_1199" awardPack="30000_883012_1,10000_1031_42000" />
+      <data id="13" rank="3" range="600_899" awardPack="30000_883013_1,10000_1031_28000" />
+      <data id="14" rank="3" range="300_599" awardPack="30000_883014_1,10000_1031_21000" />
+      <data id="15" rank="3" range="0_299" awardPack="30000_883015_1,10000_1031_14000" />
+      <data id="16" rank="4" range="1200" awardPack="30000_883016_1,10000_1031_60000" />
+      <data id="17" rank="4" range="900_1199" awardPack="30000_883017_1,10000_1031_36000" />
+      <data id="18" rank="4" range="600_899" awardPack="30000_883018_1,10000_1031_24000" />
+      <data id="19" rank="4" range="300_599" awardPack="30000_883019_1,10000_1031_18000" />
+      <data id="20" rank="4" range="0_299" awardPack="30000_883020_1,10000_1031_12000" />
+</root>

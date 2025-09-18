@@ -1,0 +1,33 @@
+# 解锁等级
+baseLimit = 3
+
+# 地图大小
+mapRange = 30,30
+
+# 通用货币ID
+currencyId = 30000_6000001_1
+
+# 主建筑type
+mainBuildtype = 1001
+
+# 抽卡奖池awardId
+awardId = 6000001
+
+# 单抽消耗
+cost1 = 30000_6000001_100
+
+# 十抽消耗
+cost2 = 30000_6000001_1000
+
+# 每日免费次数
+shopFreeTimes = 5
+
+# 免费抽取cd（秒）
+shopFreeCd = 7200
+
+# 每日最大抽取次数
+shopMaxTimes = 99999
+
+# 每日最大点赞次数
+thumbsUpMaxTimes = 100
+

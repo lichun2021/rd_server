@@ -1,0 +1,257 @@
+option java_package = "com.hawk.game.protocol";
+
+import "Const.proto";
+
+enum ASInfoRedisKey
+{
+	SERVERIP 	= 1; //目标服务器的IP
+	SERVERPORT 	= 2; //目标服务器的端口
+	ROOMID		= 3; //对应房间号id
+	ASERVERID	= 4; //主播服ID
+}
+
+//主播信息
+message AnchorServerInfoGS
+{
+	required string serverip 	= 1; //目标服务器的ip
+	required int32 	serverport 	= 2; //目标服务器的端口
+	required string token		= 3; //用于登录验证的token
+	required int32 	roomID		= 4; //对应房间号id
+}
+
+message AnchorPreviewListGS
+{
+	repeated AnchorPreviewInfoGS previewInfos = 1; //预告信息，当前没有主播时显示
+}
+
+enum AnchorPreviewInfoRedisKey
+{
+	ANCHORID	= 1;//主播ID
+	STARTTIME	= 2;//开始时间（单位S）
+	ENDTIME		= 3;//结束时间（单位S）
+	SEX			= 4;//性别
+	HD_ICON		= 5;//头像
+	LABEL		= 6;//主播标签（逗号分隔）
+	NAME		= 7;//名字
+}
+
+//主播预告信息
+message AnchorPreviewInfoGS
+{
+	required string anchorId	= 1;//主播ID
+	required int32 	startTime	= 2;//开始时间（单位S）
+	required int32 	endTime		= 3;//结束时间（单位S）
+	optional bool	sex			= 4;//性别
+	optional string icon		= 5;//头像
+	optional string label		= 6;//主播标签（逗号分隔）
+	required string name		= 7;//名字
+	optional bool 	isFollow    = 8;//是否关注
+}
+
+//玩家上线推送的主播消息
+message AnchorInfoLiteGS
+{
+	required bool 	hasAnchor	= 1;//是否有主播
+	optional string anchorId	= 2;//主播ID
+	optional string icon		= 3;//头像
+	optional string name		= 4;//名字
+}
+
+enum RoleType
+{
+	ANCHOR 	= 1; //主播
+	PLAYER 	= 2; //普通玩家
+}
+
+//玩家登录主播服务器
+message LoginAnchorServerAS
+{
+	required string token	= 1;//登录验证的token
+	required RoleType roleType = 2; //角色类型
+	optional string roomID	= 3;//房间号
+}
+
+//房间信息
+message RoomInfo
+{
+	required string roomID			 = 1;//房间号
+	required int32 viewerNum		 = 2;//收听人数
+	optional AnchorInfoAS anchorInfo = 3;//主播信息
+}
+
+//主播信息
+message AnchorInfoAS
+{
+	required string anchorId		= 1;//主播ID
+	required string name			= 2;//主播昵称
+	required bool	sex				= 3;//性别
+	repeated string headImg			= 4;//主播照片url，第一个为头像
+	optional string label			= 5;//主播标签（逗号分隔）
+	optional int32 fansNum			= 6;//粉丝数
+	optional int32 glamour			= 7;//魅力值
+	optional string hobby			= 8;//主播爱好（逗号分隔）
+	optional string constellation 	= 9;//星座
+	optional int32 high				= 10;//身高
+	optional int32 weight			= 11;//体重
+	optional string city			= 12;//地区
+	optional string content			= 13;//主播宣言
+	optional bool 	isFollow		= 14;//主播宣言
+}
+
+message RoomChangeInfoAS
+{
+	optional int32 viewerNum		= 1;//收听人数
+	optional int64 glamour			= 2;//魅力值
+}
+
+//聊天信息
+message SendChatMessageInfoAS
+{
+	required string chatContent = 1; //聊天内容
+}
+
+//聊天消息类型
+enum ChatMsgType
+{
+	NORMAL_CHAT		= 1;	// 普通聊天
+	SYSTEM_CHAT		= 2;	// 系统信息
+	GIFT_CHAT		= 3;	// 礼物信息
+}
+
+//返回聊天信息列表
+message ChatMessageListAS
+{
+	repeated ChatMessageInfo infos = 1;//聊天信息 
+}
+
+//返回聊天信息
+message ChatMessageInfo
+{
+	required ChatMsgType 	chatType 	= 1;//聊天类型
+	optional PlayerInfoAS 	playerInfo 	= 2;//玩家信息
+	optional string 		content		= 3;//聊天内容
+	required int32			sendTime    = 4;//发送时间
+	optional int32			giftId		= 5; //礼物ID
+	optional int32			giftNum		= 6; //礼物数量
+}
+
+//玩家信息
+enum PlayerInfoRedisKey
+{
+	PLAYERID		= 1;  // 玩家ID
+	PLAYERNAME		= 2;  // 玩家昵称
+	SERVERID		= 3;  // 服ID
+	ICON			= 4;  // 头像
+	VIP				= 5;  // 贵族等级
+	GUILDINFO		= 6;  // 联盟信息
+	AREAID			= 7;  // 区域id
+	OPENID			= 8;  // OPENID
+	PLATID			= 9;  // platformId
+	PLAYERLEVEL		= 10; // 玩家等级
+	CITYLEVEL		= 11; // 城池等级
+	PFICON			= 12; //
+	GAMEAPPID       = 13; // 游戏APP ID
+	CHANNEL         = 14; // 渠道
+	ZONEAREAID      = 15; // 注册服ID
+	POWER           = 16; // 战力
+	GUILDID         = 17; // 联盟ID
+	PFICONURL       = 18; // 头像原始url
+}
+
+//玩家信息
+message PlayerInfoAS
+{
+	optional string playerId		= 1;//玩家ID
+	optional string playerName		= 2;//玩家昵称
+	optional string	serverId		= 3;//服ID
+	optional string	icon			= 4;//头像
+	optional int32	vip				= 5;//贵族等级
+	optional string guildInfo		= 6;//联盟信息
+	optional int32  playerLevel 	= 7; 
+	optional string pfIcon 			= 8; //
+}
+
+//留言信息
+message SendLeavingMessageInfoAS
+{
+	required string anchorId    = 1; //主播ID
+	required string chatContent = 2; //聊天内容
+}
+
+//请求主播其他信息，如守护榜，留言板。都用这个消息体
+message GetAnchorExtraInfoMsg
+{
+	required string anchorId		= 1;//主播ID
+	optional int32 rankStart		= 2;//开始
+	optional int32 rankEnd			= 3;//结束
+}
+
+//主播贡献榜单
+message AnchorLoveRank
+{
+	repeated AnchorLoveRankList dayList = 1; //日榜
+	repeated AnchorLoveRankList weekList = 2; //周榜
+	repeated AnchorLoveRankList sumList = 3; //总榜
+	optional int32 selfDayRank			= 4;//自己日榜排名
+	optional int32 selfWeekRank			= 5;//自己周榜排名
+	optional int32 selfTotalRank		= 6;//自己总榜排名
+	optional int32 selfDayScore			= 7;//自己日榜排名
+	optional int32 selfWeekScore		= 8;//自己周榜排名
+	optional int32 selfTotalScore		= 9;//自己总榜排名
+}
+
+message AnchorLoveRankList
+{
+	required int32 			score = 1; //积分
+	required PlayerInfoAS 	playerInfo = 2; //玩家信息
+}
+
+//送礼物
+message SendGiftForAnchor
+{
+	required string anchorId    = 1; //主播ID
+	required int32	giftId		= 2; //礼物ID
+	required int32	giftNum		= 3; //礼物数量
+}
+
+//添加关注
+message AddAnchorFollow
+{
+	required string anchorId    = 1; //主播ID
+}
+
+//聊天消息类型
+enum RoomStatus
+{
+	LISTEN_OPEN		= 1;	// 收听
+	LISTEN_CLOSE	= 2;	// 取消收听
+}
+
+//玩家状态变更
+message ChangeAnchorRoomStatus
+{
+	required RoomStatus status    = 1; //玩家状态
+}
+
+//请求玩家信息
+message ReqPlayerDetailInfo{
+	required string playerId    = 1; //玩家ID
+}
+
+//玩家详细信息
+message PlayerDetailInfo{
+	required bool	inRoom			= 1; //玩家是否在聊天室
+	required string playerId    	= 2; //玩家ID
+	optional int32 	level    		= 3; //指挥官等级
+	optional int32 	cityLevel    	= 4; //城池等级
+	optional int32 	dayScore    	= 5; //日榜积分
+	optional int32 	weekScore    	= 6; //周榜积分
+	optional int32 	totalScore    	= 7; //周榜积分
+}
+
+//玩家禁言
+message PlayerBanChatReq{
+	required string playerId    = 1; //玩家ID
+	required int32  banTime		= 2; //禁止时间
+}
+

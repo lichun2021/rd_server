@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" isFree="1" fixedReward="30000_810001_1,30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1" />
+      <data giftId="2" androidPayId="610001" iosPayId="620001" isFree="0" fixedReward="30000_1780083_2,30000_800110_3,30000_800143_3,30000_1780040_3,30000_810001_3" />
+      <data giftId="3" androidPayId="610002" iosPayId="620002" isFree="0" fixedReward="30000_1780083_10,30000_800110_9,30000_800143_9,30000_1780040_9,30000_810001_9" />
+      <data giftId="4" androidPayId="610003" iosPayId="620003" isFree="0" fixedReward="30000_1780083_24,30000_800110_15,30000_800143_15,30000_1780040_15,30000_810001_15" />
+      <data giftId="5" androidPayId="610004" iosPayId="620004" isFree="0" fixedReward="30000_1000003_8,30000_830041_1,30000_830047_1,30000_830052_1,30000_810001_20" />
+      <data giftId="6" androidPayId="610005" iosPayId="620005" isFree="0" fixedReward="30000_1000003_10,30000_820002_20,30000_800101_3,30000_800100_3,30000_810001_25" />
+</root>

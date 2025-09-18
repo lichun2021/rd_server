@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001001" heroId="1010" level="20" starLevel="2" heroSkill="3101005_5" />
+      <data id="1001002" heroId="1010" level="40" starLevel="2" heroSkill="3101005_10" />
+      <data id="1001003" heroId="1010" level="60" starLevel="3" heroSkill="3101005_15|3101006_15" />
+      <data id="1001004" heroId="1010" level="80" starLevel="4" heroSkill="3101005_20|3101006_20" />
+      <data id="1001005" heroId="1010" level="120" starLevel="5" heroSkill="3101005_25|3101006_25" />
+      <data id="1002001" heroId="1002" level="120" starLevel="5" heroSkill="3101001_25|3101047_25|3101017_25" />
+      <data id="1002002" heroId="1002" level="120" starLevel="5" heroSkill="3101001_30|3101047_30|3101017_30" />
+      <data id="1002003" heroId="1002" level="120" starLevel="5" heroSkill="3101001_35|3101047_35|3101017_35" />
+      <data id="1002004" heroId="1002" level="120" starLevel="5" heroSkill="3101001_40|3101047_40|3101017_40" />
+      <data id="1002005" heroId="1002" level="120" starLevel="5" heroSkill="3101001_40|3101047_40|3101017_40|3101011_40" />
+      <data id="1007001" heroId="1006" level="20" starLevel="2" heroSkill="3101003_5" />
+      <data id="1007002" heroId="1006" level="40" starLevel="2" heroSkill="3101003_10" />
+      <data id="1007003" heroId="1006" level="60" starLevel="3" heroSkill="3101003_15|3101004_15" />
+      <data id="1007004" heroId="1006" level="80" starLevel="4" heroSkill="3101003_20|3101004_20" />
+      <data id="1007005" heroId="1006" level="120" starLevel="5" heroSkill="3101003_25|3101004_25" />
+      <data id="1009001" heroId="1008" level="20" starLevel="2" heroSkill="3101001_5" />
+      <data id="1009002" heroId="1008" level="40" starLevel="2" heroSkill="3101001_10" />
+      <data id="1009003" heroId="1008" level="60" starLevel="3" heroSkill="3101001_15|3101002_15" />
+      <data id="1009004" heroId="1008" level="80" starLevel="4" heroSkill="3101001_20|3101002_20" />
+      <data id="1009005" heroId="1008" level="120" starLevel="5" heroSkill="3101001_25|3101002_25" />
+      <data id="1017001" heroId="1021" level="40" starLevel="2" heroSkill="3101017_10" />
+      <data id="1017002" heroId="1021" level="60" starLevel="3" heroSkill="3101017_15|3101018_15" />
+      <data id="1017003" heroId="1021" level="80" starLevel="4" heroSkill="3101017_20|3101018_20" />
+      <data id="1017004" heroId="1021" level="120" starLevel="5" heroSkill="3101017_30|3101018_30|3101019_30" />
+      <data id="1017005" heroId="1021" level="120" starLevel="5" heroSkill="3101017_30|3101018_30|3101019_30|3101005_30" />
+      <data id="1017006" heroId="1021" level="120" starLevel="5" heroSkill="3101017_35|3101018_35|3101019_35|3101005_35" />
+      <data id="1017007" heroId="1021" level="120" starLevel="5" heroSkill="3101017_40|3101018_40|3101019_40|3101005_40" />
+      <data id="1017010" heroId="1017" level="120" starLevel="5" heroSkill="3101017_30|3101018_30|3101019_30|3101001_30" />
+      <data id="1017011" heroId="1017" level="120" starLevel="5" heroSkill="3101017_35|3101018_35|3101019_35|3101001_35" />
+      <data id="1017012" heroId="1017" level="120" starLevel="5" heroSkill="3101017_40|3101018_40|3101019_40|3101001_40" />
+      <data id="1018001" heroId="1018" level="120" starLevel="5" heroSkill="3101005_25|3101006_25|3101017_25" />
+      <data id="1018002" heroId="1018" level="120" starLevel="5" heroSkill="3101005_30|3101006_30|3101017_30" />
+      <data id="1018003" heroId="1018" level="120" starLevel="5" heroSkill="3101005_35|3101006_35|3101017_35" />
+      <data id="1018004" heroId="1018" level="120" starLevel="5" heroSkill="3101005_40|3101006_40|3101017_40" />
+      <data id="1018005" heroId="1018" level="120" starLevel="5" heroSkill="3101005_40|3101006_40|3101017_40|3101055_40" />
+      <data id="1021001" heroId="1021" level="120" starLevel="5" heroSkill="3101017_30|3101018_30|3101019_30|3101003_30" />
+      <data id="1021002" heroId="1021" level="120" starLevel="5" heroSkill="3101017_35|3101018_35|3101019_35|3101003_35" />
+      <data id="1021003" heroId="1021" level="120" starLevel="5" heroSkill="3101017_40|3101018_40|3101019_40|3101003_40" />
+      <data id="1041001" heroId="1041" level="120" starLevel="5" heroSkill="3101003_25|3101004_25|3101017_25" />
+      <data id="1041002" heroId="1041" level="120" starLevel="5" heroSkill="3101003_30|3101004_30|3101017_30" />
+      <data id="1041003" heroId="1041" level="120" starLevel="5" heroSkill="3101003_35|3101004_35|3101017_35" />
+      <data id="1041004" heroId="1041" level="120" starLevel="5" heroSkill="3101003_40|3101004_40|3101017_40" />
+      <data id="1041005" heroId="1041" level="120" starLevel="5" heroSkill="3101003_40|3101004_40|3101017_40|3101029_40" />
+      <data id="2810001" heroId="1012" level="1" starLevel="1" />
+      <data id="2810002" heroId="1031" level="3" starLevel="1" />
+      <data id="2810003" heroId="1029" level="6" starLevel="1" />
+      <data id="2810004" heroId="1016" level="10" starLevel="1" />
+      <data id="2810005" heroId="1015" level="15" starLevel="1" />
+      <data id="2810006" heroId="1033" level="15" starLevel="1" />
+      <data id="2810007" heroId="1011" level="20" starLevel="2" />
+      <data id="2810008" heroId="1029" level="20" starLevel="2" />
+      <data id="2810009" heroId="1030" level="25" starLevel="2" />
+      <data id="2810010" heroId="1013" level="25" starLevel="2" />
+      <data id="2810011" heroId="1015" level="25" starLevel="2" />
+      <data id="2810012" heroId="1016" level="30" starLevel="2" />
+      <data id="2810013" heroId="1023" level="30" starLevel="2" />
+      <data id="2810014" heroId="1028" level="35" starLevel="2" />
+      <data id="2810015" heroId="1014" level="35" starLevel="2" />
+      <data id="2810016" heroId="1033" level="40" starLevel="3" />
+      <data id="2810017" heroId="1034" level="45" starLevel="3" />
+      <data id="2810018" heroId="1005" level="45" starLevel="3" />
+      <data id="2810019" heroId="1031" level="50" starLevel="3" />
+      <data id="2810020" heroId="1017" level="50" starLevel="3" />
+      <data id="2810021" heroId="1006" level="55" starLevel="3" />
+      <data id="2810022" heroId="1009" level="55" starLevel="3" />
+      <data id="2810023" heroId="1007" level="60" starLevel="4" />
+      <data id="2810024" heroId="1008" level="60" starLevel="3" />
+      <data id="2810025" heroId="1002" level="65" starLevel="4" />
+      <data id="2810026" heroId="1010" level="65" starLevel="4" />
+      <data id="2810027" heroId="1004" level="70" starLevel="4" />
+      <data id="2810028" heroId="1001" level="70" starLevel="4" />
+      <data id="2810029" heroId="1003" level="75" starLevel="4" />
+      <data id="2810030" heroId="1021" level="75" starLevel="4" />
+      <data id="2810031" heroId="1018" level="80" starLevel="4" />
+      <data id="2810032" heroId="1035" level="80" starLevel="4" />
+      <data id="2810033" heroId="1018" level="100" starLevel="5" />
+      <data id="2810034" heroId="1035" level="100" starLevel="5" />
+      <data id="2810035" heroId="1018" level="120" starLevel="5" />
+      <data id="2810036" heroId="1035" level="120" starLevel="5" />
+      <data id="2810037" heroId="1018" level="120" starLevel="5" />
+      <data id="2810038" heroId="1035" level="120" starLevel="5" />
+      <data id="2820026" heroId="1012" level="65" starLevel="4" />
+      <data id="2820027" heroId="1015" level="70" starLevel="4" />
+      <data id="2820028" heroId="1011" level="70" starLevel="4" />
+      <data id="2820029" heroId="1019" level="75" starLevel="4" />
+      <data id="2820030" heroId="1022" level="75" starLevel="4" />
+      <data id="2820031" heroId="1010" level="80" starLevel="4" />
+      <data id="2820032" heroId="1009" level="80" starLevel="4" />
+      <data id="2820033" heroId="1010" level="100" starLevel="5" />
+      <data id="2820034" heroId="1021" level="100" starLevel="5" />
+      <data id="2820035" heroId="1021" level="120" starLevel="5" />
+      <data id="2820036" heroId="1045" level="120" starLevel="5" />
+      <data id="2820037" heroId="1046" level="120" starLevel="5" />
+      <data id="2820038" heroId="1045" level="120" starLevel="5" />
+      <data id="3000000" heroId="1010" level="60" starLevel="2" heroSkill="3101005_10" />
+      <data id="3000001" heroId="1006" level="60" starLevel="2" heroSkill="3101003_10" />
+      <data id="3000002" heroId="1008" level="60" starLevel="2" heroSkill="3101001_10" />
+      <data id="3000003" heroId="1010" level="80" starLevel="3" heroSkill="3101005_15|3101039_10" />
+      <data id="3000004" heroId="1006" level="80" starLevel="3" heroSkill="3101003_15|3101039_10" />
+      <data id="3000005" heroId="1008" level="80" starLevel="3" heroSkill="3101001_15|3101039_10" />
+      <data id="3000006" heroId="1018" level="80" starLevel="3" heroSkill="3101005_20|3101017_20" />
+      <data id="3000007" heroId="1020" level="80" starLevel="3" heroSkill="3101003_20|3101017_20" />
+      <data id="3000008" heroId="1017" level="80" starLevel="3" heroSkill="3101001_20|3101017_20" />
+      <data id="3000009" heroId="1037" level="80" starLevel="3" heroSkill="3101005_20|3101017_20" />
+      <data id="3000010" heroId="1001" level="80" starLevel="3" heroSkill="3101003_20|3101039_20" />
+      <data id="3000011" heroId="1002" level="80" starLevel="3" heroSkill="3101001_20|3101017_20" />
+      <data id="3000012" heroId="1021" level="80" starLevel="3" heroSkill="3101017_20|3101018_20" />
+      <data id="3000013" heroId="1004" level="80" starLevel="3" heroSkill="3101017_20|3101018_20" />
+      <data id="3000014" heroId="1018" level="100" starLevel="4" heroSkill="3101005_30|3101055_20|3101017_30" />
+      <data id="3000015" heroId="1020" level="100" starLevel="4" heroSkill="3101003_30|3101029_20|3101017_30" />
+      <data id="3000016" heroId="1017" level="100" starLevel="4" heroSkill="3101001_30|3101011_20|3101017_30" />
+      <data id="3000017" heroId="1037" level="100" starLevel="4" heroSkill="3101005_30|3101055_20|3101017_30" />
+      <data id="3000018" heroId="1001" level="100" starLevel="4" heroSkill="3101003_30|3101029_20|3101039_30" />
+      <data id="3000019" heroId="1002" level="100" starLevel="4" heroSkill="3101001_30|3101011_20|3101017_30" />
+      <data id="3000020" heroId="1021" level="100" starLevel="4" heroSkill="3101017_30|3101019_30|3101018_30" />
+      <data id="3000021" heroId="1004" level="100" starLevel="4" heroSkill="3101017_30|3101019_30|3101018_30" />
+      <data id="3000022" heroId="1018" level="120" starLevel="5" heroSkill="3101005_40|3101055_40|3101017_40|3101047_40" />
+      <data id="3000023" heroId="1020" level="120" starLevel="5" heroSkill="3101003_40|3101011_40|3101017_40|3101047_40" />
+      <data id="3000024" heroId="1017" level="120" starLevel="5" heroSkill="3101001_40|3101011_40|3101017_40|3101047_40" />
+      <data id="3000025" heroId="1037" level="120" starLevel="5" heroSkill="3101005_40|3101055_40|3101017_40|3101047_40" />
+      <data id="3000026" heroId="1001" level="120" starLevel="5" heroSkill="3101003_40|3101011_40|3101039_40|3101047_40" />
+      <data id="3000027" heroId="1002" level="120" starLevel="5" heroSkill="3101001_40|3101011_40|3101017_40|3101047_40" />
+      <data id="3000028" heroId="1021" level="120" starLevel="5" heroSkill="3101017_40|3101019_40|3101018_40|3101047_40" />
+      <data id="3000029" heroId="1004" level="120" starLevel="5" heroSkill="3101017_40|3101019_40|3101018_40|3101047_40" />
+      <data id="3000033" heroId="1041" level="120" starLevel="5" heroSkill="3101003_40|3101029_40|3101058_40|3101047_40" />
+      <data id="3000034" heroId="1036" level="120" starLevel="5" heroSkill="3101006_40|3101063_40|3101017_40|3101047_40" />
+      <data id="3000035" heroId="1046" level="120" starLevel="5" heroSkill="3101005_40|3101055_40|3103068_40|3101047_40" />
+      <data id="3000036" heroId="1044" level="120" starLevel="5" heroSkill="3101001_40|3101011_40|3101017_40|3101047_40" />
+      <data id="3000037" heroId="1048" level="120" starLevel="5" heroSkill="3101006_40|3101063_40|3101017_40|3101047_40" />
+      <data id="3000038" heroId="1037" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="3000039" heroId="1051" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="3000040" heroId="1064" level="120" starLevel="5" heroSkill="3101006_40|3101063_40|3101052_40|3101047_40" />
+      <data id="3000041" heroId="1048" level="120" starLevel="5" heroSkill="3101006_40|3101063_40|3101052_40|3101047_40" />
+      <data id="3000042" heroId="1053" level="120" starLevel="5" heroSkill="3101003_40|3101029_40|3101048_40|3101047_40" />
+      <data id="3000043" heroId="1041" level="120" starLevel="5" heroSkill="3101003_40|3101029_40|3101048_40|3101047_40" />
+      <data id="3000044" heroId="1057" level="120" starLevel="5" heroSkill="3101001_40|3101011_40|3101046_40|3101047_40" />
+      <data id="3000045" heroId="1044" level="120" starLevel="5" heroSkill="3101001_40|3101011_40|3101046_40|3101047_40" />
+      <data id="3000046" heroId="1059" level="120" starLevel="5" heroSkill="3103068_40|3101055_40|3101005_40|3101051_40" />
+      <data id="3000047" heroId="1046" level="120" starLevel="5" heroSkill="3103068_40|3101055_40|3101005_40|3101051_40" />
+      <data id="3000048" heroId="1052" level="120" starLevel="5" heroSkill="3101059_40|3101057_40|3101007_40|3101053_40" />
+      <data id="3000049" heroId="1045" level="120" starLevel="5" heroSkill="3101059_40|3101057_40|3101007_40|3101053_40" />
+      <data id="3901011" heroId="1008" level="1" starLevel="1" />
+      <data id="3901021" heroId="1010" level="1" starLevel="1" />
+      <data id="3901031" heroId="1007" level="2" starLevel="1" />
+      <data id="3901041" heroId="1008" level="3" starLevel="1" />
+      <data id="3901051" heroId="1010" level="4" starLevel="1" />
+      <data id="3901061" heroId="1007" level="5" starLevel="1" />
+      <data id="3901071" heroId="1008" level="6" starLevel="1" />
+      <data id="3901081" heroId="1010" level="7" starLevel="1" />
+      <data id="3902011" heroId="1006" level="8" starLevel="1" />
+      <data id="3902021" heroId="1009" level="8" starLevel="1" />
+      <data id="3902031" heroId="1010" level="9" starLevel="1" />
+      <data id="3902041" heroId="1006" level="10" starLevel="1" />
+      <data id="3902051" heroId="1009" level="11" starLevel="1" />
+      <data id="3902061" heroId="1010" level="12" starLevel="1" />
+      <data id="3902071" heroId="1006" level="13" starLevel="1" />
+      <data id="3902081" heroId="1009" level="14" starLevel="1" />
+      <data id="3903011" heroId="1010" level="15" starLevel="1" />
+      <data id="3903021" heroId="1006" level="15" starLevel="1" />
+      <data id="3903031" heroId="1008" level="16" starLevel="1" />
+      <data id="3903041" heroId="1010" level="17" starLevel="1" />
+      <data id="3903051" heroId="1007" level="18" starLevel="1" />
+      <data id="3903061" heroId="1008" level="19" starLevel="1" />
+      <data id="3903071" heroId="1010" level="20" starLevel="1" heroSkill="3101006_5" />
+      <data id="3903081" heroId="1007" level="21" starLevel="1" heroSkill="3101004_5" />
+      <data id="3903082" heroId="1021" level="21" starLevel="1" heroSkill="3101004_5" />
+      <data id="3904011" heroId="1008" level="22" starLevel="1" heroSkill="3101001_5" />
+      <data id="3904012" heroId="1017" level="22" starLevel="1" heroSkill="3101001_5" />
+      <data id="3904021" heroId="1010" level="22" starLevel="1" heroSkill="3101006_6" />
+      <data id="3904022" heroId="1021" level="22" starLevel="1" heroSkill="3101006_6" />
+      <data id="3904031" heroId="1007" level="23" starLevel="1" heroSkill="3101004_6" />
+      <data id="3904032" heroId="1021" level="23" starLevel="1" heroSkill="3101004_6" />
+      <data id="3904041" heroId="1008" level="24" starLevel="1" heroSkill="3101001_6" />
+      <data id="3904042" heroId="1017" level="24" starLevel="1" heroSkill="3101001_6" />
+      <data id="3904051" heroId="1010" level="25" starLevel="1" heroSkill="3101006_6" />
+      <data id="3904052" heroId="1021" level="25" starLevel="1" heroSkill="3101006_6" />
+      <data id="3904061" heroId="1007" level="26" starLevel="1" heroSkill="3101004_6" />
+      <data id="3904062" heroId="1021" level="26" starLevel="1" heroSkill="3101004_6" />
+      <data id="3904071" heroId="1008" level="27" starLevel="1" heroSkill="3101001_7" />
+      <data id="3904072" heroId="1017" level="27" starLevel="1" heroSkill="3101001_7" />
+      <data id="3904081" heroId="1010" level="28" starLevel="1" heroSkill="3101005_7" />
+      <data id="3904082" heroId="1021" level="28" starLevel="1" heroSkill="3101005_7" />
+      <data id="3905011" heroId="1006" level="29" starLevel="1" heroSkill="3101003_7" />
+      <data id="3905012" heroId="1021" level="29" starLevel="1" heroSkill="3101003_7" />
+      <data id="3905021" heroId="1009" level="29" starLevel="1" heroSkill="3101007_7" />
+      <data id="3905022" heroId="1021" level="29" starLevel="1" heroSkill="3101007_7" />
+      <data id="3905031" heroId="1010" level="30" starLevel="1" heroSkill="3101005_7" />
+      <data id="3905032" heroId="1021" level="30" starLevel="1" heroSkill="3101005_7" />
+      <data id="3905041" heroId="1006" level="31" starLevel="1" heroSkill="3101003_8" />
+      <data id="3905042" heroId="1021" level="31" starLevel="1" heroSkill="3101003_8" />
+      <data id="3905051" heroId="1009" level="32" starLevel="1" heroSkill="3101007_8" />
+      <data id="3905052" heroId="1021" level="32" starLevel="1" heroSkill="3101007_8" />
+      <data id="3905061" heroId="1010" level="33" starLevel="1" heroSkill="3101005_8" />
+      <data id="3905062" heroId="1021" level="33" starLevel="1" heroSkill="3101005_8" />
+      <data id="3905071" heroId="1006" level="34" starLevel="1" heroSkill="3101003_8" />
+      <data id="3905072" heroId="1021" level="34" starLevel="1" heroSkill="3101003_8" />
+      <data id="3905081" heroId="1009" level="35" starLevel="1" heroSkill="3101007_8" />
+      <data id="3905082" heroId="1021" level="35" starLevel="1" heroSkill="3101007_8" />
+      <data id="3906011" heroId="1010" level="36" starLevel="1" heroSkill="3101005_9" />
+      <data id="3906012" heroId="1021" level="36" starLevel="1" heroSkill="3101005_9" />
+      <data id="3906021" heroId="1006" level="36" starLevel="1" heroSkill="3101003_9" />
+      <data id="3906022" heroId="1021" level="36" starLevel="1" heroSkill="3101003_9" />
+      <data id="3906031" heroId="1009" level="37" starLevel="1" heroSkill="3101007_9" />
+      <data id="3906032" heroId="1021" level="37" starLevel="1" heroSkill="3101007_9" />
+      <data id="3906041" heroId="1008" level="38" starLevel="1" heroSkill="3101001_9" />
+      <data id="3906042" heroId="1017" level="38" starLevel="1" heroSkill="3101001_9" />
+      <data id="3906051" heroId="1010" level="39" starLevel="1" heroSkill="3101006_9" />
+      <data id="3906052" heroId="1021" level="39" starLevel="1" heroSkill="3101006_9" />
+      <data id="3906061" heroId="1007" level="40" starLevel="1" heroSkill="3101004_10" />
+      <data id="3906062" heroId="1021" level="40" starLevel="1" heroSkill="3101004_10" />
+      <data id="3906071" heroId="1008" level="41" starLevel="2" heroSkill="3101001_10" />
+      <data id="3906072" heroId="1017" level="41" starLevel="2" heroSkill="3101001_10" />
+      <data id="3906081" heroId="1010" level="42" starLevel="2" heroSkill="3101006_10" />
+      <data id="3906082" heroId="1021" level="42" starLevel="2" heroSkill="3101006_10" />
+      <data id="3907011" heroId="1007" level="43" starLevel="2" heroSkill="3101004_10" />
+      <data id="3907012" heroId="1021" level="43" starLevel="2" heroSkill="3101004_10" />
+      <data id="3907021" heroId="1008" level="43" starLevel="2" heroSkill="3101001_10" />
+      <data id="3907022" heroId="1017" level="43" starLevel="2" heroSkill="3101001_10" />
+      <data id="3907031" heroId="1010" level="44" starLevel="2" heroSkill="3101006_11" />
+      <data id="3907032" heroId="1021" level="44" starLevel="2" heroSkill="3101006_11" />
+      <data id="3907041" heroId="1007" level="45" starLevel="2" heroSkill="3101004_11" />
+      <data id="3907042" heroId="1021" level="45" starLevel="2" heroSkill="3101004_11" />
+      <data id="3907051" heroId="1008" level="46" starLevel="2" heroSkill="3101001_11" />
+      <data id="3907052" heroId="1017" level="46" starLevel="2" heroSkill="3101001_11" />
+      <data id="3907061" heroId="1010" level="47" starLevel="2" heroSkill="3101006_11" />
+      <data id="3907062" heroId="1021" level="47" starLevel="2" heroSkill="3101006_11" />
+      <data id="3907071" heroId="1007" level="48" starLevel="2" heroSkill="3101004_11" />
+      <data id="3907072" heroId="1021" level="48" starLevel="2" heroSkill="3101004_11" />
+      <data id="3907081" heroId="1010" level="49" starLevel="2" heroSkill="3101005_12" />
+      <data id="3907082" heroId="1021" level="49" starLevel="2" heroSkill="3101005_12" />
+      <data id="3908011" heroId="1006" level="50" starLevel="2" heroSkill="3101003_12" />
+      <data id="3908012" heroId="1021" level="50" starLevel="2" heroSkill="3101003_12" />
+      <data id="3908021" heroId="1009" level="50" starLevel="2" heroSkill="3101007_12" />
+      <data id="3908022" heroId="1021" level="50" starLevel="2" heroSkill="3101007_12" />
+      <data id="3908031" heroId="1010" level="51" starLevel="2" heroSkill="3101005_12" />
+      <data id="3908032" heroId="1021" level="51" starLevel="2" heroSkill="3101005_12" />
+      <data id="3908041" heroId="1006" level="52" starLevel="2" heroSkill="3101003_12" />
+      <data id="3908042" heroId="1021" level="52" starLevel="2" heroSkill="3101003_12" />
+      <data id="3908051" heroId="1009" level="53" starLevel="2" heroSkill="3101007_13" />
+      <data id="3908052" heroId="1021" level="53" starLevel="2" heroSkill="3101007_13" />
+      <data id="3908061" heroId="1010" level="54" starLevel="2" heroSkill="3101005_13" />
+      <data id="3908062" heroId="1021" level="54" starLevel="2" heroSkill="3101005_13" />
+      <data id="3908071" heroId="1006" level="55" starLevel="2" heroSkill="3101003_13" />
+      <data id="3908072" heroId="1021" level="55" starLevel="2" heroSkill="3101003_13" />
+      <data id="3908081" heroId="1035" level="56" starLevel="2" heroSkill="3101007_13" />
+      <data id="3908082" heroId="1021" level="56" starLevel="2" heroSkill="3101007_13" />
+      <data id="3909011" heroId="1018" level="57" starLevel="2" heroSkill="3101005_13" />
+      <data id="3909012" heroId="1021" level="57" starLevel="2" heroSkill="3101005_13" />
+      <data id="3909021" heroId="1020" level="57" starLevel="2" heroSkill="3101003_14" />
+      <data id="3909022" heroId="1021" level="57" starLevel="2" heroSkill="3101003_14" />
+      <data id="3909031" heroId="1035" level="58" starLevel="2" heroSkill="3101007_14" />
+      <data id="3909032" heroId="1021" level="58" starLevel="2" heroSkill="3101007_14" />
+      <data id="3909041" heroId="1002" level="59" starLevel="2" heroSkill="3101001_14" />
+      <data id="3909042" heroId="1017" level="59" starLevel="2" heroSkill="3101001_14" />
+      <data id="3909051" heroId="1036" level="60" starLevel="2" heroSkill="3101006_14|3101052_14" />
+      <data id="3909052" heroId="1021" level="60" starLevel="2" heroSkill="3101006_14|3101052_14" />
+      <data id="3909061" heroId="1020" level="61" starLevel="3" heroSkill="3101004_14|3101049_14" />
+      <data id="3909062" heroId="1021" level="61" starLevel="3" heroSkill="3101004_14|3101049_14" />
+      <data id="3909071" heroId="1002" level="62" starLevel="3" heroSkill="3101001_15|3101046_15" />
+      <data id="3909072" heroId="1017" level="62" starLevel="3" heroSkill="3101001_15|3101046_15" />
+      <data id="3909081" heroId="1036" level="63" starLevel="3" heroSkill="3101006_15|3101052_15" />
+      <data id="3909082" heroId="1021" level="63" starLevel="3" heroSkill="3101006_15|3101052_15" />
+      <data id="3910011" heroId="1020" level="64" starLevel="3" heroSkill="3101004_15|3101049_15" />
+      <data id="3910012" heroId="1021" level="64" starLevel="3" heroSkill="3101004_15|3101049_15" />
+      <data id="3910021" heroId="1002" level="64" starLevel="3" heroSkill="3101001_15|3101046_15" />
+      <data id="3910022" heroId="1017" level="64" starLevel="3" heroSkill="3101001_15|3101046_15" />
+      <data id="3910031" heroId="1036" level="65" starLevel="3" heroSkill="3101006_15|3101052_15" />
+      <data id="3910032" heroId="1021" level="65" starLevel="3" heroSkill="3101006_15|3101052_15" />
+      <data id="3910041" heroId="1020" level="66" starLevel="3" heroSkill="3101004_16|3101049_16" />
+      <data id="3910042" heroId="1021" level="66" starLevel="3" heroSkill="3101004_16|3101049_16" />
+      <data id="3910051" heroId="1002" level="67" starLevel="3" heroSkill="3101001_16|3101046_16" />
+      <data id="3910052" heroId="1017" level="67" starLevel="3" heroSkill="3101001_16|3101046_16" />
+      <data id="3910061" heroId="1036" level="68" starLevel="3" heroSkill="3101006_16|3101052_16" />
+      <data id="3910062" heroId="1021" level="68" starLevel="3" heroSkill="3101006_16|3101052_16" />
+      <data id="3910071" heroId="1020" level="69" starLevel="3" heroSkill="3101004_16|3101049_16" />
+      <data id="3910072" heroId="1021" level="69" starLevel="3" heroSkill="3101004_16|3101049_16" />
+      <data id="3910081" heroId="1018" level="70" starLevel="3" heroSkill="3101005_16|3101051_16" />
+      <data id="3910082" heroId="1021" level="70" starLevel="3" heroSkill="3101005_16|3101051_16" />
+      <data id="5012001" heroId="1004" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="5012002" heroId="1017" level="120" starLevel="5" heroSkill="3101011_40|3101001_40|3101046_40|3101056_40" />
+      <data id="5012003" heroId="1018" level="120" starLevel="5" heroSkill="3103068_40|3101055_40|3101005_40|3101051_40" />
+      <data id="5012004" heroId="1020" level="120" starLevel="5" heroSkill="3101050_40|3101004_40|3101041_40|3101049_40" />
+      <data id="5012005" heroId="1021" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="5012006" heroId="1035" level="120" starLevel="5" heroSkill="3101059_40|3101057_40|3101007_40|3101053_40" />
+      <data id="5012007" heroId="1036" level="120" starLevel="5" heroSkill="3101063_40|3101006_40|3101043_40|3101052_40" />
+      <data id="5012008" heroId="1037" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="5012009" heroId="1041" level="120" starLevel="5" heroSkill="3101058_40|3101029_40|3101003_40|3101048_40" />
+      <data id="5012010" heroId="1042" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="5012011" heroId="1043" level="120" starLevel="5" heroSkill="3101060_40|3101030_40|3101039_40|3101047_40" />
+      <data id="5012012" heroId="1044" level="120" starLevel="5" heroSkill="3101011_40|3101001_40|3101046_40|3101056_40" />
+      <data id="5012013" heroId="1045" level="120" starLevel="5" heroSkill="3101059_40|3101057_40|3101007_40|3101053_40" />
+      <data id="5012014" heroId="1046" level="120" starLevel="5" heroSkill="3103068_40|3101055_40|3101005_40|3101051_40" />
+      <data id="5012015" heroId="1048" level="120" starLevel="5" heroSkill="3101063_40|3101006_40|3101043_40|3101052_40" />
+      <data id="5012016" heroId="1049" level="120" starLevel="5" heroSkill="3101045_40|3101054_40|3101018_40|3101019_40" />
+      <data id="5012017" heroId="1050" level="120" starLevel="5" heroSkill="3101050_40|3101004_40|3101041_40|3101049_40" />
+      <data id="5012018" heroId="1051" level="120" starLevel="5" heroSkill="3101028_40|3101017_40|3101018_40|3101019_40" />
+      <data id="5012019" heroId="1052" level="120" starLevel="5" heroSkill="3101059_40|3101057_40|3101007_40|3101053_40" />
+      <data id="5012020" heroId="1053" level="120" starLevel="5" heroSkill="3101058_40|3101029_40|3101003_40|3101048_40" />
+      <data id="5012021" heroId="1057" level="120" starLevel="5" heroSkill="3101011_40|3101001_40|3101046_40|3101056_40" />
+      <data id="5012022" heroId="1059" level="120" starLevel="5" heroSkill="3103068_40|3101055_40|3101005_40|3101051_40" />
+      <data id="5012023" heroId="1064" level="120" starLevel="5" heroSkill="3101063_40|3101006_40|3101043_40|3101052_40" />
+      <data id="5012024" heroId="1067" level="120" starLevel="5" heroSkill="3101060_40|3101030_40|3101039_40|3101047_40" />
+      <data id="5012025" heroId="1070" level="120" starLevel="5" heroSkill="3101045_40|3101054_40|3101018_40|3101019_40" />
+      <data id="5012026" heroId="1001" level="120" starLevel="5" heroSkill="3101060_40|3101030_40|3101039_40|3101047_40" />
+      <data id="5012027" heroId="1002" level="120" starLevel="5" heroSkill="3101011_40|3101001_40|3101046_40|3101056_40" />
+      <data id="5012039" heroId="1073" level="120" starLevel="5" heroSkill="3101050_40|3101004_40|3101041_40|3101049_40" />
+      <data id="5012028" heroId="1061" level="120" starLevel="5" />
+      <data id="5012029" heroId="1055" level="120" starLevel="5" />
+      <data id="5012030" heroId="1066" level="120" starLevel="5" />
+      <data id="5012031" heroId="1054" level="120" starLevel="5" />
+      <data id="5012032" heroId="1058" level="120" starLevel="5" />
+      <data id="5012033" heroId="1062" level="120" starLevel="5" />
+      <data id="5012034" heroId="1065" level="120" starLevel="5" />
+      <data id="5012035" heroId="1068" level="120" starLevel="5" />
+      <data id="5012036" heroId="1069" level="120" starLevel="5" />
+      <data id="5012037" heroId="1071" level="120" starLevel="5" />
+      <data id="5012038" heroId="1072" level="120" starLevel="5" />
+</root>

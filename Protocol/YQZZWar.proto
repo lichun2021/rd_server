@@ -1,0 +1,537 @@
+option java_package	= "com.hawk.game.protocol";
+
+
+// 活动阶段
+enum PBYQZZWarState{
+	YQZZ_EARTH    	 = 1; //地球期
+	YQZZ_MOON_SHOW	 = 2; //月球展示期
+	YQZZ_MOON_REPARE = 3; //月球备战期
+	YQZZ_MOON_FIGHT  = 4; //月球战斗期
+	YQZZ_CLOSE       = 5; //关闭期(战斗结束后展示)
+	YQZZ_HIDDEN      = 6; //隐藏期
+}
+
+
+//月球之战任务类型
+enum PBYQZZWarAchieveType{
+	YQZZ_ACHIEVE_TYPE_PLAYER = 1;  //个人任务
+	YQZZ_ACHIEVE_TYPE_GUILD  = 2;//联盟任务
+	YQZZ_ACHIEVE_TYPE_COUNTRY = 3; //国家任务
+
+}
+
+
+//月球之战任务状态
+enum PBYQZZWarAchieveState{
+	YQZZ_ACHIEVE_STATE_NOT_ACHIEVE = 0;  //未完成
+	YQZZ_ACHIEVE_STATE_NOT_AWARD = 1;   //未领奖
+	YQZZ_ACHIEVE_STATE_TOOK = 2;       //已经领奖
+
+}
+
+//月球期时间点
+message PBYQZZWarMoonTime{
+	required int64 fightTime  = 1;  //战斗开始见
+	required int64 overTime   = 2;  //战斗结束时间
+	repeated PBYQZZWarMoonBattleStageTime stageTimes = 3; //各个阶段时间
+}
+
+//月球期战斗阶段时间点
+message PBYQZZWarMoonBattleStageTime{
+	required int32 stage = 1; //阶段
+	required int64 startTime = 2; //开始时间
+	required int64 endTime = 3; //结束时间
+
+}
+
+//活动信息
+message PBYQZZWarStateInfo{
+	required int32 termId                 = 1; //期数
+	required PBYQZZWarState state         = 2; //状态
+	optional int64 showTime 			  = 3; //开始时间
+	optional int64 matchTime              = 4; //匹配开时间
+	optional int64 fightTime              = 5; //战斗开始时间
+	optional int64 fightEndTime           = 6; //战斗结束时间
+	optional int64 rewardEndTime		  = 7; //发奖结束时间
+	optional int64 hiddenTime             = 8; //活动结束时间
+	optional PBYQZZWarMoonTime  moonTime  = 9; //月球期阶段时间点
+}
+
+
+//排行榜名次
+message PBYQZZWarRank{
+	optional int32 countryRank  = 1; //国家排名
+	optional int32 countryCount = 2;//国家个数
+	optional int32 guildRank    = 3; //联盟排名
+	optional int32 guildCount   = 4; //联盟排名
+	optional int32 playerRank   = 5; //玩家自己排名
+}
+
+
+//国家赛事记分
+message PBYQZZWarCountryScore{
+	required int32 termId = 1;
+	required string serverId = 2;
+	required int64 score = 3;
+	required int32 rank = 5;
+	required int32 countryCount = 6;
+	repeated PBYQZZWarCountryScoreGuild guildScores = 7; //联盟分数列表
+	repeated PBYQZZWarPlayerScoreYuri yuriScores = 8; //幽灵分数列表
+	repeated PBYQZZWarPlayerScorePowerTower powerTowerScores = 9; //能量塔分数表
+	repeated PBYQZZWarPlayerScoreBuild buildScores = 10; //建筑分数列表
+}
+//国家赛事记分-联盟记分
+message PBYQZZWarCountryScoreGuild{
+	required string id		   = 1; //联盟ID
+	required string name	   = 2; //名称
+	required string tag		   = 3; //简称
+	required int32 guildFlag   = 4; //联盟旗帜
+	required string leaderId   = 5; //盟主ID
+	required string leaderName = 6; //盟主名字
+	required int64 score       = 7; //提供的记分
+
+}
+
+
+//联盟赛事记分
+message PBYQZZWarGuildScore{
+	required string guildId = 1;
+	required int64 score = 2;
+	required int32 rank = 3;
+	required int32 guildCount = 4;
+	repeated PBYQZZWarGuildScoreBuild buildScores = 5; //联盟分数列表
+}
+
+
+//联盟赛事记分-建筑积分
+message PBYQZZWarGuildScoreBuild{
+	required int32 buildId = 1; //建筑ID
+	required int32 holdCount = 2; //占领个数
+	required int64 score = 3; //积分
+}
+
+
+
+//个人赛事记分
+message PBYQZZWarPlayerScore{
+	required string playerId = 1;
+	required int64 score = 2;
+	required int32 rank = 3;
+	repeated PBYQZZWarPlayerScoreMonster monsterScores = 4; //打怪分数列表
+	repeated PBYQZZWarPlayerScoreYuri yuriScores = 5; //幽灵分数列表
+	repeated PBYQZZWarPlayerScoreCollect collectScores = 6; //采集分数列表
+	repeated PBYQZZWarPlayerScoreBuild buildScores = 7; //建筑分数列表
+	repeated PBYQZZWarPlayerScorePowerTower powerTowerScores = 8; //能量塔分数表
+}
+
+//个人赛事记分-打怪
+message PBYQZZWarPlayerScoreMonster{
+	required int32 monsterLevel = 1; //怪物等级
+	required int32 killCount    = 2; //怪物击杀数量
+	required int64 score = 3;    //获得记分
+}
+
+//个人赛事记分-打怪
+message PBYQZZWarPlayerScoreYuri{
+	required int32 monsterLevel = 1; //怪物等级
+	required int32 killCount    = 2; //怪物击杀数量
+	required int64 score = 3;    //获得记分
+}
+
+//个人赛事记分-采集
+message PBYQZZWarPlayerScoreCollect{
+	required int32 resType         = 1; //怪物等级
+	required int64 collectCount    = 2; //怪物击杀数量
+	required int64 score = 3;    //获得记分
+}
+//个人赛事记分-建筑
+message PBYQZZWarPlayerScoreBuild{
+	required int32 buildId = 1; //建筑ID
+	required int32 holdCount = 2; //占领个数
+	required int64 score = 3; //积分
+}
+
+//个人赛事记分-能量塔
+message PBYQZZWarPlayerScorePowerTower{
+	required int64 count = 1; //数量
+	required int64 score = 2;    //得分
+}
+
+
+//任务
+message PBYQZZAchieveItem
+{
+	required int32 achieveId				= 1; // 配置id
+	required PBYQZZWarAchieveType type      = 2; // 类型 
+	required PBYQZZWarAchieveState state 	= 3; // 状态
+	repeated int64 value 					= 4; // 成就当前数值
+}
+
+//活动中成就任务
+message PBYQZZWarAchieve{
+	repeated PBYQZZAchieveItem achieves = 1; // 月球任务任务
+}
+
+
+//国家信息
+message PBYQZZWarCountry{
+	required string serverId                         = 1;  //服务器ID
+	optional PBYQZZWarCountryCommander commander     = 2;  //司令
+	repeated PBYQZZWarGuild guilds                   = 3;  //参战联盟
+	optional int32 nationHonor						 = 4;  //上期排名
+	optional int32 camp 							 = 5;  //阵营
+}
+
+
+//国家司令
+message PBYQZZWarCountryCommander{
+	required string serverId       = 1;  //服务器ID
+	required string playerId       = 2;  //玩家ID
+	required string playerName     = 3;  //玩名字
+	optional string guildId        = 4;  //联盟ID
+	optional string guildName      = 5;  //名称
+	optional string guildTag        = 6;  //简称
+	optional int32 guildFlag       = 7;  //联盟旗帜
+}
+
+
+//联盟信息
+message PBYQZZWarGuild{
+	required string serverId   = 1; //服务器ID
+	required string id		   = 2; //联盟ID
+	required string name	   = 3; //名称
+	required string tag		   = 4; //简称
+	required int32 guildFlag   = 5; //联盟旗帜
+	required string leaderId   = 6; //盟主ID
+	required string leaderName = 7; //盟主名字
+}
+
+
+
+
+
+//历史战绩
+message PBYQZZWarRecord{
+	required int32 termId      = 1; //期数
+	required int64 recordTime  = 2; //开战的时间
+	required int32 countryRank  = 3; //国家的名次
+	required int64 countryScore = 4;//国家的积分
+}
+
+
+
+//国家积分排行
+message PBYQZZWarCountryRankMember{
+	required int32 termId      	= 1; //期数
+	required string serverId   	= 2; //服务器ID
+	required int32 countryRank  = 3; //玩家的名次
+	required int64 countryScore = 4; //开战的时间
+	optional int32 camp 	    = 5;  //阵营
+}
+
+
+
+//联盟积分排行
+message PBYQZZWarGuildRankMember{
+	required int32 termId     = 1; //期数
+	required string serverId  = 2; //服务器ID
+	required string id		  = 3; //联盟ID
+	required string name	  = 4; //名称
+	required string tag		  = 5; //简称
+	required int32 guildFlag  = 6; //联盟旗帜
+	required int32 guildRank  = 7; //玩家的名次
+	required int64 guildScore = 8; //开战的时间
+	
+}
+
+
+//个人积分排行
+message PBYQZZWarPlayerRankMember{
+	required int32 termId      = 1; //期数
+	required string serverId   = 2; //服务器ID
+	required string id		   = 3; //联盟ID
+	required string guildName  = 4; //联盟名称
+	required string name	   = 5; //名称
+	required int32 playerRank  = 6; //玩家的名次
+	required int64 playerScore = 7; //玩家的积分
+	optional int32 camp		   = 8; //阵营
+}
+
+//个人积分排行-个人信息
+message PBYQZZWarPlayerSelfRankMember{
+	required int32 playerRank  = 1; //玩家的名次
+	required int64 playerScore = 2;//玩家的积分
+	
+}
+
+
+
+//主页面活动信息
+message PBYQZZWarPageInfoResp{
+	required PBYQZZWarStateInfo warInfo   = 1; //活动状态
+	optional PBYQZZWarRank rankInfo       = 2; //活动中名次
+	optional PBYQZZWarAchieve achieveInfo = 3; //成就信息
+	repeated PBYQZZWarCountry countrys    = 4; //对战列表
+}
+
+//查看记分信息
+message PBYQZZWarScoreDetailReq{
+	required int32 type = 1;  //1国家  2联盟  3个人
+}
+
+//查看记分信息
+message PBYQZZWarScoreDetailResp{
+	required int32 type = 1;  //1国家  2联盟  3个人
+	optional PBYQZZWarCountryScore countryScore = 2;   //国家记分
+	optional PBYQZZWarGuildScore guildScore = 3;   //联盟记分
+	optional PBYQZZWarPlayerScore playerScore = 4; //个人记分
+	
+}
+
+
+//成就刷新
+message PBYQZZWarAchieveResp{
+	required PBYQZZWarAchieve achieveInfo = 1; //成就信息
+}
+
+
+//对手信息
+message  PBYQZZWarMatchInfoResp{
+	repeated PBYQZZWarCountry countrys = 1;  //对战列表
+}
+
+
+
+//历史战绩
+message PBYQZZWarHistroyResp{
+	required int32 rankMax = 1;  //最高名次
+	repeated PBYQZZWarRecord records = 2; //历史信息
+}
+
+
+//历史战绩详细信息
+message PBYQZZWarHistroyDetailReq{
+	required int32 termId  = 1;  //期数
+	required int32 type      = 2;  //数据类型: 1国家   2联盟   3个人
+}
+
+
+//历史战绩详细信息
+message PBYQZZWarHistroyDetailResp{
+	required int32 termId    = 1;  //期数
+	required int32 type      = 2;  //数据类型: 1国家   2联盟   3个人
+	repeated PBYQZZWarCountryRankMember countryRecords = 3; //国家记录信息
+	repeated PBYQZZWarGuildRankMember guildRecords   = 4; //联盟排名信息
+	repeated PBYQZZWarPlayerRankMember playerRecords = 5; //个人排名信息
+	optional PBYQZZWarPlayerSelfRankMember playerSelfRecord = 6; //个人排名信息
+}
+
+//排行
+message PBYQZZWarRankReq{
+	required int32 type      = 1;  //数据类型: 1国家   2联盟   3个人
+}
+
+//排行
+message PBYQZZWarRankResp{
+	required int32 type  = 1;  //数据类型: 1国家   2联盟   3个人
+	optional int32 rank  = 2;  //排名
+	optional int32 total = 3;  //总量
+	optional int64 score = 4;  //积分
+	repeated PBYQZZWarCountryRankMember countryMembers = 5; //国家记录信息
+	repeated PBYQZZWarGuildRankMember guildMembers   = 6; //联盟排名信息
+	repeated PBYQZZWarPlayerRankMember playerMembers = 7; //个人排名信息
+	optional int32 nationRank = 8; //国家排名
+}
+
+// 获取任务奖励
+message PBYQZZWarAchieveAwardReq
+{
+	required int32 achieveId = 1; // 任务id
+}
+
+
+
+
+
+//请求回到原服的玩家.
+message PBYQZZWarInnerBackServerReq {
+	required string playerId = 1;
+}
+
+//签回玩家.
+message PBYQZZWarMoveBackReq {
+	required string playerId = 1;
+}
+
+
+//比赛类型
+enum PBYQZZWarType{
+	YQZZ_NOT_SEASON		= 1; //非赛季
+	YQZZ_GROUP			= 2; //积分赛
+	YQZZ_KICKOUT		= 3; //淘汰赛
+}
+
+// 活动阶段
+enum PBYQZZLeagueWarState{
+	YQZZ_LEAGUE_START_SHOW	= 1; //月球展示期
+	YQZZ_LEAGUE_MATCH		= 2; //月球匹配
+	YQZZ_LEAGUE_BATTLE   	= 3; //月球战斗期
+	YQZZ_LEAGUE_END_SHOW    = 4; //关闭期(战斗结束后展示)
+	YQZZ_LEAGUE_HIDDEN  	= 5; //隐藏期
+}
+
+//联赛信息
+message PBYQZZLeagueWarInfoResp{
+	required PBYQZZWarType type = 1;//类型
+	required int32 termId = 2; //期数
+	optional int32 turn = 3;//轮数
+	optional int32 season = 4;//赛季
+	optional int64 startTime = 5;//开始时间
+	optional int64 endTime = 6;//结束时间
+	optional PBYQZZLeagueWarState state = 7; //状态
+	optional bool kickout = 8; //是否淘汰
+	optional int32 groupRank = 9; //积分赛排名
+}
+
+//联赛详细信息请求
+message PBYQZZLeagueWarDetialInfoReq{
+	required PBYQZZWarType type = 1;//类型
+}
+
+//联赛详细信息
+message PBYQZZLeagueWarDetialInfoResp{
+	required PBYQZZWarType type = 1;//类型
+	repeated PBYQZZLeagueWarGroupInfo groupInfos = 2;
+}
+
+//积分赛个人信息请求
+message PBYQZZLeagueWarSelfInfoResp{
+	repeated PBYQZZLeagueWarGroupInfo groupInfos = 1;
+}
+
+//分组信息
+message PBYQZZLeagueWarGroupInfo{
+	repeated PBYQZZLeagueWarServerInfo serverInfos = 1;
+	optional int32 turn = 2;
+	optional int32 group = 3;
+	optional bool isEnd = 4;
+}
+
+//国家信息
+message PBYQZZLeagueWarServerInfo{
+	required string serverId = 1;//国家id
+	required string serverName = 2;//国家名字
+	optional string leaderName = 3;//司令名字
+	optional int32 rank = 4;//排名
+	optional int32 lastRank = 5;//上期排名
+	optional int64 winPoint = 6;//胜利点数
+	optional int64 score = 7;//积分
+	optional bool isEnd = 8;//是否出结果
+	optional bool isKickOut = 9;//是否淘汰
+	optional int32 season = 10;//赛季数
+}
+
+//联盟信息
+message PBYQZZLeagueWarGuildInfo{
+	required string guildName         = 1;  //联盟名称
+	required string guildTag          = 2;  //联盟简称
+	required string serverId		  = 3;//服务器id
+	optional int32 guildFlag          = 4;  //联盟标志
+	optional string guildLeader       = 5;  //联盟盟主
+	optional int32 rank				  = 6;// 名次
+	optional int64 score			  = 7;// 积分
+}
+
+//积分赛国家排行信息
+message PBYQZZLeagueGroupWarServerRankResp{
+	required PBYQZZLeagueWarServerInfo myInfo = 1;
+	repeated PBYQZZLeagueWarServerInfo rankInfos = 2;
+}
+
+//淘汰赛国家排行信息
+message PBYQZZLeagueKickoutWarServerRankResp{
+	required PBYQZZLeagueWarServerInfo myInfo = 1;
+	repeated PBYQZZLeagueWarServerInfo rankInfos = 2;
+}
+
+//联盟排行信息
+message PBYQZZLeagueWarGuildRankResp{
+	required PBYQZZLeagueWarGuildInfo myInfo = 1;
+	repeated PBYQZZLeagueWarGuildInfo rankInfos = 2;
+}
+
+// 积分奖励信息
+message YLWScoreInfo{
+	required int64 score		= 1;
+	repeated int32 rewardedId	= 2;
+}
+
+// 获取联赛积分奖励信息
+message YLWGetScoreInfoResp{
+	optional YLWScoreInfo nationalScore = 1;//国家
+	optional YLWScoreInfo guildScore 	= 2;//联盟
+	optional YLWScoreInfo selfScore		= 3;//个人
+}
+
+
+// 礼包信息
+message YQZZGiftInfoResp
+{
+	required int32 giftId = 1;
+	required int32 sendCount = 2;
+	required bool isEnd = 3;//是否出排名了
+	required int32 rank = 4;//国家排名
+	required bool canSend = 5;//是否有权限发奖
+}
+
+message YQZZGiftSendInfo
+{
+	required int32 giftId = 1;
+	required string targetPlayerId = 2;
+	required int32 num = 3;
+}
+
+// 礼包发放请求
+message YQZZGiftSendReq
+{
+	repeated YQZZGiftSendInfo sendInfo = 1;
+}
+
+// 礼包记录
+message YQZZGiftRecord
+{
+	required int64 sendTime = 1; // 礼包发放时间
+	required int32 giftId = 2; // 礼包ID
+	required string sendPlayerName = 3; // 发礼包玩家名字
+	required string playerName = 4; // 收礼包玩家名字
+	required string playerId = 5; // 收礼包玩家ID
+	optional string guildTag = 6; // 收礼包玩家工会名称
+	required string serverId = 7; // 收礼包玩家区分id	
+	optional string sendPlayerTag = 8; // 发礼包玩家名字
+}
+
+// 礼包记录返回
+message YQZZGiftRecordResp
+{
+	repeated YQZZGiftRecord record = 1;
+}
+
+message YQZZSearchReq{
+    required string name = 1;
+	required int32 type = 2;
+}
+
+
+message YQZZSearchResp{
+    repeated YQZZMiniPlayerMsg playerMsg = 1;
+	optional string msg  = 2;//提示信息，当这个字段不为空时，不管memeberInfo，直接按msg弹框提示
+}
+
+message YQZZMiniPlayerMsg {
+	optional string playerId 			= 1; //玩家ID
+	optional string playerName 			= 2; //玩家名字
+	optional int32  icon 				= 3; //头像
+	optional string pfIcon 				= 4; //平台头像
+	optional string GuildName			= 5; //联盟名字
+	optional int64 power 				= 6; //头像
+}

@@ -1,0 +1,2 @@
+ALTER TABLE `plant_soldier_school` ADD COLUMN `militarySerialized3` text COLLATE utf8mb4_unicode_ci NOT NULL;
+ALTER TABLE `plant_soldier_school` ADD COLUMN `switchInfo` text COLLATE utf8mb4_unicode_ci NOT NULL;

@@ -1,0 +1,27 @@
+package com.hawk.activity.type.impl.evolution.task.impl;
+
+import com.hawk.activity.event.impl.AttackFoggyEvent;
+import com.hawk.activity.type.impl.evolution.cfg.EvolutionTaskCfg;
+import com.hawk.activity.type.impl.evolution.entity.ActivityEvolutionEntity;
+import com.hawk.activity.type.impl.evolution.entity.TaskItem;
+import com.hawk.activity.type.impl.evolution.task.EvolutionTaskParser;
+import com.hawk.activity.type.impl.evolution.task.EvolutionTaskType;
+
+public class MassAtkFoggyWinParser implements EvolutionTaskParser<AttackFoggyEvent> {
+
+	@Override
+	public EvolutionTaskType getTaskType() {
+		return EvolutionTaskType.MASS_ATTACK_FOGGY_WIN;
+	}
+
+
+	@Override
+	public boolean onEventUpdate(ActivityEvolutionEntity dataEntity, EvolutionTaskCfg cfg, TaskItem orderItem, AttackFoggyEvent event) {
+		if (!event.isWin() || !event.isMass()) {
+			return false;
+		}
+		
+		return onAddValue(dataEntity, cfg, orderItem, 1);
+	}
+	
+}

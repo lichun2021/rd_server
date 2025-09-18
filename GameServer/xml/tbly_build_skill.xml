@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" showType="1" />
+      <data id="102" showType="1" />
+      <data id="103" showType="1" />
+      <data id="104" showType="1" />
+      <data id="105" showType="2" effect="10039_500,10040_500,10041_500,10042_500,10043_500,10044_500,10045_500,10046_500" weight="2000" />
+      <data id="106" showType="2" effect="10019_500,10020_500,10021_500,10022_500,10023_500,10024_500,10025_500,10026_500" weight="3000" />
+      <data id="107" showType="2" effect="10029_500,10030_500,10031_500,10032_500,10033_500,10034_500,10035_500,10036_500" weight="3000" />
+      <data id="108" showType="2" effect="141_1000" weight="1000" />
+      <data id="109" showType="2" effect="131_1000" weight="1000" />
+</root>

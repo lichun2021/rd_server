@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" crosstype="1" crossCd="86400" crossMutexSkills="1002_1004_1005_1006" continueTime="14400" effect="413_2000" uiType="2" />
+      <data id="1002" crosstype="1" crossCd="86400" crossMutexSkills="1001_1004_1005_1006" continueTime="14400" effect="412_20000" uiType="2" />
+      <data id="1004" crosstype="1" crossCd="43200" crossMutexSkills="1001_1002_1005_1006" continueTime="14400" effect="100_2000,136_2000,102_2000" uiType="2" />
+      <data id="1005" crosstype="1" crossCd="43200" crossMutexSkills="1001_1002_1004_1006" continueTime="14400" effect="200_2000" uiType="2" />
+      <data id="1006" crosstype="1" crossCd="43200" crossMutexSkills="1001_1002_1004_1005" continueTime="14400" effect="203_2000" uiType="2" />
+      <data id="1007" crosstype="1" crossCd="86400" continueTime="21600" effect="3012_2000" uiType="1" />
+      <data id="1008" crosstype="1" crossCd="86400" continueTime="14400" effect="402_1000" uiType="1" />
+      <data id="1009" crosstype="1" crossCd="86400" continueTime="14400" effect="400_1000" uiType="1" />
+      <data id="1010" crosstype="1" crossCd="86400" continueTime="14400" effect="401_1000" uiType="1" />
+</root>

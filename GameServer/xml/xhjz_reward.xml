@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" reward="30000_21063068_5000" />
+      <data id="2" type="2" lose="75_100" reward="30000_21063068_3000" />
+      <data id="3" type="2" lose="0_74" reward="30000_21063068_1500" />
+</root>

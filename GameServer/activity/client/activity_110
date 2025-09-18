@@ -1,0 +1,18 @@
+return {
+	prop =
+	{
+		activityId = 110,
+		name = [[回归大礼]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">欢迎回来，指挥官阁下！没有什么比您的回归更让我们激动，请收下我们为您准备的回归大礼。</font>]],
+		priority = 11001,
+		icon = [[Activity_Icon_110_Nor.png]],
+		selecticon = [[Activity_Icon_110_Sel.png]],
+		bigIcon = [[]],
+	},
+	return_activity_reward = [[id	price	rewards
+1	1	2
+1	48888	30000_9021430_1,30000_1780080_10,30000_1000002_50,30000_840156_20,30000_1150048_50,30000_840165_200,30000_1480001_200
+]],
+
+}

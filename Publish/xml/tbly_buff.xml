@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" weight="1000" refreshTime="900_1800_2700" orderEffect="1717_5000" effectTime="900" />
+      <data id="2" weight="1000" refreshTime="900_1800_2700" orderEffect="1718_20000" effectTime="900" />
+      <data id="3" weight="1000" refreshTime="900_1800" orderEffect="1701_2000" effectTime="900" />
+      <data id="4" weight="1000" refreshTime="900_1800_2700" orderEffect="1702_2000" effectTime="900" />
+      <data id="5" weight="1000" refreshTime="900_1800_2700" orderEffect="1703_2000" effectTime="900" />
+      <data id="6" weight="1000" refreshTime="900_1800_2700" orderEffect="1704_2000" effectTime="900" />
+      <data id="7" weight="1000" refreshTime="900_1800_2700" orderEffect="1705_2000" effectTime="900" />
+      <data id="8" weight="1000" refreshTime="900_1800_2700" orderEffect="1706_2000" effectTime="900" />
+</root>

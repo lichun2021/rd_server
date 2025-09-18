@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" quality="1" attr="1004_2_30_139" inheritConsume="30000_21070058_1" weight="139" power="16667" />
+      <data id="2" quality="2" attr="1004_32_60_139" inheritConsume="30000_21070058_2" weight="139" power="16667" />
+      <data id="3" quality="3" attr="1004_62_90_556" inheritConsume="30000_21070058_3" weight="556" power="16667" />
+      <data id="4" quality="4" attr="1004_92_120_556" inheritConsume="30000_21070058_4" weight="556" power="16667" />
+      <data id="5" quality="5" attr="1004_122_149_833" inheritConsume="30000_21070058_5" weight="833" power="16667" />
+      <data id="6" quality="6" attr="1004_150_150_556" inheritConsume="30000_21070058_6" weight="556" power="16667" />
+      <data id="7" quality="1" attr="1012_2_30_139" inheritConsume="30000_21070058_1" weight="139" power="16667" />
+      <data id="8" quality="2" attr="1012_32_60_139" inheritConsume="30000_21070058_2" weight="139" power="16667" />
+      <data id="9" quality="3" attr="1012_62_90_556" inheritConsume="30000_21070058_3" weight="556" power="16667" />
+      <data id="10" quality="4" attr="1012_92_120_556" inheritConsume="30000_21070058_4" weight="556" power="16667" />
+      <data id="11" quality="5" attr="1012_122_149_833" inheritConsume="30000_21070058_5" weight="833" power="16667" />
+      <data id="12" quality="6" attr="1012_150_150_556" inheritConsume="30000_21070058_6" weight="556" power="16667" />
+      <data id="13" quality="1" attr="1020_2_30_139" inheritConsume="30000_21070058_1" weight="139" power="16667" />
+      <data id="14" quality="2" attr="1020_32_60_139" inheritConsume="30000_21070058_2" weight="139" power="16667" />
+      <data id="15" quality="3" attr="1020_62_90_556" inheritConsume="30000_21070058_3" weight="556" power="16667" />
+      <data id="16" quality="4" attr="1020_92_120_556" inheritConsume="30000_21070058_4" weight="556" power="16667" />
+      <data id="17" quality="5" attr="1020_122_149_833" inheritConsume="30000_21070058_5" weight="833" power="16667" />
+      <data id="18" quality="6" attr="1020_150_150_556" inheritConsume="30000_21070058_6" weight="556" power="16667" />
+      <data id="19" quality="1" attr="1003_2_30_139" inheritConsume="30000_21070058_1" weight="139" power="16667" />
+      <data id="20" quality="2" attr="1003_32_60_139" inheritConsume="30000_21070058_2" weight="139" power="16667" />
+      <data id="21" quality="3" attr="1003_62_90_556" inheritConsume="30000_21070058_3" weight="556" power="16667" />
+      <data id="22" quality="4" attr="1003_92_120_556" inheritConsume="30000_21070058_4" weight="556" power="16667" />
+      <data id="23" quality="5" attr="1003_122_149_833" inheritConsume="30000_21070058_5" weight="833" power="16667" />
+      <data id="24" quality="6" attr="1003_150_150_556" inheritConsume="30000_21070058_6" weight="556" power="16667" />
+      <data id="25" quality="1" attr="1011_2_30_139" inheritConsume="30000_21070058_1" weight="139" power="16667" />
+      <data id="26" quality="2" attr="1011_32_60_139" inheritConsume="30000_21070058_2" weight="139" power="16667" />
+</root>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+	<Properties>
+		<Property name="LOG_HOME">logs</Property>
+	</Properties>	
+	
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+		</Console>
+		
+		<RollingFile name="Hawk" fileName="${LOG_HOME}/Hawk.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Hawk.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Exception" fileName="${LOG_HOME}/Exception.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Exception.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Protocol" fileName="${LOG_HOME}/Protocol.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Protocol.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Script" fileName="${LOG_HOME}/Script.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Script.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Monitor" fileName="${LOG_HOME}/Monitor.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Monitor.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Guild" fileName="${LOG_HOME}/Guild.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Guild.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="World" fileName="${LOG_HOME}/World.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/World.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="City" fileName="${LOG_HOME}/City.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/City.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Err" fileName="${LOG_HOME}/Error.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Error.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Activity" fileName="${LOG_HOME}/Activity.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Activity.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+	</appenders>
+	
+	<loggers>
+		<root level="info">
+			<appender-ref ref="Console"/>
+		</root>
+		
+		<logger name="Hawk"  level="info">
+			<appender-ref ref="Hawk"/>
+		</logger>
+		
+		<logger name="Exception" level="info">
+			<appender-ref ref="Exception"/>
+		</logger>
+		
+		<logger name="Protocol" level="info">
+			<appender-ref ref="Protocol"/>
+		</logger>
+		
+		<logger name="Script" level="info">
+			<appender-ref ref="Script"/>
+		</logger>
+		
+		<logger name="Monitor" level="info">
+			<appender-ref ref="Monitor"/>
+		</logger>
+		
+		<logger name="City" level="debug">
+			<appender-ref ref="City"/>
+		</logger>
+		
+		<logger name="World" level="info">
+			<appender-ref ref="World"/>
+		</logger>
+		
+		<logger name="Guild" level="info">
+			<appender-ref ref="Guild"/>
+		</logger>
+		
+		<logger name="Err" level="info">
+			<appender-ref ref="Err"/>
+		</logger>
+		
+		<logger name="Activity" level="info">
+			<appender-ref ref="Activity"/>
+		</logger>
+	</loggers>
+</configuration>

@@ -1,0 +1,62 @@
+return {
+	prop =
+	{
+		activityId = 56,
+		name = [[潘多拉宝盒]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间指挥官消耗“<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">潘多拉密钥</font>”即可开启潘多拉宝盒；<br/>2. 潘多拉宝盒可选择开启一次或十次，对应消耗一个和十个“<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">潘多拉密钥</font>”；<br/>3. 潘多拉宝盒开启可能获得的具体奖励内容可在活动界面点击“<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">奖品池</font>”查看；<br/>4. 每次开启潘多拉宝盒可对应获得1<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">潘多拉积分</font>；<br/>5. 使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">潘多拉积分</font>可到潘多拉商城中兑换稀有道具。<br/>6. 潘多拉积分每期活动结束后清零。<br/>7. 潘多拉商城中物品可兑换数量为活动期间每日重置。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 橙色英雄碎片数量1概率2%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 特级经验胶囊数量10概率6%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 通用加速24小时数量1概率1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 500万矿石数量1概率1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 150万矿石数量1概率3%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 500万石油数量1概率1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">7. 150万石油数量1概率3%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">8. 50万矿石数量1概率13%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">9. 50万石油数量1概率13%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">10. 8万合金数量1概率13%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">11. 2万稀土数量1概率12%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">12. 城建加速数量2概率8%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">13. 研究加速数量2概率8%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">14. 训练加速数量2概率8%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">15. 伤兵恢复加速数量2概率8%。</font>]],
+		priority = 20245,
+		icon = [[Activity_Icon_56_Nor.png]],
+		selecticon = [[Activity_Icon_56_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		itemOnce = [[30000_9990004_1]],
+		itemOnecePrice = [[10000_1000_56]],
+		extReward = [[30000_840172_1]],
+		scoreOnce = 1,
+		scoreTen = 10,
+		reset = 1,
+		free = 1,
+		maxDailyLotteryTimes = 308,
+	},
+	pandora_box_activity = [[id	reward	rate
+1	2	1
+1	30000_1000003_1	2
+2	30000_1510004_10	6
+3	30000_100060_1	1
+4	30000_850009_2	1
+5	30000_850008_2	3
+6	30000_850038_2	3
+7	30000_850039_2	1
+8	30000_850007_2	13
+9	30000_850037_2	13
+10	30000_850017_2	13
+11	30000_850027_2	12
+12	30000_101050_2	8
+13	30000_103050_2	8
+14	30000_105050_2	8
+15	30000_104050_2	8
+]],
+	pandora_box_shop = [[id	goods	total	price
+1	2	1	1
+1	30000_1480010_1	10	50
+2	30000_100060_1	20	25
+3	30000_1001020_1	20	20
+4	30000_1780080_2	50	10
+5	30000_13310004_20	50	10
+6	30000_850009_1	50	10
+7	30000_850039_1	50	10
+8	30000_810001_6	50	10
+9	30000_850007_1	100	3
+10	30000_850037_1	100	3
+11	30000_850017_1	100	3
+12	30000_850027_1	100	3
+13	30000_810000_5	999	1
+]],
+	pandora_box_preview_activity = [[id	reward
+1	2
+1	30000_1000003_1
+2	30000_100060_1
+3	30000_850039_2
+]],
+
+}

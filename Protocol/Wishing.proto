@@ -1,0 +1,32 @@
+option java_package = "com.hawk.game.protocol";
+
+import "Const.proto";
+
+// 许愿次数
+message WishingCountInfo
+{
+	required PlayerAttr	 resourceType 			= 1;// 资源类型
+	required int32		 todayFreeWishCount		= 2;// 今日已免费许愿次数
+	required int32		 todayCostWishCount		= 3;// 今日已付费许愿次数
+	required int32		 todayExtraWishCount	= 4;// 今日已额外许愿次数
+}
+
+// 玩家许愿信息
+message WishingInfoSync
+{
+	repeated WishingCountInfo 	wishCount			= 1;//每种资源的许愿次数
+	required int32 				remainFreeCount		= 2;//剩余免费次数
+}
+
+// 许愿请求
+message PlayerWishingReq
+{	
+	required PlayerAttr resourceType 	= 1;// 资源类型
+}
+
+// 许愿请求响应
+message	PlayerWishingResp
+{
+	optional int32 multiple				= 1;  // 倍数
+	required int32 baseValue			= 2;  // 获得的资源基础值
+}

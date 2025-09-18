@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data armourId="10000" soldierType="1,2" qualityColor="1" iniStar="1" iniLevel="1" power="5000" maxSkillBlanks="1_1_1_20110" effect="201_1000,607_3000" levelupEffect="1003_1_50_3,1004_1_50_3,1011_1_50_3,1012_1_50_3,1019_1_50_3,1020_1_50_3" lvPower="50" />
+      <data armourId="10001" soldierType="3,4" qualityColor="1" iniStar="1" iniLevel="1" power="5000" maxSkillBlanks="1_1_1_20210" effect="201_1000,607_3000" levelupEffect="1005_1_50_3,1006_1_50_3,1013_1_50_3,1014_1_50_3,1021_1_50_3,1022_1_50_3" lvPower="50" />
+      <data armourId="10002" soldierType="5,6" qualityColor="1" iniStar="1" iniLevel="1" power="5000" maxSkillBlanks="1_1_1_20310" effect="201_1000,607_3000" levelupEffect="1007_1_50_3,1008_1_50_3,1015_1_50_3,1016_1_50_3,1023_1_50_3,1024_1_50_3" lvPower="50" />
+      <data armourId="10003" soldierType="7,8" qualityColor="1" iniStar="1" iniLevel="1" power="5000" maxSkillBlanks="1_1_1_20410" effect="201_1000,607_3000" levelupEffect="1009_1_50_3,1010_1_50_3,1017_1_50_3,1018_1_50_3,1025_1_50_3,1026_1_50_3" lvPower="50" />
+      <data armourId="10010" soldierType="1,2" qualityColor="2" iniStar="1" iniLevel="1" unlockPieces="30000_9210011_10" power="10000" maxSkillBlanks="1_1_1_21110|2_2_1_21120" effect="607_4000,604_2000" levelupEffect="1003_1_50_5,1004_1_50_5,1011_1_50_5,1012_1_50_5,1019_1_50_5,1020_1_50_5" lvPower="100" />
+      <data armourId="10011" soldierType="3,4" qualityColor="2" iniStar="1" iniLevel="1" unlockPieces="30000_9210012_10" power="10000" maxSkillBlanks="1_1_1_21210|2_2_1_21220" effect="607_4000,604_2000" levelupEffect="1005_1_50_5,1006_1_50_5,1013_1_50_5,1014_1_50_5,1021_1_50_5,1022_1_50_5" lvPower="100" />
+      <data armourId="10012" soldierType="5,6" qualityColor="2" iniStar="1" iniLevel="1" unlockPieces="30000_9210013_10" power="10000" maxSkillBlanks="1_1_1_21310|2_2_1_21320" effect="607_4000,604_2000" levelupEffect="1007_1_50_5,1008_1_50_5,1015_1_50_5,1016_1_50_5,1023_1_50_5,1024_1_50_5" lvPower="100" />
+      <data armourId="10013" soldierType="7,8" qualityColor="2" iniStar="1" iniLevel="1" unlockPieces="30000_9210014_10" power="10000" maxSkillBlanks="1_1_1_21410|2_2_1_21420" effect="607_4000,604_2000" levelupEffect="1009_1_50_5,1010_1_50_5,1017_1_50_5,1018_1_50_5,1025_1_50_5,1026_1_50_5" lvPower="100" />
+</root>

@@ -1,0 +1,58 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 巅峰荣耀活动界面信息
+message PointSprintPageInfo {
+	optional int64 ownScore = 1; // 我的积分
+	optional int32 ownRank = 2; // 我的排名
+	optional string ownServerId = 3; // 我的服务器id
+	optional int64 ownPoint = 4; // 个人点数
+	optional int64 guildPoint = 5; // 联盟点数
+	repeated int32 ownPointReward = 6; // 已领取的个人积分奖励
+	repeated int32 guildPointReward = 7; // 已领取的联盟积分奖励
+	repeated PointSprintRankMsg rankList = 8; // 排行榜的列表信息
+	repeated PointSprintGetScore getScore = 9; // 巅峰荣耀获取积分详情
+	optional string serverList = 10; // 分组
+	optional int32 round = 11; // 当前轮次
+	optional int32 awardRound = 12 ; // 已领取轮次奖励到哪一轮
+	repeated PointSprintExchangeInfo exchangeInfos = 13;//兑换信息
+	repeated int32 tips = 14; //兑换提示
+}
+
+message PointSprintRankMsg {
+	optional int32 rank = 1; // 名次
+	optional string guildTag = 2; // 联盟简称
+	optional string playerName = 3; // 玩家名称
+	optional int64 score = 4; // 积分
+	optional string serverId = 5; // 服务器id
+	optional int32 icon = 6; // 头像
+	optional string pfIcon = 7; // 平台头像
+	optional string playerId = 8; // 玩家id
+	optional int32 officerId = 9; // 称号
+}
+
+// 巅峰荣耀获取积分详情
+message PointSprintGetScore {
+	optional int32 getType = 1; // 获取的积分类型
+	optional int32 getScore = 2; // 获取的积分
+}
+
+// 巅峰荣耀获取积分奖励
+message PointSprintGetPointReward {
+	optional int32 id = 1;  // 奖励挡位id
+}
+
+//兑换物品
+message PointSprintExchangeInfo{
+    required int32 exchangeId = 1; //兑换表的ID
+	required int32 num        = 2; //兑换物品的次数
+}
+
+//勾选提醒
+message PointSprintExchangeTipsInfo{
+    repeated PointSprintExchangeTips tips   = 1;
+}
+
+message PointSprintExchangeTips{
+    required int32 id   = 1; //玩家勾选提醒
+	required int32 tip  = 2; //标识 0为去掉勾 1为勾上
+}

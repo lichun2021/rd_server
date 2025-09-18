@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="3020001" conditionType="700078" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" />
+      <data achieveId="3020002" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+      <data achieveId="3020003" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+      <data achieveId="3020004" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+      <data achieveId="3020005" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+      <data achieveId="3020006" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+      <data achieveId="3020007" conditionType="700079" conditionValue="1" rewards="30000_29700001_2,30000_29700021_10" probability="3000,7000" />
+</root>

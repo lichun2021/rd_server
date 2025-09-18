@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data stageId="100" name="资源采集" order="3" beforeStageId="250" nextStageId="200" funcType="1" scoreCof="1007_1,1008_1,1010_6,1009_24,1001_24000" scoreWeightCof="100" prepareTime="0" continueTime="86400" targetId="1001_1002_1003_1004" rankId="100" allianceRankId="10" />
+      <data stageId="200" name="基地发展" order="4" beforeStageId="100" nextStageId="400" funcType="2" scoreCof="100_100" scoreWeightCof="1500" prepareTime="0" continueTime="86400" targetId="2001_2002_2003_2004" rankId="200" allianceRankId="20" />
+      <data stageId="250" name="部队训练" order="2" beforeStageId="300" nextStageId="100" funcType="6" scoreCof="10_15_20_25_35_45_60_75_90_105_120_135_150_150" scoreWeightCof="1000" prepareTime="0" continueTime="86400" targetId="2501_2502_2503_2504" rankId="250" allianceRankId="25" />
+      <data stageId="300" name="硝烟弥漫" order="1" beforeStageId="0" nextStageId="250" funcType="3" scoreCof="100_200_300_400_500_600_700_800_900_1000_1100_1200_1300_1400_1500_1600_1700_1800_1900_2000_2100_2200_2300_2400_2500_2600_2700_2800_2900_3000_3100_3200_3300_3400_3500_3600_3700_3800" scoreWeightCof="2000" prepareTime="0" continueTime="86400" targetId="3001_3002_3003_3004" rankId="300" allianceRankId="30" />
+      <data stageId="400" name="战力提升" order="5" beforeStageId="200" nextStageId="500" funcType="4" scoreCof="1" scoreWeightCof="10000" prepareTime="0" continueTime="86400" targetId="4001_4002_4003_4004" rankId="400" allianceRankId="40" />
+      <data stageId="500" name="喋血枭雄" order="6" beforeStageId="400" nextStageId="0" funcType="5" scoreCof="10_20_40_75_130_215_330_490_700_970_1300_1680_2000_2000,1_2_4_7_13_21_33_49_70_97_130_168_200_200" scoreLimit="999900000000_100000000" scoreWeightCof="1800" prepareTime="0" continueTime="172800" targetId="5001_5002_5003_5004" rankId="500" allianceRankId="50" />
+</root>

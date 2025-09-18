@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" needItem="30000_1367005_75" needItem2="30000_1367005_75" gainItem="30000_1367001_1" times="10" time2="10" />
+      <data id="1002" needItem="30000_1367005_80" needItem2="30000_1367005_80" gainItem="30000_21070056_1" times="50" time2="50" />
+      <data id="1003" techId="602" needItem="30000_1367005_75" needItem2="30000_1367005_75" gainItem="30000_1367001_1" times="20" time2="20" />
+      <data id="1004" techId="602" needItem="30000_1367005_120" needItem2="30000_1367005_120" gainItem="30000_21070056_1" times="100" time2="100" />
+      <data id="1005" techId="1302" needItem="30000_1367005_240" needItem2="30000_1367005_240" gainItem="30000_1367003_1" times="5" time2="5" />
+      <data id="1006" techId="1302" needItem="30000_1367005_240" needItem2="30000_1367005_240" gainItem="30000_1367004_1" times="5" time2="5" />
+      <data id="1007" techId="1302" needItem="30000_1367005_160" needItem2="30000_1367005_160" gainItem="30000_21070056_1" times="200" time2="200" />
+      <data id="1008" techId="1602" needItem="30000_1367005_100" needItem2="30000_1367005_100" gainItem="30000_1367001_1" times="30" time2="30" />
+      <data id="1009" techId="1602" needItem="30000_1367005_300" needItem2="30000_1367005_300" gainItem="30000_1367003_1" times="5" time2="5" />
+      <data id="1010" techId="1602" needItem="30000_1367005_300" needItem2="30000_1367005_300" gainItem="30000_1367004_1" times="5" time2="5" />
+      <data id="1011" techId="1602" needItem="30000_1367005_200" needItem2="30000_1367005_200" gainItem="30000_21070056_1" times="450" time2="450" />
+      <data id="1012" techId="1602" needItem="30000_1367005_240" needItem2="30000_1367005_240" gainItem="30000_21070056_1" times="1200" time2="1200" />
+      <data id="1013" techId="1602" needItem="30000_1367005_20" needItem2="30000_1367005_20" gainItem="30000_810000_1" times="9999" time2="9999" />
+      <data id="1014" techId="1602" needItem="30000_1367005_1" needItem2="30000_1367005_1" gainItem="30000_1780035_1" times="9999" time2="9999" />
+</root>

@@ -1,0 +1,141 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+
+//更改霸主.
+message StarWarsOffericerChangeKingReq {
+	required string targetPlayerId = 1;//被任命新的霸主, 必须和玩家同盟.
+}
+
+//请求官职信息
+message StarWarsOfficerReq {
+	optional int32 real = 1; //0为取缓存，1为读取redis数据.
+}
+
+//请求官职信息
+message StarWarsOfficerResp {
+	repeated StarWarsOfficerTeamStruct teamStructs = 1;//
+	required int32 clearTime = 2; //清理时间,到期之后就不生效了.
+}
+
+message StarWarsOfficerTeamStruct {								
+	required int32 part = 1;  //2  
+	required int32 team = 2;    //1  =0
+	required int32 level = 3; // 决出16是1  16进4是2  世界霸主3
+	required StarWarsOfficerStruct officer = 4; 
+}
+
+
+//星球大战的官职.(这里是个跨服的redis结构,服务器和客户端公用一个.)
+message StarWarsOfficerStruct {		
+	required int32 officerId = 1; //官职.
+	optional int32 endSetTime = 2; //修改霸主的截止时间
+	optional int32 state = 3;     //是否已经设置过霸主.
+	optional CrossPlayerStruct playerInfo = 4; //玩家
+}
+
+//星球大战的国王历史记录
+message StarWarsKingRecordReq {
+	required int32 part = 1;		//分区
+	required int32 team = 2; 		//team	
+}
+
+//星球大战的国王历史记录
+message StarWarsKingRecordResp {	
+	required int32 part = 1;		//分区
+	required int32 team = 2; 		//
+	repeated StarWarsKingRecordStruct record = 3; //国王的记录
+}
+
+//星球大战国王记录
+message StarWarsKingRecordStruct {	
+	required int32 turnCount = 1; //第几期
+	required int32 createTime = 2;//产生时间.
+	required CrossPlayerStruct playerInfo = 3; //国王的相关信息 
+}
+
+
+//请求分区礼包信息. (只有霸主和三军统帅可以颁发礼包,所以这里沿用之前的概念,无需修改.)
+message StarWarsGiftReq {
+	required int32 part = 1; //分区信息
+}
+
+//请求分区礼包信息
+message StarWarsGiftResp {
+	required int32 part = 1; //分区信息
+	repeated StarWarsGiftStruct gifts = 2; //礼包的个数信息.
+}
+
+
+//礼包的颁发信息
+message StarWarsGiftStruct {
+	required int32 giftId = 1; //礼包
+	repeated string playerIdSet = 2; //已经颁发的玩家.
+}
+
+//礼包的历史记录.
+message StarWarsGiftRecordReq {
+	required int32 part = 1; //分区信息
+}
+
+//礼包的历史记录.
+message StarWarsGiftRecordResp {
+	required int32 part = 1; //分区信息
+	repeated StarWarsGiftRecordStruct recors = 2;//礼包的信息
+}
+
+//礼包的颁奖记录.
+message StarWarsGiftRecordStruct {
+	required string kingGuildTag = 1;//国王的公会简称
+	required string kingName = 2; //国王的名字
+	required string playerGuildTag = 3; //被颁发的人的工会标记.
+	required string playerName = 4;// 被颁发的人名
+	required int32 	giftId 	   = 5; //颁发的礼包ID
+	required int32  createTime = 6;//创建时间.
+	optional string serverId = 7; //玩家的注册服.
+	optional string kingServerId = 8;//霸主区服ID.
+}
+
+//根据玩家名字搜索玩家
+message StarWarsSearchPlayerReq {
+	required int32 part = 1; //这里涉及到洲然后过滤掉不在辖区内的玩家.
+	required string playerName = 2;
+	optional string playerId = 3; //客户端不用传, 这里是服务器发给跨服的时候服务器自己加上去的。
+}
+
+//根据玩家的名字搜索玩家.
+message StarWarsSearchPlayerResp {
+	required int32 part = 1; //这里涉及到洲然后过滤掉不在辖区内的玩家.
+	optional CrossPlayerStruct player = 2; //玩家返回.
+}
+
+//星球大战 发奖.
+message StarWarsGiftAwardReq {
+	required int32 part = 1; //分区
+	required int32 giftId = 2; //玩家id
+	repeated string playerIds = 3; //玩家的id列表.
+}
+
+
+//请求自己辖区的服务器
+message StarWarsServerIdListReq {
+	required int32 part = 1;//分区
+	required int32 team = 2; //分组 
+}
+
+//请求自己辖区的服务器
+message StarWarsServerIdListResp {
+	required int32 part = 1; //分区.
+	required int32 team = 2; // 分组
+	repeated string serverIdList = 3; //区服列表.
+}
+
+//请求区服国王
+message StarWarsServerPresidentReq {
+	repeated string serverIds = 1; //区服列表
+}
+
+
+//返回区服的国王,没有国王的区服,不会返回struct
+message StarWarsServerPresidentResp {
+	repeated CrossPlayerStruct joinGuildLeaderList = 1; //参赛联盟leader
+}

@@ -1,0 +1,110 @@
+option java_package = "com.hawk.game.protocol";
+
+message MonthCardPB
+{
+	required int32 initialCardId = 1;  // 原始月卡ID
+	required int32 cardId        = 2;  // 实际月卡ID，未购买状态下cardId=initialCardId
+	required int32 status 	     = 3;  // 状态
+	optional int64 purchaseTime  = 4;  // 购买时间
+	optional int64 startTime     = 5;  // 开售时间
+	optional int64 stopTime      = 6;  // 停售时间
+	optional int64 hiddenTime    = 7;  // 下架时间
+	repeated int32 selectedItem  = 8;  // 定制特权卡锁选择的物品
+}
+
+// 月卡周卡状态
+enum MonthCardState
+{
+	UNPURCHASED             = 0; // 未购买
+	TO_RECEIVE				= 1; //	待领取
+	RECEIVED                = 2; // 已领取
+	TO_RENEW                = 3; // 可续费
+}
+
+// 特权商店兑换信息
+message ExchangeItem
+{
+	required int32 exchangeId    = 1; //兑换ID
+	required int32 count         = 2; //已兑换数量
+}
+
+message HPMonthCardSync
+{
+	repeated MonthCardPB monthCardInfo = 1;
+	repeated ExchangeItem exchangeItem = 2; // 特权商店兑换信息
+	optional int32  exchangeCoins      = 3; // 兑换币数量
+	optional int64  eff641EndTime      = 4; // 周卡月卡每日领取的奖励+XX%的buff结束时间（为0表示作用号没生效）
+	optional int64  eff910EndTime      = 5; // 周卡月卡有百分之几的几率特权双倍领取奖励的buff结束时间（为0表示作用号没生效）
+	repeated int32  tips			   = 6;	// 特权商店兑换物品勾选提示
+}
+
+// 月卡周卡购买请求
+message BuyMonthCardReq
+{
+	required int32 cardId   = 1; // 月卡ID
+}
+
+// 领取月卡周卡每日奖励请求
+message ReceiveMonthCardAwardReq
+{
+	required int32 cardId   = 1; // 月卡ID
+}
+
+// 月卡周卡续费请求
+message MonthCardRenewReq
+{
+	required int32 cardId   = 1; // 月卡ID
+}
+
+// 月卡续费通知
+message MonthCardRenewNotifyPB
+{
+	repeated int32 cardId = 1;  // 月卡ID
+}
+
+// 半价信息
+message MonthCardPriceCutInfo
+{
+	required bool  pricecut = 1;  // 是否有半价优惠
+	optional int32 remindTimeEnd = 2; // 半价提醒结束时间点
+}
+
+// 通过使用道具来激活月卡
+message MonthCardActiveReq 
+{
+	required int32 itemId = 1;
+}
+
+message MonthCardActiveResp
+{
+	required int32 cardId   = 1; // 月卡ID
+}
+
+//定制特权卡选择物品请求
+message MonthCardCustomSelectReq
+{
+	required int32 cardId   = 1; // 月卡ID
+	repeated int32 rewardId = 2; // 定制特权卡选择物品信息
+}
+
+//特权兑换商店兑换请求
+message MonthCardExchangeReq
+{
+	required int32 exchangeId   = 1; // 兑换ID
+	required int32 count        = 2; // 兑换数量
+}
+
+//勾选提醒数据结构
+message PBShopItemTip{
+	required int32 id = 1;  //玩家勾选提醒
+	required bool tip = 2;  //勾选true,取消勾选false
+}
+
+//勾选提醒请求
+message PBShopItemTipsReq{
+	repeated PBShopItemTip tips = 1;
+}
+
+message PBShopItemTipsResp{
+	repeated int32  tips  = 1;	// 特权商店兑换物品勾选提示（这里传的是去掉勾选的id）
+}

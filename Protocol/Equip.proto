@@ -1,0 +1,88 @@
+option java_package = "com.hawk.game.protocol";
+
+// 装备信息
+message EquipInfo
+{
+	required string id 			= 1; //装备id
+	required int32	cfgId 		= 2; //装备配置id
+	required EquipState	state	= 3; //装备状态
+	required bool isNew			= 4; //是否新装备
+}
+
+// 装备状态
+enum EquipState
+{
+	FREE 							= 0 ; //未装备
+	ON_COMMANDER 					= 1 ; //装备指挥官
+	AS_MATERIAL						= 2 ; //作为打造材料,占用中(背包内不展示)
+	RESOLVING						= 3 ; //分解中
+	QUALITY_UPING					= 4 ; //升品中
+}
+
+// 装备队列类型
+enum EquipQueueType
+{
+	FORGE		= 1; // 装备打造
+	QUALITY_UP	= 2; // 装备升品	
+	RESOLVE		= 3; // 装备分解
+}
+
+// 获取/同步装备信息
+message HPEquipInfo
+{
+	repeated EquipInfo equipInfo	= 1;
+}
+
+// 玩家装备信息
+message CommanderEquipSync{
+	repeated PBEquipSlot equipSlot = 1; //装备信息
+	
+}
+
+// 装备信息
+message PBEquipSlot{
+	required int32 pos	= 1; //装备位置
+	required string equipId	= 2; //装备id
+	required int32 cfgId = 3; //装备配置id
+}
+
+// 穿戴装备
+message PutOnEquipReq
+{
+	required string equipId = 1; //装备id
+	required int32 pos	= 2; // 装备位位置(1-8)
+}
+
+// 取下装备
+message TakeOffEquipReq
+{
+	required string equipId = 1; //装备id
+}
+
+// 装备打造/升品
+message EquipForgeOrQualityUpReq
+{
+	required int32 targetId			= 1; //目标装备Id
+	optional string materialEquip	= 2; //材料装备Id
+	required bool	immediately		= 3; //是否花钱立即完成
+}
+
+// 装备分解
+message ForgeResolveReq
+{
+	required string equipId		= 1;
+	required bool	immediately	= 2; //是否花钱立即完成
+}
+
+// 材料合成/分解
+message MaterialOperationReq
+{
+	required int32 materialId 	= 1; //合成目标材料id/被分解材料id
+	required int32 count		= 2; //合成/分解数量
+}
+
+
+
+
+
+

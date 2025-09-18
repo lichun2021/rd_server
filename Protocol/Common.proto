@@ -1,0 +1,60 @@
+option java_package = "com.hawk.game.protocol";
+
+message HpRedPointSync
+{
+	required RedType type  = 1; //功能类型
+	optional string value	= 2;
+}
+
+enum RedType {
+	GUILD_FAVOURITE = 1; //联盟收藏
+}
+// 客户端日志类型
+enum LogType{
+	DEBUG_LOG	= 0; //普通客户端日志,debug模式下记录
+	TLOG		= 1; // Tlog日志
+}
+
+// 客户端日志记录
+message HPClientLogRecordReq{
+	required LogType logType	= 1;
+	required string logInfo		= 2;
+}
+
+message KeyValuePairInt
+{
+	required int32 key  = 1;
+	required int32 val  = 2;
+	optional int32 soldierStar = 3; // 兵种星级
+	optional int32 soldierPlantStep = 4; // 泰能等级
+	optional int32 plantSkillLevel  = 5; // 泰能强化技能等级
+	optional int32 plantMilitaryLevel = 6; //泰能兵军衔等级
+}
+
+message KeyValuePairStr
+{
+	required int32 key  = 1;
+	required string val  = 2;
+}
+
+message KeyValuePairStrStr{
+	required string key = 1;
+	required string value = 2;
+}
+
+message SynSystemEvent {
+	optional SystemEvent even = 1;
+}
+
+enum SystemEvent {
+	FIVE_COLOCK = 1; //5点钟事件
+}
+
+//发送GM指令
+message GMRequest {
+	required string reqeustStr = 1; //请求 josn 格式  cmd是必填, 其它参数根据不同cmd指定的脚本传递不同的参数.
+}
+
+message GMResponse {
+	required string rlt = 1; //json 字符串, 字段为 code  msg
+}

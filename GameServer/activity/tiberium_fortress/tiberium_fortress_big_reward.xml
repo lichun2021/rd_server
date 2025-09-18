@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pool="1" reward="30000_1300017_30" maxLimit="300" />
+      <data id="2" pool="1" reward="30000_800110_10" maxLimit="50" />
+      <data id="3" pool="1" reward="30000_840194_30" maxLimit="50" />
+      <data id="4" pool="1" reward="30000_1800000_30" maxLimit="999" />
+      <data id="5" pool="2" reward="30000_21063002_200" maxLimit="20" />
+      <data id="6" pool="2" reward="30000_21063003_200" maxLimit="20" />
+      <data id="7" pool="2" reward="30000_1300017_150" maxLimit="5" />
+      <data id="8" pool="2" reward="30000_1800001_20" maxLimit="5" />
+</root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10001" areaId="1" serverId="10001" power="90000000" rank="1" isKing="1" />
+      <data id="10002" areaId="1" serverId="10002" power="80000000" rank="2" isKing="1" />
+      <data id="10003" areaId="1" serverId="10003" power="70000000" rank="3" isKing="0" />
+      <data id="10004" areaId="1" serverId="10004" power="60000000" rank="4" isKing="0" />
+      <data id="60008" areaId="2" serverId="60008" power="90000000" rank="1" isKing="1" />
+      <data id="20002" areaId="2" serverId="10002" power="80000000" rank="2" isKing="0" />
+      <data id="20003" areaId="2" serverId="10003" power="70000000" rank="3" isKing="0" />
+      <data id="20004" areaId="2" serverId="10004" power="60000000" rank="4" isKing="0" />
+</root>

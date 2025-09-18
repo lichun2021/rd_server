@@ -1,0 +1,222 @@
+option java_package = "com.hawk.game.protocol";
+
+import "World.proto";
+import "Const.proto";
+import "Common.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+//获取哨塔列表
+message GetGuildManorList
+{
+}
+
+//联盟领地状态
+enum GuildManorStat
+{
+	LOCKED_M		= 1;	// 未开启
+	OPENED_M		= 2;	// 未放置
+	BUILDING_M		= 3;	// 建造中
+	UNCOMPELETE_M	= 4;	// 未完成
+	UNGARRISON_M	= 5;	// 未驻防
+	GARRISON_M		= 6;	// 已驻防
+	DAMAGED_M		= 7;	// 损毁
+	REPAIRING_M		= 8;	// 修理中
+	BREAKING_M		= 9;	// 摧毁中
+	UN_BREAKING_M	= 10;	// 未完成摧毁中
+}
+
+//联盟建筑通用状态(用于箭塔，仓库，联盟超级矿)
+enum GuildBuildingNorStat
+{
+	LOCKED_N		= 1;	// 不可放置
+	OPENED_N		= 2;	// 未放置
+	BUILDING_N		= 3;	// 建造中
+	UNCOMPELETE_N	= 4;	// 未完成
+	COMPELETE_N		= 5;	// 已完成
+	ACTIVE_N		= 6;	// 使用中 (防御中, 采集中，存储中)
+}
+
+//联盟超级矿类型
+enum GuildSuperMineType
+{
+	GOLDORE_MINE		= 1;	// 黄金
+	OIL_MINE			= 2;	// 石油
+	TOMBARTHITE_MINE	= 3;	// 合金
+	URANIUM_MINE		= 4;	// 铀矿
+}
+
+//联盟超级矿基础
+message GuildSuperMineBase
+{
+	required GuildSuperMineType type = 1; //超级矿类型（可做主键，每种类型只可以有一个）
+	required GuildBuildingNorStat stat = 2; //超级矿状态
+	optional int32 overTime	= 3;//倒计时单位S
+	optional int32 buildLife = 4; //建筑值
+	optional int64 resouceNum = 5; //剩余资源量
+	optional int32 level = 6; //等级
+	optional int32 x = 7;//坐标X
+	optional int32 y = 8;//坐标Y
+}
+
+//联盟箭塔基础
+message GuildTowerBase
+{
+	required int32 TowerId = 1; //箭塔ID
+	required GuildBuildingNorStat stat = 2; //箭塔状态
+	optional int32 overTime	= 3;//倒计时单位S
+	optional int32 buildLife = 4; //建筑值
+	optional int32 level = 5; //等级
+	optional int32 x = 6;//坐标X
+	optional int32 y = 7;//坐标Y
+}
+
+//联盟仓库基础
+message GuildWarehouseBase
+{
+	required GuildBuildingNorStat stat = 1; //仓库状态
+	optional int32 overTime	= 2;//倒计时单位S
+	optional int32 buildLife = 3; //建筑值
+	optional int32 level = 4; //等级
+	optional int32 x = 5;//坐标X
+	optional int32 y = 6;//坐标Y
+	optional int64 resouceNum = 7; // 已存储资源量
+}
+
+//联盟哨塔
+message GuildManorBase
+{
+	required int32 manorIdx = 1; //领地序列
+	required string manorName = 2; //领地名称
+	required GuildManorStat stat = 3;//领地状态
+	optional int32 overTime	= 4;//倒计时单位S
+	optional int32 level = 5; //哨塔等级
+	optional int32 buildLife = 6; //建筑值
+	optional int32 x = 7;//坐标X
+	optional int32 y = 8;//坐标Y
+}
+
+
+
+
+//联盟所有建筑列表
+message GuildManorList
+{
+	repeated GuildManorBase allManor = 1; //领地列表
+	repeated GuildSuperMineBase allSuperMine = 2; //超级矿列表
+	repeated GuildTowerBase allTower = 3; //箭塔列表
+	optional GuildWarehouseBase allWarehouse = 4; //仓库
+	optional GuildDragonTrapBase dragonTrap = 5; //巨龙陷阱
+}
+
+//建造联盟领地建筑
+message	CreateGuildManorBuilding
+{
+	required int32 x		= 1;
+	required int32 y		= 2;
+	required TerritoryType type = 3;//建筑类型
+	optional int32 manorIdx = 4; //领地序列
+}
+//建造联盟大本堡垒（哨塔）
+message	CreateGuildManor
+{
+	required int32 x		= 1;
+	required int32 y		= 2;
+	required int32 manorIdx = 3; //领地序列
+}
+//修改联盟领地名称
+message changeManorName
+{
+	repeated KeyValuePairStr names = 1; //领地名称列表，key是index，val是名字
+}
+//主动收回建筑
+message TakeBackManorBuilding
+{
+	required TerritoryType type = 1;//建筑类型
+	optional int32 manorIdx = 2; //序列
+}
+//请求建筑UI列表数据
+message GetManorPlayerInfoList
+{
+	required TerritoryType type = 1;//建筑类型
+	required int32 manorIdx = 2; //建筑序列
+	optional string guildId = 3; //建筑所属联盟ID
+}
+//联盟超级矿类型
+enum PanelState
+{
+	MOVEING			= 1;	// 行军中
+	ACTION			= 2;	// 采集中
+}
+//UI显示玩家部队
+message ManorPlayerInfo
+{
+	required string playerId = 1; //玩家ID
+	required string name = 2; //玩家名称
+	optional string pfIcon = 3; //玩家平台头像
+	optional string guildTag = 4; //联盟标签
+	optional int32 icon = 5; //icon
+	optional PanelState state = 6; //状态
+	repeated KeyValuePairInt army = 7;//部队列表
+	repeated PBHeroInfo	heros = 8;//驻守英雄信息
+	optional int32 maxArmyCount = 9; //最大部队容量
+	optional PBSuperSoldierInfo ssoldier 	= 10; 
+}
+//UI显示玩家部队列表
+message ManorPlayerInfoList
+{
+	required int32 buildLife = 1; //建筑值
+	required int32 level = 2; //等级
+	optional int32 maxArmyCount = 3; //最大部队容量
+	optional int64 resourceNum = 4; //资源剩余量（超级矿用到）
+	optional int32 collectSpeed = 5; //采集速度（超级矿用到）
+	optional int32 collectBuffSpeed = 6; //采集加速度（超级矿用到）
+	optional int64 alreadyCollect = 7; //已采集量（超级矿用到）
+	optional int32 totalCollectSpeed = 8; //采集总速度
+	optional int64 marchLoadNum = 9; //行军负重
+	optional string selfMarchId = 10; // 自己行军id
+	optional int32 maxMarchCount = 11; //最大行军容量
+	optional int32 overTime	= 12;//倒计时单位S
+	repeated ManorPlayerInfo infos = 13;//下方列表
+	optional bool showList = 14; //是否显示列表
+	optional int32 occupyLife = 15;//占领值
+	optional int64 removeTime = 16; //战旗拆除时间
+}
+//箭塔攻击通知
+message ManorBartizanDamageInfo
+{
+	required string marchId = 1; //行军ID
+	required int32 deadAmry = 2; //死亡兵数量总数
+	required int32 x = 3;
+	required int32 y = 4;
+}
+//箭塔攻击列表
+message ManorBartizanDamageList
+{
+	required int32 bartizanIndex 					= 1;//箭塔序号
+	required int32 x								= 2;//箭塔坐标x
+	required int32 y								= 3;//箭塔坐标y
+	repeated ManorBartizanDamageInfo damageInfo 	= 4;//箭塔伤害信息
+}
+
+//清理领地内的资源点
+message ClearResourcePoint
+{
+	required int32 x		= 1;
+	required int32 y		= 2;
+}
+
+//当前联盟清除剩余次数
+message GuildClearResouceNum
+{
+	required int32 leftCount	= 1;
+}
+
+
+//联盟巨龙陷阱基础
+message GuildDragonTrapBase
+{
+	required GuildBuildingNorStat stat = 1; //建筑状态
+	optional int32 x = 2;//坐标X
+	optional int32 y = 3;//坐标Y
+}

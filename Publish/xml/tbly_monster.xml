@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" monsterId="900001" playerHonor="10" guildHonor="0" guildOrder="5" winArmyCount="50000" refreshTime="300,600,900,1500,1800,2100,2700,3000" refreshCount="100" refreshPoint="15_241,135_61,59_47,91_255,97_194,37_74,53_106,111_222" />
+</root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" showLevel="1" showType="1" rankLevelLimit="10" />
+      <data id="2" showLevel="2" showType="1" moduleValueLimit="6_6" />
+      <data id="3" showLevel="3" showType="1" moduleAdditionalValueLimit="36_6" />
+      <data id="4" showLevel="1" showType="2" rankLevelLimit="10" />
+      <data id="5" showLevel="2" showType="2" moduleValueLimit="6_6" />
+      <data id="6" showLevel="3" showType="2" moduleAdditionalValueLimit="36_6" />
+      <data id="7" showLevel="1" showType="3" rankLevelLimit="10" />
+      <data id="8" showLevel="2" showType="3" moduleValueLimit="6_6" />
+      <data id="9" showLevel="3" showType="3" moduleAdditionalValueLimit="36_6" />
+</root>

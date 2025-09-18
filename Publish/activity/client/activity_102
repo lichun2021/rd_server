@@ -1,0 +1,27 @@
+return {
+	prop =
+	{
+		activityId = 102,
+		name = [[寻宝大作战]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，达成指定任务后即可获得奖励，奖励请手动点击领取，活动任务每日重置。<br/>2. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">放弃</font>奖励。<br/>3.获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">藏宝图</font>后，您可以在背包中打开宝图寻找幽灵宝藏。<br/>4.挖掘宝藏可以获得随机丰厚奖励，也可能释放宝藏守卫<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">齐天金猴</font>或暴露<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">金鼠宝藏</font>。<br/>5. 集结金猴时单人至多获得全队奖励的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">50%</font>，集结时合理的部队分配更能有效获得金猴的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">100份</font>参与奖励哦；例：队员A、B、C对金猴造成60%、30%、10%的伤害，则因为队员A的伤害占比超过了50%，实际获得50份奖励，队员B、C则不受影响，对应获取30、10份奖励</font>]],
+		priority = 10084,
+		icon = [[Activity_Icon_102_Nor.png]],
+		selecticon = [[Activity_Icon_102_Sel.png]],
+		bigIcon = [[Activity_HeroCollection_u_Rendered.png]],
+	},
+	newyear_treasure_achieve = [[achieveId	conditionType	conditionValue	rewards	taskValue	title	gotoType	gotoValue
+1	1	1	2	1	2	1	2
+1020001	31100	0_1000000	30000_1780013_1,30000_810001_1,30000_810003_4,30000_810010_4,30000_810012_4	1000000	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">采集资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font></font>	31	1_1_1007
+1020002	31100	0_3000000	30000_1780013_1,30000_810001_1,30000_810003_6,30000_810010_6,30000_810012_6	3000000	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">采集资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font></font>	31	1_1_1007
+1020003	500006	0_1000	30000_1780013_1,30000_1480001_5,30000_1300006_3,30000_1300009_3	1000	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练并收获任意士兵<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>	23	2012
+1020004	500006	0_3000	30000_1780013_1,30000_1480001_10,30000_1300006_5,30000_1300009_5	3000	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练并收获任意士兵<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>	23	2012
+1020005	500004	300	30000_1780013_1,30000_850005_4,30000_850035_4,30000_850015_4,30000_850025_4	300	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">使用加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>分钟</font>	-1	0
+1020006	500004	500	30000_1780013_1,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	500	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">使用加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>分钟</font>	-1	0
+1020007	500020	2	30000_1780013_1,30000_810001_1,30000_810003_4,30000_810010_4,30000_810012_4	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">消灭幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	16_1
+1020008	500020	5	30000_1780013_1,30000_810001_1,30000_810003_6,30000_810010_6,30000_810012_6	5	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">消灭幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	16_1
+1020009	170100	50	30000_1780013_1,30000_850005_4,30000_850035_4,30000_850015_4,30000_850025_4	50	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>	31	2_0
+1020010	170100	100	30000_1780013_1,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	100	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>	31	2_0
+]],
+
+}

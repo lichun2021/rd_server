@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100001" award="3100030" time="60" />
+      <data id="100002" award="3100031" time="120" />
+      <data id="100003" award="3100032" needNotice="1" time="180" />
+</root>

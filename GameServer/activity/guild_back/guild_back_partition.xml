@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" weight="400" ratio="1500" rewards="10000_1001_1" />
+      <data id="2" type="1" weight="1200" ratio="750" rewards="10000_1001_1" />
+      <data id="3" type="1" weight="2800" ratio="400" rewards="10000_1001_1" />
+      <data id="4" type="1" weight="2800" ratio="300" rewards="10000_1001_1" />
+      <data id="5" type="1" weight="2800" ratio="200" rewards="10000_1001_1" />
+      <data id="6" type="2" weight="400" ratio="2500" rewards="10000_1011_1" />
+      <data id="7" type="2" weight="1200" ratio="1200" rewards="10000_1011_1" />
+      <data id="8" type="2" weight="2800" ratio="600" rewards="10000_1011_1" />
+      <data id="9" type="2" weight="2800" ratio="500" rewards="10000_1011_1" />
+      <data id="10" type="2" weight="2800" ratio="400" rewards="10000_1011_1" />
+</root>

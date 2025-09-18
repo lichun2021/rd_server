@@ -1,0 +1,24 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 使用道具
+costItem = 30000_9990003_1
+
+# 高级道具
+seniorCostItem = 30000_9990003_1
+
+# 道具价格
+itemPrice = 10000_1001_600
+
+# 高级价格
+seniorItemPrice = 10000_1001_600
+
+# S级限制次数
+frequencyS = 80
+
+# SS级限制次数
+frequencySS = 80
+
+# 购买1次获得固定奖励
+exReward = 30000_840172_1
+

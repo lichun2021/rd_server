@@ -1,0 +1,5497 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 系统协议ID列表(<100)
+enum sys
+{
+	// 数据封装
+	DATA_WRAPPER = 1;
+	// 秘钥交换
+	KEY_EXCHANGE = 2;
+	// 心跳通知
+	HEART_BEAT = 3;
+	// 错误码提示
+	ERROR_CODE = 4;
+	// 定义用户数据
+	CUSTOM_DATA_DEFINE = 5;
+	// 用户自定义数据同步
+	CUSTOM_DATA_SYNC = 6;
+	// 操作成功
+	OPERATE_SUCCESS	= 7;
+	// 账号绑定
+	ACCOUNT_BIND = 8;
+	// 账号解绑定
+	ACCOUNT_UNBIND = 9;
+	// 定义用户引导数据
+	CUSTOM_MODULE_GUIDE_DATA_DEFINE = 10;
+	
+	// 通知跨服数据变更
+	CS_PLAYER_DATA_SYNC = 20;
+	//跨服活动消息投递
+	CROSS_POST_ACTIVITY_EVENT = 21; 
+
+	ITEM_CONSUME_CHECK = 22; // 原服请求跨服方check物品
+	ITEM_CONSUME = 23; // 原服请求跨服方扣除物品
+	ITEM_AWARD_TAKE = 24; // 原服请求跨服方发放物品
+}
+
+// code  代码过长 导致编译不过
+enum code2
+{
+	LABORATORY_UNLOCK_PAGE_REQ = 721; // 新超能解锁 无论玩家点击那个未解锁的矩阵
+	// 泰能战士
+	PLANT_INSTRUMENT_CHIP_UPGRADE_C = 2221;// 破译仪器组件升级
+	PLANT_SOLDIER_CRACK_UPGRADE_C	= 2222; // 泰能战士破译阶段
+	PLANT_SOLDIER_CRACK_UPGRADE_CHIP_C = 2223; // 泰能战士破译阶段 组件升级 
+	PLANT_CRYSTALANALYSIS_CHIP_UPGRADE_C = 2224; // 晶体分析阶段 组件升级 
+	PLANT_SOLDIERSTRENGTHEN_TECH_UPGRADE_C = 2225; // 太能战士强化, 科技节点升级
+	PLANT_SOLDIER_SYNC = 2226; // 登录同步4个强化页
+	
+	//泰能科技
+	PLAYER_PLANT_SCIENCE_SYNC      = 2235; //玩家泰能科技同步
+	PLAYER_PLANT_SCIENCE_LEVEL_UP  = 2236; //玩家泰能科技升级
+	//泰能医院
+	CURE_PLANT_SOLDIER_C              = 2237; //治疗泰能兵
+	COLLECT_CURE_PLANT_FINISH_SOLDIER = 2238; //收取完成治疗的泰能兵
+
+	// 泰能进化	
+	PLANT_SOLDIER_ADVANCE_SYNC = 2240; // 同步进化
+	PLANT_SOLDIER_ADVANCE_C = 2241; // 泰能兵进化
+	PLANT_SOLDIER_COLLECT_C = 2242; // 泰能兵收取
+	PLANT_SOLDIER_SEE_FINISH_C = 2243;// 泰能认识完
+	PLANT_SOLDIER_COLLECT_S = 2244; // 泰能兵收取
+	PLANT_SOLDIER_ADVANCE_ADD_C = 2245; //泰能兵征召令
+	PLANT_SOLDIER_ADVANCE_CANCEL_C = 2246; //泰能取消金华
+
+	SOLDIER_EXCHANGE_PRE_VIEW_C	= 2247; // 兵种转换请求预览
+	SOLDIER_EXCHANGE_PRE_VIEW_S	= 2248; // 兵种转换请求预览
+	SOLDIER_EXCHANGE_C	= 2251; // 兵种转换请求
+	SOLDIER_EXCHANGE_S	= 2252; // 兵种转换请求
+	SOLDIER_EXCHANGE_INFO_SYNC	= 2253; // 兵种转换活动同步
+	SOLDIER_EXCHANGE_BUY_REQ	= 2254; // 兵种转换商店购买
+	SOLDIER_EXCHANGE_HISTORY_C	= 2255; // 兵种转换历史记录请求
+	SOLDIER_EXCHANGE_HISTORY_S	= 2256; // 兵种转换历史记录请求
+	SOLDIER_EXCHANGE_OPEN_PAGE	= 2257; // 兵种转换打开页面
+
+	POINT_SPRINT_PAGE_REQ = 2261; // 请求界面信息
+	POINT_SPRINT_OWN_POINT_REWARD = 2262; // 领取个人奖励
+	POINT_SPRINT_ROUND_REWARD = 2263; // 领取轮奖励
+	POINT_SPRINT_PAGE_RESP = 2264; // 请求界面信息
+	POINT_SPRINT_TIPS = 2265; // 勾选提醒
+	POINT_SPRINT_EXCHANGE = 2266; // 兑换
+
+	TBLY_LASTSNC_REQ = 2271; // 战场外请求战场详情
+	TBLY_LASTSNC_RESP = 2272; // 战场外请求战场详情
+
+	DYZZ_JOIN_ROOM_REQ						= 2301; // 主动请求加入副本地图
+	DYZZ_ENTER_GAME_SUCCESS					= 2302; // 成攻进入游戏地图, 服务器回复
+	DYZZ_GAME_OVER							= 2303; // 游戏结束
+	DYZZ_GAME_SYNC							= 2304; // 副本信息同步
+	DYZZ_QUIT_ROOM_REQ						= 2305; // 主动退出
+	DYZZ_PLAYER_QUIT						= 2306; // 有玩家退出
+	DYZZ_CLEAN_CLAIENT_DATA					= 2307;  // 通知客户端清理数据
+	DYZZ_SINGLE_MARCH 						= 2308; // 副本内特有建筑单人行军
+	DYZZ_SINGLE_MARCH_S 					= 2309; // 副本内特有建筑单人行军
+	DYZZ_GAME_SYNC_C 						= 2310; // 副本信息同步
+	DYZZ_MOVE_CITY_CD_SYNC 					= 2311; // 同步迁城cd
+	DYZZ_SECOND_MAP_C 						= 2312; // 小地图
+	DYZZ_SECOND_MAP_S 						= 2313; // 小地图
+	//DYZZ_NUCLEAR_SEND_C 					= 2314; // 核弹发射
+	DYZZ_NUCLEAR_SEND_S 					= 2315; // 防御塔攻击
+	DYZZ_ANCHOR_JOIN_REQ 					= 2316; // 主播进房间
+	DYZZ_ANCHOR_LIST_MAIL_C 				= 2317; // 主播查看建筑战斗邮件
+	DYZZ_ANCHOR_LIST_MAIL_S 				= 2318; // 主播查看建筑战斗邮件
+	DYZZ_ANCHOR_GET_GUILD_WAR_INFO_C 		= 2319; // 主播查看联盟战争
+	DYZZ_ANCHOR_GET_GUILD_WAR_INFO_S 		= 2320; // 
+	DYZZ_ANCHOR_GET_GUILD_WAR_CELL_INFO_C 	= 2321;
+	DYZZ_ANCHOR_GET_GUILD_WAR_CELL_INFO_S 	= 2322;
+	DYZZ_ORDER_USE_C  						= 2323; // 使用号令
+	DYZZ_ORDER_SYNC_S 						= 2324; //号令同步
+	DYZZ_ROGUE_SELECT_C						= 2325; // 选择一个roge
+	DYZZ_ROGUE_SYNC_S						= 2326; // 同步当前rogue
+	DYZZ_DESTROY_TOWER_C					= 2327; // 摧毁占领的地方箭塔
+	DYZZ_CAMP_NOTICES_C						= 2328; // 队内广播（客户端发给服务器）
+	DYZZ_CAMP_NOTICES_S						= 2329; // 队内广播（服务器发给客户端）
+	DYZZ_CAMP_NOTICES_TIME					= 2330; // 发送队内广播时间戳
+	DYZZ_ITEM_BUY_REQ					= 2331; // 免费加速购买
+	DYZZ_ITEM_GET_REQ					= 2332; // 免费加速领取
+
+	CYBORG_ORDER_USE_C  						= 2355; // 使用号令
+	CYBORG_ORDER_SYNC_S 						= 2356; //号令同步
+
+	HERO_SOUL_LEVEL_UP_C					= 703; //hero_soul_level.xml level升级
+	HERO_SOUL_STAGE_UP_C					= 704; //hero_soul_stage.xml stage升级
+	HERO_SOUL_RESET_C						= 705; //重置
+
+	//----------------------联盟相关-----------------------
+	GUILD_REWARD_FLAG_SYNC = 9451;//同步联盟奖励旗帜同步协议
+	//----------------------联盟相关-----------------------
+
+	EUQUIP_STAR_SHOW_CHANGE_REQ = 200001; // 泰能装备显示开关
+	EUQUIP_STAR_SHOW_CHANGE_RESP = 200002;
+	
+	TRAVEL_SHOP_FRIENDLY_ADD_PUSH = 200005; // 黑市商店友好度增加推送
+	TRAVEL_SHOP_FRIENDLY_AWARD_REQ = 200006; // 黑市商店友好度奖励领取
+	
+	TRAVEL_SHOP_FRIENDLY_AWARD_GROUP_SET_REQ = 200008; //黑市商店友好度特权奖励组设置
+	TRAVEL_SHOP_FRIENDLY_AWARD_GROUP_SET_RESP = 200009;//黑市商店友好度特权奖励组设置
+	
+	TIMELIMIT_LOG_REQ = 200007; // 限时抢购客户端打点记录
+
+	//-------------赛季活动--------------
+	SEASON_INFO_GET = 54217;//请求赛季全量信息 
+	SEASON_INFO_SYNC = 54218;//同步全量信息 SeasonInfoSync
+	SEASON_ORDER_BASE_SYNC = 54219;//同步战令基础信息 SeasonInfoSync
+	SEASON_ORDER_ITEM_SYNC = 54220;//同步战令成就信息 SeasonInfoSync
+	SEASON_SHOP_SYNC = 54221;//同步商店信息 SeasonInfoSync
+	SEASON_SHOP_EXCHANGE = 54222;//赛季商店兑换 OrderShopItemPB
+	SEASON_ORDER_REWARD_GET = 54223;//赛季战令奖励领取
+
+	SEASON_GUILD_KING_RANK_REQ = 54224;//请求赛季王者排行榜
+	SEASON_GUILD_KING_RANK_RESP = 54225;//返回赛季王者排行榜数据 SeasonGuildKingRankResp
+
+	SEASON_CLIENT_LEVEL_UPDATE = 54227;//前端特效等级记录SeasonClientLevelUpdate
+
+	//-------------赛季活动--------------
+
+	//-------------世界勋章活动--------------
+	STAR_LIGHT_SIGN_INFO_REQ = 54228;//拉取数据
+	STAR_LIGHT_SIGN_SYNC = 54229;//同步
+	STAR_LIGHT_SIGN_REQ = 54230;//签到
+	STAR_LIGHT_SIGN_REDEEM_REQ = 54231;//补签
+	STAR_LIGHT_SIGN_CHOOSE_REQ = 54232;//选择道具
+	STAR_LIGHT_SIGN_AWARD_REQ = 54233;//领取奖励
+	STAR_LIGHT_SIGN_BUY_REQ = 54234;//购买分数
+	STAR_LIGHT_SIGN_MULTIPLE_REQ = 54235;//购买分数
+	STAR_LIGHT_SIGN_SCORE_BOX_REQ = 54236;//购买分数
+
+	//-------------世界勋章活动--------------
+
+	//-------------情报储蓄活动--------------
+	DIFF_INFO_SAVE_SYNC = 54237;//同步活动数据
+	DIFF_INFO_SAVE_RED_DOT = 54238;//消除红点
+	//-------------情报储蓄活动--------------
+
+	//-------------全军出击活动--------------
+	DIFF_NEW_SERVER_TECH_SYNC   = 54239;//同步活动数据
+	DIFF_NEW_SERVER_TECH_AWARD  = 54240;//领奖
+	//-------------全军出击活动--------------
+	XHJZ_PAGE_INFO_REQ				= 55021;//页面信息请求
+	XHJZ_PAGE_INFO_RESP				= 55022;//页面信息返回
+	XHJZ_TEAM_MANAGER_REQ			= 55023;//队伍管理请求
+	XHJZ_TEAM_MANAGER_RESP			= 55024;//队伍管理返回
+	XHJZ_MEMBER_MANAGER_REQ			= 55025;//成员管理请求
+	XHJZ_MEMBER_MANAGER_RESP		= 55026;//成员管理返回
+	XHJZ_MEMBER_LIST_REQ			= 55027;//成员列表请求
+	XHJZ_MEMBER_LIST_RESP			= 55028;//成员列表返回
+	XHJZ_TEAM_RANK_REQ				= 55029;//队伍排行请求
+	XHJZ_TEAM_RANK_RESP				= 55030;//队伍排行返回
+	XHJZ_HISTORY_REQ				= 55031;//历史战绩请求
+	XHJZ_HISTORY_RESP				= 55032;//历史战绩返回
+	XHJZ_EXCHANGE_REQ				= 55033;//商品兑换请求
+	XHJZ_EXCHANGE_RESP				= 55034;//商品兑换返回
+
+	//-------------通用联赛--------------
+	CMW_PAGE_INFO_REQ		= 54081;//请求页面信息
+	CMW_PAGE_INFO_RESP		= 54082;//返回页面信息
+	CMW_RANK_INFO_REQ		= 54083;//请求排名信息
+	CMW_RANK_INFO_RESP		= 54084;//返回排名信息
+	CMW_BATTLE_INFO_REQ		= 54085;//请求对战信息
+	CMW_BATTLE_INFO_RESP	= 54086;//返回对战信息
+	CMW_BATTLE_TIME_REQ		= 54087;//请求时间信息
+	CMW_BATTLE_TIME_RESP	= 54088;//返回时间信息
+	CMW_BATTLE_TARGET_REQ	= 54089;//请求目标信息
+	CMW_BATTLE_TARGET_RESP	= 54090;//返回目标信息
+
+	//-------------通用联赛--------------
+
+	//--------------联盟回流-----------------
+	GUILD_BACK_INFO_REQ 				= 55041; //活动信息请求
+	GUILD_BACK_INFO_RESP 				= 55042; //活动信息返回
+	GUILD_BACK_EXCHANGE_REQ 			= 55043; //兑换请求
+	GUILD_BACK_INVITE_REQ 				= 55044; //邀请请求
+	GUILD_BACK_INVITE_RESP 				= 55045; //邀请返回
+	GUILD_BACK_INVITE_LIST_REQ 			= 55046; //邀请列表请求
+	GUILD_BACK_INVITE_LIST_RESP 		= 55047; //邀请列表返回
+	GUILD_BACK_VIT_POOL_REWARD_REQ 		= 55048; //瓜分体力奖池请求
+	GUILD_BACK_GOLD_POOL_REWARD_REQ 	= 55049; //瓜分金币奖池请求
+	GUILD_BACK_BOX_REWARD_REQ 			= 55050; //宝箱奖励请求
+	//--------------联盟回流-----------------
+
+	//-------------联盟战斗组队--------------
+	GUILD_BATTLE_TEAM_MANAGER_REQ       = 55061;//队伍管理请求
+	GUILD_BATTLE_TEAM_MANAGER_RESP      = 55062;//队伍管理返回
+	GUILD_BATTLE_MEMBER_MANAGER_REQ     = 55063;//成员管理请求
+	GUILD_BATTLE_MEMBER_MANAGER_RESP    = 55064;//成员管理返回
+	GUILD_BATTLE_TEAM_LIST_REQ          = 55065;//队伍列表请求
+	GUILD_BATTLE_TEAM_LIST_RESP         = 55066;//队伍列表返回
+	GUILD_BATTLE_MEMBER_LIST_REQ        = 55067;//成员列表请求
+	GUILD_BATTLE_MEMBER_LIST_RESP       = 55068;//成员列表返回
+	//-------------联盟战斗组队--------------
+
+	//-------------通用商店--------------
+	SHOP_INFO_REQ     		= 54071;//商城兑换请求
+	SHOP_INFO_RESP    		= 54072;//商城兑换返回
+	SHOP_EXCHANGE_REQ     	= 54073;//商城兑换请求
+	SHOP_EXCHANGE_RESP    	= 54074;//商城兑换返回
+	SHOP_TIP_REQ     		= 54075;//勾选提醒请求
+	SHOP_TIP_RESP   		= 54076;//勾选提醒返回
+	//-------------通用商店--------------
+
+	//-------------先驱回响--------------
+	XQHX_PAGE_INFO_REQ				= 54111;//页面信息请求
+	XQHX_PAGE_INFO_RESP				= 54112;//页面信息返回
+	XQHX_TEAM_RANK_REQ				= 54113;//队伍排行请求
+	XQHX_TEAM_RANK_RESP				= 54114;//队伍排行返回
+	XQHX_HISTORY_REQ				= 54115;//历史战绩请求
+	XQHX_HISTORY_RESP				= 54116;//历史战绩返回
+	XQHX_TALENT_INFO_REQ			= 54117;//天赋信息请求
+	XQHX_TALENT_INFO_RESP			= 54118;//天赋信息返回
+	XQHX_TALENT_UPGRADE_REQ			= 54119;//加点请求
+	XQHX_TALENT_UPGRADE_RESP		= 54120;//加点返回
+	XQHX_TALENT_CLEAR_REQ			= 54121;//洗点
+	//-------------先驱回响--------------
+
+	//-------------拼多多活动--------------
+	PDD_INFO_REQ 			= 54241;//请求活动数据
+	PDD_INFO_RESP			= 54242;//活动数据
+	PDD_ORDER_LIST_REQ		= 54243;//请求自己订单列表数据
+	PDD_ORDER_LIST_RESP		= 54244;//自己订单列表数据
+	PDD_ORDER_INFO_REQ		= 54245;//请求单一订单信息
+	PDD_ORDER_INFO_RESP		= 54246;//单一订单信息
+	PDD_GROUP_LIST_REQ		= 54247;//请求拼单信息
+	PDD_GROUP_LIST_RESP		= 54248;//拼单信息
+	PDD_BUY_REQ				= 54249;//购买请求
+	PDD_SHARE_REQ			= 54250;//分享请求
+	PDD_CANCEL_REQ			= 54251;//取消请求
+	PDD_ORDER_LIST_SYN		= 54252;//单一订单信息同步
+	PDD_AWARD_REQ			= 54253;//领奖请求
+	PDD_TIPS_SYNC			= 54254;//领奖请求
+	//-------------拼多多活动--------------
+
+	//-------------拆服转服活动--------------
+	CHANGE_SVR_ACTIVITY_INFO_REQ    = 54255;
+	CHANGE_SVR_ACTIVITY_INFO_RESP    = 54256;
+	CHANGE_SVR_ACTIVITY_INVITE_REQ    = 54257;
+	CHANGE_SVR_ACTIVITY_INVITE_RESP    = 54258;
+	CHANGE_SVR_ACTIVITY_APPROVE_REQ    = 54259;
+	CHANGE_SVR_ACTIVITY_APPROVE_RESP    = 54260;
+	CHANGE_SVR_ACTIVITY_SCORE_RANK_REQ    = 54261;
+	CHANGE_SVR_ACTIVITY_SCORE_RANK_RESP    = 54262;
+	CHANGE_SVR_ACTIVITY_MANAGER_LIST_REQ    = 54263;
+	CHANGE_SVR_ACTIVITY_MANAGER_LIST_RESP    = 54264;
+	CHANGE_SVR_ACTIVITY_INTIVEE_LIST_REQ    = 54265;
+	CHANGE_SVR_ACTIVITY_INTIVEE_LIST_RESP    = 54266;
+	CHANGE_SVR_ACTIVITY_APPLY_LIST_REQ    = 54267;
+	CHANGE_SVR_ACTIVITY_APPLY_LIST_RESP    = 54268;
+	CHANGE_SVR_ACTIVITY_POWER_REQ    = 54269;
+	CHANGE_SVR_ACTIVITY_POWER_RESP    = 54270;
+	CHANGE_SVR_ACTIVITY_SHOW_REQ    = 54271;
+	CHANGE_SVR_ACTIVITY_SHOW_RESP    = 54272;
+	CHANGE_SVR_ACTIVITY_CHANGE_REQ    = 54273;
+	CHANGE_SVR_ACTIVITY_CHANGE_RESP    = 54274;
+	CHANGE_SVR_ACTIVITY_CHANGE_CHECK_REQ    = 54275;
+	CHANGE_SVR_ACTIVITY_CHANGE_CHECK_RESP    = 54276;
+	CHANGE_SVR_ACTIVITY_CANCEL_REQ    = 54277;
+	CHANGE_SVR_ACTIVITY_CANCEL_RESP    = 54278;
+	CHANGE_SVR_ACTIVITY_SEARCH_REQ    = 54279;
+	CHANGE_SVR_ACTIVITY_SEARCH_RESP    = 54280;
+	//-------------拆服转服活动--------------
+
+
+	//-------------鸿运夺金活动--------------
+	LUCK_GET_GOLD_SYNC                 = 54300;//活动信息
+	LUCK_GET_GOLD_INFO_REQ             = 54301;//请求活动
+	LUCK_GET_GOLD_INFO_RESP            = 54302;//活动返回
+	LUCK_GET_GOLD_CHOOSE_REQ           = 54303;//切换奖池
+	LUCK_GET_GOLD_CHOOSE_RESP          = 54304;//切换返回
+	LUCK_GET_GOLD_DRAW_REQ             = 54305;//金条抽奖
+	LUCK_GET_GOLD_DRAW_RESP            = 54306;//抽奖返回
+	LUCK_GET_GOLD_RECORD_REQ           = 54307;//全服记录
+	LUCK_GET_GOLD_RECORD_RESP          = 54308;//记录返回
+	LUCK_GET_GOLD_SELF_RECORD_REQ      = 54309;//个人记录
+	LUCK_GET_GOLD_SELF_RECORD_RESP     = 54310;//记录返回
+	LUCK_GET_GOLD_TIPS_SYNC            = 54311;//滚动消息
+	LUCK_GET_GOLD_POOL_SYNC            = 54312;//同步奖池
+	//-------------鸿运夺金活动--------------
+
+
+
+	//-------------赛季荣誉殿堂--------------
+	SEASON_HONOR_REQ	               = 54321;//活动信息
+	SEASON_HONOR_RESP	               = 54322;//活动信息
+	//-------------赛季荣誉殿堂--------------
+
+	//--------------实力飞升-----------------
+	DEVELOP_FAST_SYNC       = 54325;//活动信息
+	DEVELOP_FAST_UPDATE     = 54326;//更新信息
+	DEVELOP_FAST_AWARD      = 54327;//领奖
+	DEVELOP_FAST_INFO_REQ   = 54328;//请求页面信息
+	DEVELOP_FAST_BUY_REQ    = 54329;//请求购买信息
+	DEVELOP_FAST_BUY_RESP   = 54330;//返回购买信息
+
+
+	DEVELOP_FAST_OLD_SYNC       = 54331;//活动信息
+	DEVELOP_FAST_OLD_UPDATE     = 54332;//更新信息
+	DEVELOP_FAST_OLD_AWARD      = 54333;//领奖
+	DEVELOP_FAST_OLD_INFO_REQ   = 54334;//请求页面信息
+	DEVELOP_FAST_OLD_BUY_REQ    = 54335;//请求购买信息
+	DEVELOP_FAST_OLD_BUY_RESP   = 54336;//返回购买信息
+	//--------------实力飞升-----------------
+
+	//--------------新春试炼-----------------
+	CNY_EXAM_INFO_SYNC = 54341;//全量活动数据
+	CNY_EXAM_INFO_REQ = 54342;//请求全量活动数据
+	CNY_EXAM_CHOOSE_REQ = 54343;//自选道具
+	CNY_EXAM_AWARD_REQ = 54344;//领奖
+	CNY_EXAM_UPDATE = 54345;//差量活动数据更新
+	//--------------新春试炼-----------------
+
+	//--------------回流新服飞升-----------------
+	BACK_TO_NEW_FLY_SYNC 			= 54351;//数据下发
+	BACK_TO_NEW_FLY_REQ 			= 54352;//请求飞升
+	BACK_TO_NEW_FLY_EXCHANGE_REQ 	= 54354;//兑换请求
+	//--------------回流新服飞升-----------------
+
+
+	//--------------时间跃迁-----------------
+	RETURN_UPGRADE_SYNC             = 54361;//数据下发
+	RETURN_UPGRADE_REQ              = 54362;//升级请求
+	RETURN_UPGRADE_RESP             = 54363;//升级返回
+	RETURN_UPGRADE_EXCHANGE_REQ     = 54364;//商城兑换请求
+	RETURN_UPGRADE_EXCHANGE_RESP    = 54365;//商城兑换返回
+	RETURN_UPGRADE_BUY_REQ          = 54366;//道具购买请求
+	RETURN_UPGRADE_BUY_RESP         = 54367;//道具购买返回
+	RETURN_UPGRADE_TECH_REQ         = 54368;//科技升级列表请求
+	RETURN_UPGRADE_TECH_RESP        = 54369;//科技升级列表返回
+	//--------------时间跃迁-----------------
+
+	//--------------URL活动奖励-----------------
+	URL_REWARD_SYNC					= 54371;//URL奖励状态
+	URL_REWARD_GET					= 54372;//URL奖励获取
+
+	//--------------URL活动奖励-----------------
+
+
+	//--------------机甲皮肤-----------------
+	JIJIA_SKIN_INFO_C = 55001; // 请求同步
+	JIJIA_SKIN_INFO_S = 55002; // 同步
+	JIJIA_SKIN_REFRESH_C = 55003; // 刷新
+	JIJIA_SKIN_REFRESH_S = 55004; // 刷新
+	JIJIA_SKIN_OPEN = 55005; // 翻牌
+	//--------------机甲皮肤-----------------
+
+
+	//--------------机甲皮肤幻化-----------------
+	SUPER_SOLDIER_SKIN_INFO_REQ = 55011; // 请求同步已经解锁的机甲皮肤
+	SUPER_SOLDIER_SKIN_INFO_RESP = 55012; // 同步已经解锁的机甲皮肤
+	SUPER_SOLDIER_BATCH_CHANGE_SKIN_REQ = 55013; // 批量换装
+	SUPER_SOLDIER_BATCH_CHANGE_SKIN_RESP = 55014; // 批量换装
+	SUPER_SOLDIER_UNLOCK_SKIN_REQ = 55015; // 解锁皮肤
+	SUPER_SOLDIER_UNLOCK_SKIN_RESP = 55016; // 解锁皮肤
+	//--------------机甲皮肤幻化-----------------
+
+
+
+	//--------------泰矿提炼工厂活动-----------------
+	PLANT_SOLDIER_FACTORY_INFO_REQ = 55051; // 请求活动信息
+	PLANT_SOLDIER_FACTORY_INFO_RESP = 55052; // 返回活动信息
+	PLANT_SOLDIER_FACTORY_DRAW_REQ = 55053; // 抽奖
+	PLANT_SOLDIER_FACTORY_AWARD_REQ = 55054; // 领奖
+	PLANT_SOLDIER_FACTORY_REFRESH_REQ = 55055; // 刷新
+	PLANT_SOLDIER_FACTORY_SHOP_BUY_REQ = 55056; // 商店购买
+	//--------------泰矿提炼工厂活动-----------------
+
+	//--------------破晓启程活动-----------------
+	NEW_START_INFO_REQ = 55071; // 请求活动信息
+	NEW_START_INFO_RESP = 55072; // 返回活动信息
+	NEW_START_BIND_REQ = 55073; // 请求绑定
+	NEW_START_AWARD_REQ = 55074; // 请求奖励
+	//--------------破晓启程活动-----------------
+
+	//--------------幸运补给箱-----------------
+	SUPPLY_CRATE_SYNC				= 54376;//活动信息下发
+	SUPPLY_CRATE_INFO_REQ			= 54377;//请求活动信息
+	SUPPLY_CRATE_CHOOSE_REQ			= 54378;//选择自定义
+	SUPPLY_CRATE_READY_REQ			= 54379;//就绪
+	SUPPLY_CRATE_OPEN_REQ			= 54380;//开箱
+	SUPPLY_CRATE_NEXT_REQ			= 54381;//下一轮
+	SUPPLY_CRATE_BUY_REQ			= 54382;//购买道具
+	SUPPLY_CRATE_GUILD_BOX_REQ		= 54383;//开联盟宝箱
+	SUPPLY_CRATE_RANK_REQ			= 54384;//请求联盟排行榜
+	SUPPLY_CRATE_RANK_RESP			= 54385;//联盟排行榜返回
+	//--------------幸运补给箱-----------------
+
+	//--------------中部养成计划-----------------
+	GROW_UP_BOOST_SYNC 				= 54391;//数据下发
+	GROW_UP_BOOST_EXCHANGE_REQ 		= 54393;//兑换请求
+	GROW_UP_BOOST_DAILY_SCORE_RECORD_REQ = 54394;//每日积分记录请求
+	GROW_UP_BOOST_DAILY_SCORE_RECORD_RESP = 54395;//每日积分记录返回
+
+	//--------------中部养成计划-----------------
+	
+	//------------红警战令--------------
+	ORDER_TWO_REWARD_ACHIEVE_C  = 54400; //战令领奖
+	ORDER_TWO_REWARD_ACHIEVE_ALL_C = 54401; //一键领奖返回
+	ORDER_TWO_REWARD_ACHIEVE_ALL_S = 54402; //一键领奖返回
+	
+	//-------------打靶活动----------------------
+	SHOOTING_PRACTICE_PAGE_INFO_RESP     = 54410;  //打靶活动页面信息返回
+	SHOOTING_PRACTICE_GAME_OVER_REQ      = 54411;  //打靶完成信息
+	SHOOTING_PRACTICE_GAME_OVER_RESP     = 54412;  //打靶完成返回
+	SHOOTING_PRACTICE_BUY_GAME_COUNT_REQ = 54413;  //打靶购买游戏次数
+	SHOOTING_PRACTICE_EXCHANGE_ITEM_REQ  = 54414;  //物品兑换
+	SHOOTING_PRACTICE_RANK_REQ           = 54415;  //排行榜请求
+	SHOOTING_PRACTICE_RANK_RESP          = 54416;  //排行榜返
+	SHOOTING_PRACTICE_BARRAGE_REQ        = 54417;  //弹幕请求
+	SHOOTING_PRACTICE_BARRAGE_RESP       = 54418;  //弹幕返回
+	
+	//-------------打靶活动----------------------
+
+	//-------------每日必买任务专用活动----------------------
+	DAILY_BUY_GIFT_INFO_RESP               = 54420; //每日必买信息同步
+	DAILY_BUY_GIFT_ACHIEVE_REWARD_TAKE_REQ = 54421; // //每日必买宝箱领取
+	DAILY_BUY_GIFT_CONFIG_DATA_RESP        = 54422;//每日必买固定数据
+
+	
+	//-------------每日必买任务专用活动----------------------
+	
+	
+	//-------------呱呱乐活动----------------------
+	
+	LOTTERY_TICKET_PAGE_RESP       = 54430;   //主页面信息
+	LOTTERY_TICKET_ASSIST_PAGE_REQ  = 54431;  //代刮页面信息请求
+	LOTTERY_TICKET_ASSIST_PAGE_RESP = 54432;  //代刮页面信息返回
+	LOTTERY_TICKET_USE_REQ  = 54433;  //自刮请求
+	LOTTERY_TICKET_USE_RESP = 54435;  //自刮返回
+	LOTTERY_TICKET_ASSIST_APPLY_REQ = 54436; //发起代刮请求
+	LOTTERY_TICKET_ASSIST_REQ = 54437; //代刮
+	LOTTERY_TICKET_ASSIST_RESP = 54438; //代刮
+	LOTTERY_TICKET_ASSIST_APPLY_UPDATE_RESP  = 54439; //代刮申请信息更新
+	LOTTERY_TICKET_ASSIST_ACHIEVE_UPDATERESP = 54440; //代刮受邀信息更新
+	LOTTERY_TICKET_USE_RECORD_REQ   = 54441;  //刮奖记录请求
+	LOTTERY_TICKET_USE_RECORD_RESP  = 54442; //刮奖记录返回
+	LOTTERY_TICKET_ASSIST_SEARCH_REQ  = 54443; //查找玩家请求
+	LOTTERY_TICKET_ASSIST_SEARCH_RESP = 54444; //查找玩家返回
+	LOTTERY_TICKET_ASSIST_RECORD_REQ   = 54445;  //代刮记录请求
+	LOTTERY_TICKET_ASSIST_RECORD_RESP  = 54446; //代刮记录返回
+	LOTTERY_TICKET_ASSIST_REFUSE_REQ = 54447; //拒绝代刮
+	LOTTERY_TICKET_BARRAGE_REQ = 54448; //弹幕请求
+	LOTTERY_TICKET_BARRAGE_RESP = 54449; //弹幕返回
+	LOTTERY_TICKET_ASSIST_APPLY_RESP = 54450;//发起代刮返回
+	//-------------呱呱乐活动----------------------
+	
+
+	//-------------回流兵种转换-----------------------
+	BACK_SOLDIER_EXCHANGE_PRE_VIEW_C	= 54460; // 兵种转换请求预览
+	BACK_SOLDIER_EXCHANGE_PRE_VIEW_S	= 54461; // 兵种转换请求预览
+	BACK_SOLDIER_EXCHANGE_C	= 54462; // 兵种转换请求
+	BACK_SOLDIER_EXCHANGE_S	= 54463; // 兵种转换请求
+	BACK_SOLDIER_EXCHANGE_INFO_SYNC	= 54464; // 兵种转换活动同步
+	BACK_SOLDIER_EXCHANGE_BUY_REQ	= 54465; // 兵种转换商店购买
+	BACK_SOLDIER_EXCHANGE_HISTORY_C	= 54466; // 兵种转换历史记录请求
+	BACK_SOLDIER_EXCHANGE_HISTORY_S	= 54467; // 兵种转换历史记录请求
+	BACK_SOLDIER_EXCHANGE_OPEN_PAGE	= 54468; // 兵种转换打开页面
+	//-------------回流兵种转换-----------------------
+	
+	//-------------回流移民-----------------------
+	BACK_IMMGRATION_SERVER_LIST_REQ	 = 54470; //服务器列表请求
+	BACK_IMMGRATION_SERVER_LIST_RESP = 54471; //服务器列表返回
+	BACK_IMMGRATION_SERVER_RANK_REQ  = 54472;//排行榜数据请求
+	BACK_IMMGRATION_SERVER_RANK_RESP = 54474;//排行榜数据返回
+	BACK_IMMGRATION_ACTION_REQ       = 54475; //开始移民
+	
+	
+	BACK_CROSS_IMMGRATION_SERVER_RANK_REQ  = 54480;
+	BACK_CROSS_IMMGRATION_SERVER_RANK_RESP = 54481;
+	
+	
+	//-------------回流移民-----------------------
+
+
+	
+	//-------------星海投资-----------------------
+	STAR_INVEST_PAGE_INFO_RESP       = 54490;  //星海投资-整体数据
+	STAR_INVEST_TAKE_BUY_REWARD_REQ  = 54491;  //星海投资-领取直购礼包奖励
+	STAR_INVEST_TAKE_FREE_REWARD_REQ = 54492;  //星海投资-领取免费礼包奖励
+	STAR_INVEST_EXPLORE_START_REQ    = 54493;  //星海投资-开始探索
+	STAR_INVEST_EXPLORE_SPEED_REQ    = 54494;  //星海投资-加速探索
+	STAR_INVEST_EXPLORE_TAKE_REQ     = 54495;  //星海投资-领取探索奖励
+	STAR_INVEST_EXPLORE_BUY_SPEED_ITEM_REQ = 54496; //购买加速道具
+	STAR_INVEST_EXPLORE_RECORD_REQ   = 54497; //历史记录
+	STAR_INVEST_EXPLORE_RECORD_RESP  = 54498; //历史记录
+	STAR_INVEST_PAGE_INFO_REQ        = 54499;  //星海投资-页面数据请求
+	STAR_INVEST_EXPLORE_SPEED_ALL_REQ  = 54500;  //星海投资-加速探索使用全部剩余加速道具
+	//-------------星海投资-----------------------
+
+	
+	
+	
+	WAR_COLLEGE_INFO_RESP		 = 2000010; //战争学院信息同步
+	WAR_COLLEGE_EXTERMINATE_REQ  = 2000011; //战争学院剿灭,返回通用成功，并刷新同步
+	
+	
+	DRESS_TREASURE_INFO_RESP    = 2000012;  //装扮夺宝信息同步
+	DRESS_TREASURE_RANDOM_REQ   = 2000013;  //装扮夺宝投掷色子请求
+	DRESS_TREASURE_RANDOM_RESP  = 2000014;  //装扮夺宝投掷色子返回
+	DRESS_TREASURE_RESET_REQ    = 2000015;  //装扮夺宝投重置请求,返回 DRESS_TREASURE_INFO_RESP
+	DRESS_TREASURE_EXCHANGE_REQ = 2000016;  //装扮夺宝兑换请求 ,返回 DRESS_TREASURE_INFO_RESP
+	
+	
+	DYZZ_INFO_REQ                 = 2000019;  //达雅之战信息申请
+	DYZZ_INFO_RESP                = 2000020;  //达雅之战信息
+	DYZZ_MATCH_REQ                = 2000021;  //达雅之战匹配,返回 DYZZ_INFO_RESP
+	DYZZ_CANCEL_MATCH_REQ         = 2000022;  //达雅之战取消匹配,返回 DYZZ_INFO_RESP
+	DYZZ_CREATE_TEAM_REQ          = 2000023;  //达雅之战创建队伍  返回 DYZZ_CREATE_TEAM_RESP
+	DYZZ_CREATE_TEAM_RESP         = 2000024;  //达雅之战创建队伍返回
+	DYZZ_KICK_OUT_MEMBER_REQ      = 2000025;  //达雅之战踢出成员  返回通用成功，DYZZ_INFO_RESP
+	DYZZ_GUILD_INVITE_REQ         = 2000026;  //达雅之战邀请成员  返回通用成功
+	DYZZ_GUILD_JOIN_TEAM_REQ      = 2000027;  //加入队伍请求
+	DYZZ_GUILD_JOIN_TEAM_RESP     = 2000028;  //加入队伍返回
+	DYZZ_EXIT_TEAM_REQ            = 2000029;  //退出队伍,返回通用成功，DYZZ_INFO_RESP
+	DYZZ_HERO_MANAGE_INFO_REQ     = 2000030;  //达雅之战英雄管理信息
+	DYZZ_HERO_MANAGE_INFO_RESP    = 2000031;  //达雅之战英雄管理信息
+	DYZZ_SOLIDER_MANAGE_INFO_REQ  = 2000032;  //达雅之战士兵管理信息
+	DYZZ_SOLIDER_MANAGE_INFO_RESP = 2000033;  //达雅之战士兵管理信息
+	DYZZ_HISTORY_INFO_REQ         = 2000034;  //达雅之战历史信息请求,返回DYZZ_HISTORY_INFO_RESP
+	DYZZ_HISTORY_INFO_RESP        = 2000035;  //达雅之战历史信息返回
+	DYZZ_SHOP_INFO_REQ            = 2000036;  //达雅之战商店信息
+	DYZZ_SHOP_INFO_RESP           = 2000037;  //达雅之战商店信息
+	DYZZ_SHOP_BUY_REQ             = 2000038;  //达雅之战商店购买，返回 DYZZ_SHOP_INFO_RESP
+	DYZZ_KICKED_OUT_RESP          = 2000039;  //达雅之战,玩家被踢出队伍 
+	DYZZ_OPEN_INFO_RESP           = 2000040;  //达雅之战，本服是否开启
+	
+	DYZZ_WAR_ENTER_INSTANCE_REQ           = 2000060; //进入副本.
+	DYZZ_WAR_EXIT_INSTANCE_REQ            = 2000061; //退出副本
+	DYZZ_WAR_INNER_BACK_SERVER_REQ        = 2000062; //退出跨服的时候收到该消息.
+	DYZZ_WAR_MOVE_BACK_REQ	              = 2000063; //gm签回玩家.
+	DYZZ_WAR_CROSS_BEGIN			      = 2000064; //跨服开始
+	DYZZ_WAR_CROSS_FINISH			      = 2000065; //跨服完成
+	DYZZ_WAR_CROSS_BACK_BEGIN		      = 2000066; //跨服返回开始
+	DYZZ_WAR_CROSS_BACK_FINISH		      = 2000067; //跨服返回完成
+	DYZZ_WAR_SIMULATE_CROSS_BEGIN		  = 2000068; //跨服开始
+	DYZZ_WAR_SIMULATE_CROSS_FINISH		  = 2000069; //跨服完成
+	DYZZ_WAR_SIMULATE_CROSS_BACK_BEGIN	  = 2000070; //跨服返回开始
+	DYZZ_WAR_SIMULATE_CROSS_BACK_FINISH	  = 2000071; //跨服返回完成 模拟
+	
+	PLANT_SECRET_ACTIVITY_INFO_SYNC       = 2000081; // 泰能机密宝箱信息同步
+	PLANT_SECRET_OPEN_CARD_REQ            = 2000082; // 泰能机密翻牌请求
+	PLANT_SECRET_OPEN_BOX_REQ             = 2000083; // 泰能机密开启宝箱请求
+	PRESTRESSING_LOSS_SYNC                = 2000084; // 预流失活动数据同步
+	PLANT_SECRET_BUY_ITEM_REQ             = 2000085; // 泰能机密购买翻牌道具
+	
+	LUCK_BOX_INFO_REQ               = 2000086;  //幸运转盘信息同步请求
+	LUCK_BOX_INFO_RESP              = 2000087;  //幸运转盘信息同步返回
+	LUCK_BOX_RANDOM_REQ             = 2000088;  //幸运转盘摇奖请求
+	LUCK_BOX_RANDOM_RESP            = 2000089;  //幸运转盘摇奖返回
+	LUCK_BOX_REWARD_SELECT_REQ      = 2000090;  //幸运转盘更换奖励请求
+	LUCK_BOX_REWARD_SELECT_RESP     = 2000091;  //幸运转盘更换奖励返回
+	LUCK_BOX_ITEM_EXCHANGE_TIP_REQ  = 2000092;  //勾选取消兑换关注,返回 LUCK_BOX_INFO_RESP(2000086)
+	LUCK_BOX_ITEM_EXCHANGE_REQ      = 2000093;  //兑换道具,返回 LUCK_BOX_INFO_RESP(2000086)
+	LUCK_BOX_NEED_ITEM_BUY_REQ      = 2000094;  //购买摇奖需要的道具,返回 通用成功
+	
+	BEAUTY_CONTEST_BUY_FLOWER_REQ   = 2000095; // 选美初赛买花 
+	
+	
+	// 国家系统相关协议从 2000201 开始
+	NATIONAL_HOSPITAL_COLLECT_RECOVERD  = 2000201;  // 收取已经复活完的兵
+	NATIONAL_HOSPITAL_DELETE_SOLDIER    = 2000202;  // 删除死兵
+	NATIONAL_HOSPITAL_RECOVER_SPEED     = 2000203;  // 加速复活
+	NATIONAL_HOSPITAL_INFO_SYNC         = 2000204;  // 服务器给客户端同步国家医院相关信息
+	NATIONAL_WAREHOUSE_DONATE           = 2000205;  // 国家仓库捐献材料
+	NATIONAL_WAREHOUSE_SHOP_BUY         = 2000206;  // 国家商店购买道具
+	NATIONAL_WAREHOUSE_DONATE_RECORD_REQ  = 2000207;  // 国家仓库捐献材料记录数据请求
+	NATIONAL_WAREHOUSE_DONATE_RECORD_RESP = 2000208;  // 国家仓库捐献材料记录数据响应
+	NATIONAL_WAREHOUSE_SHOP_INFO_REQ      = 2000209;  // 国家商店信息请求 
+	NATIONAL_WAREHOUSE_SHOP_INFO_SYNC     = 2000210;  // 国家商店信息同步
+	NATIONAL_HOSPITAL_INFO_REQ            = 2000211;  // 客户端请求国家医院信息
+	NATIONAL_WAREHOUSE_RESOURCE_REQ       = 2000212;  // 国家仓库资源信息请求
+	NATIONAL_WAREHOUSE_RESOURCE_SYNC      = 2000213;  // 国家仓库资源信息同步
+	NATIONAL_BUILD_SUPPORT_REQ            = 2000214;  // 国家建筑资助金条请求
+	NATIONAL_BUILD_SUPPORT_INFO_SYNC      = 2000215;  // 国家建筑资助金条次数信息同步
+
+	NATIONAL_HOSPITAL_TSZZ_COLLECT_RECOVERD  = 2000216;  // 收取已经复活完的兵
+	NATIONAL_HOSPITAL_TSZZ_DELETE_SOLDIER    = 2000217;  // 删除死兵
+	NATIONAL_HOSPITAL_TSZZ_RECOVER_SPEED     = 2000218;  // 加速复活
+	NATIONAL_HOSPITAL_TSZZ_INFO_SYNC         = 2000219;  // 服务器给客户端同步国家医院相关信息
+	NATIONAL_HOSPITAL_TSZZ_INFO_REQ          = 2000220;  // 客户端请求国家医院信息
+
+	NATIONAL_HOSPITAL_RECOVER_SET_C         = 2000221; //国家医院兵力（优先）复活设置
+	NATIONAL_HOSPITAL_TSZZ_RECOVER_SET_C    = 2000222; //国家医院兵力（优先）复活设置
+	
+	
+	NATIONAL_INFO_REQ				= 2000301; //国家基础状态信息请求
+	NATIONAL_INFO_SYNC				= 2000302; //国家未开启时状态信息数据同步 （阶段1，无需请求主动推）
+	
+	NATIONAL_DONATE_INFO_SYNC		= 2000303; //国家捐献状态同步 （阶段2，需请求）
+	NATIONAL_BUILDING_INFO_SYNC		= 2000304; //国家建筑状态同步 （阶段3，需请求）
+	
+	
+	NATIONAL_DONATE_REQ				= 2000305; //国家捐献请求
+	
+	NATIONAL_CONSTRUCTION_INFO_C				= 2000306; // 请求国家建筑详细信息（可根据建筑类型通用）
+	NATIONAL_CONSTRUCTION_INFO_S				= 2000307; // 国家建设处详细信息
+	
+	NATIONAL_CONSTRUCTION_REFRESH_REQ				= 2000308; // 国家建设处任务刷新	
+	
+	NATIONAL_PRESIDENT_NOTIFY				= 2000309; // 跨服王战胜利通知（跨服消息，客户端忽略）
+	
+	NATIONAL_BUILD_UPGRADE_REQ				= 2000310; // 请求国家建筑升级（可根据建筑类型通用）
+	
+	NATIONAL_BUILD_QUEST_SEL_REQ				= 2000311; // 请求建设处任务类型
+	
+	NATIONAL_SINGLE_BUILD_STATUS_SYNC			= 2000312; // 单个建筑状态同步	
+	
+	
+
+	NATIONAL_MISSION_PAGE_INFO_REQ = 2000320; // 国家任务界面信息请求
+	NATIONAL_MISSION_PAGE_INFO_RESP = 2000321;
+	NATIONAL_MISSION_RECEIVE = 2000322; // 国家任务接受 返回界面信息
+	NATIONAL_MISSION_DELETE = 2000323; // 国家任务删除 返回界面信息
+	NATIONAL_MISSION_GIVEUP = 2000324; // 国家任务放弃 返回界面信息
+	NATIONAL_MISSION_REWARD = 2000325; // 国家任务领奖 返回界面信息	
+	NATIONAL_MISSION_NOTIFY_REFRESH = 2000326; // 国家任务，通知客户端刷新
+	NATIONAL_MISSION_BUY_TIMES = 2000327; // 购买次数
+	
+	NATIONAL_SHIPFACTORY_INFO_C				= 2000350; // 请求国家飞船制造厂详细信息
+	NATIONAL_SHIPFACTORY_INFO_S				= 2000351; // 国家飞船制造厂详细信息
+	NATIONAL_SHIPFACTORY_UP_PART_REQ		= 2000352; // 请求强化部件
+	NATIONAL_SHIPFACTORY_CANCEL_PART_REQ	= 2000353; // 请求取消强化
+	NATIONAL_SHIPFACTORY_ASSIST_REQ			= 2000354; // 请求助力
+	
+	
+	NATIONAL_TECH_PAGE_INFO_REQ = 2000360; // 国家科技界面
+	NATIONAL_TECH_PAGE_INFO_RESP = 2000361;
+	NATIONAL_TECH_RESEARCH_REQ= 2000362; // 国家科技研究 NationTechCommonReq
+	NATIONAL_TECH_GIVE_UP_REQ = 2000363; // 国家科技放弃
+	NATIONAL_TECH_HELP = 200364; // 国家科技助力
+	NATIONAL_TECH_USE_SKILL = 200366; // 国家科技使用技能 NationTechCommonReq
+	
+	
+	NATIONAL_REDDOT_SYNC_S = 200399; // 国家红点同步
+	
+	// 迁服系统相关协议从 2000401 开始
+	
+	IMMGRATION_ACTIVITY_INFO_REQ = 2000401; // 迁服活动信息请求 返回ImmgratrionActivityInfo
+	IMMGRATION_ACTIVITY_INFO_RESP = 2000402;
+	
+	IMMGRATION_SERVER_INFO_REQ = 200403; // 迁服服务器列表请求 返回ImmgratrionActivityInfoResp
+	IMMGRATION_SERVER_INFO_RESP = 200404;
+	
+	IMMGRATION_SERVER_DETAIL_INFO_REQ = 200405; // 迁服服务器详细信息请求 请求ImmgratrionServerInfoDetailReq 返回ImmgratrionServerInfoDetailResp
+	IMMGRATION_SERVER_DETAIL_INFO_RESP = 200406;
+	
+	IMMGRATION_SERVER_REQ = 200407; // 真正的迁服请求 请求ImmgrationServerReq 返回ImmgrationServerResp
+	IMMGRATION_SERVER_RESP = 200408;
+	
+	IMMGRATION_SERVER_POWER_SET_REQ = 200409; // 迁服战力设置 请求ImmgrationPowerSetReq 返回通用错误码
+	IMMGRATION_SERVER_POWER_SET_RESP = 200410;
+
+	PLANT_SECRET_CHAT_SHARE_REQ = 200600;	//泰能机密聊天频道分享
+	
+	RED_RECHARGE_ACTIVITY_INFO_SYNC  = 200601;  // 欢乐限购（红包）活动信息同步
+
+	MONTH_CARD_ACTIVE_REQ  = 200602;  // 通过使用道具来激活月卡
+	MONTH_CARD_ACTIVE_RESP = 200603;  // 使用道具来激活月卡响应
+	
+	
+	/*****盟军祝福活动********/
+	ALLIANCE_WISH_INFO_RESP          = 2000501; //活动内容同步
+	ALLIANCE_WISH_SIGN_REQ           = 2000502; //签到
+	ALLIANCE_WISH_SUPPLY_SIGN_REQ    = 2000503; //补签
+	ALLIANCE_WISH_DO_WISH_REQ           = 2000504; //祝福
+	ALLIANCE_WISH_DO_WISH_RESP          = 2000505; //祝福
+	ALLIANCE_WISH_DO_LUXURY_WISH_REQ    = 2000506; //豪华祝福
+	ALLIANCE_WISH_DO_LUXURY_WISH_RESP   = 2000507; //豪华祝福
+	ALLIANCE_WISH_SEND_GUILD_HELP_REQ   = 2000508; //发到联盟
+	ALLIANCE_WISH_HELP_GUILD_MEMBER_REQ = 2000509; //帮助盟友
+	ALLIANCE_WISH_ACHIEVE_REQ           = 2000510; //收获
+	ALLIANCE_WISH_ITEM_EXCHANGE_REQ     = 2000511; //道具兑换
+	ALLIANCE_WISH_EXCHANGE_REFRESH_REQ  = 2000512; //兑换刷新
+	ALLIANCE_WISH_CARE_TIPS_REQ         = 2000513; //勾选关注
+	/*****盟军祝福活动********/
+
+	/*****秘海寻珍-299********/
+	ACTIVITY_SEA_TREASURE_PAGEINFO_REQ = 2000520; // 秘海寻珍界面信息推送
+	ACTIVITY_SEA_TREASURE_PAGEINFO_RESP = 2000521; // 秘海寻珍界面信息推送
+	
+	ACTIVITY_SEA_TREASURE_DO = 2000522; // 秘海寻珍寻宝
+	ACTIVITY_SEA_TREASURE_OPEN = 2000523; // 秘海寻珍宝箱开启 SeaTreasureBoxCommonReq
+	ACTIVITY_SEA_TREASURE_RECEIVE = 2000525; // 秘海寻珍宝箱收取 SeaTreasureBoxCommonReq
+	ACTIVITY_SEA_TREASURE_RECEIVE_ALL = 2000526; // 秘海寻珍宝箱一键收取
+	ACTIVITY_SEA_TREASURE_BUY_ITEM = 2000527; // 秘海寻珍购买道具SeaTreasureBuyItemReq
+	
+	ACTIVITY_SEA_TREASURE_DO_RESP = 2000528; // 秘海寻珍寻宝返回
+	
+	SEA_TREASURE_BUY_ADN_RECEIVEALL_REQ = 2000529; // 购买并且开启所有 SeaTreasureBuyItemReq
+	
+	/*****秘海寻珍-299********/
+
+	HIDDEN_TREASURE_INFO_SYNC = 2000601; // 土拨鼠活动同步
+	HIDDEN_TREASURE_OPEN_BOX_REQ = 2000602; // 土拨鼠活动开箱子
+	HIDDEN_TREASURE_REFRESH_BOX_REQ = 2000603; // 土拨鼠活动刷箱子
+	HIDDEN_TREASURE_BOX_ITEM_BUY_REQ = 2000604; // 土拨鼠活动开箱子道具购买
+	HIDDEN_TREASURE_ITEM_EXECHANGE_REQ = 2000605; // 土拨鼠活动兑换 
+
+	HEAL_ITEM_EXECHANGE_REQ	= 2001605; // 大帝战道具活动兑换 
+	HEAL_ITEM_EXECHANGE_INFO_SYNC = 2001601; // 土拨鼠活动同步
+	/*********至尊vip**********/
+	
+	SUPER_VIP_INFO_SYNC     = 200531; // 至尊vip礼包信息同步
+	SUPER_VIP_GIFT_RECIEVE  = 200532; // 至尊vip奖励礼包领取
+	SUPER_VIP_SCORE_RECEIVE = 200533; // 至尊vip奖励积分领取
+    SUPER_VIP_EFF_ACTIVATE  = 200534; // 至尊vip皮肤特效激活请求
+    SUPER_VIP_ACTIVE_C      = 200535; // 手动激活至尊vip
+	
+	/*********至尊vip*********/
+	
+	/*********航海远征四期**********/
+	
+	CROSS_ACTIVITY_GIFTINFO_REQ = 2000530; //航海远征礼包信息请求
+	CROSS_ACTIVITY_GIFTINFO_RESP = 2000531;
+	CROSS_ACTIVITY_GIFT_SEND = 2000532; //航海远征礼包颁发
+	
+	NATION_WAR_INFO_REQ = 2000533; // 请求国家战争信息
+	NATION_WAR_INFO_RESP = 2000534;
+	NATION_WAR_COUNT_PUSH = 2000535; //推动国家战争小红点
+	NATION_WAR_CELL_INFO_C = 2000536; //国家战争单条信息
+	NATION_WAR_CELL_INFO_S = 2000537;
+	
+	CROSS_PYLON_INFO_REQ = 2000538; // 航海远征能量塔信息
+	CROSS_PYLON_INFO_RESP = 2000539;
+	
+	CROSS_FIGHT_INFO_REQ = 2000540; // 跨服出战联盟信息
+	CROSS_FIGHT_INFO_RESP = 2000541;
+	
+	CROS_FIGHT_CHANGE_REQ = 2000542; // 设置跨服出战联盟
+	CROS_FIGHT_CHANGE_RESP = 2000543;
+
+	RESOURCE_SPREE_BOX_MARCH_C = 2000544;   //资源狂欢礼包行军
+	RESOURCE_SPREE_BOX_MARCH_S = 2000545;   //资源狂欢礼包行军
+	
+	CROSS_PRESIDENT_MAIL = 2000546;   //跨服王战结束邮件
+	
+	CROSS_ACTIVITY_GIFT_RECORD_REQ = 2000547; //跨服礼包记录
+	CROSS_ACTIVITY_GIFT_RECORD_RESP = 2000548;
+	/******************************/
+	
+	/*********航海远征5期**********/
+	CROSS_PRESIDENT_OCCUPY_TIME_RESP = 2000555; //盟总占领时间数据
+	CROSS_PYLON_OCCUPY_INFO_REQ = 2000556; // 航海远征能量塔信息
+	CROSS_PYLON_OCCUPY_INFO_RESP = 2000557;
+	
+	/*********航海远征5期**********/
+	
+	
+	/********七夕相遇**********/
+	
+	LOVER_MEET_INFO_RESP   = 2000550;   //活动信息
+	LOVER_MEET_START_REQ   = 2000551;   //刷新LOVER_MEET_INFO_RESP
+	LOVER_MEET_ANSWER_REQ  = 2000552;   //答题
+	LOVER_MEET_ANSWER_RESP = 2000553;   //答题返回  刷新刷新LOVER_MEET_INFO_RESP
+ 	/********七夕相遇**********/
+	
+	/***达雅赛季**/
+	DYZZ_SEASON_INFO_RESP                   = 2000560; //赛季信息(PBDYZZSeasonData)
+	DYZZ_SEASON_ORDER_INFO_RESP             = 2000561; //赛季战令信息(PBDYZZSeasonOrder)
+	DYZZ_SEASON_ORDER_REWARD_ACHIVE_REQ     = 2000562; //赛季战令领奖(PBDYZZSeasonOrderRewardAchiveReq),返回DYZZ_SEASON_ORDER_INFO_RESP
+	DYZZ_SEASON_SCORE_RANK_REQ              = 2000564; //赛季段位排行榜
+	DYZZ_SEASON_SCORE_RANK_RESP             = 2000565; //赛季段位排行榜(PBDYZZSeasonScoreRank)
+	DYZZ_SEASON_SHARE_REQ                   = 2000566; //赛季段位分享(PBDYZZSeasonShareReq) 返回通用成功
+	DYZZ_SEASON_ORDER_REWARD_CHOOSE   		= 2000567; //赛季战令领奖选择
+	
+	/***达雅赛季**/
+	
+	/********英雄祈福**********/
+	HERO_WISH_INFO_RESP  = 2000590;  //英雄祈福信息同步
+	HERO_WISH_CHOOSE_REQ = 2000591;  //选择(返回HERO_WISH_INFO_RESP)
+	HERO_WISH_ADD_REQ    = 2000592;  //祈福 (返回HERO_WISH_INFO_RESP)
+	HERO_WISH_AHIEVE_REQ = 2000593;  //收获 (返回HERO_WISH_INFO_RESP)
+	
+	
+	/********英雄祈福**********/
+	
+
+ 	/** 国家军功*/
+ 	NATION_MILITARY_RANK_REQ = 2000611; // 国家军功榜
+	NATION_MILITARY_RANK_RESP = 2000612; // 国家军功榜
+	NATION_MILITARY_DAILY_RAWARD = 2000613; // 国家军功每日领取
+	NATION_MILITARY_LEVEL_UP_RAWARD = 2000614; // 国家军功升级
+	NATION_MILITARY_RESET_RAWARD = 2000615; // 国家军功重置
+	NATION_MILITARY_RANK_RESET_RAWARD = 2000616; // 国家军功榜刷新
+
+	/**偷菜*/
+	TOUCAI_SYNC = 2001001; // 同步工厂
+	TOUCAI_TANXUN_REFRESH_C = 2001002; // 刷新探寻工厂
+	TOUCAI_TANXUN_C = 2001003; // 探寻工厂列表
+	TOUCAI_TANXUN_S = 2001004; // 探寻工厂列表
+	TOUCAI_COLLECT_REQ = 2001005; // 采集
+	TOUCAI_SHOU_REQ = 2001006; // 采集完收
+	TOUCAI_TOU_REQ = 2001007; // 偷取
+	TOUCAI_TANXUN_UPDATE_RESP = 2001008; // 更新探寻工厂列表
+	TOUCAI_QUGAN_REQ = 2001009; // 驱赶
+	TOUCAI_TAR_PREMARCH_C = 2001010; // 目标采集/驱赶队列
+	TOUCAI_TAR_PREMARCH_S = 2001011; // 目标采集/驱赶队列
+
+	TOUCAI_TAR_FACTORY_C = 2001012; // 查看别人工厂
+	TOUCAI_TAR_FACTORY_S = 2001013; // 查看别人工厂
+	TOUCAI_HISTORY_REQ = 2001014; // 历史记录
+	TOUCAI_HISTORY_RESP = 2001015; // 历史记录
+
+	TOUCAI_PREMARCH_SET_REQ = 2001016; // 编辑采集/驱赶队列
+	TOUCAI_SELF_PREMARCH_C = 2001017; // 采集/驱赶队列
+	TOUCAI_SELF_PREMARCH_S = 2001018; // 采集/驱赶队列
+	TOUCAI_QUGAN_RESP = 2001019; // 驱赶
+	TOUCAI_DAILY_RAWARD_REQ = 2001020; // 每日奖励领取
+	TOUCAI_LEYUZHUREN_REQ = 2001021; // 开启乐于助人
+
+	/**跨服天赋*/
+	CROSS_TALENT_UPGRADE_C = 2000621; // 跨服天赋加点
+	CROSS_TALENT_UPGRADE_S = 2000622; // 跨服天赋加点
+	CROSS_TALENT_CLEAR_REQ	= 2000623; // 跨服天赋洗点
+	CROSS_TALENT_INFO_C = 2000624; // 查看某服跨服天赋
+	CROSS_TALENT_INFO_S = 2000625; // 查看某服跨服天赋
+	
+	CROSS_FORTRESS_RANK_INFO_REQ = 2000626; // 远征要塞排名信息请求
+	CROSS_FORTRESS_RANK_INFO_RESP = 2000627;
+	
+	CROSS_GIFT_SEARCH_C = 2000628; // 跨服礼包搜索玩家
+	CROSS_GIFT_SEARCH_S = 2000629;
+	
+	CROSS_SERVER_SCORE_RANK_PUSH= 2000630; // 跨服积分排行推送(战斗阶段才推) CrossActivity.proto -> CrossStarRankResp
+	
+	// 战区礼包颁发信息
+	SUPER_WEAPON_GIFT_ALL_RECEIVE_COUNT_C = 2000631; // SuperWeapon.proto   -> SWGiftReceiveCountReq
+	SUPER_WEAPON_GIFT_ALL_RECEIVE_COUNT_S = 2000632; // SuperWeapon.proto   -> SWAllGiftReceiveCountResp
+	
+	// 小战区礼包颁发信息
+	XZQ_GIFT_ALL_RECEIVE_COUNT_C = 2000633; // XZQ.proto  ->  XZQGiftReceiveCountReq
+	XZQ_GIFT_ALL_RECEIVE_COUNT_S = 2000634; // XZQ.proto  ->  XZQAllGiftReceiveCountResp
+	
+	ACTIVITY_CFG_VERION_INFO_PUSH = 2000635; // 活动版本配置信息同步 SysProtocol.proto -> ActivityCfgVersionInfoPush
+	
+	PAY_GIFT_SUCC_SYNC  = 2000650; // 直购礼包购买成功的通知协议 
+	
+	
+	/** 独家记忆*/
+	
+	EXCLUSIVE_MEMORY_INFO_RESP = 2000670; //独家记忆信息
+	EXCLUSIVE_MEMORY_OPEN_REQ  = 2000671; //独家记忆打开
+	/** 独家记忆*/
+	
+	//荣耀同享开始
+	SHARE_GLORY_DONATE_REQ		= 2000680; //捐献请求
+	SHARE_GLORY_ALLIANCE_ENERGY_REQ = 2000681; //本活动联盟数据请求
+	SHARE_GLORY_PLAYER_INFO_REQ	= 2000682; //玩家在本活动中的个人数据请求
+	SHARE_GLORY_DONATE_RANK_REQ	= 2000683; //本活动捐献排行榜数据请求
+
+	SHARE_GLORY_ALLIANCE_ENERGY_RESP= 2000684; //本活动联盟数据
+	SHARE_GLORY_PLAYER_INFO_RESP	= 2000685; //玩家在本活动中的个人数据
+	SHARE_GLORY_DONATE_RANK_RESP	= 2000686; //本活动捐献排行榜数据
+
+	//荣耀同享结束
+
+
+	/** 荣耀英雄降临*/
+	HONOUR_HERO_BEFELL_INFO_RESP    = 2000700;
+	HONOUR_HERO_BEFELL_LOTTERY_REQ  = 2000701;
+	HONOUR_HERO_BEFELL_LOTTERY_RESP = 2000702;
+	HONOUR_HERO_BEFELL_TIP_REQ      = 2000703;
+	HONOUR_HERO_BEFELL_EXCHANGE_REQ = 2000704;
+	/** 荣耀英雄降临*/
+	
+	CLIENT_TLOG_REQ = 2000710; // 客户端Tlog日志上报,通用成功返回
+	
+	CROSS_INVITE_REQ = 200715; // 跨服出战邀请(回通用成功协议) CrossActivity.proto CrossFightGuildCommon
+	CROSS_APPLY_REQ = 200716; // 跨服出战申请(回通用成功协议)
+	
+	CROSS_INVITE_APPROVE_REQ = 200717; // 跨服出战邀请同意/拒绝 CrossActivity.proto CrossFightCommon
+	CROSS_APPLY_APPROVE_REQ = 200718; // 跨服出战申请同意/拒绝 CrossActivity.proto CrossFightCommon
+	CROSS_TOWER_OWNER_CHANGE_REQ = 200719; // 跨服电塔归属国改变
+
+	/** 荣耀英雄回归*/
+	HONOUR_HERO_RETURN_LOTTERY_REQ = 200725;   //抽奖	
+	HONOUR_HERO_RETURN_EXCHANGE_REQ = 200726;  //兑换
+	HONOUR_HERO_RETURN_TIP_REQ = 200727;	   //勾选提醒
+	HONOUR_HERO_RETURN_INFO_RESP = 200728;	   //活动相关数据同步
+	HONOUR_HERO_RETURN_LOTTERY_PAGE_REQ = 200729;//玩家抽奖自选页请求
+	/** 荣耀英雄回归*/
+
+	/** 物品回收*/
+	ITEM_RECYCLE_RESP = 200740;				//全量信息同步
+	ITEM_RECYCLE_INTEGRAL_SYNC = 200741;			//积分单独同步
+	ITEM_RECYCLE_RECYCLE_REQ = 200742;			//物品兑换积分请求
+	ITEM_RECYCLE_REDEMPTION_REQ = 200743;			//用积分赎回物品
+	ITEM_RECYCLE_ENTEGRAL_EXCHANGE_ITEMS_REQ = 200744;	//用积分兑换物品请求
+	ITEM_RECYCLE_RECOVERY_REQ = 200745;			//精炼请求
+	ITEM_RECYCLE_TIP_REQ = 200746;				//积分兑换物品勾选变更请求
+	/** 物品回收*/
+	
+	LOGIN_GIFT_ACTIVITY_INFO_REQ   = 200747;  // 新版新手登录活动信息请求
+	LOGIN_GIFT_ACTIVITY_INFO_SYNC  = 200748;  // 新版新手登录活动信息同步
+	LOGIN_GIFT_RECIEVE_REQ         = 200749;  // 新版新手登录活动奖励领取
+	
+	DRESS_SEND_PROTECT_INFO_SYNC = 200751; // 装扮赠送保护道具信息同步
+	
+	/*****月球之战 200800-20100 ******/
+	YQZZ_PAGE_INFO_REQ  = 200800;   //主页面信息请求
+	YQZZ_PAGE_INFO_RESP = 200801;   //主页面信息返回(PBYQZZWarPageInfoResp)
+	YQZZ_MATCH_INFO_REQ = 200802; //匹配对手信息请求
+	YQZZ_MATCH_INFO_RESP = 200803; //匹配对手信息返回(PBYQZZWarMatchInfoResp)
+	YQZZ_HISTORY_INFO_REQ = 200804; //历史信息列表请求
+	YQZZ_HISTORY_INFO_RESP = 200805; //历史信息列表返回(PBYQZZWarHistroyResp)
+	YQZZ_HISTORY_DETAIL_INFO_REQ = 200806; //历史信息详情请求(PBYQZZWarHistroyDetailReq)
+	YQZZ_HISTORY_DETAIL_INFO_RESP = 200807; //历史信息列表返回(PBYQZZWarHistroyDetailResp)
+	YQZZ_ACHIEVE_AWARD_REQ = 200808;//领取成就奖励请求(PBYQZZWarAchieveAwardReq)
+	YQZZ_ACHIEVE_INFO_RESP = 200809;//成就数据同步(PBYQZZWarAchieveResp)
+	YQZZ_SCORE_DETAIL_REQ = 200810; //记分详情 PBYQZZWarScoreDetailReq
+	YQZZ_SCORE_DETAIL_RESP = 200811;//记分详情 PBYQZZWarScoreDetailResp
+	YQZZ_SCORE_RANK_REQ = 200812; //排行 PBYQZZWarRankReq
+	YQZZ_SCORE_RANK_RESP = 200813;//排行 PBYQZZWarRankResp
+	YQZZ_STATE_INFO_RESP = 200814; //状态信息同步(客户端把此副本添加到活动系统中使用 PBYQZZWarStateInfo)
+	
+	
+	YQZZ_WAR_ENTER_INSTANCE_REQ           = 200850; //进入副本.
+	YQZZ_WAR_EXIT_INSTANCE_REQ            = 200851; //退出副本
+	YQZZ_WAR_INNER_BACK_SERVER_REQ        = 200852; //退出跨服的时候收到该消息.
+	YQZZ_WAR_MOVE_BACK_REQ	              = 200853; //gm签回玩家.
+	YQZZ_WAR_CROSS_BEGIN			      = 200854; //跨服开始
+	YQZZ_WAR_CROSS_FINISH			      = 200855; //跨服完成
+	YQZZ_WAR_CROSS_BACK_BEGIN		      = 200856; //跨服返回开始
+	YQZZ_WAR_CROSS_BACK_FINISH		      = 200857; //跨服返回完成
+	YQZZ_WAR_SIMULATE_CROSS_BEGIN		  = 200858; //跨服开始
+	YQZZ_WAR_SIMULATE_CROSS_FINISH		  = 200859; //跨服完成
+	YQZZ_WAR_SIMULATE_CROSS_BACK_BEGIN	  = 200860; //跨服返回开始
+	YQZZ_WAR_SIMULATE_CROSS_BACK_FINISH	  = 200861; //跨服返回完成 模拟
+
+	YQZZ_LEAGUE_WAR_INFO_REQ					= 200862;//请求联赛信息
+	YQZZ_LEAGUE_WAR_INFO_RESP					= 200863;//联赛信息PBYQZZLeagueWarInfoResp
+	YQZZ_LEAGUE_WAR_DETIAL_INFO_REQ				= 200864;//请求详细信息
+	YQZZ_LEAGUE_WAR_DETIAL_INFO_RESP			= 200865;//详细信息PBYQZZLeagueWarDetialInfoResp
+	YQZZ_LEAGUE_WAR_SELF_INFO_REQ				= 200866;//请求本国记录
+	YQZZ_LEAGUE_WAR_SELF_INFO_RESP				= 200867;//本国记录PBYQZZLeagueWarSelfInfoResp
+	YQZZ_LEAGUE_GROUP_WAR_SERVER_RANK_REQ		= 200868;//请求积分赛国家排行
+	YQZZ_LEAGUE_GROUP_WAR_SERVER_RANK_RESP		= 200869;//积分赛国家排行PBYQZZLeagueGroupWarServerRankResp
+	YQZZ_LEAGUE_KICKOUT_WAR_SERVER_RANK_REQ		= 200870;//请求淘汰赛国家排行
+	YQZZ_LEAGUE_KICKOUT_WAR_SERVER_RANK_RESP	= 200871;//淘汰赛国家排行PBYQZZLeagueKickoutWarServerRankResp
+	YQZZ_LEAGUE_WAR_GUILD_RANK_REQ				= 200872;//请求联赛联盟排行
+	YQZZ_LEAGUE_WAR_GUILD_RANK_RESP				= 200873;//联赛联盟排行PBYQZZLeagueWarGuildRankResp
+	YQZZ_LEAGUA_WAR_GET_SCORE_INFO_REQ			= 200874; // 获取联赛赛季积分奖励信息
+	YQZZ_LEAGUA_WAR_GET_SCORE_INFO_RESP			= 200875;
+	YQZZ_LEAGUE_GIFT_INFO_REQ					= 200876;
+	YQZZ_LEAGUE_GIFT_INFO_RESP					= 200877;
+	YQZZ_LEAGUE_GIFT_SEND_INFO_REQ				= 200878;
+	YQZZ_LEAGUE_GIFT_RECORD_REQ					= 200879;
+	YQZZ_LEAGUE_GIFT_RECORD_RESP				= 200880;
+	YQZZ_SEARCH_REQ								= 200881;
+	YQZZ_SEARCH_RESP							= 200882;
+
+	YQZZ_ENTER_GAME_SUCCESS		= 200981; // 成攻进入游戏地图, 服务器回复
+	YQZZ_GAME_OVER				= 200982; // 游戏结束
+	YQZZ_GAME_SYNC				= 200983; // 副本信息同步
+	YQZZ_QUIT_ROOM_REQ			= 200984; // 主动退出
+	YQZZ_PLAYER_QUIT			= 200985; // 有玩家退出
+	YQZZ_CLEAN_CLAIENT_DATA		= 200986;  // 通知客户端清理数据
+	YQZZ_SINGLE_MARCH 			= 200987; // 副本内特有建筑单人行军
+	YQZZ_SINGLE_MARCH_S 		= 200988; // 副本内特有建筑单人行军
+	YQZZ_GAME_SYNC_C 			= 200989; // 副本信息同步
+	YQZZ_MOVE_CITY_CD_SYNC 		= 200990; // 同步迁城cd
+	YQZZ_SECOND_MAP_C 			= 200991; // 小地图
+	YQZZ_SECOND_MAP_S 			= 200992; // 小地图
+	YQZZ_DECLEAR_WAR 			= 200993; // 建筑宣战 刷新点信息 返默认success
+	
+	YQZZ_ORDER_USE_C  						= 200994; // 使用号令
+	YQZZ_ORDER_SYNC_S 						= 200995; //号令同步
+	YQZZ_NUCLEAR_SEND_S = 200996; // 核弹发射
+	YQZZ_DECLARE_WAR_USE_C = 200997; // 宣战记录 返回 YQZZDeclareWarUseResp
+	YQZZ_DECLARE_WAR_USE_S = 200998; // 宣战记录 返回 YQZZDeclareWarUseResp
+	YQZZ_GIVEUP_BUILD_REQ = 200999; // 放弃建筑
+	/*****月球之战 200800- 20100 ******/
+	
+	/*****英雄档案******/
+	HERO_ARCHIVES_UNLOCK_REQ = 201001; // 英雄档案解锁 PBHeroArchiveReq
+	HERO_ARCHIVES_UPLEVEL_REQ = 201002; // 英雄档案解密 PBHeroArchiveReq
+	HERO_ARCHIVES_INFO_PUSH = 201003; // 英雄档案信息推送
+	HERO_ARCHIVES_EXCHANGE_REQ = 201004; // 英雄档案兑换
+	HERO_ARCHIVES_FULL_EXCHANGE_REQ = 201005; // 英雄档案满级反向兑换
+
+	SEND_DRESS_GIFT_INFO_PUSH = 201006; // 赠送装扮信使礼包信息推送 Dress.proto DressSendGiftTimesInfoPush
+	
+	NEWYEAR_LOTTERY_ACTIVITY_INFO_REQ  = 201011; // 进入活动页面时请求活动信息
+	NEWYEAR_LOTTERY_ACTIVITY_INFO_SYNC = 201012; // 双旦活动信息同步
+	NEWYEAR_LOTTERY_GIFT_AWARD_SELECT  = 201013;  // 双旦活动礼包自选奖励选取
+	NEWYEAR_LOTTERY_REQ                = 201014;  // 双旦活动抽奖请求
+	NEWYEAR_LOTTERY_RESP               = 201015;  // 双旦活动抽奖响应
+	NEWYEAR_LOTTERY_ACHIEVE_REWARD_REQ = 201016;  // 双旦活动领取成就奖励
+	
+	SUPERSOLDIER_ENERGY_LEVEL_UP = 201020; // 机甲赋能
+	SUPERSOLDIER_ENERGY_UNLOCK = 201021; // 机甲赋能解锁
+	
+	SPACE_MACHINE_GUARD_INFO_SYNC  = 201031; // 机甲舱体防守活动信息同步
+	SPACE_GUILDCOIN_TASK_INFO_SYNC = 201032; // 机甲舱体防守活动联盟代币获取任务信息同步
+	SPACE_MECHA_SELECT_LEVEL_REQ   = 201033; // 放置舱体之前的选择舱体等级请求
+	SPACE_MECHA_SELECT_LEVEL_RESP  = 201034; // 放置舱体之前的选择舱体等级响应
+	SPACE_MACHINE_GUARD_INFO_REQ   = 201035; // 星甲召唤活动信息请求协议
+	
+	MERGE_ANNOUNCE_RESP = 201040; //可拆分和服通告，信息同步MergeAnnounceInfo
+	
+	SPACE_MECHA_PLACE_REQ                 = 201045; // 星甲召唤舱体放置请求
+	SPACE_MECHA_SINGLE_MARCH              = 201046; // 星甲召唤舱体单人行军
+	SPACE_MECHA_STRONGHOLD_SINGLE_MARCH   = 201047; // 星甲召唤据点单人行军
+	SPACE_MECHA_BOX_COLLECT_MARCH         = 201048; // 星甲召唤掉落宝箱采集行军
+	SPACE_MECHA_INFO_REQ                  = 201049; // 请求星甲召唤信息
+	SPACE_MECHA_INFO_SYNC                 = 201050; // 星甲召唤概要信息同步
+	SPACE_MECHA_DETAIL_INFO_SYNC          = 201051; // 星甲召唤详细信息同步
+	SPACE_MECHA_NOTICE_SEND_REQ           = 201052; // 星甲召唤联盟官员号召盟友请求
+	SPACE_MECHA_QUARTER_REQ               = 201053; // 星甲召唤舱体驻扎行军信息请求
+	SPACE_MECHA_QUARTER_RESP              = 201054; // 星甲召唤舱体驻扎行军信息响应
+	SPACE_MECHA_QUIT_GUILD                = 201055; // 星甲召唤退盟处理
+	
+	
+	/*******机甲研究所*********************/
+	MACHINE_LAB_INFO_RESP          = 201060;   //信息同步PBMachineLabInfoResp
+	MACHINE_LAB_CONTRIBUTE_REQ     = 201061;   //捐献PBMachineLabContributeReq
+	MACHINE_LAB_CONTRIBUTE_RESP    = 201062;   //捐献PBMachineLabContributeResp
+	MACHINE_LAB_ACHIEVE_REWARD_REQ = 201063;   //领奖战令奖励
+	MACHINE_LAB_ITEM_EXCHANGE_REQ  = 201064;   //兑换请求PBMachineLabExchangeReq
+	MACHINE_LAB_TIP_REQ            = 201065;   //关注变更PBMachineLabTipsReq
+	MACHINE_LAB_RANK_REQ           = 201066;   //排行榜请求
+	MACHINE_LAB_RANK_RESP          = 201067;   //排行榜返回
+	
+	/************* 特权卡优化相关 *************/
+	
+	MONTH_CARD_FREE_REQ     = 201070; // 免费特权卡激活、提升请求（相当于购买月卡和续费）
+	MONTH_CARD_SELECT_REQ   = 201071; // 定制特权卡选择奖励请求
+	MONTH_CARD_EXCHANGE_REQ = 201072; // 特权商店兑换请求
+	MONTH_CARD_TIP_REQ      = 201073; // 特权商店兑换物品勾选变更请求
+	MONTH_CARD_TIP_RESP     = 201074; // 特权商店兑换物品勾选变更返回
+	
+	/*******集结编队***********************/
+	MASS_FORMATION_BRIEF_PAGE_RESP = 201101; // 集结编队简要信息
+	MASS_FORMATION_DETIAL_INFO_RESP = 201102; // 集结编队详细信息
+	MASS_FORMATION_OPER_REQ = 201103; // 编队操作 请求:FormationOper 返回:通用成功 + FormationBriefPage + FormationDetialInfo
+	MASS_FORMATION_JOIN_NOTICE = 201104; // 集结编队需要加入推送 FormationJoinNotice(有联盟战争的时候才会推这个)
+	MASS_FORMATION_RED_PUSH = 201105; // 联盟编队小红点推送
+	MASS_FORMATION_REMOVE_NOTICE = 201106; // 忽略集结邀请 RemoveFormationNotice
+	
+	MASS_CARD_INFO_REQ = 201107; // 集结卡信息请求
+	MASS_CARD_INFO_RESP = 201108;
+
+	CHAT_CARD_INFO_REQ = 201109; // 卡片信息请求
+	CHAT_CARD_INFO_RESP = 201110;
+	
+	DRESS_COLLECTION_INFO_REQ  = 201111; // 周年庆称号活动信息请求
+	DRESS_COLLECTION_INFO_RESP = 201112; // 周年庆称号活动信息应答
+	
+	CELEBRATION_FUND_SCORE_REQ = 201113; //周年庆庆典基金请求购买积分请求
+	CELEBRATION_FUND_SCORE_RESP = 201114; //周年庆庆典基金请求购买积分应答
+	CELEBRATION_FUND_INFO_SYNC = 201115; //周年庆庆典基金活动信息同步
+
+	APPOINT_GET_SYNC = 331001; //SSS 为人投放活动
+	APPOINT_GET_RAND_C = 331002; //SSS 为人投放活动抽奖
+	APPOINT_GET_RAND_S = 331003; //SSS 为人投放活动抽奖
+
+	STAFFOFFICE_SYNC = 331004; //参谋技同步
+	
+	GOLD_BABY_FIND_REQ = 201116; //金币觅宝搜寻请求
+	GOLD_BABY_LOCK_REQ = 201117; //金币觅宝锁定最高档请求
+	GOLD_BABY_INFO_SYNC = 201118; //金币觅宝信息同步
+	GOLD_BABY_BUY_TICKET_REQ = 201119; //金币觅宝购买道具
+	GOLD_BABY_FIND_RESP = 201120; //金币觅宝搜寻请求响应
+	GOLD_BABY_INFO_REQ = 201121; //金币觅宝活动页面信息请求
+	
+	
+	GOLD_BABY_NEW_FIND_REQ = 201122; // 新服 金币觅宝搜寻请求 
+	GOLD_BABY_NEW_LOCK_REQ = 201123; //新服 金币觅宝锁定最高档请求
+	GOLD_BABY_NEW_INFO_SYNC = 201124; //新服 金币觅宝信息同步
+	GOLD_BABY_NEW_BUY_TICKET_REQ = 201125; //新服 金币觅宝购买道具
+	GOLD_BABY_NEW_FIND_RESP = 201126; //新服 金币觅宝搜寻请求响应
+	GOLD_BABY_NEW_INFO_REQ = 201127; //新服 金币觅宝活动页面信息请求
+	
+	NOVICE_TRAIN_ACTIVITY_INFO_REQ   = 201130; // 新兵作训：请求活动数据
+	NOVICE_TRAIN_ACTIVITY_INFO_SYNC  = 201131; // 新兵作训：活动数据同步
+	NOVICE_TRAIN_SELECT_REQ          = 201132; // 新兵作训：英雄选择或装备选择请求
+	NOVICE_TRAIN_REQ                 = 201133; // 新兵作训：作训请求
+	NOVICE_TRAIN_RESP                = 201134; // 新兵作训：作训请求响应
+	NOVICE_TRAIN_GIFT_BUY_REQ        = 201135; // 新兵作训：购买礼包请求
+	NOVICE_TRAIN_RECORD_REQ          = 201136; // 新兵作训：作训记录数据请求
+	NOVICE_TRAIN_RECORD_RESP         = 201137; // 新兵作训：作训记录数据请求响应
+	NOVICE_TRAIN_SELECT_RESP         = 201138; // 新兵作训：英雄选择或装备选择请求响应
+	NOVICE_TRAIN_GIFT_BUY_RESP       = 201139; // 新兵作训：购买礼包请求响应
+	
+	LIFETIME_CARD_PLANT_FACTORY_DAY_REQ = 201141; // 每日
+	LIFETIME_CARD_PLANT_FACTORY_DAY_RESP = 201142; // 每日
+	LIFETIME_CARD_PLANT_FACTORY_REWARD_REQ = 201143; // 购买获得
+	LIFETIME_CARD_PLANT_FACTORY_REWARD_RESP = 201144; // 购买获得
+	
+	LIFETIME_CARD_INFO_PUSH = 201145; // 终身卡信息同步
+	LIFETIME_CARD_WEEK_AWARD = 201146; // 终身卡领取周奖励
+	LIFETIME_CARD_MONTH_AWARD = 201147; // 终身卡领取月奖励
+	
+	PLANT_SOLDIER_MILITARY_UNLOCK = 2001150; // 泰能战士军衔解锁
+	PLANT_SOLDIER_MILITARY_UPGRADE = 2001151; // 泰能战士军衔升级
+
+	PLANT_SOLDIER_SWITCH_REQ = 2001153; // 泰能战士开关
+	PLANT_SOLDIER_SWITCH_RESP = 2001154; // 泰能战士开关
+	
+	DIRECT_GIFT_INFO_SYNC = 201148; //直购礼包活动数据同步
+	
+	
+	//---------合服邀请---------------------
+	ACTIVITY_INVITE_MERGE_PAGE_REQ = 201150; // 合服邀请界面信息 InviteMergePageInfo
+	ACTIVITY_INVITE_MERGE_PAGE_RESP = 201151;
+	
+	ACTIVITY_INVITE_MERGE_INFO_REQ = 201152; // 合服邀请信息(实力排行,邀请目标,接受邀请) InviteMergeInfo
+	ACTIVITY_INVITE_MERGE_INFO_RESP = 201153;
+	
+	ACTIVITY_INVITE_MERGE_PROGRESS_REQ = 201154; // 合服邀请进度 InviteMergeProgress
+	ACTIVITY_INVITE_MERGE_PROGRESS_RESP = 201155; 
+	
+	ACTIVITY_INVITE_MERGE_INVITE = 201156; // 合服邀请 InviteMergeOper 成功返回 InviteMergeInfo
+	ACTIVITY_INVITE_MERGE_REVOKE = 201157; // 撤回合服邀请 InviteMergeOper 成功返回 InviteMergeInfo
+	ACTIVITY_INVITE_MERGE_ACCEPT = 201158; // 接受合服邀请 InviteMergeOper 成功返回 InviteMergePageInfo
+	ACTIVITY_INVITE_MERGE_REFUSE = 201159; // 拒绝合服邀请 InviteMergeOper 成功返回 InviteMergeInfo
+	
+	ACTIVITY_INVITE_MERGE_TICKET = 201160; // 投票
+	
+	ARMOUR_STAR_EXPLORE_INFO_SYNC = 201170; // 星能探索信息同步 ArmourStarExploreInfoSync
+	ARMOUR_STAR_EXPLORE_UP_REQ = 201171; // 星能探索升级请求 返回通用成功+ArmourStarExploreInfoSync
+	ARMOUR_STAR_EXPLORE_JUMP_REQ = 201172; // 星能探索跃迁请求 返回通用成功+ArmourStarExploreInfoSync
+	ARMOUR_STAR_EXPLORE_SHOW_REQ = 201173; // 星能探索跃迁请求 返回通用成功+ArmourStarExploreInfoSync
+	
+	CUSTOM_REWARD_GET_REQ    	= 57017;  //免费领取定制奖励请求（不能再往HP.code中添加了，挪到code2中来）
+	
+	ACTIVITY_PLANET_EXPLORE_INFO_REQ  = 201174; // 星能探索活动信息请求
+	ACTIVITY_PLANET_EXPLORE_INFO_SYNC = 201175; // 星能探索活动信息同步
+	ACTIVITY_PLANET_EXPLORE_BUY_REQ   = 201176; // 星能探索活动请求购买抽奖道具
+	ACTIVITY_PLANET_EXPLORE_REQ       = 201177; // 星能探索活动请求探索抽奖
+	ACTIVITY_PLANET_EXPLORE_COLLECT_INFO_REQ  = 201178; // 星能探索活动挖掘信息请求
+	ACTIVITY_PLANET_EXPLORE_COLLECT_INFO_RESP = 201179; // 星能探索活动挖掘信息请求响应
+	
+	ACTIVITY_PLANT_WEAPON_INFO_REQ   = 201186; // 泰能超武投放活动信息请求
+	ACTIVITY_PLANT_WEAPON_INFO_SYNC  = 201187; // 泰能超武投放活动信息同步
+	ACTIVITY_PLANT_WEAPON_SHOP_BUY_C = 201188; // 泰能超武投放活动商店购买请求（直购类型的商品购买，不走此协议，而是走通用的道具直购购买协议） 
+	ACTIVITY_PLANT_WEAPON_GIVEUP_C   = 201189; // 泰能超武投放活动放弃研究请求
+	ACTIVITY_PLANT_WEAPON_RESEARCH_C = 201190; // 泰能超武投放活动开启研究请求
+	ACTIVITY_PLANT_WEAPON_RANDOM_C   = 201191; // 泰能超武投放活动点击研究方向查看随机物品
+	ACTIVITY_PLANT_WEAPON_FREE_AWARD_C = 201192; // 泰能超武投放活动领取每日免费奖励
+	ACTIVITY_PLANT_WEAPON_CHOOSE_C     = 201193; // 泰能超武投放活动选择超武
+	CHAT_IMG_UNLOCK_SYNC               = 201194; // 聊天表情解锁同步
+	
+	BEST_PRIZE_INFO_REQ               = 201195; //新春头奖专柜活动（活动id：361）信息请求
+	BEST_PRIZE_INFO_SYNC              = 201196; //新春头奖专柜活动（活动id：361）信息同步
+	BEST_PRIZE_DRAW_REQ               = 201197; //新春头奖专柜活动-抽奖请求
+	BEST_PRIZE_DRAW_RESP              = 201198; //新春头奖专柜活动-抽奖响应
+	BEST_PRIZE_SHOP_BUY_REQ           = 201199; //新春头奖专柜活动-商店购买请求
+	BEST_PRIZE_EXCHANGE_REQ           = 201200; //新春头奖专柜活动-积分商店兑换请求
+	BEST_PRIZE_BIGPOOL_REQ            = 201201; //新春头奖专柜活动（活动id：361）请求单个大奖池得信息
+	BEST_PRIZE_BIGPOOL_RESP           = 201202; //新春头奖专柜活动（活动id：361）请求大奖池信息返回
+	
+	QUEST_TREASURE_INFO_REQ                 = 201230; //秘境寻宝数据请求
+	QUEST_TREASURE_INFO_RESP                = 201231; //秘境寻宝数据同步
+	QUEST_TREASURE_GAME_POINT_CHOOSE_REQ    = 201232; //秘境寻宝路线选择请求
+	QUEST_TREASURE_GAME_WALK_RANDOM_REQ     = 201233; //秘境寻宝前进请求
+	QUEST_TREASURE_GAME_WALK_RANDOM_RESP    = 201234; //秘境寻宝前进返回
+	QUEST_TREASURE_GAME_RANDOM_ITEM_BUY_REQ = 201235; //秘境寻宝前进道具购买请求
+	QUEST_TREASURE_SHOP_BUY_REQ             = 201236; //秘境寻宝商店购买请求
+	
+	SUBMARINE_WAR_INFO_REQ                 = 201240; //潜艇大战数据请求
+	SUBMARINE_WAR_INFO_RESP                = 201241; //潜艇大战数据同步
+	SUBMARINE_WAR_START_REQ                = 201242; //潜艇大战游戏开始请求
+	SUBMARINE_WAR_START_RESP               = 201243; //潜艇大战游戏开始返回
+	SUBMARINE_WAR_STAGE_PASS_REQ           = 201244; //潜艇大战通关请求 
+	SUBMARINE_WAR_STAGE_PASS_RESP          = 201245; //潜艇大战通关返回
+	SUBMARINE_WAR_GAME_BUY_REQ             = 201246; //潜艇大战通游戏次数购买
+	SUBMARINE_WAR_SHOP_BUY_REQ             = 201247; //潜艇大战商店购买
+	SUBMARINE_WAR_SKILL_BUY_REQ            = 201248; //潜艇大战技能道具购买
+	
+	SUBMARINE_WAR_RANK_REQ                 = 201249; //潜艇大战排行榜请求
+	SUBMARINE_WAR_RANK_RESP                = 201250; //潜艇大战排行榜返回
+	SUBMARINE_WAR_BARRAGE_REQ              = 201251; //潜艇大战弹幕请求
+	SUBMARINE_WAR_BARRAGE_RESP             = 201252; //潜艇大战弹幕返回
+	SUBMARINE_WAR_ORDER_REWARD_REQ         = 201253; //战令领奖
+	SUBMARINE_WAR_ORDER_EXP_BUY_REQ        = 201254; //战令经验购买
+	
+	
+	FIRST_RECHARGE_THREE_SYNC     =   201261; //新首充活动3-同步活动消息
+	FIRST_RECHARGE_THREE_AWARD    =   201262; //新首充活动3-领奖
+	FIRST_RECHARGE_THREE_REQ      =   201263; //新首充活动3-主动请求活动信息
+
+	HONOR_MOBILIZE_INFO_RESP         = 201270;//荣耀动员信息
+	HONOR_MOBILIZE_CHOOSE_REQ        = 201271;//荣耀动员选择请求
+	HONOR_MOBILIZE_LOTTERY_REQ       = 201272;//荣耀动员抽奖请求
+	HONOR_MOBILIZE_LOTTERY_RESP      = 201273;//荣耀动员抽奖返回
+	
+	XHJZ_WAR_ENTER_INSTANCE_REQ           = 201850; //进入副本.
+	XHJZ_WAR_EXIT_INSTANCE_REQ            = 201851; //退出副本
+	XHJZ_WAR_INNER_BACK_SERVER_REQ        = 201852; //退出跨服的时候收到该消息.
+	XHJZ_WAR_MOVE_BACK_REQ	              = 201853; //gm签回玩家.
+	XHJZ_WAR_CROSS_BEGIN			      = 201854; //跨服开始
+	XHJZ_WAR_CROSS_FINISH			      = 201855; //跨服完成
+	XHJZ_WAR_CROSS_BACK_BEGIN		      = 201856; //跨服返回开始
+	XHJZ_WAR_CROSS_BACK_FINISH		      = 201857; //跨服返回完成
+	XHJZ_WAR_SIMULATE_CROSS_BEGIN		  = 201858; //跨服开始
+	XHJZ_WAR_SIMULATE_CROSS_FINISH		  = 201859; //跨服完成
+	XHJZ_WAR_SIMULATE_CROSS_BACK_BEGIN	  = 201860; //跨服返回开始
+	XHJZ_WAR_SIMULATE_CROSS_BACK_FINISH	  = 201861; //跨服返回完成 模拟
+	XHJZ_ENTER_GAME_SUCCESS		= 201981; // 成攻进入游戏地图, 服务器回复
+	XHJZ_GAME_OVER				= 201982; // 游戏结束
+	XHJZ_GAME_SYNC				= 201983; // 副本信息同步
+	XHJZ_QUIT_ROOM_REQ			= 201984; // 主动退出
+	XHJZ_PLAYER_QUIT			= 201985; // 有玩家退出
+	XHJZ_CLEAN_CLAIENT_DATA		= 201086;  // 通知客户端清理数据
+	XHJZ_SINGLE_MARCH 			= 201987; // 副本内特有建筑单人行军
+	XHJZ_SINGLE_MARCH_S 		= 201988; // 副本内特有建筑单人行军
+	XHJZ_GAME_SYNC_C 			= 201989; // 副本信息同步
+	XHJZ_MOVE_CITY_CD_SYNC 		= 201990; // 同步迁城cd
+	XHJZ_SECOND_MAP_C 			= 201991; // 小地图
+	XHJZ_SECOND_MAP_S 			= 201992; // 小地图
+	XHJZ_DISTRIBUTE_GASOLINE_REQ	= 201993; // 分配燃油
+	XHJZ_GUILDINFO_SYNC				= 201994; // 单独同步PBXHJZGuildInfo
+	XHJZ_BUILD_QUARTERED_MARCHES_C	= 201995; // 建筑内行军
+	XHJZ_BUILD_QUARTERED_MARCHES_S	= 201996; // 建筑内行军
+	XHJZ_MARCH_GUAIWAN_REQ			= 201997; // 驻守中建筑去其他岛屿
+	XHJZ_MARCH_MASS_GO_REQ			= 201998; // 集结行军立即出发
+	XHJZ_DISTRIBUTE_RECORD_C	= 201999; // 分配燃油记录
+	XHJZ_DISTRIBUTE_RECORD_S	= 202000; // 分配燃油记录
+	
+	/************** 超武养成线  ****************/
+	MANHATTAN_INFO_SYNC_S       = 203000; //超武相关信息同步
+	MANHATTAN_BASE_STAGE_UP_C   = 203001; //聚能底座升阶请求
+	MANHATTAN_BASE_LEVEL_UP_C   = 203002; //聚能底座升级请求
+	MANHATTAN_SW_UNLOCK_C       = 203003; //超武解锁请求
+	MANHATTAN_SW_STAGE_UP_C     = 203004; //超武升阶请求
+	MANHATTAN_SW_LEVEL_UP_C     = 203005; //超武升级请求
+	MANHATTAN_SW_DEPLOY_C       = 203006; //超武部署请求
+	MANHATTAN_SW_SHOW_C         = 203007; //超武内城展示请求
+	MANHATTAN_SW_UNDEPLOY_C     = 203008; //超武撤下请求
+	
+	/************** 玩家主动高迁修复部队数据  ****************/
+	MOVE_CITY_FIX_ARMY_REQ = 203020; //主动修复
+	/************** 玩家主动高迁修复部队数据  ****************/
+	
+	/************** 万人团购活动（优化）*********************/
+	GROUP_BUY_HOTSELL_FREEPOINT_C = 203030;  //热销商品免费积分领取请求
+	GROUP_BUY_HOTSELL_FREEPOINT_S = 203031;  //热销商品免费积分领取响应
+	GROUP_BUY_TOPDISCOUNT_REWARD_C = 203032; //最高折扣奖励领取请求
+	GROUP_BUY_TOPDISCOUNT_REWARD_S = 203033; //最高折扣奖励领取响应
+	/************** 万人团购活动（优化）*********************/
+	
+	
+	/************* 军事学院************/
+	COLLEGE_MEMBER_DATA_RESP_S         = 203045; //玩家学院信息同步
+	COLLEGE_BASE_INFO_RESP_S           = 203046; //玩家学院信息同步
+	COLLEGE_RECOMMEND_REQ_C            = 203047; //推荐列表
+	COLLEGE_RECOMMEND_REQ_S            = 203048; //推荐列表
+	COLLEGE_RENAME_REQ_C               = 203049; //重命名
+	COLLEGE_JOIN_FREE_REQ_C            = 203050; //一键加入
+	COLLEGE_JOIN_FREE_SWITCH_REQ_C     = 203051; //一键加入开关设置
+	COLLEGE_SEARCH_REQ_C               = 203052; //搜索
+	COLLEGE_SEARCH_REQ_S               = 203053; //搜索
+	COLLEGE_COACH_CHANGE_REQ_C         = 203054; //转让教官
+	COLLEGE_SCORE_RESP_S               = 203055; //积分同步
+	COLLEGE_MISSION_REWARD_TAKE_REQ_C  = 203056; //任务领奖
+	COLLEGE_MISSION_RESP_S             = 203057; //学院任务刷新
+
+	COLLEGE_EXCHANGE_C                 = 203058; //兑换商店兑换请求
+	COLLEGE_EXCHANGE_S                 = 203059; //兑换商店兑换响应
+	COLLEGE_EXCHANGE_TIP_C             = 203060; //兑换商店提醒请求
+	COLLEGE_EXCHANGE_TIP_S             = 203061; //兑换商店提醒响应
+	COLLEGE_GIFT_BUY_C                 = 203062; //直购商店购买请求（注意：人名币直购礼包，走通用的直购礼包付费协议）
+	COLLEGE_GIFT_BUY_S                 = 203063; //直购商店购买响应
+
+	COLLEGE_EFFECT_RESP_S              = 203064; //做用号同步
+	COLLEGE_VITALITY_INFO_REQ_C        = 203065; //体力信息请求
+	COLLEGE_VITALITY_SEND_REQ_C        = 203066; //体力分配
+	COLLEGE_VITALITY_INFO_RESP_S       = 203067; //体力信息返回
+	
+	COLLEGE_ONLINE_REWARD_INFO_RESP_S  = 203043; //在线奖励信息同步
+	COLLEGE_ONLINE_REWARD_INFO_REQ_C   = 203044; //领取在线奖励
+	
+	/************* 军事学院************/
+	
+	/************* 可编译装扮***********/
+	DRESS_EDITDATA_SYNC_S = 203068; //同步外显参数
+	DRESS_EDITDATA_UPDATE_S = 203069; //更新外显相关参数
+	/************* 可编译装扮***********/
+	
+	/************* 怪物首领击杀数量同步***********/
+	MONSTER_KILL_DATA_RESP_S = 203075; //怪物首领当天击杀数量
+	/************* 怪物首领击杀数量同步***********/
+
+
+	/************** 超武返场活动360 *****************/
+	PLANT_WEAPON_BACK_INFO_REQ   = 203080; // 超武返场活动信息请求
+	PLANT_WEAPON_BACK_INFO_SYNC  = 203081; // 超武返场活动信息同步
+	PLANT_WEAPON_BACK_SHOP_BUY_C = 203082; // 超武返场活动商店购买请求
+	PLANT_WEAPON_BACK_DRAW_C     = 203083; // 超武返场活动抽奖请求
+	PLANT_WEAPON_BACK_DRAW_S     = 203084; // 超武返场活动抽奖响应
+
+	/************** 超武返场活动360 *****************/
+	
+	TAKE_ACHIEVE_REWARD_MULTI_C  = 203085; //一键领取多个成就任务的奖励
+	
+	
+	/************** 复制周年庆称号370 *****************/
+	DRESS_COLLECTION_TWO_INFO_REQ  = 203090; // 周年庆称号活动信息请求
+	DRESS_COLLECTION_TWO_INFO_RESP = 203091; // 周年庆称号活动信息应答
+	/************** 复制周年庆称号370 *****************/
+
+
+	/************ 反攻幽灵**************/
+	FGYL_WAR_STATE_INFO_REQ          = 211820; //活动数据请求
+	FGYL_WAR_STATE_INFO_RESP         = 211821; //活动数据返回
+	FGYL_WAR_SIGN_REQ                = 211822; //活动报名
+	FGYL_WAR_TERM_RANK_REQ           = 211823; //活动期间排行榜请求
+	FGYL_WAR_TERM_RANK_RESP          = 211824; //活动期间排行榜返回
+	FGYL_WAR_HONOR_RANK_REQ          = 211825; //荣耀排行榜请求
+	FGYL_WAR_HONOR_RANK_RESP         = 211826; //荣耀排行榜返回
+	
+	FGYL_WAR_ENTER_INSTANCE_REQ           	= 211850; //进入副本.
+	FGYL_WAR_EXIT_INSTANCE_REQ            	= 211851; //退出副本
+	FGYL_WAR_INNER_BACK_SERVER_REQ        	= 211852; //退出跨服的时候收到该消息.
+	FGYL_WAR_MOVE_BACK_REQ	              	= 211853; //gm签回玩家.
+	FGYL_WAR_CROSS_BEGIN			      	= 211854; //跨服开始
+	FGYL_WAR_CROSS_FINISH			      	= 211855; //跨服完成
+	FGYL_WAR_CROSS_BACK_BEGIN		      	= 211856; //跨服返回开始
+	FGYL_WAR_CROSS_BACK_FINISH		      	= 211857; //跨服返回完成
+	FGYL_WAR_SIMULATE_CROSS_BEGIN		  	= 211858; //跨服开始
+	FGYL_WAR_SIMULATE_CROSS_FINISH		  	= 211859; //跨服完成
+	FGYL_WAR_SIMULATE_CROSS_BACK_BEGIN	  	= 211860; //跨服返回开始
+	FGYL_WAR_SIMULATE_CROSS_BACK_FINISH	  	= 211861; //跨服返回完成 模拟
+	FGYL_ENTER_GAME_SUCCESS					= 211981; // 成攻进入游戏地图, 服务器回复
+	
+	FGYL_GAME_OVER							= 211982; // 游戏结束
+	FGYL_GAME_SYNC							= 211983; // 副本信息同步
+	FGYL_QUIT_ROOM_REQ						= 211984; // 主动退出
+	FGYL_PLAYER_QUIT						= 211985; // 有玩家退出
+	FGYL_CLEAN_CLAIENT_DATA					= 211086;  // 通知客户端清理数据
+	FGYL_SINGLE_MARCH 						= 211987; // 副本内特有建筑单人行军
+	FGYL_SINGLE_MARCH_S 					= 211988; // 副本内特有建筑单人行军
+	FGYL_GAME_SYNC_C 						= 211989; // 副本信息同步
+	FGYL_MOVE_CITY_CD_SYNC 					= 211990; // 同步迁城cd
+	FGYL_SECOND_MAP_C 						= 211991; // 小地图
+	FGYL_SECOND_MAP_S 						= 211992; // 小地图
+	FGYL_DISTRIBUTE_GASOLINE_REQ			= 211993; // 分配燃油
+	FGYL_GUILDINFO_SYNC						= 211994; // 单独同步PBXHJZGuildInfo
+	FGYL_BUILD_QUARTERED_MARCHES_C			= 211995; // 建筑内行军
+	FGYL_BUILD_QUARTERED_MARCHES_S			= 211996; // 建筑内行军
+	FGYL_MARCH_GUAIWAN_REQ					= 211997; // 驻守中建筑去其他岛屿
+	FGYL_MARCH_MASS_GO_REQ					= 211998; // 集结行军立即出发
+	FGYL_DISTRIBUTE_RECORD_C				= 211999; // 分配燃油记录
+	FGYL_DISTRIBUTE_RECORD_S				= 212000; // 分配燃油记录
+	
+	/************ 机甲核心功能 **************/
+	MECHACORE_INFO_SYNC             = 212100;  //机甲核心功能数据同步
+	MECHACORE_TECH_UP_C             = 212101;  //机甲核心科技升级
+	MECHACORE_TECH_BREAKTHROUGH_C   = 212102;  //机甲核心科技突破（升阶）
+	MECHACORE_SLOT_UP_C             = 212103;  //机甲核心槽位升级
+    MECHACORE_MODULE_LOAD_C         = 212104;  //机甲核心模块装载
+	MECHACORE_MODULE_UNLOAD_C       = 212105;  //机甲核心模块卸载
+	MECHACORE_MODULE_RESOLVE_C      = 212106;  //机甲核心模块分解
+	MECHACORE_ATTR_REPLACE_C        = 212107;  //机甲核心模块属性词条更换
+	MECHACORE_MODULE_SYNC           = 212108;  //机甲核心模块列表同步
+	MECHACORE_SLOT_UNLOCK_C         = 212119;  //机甲核心槽位解锁
+	MECHACORE_SUIT_UNLOCK_C         = 212110;  //机甲核心套装解锁
+	MECHACORE_SUIT_SWICH_C          = 212111;  //机甲核心套装切换
+	MECHACORE_SUIT_CHANGENAME_C     = 212112;  //机甲核心套装修改名字
+	MECHACORE_MODULE_LOCK_C         = 212113;  //机甲核心模块锁定
+	MECHACORE_MODULE_UNLOCK_C       = 212114;  //机甲核心模块解锁
+	MECHACORE_SUIT_INFO_C           = 212115;  //机甲核心模块套装详细信息请求
+	MECHACORE_SUIT_INFO_S           = 212116;  //机甲核心模块套装详细信息请求
+	MECHACORE_MODULE_RESOLVE_S      = 212117;  //机甲核心模块分解返回
+
+	/***** 区服比拼活动368 ******/
+	MERGE_COMPETE_ACTIVITY_INFO_C  = 212201; //合服比拼活动信息请求
+	MERGE_COMPETE_ACTIVITY_INFO_S  = 212202; //合服比拼活动信息同步 
+	MERGE_COMPETE_SINGLE_RANK_C    = 212203; //合服比拼活动请求单个榜单信息
+	MERGE_COMPETE_SINGLE_RANK_S    = 212204; //合服比拼活动榜单信息同步
+	MERGE_COMPETE_GIFT_AWARD_C     = 212205; //领取嘉奖礼包
+	/***** 区服比拼活动368 ******/
+	
+	/***** 核心勘探活动369 ******/
+	CORE_EXPLORE_ACTIVITY_INFO_C    = 212211; //核心勘探活动信息请求
+	CORE_EXPLORE_ACTIVITY_INFO_S    = 212212; //核心勘探活动信息同步 
+	CORE_EXPLORE_REMOVE_OBSTACLE_C  = 212213; //核心勘探活动清除障碍请求
+	CORE_EXPLORE_REMOVE_OBSTACLE_S  = 212214; //核心勘探活动清除障碍响应
+	CORE_EXPLORE_BOX_REWARD_C       = 212215; //核心勘探活动领取地图宝箱奖励请求
+	CORE_EXPLORE_BUY_PICK_C         = 212216; //核心勘探活动购买矿镐请求
+	CORE_EXPLORE_TECH_OPER_C        = 212217; //核心勘探活动科技提升请求
+	CORE_EXPLORE_EXCHANGE_C         = 212218; //核心勘探活动商店兑换请求
+	CORE_EXPLORE_AUTO_PICK_C        = 212219; //核心勘探活动自动挖矿设置（开启或关闭）
+	CORE_EXPLORE_AUTO_PICK_S        = 212220; //核心勘探活动自动挖矿设置返回
+	/***** 核心勘探活动369 ******/
+	
+
+	/***** 赛后庆典活动371 ******/
+	ACTIVITY371_INFO_C            = 212221; //赛后庆典活动信息请求
+	ACTIVITY371_INFO_S            = 212222; //赛后庆典活动信息同步
+	ACTIVITY371_HOMAGE_C          = 212223; //赛后庆典活动-玩家向冠军盟主致敬
+	ACTIVITY371_SEND_GIFT_C       = 212224; //赛后庆典活动-购买赠送礼物
+
+	ACTIVITY371_BIGAWARD_SEND_C   = 212225; //赛后庆典活动-发放全服大奖
+	ACTIVITY371_BIGAWARD_REC_C    = 212226; //赛后庆典活动-领取全服大奖
+
+	ACTIVITY371_SEND_RECORD_C     = 212227; //赛后庆典活动-送礼记录请求
+	ACTIVITY371_SEND_RECORD_S     = 212228; //赛后庆典活动-送礼记录返回
+	ACTIVITY371_RECIEVE_RECORD_C  = 212229; //赛后庆典活动-收礼记录请求
+	ACTIVITY371_RECIEVE_RECORD_S  = 212230; //赛后庆典活动-收礼记录返回
+	ACTIVITY371_TARGET_GIFTREC_C  = 212231; //赛后庆典活动-查看目标玩家礼物接收次数
+	ACTIVITY371_TARGET_GIFTREC_S  = 212232; //赛后庆典活动-查看目标玩家礼物接收次数返回
+	ACTIVITY371_SET_RECIEVER_C    = 212233; //赛后庆典活动-设置礼物默认赠送对象
+	ACTIVITY371_BUY_FINISH_SYNC   = 212234; //赛后庆典活动-购买完成通知
+	/***** 赛后庆典活动371 ******/
+	
+	/***** 赛季拼图活动373 ******/
+	SEASON_PUZZLE_ACT_INFO_C     = 212236; //赛季拼图活动数据请求
+	SEASON_PUZZLE_ACT_INFO_S     = 212237; //赛季拼图活动数据同步
+	SEASON_PUZZLE_CALL_HELP_C    = 212238; //赛季拼图活动-发起求助请求
+	SEASON_PUZZLE_CALL_HELP_S    = 212239; //赛季拼图活动-发起求助响应
+	SEASON_PUZZLE_SET_ITEM_C     = 212240; //赛季拼图活动-放入碎片请求
+	SEASON_PUZZLE_CALL_INFO_C    = 212241; //赛季拼图活动-求助信息请求
+	SEASON_PUZZLE_CALL_INFO_S    = 212242; //赛季拼图活动-求助信息响应
+	SEASON_PUZZLE_SEND_ITEM_C    = 212243; //赛季拼图活动-帮助（赠送拼图碎片）请求
+	SEASON_PUZZLE_SEND_ITEM_S    = 212244; //赛季拼图活动-帮助（赠送拼图碎片）响应
+	SEASON_PUZZLE_MISSION_SYNC   = 212245; //赛季拼图活动同步任务信息（已完成次数）
+
+	/***** 赛季拼图活动373 ******/
+	
+	
+	/***** 巨龙来袭374 **************/
+	ACTIVITY_GUILD_DRAGON_ATTACK_INFO_REQ       = 212250; //活动信息请求
+	ACTIVITY_GUILD_DRAGON_ATTACK_INFO_RESP      = 212251; //活动信息返回
+	ACTIVITY_GUILD_DRAGON_ATTACK_OPEN_REQ       = 212252; //开启
+	ACTIVITY_GUILD_DRAGON_ATTACK_APPOINT_REQ    = 212253; //预约
+	ACTIVITY_GUILD_DRAGON_ATTACK_RANK_REQ       = 212254; //排行榜
+	ACTIVITY_GUILD_DRAGON_ATTACK_RANK_RESP      = 212255; //排行榜
+	/***** 巨龙来袭374 **************/
+	
+	MONSTER_DROP_LIMIT_RESP = 212264; //野怪掉落上限
+	
+	/***** 自动集结 **************/
+	AUTO_MASS_JOIN_DATA_REQ    = 212265;
+	AUTO_MASS_JOIN_DATA_RESP   = 212266;
+	AUTO_MASS_JOIN_START_REQ   = 212267;
+	AUTO_MASS_JOIN_STOP_REQ    = 212268;
+	AUTO_MASS_JOIN_SETTING_REQ = 212269;
+	/***** 自动集结 **************/
+	
+
+	
+	
+	/***** 有福同享活动 376  ******/
+	SHARE_PROS_ACTIVITY_INFO_C     = 212271; //有福同享活动数据请求
+	SHARE_PROS_ACTIVITY_INFO_S     = 212272; //有福同享活动数据同步
+	SHARE_PROS_BIND_ROLE_C         = 212273; //有福同享活动绑定角色请求
+	
+	/***** 有福同享活动 376  ******/
+	
+	
+	/***** 热血畅战活动 378  ******/
+	HOT_BLOOD_WAR_INFO_C           = 212280; //热血畅战活动数据请求
+	HOT_BLOOD_WAR_INFO_S           = 212281; //热血畅战活动数据同步
+	HOT_BLOOD_WAR_CURE_FIRST_C     = 212282; //热血畅战活动设置首先治愈兵种
+	HOT_BLOOD_WAR_CURE_SPEED_C     = 212283; //热血畅战活动加速道具使用
+	HOT_BLOOD_WAR_CURE_ACHIEVE_C   = 212284; //热血畅战活动领取治愈的士兵
+	/***** 热血畅战活动 378  ******/
+	
+	
+	/***********航海赛季*********************/
+	CROSS_ACTIVITY_SEASON_DATA_REQ   = 212300; //赛季数据请求
+	CROSS_ACTIVITY_SEASON_DATA_RESP  = 212301; //赛季数据推送
+	CROSS_ACTIVITY_SEASON_SCORE_REQ  = 212302; //积分数据
+	CROSS_ACTIVITY_SEASON_SCORE_RESP = 212303; //积分数据返回
+	CROSS_ACTIVITY_SEASON_RANK_REQ   = 212304; //排行榜数据
+	CROSS_ACTIVITY_SEASON_RANK_RESP  = 212305; //排行榜数据返回
+	
+	CROSS_ACTIVITY_PYLON_RANK_REQ    = 212306; //能量塔占领排行榜
+	CROSS_ACTIVITY_PYLON_RANK_RESP   = 212307; //能量塔战力排行榜
+	/***********航海赛季*********************/
+	
+	/***********泰伯联赛-新修*********************/
+	TIBERIUM_LEAGUA_WAR_GET_CHOOSE_RANK_REQ  = 212400; //海选榜
+	TIBERIUM_LEAGUA_WAR_GET_CHOOSE_RANK_RESP = 212401;//海选榜
+	/***********泰伯联赛-新修*********************/
+	
+	
+	/*****先驱回响 200800-20100 ******/	
+	XQHX_WAR_ENTER_INSTANCE_REQ           	= 203850; //进入副本.
+	XQHX_WAR_EXIT_INSTANCE_REQ            	= 203851; //退出副本
+	XQHX_WAR_INNER_BACK_SERVER_REQ        	= 203852; //退出跨服的时候收到该消息.
+	XQHX_WAR_MOVE_BACK_REQ	              	= 203853; //gm签回玩家.
+	XQHX_WAR_CROSS_BEGIN			      	= 203854; //跨服开始
+	XQHX_WAR_CROSS_FINISH			      	= 203855; //跨服完成
+	XQHX_WAR_CROSS_BACK_BEGIN		      	= 203856; //跨服返回开始
+	XQHX_WAR_CROSS_BACK_FINISH		      	= 203857; //跨服返回完成
+	XQHX_WAR_SIMULATE_CROSS_BEGIN		  	= 203858; //跨服开始
+	XQHX_WAR_SIMULATE_CROSS_FINISH		  	= 203859; //跨服完成
+	XQHX_WAR_SIMULATE_CROSS_BACK_BEGIN	  	= 203860; //跨服返回开始
+	XQHX_WAR_SIMULATE_CROSS_BACK_FINISH	  	= 203861; //跨服返回完成 模拟
+	XQHX_ENTER_GAME_SUCCESS					= 203981; // 成攻进入游戏地图, 服务器回复
+	XQHX_GAME_OVER							= 203982; // 游戏结束
+	XQHX_GAME_SYNC							= 203983; // 副本信息同步
+	XQHX_QUIT_ROOM_REQ						= 203984; // 主动退出
+	XQHX_PLAYER_QUIT						= 203985; // 有玩家退出
+	XQHX_CLEAN_CLAIENT_DATA					= 203986;  // 通知客户端清理数据
+	XQHX_SINGLE_MARCH 						= 203987; // 副本内特有建筑单人行军
+	XQHX_SINGLE_MARCH_S 					= 203988; // 副本内特有建筑单人行军
+	XQHX_GAME_SYNC_C 						= 203989; // 副本信息同步
+	XQHX_MOVE_CITY_CD_SYNC 					= 203990; // 同步迁城cd
+	XQHX_SECOND_MAP_C 						= 203991; // 小地图
+	XQHX_SECOND_MAP_S 						= 203992; // 小地图
+
+
+	/*****月球之战 200800- 20100 ******/
+	
+	/**押镖***/
+	MT_SERVICE_REQ = 526183801; // 
+	MT_ACVITY_SYNC_REQ = 527183776; // 活动信息同步. PBMTAcvityInfoSync
+	MT_ACVITY_SYNC = 527183777; // 活动信息同步. PBMTAcvityInfoSync
+	MT_TRUCK_UPDATE = 527183666; // 更新车辆 PBMTTruck
+	MT_TRUCK_LIST_C = 527183678; // 他人货车,  我的货车 联盟列车 PBMTTruckListReq
+	MT_TRUCK_LIST_S = 527183679; // 他人货车,  我的货车 联盟列车 PBMTTruckListResp
+	MT_TRUCK_REFRESH_REQ = 527183680; // 刷新他人车 PBMTOtherTruckRefrashReq  MT_TRUCK_LIST_S
+
+	MT_SELF_TRUCK_CREATE_C = 527183801; // 请求创建人车 
+	MT_SELF_TRUCK_CREATE_S = 527183802; // 请求创建个人车 index 显示1左 2右栏  PBMTTruck 
+	MT_SELF_TRUCK_REFRESH_REQ = 527183803; // 请求刷新个人车奖励 MT_TRUCK_UPDATE
+	MT_SELF_TRUCK_START_REQ = 527183804; // 请求发个人车 MT_TRUCK_UPDATE
+	MT_SELF_TRUCK_ROB_C = 527183805; // 抢夺个人车 PBSelfTruckRobReq
+	MT_SELF_TRUCK_ROB_S = 527183806; // 抢夺个人车 PBSelfTruckRobResp
+
+	MT_TRUCK_PREMARCH_SYNC = 527183507; // 同步预设行军 PBTRUCKPreMarchResp  参考星耀能量战, 完全一样
+	MT_TRUCK_PREMARCH_REQ = 527183868; // 请求预设行军 MTTruckPreMarchReq MT_TRUCK_PREMARCH_SYNC
+	MT_TRUCK_PREMARCH_SET_REQ = 527183709; // 设置设行军 PresetMarchInfo  MT_TRUCK_PREMARCH_SYNC
+
+	MT_GUILD_TRUCK_CREATE_C 		= 527184801; // 请求创建联盟车 
+	MT_GUILD_TRUCK_CREATE_S 		= 527184802; // 请求创建联盟车   PBMTTruck 
+	MT_GUILD_TRUCK_HEAD_REQ 	= 527184803; // 请求指定联盟车头 MT_TRUCK_UPDATE
+	MT_GUILD_TRUCK_REFRESH_REQ 	= 527184804; // 请求刷新联盟车奖励 MT_TRUCK_UPDATE
+	MT_GUILD_TRUCK_PAIDUI_REQ 	= 527184805; // 请求排队联盟车 PBGuildTruckPaiDuiReq MT_TRUCK_UPDATE
+	MT_GUILD_TRUCK_START_REQ 	= 527184806; // 请求发联盟车 MT_TRUCK_UPDATE
+	MT_GUILD_TRUCK_ROB_C 		= 527184807; // 抢夺联盟车集结 /加入集结 PBGuildTruckMassRobReq
+	MT_GUILD_TRUCK_ROB_S 		= 527184808; // 加入抢夺联盟车  PBMTTruckRob
+	MT_GUILD_TRUCK_ROB_JOIN_C 	= 527184809; // 抢夺联盟车集结 /加入集结 PBGuildTruckMassRobReq
+
+	MT_Truck_INFO_C 		= 527184811; // 拉取单个车信息 PBGuildTruckMassRobReq
+	MT_Truck_INFO_S 		= 527184812; // 拉取单个车信息 PBMTTruck
+
+	MT_TRUCK_HISTORY_C = 527184813; // 历史 PBMTHistoryReq
+	MT_TRUCK_HISTORY_S = 527184814; // 历史 PBMTHistoryResp
+
+	MT_TRUCK_SHARE_REQ = 527184815; // 分享
+	MT_BUY_REFRESH_ITEM = 527184816; // 刷新券直接金币买
+	
+	/*****深海秘藏 377 ******/
+	DEEP_TREASURE_INFO_SYNC = 2000801; // 深海秘藏活动同步
+	DEEP_TREASURE_OPEN_BOX_REQ = 2000802; // 土拨鼠活动开箱子
+	DEEP_TREASURE_REFRESH_BOX_REQ = 2000803; // 土拨鼠活动刷箱子
+	DEEP_TREASURE_BOX_ITEM_BUY_REQ = 2000804; // 土拨鼠活动开箱子道具购买
+	DEEP_TREASURE_ITEM_EXECHANGE_REQ = 2000805; // 土拨鼠活动兑换 
+	/*****深海秘藏 377 ******/
+	
+	/*****家园系统 204001 - 204028 *****/
+    HOME_BUILDING_INFO_C = 204001;              // 家园信息
+    HOME_BUILDING_AREA_UNLOCK_C = 204002;       // 解锁区块
+    HOME_BUILDING_OPERATION_C = 204003;         // 操作建筑(放置,拆除,回收)
+    HOME_BUILDING_EXCHANGE_DRAW_C = 204004;     // 商店抽奖
+    HOME_BUILDING_COLLECT_RECRUITS_C = 204005;  // 主建筑收取
+    HOME_BUILDING_THEME_LIKE_C = 204006;        // 点赞
+    HOME_BUILDING_CHANGE_THEME_C = 204007;      // 更换主题
+    HOME_BUILDING_RANK_C = 204009;              // 排行榜
+    HOME_BUILDING_INFO_S = 204020;              // 家园信息
+    HOME_BUILDING_AREA_UNLOCK_S = 204021;       // 解锁区块
+    HOME_BUILDING_UPDATE_S = 204022;            // 建筑更新响应
+    HOME_BUILDING_WARE_HOUSE_S = 204023;        // 背包建筑响应
+    HOME_BUILDING_COLLECT_S = 204024;           // 图鉴更新响应
+    HOME_BUILDING_RES_COLLECT_S = 204025;       // 收取主建筑响应
+    HOME_BUILDING_EXCHANGE_DRAW_S = 204026;     // 商店抽奖
+    HOME_BUILDING_RANK_S = 204028;              // 排行榜
+	HOME_BUILDING_THEME_BE_LIKE_C = 204029;		// 点赞返回(用于服务器通讯)
+	HOME_BUILDING_PROSPERITY_ACTIVE_C = 204030;	// 激活繁荣度属性
+	HOME_BUILDING_PROSPERITY_PUSH_S = 204031;	// 繁荣度变化
+	HOME_BUILDING_SHARE_C = 204032;				// 分享
+	HOME_BUILDING_LIKE_PUSH_S = 204033;			// 点赞推送
+	HOME_BUILDING_SERVICE_REQ = 204034;			// 家园service推送
+	HOME_BUILDING_COLLECT_RECRUITS_S = 204035;  // 主建筑收取
+    /*****家园系统 *****/
+	
+	/******* 待办事项 *******/
+	SCHEDULE_INFO_SYNC   = 204040;  //同步待办事项信息
+	SCHEDULE_CREATE_C    = 204041;  //注册新的待办事项
+	SCHEDULE_UPDATE_C    = 204042;  //更新已有待办事项
+	SCHEDULE_DELETE_C    = 204043;  //删除待办事项（可批量删除）
+	/******* 待办事项 *******/
+	
+	/*****心愿庄园拼图 204050  *****/
+	HOME_PUZZLE_ACT_INFO_C     		= 204050; //心愿庄园活动数据请求
+	HOME_PUZZLE_ACT_INFO_S     		= 204051; //心愿庄园活动数据同步
+	HOME_PUZZLE_SCRATCH_C      		= 204052; //心愿庄园活动刮奖
+	HOME_PUZZLE_SHOP_BUY_C 	   		= 204053; //心愿庄园活动商店购买
+	HOME_PUZZLE_SHOP_EXCHANGE_C 	= 204054; //心愿庄园活动商店兑换
+	HOME_PUZZLE_SCRATCH_S			= 204055; //心愿庄园活动刮奖回调
+    /*****心愿庄园 *****/
+	
+	/******* 使用道具召唤 *******/
+	WORLD_SUMMON_ITEM_S = 204060; //使用道具召唤推送
+	
+	/********建筑第二队列开启推送*****************/
+	PAID_QUEUE_OPEN_DATA_RESP     = 204070; //付费队列开启信息
+	PAID_QUEUE_OPEN_DATA_FREE_REQ = 204071; //付费队列免费开启请求
+	
+	/*****命运轮盘机 204050  *****/
+	HOME_ROUND_ACT_INFO_C     		= 204250; //命运轮盘机活动数据请求
+	HOME_ROUND_ACT_INFO_S     		= 204251; //命运轮盘机活动数据同步
+	HOME_ROUND_DRAW_C      			= 204252; //命运轮盘机活动抽奖
+	HOME_ROUND_SHOP_EXCHANGE_C 		= 204253; //命运轮盘机活动商店兑换、
+	HOME_ROUND_TAKE_REWARD_C 		= 204254; //命运轮盘机活动当前层数领取奖励
+	HOME_ROUND_DRAW_INFO_S     		= 204255; //命运轮盘机抽奖同步
+	HOME_ROUND_BUY_C     			= 204256; //命运轮盘机购买
+    /*****命运轮盘机 *****/
+}
+
+// 游戏协议ID列表(>=100)
+enum code
+{
+	//////////////////////////////////////////////////////
+	// s2c单向协议ID定义
+	//////////////////////////////////////////////////////
+
+	// 玩家被踢出
+	PLAYER_KICKOUT_S = 100;
+
+	// 服务器通知聊天
+	PUSH_CHAT_S	= 101;
+
+	// 玩家信息同步
+	PLAYER_INFO_SYNC_S = 102;
+
+	// 角色信息同步
+	ROLE_INFO_SYNC_S = 103;
+
+	// 道具信息同步
+	ITEM_INFO_SYNC_S = 104;
+	
+	// vip商城购买信息同步
+	VIP_SHOP_ITEM_SYNC_S = 105;
+
+	// 技能信息同步
+	SKILL_INFO_SYNC_S =	106;
+
+	// 状态信息同步
+	STATE_INFO_SYNC_S =	107;
+
+	// 玩家信息组装完成
+	ASSEMBLE_FINISH_S =	108;
+
+	// 玩家发奖
+	PLAYER_AWARD_S = 109;
+
+	// 玩家消耗
+	PLAYER_CONSUME_S = 110;
+
+	// 玩家建筑信息同步
+	PLAYER_BUILDING_SYNC_S = 111;
+
+	// 玩家天赋信息同步
+	PLAYER_TALENT_SYNC_S = 112;
+
+	// 玩家科技信息同步
+	PLAYER_TECHNOLOGY_S	= 113;
+
+	// 玩家军队信息同步
+	PLAYER_ARMY_S =	114;
+
+	// 玩家队列信息同步
+	PLAYER_QUEUE_SYNC_S	= 115;
+
+	// 玩家资源收集同步
+	PLAYER_RESCOLLECT_SYNC_S = 116;
+
+	// 设置信息同步
+	SETTING_SYNC_S = 117;
+
+	// 玩家收藏夹推送同步
+	WORLD_FAVORITE_SYNC_S =	118;
+
+	// 瞭望塔军情推送同步
+	ENEMY_MILITARY_REPORT =	119;
+
+	// 侦查报告推送同步
+	PLAYER_DETECT_REPORT = 120;
+
+	// 邮件列表同步
+	MAIL_LIST_SYNC_S = 121;
+
+	//任务数据同步
+	MISSION_LIST_SYNC_S=122;
+
+	//任务数据更新
+	MISSION_UPDATE_SYNC_S=123;
+
+	// 商品热卖信息同步
+	HOT_SALES_INFO_SYNC_S =	124;
+
+	// 作用号信息同步
+	PLAYER_EFFECT_INFO_SYNC_S =	125;
+
+	// 联盟信息同步
+	GUILD_BASIC_INFO_SYNC_S	= 126;
+
+	// 屏蔽玩家信息同步
+	SHIELD_PLAYER_INFO_SYNC_S =	127;
+
+	// 同步联盟战争
+	GUILD_WAR_INFO_SYNC_S =	128;
+
+	// 同步装备信息
+	PLAYER_EQUIPMENT_SYNC_S	= 129;
+
+	// 新信息红点推送同步
+	NOTICE_RED_POINT_SYNC_S	= 131;
+
+	// 玩家离开一个联盟(包括被踢出和自己退出)
+	PLAYER_LEAVE_GUILD		= 132;
+
+	// 推送领地信息的改变，客户端判断是否主动拉取最新信息
+	PUSH_MANOR_INFO_CHANGED	= 133;
+	// 联盟积分推送
+	GUILD_SCORE_SYNC_S = 134;
+	
+	// 刷新玩家钻石
+	PUSH_PLAYER_DIAMONDS = 135;
+	// 扭蛋同步信息
+	PUSH_GACHA_SYNC_S = 136;
+	
+	// 指挥官升级信息同步
+	PLAYER_LEVEL_UP_SYNC_S = 137;
+	// 指挥官体力购买信息同步
+	PLAYER_VIT_PURCHASE_SYNC_S = 138;
+	// VIP升级信息同步
+	VIP_LEVEL_UP_SYNC_S = 139;
+	// 推送在售礼包
+	PUSH_GIFT_SYNC_S = 140;
+	// 等待登录的情况推送
+	LOGIN_PREPARE_SYNC_S = 141;
+	
+	// IDIP相关提示推送
+	IDIP_NOTICE_SYNC_S	= 142;
+	
+	// IDIP发言清除推送
+	IDIP_CLEAR_CHAT_SYNC_S	= 143;
+	
+	// 科技技能信息推送
+	TECH_SKILL_SYNC_S = 144;
+	
+	// 改变vip flag
+	CHANGE_VIP_FLAG_REQ = 145;
+	
+	//道具使用提示
+	ITEM_USE_TIPS = 150; // 道具使用提示
+	
+	SYN_GLOBAL_BUFF = 151; //同步世界buff信息
+	
+	VIP_BOX_SYNC_S = 161; // vip专属（福利）礼包信息同步
+	
+	CARD_INFO_SYNC_S = 162; // 月卡周卡数据同步
+
+	FOGGY_BOX_SYNC_S = 163; // 迷雾要塞宝箱数据同步
+	
+	HEALTH_GAME_REMIND_S = 164; // 健康游戏提醒发送
+
+
+	// 资源田增产作用号推送
+    RES_OUTPUT_BUFF_SYNC_S  = 165;
+	
+	// 玩家远征科技信息同步
+	PLAYER_CROSS_TECH_SYNC_S	= 166;
+
+	
+	GM_REQUEST  = 171; //请求执行GM指令
+	GM_RESPONSE = 172; //返回GM执行结果.
+
+	BUILDING_AWARD_PUSH         = 196; // 建筑选择性奖励领取信息推送
+    BUILDING_REMOVE_PUSH        = 197; // 建筑拆除信息推送
+    PAID_QUEUE_PUSH             = 198; // 付费队列信息的推送
+	UNLOCKED_AREA_PUSH          = 199; // 已解锁区块推送
+	// 创建建筑成功的推送
+	BUILDING_CREATE_PUSH		= 200; // 创建	BuildingPB
+	BUILDING_UPDATE_PUSH		= 201; // 立即升级使用 BuildingPB
+	BUILDING_MOVE_PUSH			= 202; // 移动 BuildingPB
+	BUILDING_STATUS_CHANGE_PUSH	= 203; // 建筑状态改变的推送
+	BUILDING_REBUILD_PUSH		= 204; // 建筑改建
+
+	// 当队列改变时，推送一条队列信息
+	QUEUE_ADD_PUSH				 = 205;	// 增加一个队列 QueuePB
+	QUEUE_UPDATE_PUSH			 = 206;	// 刷新一个队列 QueuePB
+	QUEUE_DELETE_PUSH			 = 207;	// 完成一个队列	QueuePBSimple
+	QUEUE_CANCEL_PUSH			 = 208;	// 取消一个队列 QueuePBSimple
+
+	//玩家发送聊天
+	SEND_CHAT_C					 = 209;
+
+	// 世界地图推送
+	WORLD_MAP_POINTS_IN_VIEW	 = 210;
+	WORLD_PLAYER_WORLD_INFO_PUSH = 211;	// 推送玩家世界信息
+	WORLD_PLAYER_WORLD_BEATING_PUSH	= 212;// 推送玩家世界被攻击信息
+
+	WORLD_MARCH_ADD_PUSH		 = 213;	// 新增一个行军信息	WorldMarchPB
+	WORLD_MARCH_UPDATE_PUSH		 = 214;	// 更新一个行军信息	WorldMarchPB
+	WORLD_MARCH_DELETE_PUSH		 = 215;	// 删除一个行军信息	WorldMarchDeletePush
+
+	WORLD_MARCH_REPORT_PUSH		 = 216;	// 行军报告信息推送
+	WORLD_MARCHS_PUSH			 = 217;	// 登陆时推送玩家所有的行军数据
+	ASSISTANCE_MARCH_CALLBACK	 = 218;	// 召回援助类行军时通知被援助方
+	ASSISTANCE_MARCH_CHANGE_NOTICE = 220;	// 士兵援助行军变化通知
+
+	WORLD_MARCH_END_PUSH		 = 223;	// 行军结束，通知对方（雷达）行军结束
+	WORLD_MARCH_REFRESH_PUSH	 = 224;	// 行军加速，通知对方（雷达）更新行军结束时间信息
+
+	WORLD_MARCH_EVENT_SYNC		 = 225;	// 行军事件同步
+	NUCLEAR_EXPLOSION_END_PUSH	 = 226;	// 超级武器爆炸结束
+	
+	TOWARDS_MARCH_PUSH			 = 227;	// 向自己占领点行军信息推送
+
+	// 推送世界迷雾信息
+	WORLD_MANOR_MIST_PUSH		 = 230;	// 推送世界地图上的迷雾
+
+	GUIDE_ACTIVATE_VIP			 = 240;	// 新手引导激活VIP
+	PLAYER_NAME_SENS_WORDS_NOTIFY = 241;  // 玩家名字包含敏感词
+
+	DEFENCE_BUILDING_CHANGE_PUSH = 250;	// 防御建筑状态（血量）变化推送
+	DEFENCE_BUILDING_REPAIR_PUSH = 251;	// 防御建筑修理完成推送
+	CITY_DEF_PUSH                = 252; // 城防信息推送
+    MOVE_CITY_NOTIFY_PUSH        = 253; // 城防值降到0时迁城通知推送
+	NEWLY_MOVE_CITY_NOTIFY_PUSH  = 254; // 小号长时间未上线造成的迁城
+	
+	SET_PASSWD_C               = 255; // 设置二级密码
+	CLOSE_PASSWD_C             = 256; // 强制关闭二级密码
+	UNDO_CLOSE_PASSWD_C        = 257; // 撤销关闭二级密码
+	PASSWD_CHECK_C             = 258; // 二级密码验证
+	PASSWD_INFO_SYNC           = 259; // 服务器给客户端同步二级密码信息
+	SEC_PASSWD_REQ             = 260; // 客户端请求二级密码信息
+
+	PLAYER_ENTER_WORLD			 = 300;	// 进入世界地图
+	PLAYER_WORLD_MOVE			 = 301;	// 玩家在地图移动
+	PLAYER_LEAVE_WORLD			 = 302;	// 离开世界地图
+	WORLD_POINT_SYNC			 = 303;	// 地图点信息同步
+	WORLD_MARCH_SYNC			 = 304;	// 地图行军信息同步
+	FETCH_INVIEW_WORLD_POINT	 = 305;	// 获取视野内的世界点
+	GEN_WORLD_POINT_C			 = 306; // 生成世界点请求
+	
+	MONTH_CARD_RECHARGE_SYNC     = 308; // 月卡充值信息同步
+	HAS_FIRST_RECHARGE_SYNC		 = 309; // 是否首冲过
+	FETCH_RECHARGE_INFO			 = 310;	// 获取充值信息
+	RECHARGE_INFO_SYNC			 = 311;	// 充值信息同步
+	RECHARGE_SUCCESS_SYNC		 = 312; // 充值成功信息同步
+	
+	FETCH_GIFT_INFO				 = 313;	// 获取礼包信息
+	GIFT_INFO_SYNC				 = 314;	// 同步礼包信息
+
+	WORLD_MAX_MONSTER_LVL_REQ	 = 315;	// 世界最大等级野怪
+	WORLD_MAX_MONSTER_LVL_RESP	 = 316;
+
+	MARCH_ARMY_DETAIL_REQ		= 317; // 部队详情信息请求
+	MARCH_ARMY_DETAIL_RESP		= 318;
+	
+	// activity活动信息推送
+	ONLINE_REWARD_PUSH			= 320; // 在线奖励信息推送
+	ROUND_TASK_ACTIVITY_START_PUSH	= 321; // 周期任务活动每次活动开始时间推送
+    BUBBLE_REWARD_INFO_PUSH     = 322; // 冒泡奖励信息推送
+
+
+	// 联盟战争界面推送协议
+	GUILD_WAR_PUSH_ALL				= 330; // 同步所有的联盟战争信息
+	GUILD_WAR_PUSH_ADD				= 331; // 新增联盟战争信息
+	GUILD_WAR_PUSH_UPDATE_TARGET	= 332; // 更新联盟战争目标方信息
+	GUILD_WAR_PUSH_UPDATE_ITEM		= 333; // 更新联盟战争一个行军条目信息
+	GUILD_WAR_PUSH_DEL				= 334; // 删除一条联盟战争信息
+	GUILD_WAR_PUSH_DEL_ITEM			= 335; // 删除一个联盟战争行军信息
+	GUILD_WAR_PUSH_BUY_ITEM_TIMES	= 336; // 购买新的行军格子
+
+	// 推送王座或者领地的驻军信息
+	PUSH_ALL_QUARTERED_MARCHS				= 337;	// 推送全量
+	PUSH_DEL_QUARTERED_MARCHS				= 338;	// 删除一条
+	PUSH_UPDATE_QUARTERED_MARCHS			= 339;	// 更新一条
+	PUSH_UPDATE_QUARTERED_MARCHS_BUY_ITEM	= 340;	// 更新购买行军格子
+
+	// 收集资源
+	COLLECT_RESOURCE_C				= 342;
+	// 最近一次收集资源时间
+	PUSH_LAST_RESOURCE_COLLECT_TIME_S = 343;
+	
+	// 线上紧急逻辑处理请求
+	URGENCY_LOGIC_C                 = 344;
+	URGENCY_LOGIC_S                 = 345;
+	// 平台token信息更新请求
+	PFTOKEN_UPDATE_C                = 346;
+	
+	PERSONAL_PROTECT_SWITCH_SYNC    = 347; // 个保法相关开关信息同步
+	PERSONAL_PROTECT_SET_REQ        = 348; // 个保法相关开关设置
+	
+	ASA_NOTIFY_C                    = 349; // 客户端给服务器同步买量业务数据上报需要的信息
+
+	// 英雄模块
+	UNLOCK_ROBOT_HERO				= 35001;// 为机器人解锁英雄,测试用
+	PUSH_ALL_HERO					= 350;	// 登陆推送所有英雄
+	CAST_HERO_SKILL_C				= 351;	// 释放英雄技能
+	UPDATE_HERO_TALENT_C			= 352;  // 修改天赋
+	RESET_HERO_TALENT_C				= 353; 	// 重置天赋
+	HERO_UNLOCK_C 					= 354; //  解锁英雄
+	UPDATE_HERO_INFO				= 355;   // 新增或更新一个英雄
+	HERO_OFFICE_APPOINT_C			= 356;	// 委任官员
+	HERO_INSTALL_SKILL_C			= 357; // 安装技能
+	HERO_REMOVE_SKILL_C				= 358; // 删除一个英雄技能
+	HERO_SKILL_ADD_EXP_C			= 359; // 技能加经验
+	HERO_INFO_REQUEST_C				= 366; // 查询英雄信息
+	HERO_INFO_REQUEST_S				= 367; // 查询英雄信息
+	HERO_CITY_DEF_C					= 368; // 委任城防
+	HERO_SHARE_C					= 369; // 分享
+	HERO_TALENT_UNLOCK				= 371; // 解锁天赋
+	HERO_TALENT_STRENG				= 372; // 强第天赋
+	HERO_TALENT_RAND_TALE			= 373; // 随机天赋
+	HERO_TALENT_CHOSE_TALE			= 374; // 选定随机天赋
+	HERO_TALENT_RAND_TALE_S			= 375; // 随机天赋待选定
+	HERO_TALENT_OPEN				= 376; // 标记打开天赋界面
+	HERO_TALENT_ROLL_PRICE_C		= 377; // roll天赋价格
+	HERO_TALENT_ROLL_PRICE_S		= 378; // roll天赋价格
+	HERO_TALENT_STRENG_S			= 379; // 强第天赋
+
+	HERO_MERGE_SKILL_C				= 391; // 合成英雄技能
+	HERO_RESOLVE_SKILL_C			= 392; // 分解技能道具
+	HERO_STAR_UP_C					= 393;  // 英雄升星
+	HERO_ADD_EXP_C					= 394; 	// 使用英雄经验道具
+	HERO_EXCHANGE_ITEM_C			= 395;  // 技能碎片转换
+	HERO_USE_SKIN_ITEM				= 396;  // 使用皮肤道具
+	HERO_CHANGE_SKIN				= 397;  // 更换皮肤
+	HERO_TRAIN_C					= 398;  // 占坑
+	HERO_UNLOCK_SKIN_C				= 399; // 解锁专有皮肤
+	HERO_SKIN_UP_C					= 701; // 升级专有皮肤
+	HERO_SKIN_UP_S					= 702; // 升级专有皮肤
+
+	// labrotory 新超能
+	PUSH_ALL_LABORATORY_PAGE			= 710; // 同步列表 
+	LABORATORY_EXCHANGE_ITEM_C			= 711; // 兑换稳定器
+	LABORATORY_PAGE_UPDATE				= 712; // 更新一页
+	LABORATORY_CHANGE_CORE_C			= 713; // 更换和升级测量核心
+	LABORATORY_BLOCK_ROLL_C				= 714; // 随机魔方
+	LABORATORY_BLOCK_ROLL_S				= 715; // 随机结果. 只有模仿有值
+	LABORATORY_BLOCK_SELECT_C			= 716; // 选定魔方随机
+	LABORATORY_PAGE_SELECT_C			= 718; // 选择某一页为默认页
+	LABORATORY_BLOCK_ROLL_COST_C		= 719; // 随机魔方
+	LABORATORY_BLOCK_ROLL_COST_S		= 720; // 随机魔方
+
+	CROSS_SKILL_CAST_C = 731; // 司令释放技能
+	CROSS_SKILL_SYNC	= 732; // 同步
+
+
+	// super lab
+	SUPERLAB_Compose					= 401; // 合成
+	SUPERLAB_DeCompose					= 402; // 分解
+	SUPERLAB_Jihuo						= 403; // 激活
+	SUPERLAB_NoJihuo					= 404; // 取消激活
+	SUPERLAB_KUAI_SU_Jihuo				= 421; // 快捷激活
+	SUPERLAB_JIHUOLISAHI_SYNC 			= 422; // 快捷激活列表
+	SUPERLAB_JIHUOLISAHI_ADD			= 423; // 添加快捷激活
+
+	BOUNTER_HUNTER_SYNC_C				= 405; // 赏金猎人同步请求
+	BOUNTER_HUNTER_SYNC_S				= 406; // 赏金猎人同步请求
+	BOUNTER_HUNTER_WORLD_GIFT_SYNC_C	= 407; // 赏金猎人全区大奖同步请求
+	BOUNTER_HUNTER_WORLD_GIFT_SYNC_S	= 408; // 赏金猎人全区大奖同步请求
+	BOUNTER_HUNTER_HIT_C				= 409; // 打一次
+	BOUNTER_HUNTER_FREE_ITEM_C			= 411; // 每日免费礼物
+
+	// 超级兵模块
+	SUPER_SOLDIER_PART_REPAIR_C             = 447;  // 修复机甲部件
+	SUPER_SOLDIER_INIT_CONSUME_C            = 448;  // 修复机甲前消耗道具
+	SUPER_SOLDIER_TASK_PUSH                 = 449;  // 推送超级兵（建筑）任务数据
+	PUSH_ALL_SUPER_SOLDIER					= 450;	// 登陆推送所有超级兵
+	CAST_SUPER_SOLDIER_SKILL_C				= 451;	// 释放超级兵技能
+	UPDATE_SUPER_SOLDIER_INFO				= 452;  // 新增或更新一个超级兵
+	SUPER_SOLDIER_OFFICE_APPOINT_C			= 453;	// 委任官员
+	SUPER_SOLDIER_SKILL_ADD_EXP_C			= 454;  // 技能加经验
+	SUPER_SOLDIER_CITY_DEF_C				= 455;  // 委任城防
+	SUPER_SOLDIER_STAR_UP_C					= 456;  // 超级兵升星
+	SUPER_SOLDIER_ADD_EXP_C					= 457; 	// 使用超级兵经验道具
+	SUPER_SOLDIER_USE_SKIN_ITEM				= 458;  // 使用皮肤道具
+	SUPER_SOLDIER_CHANGE_SKIN				= 459;  // 更换皮肤
+	SUPER_SOLDIER_UNLOCK_C 					= 460; //  解锁兵超超级兵
+	SUPER_SOLDIER_EVOLUTION 				= 461; // 进化  Evolution
+	SUPER_SOLDIER_EXCHANGE_SYNC_REQ			= 462; // 请求同步物品兑换数
+	SUPER_SOLDIER_EXCHANGE_SYNC_RESP		= 463; // 请求同步物品兑换数
+	SUPER_SOLDIER_UNLOCK_ANYWHERE			= 464; // 解锁无处不在
+
+	// 联盟军演
+	LMJY_JOIN_ROOM_REQ			= 470; // 主动请求加入副本地图
+	LMJY_ENTER_GAME_SUCCESS		= 471; // 成攻进入游戏地图, 服务器回复
+	LMJY_GAME_OVER			= 472; // 游戏结束
+	LMJY_GAME_SYNC			= 475; // 副本信息同步
+	LMJY_QUIT_ROOM_REQ			= 476; // 主动退出
+	LMJY_PLAYER_QUIT			= 477; // 有玩家退出
+	LMJY_CLEAN_CLAIENT_DATA		= 478;  // 通知客户端清理数据
+
+	TBLY_JOIN_ROOM_REQ			= 480; // 主动请求加入副本地图
+	TBLY_ENTER_GAME_SUCCESS		= 481; // 成攻进入游戏地图, 服务器回复
+	TBLY_GAME_OVER			= 482; // 游戏结束
+	TBLY_GAME_SYNC			= 483; // 副本信息同步
+	TBLY_QUIT_ROOM_REQ		= 484; // 主动退出
+	TBLY_PLAYER_QUIT			= 485; // 有玩家退出
+	TBLY_CLEAN_CLAIENT_DATA		= 486;  // 通知客户端清理数据
+	TBLY_SINGLE_MARCH = 487; // 副本内特有建筑单人行军
+	TBLY_SINGLE_MARCH_S = 488; // 副本内特有建筑单人行军
+	TBLY_GAME_SYNC_C = 489; // 副本信息同步
+	TBLY_MOVE_CITY_CD_SYNC = 490; // 同步迁城cd
+	TBLY_SECOND_MAP_C = 491; // 小地图
+	TBLY_SECOND_MAP_S = 492; // 小地图
+	TBLY_NUCLEAR_SEND_C = 493; // 核弹发射
+	TBLY_NUCLEAR_SEND_S = 494; // 核弹发射
+	TBLY_CHRONO_SEND_REQ = 495; // 立即占领
+
+	TBLY_ANCHOR_JOIN_REQ = 496; // 主播进房间
+	TBLY_ANCHOR_LIST_MAIL_C = 497; // 主播查看建筑战斗邮件
+	TBLY_ANCHOR_LIST_MAIL_S = 498; // 主播查看建筑战斗邮件
+	TBLY_ANCHOR_GET_GUILD_WAR_INFO_C = 800; // 主播查看联盟战争
+	TBLY_ANCHOR_GET_GUILD_WAR_INFO_S = 801; // 
+	TBLY_ANCHOR_GET_GUILD_WAR_CELL_INFO_C = 802;
+	TBLY_ANCHOR_GET_GUILD_WAR_CELL_INFO_S = 803;
+	
+	TBLY_ORDER_USE_C  = 804; // 使用号令
+	TBLY_ORDER_SYNC_S = 805; //号令同步
+
+
+	CYBORG_JOIN_ROOM_REQ			= 831; // 主动请求加入副本地图
+	CYBORG_ENTER_GAME_SUCCESS		= 832; // 成攻进入游戏地图, 服务器回复
+	CYBORG_GAME_OVER			= 833; // 游戏结束
+	CYBORG_GAME_SYNC			= 834; // 副本信息同步
+	CYBORG_QUIT_ROOM_REQ		= 835; // 主动退出
+	CYBORG_PLAYER_QUIT			= 836; // 有玩家退出
+	CYBORG_CLEAN_CLAIENT_DATA		= 837;  // 通知客户端清理数据
+	CYBORG_SINGLE_MARCH = 838; // 副本内特有建筑单人行军
+	CYBORG_SINGLE_MARCH_S = 839; // 副本内特有建筑单人行军
+	CYBORG_GAME_SYNC_C = 840; // 副本信息同步
+	CYBORG_MOVE_CITY_CD_SYNC = 841; // 同步迁城cd
+	CYBORG_SECOND_MAP_C = 842; // 小地图
+	CYBORG_SECOND_MAP_S = 843; // 小地图
+	CYBORG_NUCLEAR_SEND_C = 844; // 核弹发射
+	CYBORG_NUCLEAR_SEND_S = 845; // 核弹发射
+	CYBORG_ANCHOR_JOIN_REQ = 846; // 主播进房间
+	CYBORG_ANCHOR_LIST_MAIL_C = 847; // 主播查看建筑战斗邮件
+	CYBORG_ANCHOR_LIST_MAIL_S = 848; // 主播查看建筑战斗邮件
+	CYBORG_ANCHOR_GET_GUILD_WAR_INFO_C = 849; // 主播查看联盟战争
+	CYBORG_ANCHOR_GET_GUILD_WAR_INFO_S = 850; // 
+	CYBORG_ANCHOR_GET_GUILD_WAR_CELL_INFO_C = 851;
+	CYBORG_ANCHOR_GET_GUILD_WAR_CELL_INFO_S = 852;
+
+	SW_ENTER_GAME_SUCCESS		= 581; // 成攻进入游戏地图, 服务器回复
+	SW_GAME_OVER			= 582; // 游戏结束
+	SW_GAME_SYNC			= 583; // 副本信息同步
+	SW_QUIT_ROOM_REQ		= 584; // 主动退出
+	SW_PLAYER_QUIT			= 585; // 有玩家退出
+	SW_CLEAN_CLAIENT_DATA		= 586;  // 通知客户端清理数据
+	SW_SINGLE_MARCH = 587; // 副本内特有建筑单人行军
+	SW_SINGLE_MARCH_S = 588; // 副本内特有建筑单人行军
+	SW_GAME_SYNC_C = 589; // 副本信息同步
+	SW_MOVE_CITY_CD_SYNC = 590; // 同步迁城cd
+	SW_SECOND_MAP_C = 591; // 小地图
+	SW_SECOND_MAP_S = 592; // 小地图
+	SW_LAST_VIDEO_INDEX_C = 593; // 最新录像序号
+	SW_LAST_VIDEO_INDEX_S = 594; // 最新录像序号
+	SW_VIDEO_OF_INDEX_C = 595; // 录像序号
+	SW_VIDEO_OF_INDEX_S = 596; // 录像序号
+	SW_VISITTTTTT_C		= 597; // 预览参观
+
+	// 剧情任务模块
+	PUSH_STORY_MISSION_INFO_S = 360; // 推送剧情任务信息
+	
+	// 日常任务变化推送
+	PUSH_DAILY_MISSION_CHANGE_S = 370; //推送日常任务变化信息
+	
+	PUSH_QUESTIONNAIRE_INFO_S	= 380;	// 调查问卷信息推送
+	
+	PUSH_REWARD_CHANGE = 400; // 道具转换推送
+	
+	PUSH_KILL_MONSTER_LEVEL = 410; // 击杀野怪等级推送
+
+	STORE_HOUSE_SYNC	= 500; // 同步玩家宝藏信息
+	STORE_HOUSE_INFO_C  = 501; // 请求同步宝藏信息
+	STORE_HOUSE_EXC_C	= 502; // 挖掘宝藏
+	STORE_HOUSE_HELP_C	= 503; // 帮助挖掘宝藏
+	STORE_HOUSE_SPEED_C	= 504; // 帮助挖掘宝藏加速
+	STORE_HOUSE_HELP_REWARD_C	= 505; // 领取帮助奖励
+	STORE_HOUSE_REWARD_C	= 506; // 领取奖励
+	STORE_HOUSE_REFRASH_C	= 507; // 手动刷新宝藏
+	STORE_HOUSE_QUERY_HELP 	= 508; // 请求帮助挖宝
+	STORE_HOUSE_UPDATE_S = 509;		// 通知宝藏数据有更新
+
+	WARE_HOUSE_SYNC_C			=520; // 请求同步仓库信息
+	WARE_HOUSE_SYNC_S			=521; // 向客户端同步仓库信息
+	WARE_HOUSE_STORE_MARCH_C	=522; // 发启存款行军
+	WARE_HOUSE_TAKE_MARCH_C		=523; // 发启取款行军
+
+	WORLD_RANDOM_BOX_MARCH_C	=526; // 发启随机宝箱行军
+	YURI_MONSTER_QUERY_HELP = 527;	//尤里行军支援
+
+	WORLD_COLL_TREASURE_C = 528; //开仓放粮采行军
+	WORLD_COLL_TREASURE_S = 529;
+	GEN_RES_TRESSRUE_SUCCES = 530; // 生成资源宝库成功.
+	
+	TALENT_SKILLS_SYNC = 540;  // 天赋技能信息同步
+	
+	NEWLY_DATA_INIT_SUCCESS_SYNC = 541;  // 新手数据生成成功同步
+
+	RANDOM_BOX_CD_C	= 542; //请求宝箱领取冷却时间
+	RANDOM_BOX_CD_S	= 543; //推送宝箱领取冷却时间
+	
+	PUSH_GUILD_WAR_COUNT = 600; 			//推动联盟战争条数
+	PUSH_NEW_GUILD_WAR_RECORD_COUNT = 601; 	//推动联盟战争记录小红点
+	
+	SHARE_COORDINATE_C = 610; //坐标分享
+	
+	MILITARY_RANK_REWAR_STATUS_SYNC = 611; //军衔奖励状态同步
+	
+	MILITARY_RANK_GET_REWARD = 614; //领取军衔每日奖励
+	
+	LOGIN_TOKEN_EXPIRED_S    = 615; // TOKEN已过期
+	
+	COUPON_INFO_PUSH_S       = 616; // 微信券信息推送
+	
+	//////////////////////////////////////////////////////
+	// rpc双向协议ID定义
+	//////////////////////////////////////////////////////
+
+	// 登陆模块
+	LOGIN_C					= 1000;
+	LOGIN_S					= 1001;
+	
+	// 请求登录排队信息
+	LOGIN_WAIT_C            = 1002;
+
+	// 前端切入后台通知
+	BACKGROUND_NOTICE_C     = 1004;
+	
+	PLAYER_NAME_CONTAIN_SENS  = 1005; // 玩家登陆时服务器检测到玩家名字包含敏感词，通知玩家改名
+
+	RECHARGE_ITEM_INFO_C    = 1008;  // 客户端上报从米大师拉取的充值条目营销活动信息
+	// 充值模块
+	RECHARGE_C				= 1010;  // 充值通知请求（客户端向米大师请求前发送）
+	RECHARGE_S				= 1011;  // 充值通知响应
+	RECHARGE_SUCC_C         = 1012;  // 客户端充值成功通知请求（客户端向米大师请求成功后发送）
+	RECHARGE_SUCC_S         = 1013;  // 客户端充值成功通知响应
+	
+	// 累计充值奖励
+	RECHARGE_REWARD_C		= 1014;
+	
+	// 钻石兑换水晶
+	EXCHANGE_DIAMONDS_TO_GOLD = 1016;
+	
+	// 健康游戏信息上报
+	HEALTH_GAME_REPORT_C    = 1018;
+	
+	// 升级奖励
+	LEVEL_UP_REWARD_C		= 1020;
+	// 打开领主面板
+	OPEN_PLAYER_BOARD_C		= 1021;
+	
+	// 一键领取微信券
+	TAKE_COUPON_REQ        = 1022; 
+
+	// 设备激活
+	DEVICE_ACTIVE_C			= 1030;
+	DEVICE_ACTIVE_S			= 1031;
+
+	// 生成新手数据
+	GEN_NEWLY_DATA_C		= 1040;
+	GEN_NEWLY_DATA_S		= 1041;
+	
+	// 客户端日志记录
+	CLIENT_LOG_RECORD_C		= 1042;
+	
+	// 客户端配置
+	CLIENT_CONFIG_C		= 1044;
+	CLIENT_CONFIG_S		= 1045;
+	
+	// 客户端事件上报
+	CLIENT_ENENT_REPORT	= 1046;
+	
+	//同步玩家每日数据
+	SYN_PLAYER_DAILY_DATA = 1051;
+	SYN_SYSTEM_EVENT = 1052; //推送系统事件
+	//玩家的外观信息
+	PLAYER_FACADE_INFO_REQ = 1053; 
+	//玩家的外观信息
+	PLAYER_FACADE_INFO_RESP = 1054; 
+	//同步玩家身上的标志位
+	PLAYER_FLAG_SYN = 1055;
+	//玩家的状态同步 (用于迁服)
+	PLAYER_STATUS_SYN = 1101; 
+	//玩家迁服
+	PLAYER_MIGRATE_OUT_REQ = 1102; 
+	//获取真实的pficon url 请求
+	GET_REAL_PFICON_URL_REQ = 1103;
+	//获取真实的pficon url 响应
+	GET_REAL_PFICON_URL_RESP = 1104;	
+	
+	// 道具模块
+	RES_OUTPUT_ITEM_BATCH_USE_C = 1997;  // 资源田增产道具批量使用请求
+	RES_OUTPUT_ITEM_BATCH_USE_S = 1998;  // 资源田增产道具批量使用回应
+	
+	RES_ITEM_BATCH_USE_C	= 1999; // 使用资源道具
+	ITEM_USE_C				= 2000;
+	ITEM_BUY_C				= 2002;
+	ITEM_BUY_S				= 2003;
+	ITEM_OPEN_BAG_C			= 2004;	// 打开背包
+	BUY_HOT_C				= 2005;
+	BUY_AND_USE_C			= 2007;	// 购买并使用
+	BUY_VIT_S               = 2008; // 购买体力返回
+	ITEM_USE_BY_ITEMID_C	= 2009;	// 通过配置ID使用道具
+	GACHA_SYNC_C			= 2011; // 请求同步扭蛋信息
+	GACHA_SYNC_S			= 2012; // 请求同步扭蛋信息
+	GACHA_C 				= 2013; // 请求扭蛋
+	GACHA_S 				= 2014; // 扭蛋结果
+	VIT_PURCHASE_INFO_C     = 2015; // 体力购买信息请求
+	VIT_PURCHASE_INFO_S     = 2016; // 体力购买信息响应
+	BUY_GIFT_C				= 2017; // 购买礼包
+	BUY_GIFT_S				= 2018;
+	GIFT_SYNC_C				= 2021; // 请求同步礼包信息
+	GIFT_SYNC_S				= 2022; // 请求同步礼包信息
+	SYNC_ITEM_BUY_C			= 2031; // 请求同步商品购买记录
+	SYNC_ITEM_BUY_S			= 2032; 
+	
+	BUY_GIFT_REQUEST		= 2033;	// 道具直购请求
+	GIFT_SUCCESS_RESP		= 2034;	// 道具直购返回	
+	
+	VIP_SHOP_BUY_C          = 2035; // vip商城购买请求
+	
+	VIP_EXCLUSIVE_BOX_BUY_C     = 2037; // 购买vip专属礼包
+	VIP_BENEFIT_BOX_TAKE_C      = 2038; // 领取vip福利礼包
+
+	VIP_SHOP_ITEM_REQ_C         = 2039; // vip商城数据请求
+	
+	FOGGYBOX_OPEN_REQ_C         = 2040;  // 开启迷雾要塞宝箱请求
+	RECEIVE_FOGGYBOX_AWARD_C    = 2042;  // 领取迷雾要塞宝箱奖励请求
+	FOGGYBOX_THROWAWAY_C        = 2044;  // 丢弃迷雾要塞宝箱请求
+
+	REPORTING_REQ_C             = 2046;  // 举报请求
+	REPORTTING_S                = 2047;  // 服务器返回举报信息
+	
+	BUY_GIFT_FAILED_NOTIFY_REQ  = 2048;  // 前端道具直购请求米大师失败，通知服务器
+	
+	NEWLY_SHOP_ITEM_CLICKED_C   = 2049;  // 客户端通知服务器，热销商品中新上架的商品红点消失（已点击）
+	NEWLY_SHOP_ITEM_CLICKED_PUSH = 2050; // 玩家登录时，服务器给客户端推送热销商品中的已点击的新上架商品
+
+	ITEM_EXCHANGE_C             = 20051; // 物品兑换
+	ITEM_EXCHANGE_TIMES_PUSH    = 20052; // 物品兑换次数推送
+	ITEM_EXCHANGE_TIMES_C       = 20053; // 物品兑换次数请求
+	
+	MITITARY_SHOP_INFO_C        = 20055; // 军演商店购买信息请求
+	MITITARY_SHOP_INFO_PUSH     = 20056; // 军演商店购买信息推送
+	MILITARY_SHOP_BUY_C         = 20057; // 军演商店购买请求
+	MILITARY_SHOP_BUY_S         = 20058; // 军演商店购买响应
+    
+	CLICK_YIWA_REDPOINT_C      = 20060;  // 点击伊娃红点
+	
+	//邮件
+	MAIL_LIST_MAIL_C			= 2091; //按页读取
+	MAIL_LIST_MAIL_S			= 2092; //按页读取
+	MAIL_TYPE_UNREAD_C			= 2093;	//类型未读数
+	MAIL_TYPE_UNREAD_S			= 2094;	//类型未读数
+	REPLY_MOVE_CITY_MAIL_C		= 2095; // 处理迁城邀请
+	MAIL_MARK_READ_C			= 2100;	//标记邮件已读
+	MAIL_DEL_MAIL_BY_ID_C		= 2102;	//通过邮件ID删除邮件
+	MAIL_DEL_MAIL_BY_ID_S		= 2103;
+	MAIL_DEL_MAIL_BY_TYPE_C		= 2104;	//通过邮件类型删除邮件
+	MAIL_CREATE_CHATROOM_C		= 2106;	//创建聊天室
+	MAIL_NEW_MAIL_S				= 2107;	//新增邮件
+	MAIL_SEND_CHATROOM_MSG_C	= 2108;	//发送聊天室消息
+	MAIL_PUSH_CHATROOM_MSG_S	= 2109;	//推送聊天室消息
+	MAIL_CHECK_MAIL_C			= 2110;	//查看邮件
+	MAIL_CHECK_MAIL_S			= 2111;	//查看邮件返回
+	MAIL_SAVE_C					= 2112;	//收藏邮件
+	MAIL_CANCEL_SAVE_C			= 2114;	//取消收藏邮件
+	MAIL_REWARD_C				= 2116;	//领取奖励
+	MAIL_CHECK_MAIL_BY_TYPE_C	= 2118;	//查看某一类邮件
+	MAIL_CHECK_MAIL_BY_TYPE_S	= 2119;	//查看某一类邮件返回
+	MAIL_SHARE_C				= 2120;	//邮件分享
+	MAIL_CHECK_OTHERPLAYER_MAIL_C	= 2121;	//查看其它玩家邮件
+	MAIL_CHECK_OTHERPLAYER_MAIL_S	= 2122;	//查看其它玩家邮件返回
+	MAIL_SEND_GUILD_MAIL_C			= 2123;	//发送联盟全体邮件
+	MAIL_CHAT_HISTORY_PLAYERS_C		= 2124;	//请求历史交互玩家
+	MAIL_CHAT_HISTORY_PLAYERS_S		= 2125;	//返回历史交互玩家
+	MAIL_CHAT_ADD_PLAYERS_C			= 2126;	//添加玩家
+	MAIL_CHAT_DEL_PLAYERS_C			= 2127;	//踢出玩家
+	MAIL_LEAVE_CHATROOM_C			= 2128;	//退出聊天室
+	MAIL_CHANGE_CHATROOM_NAME_C		= 2129;	//修改聊天室名称
+	MAIL_PUHS_DEL_S					= 2130;	//服务器推送删除邮件
+	MAIL_BE_DEL_S					= 2131;	//服务器推送玩家被踢出
+	MAIL_UPDATE_CHATROOM_S			= 2132;	//聊天室数据更新
+	MAIL_CHECK_INTEGRAL_MAIL_C		= 2134;  // 请求完整邮件
+	MAIL_CHECK_INTEGRAL_MAIL_S		= 2135;  // 请求完整邮件
+	MAIL_CREATE_CHAT_CD_S			= 2136; // 创建聊天房间CD
+	MAIL_UPDATE_CHATROOM_C			= 2137;	//聊天室数据更新
+
+	// 泰能计划
+	PLANT_FACTORY_UNLOCK_C	 	= 2201; // 解锁泰能工厂
+	PLANT_FACTORY_UPGRADE_C 	= 2202; // 升级泰能工厂
+	PLANT_FACTORY_COLLECT_C 	= 2203; // 收取泰能工厂
+	PLANT_FACTORY_SYNC_S	 	= 2204; // 同步泰能工厂
+	PLANT_FACTORY_SYNC_C	 	= 2205; // 请求同步泰能工厂
+	PLANT_TECH_UPGRADE_C		= 2206; // 泰能强化升级
+	PLANT_TECH_CHIP_UPGRADE_C	= 2207; // 泰能强化组件升级
+	PLANT_TECH_SYNC_S			= 2208; // 泰能强化同步
+	PLANT_TECH_UPDATE_S			= 2209; // 泰能强化更新
+
+	// 建筑模块
+	BUILDING_CREATE_C		= 3000;	// 创建建筑
+	BUILDING_UPGRADE_C		= 3002;	// 升级建筑
+	BUILDING_MOVE_C			= 3004;	// 移动建筑请求
+	BUILDING_REBUILD_C		= 3005;	// 建筑改建
+	BUILDING_REPAIR_C		= 3006;	// 城防修复
+	BUILDING_AREA_UNLOCK_C  = 3007; // 解锁区块
+	BUILDING_UNLOCK_C       = 3008; // 解锁建筑
+	BUILDING_REMOVE_C       = 3009; // 拆除建筑
+    BUILDING_OUTFIRE_C      = 3010; // 城墙灭火
+	CITYDEF_REQ_C           = 3011; // 城防信息请求	
+	BUILDING_MOVE_S			= 3012;	// 移动建筑响应
+    BUILDING_AWARD_TAKE_C   = 3013; // 建筑升级选择性奖励领取请求
+
+	// 队列取消
+	QUEUE_CANCEL_C			= 3100;	// 取消队列
+	QUEUE_SPEED_UP_C		= 3102;	// 队列加速
+	QUEUE_FININSH_FREE_C	= 3104;	// 队列免费完成
+    PAID_QUEUE_PAY_C        = 3105; // 付费队列付费购买
+	
+	// 队列批量付费加速
+	QUEUE_SPEED_UP_BATCH_C	= 3106;
+
+	// 世界地图
+	WORLD_MOVE_CITY_C		= 3602;	// 迁城
+	WORLD_MOVE_CITY_S		= 3603;
+	WORLD_MAP_CLOSE_C		= 3604;	// 关闭世界地图
+
+	// 出征
+	WORLD_CHECK_ARMY_DETAIL_C	= 3606;// 查看军队详情
+	WORLD_MARCH_SPEEDUP_C		= 3608;// 行军加速
+	WORLD_SERVER_CALLBACK_C		= 3610;// 行军召回
+	WORLD_SERVER_CALLBACK_S		= 3611;
+	WORLD_POINT_MARCH_CALLBACK_C= 3612;// 路点召回行军
+
+	// 世界地图搜索
+	WORLD_SEARCH_C				= 3698;
+	WORLD_SEARCH_S				= 3699;
+
+	// 收藏夹
+	WORLD_FAVORITE_ADD_C		= 3700;
+	WORLD_FAVORITE_UPDATE_C		= 3701;
+	WORLD_FAVORITE_DELETE_C		= 3702;
+	WORLD_FAVORITE_INFO_C		= 3703; //收藏夹信息请求
+
+	//攻击怪物
+	WORLD_FIGHTMONSTER_C		= 3704;
+	WORLD_FIGHTMONSTER_S		= 3705;
+
+	//采集资源
+	WORLD_COLLECTRESOURCE_C		= 3706;
+	WORLD_COLLECTRESOURCE_S		= 3707;
+
+
+	//侦查（目标点参考攻击玩家目标类型）
+	WORLD_SPY_C				= 3710;
+	WORLD_SPY_S				= 3711;
+
+	// 驻扎（空地）
+	WORLD_QUARTERED_C		= 3712;
+	WORLD_QUARTERED_S		= 3713;
+
+	// 行军援助（包含玩家城点、联盟堡垒、王座）
+	WORLD_ASSISTANCE_C		= 3714;
+	WORLD_ASSISTANCE_S		= 3715;
+
+	// 行军资源援助（城点）
+	WORLD_ASSISTANCE_RES_C	= 3716;
+	WORLD_ASSISTANCE_RES_S	= 3717;
+
+	// 攻击玩家（包含玩家城点、驻扎点、联盟堡垒、王座等敌方玩家）
+	WORLD_ATTACK_PLAYER_C	= 3720;
+	WORLD_ATTACK_PLAYER_S	= 3721;
+
+	// 发起集结（包含玩家城点、联盟堡垒、王座）
+	WORLD_MASS_C			= 3722;
+	WORLD_MASS_S			= 3723;
+
+	// 加入集结
+	WORLD_MASS_JOIN_C		= 3724;
+	WORLD_MASS_JOIN_S		= 3725;
+
+	// 队长遣返某人
+	WORLD_MASS_REPATRIATE_C	= 3726;
+	WORLD_MASS_REPATRIATE_S	= 3727;
+
+	// 队长解散
+	WORLD_MASS_DISSOLVE_C	= 3728;
+	WORLD_MASS_DISSOLVE_S	= 3729;
+
+	// 集结类型行军购买加入者额外格子
+	WORLD_MASS_MARCH_BUY_ITEMS_C = 3730;
+
+	// 驻扎类型行军购买加入者额外格子
+	WORLD_QUARTERED_MARCH_BUY_ITEMS_C =	3732;
+
+	// 任务前往世界搜索
+	WORLD_TASK_GO_SEARCH_C	= 3734;
+	WORLD_TASK_GO_SEARCH_S	= 3735;
+
+	//请求世界点详细信息
+	WORLD_POINT_DETAIL_C = 3736;
+	WORLD_POINT_DETAIL_S = 3737;
+	
+	// 尤里探索
+	WORLD_YURI_EXPLORE_C		= 3738;
+	WORLD_YURI_EXPLORE_S		= 3739;
+	
+	//获取尤里探索奖励列表
+	YURI_EXPLORE_REWARD_C		= 3740;
+	YURI_EXPLORE_REWARD_S		= 3741;
+	
+	// 据点行军
+	STRONGPOINT_MARCH_C = 3742;
+	STRONGPOINT_MARCH_S = 3743;
+	
+	// 新版野怪
+	WORLD_NEW_MONSTER_MARCH_C = 3744;
+	WORLD_NEW_MONSTER_MARCH_S = 3745;
+	
+	// 迷雾要塞单人行军
+	WORLD_FOGGY_SIGNLE_C = 3746;
+	WORLD_FOGGY_SIGNLE_S = 3747;
+	
+	// 寻宝据点行军
+	TREASURE_HUNT_RES_C = 3748;
+	TREASURE_HUNT_RES_S = 3749;
+	
+	// 战地旗帜行军
+	WAR_FLAG_MARCH_C = 3750;
+	WAR_FLAG_MARCH_S = 3751;
+	
+	// 配置校验(仅限debug模式)
+	CFG_CHECK_C	= 3754;
+	CFG_CHECK_S	= 3755;
+
+	// 高达单人行军
+	WORLD_GUNDAM_SINGLE_MARCH_C = 3756;
+	WORLD_GUNDAM_SINGLE_MARCH_S = 3757;
+	
+	// 年兽单人行军
+	WORLD_NIAN_SINGLE_MARCH_C = 3758;
+	WORLD_NIAN_SINGLE_MARCH_S = 3759;
+	
+	// 自动打野切换
+	SWITCH_ATK_MONSTER_AUTO_MARCH_C = 3760;
+	// 自动打野开启状态信息同步（登录时推送）
+	ATK_MONSTER_AUTO_MARCH_STATUS_S = 3761;
+	
+	// 机甲宝箱行军
+	WORLD_NIAN_BOX_MARCH_C = 3762;
+	WORLD_NIAN_BOX_MARCH_S = 3763;
+	
+	// 能量塔行军
+	WORLD_PYLON_MARCH_C = 3764;
+	WORLD_PYLON_MARCH_S = 3765;
+	
+	// 踢雪球行军
+	WORLD_SNOWBALL_MARCH_C = 3766;
+	WORLD_SNOWBALL_MARCH_S = 3767;
+	
+	// 使用行军表情
+	MARCH_EMOTICON_USE_C = 3770;
+	// 同步已解锁的行军表情包
+	MARCH_EMOTICON_SYNC_S = 3771;
+	
+	//幽灵工厂打怪行军
+	GHOST_TOWER_MARCH_C = 3772;
+	GHOST_TOWER_MARCH_S = 3773;
+	
+	//端午龙船行军
+	DRAGON_BOAT_MARCH_C = 3774;
+	DRAGON_BOAT_MARCH_S = 3775;
+	//周年庆 -共享蛋糕行军
+	CAKE_SHARE_MARCH_C = 3880;
+	CAKE_SHARE_MARCH_S = 3881;
+	
+	// 国家建设任务行军
+	NATIONAL_BUILD_MARCH_C = 3882;
+	NATIONAL_BUILD_MARCH_S = 3883;
+	
+	// 天赋模块
+	TALENT_UPGRADE_C		= 4000;
+	TALENT_UPGRADE_S		= 4001;
+	TALENT_CLEAR_C			= 4002;
+	TALENT_CHANGE_C			= 4004;
+
+	// 藏兵行军发起
+	HIDEEN_MARCH_C		= 4006;
+	HIDEEN_MARCH_S		= 4007;
+
+	WORLD_CHRISTMAS_BOX_MARCH_C = 4101; //圣诞宝箱行军.
+	WORLD_CHRISTMAS_BOX_MARCH_S = 4102; //圣诞宝箱行军.
+
+	WORLD_CHRISTMAS_SINGLE_MARCH_C = 4103; //圣诞boss行军.
+	WORLD_CHRISTMAS_SINGLE_MARCH_S = 4104; //圣诞boss行军.
+	
+	WORLD_SNOWBALL_REMOVE = 4105; // 雪球删除
+	
+	WORLD_SNOWBALL_LAST_ATK_PUSH 	= 4106; // 雪球上次攻击推送
+	
+	WORLD_SNOWBALL_FAST_SEARCH_REQ 	= 4107; // 雪球快速查找
+	WORLD_SNOWBALL_FAST_SEARCH_RESP = 4108; // 返回 WorldSearchResp
+
+	WORLD_SNOWBALL_ATTACK_REQ 	= 4109; // 雪球攻击
+	WORLD_SNOWBALL_ATTACK_RESP 	= 4110;
+	
+	WORLD_ESPIONAGE_MARCH_REQ	= 4111; // 间谍行军
+	WORLD_ESPIONAGE_MARCH_RESP	= 4112;
+
+	WORLD_SNOWBALL_GOBAL_PUSH	= 4113; // 雪球进球推送
+	
+	WORLD_SNOWBALL_END	= 4114; // 雪球活动结束
+	
+	CHRISTMAS_INFO_REQ			= 4201;
+	CHRISTMAS_INFO_RESP			= 4202;
+	
+	
+	
+	//////////////////////////////////////////////////////
+	// 装备模块 
+	//////////////////////////////////////////////////////
+	// 同步装备信息
+	EQUIP_INFO_SYNC_S		= 4500;
+	// 指挥官装备同步
+	COMMANDER_EQUIP_SYNC_S	= 4501;
+	// 新增装备信息同步
+	EQUIP_ADD_SYNC_S		= 4503;
+	// 穿戴装备
+	PUT_ON_EQUIP_C			= 4510;
+	// 卸下装备
+	TAKE_OFF_EQUIP_C		= 4512;
+	// 装备打造
+	EQUIP_FORGE_C			= 4514;
+	// 装备分解
+	EQUIP_RESOLVE_C			= 4516;
+	// 装备升品
+	EQUIP_QUALITY_UP_C		= 4518;
+	// 装备材料合成
+	EQUIP_MATERIAL_MERGE_C	= 4520;
+	// 装备材料分解
+	EQUIP_MATERIAL_RESOLVE_C= 4522;
+	// 打开装备背包
+	EQUIP_OPEN_PAGE_C		= 4530;
+	// 打开装备材料背包
+	EQUIP_OPEN_MATERIAL_BAG_C	= 4532;
+	
+	
+	
+	
+	// 科技模块
+	TECHNOLOGY_UPLEVEL_C	= 5000;	// 科技研究
+	// 释放科技技能
+	CAST_TECH_SKILL_REQ_C	= 5001; 
+	
+	// 远征科技研究
+	CROSS_TECH_UPLEVEL_C	= 5010;
+
+	//领主详情
+	PLAYER_DETAIL_C			= 6000;
+	PLAYER_DETAIL_S			= 6001;
+	//修改头像
+	PLAYER_CHANGE_ICON_C	= 6002;
+	
+	//检查名字
+	PLAYER_CHECK_NAME_C		= 6004;
+	PLAYER_CHECK_NAME_S		= 6005;
+
+	//修改名字
+	PLAYER_CHANGE_NAME_C	= 6006;
+	//世界地图其它领主详情
+	PLAYER_DETAIL_OTHER_C	= 6008;
+	PLAYER_DETAIL_OTHER_S	= 6009;
+	//获得本服玩家
+	PLAYER_GETLOCALPLAYERINFOBYNAME_C =	6010;
+	PLAYER_GETLOCALPLAYERINFOBYNAME_S =	6011;
+
+	//屏蔽玩家
+	SHIELD_PLAYER_C			= 6012;
+	SHIELD_PLAYER_S			= 6013;
+	//解除屏蔽
+	REMOVE_SHIELD_C			= 6014;
+	
+    // 敏感词检测通用协议
+	SENSITIVE_WORD_CHECK_C  = 6015;
+	SENSITIVE_WORD_CHECK_S  = 6016;
+
+	//获得全服玩家
+	PLAYER_GETGLOBALPLAYERINFOBYNAME_C = 6018;
+
+	//任务列表
+	MISSION_LIST_C = 6100;
+	MISSION_LIST_S = 6101;
+	//获取任务奖励
+	MISSION_BONUS_C	= 6102;
+	MISSION_BONUS_S	= 6103;
+	//任务刷新
+	MISSION_REFRESH_S =	6104;
+
+	
+	// 调查问卷答案提交
+	QUESTIONNAIRE_SUBMIT_S = 6302;
+	// 检查问卷可用性
+	QUESTIONNAIRE_CHECK_C = 6303;
+	// 获取调查问卷问题信息
+	QUESTIONNAIRE_GET_SURVEY_INFO_C = 6304;
+	QUESTIONNAIRE_GET_SURVEY_INFO_S = 6305;
+	
+
+
+	//////////////////////////////////////////////////////
+	// 军队模块
+	//////////////////////////////////////////////////////
+	// 训练士兵
+	ADD_SOLDIER_C			      = 7000;
+	// 士兵晋升
+	SOLDIER_ADVANCE_C			  = 7001;
+	// 治疗伤兵
+	CURE_SOLDIER_C			      = 7002;
+	// 领取士兵
+	COLLECT_SOLDIER_C		      = 7004;
+	COLLECT_SOLDIER_S		      = 7005;
+	// 解雇士兵
+	FIRE_SOLDIER_C			      = 7006;
+	// 领取治疗好的伤兵
+	COLLECT_CURE_FINISH_SOLDIER	  = 7008;
+	// 升级士兵
+	UPGRADE_SOLDIER_C             = 7009;
+	// 穿戴装备
+	SOLDIER_WEAR_EQUIPMENT_C      = 7010;
+	// 升星
+	SOLDIER_STAR_UP_C 			  = 7011;
+	// 制造陷阱
+	CREATE_FORTS_C                = 7012;
+	// 打开造兵界面通知（只有有新解锁出兵种后第一次进入页面才发送）
+	OPEN_SOLDIER_PAGE             = 7013;
+
+	// 回收超时空急救站的死兵
+	SOLDIER_FIRST_AID             = 7014;
+    // 新兵救援信息推送
+	PROTECT_SOLDIER_PUSH          = 7015;
+    // 领取救援新兵
+    PROTECT_SOLDIER_RECEIVE_C     = 7016;
+    // 大R复仇死兵信息推送
+	REVENGE_INFO_PUSH             = 7017;
+	// 购买大R死兵复仇折扣商品
+	REVENGE_SHOP_BUY_C          = 7018;
+	// 购买大R折扣商品返回
+	REVENGE_SHOP_BUY_S          = 7019;
+	// 大R复仇开启结束
+	REVENGE_SHOP_END_S          = 7020;
+
+	//-----------合服相关800--------
+	MERGE_SERVER_INFO_SYNC = 8001; //返回合服信息.
+	//-----------合服相关8000--------
+
+	//////////////////////////////////////////////////////
+	//联盟管理模块
+	//////////////////////////////////////////////////////
+
+	//获得联盟信息
+	GUILDMANAGER_GETINFO_C	= 9000;
+	GUILDMANAGER_GETINFO_S	= 9001;
+
+	//创建联盟
+	GUILDMANAGER_CREATE_C	= 9002;
+	GUILDMANAGER_CREATE_S	= 9003;
+	
+	//联盟名称检测
+	GUILDMANAGER_CHECKNAME_C = 9004;
+
+	//联盟缩写检测
+	GUILDMANAGER_CHECKTAG_C	= 9006;
+
+	//改写联盟缩写
+	GUILDMANAGER_CHANGETAG_C = 9008;
+
+	//修改联盟旗帜
+	GUILDMANAGER_CHANGEFLAG_C =	9010;
+
+	//获得推荐联盟信息
+	GUILDMANAGER_RECOMMEND_C = 9014;
+	GUILDMANAGER_RECOMMEND_S = 9015;
+
+	//搜索联盟
+	GUILDMANAGER_SEARCH_C	= 9016;
+	GUILDMANAGER_SEARCH_S	= 9017;
+
+	//申请加入联盟
+	GUILDMANAGER_APPLY_C	= 9018;
+
+	//取消联盟申请
+	GUILDMANAGER_CANCELAPPLY_C = 9020;
+
+	//同意联盟申请
+	GUILDMANAGER_ACCEPTAPPLY_C = 9022;
+
+	//拒绝联盟申请
+	GUILDMANAGER_REFUSEAPPLY_C = 9024;
+
+	//邀请加入联盟
+	GUILDMANAGER_INVITE_C	= 9026;
+
+	//同意邀请
+	GUILDMANAGER_ACCEPTINVITE_C	= 9028;
+
+	//拒绝邀请
+	GUILDMANAGER_REFUSEINVITE_C	= 9030;
+
+	//发表联盟宣言
+	GUILDMANAGER_POSTANNOUNCEMENT_C	= 9032;
+
+	//发表联盟通告
+	GUILDMANAGER_POSTNOTICE_C =	9034;
+
+	//发表联盟留言
+	GUILDMANAGER_POSTMESSAGE_C = 9036;
+
+	//改变联盟成员权限
+	GUILDMANAGER_CAHNGELEVEL_C = 9038;
+	
+	//一键入盟请求
+	GUILD_QUICK_JOIN_C = 9040;
+
+	//踢出联盟成员
+	GUILDMANAGER_KICK_C	= 9042;
+
+	//退出联盟
+	GUILDMANAGER_QUIT_C	= 9044;
+
+	//让出联盟盟主
+	GUILDMANAGER_DEMISELEADER_C	= 9046;
+
+	//取代联盟盟主
+	GUILDMANAGER_IMPEACHMENTLEADER_C = 9052;
+
+	//解散联盟
+	GUILDMANAGER_DISSMISEGUILD_C = 9054;
+
+	//获取联盟战争记录信息
+	GUILD_WAR_RECORD_C = 9056;
+	GUILD_WAR_RECORD_S = 9057;
+
+	//获取联盟援助信息
+	GUILD_ASSISTANT_INFO_C = 9058;
+	GUILD_ASSISTANT_INFO_S = 9059;
+
+	//改变联盟申请权限
+	GUILDMANAGER_CHANGEAPPLYPERMITON_C = 9060;
+
+	//改变联盟等级称谓
+	GUILDMANAGER_CHANGELEVELNAME_C = 9062;
+
+	//改变联盟名称
+	GUILDMANAGER_CHANGENAME_C =	9066;
+
+	//查看联盟帮助队列
+	GUILDMANAGER_CHECKQUEUES_C = 9068;
+	GUILDMANAGER_CHECKQUEUES_S = 9069;
+	//申请联盟帮助
+	GUILDMANAGER_APPLYHELP_C = 9070;
+	//帮助联盟队列
+	GUILDMANAGER_HELPQUEUE_C = 9072;
+	GUILDMANAGER_HELPQUEUE_S = 9073;
+	//帮助所有联盟队列
+	GUILDMANAGER_HELPALLQUEUES_C = 9074;
+	//被帮助推送
+	GUILDMANAGER_BEHELPED_S	= 9077;
+	//刷新联盟帮助队列数目
+	GUILDMANAGER_REFRESH_HELPQUEUE_NUM_S = 9079;
+
+	//获得个人联盟申请信息
+	GUILDMANAGER_GETPLAYERAPPLY_C =	9080;
+	GUILDMANAGER_GETPLAYERAPPLY_S =	9081;
+
+	//获得联盟申请信息
+	GUILDMANAGER_GETAPPLY_C	= 9082;
+	GUILDMANAGER_GETAPPLY_S	= 9083;
+
+	//获得联盟留言
+	GUILDMANAGER_GETMESSAGE_C =	9090;
+	GUILDMANAGER_GETMESSAGE_S =	9091;
+
+	//获得联盟成员信息
+	GUILDMANAGER_GETMEMBERINFO_C = 9092;
+	GUILDMANAGER_GETMEMBERINFO_S = 9093;
+
+	//屏蔽玩家联盟留言
+	GUILDMANAGER_FORBIDPLAYERMESSAGE_C = 9094;
+
+	//解除玩家屏蔽联盟留言
+	GUILDMANAGER_CANCELFORBIDMESSAGE_C = 9096;
+
+	//获得已屏蔽列表
+	GUILDMANAGER_GETFORBIDLIST_C = 9098;
+	GUILDMANAGER_GETFORBIDLIST_S = 9099;
+
+	//获得推荐邀请玩家
+	GUILDMANAGER_GETRECOMMANDINVITE_C =	9100;
+	GUILDMANAGER_GETRECOMMANDINVITE_S =	9101;
+
+	//发起公告招募
+	GUILDMANAGER_SENDRECRUITNOTICE_C = 9104;
+
+	//获得其他联盟
+	GUILDMANAGER_GETOTHERGUILD_C = 9106;
+	GUILDMANAGER_GETOTHERGUILD_S = 9107;
+
+	//修改联盟类型
+	GUILDMANAGER_CHANGETYPE_C =	9108;
+
+	//推送联盟战争更新
+	GUILD_WAR_UPDATE_S = 9115;
+
+	//推送联盟战争取消
+	GUILD_WAR_CANCEL_S = 9117;
+
+	//推送联盟战争添加
+	GUILD_WAR_ADD_S	= 9119;
+
+	//获取盟友援助信息
+	GUILD_MEMBER_ASSISTENCE_INFO_C	= 9122;
+	GUILD_MEMBER_ASSISTENCE_INFO_S	= 9123;
+
+	//获得联盟日志
+	GUILD_GETLOG_C = 9124;
+	GUILD_GETLOG_S = 9125;
+
+	// 同步联盟申请个数
+	GUILD_APPLYNUM_SYNC_S =	9129;
+
+	//推送联盟战争援助和参加集结添加
+	GUILD_WAR_ADDMEMBER_S =	9131;
+
+	//推送联盟战争援助和参加集结更新
+	GUILD_WAR_UPDATEMEMBER_S = 9133;
+
+	//推送联盟战争援助和参加集结取消
+	GUILD_WAR_CANCELMEMBER_S = 9135;
+
+	//踢出联盟通知
+	GUILD_BEKICK_SYNC_S	= 9136;
+
+	//同意联盟申请通知
+	GUILD_BEACCEPT_SYNC_S =	9137;
+
+	//获取联盟商店信息
+	GUILD_GET_SHOP_INFO_C =	9138;
+	GUILD_GET_SHOP_INFO_S =	9139;
+
+	//补充联盟商店商品
+	GUILD_ADD_SHOP_ITEM_C = 9140;
+	GUILD_ADD_SHOP_ITEM_S = 9141;
+
+	//购买联盟商店商品
+	GUILD_SHOP_BUY_C = 9142;
+	GUILD_SHOP_BUY_S = 9143;
+
+	//获取联盟商店购买日志
+	GUILD_GET_SHOP_BUY_LOG_C = 9144;
+	GUILD_GET_SHOP_BUY_LOG_S = 9145;
+
+	//获取联盟内捐献排行
+	GUILD_GET_DONATE_RANK_C =	9150;
+	GUILD_GET_DONATE_RANK_S =	9151;
+
+	//联盟申请被批准推送
+	GUILD_ACCEPTAPPLY_SYNC_S = 9152;
+	
+	//被邀请加入联盟推送
+	GUILD_INVITE_SYNC_S = 9154;
+
+	//邀请联盟成员迁城
+	GUILD_INVITE_TO_MOVE_CITY_C	= 9172;
+	
+	//获取联盟商店补货日志
+	GUILD_GET_SHOP_ADD_LOG_C = 9174;
+	GUILD_GET_SHOP_ADD_LOG_S = 9175;
+	
+	// 通知联盟商店补货
+	GUILD_INVITE_ADD_SHOP_ITEM = 9176;
+	
+	// 同步联盟科技信息
+	GUILD_SCIENCE_INFO_SYNC_S = 9177;
+	
+	// 获取联盟科技信息
+	GUILD_SCIENCE_GET_INFO_C = 9178;
+	GUILD_SCIENCE_GET_INFO_S = 9179;
+	
+	// 设置联盟推荐科技
+	GUILD_SCIENCE_SET_RECOMMEND_C = 9180;
+	
+	// 联盟科技研究
+	GUILD_SCIENCE_RESEARCH_C = 9182;
+	
+	// 联盟科技捐献
+	GUILD_SCIENCE_DONATE_C = 9184;
+	GUILD_SCIENCE_DONATE_S = 9185;
+	
+	// 联盟科技重置普通捐献次数
+	GUILD_SCIENCE_RESET_DONATE_TIMES_C = 9186;
+	GUILD_SCIENCE_RESET_DONATE_TIMES_S = 9187;
+	
+	GUILD_MOVE_CITY_C		= 9188;	// 迁城
+	GUILD_MOVE_CITY_S		= 9189; 
+	
+	GUILD_INVITATION_LETTER_PUSH_S = 9190;// 联盟邀请函推送
+	
+	// 修改联盟权限信息
+	GUILD_CHANGE_AUTH_INFO	= 9192;
+	
+	GUILD_HOSPICE_SYNC = 9201; // 联盟关怀同步
+	GUILD_HOSPICE_GET_C = 9202; // 领取关怀奖励
+	
+	COUNTERATTACK_LIST_C = 9203; // 请求反击列表 
+	COUNTERATTACK_LIST_S = 9204; // 反击列表
+	COUNTERATTACK_CHANGED_S = 9205;  // 反击列表变更. 客户端视自己情况发送 9203 拉取新列表
+	COUNTERATTACK_INC_BOUNTY = 9206; // 提升赏金 
+	COUNTERATTACK_GO_ATTACK_C = 9207; // 准备发起反击. 有可能对方跑了.在收到成功回复后才可以眺转世界地图
+	COUNTERATTACK_GO_ATTACK_S = 9208; // 是否可以跳转世界点
+	COUNTERATTACK_REMOVE	= 9209;  // 撤销悬赏
+	COUNTERATTACK_DETAIL_C  = 9210;  // 单条反击记录详情
+	COUNTERATTACK_DETAIL_S  = 9211;  // 单条反击记录详情
+
+	// 一键建群
+	REMIND_CREATE_GROUP_C     = 9240;  // 联盟成员主动发起提醒盟主建群的请求
+	REMIND_JOIN_GROUP_C       = 9242;  // 提醒联盟成员加群
+	
+	GET_GROUP_OPENID_QQ_C     = 9243;  // 获取QQ公会绑群groupOpenid信息
+	GROUP_OPENID_QQ_PUSH      = 9244;  // QQ公会绑群groupOpenid信息推送
+	GROUP_UNBIND_C            = 9245;  // 联盟盟主解绑群通知(客户端通知服务器）
+	GROUP_UNBIND_NOTIFY_MEMBER_S = 9246; // 服务器通知联盟成员联盟群已解绑
+
+	REMIND_LOAD_GROUPDATA_PUSH       = 9247;  // 盟主建群成功后，通知联盟成员 查询群数据推送
+	
+	GUILD_ADD_SIGN_C = 9250; // 添加联盟标记
+	GUILD_REMOVE_SIGN_C = 9251; // 移除联盟标记
+	
+	GUILD_APPLY_OFFICER_C = 9252; // 申请联盟官员
+	
+	GUILD_GET_OFFICER_APPLY_LIST_C = 9254; // 获取联盟官员申请列表
+	GUILD_GET_OFFICER_APPLY_LIST_S = 9255;
+	
+	GUILD_APPOINT_OFFICER_C = 9256; // 任命联盟官员
+	
+	GUILD_DISMISS_OFFICER_C = 9258; // 解除联盟官员
+	
+	GUILD_BIG_GIFT_SYNC = 9301;  // 联盟大礼包信息推送
+	PLAYER_SMAIL_GIFT_UPDATE = 9302; // 玩家礼包列表更新
+	PLAYER_SMAIL_GIFT_GET_REWARD_C = 9303; // 领取礼物
+	PLAYER_SMAIL_GIFT_DEL_REWARD_C = 9304; // 清除礼物
+	PLAYER_SMAIL_GIFT_LIST_C = 9305;  // 玩家礼包列表
+	PLAYER_SMAIL_GIFT_LIST_S = 9406;  // 玩家礼包列表
+	PLAYER_SMAIL_GIFT_SIZE = 9407;  // 未领取礼物红点数
+	PLAYER_SMAIL_GIFT_GET_LOG_C = 9408;	// 获取联盟大礼包领取记录
+	PLAYER_SMAIL_GIFT_GET_LOG_S = 9409;	// 获取联盟大礼包领取记录
+	
+	NOGUILD_PLAYER_APPLY_GUILD_RECOMMEND = 9420; //无盟玩家响应联盟推荐
+	DEADGUILD_PLAYER_APPLY_GUILD_RECOMMEND = 9421; //死盟玩家响应联盟推荐
+	QUICK_JOIN_GUILD_FAIL_NOTICE           = 9422; //一键入盟失败，给客户端反馈监听
+	
+	GUILD_GET_RANK_C		= 9431; //请求联盟排行榜
+	GUILD_GET_RANK_S		= 9432; //返回请联盟排行榜
+	
+	GUILD_VOICE_ROOM_JOIN_C = 9441;	  //联盟语音 加入房间	
+	GUILD_VOICE_ROOM_QUIT_C = 9442;	  //联盟语音 退出房间	
+	GUILD_VOICE_ROOM_NOTIFY_S = 9443; //联盟语音 通知房间信息	
+	GUILD_VOICE_ROOM_CHANGE_MODEL_C = 9445;	//修改联盟语音模式
+	GUILD_VOICE_ROOM_JOIN_FAILED_S = 9446;  //加入房间失败
+	
+	GUILD_GET_MAINFORCE_C	= 9447;	// 获取主力部队信息
+	GUILD_GET_MAINFORCE_S	= 9448;
+	
+	GUILD_UPDATE_MAINFORCE_C = 9449; // 修改主力部队信息
+	GUILD_UPDATE_MAINFORCE_S = 9450;
+	
+	/************联盟任务/签到 9500~9600 ************/
+	GUILD_TASK_INFO_ALL_SYNC	=	9500; // 全量同步联盟任务信息
+	GUILD_TASK_INFO_CHANGE_PUSH	=	9502; // 联盟任务信息变更同步
+	GUILD_SIGN_INFO_SYNC		= 	9504; // 联盟签到信息同步
+	
+	GUILD_GET_TASK_INFO_C	= 9510;	//获取联盟任务信息
+	GUILD_GET_TASK_INFO_S	= 9511;
+	GUILD_GET_TASK_REWARD_C	= 9512;	//联盟任务领奖
+	GUILD_GET_TASK_REWARD_S	= 9513;
+	GUILD_SING_C			= 9514; //联盟签到
+	
+	
+	/************联盟任务/签到 9500~9600 ************/
+	
+	CR_MISSION_GET_REWARD_C	= 9601;	//CR英雄试练领奖
+	CR_MISSION_REQ_RANK_LIST_C = 9602; //请求试炼排行榜
+	CR_MISSION_RES_RANK_LIST_S = 9603; //服务器返回试炼排行榜
+	
+	//---------分享模块（福袋分享）------------
+	LUCKY_BAG_SHARE_REQ_C = 9650; //客户端请求分享链接
+	LUCKY_BAG_SHARE_RES_S = 9651; //服务器返回
+	
+	//-------------分享模块(战报分享)----------------
+	BATTLE_REPORT_SHARE_AWARD_REQ_C = 9652; //领取分享奖励
+	BATTLE_REPORT_SHARE_AWARD_RES_S = 9653; //同步领奖状态
+	
+	
+	/************军事学院 9700~9800 ************/
+	COLLEGE_INFO_SYNC_S		= 9700;	// 同步学院信息
+	COLLEGE_APPLY_SYNC		= 9701; // 同步学院成员申请信息
+	COLLEGE_BE_AGREE_SYNC	= 9702;	// 申请被通过
+	COLLEGE_BE_KICK_SYNC	= 9703; // 被踢出联盟
+	COLLEGE_DISMISS_SYNC	= 9704;	// 学院被解散
+	
+	COLLEGE_GET_INFO_REQ_C	= 9710; // 获取学院信息
+	
+	COLLEGE_GET_TIME_REWARD_REQ_C = 9712; //领取成员在线时长奖励
+	
+	COLLEGE_CREATE_REQ_C	= 9714; // 创建学院
+	COLLEGE_CREATE_RESP_S	= 9715;
+	
+	COLLEGE_APPLY_REQ_C		= 9716; // 申请加入学院
+	COLLEGE_APPLY_RESP_S	= 9717;
+	
+	COLLEGE_KICKOUT_REQ_C	= 9718;	// 踢出学院
+	COLLEGE_KICKOUT_RESP_C	= 9719;
+	
+	COLLEGE_INVITE_JOIN_REQ_C	= 9720;	// 邀请加入学院
+	COLLEGE_INVITE_JOIN_RESP_S	= 9721;
+	
+	COLLEGE_INVITE_LOGIN_REQ_C	= 9722; // 邀请上线
+	COLLEGE_INVITE_LOGIN_RESP_S = 9723;
+	
+	COLLEGE_GET_APPLY_LIST_REQ_C	= 9724; // 获取学院申请列表
+	COLLEGE_GET_APPLY_LIST_RESP_S	= 9725;
+	
+	COLLEGE_GET_LIST_REQ_C	= 9726; // 获取可申请学院列表
+	COLLEGE_GET_LIST_RESP_S	= 9727;
+	
+	COLLEGE_AGREE_APPLY_REQ_C	= 9728; // 同意学员申请信息
+	COLLEGE_REFUSE_APPLY_REQ_C	= 9730; // 拒绝学员申请信息
+	
+	COLLEGE_SEARCH_COACH_REQ_C	= 9732; // 搜索教官 
+	COLLEGE_SEARCH_COACH_RESP_S	= 9733;
+	
+	COLLEGE_QUIT_REQ_C		= 9734; // 退出学院
+	
+	COLLEGE_DISMISS_REQ_C	= 9736;	// 解散学院
+	
+	COLLEGE_ACCEPT_INVITE_REQ_C		= 9738; // 同意邀请加入学院
+
+	//////////////////////////////////////////////////////
+	//排行榜管理模块
+	//////////////////////////////////////////////////////
+
+	//排行榜
+	RANK_INFO_C	= 10000;
+	RANK_INFO_S	= 10001;
+
+
+	//////////////////////////////////////////////////////
+	//战斗结果通知
+	//////////////////////////////////////////////////////
+	BATTLE_INFO_S =	12001;
+
+
+	//////////////////////////////////////////////////////
+	//二级地图
+	//////////////////////////////////////////////////////
+	OPEN_SECONDARY_MAP_C = 13000;
+	OPEN_SECONDARY_MAP_S = 13001;
+
+	//////////////////////////////////////////////////////
+	//请求联盟聊天记录
+	//////////////////////////////////////////////////////
+	ALLIANCE_MSG_CACHE_C = 14000;
+	ALLIANCE_MSG_CACHE_S = 14001;
+	ALLIANCE_MSG_PUSH_S = 14002;
+	WORLD_MSG_PUSH_S = 14003;
+	WORLD_MSG_CACHE_C = 14005; // 请求世界聊天记录
+	WORLD_MSG_CACHE_S = 14006;
+	WORLD_MSG_STATE_C = 14007; // 变更聊天状态
+
+	//打开排行榜面板
+	RANK_OPEN_PANEL_C =	15000;
+	RANK_OPEN_PANEL_S =	15001;
+
+	//////////////////////////////////////////////////////
+	//CDK使用
+	//////////////////////////////////////////////////////
+	USE_CDK_C =	17000;
+	USE_CDK_S =	17001;
+
+	/////////////////////////////////////////////////////
+	//	联盟领地
+	/////////////////////////////////////////////////////
+	// 领地基础信息列表
+	GUILD_MANOR_LIST_C = 19000;
+	GUILD_MANOR_LIST_S = 19001;
+	// 建造联盟哨塔
+	CREATE_GUILD_TOWER_C = 19002;
+	// 建造联盟其他建筑
+	CREATE_GUILD_BUILDING_C = 19003;
+	// 修改联名领地名称
+	CHANGE_MANOR_NAMES_C = 19004;
+	//发起联盟领地行军
+	GUILD_MANOR_MARCH_C = 19005;
+	GUILD_MANOR_MARCH_S = 19006;
+	//主动收回领地建筑
+	TAKE_BACK_MANOR_BUILDING_C = 19007;
+	//箭塔伤害列表信息
+	MANOR_TOWER_DAMAGE_LIST_C = 19008;
+	MANOR_TOWER_DAMAGE_LIST_S = 19009;
+	//超级矿收集列表信息
+	MANOR_MINE_COLLECT_LIST_C = 19010;
+	MANOR_MINE_COLLECT_LIST_S = 19011;
+	//堡垒驻扎列表信息
+	MANOR_GARRSION_LIST_C = 19012;
+	MANOR_GARRSION_LIST_S = 19013;
+	//请求世界点状态
+	GET_WORLD_POINT_PB_C = 19014;
+	//联盟箭塔攻击伤害信息
+	MANOR_BRATIZAN_DAMAGE_S = 19015;
+	//清理联盟领地内的资源点
+	CLEAR_MANOR_RESOURCE_POINT_C = 19016;
+	//清理联盟领地内的资源点的剩余次数
+	CLEAR_MANOR_RESOURCE_LEFT_NUM_C = 19017;
+	CLEAR_MANOR_RESOURCE_LEFT_NUM_S = 19018;
+	//遣返领地建筑内行军
+	REPATRIATE_MANOR_MARCH_C = 19019;
+
+	// 任命队长
+	APPOINTED_CAPTAIN = 19021;
+	////////////////////////////////////////////////////
+	// 国王战相关
+	////////////////////////////////////////////////////
+	// 国王战信息同步
+	PRESIDENT_INFO_SYNC			= 19100;
+	// 历代国王同步
+	PRESIDENT_HISTORY_SYNC		= 19101;
+	// 国王战事件同步
+	PRESIDENT_EVENT_SYNC		= 19102;
+	// 设置王国信息
+	COUNTRY_INFO_SETTING_C		= 19103;
+	// 获取历代国王
+	FETCH_PRESIDENT_HISTORY_C	= 19104;
+	// 获取国王战事件
+	FETCH_PRESIDENT_EVENT_C		= 19105;
+	// 手动拉取国王战信息
+	FETCH_PRESIDENT_INFO		= 19106;
+	// 国王战信息同步
+	PRESIDENT_TOWER_INFO_SYNC	= 19107;
+
+	// 官职信息同步
+	OFFICER_INFO_SYNC_C			= 19200;
+	OFFICER_INFO_SYNC_S			= 19201;
+	// 设置官职（1.设置 2.改任）
+	OFFICER_SET_C				= 19202;
+	// 撤销官职
+	OFFICER_UNSET_C				= 19203;
+	// 官职历史信息同步
+	OFFICER_RECORD_SYNC_C		= 19204;
+	OFFICER_RECORD_SYNC_S		= 19205;
+
+	// 征税信息同步
+	PRESIDENT_TAX_INFO_SYNC_C	= 19210;
+	PRESIDENT_TAX_INFO_SYNC_S	= 19211;
+	// 向联盟征税
+	PRESIDENT_TAX_GUILD_C		= 19212;
+
+	// 国王禁言
+	PRESIDENT_MAKE_PLAYER_CILENT_C		= 19223;
+	// 国王解除禁言
+	PRESIDENT_CANCEL_PLAYER_CILENT_C	= 19224;
+
+	// 国王战礼包
+	PRESIDENT_GIFT_INFO_C		= 19231;
+	PRESIDENT_GIFT_INFO_S		= 19232;
+
+	// 国王战礼包中搜索玩家
+	PRESIDENT_SEARCH_C			= 19233;
+	PRESIDENT_SEARCH_S			= 19234;
+
+	// 国王战颁发礼包
+	PRESIDENT_SEND_GIFT_C		= 19235;
+
+	// 国王战礼包颁发记录
+	PRESIDENT_GIFT_RECORD_C		= 19237;
+	PRESIDENT_GIFT_RECORD_S		= 19238;
+	PRESIDENT_GIFT_RECORDS_UPDATE = 19239;//增量协议颁发礼物的时候推送此协议
+	//
+	PRESIDENT_RESOURCE_INFO_REQ = 19261; //请求资源信息
+	PRESIDENT_RESOURCE_INFO_SYN = 19262; //同步资源信息
+	PRESIDENT_RESOURCE_SET_REQ  = 19263; //设置资源比例
+	
+	PRESIDENT_SINGLE_MARCH_C		= 19271; //国王战单人行军
+	PRESIDENT_TOWER_SINGLE_MARCH_C	= 19272; //国王战箭塔单人行军
+
+	PRESIDENT_QUARTER_INFO_C		= 19273; // 总统府驻扎信息
+	PRESIDENT_QUARTER_INFO_S		= 19274;
+	PRESIDENT_TOWER_QUARTER_INFO_C	= 19275; // 总统府箭塔驻扎信息
+	PRESIDENT_TOWER_QUARTER_INFO_S	= 19276;
+	
+	FETCH_PRESIDENT_TOWER_EVENT_C		= 19277; // 获取国王战箭塔事件
+	FETCH_PRESIDENT_TOWER_EVENT_S		= 19278;
+	PRESIDENT_BUFF_INFO_REQ				= 19281; //获取国王赐福的buff信息.
+	PRESIDENT_BUFF_INFO_RESP			= 19282; //获取国王赐福的buff信息.
+	PRESIDENT_MANIFESTO_REQ				= 19283; //获取国王宣言
+	PRESIDENT_MANIFESTO_RESP			= 19284; //获取国王宣言
+	PRESIDENT_MANIFESTO_UPDATE			= 19285; //修改国王宣言
+	PRESIDENT_BUFF_OPEN_REQ					= 19286; //国王赐福开启buff
+	
+	////////////////////////////////////////////////////
+	// 剧情任务
+	////////////////////////////////////////////////////
+	STORY_MISSION_REWARD_C = 20000; //剧情任务领奖
+	STORY_MISSION_REWARD_S = 20001;
+	
+	STORY_MISSION_NEWLY_BATTLE_C = 20002; //新手击败尤里残部
+	STORY_MISSION_KILL_MOSTER_REQ = 20003;
+
+	////////////////////////////////////////////////////
+	// 我要变强
+	////////////////////////////////////////////////////
+	STRENGTHEN_GUIDE_INFO_REQ_C = 200101;
+	STRENGTHEN_GUIDE_INFO_RES_S = 200102; 
+
+	////////////////////////////////////////////////////
+	// 安全SDK
+	////////////////////////////////////////////////////
+	// SDK用户登入
+	TSS_SDK_ADD_USER_C = 21000;
+	
+	// 反外挂数据通信
+	TSS_SDK_RECV_DATA_C = 21002;
+	// 反外挂数据通信
+	TSS_SDK_RECV_DATA_S = 21003;
+	
+	// SDK用户登出
+	TSS_SDK_DEL_USER_C = 21004;
+	
+	////////////////////////////////////////////////////
+	// 许愿池
+	////////////////////////////////////////////////////
+	// 打开界面获取许愿池信息，只有在许愿池数据发生变化时才会向客户端下发数据  @see WishingInfoSync
+	WISHING_INFO_SYNC_C = 23000;
+	// 同步许愿池信息  @see WishingInfoSync
+	WISHING_INFO_SYNC_S = 23001;
+	// 玩家许愿  @see PlayerWishingReq
+	WISHING_C = 23002;
+	// 玩家许愿响应  @see PlayerWishingResp
+	WISHING_S = 23003;
+	
+	////////////////////////////////////////////////////
+	// 酒馆
+	////////////////////////////////////////////////////
+	// 打开界面获取酒馆信息，只有在酒馆数据发生变化时才会向客户端下发数据  @see TavernInfoSync
+	TAVERN_INFO_SYNC_C = 24000;
+	// 同步酒馆信息  @see TavernInfoSync
+	TAVERN_INFO_SYNC_S = 24001;
+	// 同步酒馆成就完成次数  @see FinishCountPB
+	TAVERN_COUNT_SYNC_S = 24002;
+	
+	
+	////////////////////////////////////////////////////
+	// 码头
+	////////////////////////////////////////////////////
+	// 拉取码头数据
+	WHARF_PULL_DATA_C = 24101;
+	// 同步码头信息  @see WharfInfoSync
+	WHARF_INFO_SYNC_S = 24102;
+	// 领取码头奖励请求
+	WHARF_TAKE_AWARD_C = 24103;
+	
+	CAST_TALENT_SKILL_C = 25001; // 使用天赋技能
+	CAST_TALENT_SKILL_S = 25002;
+	
+	OTHER_PLAYER_EFFECT_C = 25101; // 其他玩家作用号数据请求
+	OTHER_PLAYER_EFFECT_S = 25102;
+	
+	TRAVEL_SHOP_INFO_C = 27000; //请求黑市商人数据
+	TRAVEL_SHOP_INFO_SYNC_S = 27001; //推送旅行商人信息
+	TRAVEL_SHOP_BUY_C = 27002; //购买物品
+	TRAVEL_SHOP_BUY_S = 27004; //购买物品返回.
+	TRAVEL_SHOP_REFRESH_C = 27003; //刷新
+	TRAVEL_SHOP_REFRESH_S = 27005; //刷新返回
+	TRAVEL_GIFT_BUY_C	  = 27006; //购买黑市礼包
+	TRAVEL_GIFT_BUY_S	  = 27007; //够没黑市礼包返回	
+	TRAVEL_SHOP_OPEN_REQ  = 27008; //打开黑市商人改变HUD状态
+	
+	TIMELIMIT_STORE_SYNC_S = 27011; // 同步限时商店上架商品信息
+	TIMELIMIT_STORE_BUY_C  = 27012; // 限时商店请求购买
+	
+	RESOURCE_GIFT_SYN = 27101; //同步资源礼包
+	RESOURCE_GIFT_BUY_C = 27102; //购买
+	RESOURCE_GIFT_BUY_S = 27103; //购买返回
+	
+	VIPSHOP_RED_POINT_SYNC    = 27105;  // 同步贵族商城红点（没有PB，只是通知，没有红点不通知，有红点时才会通知）
+	VIPSHOP_RED_POINT_CLICK_C = 27106;  // 点击贵族商城红点（没有PB，只是告诉服务器点了红点）
+	
+	ANALYZE_DATA_UPLOADING_C = 28001;  // 客户端分析数据上传
+	
+	// 获取联盟战争界面信息
+	GET_GUILD_WAR_INFO_C = 29001;
+	GET_GUILD_WAR_INFO_S = 29002;
+	
+	// 获取联盟战争界面单条信息
+	GET_GUILD_WAR_CELL_INFO_C = 29003;
+	GET_GUILD_WAR_CELL_INFO_S = 29004;
+	
+	// 获取联盟战争singleInfo信息
+	GET_GUILD_WAR_SINGLE_INFO_C = 29005;
+	GET_GUILD_WAR_SINGLE_INFO_S = 29006;
+	
+	// 战地任务 获取界面信息
+	BATTLE_MISSION_PAGE_C = 29051;
+	BATTLE_MISSION_PAGE_S = 29052;
+	
+	// 战地任务 领取章节奖励
+	BATTLE_MISSION_CHATPTER_REWARD_C = 29053;
+	
+
+	//-------------------好友系统begin---------------
+	FRIEND_INFO_REQ = 30001; //好友的信息
+	FRIEND_INFO_RESP = 30002; //好友的信息
+	FRIEND_APPLY_INFO_REQ = 30003; //申请的信息
+	FRIEND_APPLY_INFO_RESP = 30004;  //申请的信息
+	RECOMMEND_FRIENDS_REQ = 30005; //推荐好友
+	RECOMMEND_FRIENDS_RESP = 30006; //推荐好友
+	SEARCH_STRANGER_REQ = 30007; //搜索
+	SEARCH_STRANGER_RESP = 30008; //搜索 
+	FRIEND_ADD_REQ = 30009; //添加好友
+	SYN_FRIEND_INFO = 30010; //同步好友信息 
+	SYN_FRIEND_APPLY_UPDATE = 30011; //好友申请列表更新
+	HANDLE_FRIEND_APPLY_REQ = 30012;//处理申请
+	DELETE_FRIEND_REQ = 30013;  //删除好友
+	BLACKLIST_OPERATION_REQ = 30014; //
+	SYN_BLACKLIST = 30015; //同步好友
+	
+	
+	FRIEND_PRESENT_GIFT_REQ  = 30016; //好友赠送礼物
+	FRIEND_PRESENT_GIFT_RESP = 30017;
+	SYN_DELETE_FRIEND = 30018; // 删除好友
+	
+	FRIEND_PRESENT_RECEIVE_TIMES_PUSH = 30019; //好友接收礼物次数
+	
+	BLACKLIST_INFO_REQ = 30020; //请求黑名单
+	BLACKLIST_INFO_RESP = 30021; //黑名单返回
+	SYN_DELETE_BLACKLIST = 30023; //同步删除的黑名单id
+	
+	LOVE_ADD_PUSH = 30025; //亲密度增加同步
+
+	// 请求平台好友信息
+	PLATFORM_FRIEND_INFO_REQ  = 30027;
+	PLATFORM_FRIEND_INFO_RESP  = 30028;
+	// 好友分享
+	FRIEND_SHARE_REQ  = 30029;
+	FRIEND_SHARE_RESP  = 30030;
+	// 发送qq群消息
+	SEND_QQ_GROUP_MSG_REQ  = 30031;
+	UPDATE_FRIEND_INFO_REQ = 30032; //更新好友信息
+
+	FETCH_UNREG_FRIENDS_C = 30033; // 拉取未注册好友信息
+
+	UNREG_FRIENDS_ASYNC_PUSH  = 30034;  // 未注册好友信息异步推送
+
+	CLIENT_INVITE_RESULT_C = 30035;  // 客户端通知服务器邀请好友
+
+    INVITE_TASK_AWARD_C       = 30037;  // 领取邀请任务奖励
+
+	INVITED_FRIEND_PUSH       = 30038;  // 服务器推送邀请成功的好友信息
+
+	INVITE_REWARD_TASK_PUSH   = 30039;  // 已领取过奖励的邀请任务ID推送
+
+	
+	HATE_RANK_INFO_REQ = 30040; 	//请求仇恨名单
+	SYNC_HATE_RANK_INFO = 30041; 	//同步仇恨名单
+	
+
+	GUARD_INFO_REQ			  	 = 30101;  //请求守护主界面信息
+	GUARD_INFO_RESP			  	 = 30102;  //请求守护主界面信息.
+	GUARD_INVITE_PLAYER_REQ      = 30103;  //邀请守护
+	GUARD_INVITE_LIST_REQ		 = 30104; //申请列表
+	GUARD_INVITE_LIST_RESP		 = 30105; //申请列表
+	GUARD_INVITE_HANDLE_REQ		 = 30106; //处理邀请请求.
+	GUARD_INVITE_DELETE_SYN		 = 30107; //同步删除的申请
+	GUARD_RELATION_CREATE_SYN    = 30108; //同步关系建立.
+	GUARD_RELATION_DELETE_REQ    = 30109; //请求删除守护关系
+	GUARD_RELATION_DELETE_RESP   = 30110; //回请求删除守护关系
+	GUARD_SETTING_EDIT_REQ		 = 30111; //守护设置修改
+	GUARD_SETTING_EDIT_RESP		 = 30112; //守护设置修改.
+	GUARD_GIFT_INFO_REQ			 = 30113; //请求守护礼包信息
+	GUARD_GIFT_INFO_RESP		 = 30114; //请求守护礼包信息
+	GUARD_GIFT_SEND_REQ			 = 30115; //赠送守护礼包
+	GUARD_GIFT_SEND_RESP	 	 = 30116; //赠送守护礼包
+	GUARD_CAN_INVITE_PLAYERS_REQ = 30117; //拉取可邀请的玩家列表
+	GUARD_CAN_INVITE_PLAYERS_RESP = 30118; //拉取可邀请的玩家列表
+	GUARD_RANK_REQ					= 30119; //请求排行榜
+	GUARD_RANK_RESP					= 30120; //请求排行榜
+	GUARD_DRESS_REQ					= 30121; //请求基地特效.
+	GUARD_DRESS_RESP				= 30122; //请求基地特效.
+	GUARD_DRESS_UPDATE_REQ			= 30123; //修改基地特效
+	GUARD_OUT_FIRE_REQ				= 30124; //灭火.
+	GUARD_OPEN_COVER_REQ			= 30126; //开罩
+	GUARD_HUD_SYN				    = 30128; //同步hud信息
+	GUARD_INVITE_PLAYER_RESP		= 30129; //同意守护申请之后返回该协议.
+	GUARD_INFO_UPDATE_SYN			= 30130; //同步守护信息中的变化部分.
+
+	GUARD_DRESS_ITEM_EXCHANGE_REQ  = 30131; //请求兑换.
+	GUARD_DRESS_ITEM_SEND_REQ	   = 30132; //赠送
+	GUARD_DRESS_ITEM_BLAG_REQ	   = 30133; //索要
+	GUARD_SEND_AND_BLAG_HISTORY_REQ	= 30134; //赠送索要记录。
+	GUARD_SEND_AND_BLAG_HISTORY_RESP = 30135; //赠送索要记录。
+	
+	//-------------------好友系统end---------------
+
+	//------------------------剧情战役begin-------------
+	PLOT_BATTLE_INFO_REQ = 31001; //请求剧情战役的信息
+	SYN_PLOT_BATTLE_INFO = 31002; //同步剧情战役的信息
+	UPLOAD_BATTLE_REQ = 31003; //上传战役信息.
+	UPLOAD_BATTLE_RESP = 31004; //返回上传的战役结果.
+	UPLOAD_ACTION_LOG_REQ = 31005; //上传行为日志
+	//------------------------剧情战役end------------
+	//------------------推送礼包 begin-----------
+	PUSH_GIFT_NOTIFY_DUE = 32001; //客户端通知服务器哪些礼包到期了
+	PUSH_GIFT_BUY_REQ = 32002;    //购买礼包
+	PUSH_GIFT_SYN_INFO = 32003;   //上线同步信息
+	PUSH_GIFT_UPDATE   = 32004;   //更新
+	//------------------推送礼包 end-------------
+	
+	SYNC_DRESS_INFO = 31100; //同步装扮信息
+	DO_DRESS_REQ	= 31101; //请求装扮
+	DO_UPLOAD_DRESS_REQ = 31103; //请求卸下装扮
+	DO_CHANGE_DRESS_SHOW_REQ = 31105; //请求更换装扮外观
+	DRESS_TITLE_TYPE_REQ = 31106; // 装扮称号显示类型，通用成功返回
+	DRESS_SUCCESS_RESP = 31107; // 装扮通用成功返回
+	DRESS_BUY_REQ = 31108; // 装扮购买
+	
+	DO_SIGNATURE_REQ = 31111;//请求更改签名
+	
+	WAR_COLLEGE_TEAM_COUNT_REQ 		= 32101; //请求战争学院的组队数.
+	WAR_COLLEGE_TEAM_COUNT_RESP 	= 32102; //返回战争学院的组队数.
+	WAR_COLLEGE_TEAM_REQ			= 32103; //请求组队的信息
+	WAR_COLLEGE_MINI_TEAM_RESP			= 32104; //返回组队的简略信息
+	WAR_COLLEGE_TEAM_DETAIL_RESP	= 32105; //组队的详细信息
+	WAR_COLLEGE_TEAM_CREATE_REQ		= 32106; //创建队伍 队伍创建创建成功之后返回队伍的详细信息
+	WAR_COLLEGE_TEAM_JOIN_REQ		= 32107; //加入队伍 主动加入的人收到队伍的详细信息, 其他人收到更新信息
+	WAR_COLLEGE_TEAM_FAST_JOIN_REQ	= 32108; //快速加入队伍  主动加入的人收到队伍的详细信息, 其他人收到更新信息
+	WAR_COLLEGE_TEAM_KICK_PLAYER_REQ	= 32109; //踢出队员
+	WAR_COLLEGE_TEAM_QUIT_REQ		= 32110; //主动退出
+	WAR_COLLEGE_TEAM_QUIT_RESP		= 32111; //收到退出协议.
+	WAR_COLLEGE_TEAM_DISSOLVE_REQ		= 32112; //删除队伍协议
+	WAR_COLLEGE_TEAM_DISSOLVE_RESP		= 32113; //删除队伍协议返回
+	WAR_COLLEGE_ENTER_INSTANCE_REQ		= 32114; //队长进入副本
+	WAR_COLLEGE_TEAM_INFO_UPDATE	= 32115; //更新队伍信息
+	WAR_COLLEGE_TEAM_PLAYER_UPDATE	 = 32116; //更新组内玩家信息
+	WAR_COLLEGE_TEAM_INVITE_REQ		= 32117; //公会内邀请
+	WAR_COLLEGE_TEAM_REFRESH_RESP	= 32118; //推送公会内组队内容刷新，只有打开队伍列表面板的玩家才需要收到消息后主动请求刷新
+	
+	
+
+	//-----------泰伯利亚之战33000-33299--------------
+	TIBERIUM_WAR_INFO_SYNC	= 33000; // 同步活动信息	
+	
+	
+	TIBERIUM_WAR_GET_PAGE_INFO_C	= 33100; // 获取界面信息
+	TIBERIUM_WAR_GET_PAGE_INFO_S	= 33101;
+	TIBERIUM_WAR_SIGN_UP_C			= 33102; // 报名参战
+	TIBERIUM_WAR_GET_PLAYER_LIST_C	= 33104; // 获取人员列表
+	TIBERIUM_WAR_GET_PLAYER_LIST_S	= 33105;
+	TIBERIUM_WAR_PLAYER_MANAGE_C	= 33106; // 管理参战人员
+	TIBERIUM_WAR_PLAYER_MANAGE_S	= 33107;
+	TIBERIUM_WAR_GET_HISTORY_C		= 33108; // 查看历史记录
+	TIBERIUM_WAR_GET_HISTORY_S		= 33109;
+	
+	
+	TIBERIUM_WAR_GET_TEAMINFO_C		= 33110; // 获取小组信息
+	TIBERIUM_WAR_GET_TEAMINFO_S		= 33111;
+	
+	TIBERIUM_WAR_GET_TEAM_MANAGE_INFO_C = 33112; // 小组管理界面信息
+	TIBERIUM_WAR_GET_TEAM_MANAGE_INFO_S = 33113;
+	
+	TIBERIUM_WAR_EDIT_MEMBER_TARGET_C	= 33114; // 修改小组成员策略
+	TIBERIUM_WAR_EDIT_MEMBER_TARGET_S	= 33115;
+	
+	TIBERIUM_WAR_EDIT_TEAM_TARGET_C	= 33116; // 修改小组目标
+	TIBERIUM_WAR_EDIT_TEAM_TARGET_S = 33117;
+	
+	TIBERIUM_WAR_EDIT_TEAM_NAME_C	= 33118; // 修改小组名称
+	TIBERIUM_WAR_EDIT_TEAM_NAME_S	= 33119;
+	
+	TIBERIUM_WAR_TEAM_MEMBER_MANAGE_C = 33120; // 小组成员管理
+	TIBERIUM_WAR_TEAM_MEMBER_MANAGE_S = 33121;
+	
+	TIBERIUM_WAR_TEAM_MEMBER_RESET_C = 33122; // 小组成员重置
+	TIBERIUM_WAR_TEAM_MEMBER_RESET_S = 33123;
+	
+	TIBERIUM_GET_TEAM_SUMMARY_REQ_C		= 33124; // 获取个人小队任务信息
+	TIBERIUM_GET_TEAM_SUMMARY_RESP_S	= 33125;
+	
+	TIBERIUM_WAR_ENTER_INSTANCE_REQ = 33201; //进入副本.
+	TIBERIUM_WAR_EXIT_INSTANCE_REQ = 33202; //退出副本
+	TIBERIUM_WAR_INNER_BACK_SERVER_REQ = 33203; //退出跨服的时候收到该消息.
+	TIBERIUM_WAR_MOVE_BACK_REQ	= 33204; //gm签回玩家.
+	TIBERIUM_WAR_CROSS_BEGIN			= 33205; //跨服开始
+	TIBERIUM_WAR_CROSS_FINISH			= 33206; //跨服完成
+	TIBERIUM_WAR_CROSS_BACK_BEGIN		= 33207; //跨服返回开始
+	TIBERIUM_WAR_CROSS_BACK_FINISH		= 33208; //跨服返回完成
+	TIBERIUM_WAR_SIMULATE_CROSS_BEGIN			= 33209; //跨服开始
+	TIBERIUM_WAR_SIMULATE_CROSS_FINISH			= 33210; //跨服完成
+	TIBERIUM_WAR_SIMULATE_CROSS_BACK_BEGIN		= 33211; //跨服返回开始
+	TIBERIUM_WAR_SIMULATE_CROSS_BACK_FINISH		= 33212; //跨服返回完成 模拟
+	
+	TIBERIUM_OB_GET_ROOM_LIST_C		= 33220;	// 泰伯利亚OB拉取房间列表
+	TIBERIUM_OB_GET_ROOM_LIST_S		= 33221;
+	
+	//-----------泰伯利亚之战33000-33299--------------
+	
+	//-----------联盟锦标赛33300-33499--------------
+	CHAMPIONSHIP_INFO_SYNC			= 33300; // 同步活动信息
+	
+	CHAMPIONSHIP_GET_PAGE_INFO_C	= 33350; // 获取主界面信息
+	CHAMPIONSHIP_GET_PAGE_INFO_S	= 33351;
+	
+	CHAMPIONSHIP_SIGN_UP_C			= 33352; // 报名参战
+	CHAMPIONSHIP_FLUSH_MARCH_C		= 33354; // 刷新阵容
+	
+	CHAMPIONSHIP_GET_RANKINFO_C		= 33356; // 获取排名信息
+	CHAMPIONSHIP_GET_RANKINFO_S		= 33357;
+	
+	CHAMPIONSHIP_GET_GUILDBATTLE_C	= 33358; // 获取联盟交战信息
+	CHAMPIONSHIP_GET_GUILDBATTLE_S	= 33359;
+	
+	CHAMPIONSHIP_GET_MARCH_INFO_C	= 33362; // 查看盟友出战部队
+	CHAMPIONSHIP_GET_MARCH_INFO_S	= 33363;
+	
+	CHAMPIONSHIP_GET_GROUP_RANK_C	= 33364; // 查看小组排名
+	CHAMPIONSHIP_GET_GROUP_RANK_S	= 33365;
+	
+	CHAMPIONSHIP_GET_REWARD_C	= 33366; // 领取奖励
+	CHAMPIONSHIP_GET_REWARD_S	= 33367;
+	
+	CHAMPIONSHIP_GET_HISTORY_BATTLE_C	= 33368; // 查看小组历史战斗阶段数据
+	CHAMPIONSHIP_GET_HISTORY_BATTLE_S	= 33369;
+	
+	CHAMPIONSHIP_GET_GRANK_PAGEINFO_C	= 33370; // 查看联盟段位榜界面
+	CHAMPIONSHIP_GET_GRANK_PAGEINFO_S	= 33371;
+	
+	CHAMPIONSHIP_GET_RANK_INFO_C	= 33372; // 查看排行信息
+	CHAMPIONSHIP_GET_RANK_INFO_S	= 33373;
+	
+	//-----------泰伯利亚联赛33500-33999--------------
+	TIBERIUM_LEAGUA_GET_POWERRANK_C		= 33500; // 获取泰伯赛季联盟排名
+	TIBERIUM_LEAGUA_GET_POWERRANK_S		= 33501;
+	
+	TIBERIUM_LEAGUA_WAR_INFO_SYNC	= 33502; // 同步活动信息	
+	
+	
+	TIBERIUM_LEAGUA_WAR_GET_PAGE_INFO_C	= 33510; // 获取界面信息
+	TIBERIUM_LEAGUA_WAR_GET_PAGE_INFO_S	= 33511;
+	
+	TIBERIUM_LEAGUA_WAR_GET_ZONE_GUILD_INFO_C	= 33512; // 获取赛区参赛联盟列表
+	TIBERIUM_LEAGUA_WAR_GET_ZONE_GUILD_INFO_S	= 33513;
+	
+	TIBERIUM_LEAGUA_WAR_GET_MATCH_INFO_C	= 33514; // 获取赛程安排
+	TIBERIUM_LEAGUA_WAR_GET_MATCH_INFO_S	= 33515;
+	
+	TIBERIUM_LEAGUA_WAR_GET_FINAL_MATCH_INFO_C	= 33516; // 获取决赛信息
+	TIBERIUM_LEAGUA_WAR_GET_FINAL_MATCH_INFO_S	= 33517;
+	
+	TIBERIUM_LEAGUA_WAR_GET_SCORE_INFO_REQ	= 33518; // 获取联赛赛季积分奖励信息
+	TIBERIUM_LEAGUA_WAR_GET_SCORE_INFO_RESP	= 33519;
+	
+	TIBERIUM_LEAGUA_WAR_GET_SELF_MATCH_LIST_REQ 	= 35520; // 获取本盟联赛赛程
+	TIBERIUM_LEAGUA_WAR_GET_SELF_MATCH_LIST_RESP 	= 35521;
+
+	TIBERIUM_LEAGUA_WAR_SIGN_UP_REQ	= 35522; // 报名老服比赛
+	
+
+	//-----------泰伯利亚联赛33500-33999--------------
+	//-----------星球大战34000-34099--------------
+	STAR_WAR_INFO_SYNC	= 34000; // 同步活动信息	
+	
+	STAR_WAR_GET_PAGE_INFO_C	= 34010; // 获取界面信息
+	STAR_WAR_GET_PAGE_INFO_S	= 34011;
+	
+	STAR_WAR_GET_POWERRANK_C		= 34012; // 获取赛区排行信息
+	STAR_WAR_GET_POWERRANK_S		= 34013;
+	STAR_WAR_PAGE_INFO_SYNC			= 34014; // 同步活动时间信息	
+	//-----------星球大战34000-34099--------------
+	
+	//-----------赛博之战34100-34199--------------
+	CYBORG_WAR_INFO_SYNC 			= 34100; // 同步界面信息
+	CYBORG_WAR_TEAM_INFO_SYNC		= 34101; // 同步战队信息
+	
+	CYBORG_WAR_GET_PAGE_INFO_C		= 34110; // 获取界面信息
+	CYBORG_WAR_GET_PAGE_INFO_S		= 34111;
+	
+	CYBORG_WAR_SIGN_UP_C			= 34112; // 报名参战
+	
+	CYBORG_WAR_GET_HISTORY_C		= 34114; // 查看历史记录
+	CYBORG_WAR_GET_HISTORY_S		= 34115;
+	
+	CYBORG_WAR_CREATE_TEAM_C		= 34116; // 创建队伍
+	
+	CYBORG_WAR_DISMISS_TEAM_C		= 34118; // 解散队伍
+	
+	CYBORG_WAR_CHANGE_TEAM_NAME_C	= 34120; // 队伍改名
+	
+	
+	CYBORG_WAR_GET_PLAYER_LIST_C	= 34122; // 获取人员列表
+	CYBORG_WAR_GET_PLAYER_LIST_S	= 34123;
+	
+	CYBORG_WAR_PLAYER_MANAGE_C		= 34124; // 管理参战人员
+	CYBORG_WAR_PLAYER_MANAGE_S		= 34125;
+	
+	CYBORG_WAR_SHOP_INFO_C       	= 34126; // 赛博商店购买信息请求
+	CYBORG_WAR_SHOP_INFO_PUSH     	= 34127; // 赛博商店购买信息推送
+	CYBORG_WAR_BUY_ITEM_C			= 34128; // 赛博积分兑换
+
+	
+	CYBORG_WAR_GET_POWERRANK_C		= 34130; // 获取战力排行信息
+	CYBORG_WAR_GET_POWERRANK_S		= 34131;
+	
+	CYBORG_WAR_GET_TEAM_LIST_C		= 34132; // 获取本盟战队列表
+	CYBORG_WAR_GET_TEAM_LIST_S		= 34133;
+	
+	CYBORG_SEASON_WAR_GET_STAR_RANK_C	= 34134; // 获取战队星级段位排名
+	CYBORG_SEASON_WAR_GET_STAR_RANK_S	= 34135;
+	CYBORG_SEASON_WAR_GET_GUILD_SCORE_C	= 34136; // 获取赛博赛季联盟积分信息 
+	CYBORG_SEASON_WAR_GET_GUILD_SCORE_S = 34137;
+
+	CYBORG_WAR_ENTER_INSTANCE_REQ = 34201; //进入副本.
+	CYBORG_WAR_EXIT_INSTANCE_REQ = 34202; //退出副本
+	CYBORG_WAR_INNER_BACK_SERVER_REQ = 34203; //退出跨服的时候收到该消息.
+	CYBORG_WAR_MOVE_BACK_REQ	= 34204; //gm签回玩家.
+	CYBORG_WAR_CROSS_BEGIN			= 34205; //跨服开始
+	CYBORG_WAR_CROSS_FINISH			= 34206; //跨服完成
+	CYBORG_WAR_CROSS_BACK_BEGIN		= 34207; //跨服返回开始
+	CYBORG_WAR_CROSS_BACK_FINISH		= 34208; //跨服返回完成
+	CYBORG_WAR_SIMULATE_CROSS_BEGIN			= 34209; //跨服开始
+	CYBORG_WAR_SIMULATE_CROSS_FINISH			= 34210; //跨服完成
+	CYBORG_WAR_SIMULATE_CROSS_BACK_BEGIN		= 34211; //跨服返回开始
+	CYBORG_WAR_SIMULATE_CROSS_BACK_FINISH		= 34212; //跨服返回完成 模拟
+	
+	//-----------赛博之战34100-34199--------------
+	
+	
+	// 领取城内冒泡奖励
+	TAKE_BUBBLE_REWARD_C    = 50002;
+
+	////////////////////////////////////////////////////
+	//activity活动模块
+	////////////////////////////////////////////////////
+	//每日登陆活动
+	//每日登陆活动信息同步
+	DAILYLOGIN_INFO_SYNC_S = 50100;
+	//领取每日登陆奖励
+	DAILYLOGIN_GET_REWARD_C	= 50101;
+	
+	//----建筑等级活动--------
+	//推送建筑等级活动信息同步 @see Activity.BuildLevelInfoSync
+	PUSH_BUILD_LEVEL_INFO_SYNC_S =	50300;
+	//推送建筑等级活动单个数据项变更 @see Activity.BuildLevelInfoSync
+	PUSH_BUILD_LEVEL_CHANGE_S = 50301;
+	//领取建筑等级活动奖励请求 @see Activity.TakeBuildActivityRewardReq
+	TAKE_BUILD_LEVEL_REWARD_C = 50302;
+	
+	
+	//活动周历信息
+	TAKE_ACTIVITY_WEEK_CALENDER_INFO_C = 50480;
+	//推送活动周历数据
+	PUSH_ACTIVITY_WEEK_CALENDER_INFO_SYNC_S = 50481;
+	// 推送基地飞升建筑升级完毕信息
+	PUSH_BASE_BUILD_FINISH	= 50482;
+	
+	//----签到活动活动--------
+	//推送登录签到活动信息同步 @see Activity.LoginSignInfoSync
+	PUSH_LOGIN_SIGN_INFO_SYNC_S = 50500;
+	//领取登录签到奖励  @SEE Activity.TakeLoginDayActivityRewardReq
+	TAKE_LOGIN_SIGN_REWARD_C = 50501;
+	
+	//----体力领取活动--------
+	//推送体力领取活动信息同步 @see Activity.VitReceiveInfoSync
+	PUSH_VIT_RECEIVE_INFO_SYNC_S =	50600;
+	//领取体力奖励
+	TAKE_VIT_RECEIVE_REWARD_C = 50601;
+	//同步体力是否可以领取 @see Activity.VitReceiveReceivableSync
+	PUSH_VIT_RECEIVABLE_SYNC_S = 50602;
+	
+	//----成就--------
+	//推送成就信息同步 @see Activity.AchieveItemsInfoSync
+	PUSH_ACHIEVE_INFO_SYNC_S =	50610;
+	//推送成就单个数据项变更 @see Activity.AchieveItemsInfoSync
+	PUSH_ACHIEVE_CHANGE_S = 50611;
+	//推送添加成就项列表 @see Activity.AchieveItemsInfoSync
+	PUSH_ADD_ACHIEVE_ITEM_S =	50612;
+	//领取成就奖励请求 @see Activity.TakeAchieveRewardReq
+	TAKE_ACHIEVE_REWARD_C = 50613;
+	
+	//推送成就删除列表 @see Activity.AchieveItemsInfoSync
+	PUSH_DELETE_ACHIEVE_ITEM_S =	50614;
+	
+	//----八日盛典活动--------
+	//推送八日盛典活动信息 @see Activity.FestivalInfoSync
+	PUSH_FESTIVAL_INFO_SYNC_S =	50620;
+	
+	//----八日盛典2活动--------
+	//推送八日盛典活动信息 @see Activity.FestivalInfoSync
+	PUSH_FESTIVAL_TWO_INFO_SYNC_S =	50622;
+	
+	//----等级基金活动--------
+	//推送等级基金活动信息 @see Activity.GrowfundInfoSync
+	PUSH_GROWFUND_INFO_SYNC_S =	50630;
+	//购买等级基金
+	GROW_FUND_BUY = 50631;
+	// 购买成长基金
+	GROW_FUND_NEW_BUY = 50632;
+	// 成长基金一键领取奖励
+	GROW_FUND_NEW_ONEKEY_REWARD = 50633;
+	// 同步成长基金活动数据
+	GROW_FUND_NEW_INFO_SYNC_S   = 50634;
+	// 购买直购基金（由直购改成金条购买）
+	POWER_FUND_BUY              = 50635;
+	
+	
+	//----战力基金活动--------
+	//推送战力基金活动信息 @see Activity.PowerFundInfoSync
+	PUSH_POWERFUND_INFO_SYNC_S =	50636;
+	// 基金团购积分数同步
+	GROUP_PURCHASE_SCORE_SYNC_S = 50637;
+
+	
+	//----跨服团购活动--------
+	REFRESH_GROUP_PURCHASE_ACHIEVE_INFO_C = 50640;
+	
+	// 充值豪礼活动数据同步
+	RECHARGE_GIFT_DATA_SYNC_S  = 50641;
+	//团购基金每日礼包领取请求
+	GROUP_PURCHASE_DAILY_REWARD_REQ = 50642;
+
+	//----最强指挥官活动--------
+	//获取当前阶段所有信息 @see Activity.LeaderAllInfo
+	PULL_LEADER_STAGE_INFO_C =	50650;
+	PULL_LEADER_STAGE_INFO_S =	50651;
+	//获取历史最强指挥官每期信息 @see Activity.HistoryRankList
+	PULL_LEADER_HISTORY_RANK_LIST_C = 50652;
+	PULL_LEADER_HISTORY_RANK_LIST_S = 50653;
+	//推送积分信息变化 @see Activity.MyScorePB
+	PUSH_LEADER_TARGET_SCORE_CHANGE = 50654;
+	
+	//----尤里复仇活动--------
+	//获取尤里复仇页面信息 @see YuriRevenge.YuriRevengePageInfoResp
+	GET_YURI_REVENGE_PAGE_INFO_C =	50660;
+	GET_YURI_REVENGE_PAGE_INFO_S =	50661;
+	//获取尤里复仇排行信息 @see YuriRevenge.GetYuriRankInfoResp
+	GET_YURI_REVENGE_RANK_INFO_C = 50662;
+	GET_YURI_REVENGE_RANK_INFO_S = 50663;
+	//开启尤里复仇活动 
+	OPEN_YURI_REVENGE_ACTIVITY = 50664;
+	//推送尤里复仇界面信息
+	PUSH_YURI_REVENGE_PAGE_INFO = 50665;
+	
+	//---------月卡周卡活动------------
+	MONTHCARD_INFO_SYNC_S           = 50800; // 月卡周卡数据同步
+	BUY_MONTHCARD_REQ_C             = 50801; // 购买月卡请求
+	RECEIVE_MONTHCARD_AWARD_C       = 50802; // 领取月卡每日礼包请求
+	MONTHCARD_RENEW_REQ_C           = 50803; // 月卡续费请求
+	PUSH_MONTHCARD_CHANGE_S         = 50804; // 月卡数据项变更同步
+	CHECK_MONTHCARD_C               = 50805; // 月卡状态检测
+	MONTHCARD_RENEW_NOTIFY_S        = 50806; // 月卡续费通知
+	MONTHCARD_PRICECUT_SYNC_S       = 50807; // 特权礼包半价相关信息同步
+	
+	//---------十连抽活动------------
+	LOTTERY_DRAW_PAGE_INFO_SYNC_S	= 50829; // 同步十连抽活动界面信息
+	GET_LOTTERY_DRAW_PAGE_INFO_C	= 50830; // 请求界面信息
+	GET_LOTTERY_DRAW_PAGE_INFO_S	= 50831; 
+	DO_LOTTERY_DRAW_C				= 50832; // 十连抽活动抽奖
+	DO_LOTTERY_DRAW_S				= 50833;
+	
+	
+	//---------十连抽活动------------
+	
+	//---------超级金矿活动----------
+	SUPER_GOLD_REQ                  = 50840;
+	SUPER_GOLD_INFO                 = 50841; //超级金矿信息
+	//---------超级金矿活动----------
+	
+	//---------铁血军团活动------------
+	GET_BLOOD_RANK_LIST_REQ			= 50850; // 请求铁血军团排行列表
+	GET_BLOOD_RANK_LIST_RESP		= 50851;
+	
+	BLOOD_SCORE_INFO_SYNC			= 50852; // 同步活动积分信息
+	//---------铁血军团活动------------
+	
+	//---------盟军悬赏令--------------
+	REQ_REWARD_ORDER_INFO           = 50860; //打开悬赏令页面
+    RECEIVE_REWARD_ORDER            = 50861; //领取悬赏令任务
+	REFRESH_REWARD_ORDER            = 50862; //刷新悬赏令
+	GET_REWARD_ORDER_REWARD         = 50863; //获取悬赏令奖励
+	GIVE_UP_REWARD_ORDER            = 50864; //放弃悬赏令
+	SYNC_REWARD_ORDER_RESULT        = 50865; //同步悬赏令结果
+	//----------盟军悬赏令--------------
+	
+	//----------潘朵拉宝盒--------------
+	PANDORA_LOTTERY_REQ                 = 50880; //潘朵拉宝盒抽奖
+	PANDORA_EXCHANGE_REQ                = 50881; //潘朵拉宝盒兑换奖品	
+	PANDORA_REFRESH_COUNT_RESP           = 50882; //潘朵拉宝盒免费次数已经刷新
+	PANDORA_LOTTERY_INFO_REQ		= 50883; //请求抽奖的信息
+	PANDORA_LOTTERY_INFO_RESP		= 50884; //返回抽奖的信息
+	PANDORA_STORE_INFO_REQ              = 50885; //请求潘朵拉商城信息
+	PANDORA_STORE_INFO_RESP			= 50886; //商城的信息.
+	PANDORA_STORE_INFO_UPDATE		= 50887; //商城信息更新.
+	//----------潘朵拉宝盒--------------
+	
+	//----------幸运星------------------
+	LUCKY_STAR_LOTTERY              = 50901; //幸运星抽奖
+	LUCKY_STAR_INFO_S                 = 50902; //幸运星界面
+	LUCKY_STAR_RECIEVE_FREE_BAG     = 50903; //领取幸运星免费宝箱
+	//----------幸运星------------------
+	
+	//----------超值好礼-----------------
+	GREAT_GIFT_INFO                 = 50910; //界面信息
+	GREAT_GIFT_RECIEVE_CHEST        = 50912; //领取宝箱
+	//----------超值好礼-----------------
+	
+	//-----------穹顶兑换----------------
+	DOME_EXCHANGE_TIPS_C              = 50920; //穹顶兑换提醒
+	DOME_EXCHANGE_TIPS_INFO_S         = 50921; //穹顶兑换服务器同步提醒
+	DOME_EXCHANGE_EXCHANGE            = 50922; //穹顶兑换功能兑换
+	//-----------穹顶兑换----------------
+	
+	
+	//-----------机甲觉醒----------------
+	MACHINE_AWAKE_GET_PAGE_INFO_C	= 50930; //获取活动界面信息
+	MACHINE_AWAKE_GET_PAGE_INFO_S	= 50931;
+	MACHINE_AWAKE_GET_RANK_INFO_C	= 50932; //获取伤害排行信息
+	MACHINE_AWAKE_GET_RANK_INFO_S	= 50933;
+	//-----------机甲觉醒----------------
+	
+	//-----------机甲觉醒2(年兽)----------------
+	MACHINE_AWAKE_TWO_GET_PAGE_INFO_C	= 50934; //获取活动界面信息
+	MACHINE_AWAKE_TWO_GET_PAGE_INFO_S	= 50935;
+	MACHINE_AWAKE_TWO_GET_RANK_INFO_C	= 50936; //获取伤害排行信息
+	MACHINE_AWAKE_TWO_GET_RANK_INFO_S	= 50937;
+	MACHINE_AWAKE_TWO_TYPE_SYNC			= 50938; //机甲类型同步
+	//-----------机甲觉醒2(年兽)----------------
+	
+	//-----------盟军补给站--------------
+	SUPPLY_STATION_BUY_C            = 50940; //购买补给箱
+	SUPPLY_STATION_INFO_S           = 50941; //同步信息
+	//-----------盟军补给站--------------
+	
+	//-----------王者联盟----------------
+	STRONGEST_GUILD_REWARD_REQ_C    = 50950; //领取阶段奖励
+	STRONGEST_GUILD_HISTORY_REQ_C   = 50951; //历史榜单请求
+	STRONGEST_GUILD_HISTORY_RESP_S  = 50952; //历史榜单返回
+	STRONGEST_GUILD_INFO_C          = 50953; //请求界面信息
+	STRONGEST_GUILD_INFO_S          = 50954; //界面信息返回
+	STRONGEST_GUILD_PERSONAL_RANK_C = 50955; //请求个人榜单
+	STRONGEST_GUILD_PERSONAL_RANK_S = 50956; //请求个人榜单返回
+	STRONGEST_GUILD_GUILD_RANK_C    = 50957; //请求联盟榜单
+	STRONGEST_GUILD_GUILD_RANK_S    = 50958; //请求联盟榜单返回
+	STRONGEST_GUILD_SCORE_CHANGE_S  = 50959; //推送玩家积分变化
+	//-----------王者联盟----------------
+
+	//-----------英雄返场 最强步兵--------------
+	HERO_BACK_BUY_C            = 50960; //最强步兵 购买补给箱
+	HERO_BACK_INFO_S           = 50961; //最强步兵 同步信息
+	//-----------英雄返场 最强步兵--------------
+
+	//-----------英雄返场 英雄回归--------------
+	HERO_BACK_EXCHANGE_TIPS_C              = 50970; //英雄回归 兑换提醒
+	HERO_BACK_EXCHANGE_TIPS_INFO_S         = 50971; //英雄回归 兑换服务器同步提醒
+	HERO_BACK_EXCHANGE                     = 50972; //英雄回归 兑换功能兑换
+	//-----------英雄返场 英雄回归 --------------
+	
+	//-----------能量收集------------------------
+	POWER_COLLECT_INFO_C                   = 50980; //能量收集客户端请求
+	POWER_COLLECT_INFO_S                   = 50981; //能量收集服务器返回
+	//-----------能量收集------------------------
+	
+	//------------红包活动-----------------------
+	RED_ENVELOPE_INFO_C                    = 50989; //红包活动信息
+	RED_ENVELOPE_INFO_S                    = 50990;
+	
+	RED_ENVELOPE_RECIEVE                   = 50991; //领取红包
+	RED_ENVELOPE_HISTORY_INFO_C            = 50992; //查看红包历史记录
+	RED_ENVELOPE_HISTORY_INFO_S            = 50993; //历史记录返回
+	RED_ENVELOPE_RECIEVE_DETAIL            = 50994; //领取详情
+	RED_ENVELOPE_RECIEVE_DETAIL_S          = 50995; //领取详情返回
+	RED_ENVELOPE_PLAYER_RECIEVE            = 50998; //领取玩家红包
+	RED_ENVELOPE_PLAYER_RECIEVE_INFO       = 50999; //同步玩家红包领取详情
+	RED_ENVELOPE_PLAYER_WHO_RECIEVE        = 51005; //小字（谁领取了你的红包，手气王等）
+	RED_ENVELOPE_PLAYER_STATE_S            = 51006; //同步红包状态(和客户端约定，只同步红包被抢完的状态，客户端自己记录已经领取的状态)
+	
+	RED_ENVELOPE_RECIEVE_S                 = 51007; //领取系统红包返回
+	RED_ENVELOPE_PLAYER_SEND               = 51008; //个人发红包
+	//------------红包活动-----------------------
+	
+	//------------手Q欢购豪礼--------------------
+	SUPPLY_STATION_COPY_BUY_C            = 51020; //购买补给箱
+	SUPPLY_STATION_COPY_INFO_S           = 51021; //同步信息
+	//------------手Q欢购豪礼--------------------
+	
+	//-------------军魂承接活动----------------				
+	GET_INHERIT_PAGE_INFO_C				= 51030;// 请求界面信息
+	GET_INHERIT_PAGE_INFO_S				= 51031;
+	INHERIT_ACTIVE_C					= 51032;// 激活承接
+	//-------------军魂承接活动----------------
+	
+	//-------------红警战令活动----------------	
+	ORDER_PAGE_INFO_SYNC				= 51040; // 同步战令活动信息
+	ORDER_BASE_INFO_SYNC				= 51041; // 同步战令活动基础信息
+	ORDER_ITEM_INFO_SYNC				= 51042; // 同步战令活动全量任务信息
+	ORDER_ITEM_INFO_CHANGE_SYNC			= 51043; // 同步战令活动任务变更数据
+	
+	ORDER_GET_PAGE_INFO_C				= 51050; //获取活动界面信息
+	ORDER_GET_PAGE_INFO_S				= 51051;
+	ORDER_BUY_EXP_C						= 51052; // 购买战令经验
+	ORDER_GET_HISTORY_INFO_C			= 51054; // 获取历史战令任务信息
+	ORDER_GET_HISTORY_INFO_S			= 51055;
+	
+	//-------------红警战令活动----------------	
+	
+	//-------------武者拼图活动----------------	
+	FIGHT_PUZZLE_PAGE_INFO_SYNC			= 51060;
+	FIGHT_PUZZLE_GET_PAGE_INFO_C		= 51062;
+	FIGHT_PUZZLE_GET_PAGE_INFO_S		= 51063;
+	//-------------武者拼图活动----------------	
+	
+	//-------------回流拼图活动----------------	
+	RETURN_PUZZLE_PAGE_INFO_SYNC			= 51066;
+	RETURN_PUZZLE_GET_PAGE_INFO_C		= 51067;
+	RETURN_PUZZLE_GET_PAGE_INFO_S		= 51068;
+	//-------------武者拼图活动----------------	
+
+	//-------------红警战令(新)活动----------------	
+	ORDER_TWO_PAGE_INFO_SYNC				= 51070; // 同步战令活动信息
+	ORDER_TWO_BASE_INFO_SYNC				= 51071; // 同步战令活动基础信息
+	ORDER_TWO_ITEM_INFO_SYNC				= 51072; // 同步战令活动全量任务信息
+	ORDER_TWO_ITEM_INFO_CHANGE_SYNC			= 51073; // 同步战令活动任务变更数据
+	
+	ORDER_TWO_GET_PAGE_INFO_C				= 51074; //获取活动界面信息
+	ORDER_TWO_GET_PAGE_INFO_S				= 51075;
+	ORDER_TWO_BUY_LEVEL_C					= 51076; // 购买战令经验
+	ORDER_TWO_GET_HISTORY_INFO_C			= 51077; // 获取历史战令任务信息
+	ORDER_TWO_GET_HISTORY_INFO_S			= 51078;
+	ORDER_TWO_SHOP_BUY_C					= 51079; // 战令商店购买
+	//-------------红警战令(新)活动----------------	
+	
+	//-----------穹顶兑换复制----------------
+	DOME_EXCHANGE_TWO_TIPS_C              = 51100; //穹顶兑换提醒
+	DOME_EXCHANGE_TWO_TIPS_INFO_S         = 51101; //穹顶兑换服务器同步提醒
+	DOME_EXCHANGE_TWO_EXCHANGE            = 51102; //穹顶兑换功能兑换
+	//-----------穹顶兑换复制----------------
+	
+	//-----------盟军补给站 复制--------------
+	SUPPLY_STATION_TWO_BUY_C            = 51201; //购买补给箱
+	SUPPLY_STATION_TWO_INFO_S           = 51202; //同步信息
+	//-----------盟军补给站 复制 --------------
+	
+	//-----------老玩家回归活动----------------
+	PLAYER_COME_BACK_RECIEVE_GREAT_REWARD_C              = 51210; //领取回归大礼
+	PLAYER_COME_BACK_EXCHANGE_C                          = 51211; //兑换
+	PLAYER_COME_BACK_BUY_C                               = 51212; //低折购买
+	PLAYER_COME_BACK_REWARD_INFO_S                       = 51213; //回归大礼领取信息
+	PLAYER_COME_BACK_EXCHANGE_INFO_S                     = 51214; //兑换界面信息
+	PLAYER_COME_BACK_BUY_INFO_S                          = 51215; //购买界面信息
+	//-----------老玩家回归活动----------------
+	
+	//-----------情报分享 在线答题--------------
+	QUESTION_SHARE_ANSWER_REQ_C = 51220; // 回答问题
+	QUESTION_SHARE_INFO_RESP_S = 51221; // 同步答题信息
+	QUESTION_SHARE_DAILY_REWARD_C = 51222; // 领取每日奖励
+	//-----------情报分享 在线答题--------------	
+	
+	//-----------通用兑换活动------------------
+	COMMON_EXCHANGE_TIPS_C                  = 51230; //通用兑换提醒
+	COMMON_EXCHANGE_TIPS_INFO_S             = 51231; //通用兑换服务器同步提醒
+	COMMON_EXCHANGE_EXCHANGE                = 51232; //通用兑换功能兑换
+    COMMON_EXCHANGE_BUY_C                   = 51233; //通用购买补给箱
+	COMMON_EXCHANGE_INFO_S                  = 51234; //通用购买同步信息
+	//-----------通用兑换活动------------------
+	
+	//-----------通用兑换活动2------------------
+	COMMON_EXCHANGE_TWO_TIPS_C                  = 51235; //通用兑换提醒
+	COMMON_EXCHANGE_TWO_TIPS_INFO_S             = 51236; //通用兑换服务器同步提醒
+	COMMON_EXCHANGE_TWO_EXCHANGE                = 51237; //通用兑换功能兑换
+    COMMON_EXCHANGE_TWO_BUY_C                   = 51238; //通用购买补给箱
+	COMMON_EXCHANGE_TWO_INFO_S                  = 51239; //通用购买同步信息
+	//-----------通用兑换活动2------------------
+
+
+	//--------------月签活动--------------------
+	DAILY_SIGN_INFO_SYN_S 					= 51240; //推送玩家月签信息
+	DAILY_SIGN_SIGN_REQ_C 					= 51241; //请求签到
+	DAILY_SIGN_RESIGN_REQ_C 				= 51242; //请求补签
+	//---------------月签活动-------------------	
+	
+	//--------------源计划--------------------
+	PLAN_INFO_SYN_S 					= 51250; //推送玩家源计划信息
+	PLAN_LOTTERY_REQ_C 					= 51251; //请求抽奖
+	PLAN_LOTTERY_RESP_S 				= 51252; //抽奖返回
+	PLAN_RANK_REQ_C 					= 51253; //源计划排行榜请求
+	PLAN_RANK_RESP_S 					= 51254; //源计划排行榜返回
+	PLAN_INFO_REQ_C 					= 51255; //源计划玩家信息请求
+	//---------------源计划------------------	
+
+	//----------------推广员----------------------
+	HP_SPREAD_INFO_REQ_C 				= 51260; //请求推广员活动信息
+	HP_SPREAD_INFO_SYNC_S 				= 51261; //推送推广员活动信息
+	HP_SPREAD_FRIEND_INFO_REQ_C 		= 51262; //查看被推荐好友
+	HP_SPREAD_FRIEND_INFO_RESP_S 		= 51263; //查看被推荐好友返回
+	HP_SPREAD_BIND_CODE_REQ_C 		    = 51264; //请求绑定推荐码
+	HP_SPREAD_STORE_BUY_REQ_C 		    = 51265; //请求商店兑换
+	HP_SPREAD_DAY_REWARD_REQ_C 		    = 51266; //请求领取每日奖励
+	HP_SPREAD_REWARD_ACHIEVE_C			= 51267; //请求领取成就奖励
+
+	//----------------推广员----------------------
+
+	//----------------幸运折扣----------------------
+	HP_LUCKY_DISCOUNT_INFO_SYNC_S				= 51270; // 幸运折扣信息同步 
+	HP_LUCKY_DISCOUNT_DRAW_REQ_C				= 51271; // 幸运折扣奖池随机 
+	HP_LUCKY_DISCOUNT_BUY_REQ_C					= 51272; // 幸运折扣购买 
+	HP_LUCKY_DISCOUNT_INFO_SYNC_C				= 51273; // 幸运折扣信息请求
+	//----------------幸运折扣----------------------
+
+	//-----------------黑科技---------------------------
+	HP_BLACK_TECH_INFO_SYNC_S 					= 51280; //活动信息同步
+	HP_BLACK_TECH_REFRESH_C						= 51281; //刷新黑科技池
+	HP_BLACK_TECH_ACTIVE_BUFF_C					= 51282; //激活黑科技buff
+	HP_BLACK_TECH_BUY_C							= 51283; //购买加持礼包
+	//-----------------黑科技---------------------------
+	//-----------------全副武装---------------------------
+	HP_FULLY_ARMED_INFO_SYNC_S					= 51290; //信息同步	
+	HP_FULLY_ARMED_BUY_REQ_C					= 51291; //探测仪购买
+	HP_FULLY_ARMED_SEARCH_REQ_C					= 51292; //探测
+	//-----------------全副武装---------------------------
+
+	//------------------时空轮盘---------------------------
+	HP_ROULETTE_INFO_SYNC_S						= 51300; //时空轮盘信息同步
+	HP_ROULETTE_SET_ITEM_REQ_C					= 51301; //时空轮盘设置奖励
+	HP_ROULETTE_BOX_REWARD_REQ_C				= 51302; //时空轮盘领宝箱
+	HP_ROULETTE_LOTTERY_REQ_C					= 51303; //时空轮盘抽奖
+	HP_ROULETTE_LOTTERY_RESP_S					= 51304; //时空轮盘抽奖返回
+	//------------------时空轮盘---------------------------
+	
+
+	//-------------武者拼图活动----------------	
+	FIGHT_PUZZLE_SERVEROPEN_PAGE_INFO_SYNC			= 51310;
+	FIGHT_PUZZLE_SERVEROPEN_GET_PAGE_INFO_C		= 51312;
+	FIGHT_PUZZLE_SERVEROPEN_GET_PAGE_INFO_S		= 51313;
+	//-------------武者拼图活动----------------	
+
+	BROKEN_EXCHANGE_INFO_SYN = 56701; //残卷兑换活动 上线推送消息
+	BROKEN_EXCHANGE_REQ = 56702; //残卷兑换,兑换请求
+	
+	BROKEN_EXCHANGE_TWO_INFO_SYN = 56703;; //残卷兑换2活动 上线推送消息
+	BROKEN_EXCHANGE_TWO_REQ = 56704;//残卷兑换2,兑换请求
+	
+	BROKEN_EXCHANGE_THREE_INFO_SYN = 56705; //残卷兑换3活动 上线推送消息
+	BROKEN_EXCHANGE_THREE_REQ = 56706;//残卷兑换3,兑换请求
+	
+	
+	MONSTER4_RANK_INFO_REQ = 56801; //请求讨伐尤里的排行榜
+	MONSTER4_RANK_INFO_RESP = 56802; //返回讨伐尤里的排行榜
+	HELL_FIRE_INFO_C 				= 56901; //请求地狱火的活动信息
+	HELL_FIRE_INFO_S				= 56902; //请求地狱火的活动信息
+	HELL_FIRE_TWO_INFO_C			= 56903; //第二个地狱火活动请求活动信息
+	HELL_FIRE_TWO_INFO_S			= 56904; //第二个地狱火活动请求活动信息
+	HELL_FIRE_THREE_INFO_C			= 56905; //第三个地狱火活动返回活动信息
+	HELL_FIRE_THREE_INFO_S 			= 56906; //第三个地狱火活动返回活动信息
+	HELL_FIRE_ONE_RECEIVE_REQ  		= 56907; //地狱火一领奖
+	HELL_FIRE_TWO_RECEIVE_REQ  		= 56908; //地狱火二领奖
+	HELL_FIRE_THREE_RECEIVE_REQ  	= 56909; //地狱火三领奖
+	HELL_FIRE_RANK_REQ				= 56910; //地狱火1请求排行
+	HELL_FIRE_RANK_RESP				= 56911; //地狱火1返回排行
+	HELL_FIRE_TWO_RANK_REQ			= 56912; //地狱火2请求排行
+	HELL_FIRE_TWO_RANK_RESP			= 56913; //地狱火2返回排行
+	
+	ONE_RMB_PURCHASE_INFO_PUSH      = 56915; //一元购活动信息推送
+
+    PIONEER_GIFT_INFO_PUSH      = 56916;  // 【先锋豪礼】活动信息推送
+    PIONEER_GIFT_INFO_REQ       = 56917;  // 【先锋豪礼】请求活动信息
+	PIONEER_GIFT_FREE_REQ       = 56918;  // 【先锋豪礼】免费礼包领取
+    PIONEER_GIFT_SELECT_REQ     = 56919;  // 【先锋豪礼】选择档次礼包 
+
+	// 战神降临活动
+	BANNER_KILL_INFO_C			= 57000; //战神降临活动请求活动信息
+	BANNER_KILL_INFO_S			= 57001; //战神降临活动请求活动信息
+	BANNER_KILL_REWARD_REQ   	= 57002; //战神降临领奖
+	BANNER_KILL_RANK_REQ		= 57004; //战神降临活动请求排行
+	BANNER_KILL_RANK_RESP		= 57005; //战神降临活动返回排行
+
+    // 插旗活动
+	GUILD_BANNER_RANK_REQ       = 57006;  // 联盟插旗活动请求排行
+	GUILD_BANNER_RANK_RESP      = 57007;  // 联盟插旗活动返回排行
+	GUILD_BANNER_PAGE_INFO_REQ  = 57008;  // 联盟插旗活动请求页面信息
+	GUILD_BANNER_PAGE_INFO_RESP = 57009;  // 联盟插旗活动返回页面信息
+    
+	//机甲破世活动
+	MACHINE_SELL_LOTTERY_REQ 	= 57011;  //机甲破世抽奖
+	MACHINE_SELL_LOTTERY_NTF 	= 57012;  //机甲破世次累计次数同步
+	MACHINE_SELL_LOTTERY_RESP   = 57013;  //机甲破世抽奖返回
+	
+	CUSTOM_REWARD_SELECT_REQ    = 57014;  //定制礼包（确认）选择奖励请求
+	CUSTOM_GIFT_PUSH            = 57015;  //通过定制礼包信息
+	CUSTOM_GIFT_INFO_REQ        = 57016;  //定制礼包信息请求
+	
+	GIFT_ZERO_BUY_REQ           = 50718;  // 0元礼包购买请求
+	GIFT_ZERO_INFO_PUSH         = 50719;  // 0元礼包信息同步
+	GIFT_ZERO_INFO_REQ          = 50720;  // 0元礼包信息请求
+	GIFT_ZERO_NEW_BUY_REQ       = 50721;  // 新0元礼包购买请求
+	GIFT_ZERO_NEW_INFO_PUSH     = 50722;  // 新0元礼包信息同步
+	GIFT_ZERO_NEW_INFO_REQ      = 50723;  // 新0元礼包信息请求
+	GIFT_ZERO_NEW_FREEREWARD_REQ = 50724; // 新0元礼包信息每日免费奖励获取
+	
+	INVEST_INFO_REQ             = 50725;  // 投资理财产品信息请求
+	INVEST_INFO_PUSH            = 50726;  // 投资理财产品信息同步
+	INVEST_BUY_REQ              = 50727;  // 购买理财产品请求
+	INVEST_PROFIT_REQ           = 50728;  // 领取投资收益请求
+	INVEST_CANCEL_REQ           = 50729;  // 投资取消请求
+
+	DAILY_RECHARGE_BOUGHT_REQ   = 50731;  // 每日累充活动已购买宝箱信息请求
+	DAILY_RECHARGE_BOUGHT_PUSH  = 50732;  // 每日累充活动已购买宝箱信息同步
+    DAILY_RECHARGE_BUY_REQ      = 50733;  // 每日累充活动宝箱购买请求
+	RECHARGE_BUY_GIFG_INFO_C      = 50734;  // 今日累充特价礼包信息请求
+	RECHARGE_BUY_GIFG_INFO_SYNC   = 50735;  // 今日累充特价礼包信息同步
+	RECHARGE_BUY_CUSTOM_C         = 50736;  // 今日累充特价礼包奖励选择请求
+	RECHARGE_BUY_GIFT_BUY_C       = 50737;  // 今日累充特价礼包购买请求
+	
+	MILITARY_PREPARE_INFO_REQ        = 50738;   //军事备战信息请求
+	MILITARY_PREPARE_INFO_RESP       = 50739;   //军事备战信息返回
+	MILITARY_PREPARE_BOX_REWARD_REQ  = 50740;   //军事备战补领进阶奖励
+
+		//中秋庆典活动
+	MID_AUTUMN_EXCHANGE_INFO_SYN = 50741; //中秋庆典活动 上线推送消息
+	MID_AUTUMN_EXCHANGE_REQ = 50742; 	  //中秋庆典,兑换请求
+	MID_AUTUMN_BUY_GIFT_REQ = 50743; 	  //中秋庆典,购买请求
+	MID_AUTUMN_EXCHANGE_TIPS_REQ = 50744; 	  //中秋庆典,兑换提醒
+	
+	//限时登录活动
+	TIME_LIMIT_LOGIN_INFO_SYN = 50746; //限时登录活动消息推送
+	TIME_LIMIT_LOGIN_REWARD_REQ = 50747; //限时登录活动领奖
+	TIME_LIMIT_LOGIN_INFO_REQ = 50748; //限时登录活动请求新数据
+	//勋章宝藏活动
+	MEDAL_ACTION_LOTTERY_REQ = 50749; 	  //勋章宝藏抽奖req
+	MEDAL_ACTION_LOTTERY_RESP = 50750; 	  //勋章宝藏抽奖resp
+	//瓜分金币活动
+	DIVIDE_GOLD_INFO_REQ = 50760;  					//活动信息请求
+	DIVIDE_GOLD_INFO_SYN = 50761;  					//活动信息 
+	DIVIDE_GOLD_OPEN_TREASURE_BOX_REQ = 50762;  	//开宝箱
+	DIVIDE_GOLD_COMPOUND_RED_ENVELOPE_REQ = 50763; 	//合成红包
+	DIVIDE_GOLD_OPEN_RED_ENVELOPE_REQ = 50764; 		//开红包
+	DIVIDE_GOLD_ASK_FOR_FUZI_REQ = 50765; 			//索要福字
+	DIVIDE_GOLD_GIVE_FUZI_REQ = 50766; 				//赠送福字
+	DIVIDE_GOLD_OPEN_TREASURE_BOX_RESP = 50767;  	//开宝箱resp
+	
+	
+	//----登录基金活动--------
+	//推送登录基金活动信息 @see Activity.LoginFundInfoSync
+	PUSH_LOGINFUND_INFO_SYNC_S =	50690;
+	//购买登录基金
+	LOGIN_FUND_BUY = 50691;
+	// 进入活动页签
+	LOGIN_FUND_ENTER = 50692;
+
+	//----登录基金2活动--------
+	PUSH_LOGINFUND_TWO_INFO_SYNC_S	= 50693;
+
+	GET_FIRSTRECHARGE_REWARD_REQ = 20701;
+	
+	//活动配置更新
+	//推送活动配置校验码 @see Activity.ConfigCheckCodeList
+	PUSH_ACTIVITY_CONFIG_CHECK_CODE_S =	51000;
+	//请求拉取活动配置文件 @see Activity.ConfigNameListReq
+	PULL_ACTIVITY_CONFIG_C =	51001;
+	//响应拉取活动配置文件 @see Activity.ActivityConfigsResp
+	PULL_ACTIVITY_CONFIG_S =	51002;
+	// 推送所有活动信息 @see Activity.ActivityInfoSync
+	PUSH_ALL_ACTIVITY_INFO	= 52000;
+	// 推送单个活动信息
+	PUSH_ACTIVITY_INFO	= 52001;
+	// 拉取所有活动信息
+	PULL_ALL_ACTIVITY_INFO	= 52002;
+    //-----------送花----------------
+	SEND_FLOWER_SYNC_C = 52101; // 个人基础信息
+	SEND_FLOWER_SYNC_S = 52102; // 个人基础信息
+	SEND_FLOWER_SEND_C = 52103; // 送花
+	SEND_FLOWER_SEND_RANK_C = 52104; // 送花排行
+	SEND_FLOWER_SHOU_RANK_C = 52105; // 收花排行
+	SEND_FLOWER_RANK_S = 52106; // 送花/ 收花排行
+	SEND_FLOWER_SEND_RECORD_C = 52107; // 送花记录
+	SEND_FLOWER_SHOU_RECORD_C = 52108; // 收花记录
+	SEND_FLOWER_RECORD_S = 52109; // 送花/ 收花记录
+	SEND_FLOWER_BUY_C = 52110; // 买花
+	SEND_FLOWER_HELP_REQ = 52111; // 送我一朵花吧
+	
+	//-----------送花----------------
+
+	///////////////夺宝骑兵////////////
+	TREASURE_CAVALRY_INFO_C = 52200; // 请求同步
+	TREASURE_CAVALRY_INFO_S = 52201; // 同步
+	TREASURE_CAVALRY_REFRESH_C = 52203; // 刷新
+	TREASURE_CAVALRY_REFRESH_S = 52204; // 刷新
+	TREASURE_CAVALRY_OPEN = 52206; // 翻牌
+	/////////////////////////////
+
+	///////////////英雄皮肤////////////
+	HERO_SKIN_INFO_C = 52220; // 请求同步
+	HERO_SKIN_INFO_S = 52221; // 同步
+	HERO_SKIN_REFRESH_C = 52223; // 刷新
+	HERO_SKIN_REFRESH_S = 52224; // 刷新
+	HERO_SKIN_OPEN = 52226; // 翻牌
+	/////////////////////////////
+	
+	// 复制中心一次
+	COPY_CENTER_ONE	= 54001;
+	// 复制中心十次
+	COPY_CENTER_TEN	= 54002;
+	COPY_CENTER_SYNC	 = 54003; // 同步当期抽取S , SS数
+	// 领取感恩奖励
+	GRATITUDE_GIFT_GET_C = 54101;
+	GRATITUDE_GIFT_GET_S = 54102;
+	GRATITUDE_GIFT_SYNC = 54103; // 同步可领取状态
+
+	// 连续充值界面信息
+	CONTINUOUS_RECHARGE_PAGE_INFO = 53011;
+	// 连续充值领取奖励
+	CONTINUOUS_RECHARGE_REWARD_REQ = 53012;
+	TREASURY_INFO_REQ	= 53201; 
+	TREASURY_INFO_RESP	= 53202;
+	TREASURY_RECEIVE_REQ = 53203; 
+	TREASURY_RECEIVE_RESP = 53204;
+	TIME_LIMIT_DROP_RANK_REQ = 53301;	//限时掉落请求排行榜
+	TIME_LIMIT_DROP_RANK_RESP = 53302;	//限时掉落返回排行榜
+	ALLY_BEAT_BACK_INFO_REQ  = 53401;  //请求盟军反击的信息
+	ALLY_BEAT_BACK_INFO_RESP  = 53402; //返回盟军反击的信息
+	ALLY_BEAT_BACK_EXCHANGE_REQ = 53403; //盟军反击兑换.
+	ALLY_BEAT_BACK_RECEIVE_REQ = 53404;  //盟军反击领奖
+	
+	RECALL_FRIEND_REQ	= 53501; //召回好友
+	RECALL_FRIEND_RESP	= 53502; //召回好友成功.
+	RECALL_FRIEND_INFO_REQ = 53503; //请求可召回好友列表
+	RECALL_FRIEND_INFO_RESP = 53604;//
+	
+	RECALL_GUILD_BACKFLOW_REQ		= 53605; 	//联盟召回回流玩家
+	RECALL_GUILD_BACKFLOW_INFO_REQ 	= 53606; 	//请求可召回联盟召流玩家列表
+	RECALL_GUILD_BACKFLOW_INFO_RESP = 53607;	//返回可召回联盟召流玩家列表
+
+	
+	
+	//----------皮肤计划活动(扔骰子)--------------//
+	SKIN_PLAN_INFO_REQ                 	= 52301; //界面信息请求
+	SKIN_PLAN_INFO_RESP              		= 52302; //界面信息返回	
+	SKIN_PLAN_ROLL_DICE_REQ                = 52303; //扔骰子抽奖请求
+	SKIN_PLAN_ROLL_DICE_RESP               = 52304; //扔骰子抽奖返回
+	//----------皮肤计划活动(扔骰子)--------------//
+	
+	//----------联盟总动员----------------//
+	
+	ALLIANCE_CARNIVAL_PAGE_INFO_REQ	= 52305; // 联盟总动员界面信息请求(点联盟总动员任务页签的时候请求一下)
+	
+	ALLIANCE_CARNIVAL_PAGE_INFO_PUSH = 52306; // 联盟总动员界面信息推送(1、请求返回 2、登录推送，主要处理红点)
+	
+	ALLIANCE_CARNIVAL_RANK_INFO_REQ = 52307; // 联盟总动员排行信息
+	
+	ALLIANCE_CARNIVAL_RANK_INFO_RESP = 52308;
+	
+	ALLIANCE_CARNIVAL_RECEIVE_MISSION_REQ = 52309; // 联盟总动员接受任务
+	
+	ALLIANCE_CARNIVAL_DELETE_MISSION_REQ = 52311; // 联盟总动员任务删除
+	
+	ALLIANCE_CARNIVAL_ABANDON_MISSION_REQ = 52313; // 联盟总动员放弃任务(玩家只能接受一个任务，这里发空协议就行)
+	
+	ALLIANCE_CARNIVAL_SINGLE_MISSION_PUSH = 52316; // 联盟总动员单条任务推送
+	
+	ALLIANCE_CARNIVAL_BUY_TIMES	= 52317; // 联盟总动员购买次数
+	
+	ALLIANCE_CARNIVAL_ADD_EXP_PUSH = 52320; // 联盟总动员经验增加
+
+	ALLIANCE_CARNIVAL_EXCHANGE_REQ	= 52321; // 联盟总动员兑换
+	//----------联盟总动员----------------//
+	
+	
+	//------------红警锦鲤----------------//
+	REDKOI_INFO_SYNC_REQ = 52330;    //红警锦鲤页面信息请求
+	REDKOI_INFO_SYNC_RESP = 52331;   //红警锦鲤页面信息返回
+	
+	REDKOI_MAKE_WISH_REQ = 52332;    //许愿请求
+	REDKOI_MAKE_WISH_RESP = 52333;    //许愿返回
+	
+	REDKOI_AWARD_RECORD_REQ = 52334;  //锦鲤记录请求
+	REDKOI_AWARD_RECORD_RESP = 52335;  //锦鲤记录返回
+	
+	
+	REDKOI_AWARD_CHANGE_REQ = 52336; //锦鲤奖励更换请求
+	REDKOI_AWARD_CHANGE_RESP = 52337; //锦鲤奖励更换返回
+	
+	REDKOI_BUY_WISH_ITEM_REQ = 52338; //购买许愿道具
+	
+	
+	//------------红警锦鲤----------------//
+
+
+	// -----------威龙庆典-飞行计划-----------//
+
+	FLIGHT_PLAN_INFO_PUSH       = 52351;  // 同步飞行计划的格子信息
+	FLIGHT_PLAN_CELL_MOVE_REQ   = 52352;  // 摇色子请求
+	FLIGHT_PLAN_CELL_MOVE_RESP  = 52353;  // 摇色子请求返回
+	FLIGHT_PLAN_EXCHANGE_ERQ    = 52354;  // 威龙商城兑换请求
+	FLIGHT_PLAN_PAGE_INFO_REQ   = 52355;  // 活动页面信息请求
+
+	// -----------威龙庆典-飞行计划-----------//
+
+
+	//------------场景分享活动----------------//
+	SCENE_SHARE_INFO_SYNC_REQ = 52360;   //场景分享活动信息请求
+	SCENE_SHARE_INFO_SYNC_RESP = 52361;  //场景分享活动信息返回
+	
+	//------------场景分享活动----------------//
+
+
+	// --------------英雄进化之路活动---------------//
+	
+	EVOLUTION_BASE_INFO_SYNC				= 52381; // 同步英雄进化之路活动基础信息
+	EVOLUTION_TASK_INFO_CHANGE_SYNC			= 52382; // 同步英雄进化之路活动任务变更数据
+
+	EVOLUTION_ACTIVITY_PAGE_INFO_C  		= 52383;  // 英雄进化之路活动页面信息请求
+	EVOLUTION_ACTIVITY_PAGE_INFO_S  		= 52384;  // 同步英雄进化之路活动信息
+	EVOLUTION_EXCHANGE_C            		= 52385;  // 英雄进化之路奖励兑换请求
+	EVOLUTION_LEVEL_AWARD_GET_C     		= 52386;  // 英雄进化之路领取等级奖励
+	
+	// --------------英雄进化之路活动---------------//
+	
+	// --------------泰伯利亚竞猜活动---------------//
+	TBLY_GUESS_MATCH_PAGE_REQ   = 52390;  // 界面请求
+	TBLY_GUESS_MATCH_PAGE_RESP  = 52391;  // 界面返回
+	TBLY_GUESS_REQ  			= 52392;  // 泰伯利亚竞猜投票
+	TBLY_GUESS_RESP  			= 52393;  // 泰伯利亚竞猜投票返回
+	// --------------泰伯利亚竞猜活动---------------//
+	
+	SAMURAI_BLACKENED_INFO_REQ	   = 52401; //黑武士请求界面信息
+	SAMURAI_BLACKENED_INFO_RESP	   = 52402; //黑武士请求界面信息
+	
+	
+	
+	//-----------------指挥官学院------------------//
+	
+	COMMAND_COLLEGE_INFO_REQ           = 52410;  //指挥官学院信息请求
+	COMMAND_COLLEGE_INFO_RESP          = 52411;  //指挥官学院信息响应
+		
+	COMMAND_COLLEGE_PACKAGE_REQ        = 52412;  //指挥官学院助力礼包信息请求
+	COMMAND_COLLEGE_PACKAGE_RESP       = 52413;  //指挥官学院助力礼包信息响应
+
+	COMMAND_COLLEGE_STAGE_RANK_REQ     = 52414;  //阶段榜排名信息请求
+	COMMAND_COLLEGE_STAGE_RANK_RESP    = 52415;  //阶段榜排名信息响应
+	
+	COMMAND_COLLEGE_FINAL_RANK_REQ     = 52416;  //总榜排名信息请求
+	COMMAND_COLLEGE_FINAL_RANK_RESP    = 52417;  //阶段榜排名信息响应
+	
+	COMMAND_COLLEGE_BUY_PACKAGE_REQ    = 52418;  //购买助力礼包
+	COMMAND_COLLEGE_BUY_PACKAGE_RESP   = 52419;  //购买助力礼包
+
+	//-----------------指挥官学院------------------//
+
+	//------------------圣诞大战-----------------//
+	
+	CHRISTMAS_WAR_RANK_INFO_REQ			= 52501; //请求排行榜信息.
+	CHRISTMAS_WAR_RANK_INFO_RESP		= 52502; //请求排行榜信息返回
+	
+	CHRISTMAS_WAR_PAGE_INFO_REQ			= 52503; //请求主界面信息
+	CHRISTMAS_WAR_PAGE_INFO_RESP		= 52504; //请求主界面信息返回
+	CHRISTMAS_WAR_RECEIVE_REQ			= 52505; //领奖请求
+	CHRISTMAS_WAR_RECEIVE_RESP			= 52506; //领奖返回
+	
+	//------------------圣诞大战-----------------//
+	
+	
+	
+	//------------------装备黑市----------------//
+	EQUIP_BLACK_MARKET_INFO_REQ        = 52520;  //装备黑市信息
+	EQUIP_BLACK_MARKET_INFO_RESP       = 52521;  //装备黑市信息返回
+
+	EQUIP_BLACK_MARKET_REFINNING_REQ   = 52522;  //装备黑市炼化
+	EQUIP_BLACK_MARKET_REFINNING_RESP  = 52523;  //装备黑市炼化返回
+	
+	
+	//------------------装备黑市----------------//
+	
+	//------------------雪球大战----------------//
+	
+	SNOWBALL_PAGE_INFO_REQ        = 52524;  //雪球大战界面信息
+	SNOWBALL_PAGE_INFO_RESP       = 52525;  //雪球大战界面信息返回
+	
+	SNOWBALL_GET_BOX_REWARD_REQ	= 52526; // 获取宝箱奖励(成功推界面信息+success包)
+	
+	SNOWBALL_GET_RANK_INFO_REQ = 52528; // 拉取排行榜信息
+	SNOWBALL_GET_RANK_INFO_RESP = 52529;
+	
+
+	//------------------雪球大战----------------//
+	
+	
+	//------------------命运左轮----------------//
+	
+	DESTINY_REVOLVER_PAGE_INFO_PUSH     = 52550; // 命运左轮界面信息推送
+	
+	DESTINY_REVOLVER_FIRST_KICK_NOTICE	= 52551; // 命运左轮首次点击
+	
+	DESTINY_REVOLVER_FIVE_GACHA_REQ		= 52552; // 命运左轮抽5个格子那个奖励
+	DESTINY_REVOLVER_FIVE_GACHA_RESP	= 52553;
+	
+	DESTINY_REVOLVER_NINE_GACHA_REQ		= 52554; // 命运左轮抽9个格子那个奖励
+	DESTINY_REVOLVER_NINE_GACHA_RESP	= 52555;
+	
+	DESTINY_REVOLVER_ABANDON_NINE		= 52556; // 命运左轮放弃翻盘
+	
+	//------------------雪球大战----------------//
+
+	//-------------------英雄委任------------
+	HERO_LOVE_PAGE_INFO_REQ			  = 52561;
+	HERO_LOVE_PAGE_INFO_RESP		  = 52562;
+	HERO_LOVE_GIFT_ITEM_REQ			  = 52563;
+	HERO_LOVE_GIFT_ITEM_RESP		  = 52564;
+	HERO_LOVE_RECEIVE_ACHIEVES_REQ	  = 52565;
+	HERO_LOVE_RECEIVE_ACHIEVES_RESP   = 52566;
+	//-------------------英雄委任------------
+
+	
+	
+	//------------------资源保卫战----------------//
+	RESOURCE_DEFENSE_AGENT_SKILL_REFRESH_REQ 	= 52567; 	// 特工技能刷新技能(暂定返回RESOURCE_DEFENSE_PAGE_INFO_RESP 消息)
+	RESOURCE_DEFENSE_AGENT_SKILL_ACTIVE_REQ 	= 52568; 	// 特工技能激活技能(暂定返回RESOURCE_DEFENSE_PAGE_INFO_RESP 消息)
+	RESOURCE_DEFENSE_ROBOT_ACTIVE_REQ 			= 52569; 	// 特工技能中高级机器人的激活(暂定返回RESOURCE_DEFENSE_PAGE_INFO_RESP 消息)
+	RESOURCE_DEFENSE_GREAT_ROBOT_ADD_RESP 		= 52572; 	// 特工高级机器人资源站激活时,推送高级机器人的数据,数据结构RDSRSingleInfo 
+	
+	
+	RESOURCE_DEFENSE_PAGE_INFO_REQ = 52570; // 获取界面信息
+	RESOURCE_DEFENSE_PAGE_INFO_RESP =  52571;
+	
+	RESOURCE_DEFENSE_GET_MISSION_REQ =  52574; // 获取奖励 (普通奖励和高级奖励id不重复，直接发id就行) 发RDGetMission
+	
+	RESOURCE_DEFENSE_STEAL_PAGE_REQ =  52575; // 偷取资源界面
+	RESOURCE_DEFENSE_STEAL_PAGE_RESP = 52576;
+	
+	RESOURCE_DEFENSE_STEAL = 52578; // 偷取资源 发 RDSRSingleInfo(带上playerId就行)
+	RESOURCE_DEFENSE_STEAL_RESP = 5279; // 偷取资源返回
+	
+	RESOURCE_DEFENSE_BUILD_STATION_REQ = 52580; // 开采 发 RDBuildStationReq  回通用成功协议
+	
+	RESOURCE_DEFENSE_BUY_EXP_REQ	= 52581; // 买经验 发 RDBuyExpReq
+	
+	RESOURCE_DEFENSE_HELP_STATION_REQ = 52582; // 请求帮助 发 RDHelpStationReq  回通用成功协议
+	
+	RESOURCE_DEFENSE_SPEEDUP_STATION_REQ = 52583; // 加速 发 RDSpeedUpStationReq  回通用成功协议
+	
+	RESOURCE_DEFENSE_HELP_REQ = 52584; // 帮助 RDHelpReq
+	
+	RESOURCE_DEFENSE_OTHERS_REQ = 52585; // 查看其他人 RDOthersReq
+	RESOURCE_DEFENSE_OTHERS_RESP = 52586;
+	
+	RESOURCE_DEFENSE_CHARGE_REQ = 52587; // 收取
+	RESOURCE_DEFENSE_CHARGE_RESP = 52588;
+	
+
+	
+	//------------------资源保卫战----------------//
+	
+	
+	//------------------时空豪礼----------------//
+	CHRONO_GIFT_INFO_RESP = 52590;      //时空豪礼界面信息返回
+	CHRONO_GIFT_UNLOCK_REQ = 52591;     //开启时空之门请求
+	CHRONO_GIFT_BUY_AWARD_CONFIRM_REQ = 52592; //时空之门直购礼包奖励ID确认请求
+	CHRONO_GIFT_FREE_AWARD_ACHIEVE_REQ = 52593; //时空之门免费奖励获取
+	CHRONO_GIFT_KEY_BUY_REQ  = 52594;   //购买时空之钥 请求
+	
+	//------------------时空豪礼----------------//
+	//------------------充值基金----------------//
+	RECHARGE_FUND_INFO_SYNC				= 52600; // 同步活动信息
+	RECHARGE_FUND_GET_PAGE_INFO_REQ		= 52601; // 请求界面信息
+	RECHARGE_FUND_GET_PAGE_INFO_RESP	= 52602;
+	RECHARGE_FUND_SELECT_AWARD_REQ		= 52603; // 设置自选奖励
+	RECHARGE_FUND_SELECT_AWARD_RESP		= 52604;
+	RECHARGE_FUND_INVEST_REQ			= 50605; // 投资
+	RECHARGE_FUND_INVEST_RESP			= 50606;
+	RECHARGE_FUND_GET_AWARD_REQ			= 50607; // 领取收益
+	RECHARGE_FUND_GET_AWARD_RESP		= 50608;
+	//------------------充值基金----------------//
+	
+		//------------------回流活动-回归有礼----------------//
+	BACK_GIFT_INFO_REQ  = 52620;  //请求页面信息
+	BACK_GIFT_INFO_RESP = 52621;  //页面信息返回
+	BACK_GIFT_LOTTERY_REQ  = 52622; //请求抽奖
+	BACK_GIFT_LOTTERY_RESP = 52623;//抽奖返回
+	BACK_GIFT_REFRESH_REQ = 52624; //礼品刷新 ，返回通用成功，刷新界面信息
+	//------------------回流活动-回归有礼----------------//
+
+	//------------------回流活动-发展冲刺----------------//
+	
+	DEVELOP_SPURT_INFO_RESP = 52630;  //信息通步
+	DEVELOP_SPURT_SIGN_REQ = 52631;   //签到
+	//------------------回流活动-发展冲刺-----------------//
+	
+	//------------------回流活动-体力赠送----------------//
+	
+	POWER_SEND_MESSAGE_PRESSED_BACK_REQ = 52634;//催促回礼
+	POWER_SEND_MESSAGE_READ_REQ = 52635;  //阅读赠送邮件
+	POWER_SEND_MESSAGE_BACK_REQ = 52636;  //回赠，返回通用成功
+	POWER_SEND_MESSAGE_INFO_REQ = 52637;  //信件信息
+	POWER_SEND_MESSAGE_INFO_RESP = 52638;  //信件信息
+	POWER_SEND_ACTIVITY_INFO_RESP = 52639; //活动新同步           
+
+	//------------------回流活动-体力赠送-----------------//
+	
+	//------------------欢乐购----------------//
+	JOY_BUY_EXCHANGE_LIST_REQ  = 52640;  //请求兑换列表
+	JOY_BUY_EXCHANGE_LIST_RESP = 52641;  //列表信息返回
+	JOY_BUY_EXCHANGE_OPERATION_REQ  = 52642; //兑换操作
+	JOY_BUY_EXCHANGE_OPERATION_RESP  = 52643; //兑换操作返回
+	JOY_BUY_EXCHANGE_REFRESH_REQ  = 52644; //兑换刷新
+	JOY_BUY_EXCHANGE_REFRESH_RESP  = 52645; //返回刷新操作	
+	//------------------欢乐购----------------//	
+	
+	
+	//-----------老玩家回归活动(新版)----------------
+	RETURN_ARMY_EXCHANGE_C                      = 52651; //兑换(老51211)
+	RETURN_GIFT_C                               = 52652; //低折购买(老51212)
+	RETURN_ARMY_EXCHANGE_INFO_S                 = 25654; //兑换界面信息(老51214)
+	RETURN_GIFT_INFO_S                          = 25655; //购买界面信息(老51215)
+
+	//-----------老玩家回归活动(新版)----------------
+	
+	//-------------军魂承接活动(新版)----------------				
+	GET_INHERIT_NEW_PAGE_INFO_C				= 52660;// 请求界面信息(老51030)
+	GET_INHERIT_NEW_PAGE_INFO_S				= 52661;	
+	INHERIT_NEW_ACTIVE_C					= 52662;// 激活承接(老51032)
+	//-------------军魂承接活动(新版)----------------
+	
+	//------------------免费装扮兑换----------------//
+	DECORATE_EXCHANGE_LEVEL_LIST_REQ  = 52670;  //请求等级奖励列表
+	DECORATE_EXCHANGE_LEVEL_LIST_RESP = 52671;  //列表等级奖励列表
+	DECORATE_EXCHANGE_LEVEL_REWARD_REQ  = 52672;  //请求等级领取奖励
+	DECORATE_EXCHANGE_LEVEL_REWARD_RESP  = 52673;  //返回等级领取奖励
+	DECORATE_EXCHANGE_LIMIT_TIME_REQ  = 52674;  //请求限时等级列表
+	DECORATE_EXCHANGE_LIMIT_TIME_RESP  = 52675;  //返回限时等级列表	
+	EXCHANGE_COMMON_REQ  = 52676;  //领取通用协议
+	EXCHANGE_COMMON_RESP  = 52677;  //返回领取通用协议
+	DECORATE_EXCHANGE_LIST_REQ  = 52678;  //请求装扮列表
+	DECORATE_EXCHANGE_LIST_RESP  = 52679;  //返回装扮列表	
+	
+	//------------------免费装扮兑换----------------//	
+	
+	//-----------辐射战争新版----------------
+	RADITION_WAR_PAGE_INFO_REQ	= 52700; 		//新版辐射1活动界面信息req
+	RADITION_WAR_PAGE_INFO_RESP	= 52701;		//resp
+	RADITION_WAR_TWO_PAGE_INFO_REQ	= 52702; 	//新版辐射2活动界面信息req
+	RADITION_WAR_TWO_PAGE_INFO_RESP	= 52703;	//resp
+
+	
+	//-----------能源滚滚----------------
+	ENERGIES_PAGE_INFO_SYNC		= 52711;
+	ENERGIES_GET_PAGE_INFO_C	= 52712; //获取活动界面信息
+	ENERGIES_GET_PAGE_INFO_S	= 52713;
+	ENERGIES_GET_RANK_INFO_C	= 52714; //获取积分排行信息
+	ENERGIES_GET_RANK_INFO_S	= 52715;
+
+	//-----------幽灵秘宝----------------
+	GHOST_SECRET_DREW_CARD_REQ	= 52704; 	//挖宝req
+	GHOST_SECRET_DREW_CARD_RESP	= 52705;	//挖宝resp
+	GHOST_SECRET_RESET_REQ	= 52706; 	//重置req
+	GHOST_SECRET_INFO_SYNC	= 52707;	//界面同步信息
+	
+		//-----------虚拟实验室活动----------------
+	VIRTUAL_OPEN_CARD_REQ = 52783; 	//翻卡
+	VIRTUAL_OPEN_CARD_RESP = 52784; 
+	VIRTUAL_RESET_REQ = 52785; 		//重置req
+	VIRTUAL_RESET_RESP = 52786; 
+	VIRTUAL_CARD_INFO_RESP = 52787; //界面信息
+	VIRTUAL_CARD_INFO_REQ = 52788; //界面信息请求
+
+	
+	//-----------端午节活动,联盟庆典----------------
+	DRAGON_BOAT_CELETRATION_INFO_REQ = 527255;   //页面信息请求
+	DRAGON_BOAT_CELETRATION_INFO_RESP = 527256;   //页面信息请求
+
+	DRAGON_BOAT_CELETRATION_MAKE_GIFT_REQ = 527257;  //制作礼品
+	
+	DRAGON_BOAT_CELETRATION_RANK_REQ = 527259;   //查看排行榜信息
+	DRAGON_BOAT_CELETRATION_RANK_RESP = 527260; //查看排行榜信息
+	
+	//-----------端午节活动,道具兑换----------------
+	DRAGON_BOAT_EXCHANGE_REQ = 52765;    //获取界面信息
+	DRAGON_BOAT_EXCHANGE_INFO_RESP = 52766; //获取界面信息
+	DRAGON_BOAT_EXCHANGE_CARE_REQ = 52767;  //更新关注
+	
+	//-----------端午节活动,节日福袋----------------
+	DRAGON_BOAT_LUCKY_BAG_OPEN_REQ = 52770;
+	DRAGON_BOAT_LUCKY_BAG_OPEN_RESP = 52771;
+	DRAGON_BOAT_LUCKY_BAG_INFO_RESP = 52772;
+	
+	
+	//-----------端午节活动,龙船充值----------------
+	DRAGON_BOAT_RECHAGE_RESP = 52775;
+	
+	
+	//-----------端午节活动,福船送礼----------------
+	
+	DRAGON_BOAT_GIFT_INFO_REQ = 52779; //龙船信息
+	DRAGON_BOAT_GIFT_INFO_RESP = 52780;//龙船信息
+
+	DRAGON_BOAT_LOCATION_REQ   = 52781;//龙船位置
+	DRAGON_BOAT_LOCATION_RESP  = 52782;//龙船位置
+
+	//-----------勋章基金活动----------------
+	MEDAL_FUND_GET_REWARD_REQ = 52790; //领取收益奖励
+	MEDAL_FUND_PAGE_SYNC = 52791; 	   //界面信息
+
+	//-----------沙场点兵活动----------------
+	ARMIES_MASS_PAGE_INFO_REQ = 52794;   //活动信息请求
+	ARMIES_MASS_PAGE_INFO_RESP = 52795; //活动信息
+	ARMIES_MASS_BUY_GIFT_REQ = 52796;   //翻开雕像
+	ARMIES_MASS_OPEN_SCULPTURE_REQ = 52797; //购买礼包
+	ARMIES_MASS_BUY_OPEN_SCULPTURE_TIMES_REQ = 52798; //购买开雕像次数
+	
+	
+	
+	//------------------充值福利活动---------------------------
+	RECHARGE_WELFARE_INFO_SYNC						= 52800; //充值福利信息同步
+	RECHARGE_WELFARE_SET_ITEM_REQ					= 52801; //充值福利设置奖励
+	RECHARGE_WELFARE_LOTTERY_REQ					= 52802; //充值福利抽奖
+	RECHARGE_WELFARE_LOTTERY_RESP					= 52803; //充值福利奖返回
+	RECHARGE_WELFARE_GET_COUPON_REQ					= 52804; //充值福利领取充值点券
+	RECHARGE_WELFARE_GET_SCORE_COUPON_REQ			= 52805; //充值福利领取每日积分活跃点券
+	//------------------充值福利活动---------------------------
+	
+	//-----------勋章基金(二)活动----------------
+	MEDAL_FUND_TWO_GET_REWARD_REQ = 52807; //领取收益奖励
+	MEDAL_FUND_TWO_PAGE_SYNC = 52808; 	   //界面信息
+
+	//-----------能量源投资----------------
+	ENERGY_INVEST_REWARD_REQ = 52820; //领取收益奖励
+	ENERGY_INVEST_PAGE_SYNC = 52821;  //界面信息
+	
+	//-----------机甲投资----------------
+	SUPERSOLDIER_INVEST_REWARD_REQ = 52822; //领取收益奖励
+	SUPERSOLDIER_INVEST_PAGE_SYNC = 52823;  //界面信息
+
+	
+	//=============冠军膜拜活动============================
+	OVERLORD_BLESS_INFO_REQ							= 52809; //冠军膜拜活动信息同步
+	OVERLORD_BLESS_INFO_RESP						= 52810; //冠军膜拜活动信息同步
+	OVERLORD_BLESS_GO_REQ							= 52811; //前往膜拜
+	OVERLORD_BLESS_REWARD_REQ						= 52812; //领取膜拜奖励
+	OVERLORD_BLESS_SHARE_REWARD_REQ					= 52813; //领取膜拜分享奖励
+	//=============冠军膜拜活动============================
+	
+	
+	
+	//-----------空投补给----------------
+	AIRDROP_SUPPLY_PAGE_SYNC = 52824;  		//界面信息
+
+
+	//---------超级金矿2活动----------
+	SUPER_GOLD_TWO_REQ                  = 52830;
+	SUPER_GOLD_TWO_INFO                 = 52831; //超级金矿信息
+	//---------超级金矿2活动----------
+	
+	//-----------新服战令----------------
+	NEW_ORDER_PAGE_INFO_SYNC				= 52835; // 同步新服战令活动信息
+	NEW_ORDER_BASE_INFO_SYNC				= 52836; // 同步新服战令活动基础信息
+	NEW_ORDER_GET_PAGE_INFO_C				= 52837; // 获取新服战令活动界面信息
+	NEW_ORDER_BUY_EXP_C						= 52838; // 购买新服战令经验
+	NEW_ORDER_GET_LEVEL_REWARD_C            = 52839; // 获取等级奖励
+	
+	
+	//-----------鹊桥会----------------
+	WAR_FLAG_TWO_TIPS_C              = 52850; //鹊桥会兑换提醒
+	WAR_FLAG_TWO_TIPS_INFO_S         = 52851; //鹊桥会兑换服务器同步提醒
+	WAR_FLAG_TWO_EXCHANGE            = 52852; //鹊桥会兑换功能兑换
+	//-----------鹊桥会----------------
+	
+	
+	//-----------双享豪礼----------------
+	DOUBLE_GIFT_INFO_PUSH      = 52868;   // 活动信息推送
+    DOUBLE_GIFT_INFO_REQ       = 52869;  // 请求活动信息
+	DOUBLE_GIFT_FREE_REQ       = 52870;  // 免费礼包领取
+    DOUBLE_GIFT_SELECT_REQ     = 52871;  // 选择礼包奖励
+	//-----------双享豪礼----------------
+	
+
+	//-----------限时团购----------------
+	GROUP_BUY_PAGE_INFO_REQ			= 52872;	//界面信息请求
+	GROUP_BUY_PAGE_INFO_RESP		= 52873;	//界面信息返回
+	GROUP_BUY_RECORD_REQ			= 52874;	//购买记录请求
+	GROUP_BUY_RECORD_RESP			= 52875;	//购买记录返回
+	GROUP_BUY_REQ					= 52876;	//购买请求
+	GROUP_BUY_DISCOUNT_CHECK_REQ	= 52877;	//校验折扣请求
+	//-----------限时团购----------------
+	
+
+	//-------------军械要塞----------------
+	ORDNANCE_FORTRESS_INFO_REQ   = 52880;   //活动信息
+	ORDNANCE_FORTRESS_INFO_RESP  = 52881;   //活动信息
+
+	ORDNANCE_FORTRESS_CHOSE_BIG_REWARD_REQ = 52882;  //选择大奖
+	
+	OPEN_ORDNANCE_FORTRESS_TICKET_REQ = 52883;   //翻开奖券
+	OPEN_ORDNANCE_FORTRESS_TICKET_RESP = 52884;  //翻开奖券
+	
+	ORDNANCE_FORTRESS_ENTER_NEXT_STAGE_REQ = 52885; //进入下一个阶段
+	
+	ORDNANCE_FORTRESS_DEFAULT_BIG_REWARD_REQ = 52886; //默认大奖
+	
+	ORDNANCE_FORTRESS_SHOW_REWARD_OVER_REQ = 52887;  //展示奖励结束
+	
+	//-------------军械要塞----------------
+	
+	
+	//------------红包庆典-----------------
+	RED_PACKAGE_INFO_REQ = 52890;  //红包活动信息
+	RED_PACKAGE_INFO_RESP = 52891;  //红包活动信息
+	
+	RED_PACKAGE_RECIEVE_REQ  = 52892; //领取红包
+	RED_PACKAGE_RECIEVE_RESP = 52893; //领取红包
+	
+	RED_PACKAGE_RECIEVE_RECORD_REQ = 52894; //红包领取纪录
+	RED_PACKAGE_RECIEVE_RECORD_RESP = 52895; //红包领取纪录
+
+	//------------红包庆典-----------------
+
+	
+	
+	//-----------装备工匠----------------
+	
+	EQUIP_CRAFTSMAN_EXCHANGE = 52934; // 兑换
+	
+	EQUIP_CRAFTSMAN_PAGE_INFO_REQ = 52935; // 装备工匠界面信息请求 返回 EquipCraftsmanPageInfo
+	EQUIP_CRAFTSMAN_PAGE_INFO_RESP = 52936;
+	
+	EQUIP_CRAFTSMAN_GACHA_REQ = 52937; // 装备工匠抽取请求  发 EquipCraftsmanGachaReq 返回 EquipCraftsmanGachaResp
+	EQUIP_CRAFTSMAN_GACHA_RESP = 52938;
+	
+	EQUIP_CRAFTSMAN_INHERIT_REQ = 52939; // 装备工匠传承请求  发 EquipCraftsmanInheritReq 返回 通用成功
+	EQUIP_CRAFTSMAN_INHERIT_RESP = 52940;
+	
+	EQUIP_CRAFTSMAN_RETURN_MAIN_PAGE = 52941; // 装备工匠界面返回主界面请求 返回 EquipCraftsmanPageInfo
+	EQUIP_CRAFTSMAN_GOTO_SECOND_PAGE = 52942; // 装备工匠界面前往二级界面(前往传承) 返回 EquipCraftsmanPageInfo
+
+	
+	
+	//--------------战地寻宝------------------
+	
+	BATTLE_FIELD_ACTIVITY_INFO_SYNC   = 52943;  //战地寻宝-活动数据同步
+	BATTLE_FIELD_ROLL_DICE_REQ        = 52944;  //战地寻宝-投掷骰子请求
+	BATTLE_FIELD_ROLL_DICE_RESP       = 52945;  //战地寻宝-投掷骰子响应
+	BATTLE_FIELD_LOGIN_REWARD_REQ     = 52946;  //战地寻宝-领取登录奖励请求
+	BATTLE_FIELD_LOGIN_REWARD_RESP    = 52947;  //战地寻宝-领取登录奖励响应
+	BATTLE_FIELD_PAGE_INFO_REQ        = 52948;  //战地寻宝-活动页面信息请求
+	BATTLE_FIELD_DICE_BUY_REQ        = 52949;  //战地寻宝-购买
+	BATTLE_FIELD_YIJIANPAOTU_REQ         = 52966;  //战地寻宝-一键跑图
+	BATTLE_FIELD_YIJIANPAOTU_RESP        = 52967;  //战地寻宝-一键跑图
+	
+	//-----------周年历程----------------
+	CELEBRATION_COURSE_MAIN_REQ   	= 52920;	//主界面信息
+	CELEBRATION_COURSE_MAIN_RES   	= 52921;	//主界面RES
+	CELEBRATION_COURSE_SIGN_REQ   	= 52922;	//签到
+	CELEBRATION_COURSE_SGIN_RES   	= 52923;	//签到res
+	CELEBRATION_COURSE_SHARE_REQ   	= 52924;	//分享
+	CELEBRATION_COURSE_SHARE_RES   	= 52925;	//分享返回
+	CELEBRATION_COURSE_X8_REQ   	= 52926;	//分享X8数据
+	CELEBRATION_COURSE_X8_RES   	= 52927;	//分享X8返回
+	//-----------周年历程----------------
+
+	//-----------周年商城----------------
+	CELEBRATION_SHOP_MAIN_REQ   	= 52930;	//主界面信息
+	CELEBRATION_SHOP_MAIN_RES   	= 52931;	//主界面RES
+	CELEBRATION_SHOP_EXCHANGE_REQ   	= 52932;	//兑换
+	CELEBRATION_SHOP_EXCHANGE_RES   	= 52933;	//兑换res
+	//-----------周年商城----------------
+
+	
+	//-----------蛋糕同享----------------
+	CAKE_SHARE_LOCATION_REQ   		= 52950;	//蛋糕位置req
+	CAKE_SHARE_LOCATION_RESP  		= 52951;	//蛋糕位置resp
+	CAKE_SHARE_INFO_REQ 			= 52952; 	//蛋糕信息req
+	CAKE_SHARE_INFO_RESP 			= 52953;	//蛋糕信息resp
+	//-----------蛋糕同享----------------
+	
+	//-----------周年庆烟花盛典活动----------------
+	FIREWORKS_RECEIVE_REWARD_REQ   	= 52954;	//领取烟花免费奖励REQ
+	FIREWORKS_LIGHT_REQ  			= 52955;	//点燃烟花REQ
+	FIREWORKS_INFO_REQ				= 52956;	//活动信息REQ
+	FIREWORKS_INFO_SYNC				= 52957;	//活动信息
+	//-----------周年庆烟花盛典活动----------------
+	
+	//-----------周年庆庆典美食活动----------------
+	CELEBRATION_FOOD_MAKE_REQ   	= 52958;	//美食制作
+	CELEBRATION_FOOD_INFO_SYNC		= 52959;	//美食信息
+	//-----------周年庆庆典美食活动----------------
+	
+	//-----------军备升级活动----------------
+	ARMAMENT_MAIN_INFO_REQ   	= 52960;	//军备信息
+	ARMAMENT_MAIN_INFO_RES		= 52961;	//返回军备信息
+	ARMAMENT_EXCHANGE_REQ   	= 52962;	//军备兑换
+	ARMAMENT_EXCHANGE_RES		= 52963;	//返回军备兑换
+	//-----------周年庆庆典美食活动----------------
+	
+	
+	
+	
+	//-------------装备战令活动----------------	
+	ORDER_EQUIP_PAGE_INFO_SYNC				= 52970; // 同步战令活动信息
+	ORDER_EQUIP_BASE_INFO_SYNC				= 52971; // 同步战令活动基础信息
+	ORDER_EQUIP_ITEM_INFO_CHANGE_SYNC	    = 52972; // 同步战令活动任务变更数据
+	
+	ORDER_EQUIP_GET_PAGE_INFO_C				= 52973; //获取活动界面信息
+	ORDER_EQUIP_GET_PAGE_INFO_S				= 52974; 
+	
+	ORDER_EQUIP_BUY_LEVEL_C					= 52975; // 购买战令经验
+	
+	ORDER_EQUIP_GET_HISTORY_INFO_C			= 52976; // 获取历史战令任务信息
+	ORDER_EQUIP_GET_HISTORY_INFO_S			= 52977;
+	
+	//-------------装备战令活动----------------	
+
+
+	//-------------双 11 全服签到---------
+	
+	GLOBAL_SIGN_INFO_REQ                 = 52980;   //全服签到信息请求
+	GLOBAL_SIGN_INFO_RESP                = 52981;   //全服签到信息请求
+	GLOBAL_SIGN_PLAYER_SIGN              = 52982;   //玩家签到
+	GLOBAL_SIGN_PLAYER_SIGN_RESP         = 52978;   //玩家签到返回
+	GLOBAL_SIGN_PLAYER_CHAT_REQ          = 52979;   //玩家弹幕请求
+	GLOBAL_SIGN_PLAYER_CHAT_RESP         = 52964;   //玩家弹幕返回
+	GLOBAL_SIGN_PLAYER_CHAT_CONTROL_REQ  = 52965;   //玩家设置弹幕开关
+	//-------------双 11 全服签到---------
+	 
+	//----------------双 11 幸运折扣----------------------
+	SUPER_DISCOUNT_INFO_REQ				= 52983; // 幸运折扣信息请求
+	SUPER_DISCOUNT_INFO_RESP			= 52984; // 幸运折扣信息同步 
+	SUPER_DISCOUNT_DRAW_REQ				= 52985; // 幸运折扣奖池随机 
+	SUPER_DISCOUNT_BUY_REQ				= 52986; // 幸运折扣购买 
+
+	//----------------双 11 幸运折扣----------------------
+	
+	//-------------双十一 联盟欢庆积---------
+	ALLIANCE_CELEBRATE_DONATION_REQ 	= 52987;		//联盟欢庆,捐献请求
+	ALLIANCE_CELEBRATE_INFO_SYNC  		= 52988;		//联盟欢庆信息同步
+	ALLIANCE_CELEBRATE_RANK_REQ  		= 52989;		//联盟欢庆排行榜请求
+	ALLIANCE_CELEBRATE_RANK_RESP  		= 52990;		//联盟欢庆排行榜返回
+	ALLIANCE_CELEBRATE_REWARD_REQ		= 52991;		//联盟欢庆领奖请求
+	ALLIANCE_CELEBRATE_INFO_REQ  		= 52992;		//联盟欢庆信息请求
+	
+
+	//-------------装扮投放系列活动二:能量聚集 --------
+	ENERGY_GATHER_INFO_SYNC				= 52993;		//能量聚集信息同步
+	
+	//-------------装扮投放系列活动三:战火重燃 --------
+	FIRE_REIGNITE_INFO_SYNC				= 52994;		//战火重燃信息同步
+	FIRE_REIGNITE_EXCHANGE_REQ			= 52995;		//战火重燃兑换物品
+	FIRE_REIGNITE_BOX_REQ				= 52996;		//战火重燃领取宝箱
+	
+	//-------------装扮投放系列活动四:硝烟再起 --------
+	GUNPOWDER_RISE_EXCHANGE_REQ			= 52998;		//硝烟再起兑换物品
+	GUNPOWDER_RISE_TIPS_REQ				= 52999;		//硝烟再起提示勾选的编辑
+	GUNPOWDER_RISE_INFO_SYNC			= 53000;		//硝烟再起信息同步
+	
+	
+		
+
+	//-------------泰能宝库----------------
+	PLANT_FORTRESS_INFO_REQ   = 53020;   //活动信息
+	PLANT_FORTRESS_INFO_RESP  = 53021;   //活动信息
+
+	PLANT_FORTRESS_CHOSE_BIG_REWARD_REQ = 53022;  //选择大奖
+	
+	OPEN_PLANT_FORTRESS_TICKET_REQ = 53023;   //翻开奖券
+	OPEN_PLANT_FORTRESS_TICKET_RESP = 53024;  //翻开奖券
+	
+	PLANT_FORTRESS_ENTER_NEXT_STAGE_REQ = 53025; //进入下一个阶段
+	
+	PLANT_FORTRESS_DEFAULT_BIG_REWARD_REQ = 53026; //默认大奖
+	
+	PLANT_FORTRESS_SHOW_REWARD_OVER_REQ = 53027;  //展示奖励结束
+	PLANT_FORTRESS_BUY_KEY_REQ    = 53028;  //购买钥匙
+	
+	//-------------泰能宝库----------------
+	
+	
+	//-------------限时抢购----------------
+	ACTIVITY_TIME_LIMIT_BUY_PAGE_REQ = 53029; // 限时抢购界面信息请求
+	ACTIVITY_TIME_LIMIT_BUY_PAGE_RESP = 53030;
+	ACTIVITY_TIME_LIMIT_BUY = 53031; // 抢购,成功回复53030界面信息	
+	ACTIVITY_TIME_LIMIT_BUY_CLOSE_REMIND = 53032; // 关闭提示，发TimeLimitBuyPageInfoReq，回复53030界面信息
+	//-------------限时抢购----------------
+	
+	//-------------巅峰荣耀----------------
+	ACTIVITY_PEAK_HONOUR_PAGE_REQ = 53033; // 巅峰荣耀获取界面信息
+	ACTIVITY_PEAK_HONOUR_PAGE_RESP = 53034;
+	ACTIVITY_PEAK_HONOUR_OWN_POINT_REWARD = 53035; // 领取个人积分奖励
+	ACTIVITY_PEAK_HONOUR_GUILD_POINT_REWARD = 53036; // 领取联盟积分奖励
+	//-------------巅峰荣耀----------------
+	
+	
+	//-------------圣诞节系列活动一:冰雪计划 --------
+	ENERGY_GATHER_TWO_INFO_SYNC				= 53040;		//冰雪计划信息同步
+	
+	//-------------圣诞节系列活动二:冬日装扮活动 --------
+	FIRE_REIGNITE_TWO_INFO_SYNC				= 53041;		//冬日装扮信息同步
+	FIRE_REIGNITE_TWO_EXCHANGE_REQ			= 53042;		//冬日装扮兑换物品
+	FIRE_REIGNITE_TWO_BOX_REQ				= 53043;		//冬日装扮领取宝箱
+	
+	//-------------圣诞节系列活动三:冰雪商城--------
+	GUNPOWDER_RISE_TWO_EXCHANGE_REQ			= 53044;		//冰雪商城兑换物品
+	GUNPOWDER_RISE_TWO_TIPS_REQ				= 53045;		//冰雪商城提示勾选的编辑
+	GUNPOWDER_RISE_TWO_INFO_SYNC			= 53047;		//冰雪商城信息同步
+
+	CHRISTMAS_RECHARGE_INFO_SYNC			= 53048;		//圣诞累计充值
+
+	PLAYER_TEAMBACK_ACTIVITY_SYNC           = 53050;        // 回流H5活动信息同步
+
+	
+	//-------------回流活动-回归特权---------------
+	BACK_PRIVILEGE_INFO_REQ   = 53054;   //回归特权信息
+	BACK_PRIVILEGE_INFO_RESP  = 53055;   //回归特权信息
+	BACK_PRIVILEGE_REWARD_REQ = 53056;   //回归特权领取礼包
+	
+	//-----------------指挥官学院简化------------------//
+	COMMAND_COLLEGE_SIMPLIFY_INFO_REQ           = 53060;  //指挥官学院信息请求
+	COMMAND_COLLEGE_SIMPLIFY_INFO_RESP          = 53061;  //指挥官学院信息响应
+		
+	COMMAND_COLLEGE_SIMPLIFY_PACKAGE_REQ        = 53062;  //指挥官学院助力礼包信息请求
+	COMMAND_COLLEGE_SIMPLIFY_PACKAGE_RESP       = 53063;  //指挥官学院助力礼包信息响应
+
+	COMMAND_COLLEGE_SIMPLIFY_STAGE_RANK_REQ     = 53064;  //阶段榜排名信息请求
+	COMMAND_COLLEGE_SIMPLIFY_STAGE_RANK_RESP    = 53065;  //阶段榜排名信息响应
+	
+	COMMAND_COLLEGE_SIMPLIFY_FINAL_RANK_REQ     = 53066;  //总榜排名信息请求
+	COMMAND_COLLEGE_SIMPLIFY_FINAL_RANK_RESP    = 53067;  //阶段榜排名信息响应
+	
+	COMMAND_COLLEGE_SIMPLIFY_BUY_PACKAGE_REQ    = 53068;  //购买助力礼包
+	COMMAND_COLLEGE_SIMPLIFY_BUY_PACKAGE_RESP   = 53069;  //购买助力礼包
+	//-----------------指挥官学院------------------//
+
+
+	//-------------雄芯壮志------------------------
+	COREPLATE_ACTIVITY_INFO_RESP        = 53071; //活动信息
+	COREPLATE_ACTIVITY_ACHIEVE_BOX_REQ  = 53072; //领取宝箱
+	
+	//-------------洪福礼包------------------------
+	HONGFU_GIFT_INFO_RESP       	= 53073; //活动信息
+	HONGFU_GIFT_CHOOSE_REWARD_REQ  	= 53074; //选取礼包的自定义奖励
+	HONGFU_GIFT_FREE_BUY_REQ  		= 53075; //免费礼包解锁
+	HONGFU_GIFT_REC_REWARD_REQ  	= 53076; //领取礼包累计的奖励
+	
+	//-------------雄芯壮志------------------------
+
+	RED_BLUE_TICKET_INFO_PUSH = 53079;   // 翻牌活动信息推送
+	RED_BLUE_TICKET_OPEN      = 53080;   // 红蓝对决翻牌
+	RED_BLUE_TICKET_REFRESH   = 53081;   // 红蓝对决牌面刷新重置
+	RED_BLUE_START_OPEN       = 53082;   // 开始（开始之后才可以翻牌）
+
+	//-------------天降鸿福------------------------
+	HEAVEN_BLESSING_SYNC	  = 53083;	 // 同步活动消息
+	HEAVEN_BLESSING_AWARD	  = 53084;	 // 领奖协议
+	HEAVEN_BLESSING_CHOOSE	  = 53085;	 // 自定义奖励选择
+	HEAVEN_BLESSING_LOG		  = 53086;	 // 前端打点
+
+	//-------------感恩福利------------------------
+	GRATEFUL_BENEFITS_SYNC    = 53087; //活动信息同步
+	GRATEFUL_BENEFITS_REQ     = 53088; //请求活动信息
+	GRATEFUL_BENEFITS_PUNCH   = 53089; //签到
+	GRATEFUL_BENEFITS_INVITE  = 53090; //邀请
+	GRATEFUL_BENEFITS_AWARD   = 53091; //领奖
+	GRATEFUL_BENEFITS_HELP    = 53092; //帮助
+
+	//----------荣耀返利活动----------------
+	HONOR_REPAY_BUY_REQ   				= 54201;	//荣耀购买请求
+	HONOR_REPAY_GET_PAGE_REQ			= 54202;	//荣耀界面请求
+	HONOR_REPAY_INFO_SYNC				= 54203;	//荣耀界面消息同步
+	HONOR_REPAY_RECEIVE_REWARD			= 54204;	//荣耀返利领取奖励
+	//-----------荣耀返利活动----------------
+
+	//----------新首充活动----------------
+	NEW_FIRST_RECHARGE_SYNC     =   54205; //同步活动消息
+	NEW_FIRST_RECHARGE_AWARD    =   54206; //领奖
+	NEW_FIRST_RECHARGE_POP      =   54207; //记录已经弹窗的信息
+	NEW_FIRST_RECHARGE_REQ      =   54208; //主动请求活动信息
+	//----------新首充活动----------------
+
+	//----------泰伯利亚名人堂----------------
+	TBLY_FAME_HALL_REQ	=	54209;//请求分享状态
+	TBLY_FAME_HALL_RESP	=	54210;//返回分享状态
+	//----------泰伯利亚名人堂----------------
+
+	//----------玫瑰赠礼---------------------
+	ROSE_GIFT_REQ			= 54226;//请求活动信息
+	ROSE_GIFT_SYNC          = 54211;//活动信息
+	ROSE_GIFT_DRAW          = 54212;//玫瑰抽奖
+	ROSE_GIFT_EXCHANGE      = 54213;//兑换物品
+	ROSE_GIFT_TIPS          = 54214;//勾选提醒
+	ROSE_GIFT_DRAW_RESP     = 54215;//玫瑰抽奖返回
+	//----------玫瑰赠礼---------------------
+
+	//-------------通用兑换提醒--------------
+	GENERAL_EXCHANGE_TIPS   	= 54216;//勾选提醒
+	//-------------通用兑换提醒--------------
+
+	////////////////////////////////////////////////////
+	//activity活动模块
+	////////////////////////////////////////////////////
+	
+	// 客户端后台切换通知
+	CLIENT_OPEN_FROM_BACKROUND = 53001;
+	
+	// 预设编队名称修改
+	MARCH_PRESET_NAME_CHANGE_C = 53099;
+	MARCH_PRESET_NAME_CHANGE_S = 53100;
+	
+	// 行军预设信息
+	ADD_WORLD_MARCH_PRESET_INFO_C = 53101;
+	
+	GET_WORLD_MARCH_PRESET_INFO_C = 53102;
+	GET_WORLD_MARCH_PRESET_INFO_S = 53103;
+	
+	//主播服务器相关协议 60000-61000 请勿使用
+	ENTER_ANCHOR_SERVER_C = 60000;
+	ENTER_ANCHOR_SERVER_S = 60001;
+	
+	LOGIN_ANCHORSERVER_C = 60002;
+	LOGIN_ANCHORSERVER_S = 60003;
+	
+	ANCHOR_ROOM_INFO_S = 60004;
+	
+	SEND_ANCHOR_MESSAGE_C = 60005;
+	SEND_ANCHOR_MESSAGE_S = 60006;
+	
+	GET_ANCHOR_LEAVING_MSG_C = 60007;
+	GET_ANCHOR_LEAVING_MSG_S = 60008;
+	
+	GET_ANCHOR_RANK_C = 60009;
+	GET_ANCHOR_RANK_S = 60010;
+	
+	SEND_ANCHOR_LEAVING_MSG_C = 60011;
+	
+	SEND_ANCHOR_GIFT_C = 60012;
+	
+	ROLE_LEAVE_ROOM_C = 60016;
+	
+	GET_ANCHOR_PREVIEW_LIST_C = 60017;
+	GET_ANCHOR_PREVIEW_LIST_S = 60018;
+	
+	ROOM_CHANGE_INFO_S		  = 60019;
+	//GS消息
+	ANCHOR_INFO_LITE_S		  = 60020;
+	//关注主播
+	ADD_ANCHOR_FOLLOW		  = 60021;
+	//取消关注
+	DEL_ANCHOR_FOLLOW		  = 60022;
+	//收听时状态切换
+	ROLE_CHANGE_STATUS		  = 60023;
+	
+	GET_PLAYER_ANCHOR_DETAIL_INFO_C  = 60024;
+	GET_PLAYER_ANCHOR_DETAIL_INFO_S  = 60025;
+	
+	BAN_PLAYER_CHAT_C	=	60026;
+	BAN_PLAYER_CHAT_S	=	60027;
+	
+	////////////////////////////////
+	///超级武器相关/////////////////
+	////////////////////////////////
+	
+	SUPER_WEAPON_INFO_S 			= 61001; //超武的信息同步
+	SUPER_WEAPON_SINGLE_INFO_S 		= 61003; //单个超武的信息同步
+	
+	SUPER_WEAPON_WAR_SIGN_UP_INFO_C	= 61004; //超级武器报名信息
+	SUPER_WEAPON_WAR_SIGN_UP_INFO_S	= 61005;
+	SUPER_WEAPON_WAR_SIGN_UP_C 		= 61006; //超级武器报名(成功通用返回)
+	SUPER_WEAPON_WAR_SIGN_UP_S 		= 61007; //超级武器报名(成功通用返回)
+	SUPER_WEAPON_SINGLE_MARCH_C 	= 61008; //超级武器单人行军
+	
+	SUPER_WEAPON_PRESIDENT_RECORD_C = 61012; //获取超级武器国王记录
+	SUPER_WEAPON_PRESIDENT_RECORD_S = 61013;
+	SUPER_WEAPON_GIFT_RECORD_C 		= 61014; //获取超级武器礼包记录
+	SUPER_WEAPON_GIFT_RECORD_S 		= 61015;
+	SUPER_WEAPON_GIFT_INFO_C		= 61016; //获取超级武器礼包信息
+	SUPER_WEAPON_GIFT_INFO_S		= 61017;
+	SUPER_WEAPON_SENT_GIFT_C		= 61018; //超级武器颁发礼包(成功通用返回)
+	
+	SUPER_WEAPON_QUARTER_INFO_C		= 61019; //超级武器驻扎详情
+	SUPER_WEAPON_QUARTER_INFO_S		= 61020;
+	
+	SUPER_WEAPON_BRIEF_FIGHT_RECORD_C 	= 61021; //获取超级武器简要战争记录
+	SUPER_WEAPON_BRIEF_FIGHT_RECORD_S 	= 61022;
+	
+	SUPER_WEAPON_DETIAL_FIGHT_RECORD_C 	= 61023; //获取超级武器详细战争记录
+	SUPER_WEAPON_DETIAL_FIGHT_RECORD_S 	= 61024;
+	
+	SUPER_WEAPON_GIFT_RECEIVE_COUNT_C 	= 61025;// 玩家接收超级武器礼包数量
+	SUPER_WEAPON_GIFT_RECEIVE_COUNT_S 	= 61026;//
+	
+	SUPER_WEAPON_CANCEL_SINGUP_C = 61027; //超级武器取消报名
+	
+	SUPER_WEAPON_SEASON_RANK_C = 61028; //超级武器赛季排行榜
+	SUPER_WEAPON_SEASON_RANK_S = 61029;
+	
+	
+	////////////////////////////////
+	///小战区相关/////////////////
+	////////////////////////////////
+	
+	XZQ_PAGE_SHOW_INFO_S 			   = 61301; //小站区登陆同步
+	XZQ_INFO_S 					       = 61302; //小站区信息同步
+	XZQ_EFFECT_SYNC_S                  = 61303; //小站区作用号同步
+	XZQ_BUILD_SYNC_S                   = 61304; //小战区建筑同步
+	XZQ_TICKETS_SYNC_S                 = 61305; //小站区门票个数同步
+
+	XZQ_WAR_SIGN_UP_C                  = 61308; //小站区报名
+	XZQ_WAR_SIGN_UP_S                  = 61309; //小站区报名
+	XZQ_WAR_SIGN_UP_CANCEL_C           = 61310; //小站区报名取消
+	XZQ_WAR_SIGN_UP_CANCEL_S           = 61311; //小站区报名取消
+	XZQ_GUILD_WAR_DTAIL_C              = 61312; //小站区联盟战争信息
+	XZQ_GUILD_WAR_DTAIL_S              = 61313; //小站区联盟战争信息
+	XZQ_MAP_FORCE_COLOR_SET_C          = 61314; //小站区小地图势力颜色设置
+	XZQ_MAP_FORCE_COLOR_SET_S          = 61315; //小站区小地图势力颜色设置
+	XZQ_GIVE_UP_C                      = 61316; //放弃小战区(成功通用返回)
+	
+	XZQ_SINGLE_MARCH_C 			= 61320; //小战区单人行军
+	XZQ_QUARTER_INFO_C			= 61321; //小战区驻扎详情
+	XZQ_QUARTER_INFO_S			= 61322; //小战区驻扎详情
+	
+	XZQ_GIFT_INFO_C				= 61330; //获获取小战区礼包信息
+	XZQ_GIFT_INFO_S				= 61331; //获获取小战区礼包信息
+	XZQ_SENT_GIFT_C				= 61332; //小战区颁发礼包(成功通用返回)
+	XZQ_GIFT_RECORD_C 			= 61333; //获取小战区礼包记录
+	XZQ_GIFT_RECORD_S 			= 61334; //获取小战区礼包记录
+	XZQ_GIFT_RECEIVE_COUNT_C 	= 61335; //玩家接收小战区礼包数量
+	XZQ_GIFT_RECEIVE_COUNT_S 	= 61336; //玩家接收小战区礼包数量
+
+	
+	
+
+	
+	
+	
+	
+	////////////////////////////////
+	///累积在线相关/////////////////
+	////////////////////////////////
+	ACCUMULATE_ONLINE_RED_POINT_SYNC = 61101; //小红点同步
+	ACCUMULATE_ONLINE_INFO_REQ		 = 61102; //信息同步
+	ACCUMULATE_ONLINE_INFO_RESP		 = 61103;
+	ACCUMULATE_ONLINE_REWARD_REQ	 = 61104; //请求领取奖励
+	
+	
+	//新版迷雾相关
+	FOGGY_DETAIL_INFO_REQ_C			= 61201; //请求迷雾详细信息
+	FOGGY_DETAIL_INFO_RESP_S		= 61202; //迷雾详细信息
+
+	YURI_STRIKE_INFO_SYNC			= 62000;  // 同步尤里行军信息
+	YURI_STRIKE_ATK 				= 62001; //城内攻打尤里. 不发行军. 直接战斗
+	YURI_STRIKE_CLEAN				= 62002;   //开始净化
+	YURI_STRIKE_OBTAIN_REWARD		= 62003;  // 净化收取
+	YURI_STRIKE_ATK_RESP			= 62004;  // 城内攻打尤里 结果
+	
+		/////////玩家平台头像模块/////////
+	PUSH_PLAYER_IMAGE_LIST_INFO      = 63001; //获取头像（框）列表
+	PLAYER_USE_NEW_IMAGE_OR_CIRCLE   = 63002; //玩家使用新的头像框或者头像
+	PLAYER_IMAGE_DISPLAY_OPRATATION  = 63003; //玩家头像显示选项操作
+	PLAYER_REQ_OTHER_RESOURCE_IMAGE_INFO = 63004; //请求其它人的大图资源
+	
+	GHOST_STRIKE_MARCH_START	= 64001; // 发起幽灵来袭行军
+	GHOST_STRIKE_MARCH_SYNC	    = 64002; // 发起幽灵来袭行军
+	
+	PLAYER_ACHIEVE_INFO_PUSH	= 64101; // 玩家成就信息推送
+	PLAYER_ACHIEVE_INFO_UPDATE	= 64102; // 玩家成就信息更新
+	PLAYER_ACHIEVE_GET_REWARD	= 64103; // 玩家领取成就奖励
+
+	PLAYER_CHAT_OLQUEST_REQ     	= 64201; // 玩家在线答疑一次请求
+	PLAYER_CHAT_OLQUEST_LIST_REQ	= 64202; // 玩家在线答疑热度榜单请求
+	PLAYER_CHAT_OLQUEST_LIST_PUSH	= 64203; // 玩家在线答疑热度榜单推送
+	
+	PLAYER_DRESS_ASK_INFO_C 		= 64210; //装扮赠送信息请求
+	PLAYER_DRESS_ASK_INFO_S 		= 64211; //装扮赠送信息回复
+	PLAYER_DRESS_ASK_REQ_C 			= 64212; //请求赠送装扮
+	PLAYER_DRESS_SEND_REQ_C 		= 64213; //赠送玩家装扮
+
+	GUNDAM_INFO_REQ		= 64250; // 高达信息推送
+	GUNDAM_INFO_RESP	= 64251;
+	
+	NIAN_INFO_REQ		= 64252; // 年兽信息推送
+	NIAN_INFO_RESP		= 64253;
+	
+	PUSH_TREASURE_HUNT_EVENT = 64260; //推送寻宝事件
+
+
+
+	
+	////////////////////////////////////////////////
+	///////战地之王，预留64300~64349，勿占用////////
+	////////////////////////////////////////////////	
+	PLACE_WAR_FLAG_REQ 		  = 64300; //战地之王，放置旗帜
+	
+	WAR_FLAG_LIST_REQ 		  = 64301; //战地之王，请求旗帜列表	
+	WAR_FLAG_LIST_RESP 		  = 64302;
+
+	TAKE_BACK_WAR_FLAG_REQ	  = 64303; //战地之王，收回旗帜
+	COLLECT_FLAG_RESOURCE_REQ = 64304; //战地之王，收取旗帜资源
+	
+	FLAG_RESOURCE_COUNT_REQ	  = 64305; //战地之王，获取当前旗帜资源数量
+	FLAG_RESOURCE_COUNT_RESP  = 64306;
+	
+	FLAG_PATTERN_REQ		  = 64307; //战地之王，大世界格局(二级地图)
+	FLAG_PATTERN_RESP		  = 64308;
+	
+	FLAG_QUARTER_INFO_REQ	  = 64309; //战地之王，驻军信息
+	FLAG_QUARTER_INFO_RESP	  = 64310;
+	
+	FLAG_RED_POINT_PUSH		  = 64311; //战地之王，小红点
+	
+	FLAG_MAP_GUILD_INFO_REQ	  = 64312; //战地之王，小地图点击联盟信息
+	FLAG_MAP_GUILD_INFO_RESP  = 64313;
+
+	FLAG_CENTER_INFO_REQ = 64314; //母旗信息 CenterFlagInfoReq 返回 CenterFlagInfoResp
+	FLAG_CENTER_INFO_RESP = 64315;
+	
+	FLAG_CENTER_SIGNUP_REQ = 64316; //母旗报名(通用成功返回)
+	
+	FLAG_CENTER_LEAVE_REQ = 64317; //母旗离开(通用成功返回)
+	
+	FLAG_CENTER_REMOVE_REQ = 64318; //母旗移除报名(官员操作)(通用成功返回) CenterFlagRmoveSignUp
+
+	
+	////////////////////////////////////////////////
+	///////跨服二期 跨服三期 64330~64369	////////
+	////////////////////////////////////////////////
+	
+	CROSS_GET_MISSION_AWARD_C		= 64330; // 获取跨服任务奖励
+	
+	CROSS_CHARGE_STATE_INFO_C		= 64331; // 充能
+	CROSS_CHARGE_STATE_INFO_S		= 64332;
+	
+	CROSS_HOSPITAL_PAGE_INFO_C		= 64333; // 跨服医院界面
+	CROSS_HOSPITAL_PAGE_INFO_S		= 64334;
+	
+	CROSS_HOSPITAL_RECOVER_C		= 64335; // 跨服医院恢复死兵
+	CROSS_HOSPITAL_RECOVER_S		= 64336;
+	
+	CROSS_FORTRESS_SINGLE_MARCH_C 	= 64350; //航海要塞单人行军
+	CROSS_FORTRESS_QUARTER_INFO_C	= 64351; //航海要塞驻扎详情
+	CROSS_FORTRESS_QUARTER_INFO_S	= 64352;
+	CROSS_FORTRESS_INFO_S 			= 64353; //航海要塞的信息同步
+	CROSS_FORTRESS_SINGLE_INFO_S	= 64354; //航海要塞的信息同步
+	CROSS_STAR_RANK_INFO_C			= 64355; //航海之星排行信息
+	CROSS_STAR_RANK_INFO_S			= 64356;
+	CROSS_STAR_RECORD_INFO_C		= 64357; //航海之星记录信息
+	CROSS_STAR_RECORD_INFO_S		= 64358;
+	
+	CROSS_CHARGE_PAGE_INFO_C		= 64359; // 远征充能界面信息
+	CROSS_CHARGE_PAGE_INFO_S		= 64360;
+	
+	CROSS_TAX_PAGE_INFO_C			= 64365; // 税收界面信息 发空包 回CrossTaxPageInfo
+	CROSS_TAX_PAGE_INFO_S			= 64366;
+	
+	CROSS_TAX_SEND_INFO_C			= 64367; // 税收发奖记录 发空包 回CrossTaxSendRecord
+	CROSS_TAX_SEND_INFO_S			= 64368;
+	
+	CROSS_TAX_SEND_C				= 64369; // 税收发奖 发CrossTaxSendReq 回success
+	
+	////////////////////////////////////////////////
+	///////英雄试炼活动，64370~64389		////////
+	////////////////////////////////////////////////
+	HERO_TRIAL_PAGE_INFO_REQ    = 64370; // 界面信息请求
+	HERO_TRIAL_PAGE_INFO_RESP   = 64371;
+	
+	HERO_TRIAL_REFRESH_REQ 		= 64372;  // 手动刷新界面(成功重新推界面)
+	HERO_GO_TRIAL_REQ			= 64374;  // 英雄试炼(成功重新推界面)
+	HERO_TRIAL_SPEED_UP		    = 64376;  // 英雄试炼加速(成功重新推界面)
+	HERO_TRIAL_GET_REWARD		= 64378;  // 英雄试炼领取奖励(成功重新推界面)
+
+
+	INVITE_MASS_REQ		= 64390; // 邀请集结
+	INVITE_MASS_RESP	= 64391;
+	
+	////////////////////////////////////////////////
+	///////铠甲，64400~64500				////////
+	////////////////////////////////////////////////
+	
+	ARMOUR_ALL_INFO_REQ		= 64400; // 获取所有铠甲信息
+	ARMOUR_ALL_INFO_RESP	= 64401;
+	
+	ARMOUR_PUT_ON_REQ		= 64402; // 穿戴铠甲(通用成功返回)
+	ARMOUR_TAKE_OFF_REQ		= 64404; // 卸下铠甲(通用成功返回)
+	ARMOUR_INTENSIFY_REQ	= 64406; // 铠甲强化(通用成功返回/单个铠甲信息更新)
+	ARMOUR_BREAKTHROUGH_REQ	= 64408; // 铠甲突破(通用成功返回/单个铠甲信息更新)
+	ARMOUR_INHERIT_REQ		= 64410; // 铠甲传承(通用成功返回/传承的单个铠甲信息更新)
+	ARMOUR_RESOLVE_REQ		= 64412; // 铠甲分解
+	ARMOUR_RESOLVE_RESP		= 64413;
+	
+	ARMOUR_SINGLE_PUSH		= 64414; // 单个铠甲信息推送(添加/更新)
+	
+	ARMOUR_SUIT_INF_REQ		= 64416; // 铠甲套装信息
+	ARMOUR_SUIT_INF_RESP	= 64417;
+	
+	ARMOUR_SUIT_UNLOCK		= 64418; // 铠甲套装解锁(通用成功返回/铠甲套装信息)
+	ARMOUR_SUIT_CHANGE_NAME	= 64420; // 铠甲套装改名字(通用成功返回/铠甲套装信息)
+	
+	ARMOUR_LOCK_REQ			= 64422; // 铠甲锁定(通用成功返回/单个铠甲信息更新)
+	
+	ARMOUR_SUIT_CHANGE_REQ	= 64424; // 铠甲套装切换(通用成功返回/铠甲套装信息)
+	
+	ARMOUR_UNLOCK_REQ		= 64426; // 铠甲解锁(通用成功返回/单个铠甲信息更新)
+	
+	ARMOUR_RESOLVE_BY_QUALITY_REQ = 64428; // 铠甲分解(通过品质)
+	
+	ARMOUR_DELETE_RESP		= 64430; // 铠甲删除
+	
+	ARMOUR_ONEKEY_LOCK		= 64431; // 一键锁定
+	ARMOUR_ONEKEY_UNLOCK	= 64432; // 一键解锁
+	
+	
+	ARMOUR_TECH_INFO_PUSH = 64435; // 装备科技信息推送
+	ARMOUR_TECH_LEVEL_UP = 64436; // 装备科技升级
+	ARMOUR_TECH_AWARD = 64437; // 装备科技领奖
+	
+	ARMOUR_TECH_SHOW_SET = 64438; // 设置装备科技外显(通用成功返回)   Armour.proto  ArmourTechShowReq
+	
+	ARMOUR_STAR_UP_REQ	= 64439; // 装备升星请求(泰能灌注) ArmourStarUpReq
+	
+	ARMOUR_STAR_ATTR_OPEN_REQ	= 64440; // 装备星级属性激活 ArmourStarAttrOpenReq
+	ARMOUR_STAR_ATTR_OPEN_RESP	= 64441;
+	
+	ARMOUR_STAR_ATTR_UP_REQ	= 64442; // 装备星级属性升级(泰能属性充能 ArmourStarAttrUpReq
+	ARMOUR_STAR_ATTR_UP_TEN_REQ	= 64443; // 装备星级属性升级十次(泰能属性充能 ArmourStarAttrUpReq
+	ARMOUR_STAR_ATTR_UP_RESP = 64444;
+	
+	ARMOUR_STAR_ATTR_REPLACE_REQ	= 64445; // 装备星级属性替换 ArmourStarAttrReplaceReq
+	ARMOUR_STAR_ATTR_REPLACE_RESP	= 64446;
+	
+	ARMOUR_STAR_ATTR_RANDOM_REQ	= 64447; // 装备星级属性随机 ArmourStarAttrRandomReq
+	
+	ARMOUR_ATTR_BREAKTHROUGH_REQ = 64448; // 装备属性突破
+
+	ARMOUR_QUANTUM_UP_REQ	= 64449; // 装备量子升级请求(槽位升级) ArmourQuantumUpReq
+	
+	
+	/**-------------------64501-64600---------------------*/
+	STAR_WARS_OFFICER_REQ			= 64501; //星球大战官职请求.
+	STAR_WARS_OFFICER_RESP			= 64502; //星球大战官职请求.	
+	STAR_WARS_KING_RECORD_REQ		= 64505; //星球大战国王记录.
+	STAR_WARS_KING_RECORD_RESP		= 64506; //星球大战国王记录.
+	STAR_WARS_GIFT_REQ				= 64507; //请求分区礼包信息.
+	STAR_WARS_GIFT_RESP				= 64508; //请求分区礼包信息.
+	STAR_WARS_GIFT_RECORD_REQ		= 64509; //请求分区礼包记录.
+	STAR_WARS_GIFT_RECORD_RESP		= 64510; //请求分区礼包记录。
+	STAR_WARS_SEARCH_PLAYER_REQ		= 64511; //搜索玩家.
+	STAR_WARS_SEARCH_PLAYER_RESP	= 64512; //搜索玩家.
+	STAR_WARS_GIFT_AWARD_REQ		= 64513; //发奖.
+	STAR_WARS_SERVERID_LIST_REQ		= 64517; //请求分区服务列表
+	STAR_WARS_SERVERID_LIST_RESP	= 64518; //请求分区服务列表
+	STAR_WARS_ENTER_REQ 			= 64524; //进入副本.
+	STAR_WARS_EXIT_REQ 				= 64525; //退出副本
+	STAR_WARS_INNER_BACK_SERVER_REQ = 64526; //退出跨服的时候收到该消息. 服务器使用
+	STAR_WARS_MOVE_BACK_REQ			= 64527; //gm签回玩家.服务器使用
+	STAR_WARS_CROSS_BEGIN			= 64528; //跨服开始
+	STAR_WARS_CROSS_FINISH			= 64529; //跨服完成
+	STAR_WARS_CROSS_BACK_BEGIN		= 64530; //跨服返回开始
+	STAR_WARS_CROSS_BACK_FINISH		= 64531; //跨服返回完成	
+	STAR_WARS_OFFERICER_CHANGE_KING_REQ = 64536; //修改霸主.
+	STAR_WARS_SERVER_PRESIDENT_REQ	= 64537; //请求区服的国王.
+	STAR_WARS_SERVER_PRESIDENT_RESP = 64538; //请求区服的国王.	
+	/**-------------------64501-64600---------------------*/
+	/****----------------------64601-64700 攻防模拟战------------------**/
+	SIMULATE_WAR_PAGE_INFO_REQ					= 64601; //请求活动主界面的信息
+	SIMULATE_WAR_PAGE_INFO_RESP					= 64602; //请求活动主界面的信息
+	SIMULATE_WAR_ENCOUREAGE_INFO_REQ			= 64603; //玩家的助威信息
+	SIMULATE_WAR_ENCOUREAGE_INFO_RESP			= 64604; //玩家的助威信息
+	SIMULATE_WAR_ENCOURAGE_REQ					= 64605; //请求助威.
+	SIMULATE_WAR_ALL_MARCH_REQ					= 64606; //玩家的三路出兵信息.
+	SIMULATE_WAR_ALL_MARCH_RESP					= 64607; //玩家的三路出兵信息.
+	SIMULATE_WAR_SIGN_UP_REQ					= 64608; //报名.
+	SIMULATE_WAR_SIGN_UP_RESP					= 64609; //报名
+	SIMULATE_WAR_ADJUST_WAY_REQ					= 64610; //调整分路信息.
+	SIMULATE_WAR_WAY_PLAYERS_REQ				= 64611; //请求该路的玩家信息.
+	SIMULATE_WAR_WAY_PLAYERS_RESP				= 64612; //请求该路的玩家信息.
+	SIMULATE_WAR_ORDER_ADJUST_REQ				= 64613; //调整顺序.
+	SIMULATE_WAR_DISSOLVE_REQ					= 64614; //解散玩家的某条路上的出征.
+	SIMULATE_WAR_ADJUST_MARCH_REQ				= 64615; //调整出兵信息.
+	SIMULATE_WAR_BATTLE_RECORD_REQ				= 64616; //请求战斗记录.
+	SIMULATE_WAR_BATTLE_RECORD_RESP				= 64617; //请求战斗记录.
+	SIMULATE_WAR_PAGE_INFO_UPDATE				= 64618; //更新主界面的信息.
+	/****----------------------64601-64700 攻防模拟战------------------**/
+	
+		
+	///////////////////////////////////////////////
+	///////幽灵工厂	，64930~64960	       ////////
+	///////////////////////////////////////////////
+	GHOST_TOWER_CHALLANGE_REQ = 64931;  //挑战
+	GHOST_TOWER_CHALLANGE_RESP = 64932;  //挑战
+	
+	GHOST_TOWER_MONSTER_DETAIL_REQ  = 64933; //怪物详细信息
+	GHOST_TOWER_MONSTER_DETAIL_RESP = 64934;//怪物详细信息
+	
+	GHOST_TOWER_COLLECT_REQ = 64935; //收集产出
+	GHOST_TOWER_COLLECT_RESP = 64936; //收集产出
+	
+	GHOST_TOWER_INFO_RESP = 64937;   //幽灵工厂信息
+	
+	GHOST_TOWER_ATTACK_SUCESS_RESP = 64938; //挑战成功
+	
+	/////// 方尖碑，64940~64950	       ////////
+	
+	OBELISK_MISSION_SYNC		= 64940;	//方尖碑任务同步
+	OBELISK_MISSION_REQ 		= 64941;	//方尖碑任务请求
+	OBELISK_MISSION_REWARD 		= 64942;	//方尖碑领奖请求
+	OBELISK_MISSION_RED_POINT	= 64943;	//方尖碑红点同步
+	
+	
+	// 账号注销
+	ACCOUNT_CANCELLATION_REQ = 65000; // 账号注销请求
+	ACCOUNT_CANCELLATION_RESP = 65001;
+	
+	ACCOUNT_CANCELLATION_INFO_PUSH = 65002; // 账号注销信息推送
+	
+	ACCOUNT_CANCELLATION_PER_REQ = 65003; // 账号注销验证请求 不用发协议体
+	ACCOUNT_CANCELLATION_PER_RESP = 65004; // 返回AccountCancellationResp
+	
+	GIFT_RECOMMEND_INFO_REQ = 65006; // 请求礼包推荐列表  登录的时候服务器主动推，切城内的时候客户端请求
+	GIFT_RECOMMEND_INFO_RESP = 65007;
+	GIFT_RECOMMEND = 65008; // 推荐礼包成功，客户端通知服务器，通用成功返回
+	
+	///////////////////////////////////////////////
+	///////情报交易所，65100~65150	       ////////
+	///////////////////////////////////////////////	
+	
+	AGENCY_PAGE_INFO_REQ     = 65100; // 情报交易界面信息
+	AGENCY_PAGE_INFO_RESP    = 65101;
+
+	AGENCY_GET_EVENT_AWARD   = 65102; // 领取事件奖励 AgencyEventCommon
+	
+	AGENCY_GOTO_SEARCH_REQ   = 65103; // 情报中心前往查找 AgencyEventCommon
+	AGENCY_GOTO_SEARCH_RESP  = 65104; // AgencySearchResp
+	
+	AGENCY_MARCH_REQ         = 65105; // 情报中心行军发起请求 WorldMarchReq
+	AGENCY_MARCH_RESP        = 65106;
+	
+	AGENCY_LEVEL_UP_REQ      = 65107; // 情报中心升级请求(通用成功返回)
+	AGENCY_BOX_REQ           = 65108; // 情报中心领取宝箱 
+	
+	GEN_AGENCY_EVENT         = 65109; // 生成情报任务 GenAgencyEventReq
+	
+	//////////////超时空特权（自动拉锅）开始///////////////////////
+	AUTO_GATHER_PARA_SETUP_REQ = 65115; //自动拉锅参数设置请求
+	AUTO_GATHER_STOP_REQ = 65116; //自动拉锅开启和关闭请求
+	AUTO_GATHER_STATUS_NOTICE = 65117; //拉锅状态通知
+	//////////////超时空特权（自动拉锅）结束///////////////////////
+	
+}

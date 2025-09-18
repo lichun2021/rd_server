@@ -1,0 +1,33 @@
+# 首个事件的到达时间（秒）
+firstEventTime = 3
+
+# 每个任务增加的经验值
+eventExp = 1
+
+# 刷新时间
+refreshTime = 7,15,23
+
+# 刷新延迟时间
+refreshDelay = 7200
+
+# 刷新CD
+refreshCd = 28800
+
+# 事件的消失时间
+eventDisappearTime = 57600
+
+# 事件的体力消耗
+strengthConsume = 5
+
+# 开启实力验证的情报中心等级
+startSpecialLv = 6
+
+# 前X级自动升级，无需手动点击
+autoLevelUpLimit = 4
+
+# 情报中心开放需要大本等级
+agencyUnlockLevel = 3
+
+# 金色情报每天可刷新最大数量
+specialEventDailyRefreshLimit = 10
+

@@ -1,0 +1,209 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+//请求组队数
+message WarCollegeTeamCountReq {
+
+}
+
+//返回组队数
+message WarCollegeTeamCountResp {
+	required int32 num = 1; //返回组队数
+}
+
+//请求所有组队的信息, 如果玩家有组队信息返回组队的详细信息,否则返回组队的详细信息
+message WarCollegeTeamReq{
+	
+}
+
+
+message WarCollegeMiniTeamResp{
+	repeated MiniTeamInfoMsg  miniTeamInfos = 1; //
+	optional SelfTeamInfo selfTeamInfo =2;
+}
+
+//返回组队的详细信息
+message WarCollegeTeamDetailResp {
+	required int32 instanceId = 1; //副本ID
+	repeated TeamPlayerMsg teamPlayers = 2; //组队玩家列表
+	optional SelfTeamInfo selfTeamInfo=3;//自己的信息
+	optional TeamState state=4;//队伍状态，只需要判断是否已经进副本，其他状态没什么意义
+	optional int32 createTime=5;//队伍创建时间
+	optional int32 teamId=6;//队伍id
+}
+
+
+//创建队伍, 创建队伍成功之后直接返回 WarCollegeTeamDetailResp
+message WarCollegeTeamCreateReq {
+	required int32 instanceId = 1; //创建的副本ID
+}
+
+//加入队伍，成功返回组队的详细信息
+message WarCollegeTeamJoinReq {
+	required int32 teamId = 1; // 主键ID
+}
+
+//快速加入，成功返回组队的详细信息
+message WarCollegeTeamFastJoinReq {
+}
+
+//删除成员
+message WarCollegeTeamKickPlayerReq {
+	required string playerId = 1; //删除成员ID
+}
+
+//主动退出 
+message WarCollegeTeamQuitReq {
+	
+}
+
+//收到退出协议
+message WarCollegeTeamQuitResp {
+	required TeamPlayerOper oper = 1; //主动退出,还是被踢出.
+}
+
+//删除队伍
+message WarCollegeTeamDissolveReq{
+	
+}
+
+//所有人收到队伍解散的消息,
+message WarCollegeTeamDissolveResp {
+	optional DismissInfo dismiss=1;//队伍解散信息
+}
+
+//玩家加入,退出其它队员收到该信息
+message WarCollegeTeamPlayerUpdate {
+	required TeamPlayerOper oper = 1; // 操作类型
+	required TeamPlayerMsg teamPlayer = 2 ;//玩家信息
+	optional TeamState state=3;//队伍状态，只需要判断是否已经进副本，其他状态没什么意义
+	optional string leader =4;//队长id
+}
+
+//队长进入副本
+message WarCollegeEnterInstanceReq {
+}
+
+//更新组队的状态, 队长进入副本之后同步该消息
+message WarCollegeTeamInfoUpdate {
+	
+}
+
+
+//列表组队信息
+message MiniTeamInfoMsg{
+	required int32 instanceId = 1; //副本ID
+	required string leaderName = 2;//队长名字
+	repeated MiniTeamPlayerMsg miniPlayers = 3; //显示玩家头像
+	required int32 teamId = 4; //组队ID 主键ID
+	optional TeamState state=5;//队伍状态，只需要判断是否已经进副本，其他状态没什么意义
+	optional int32 createTime=6;//队伍创建时间
+}
+
+//组队玩家的简略信息
+message MiniTeamPlayerMsg {
+	required int32  icon   = 1; //头像
+	required string pfIcon = 2; //平台头像
+	optional TeamState state=3;//队伍状态，只需要判断是否已经进副本，其他状态没什么意义
+	optional int32 maxInstanceId = 4; // 已通关最大id .  用于判断解锁
+	optional int32 helpRewardCount = 5; //带新领奖次数
+	optional bool isLeader = 6; //是否是队长
+	optional string playerId = 7; //玩家ID
+}
+
+//组队的玩家信息
+message TeamInfoMsg {	
+	repeated TeamPlayerMsg teamPlayers = 1; //组队玩家
+	required int32 teamId = 2; //组队ID, 主键ID
+	optional SelfTeamInfo selfTeamInfo =4;//自己打过的副本信息
+}
+
+enum TeamState {
+	TEAM_WAIT = 1;// 等待
+	TEAM_START = 2; //进行中
+}
+
+enum TeamPlayerOper {
+	TEAM_PLAYER_DELETE 		= 1; //删除玩家
+	TEAM_PLAYER_ADD 		= 2; //玩家加入
+	TEAM_PLAYER_QUIT		= 3; //玩家主动退出,副本外
+	TEAM_PLAYER_KICK		= 4; //被踢	
+	TEAM_PLAYER_JOIN_INSTANCE		= 5; //进入副本
+	TEAM_PLAYER_QUIT_INSTANCE		= 6; //离开副本房间，也要退出队伍
+	TEAM_PLAYER_OVER_INSTANCE		= 7; //战斗结束回调，也要退出房间
+	TEAM_PLAYER_PREPAROVER						=8;//准备时间结束
+	TEAM_PLAYER_FIREOUT							=9;//烧穿
+	TEAM_PLAYER_LEAVE							=10;//主动退出,副本内
+}
+
+message TeamPlayerMsg {
+	required bool isLeader = 1; //是否是队长
+	required string playerId = 2; //玩家ID
+	required string playerName = 3; //玩家的名字
+	required int32  icon   = 4; //头像
+	required string pfIcon = 5; //平台头像
+	required int64 battleValue = 6; //战力
+	required PlayerCommon playerCommon = 7; //玩家的通用信息
+	optional TeamState state=8;//玩家状态，只需要判断是否在副本就行了
+	optional int32 maxInstanceId = 9; // 已通关最大id .  用于判断解锁
+	optional int32 helpRewardCount = 10; //带新领奖次数
+}
+//自己在联盟副本队伍的信息，包括今日打过的副本id，次数，时间
+message SelfTeamInfo{
+	repeated SelfInfo infos=1;
+	optional int32 maxInstanceId = 2; // 已通关最大id .  用于判断解锁
+	optional int32 helpRewardCount = 3;
+}
+message SelfInfo{
+	optional int32 instanceId=1;//副本id
+	optional int32 hitCount=2;//打过几次
+	optional int64 lastTime=3;//最后一次打过的时间
+	optional int32 rewardCount=4;//领奖次数
+	optional int64 fristRewardTime = 5; //首通奖励时间
+}
+
+//解散的推送
+message DismissInfo{
+	optional DismissType dtype=1;//解散原因
+}
+
+//队伍解散原因
+enum DismissType{
+	LEADER_DISMISS   =1;//队长解散
+	TIME_OUT_DISMISS  =2;//超时解散，从进入副本时间算
+	ACT_END_DISMISS =3;//活动结束解散
+	BATTLE_OVER_DISMISS=4;//战斗结束解散
+	CREATE_TOO_LONG_DISMISS=5;//创建时间过长没有进副本解散
+}
+
+
+
+
+//玩家联盟军演信息
+message WarCollegeInfo{
+	required int32 maxInstanceId     = 1;  //最高副本通关ID
+	repeated WarCollegeInstance Wars = 2;  //副本信息
+	repeated WarCollegeSpecialTerm specialTerms = 3; //特殊排期
+	optional int64 normalTermStart = 4; //正常排期时间点
+}
+
+//玩家副本信息
+message WarCollegeInstance{
+	required int32 instanceId       = 1;  //副本id 
+	required int32 exterminateCount = 2;  //剿灭次数
+	required int32 hitCount         = 3;  //攻打次数
+}
+
+//剿灭副本请求
+message WarCollegeInstanceExterminateReq{
+	required int32 instanceId       = 1;  //副本id 
+}
+
+
+
+//联盟队伍基本信息
+message WarCollegeSpecialTerm{
+	optional int64 specialTimeStart  = 3;  //特殊时段开启时间
+	optional int64 specialTimeEnd    = 4;  //特殊时段结束时间
+}
+
+

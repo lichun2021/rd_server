@@ -1,0 +1,99 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+///////星海激战
+// FGYL_GAME_SYNC			= 483; // 副本信息同步
+message PBFGYLGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBFGYLGuildInfo guildInfo = 3; 
+	repeated PBFGYLPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; //怪物数量
+	optional int32 winCamp = 7;
+	optional int32 level = 8; // 副本难度
+}
+
+// 泰博利亚小地图
+message PBFGYLSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBFGYLGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;	
+}
+
+// 联盟统计 
+message PBFGYLGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int32 killHonor = 13;
+	optional int32 collectHonor = 14;
+	optional int32 nuclearCount = 15; // 核弹发射次数
+	optional bool nuclearReady = 16; // 核弹是否可用
+	// repeated string nuclearBuildLeaderid = 18; // 控制核弹建筑队长id
+	optional int32 nianKillCnt = 19; // 机甲击杀数
+	optional string teamName = 20; // 队名
+	optional int64 teamPower = 21; // 战力
+	optional int32 killMonster = 22; 
+	repeated int32 controlBuildId = 23; // 本联盟控制建筑 
+	
+	optional string leaderId = 24; //盟主ID
+	optional string leaderName  = 25; //盟主名字
+	
+}
+
+message PBFGYLPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killPower = 7; // 杀敌战力
+	optional int32 lostPower = 8; // 损失防坦战力
+	optional int32 killMonster = 9; // 杀怪
+	optional sint32	icon			= 10; //玩家头像
+	optional string pfIcon			= 11;//平台头像
+	
+	optional string guildId = 12; //联盟ID
+	
+	optional bool isMidwayQuit = 20; // 是否中途退出
+}
+
+
+//FGYL_GAME_OVER			= 472; // 游戏结束
+message PBFGYLGameOver{ 
+	optional int64 playerHonor  = 1; // 个人积分
+	optional bool win           = 2; 
+	optional int32 quitReson    = 3; //正常结束 0  主动退出 1
+	
+	repeated PBFGYLBuildHurtRank 	fgylHurtRank = 4; // 建筑详情-伤害排行
+	repeated PBFGYLMonsterKillRank 	fgylMonsterRank = 5; //野怪击杀榜
+	optional int64 gametime = 6; // 用时
+}
+
+message PBFGYLKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// FGYL_PLAYER_QUIT			= 477; // 有玩家退出
+message PBFGYLPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBFGYLPlayerMoveCitySync{
+	optional int64 fgylMoveCityCD = 1;  // 免费迁城
+	optional int32 fgylMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}

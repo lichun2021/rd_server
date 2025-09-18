@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" fuelRange="0_0" effect="10049_5000,10050_5000,10051_5000" />
+      <data id="2" fuelRange="1_20" effect="10049_4000,10050_4000,10051_4000" />
+      <data id="3" fuelRange="21_40" effect="10049_3000,10050_3000,10051_3000" />
+      <data id="4" fuelRange="41_60" effect="10049_2500,10050_2500,10051_2500" />
+      <data id="5" fuelRange="61_80" effect="10049_2000,10050_2000,10051_2000" />
+      <data id="6" fuelRange="81_100" effect="10049_1500,10050_1500,10051_1500" />
+      <data id="7" fuelRange="101_120" effect="10049_1000,10050_1000,10051_1000" />
+      <data id="8" fuelRange="121_140" effect="10049_800,10050_800,10051_800" />
+      <data id="9" fuelRange="141_160" effect="10049_600,10050_600,10051_600" />
+      <data id="10" fuelRange="161_180" effect="10049_400,10050_400,10051_400" />
+      <data id="11" fuelRange="181_200" effect="10049_200,10050_200,10051_200" />
+      <data id="12" fuelRange="201_99999" />
+</root>

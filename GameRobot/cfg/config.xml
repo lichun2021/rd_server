@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>   
+
+	<!-- 是否开启在线机器人检测 -->
+	<detect>true</detect>
+	<!-- 在线机器人检测时间间隔，单位秒 -->
+	<detectGap>300</detectGap>
+	<!-- 机器人主线程循环检测机器人方式 ：0不限时注册，1限时注册-->
+	<detectType>1</detectType>
+	<!-- 当在线人数高于该基准比率时， 按几率确定是否添加机器人，低于该基准比率时必添加 -->
+	<percentBase>50</percentBase>
+	<!-- 一次检测最多可以移除的机器人数量 -->
+	<removeCount>800</removeCount>
+	<!-- 可以接受的登录失败玩家个数，登录失败的玩家数量小于等于此值开启检测，否则不开启 -->
+	<loginFailedCount>10</loginFailedCount>
+	<!-- 像驻扎等需要在目的地停留的行军，在目的地停留的时长， 单位s -->
+	<marchAlive>1800</marchAlive>
+	<!-- false表示本地手动测试用， true表示开启大量机器人自动测试 -->
+	<auto>false</auto>
+	<!-- 测试环境是否是debug模式 -->
+	<debug>false</debug>
+	
+	<!-- 如果auto是false,此字段起效,仅执行以下Action, 用于做针对性测试 -->
+	<manualAction>
+		FriendAction
+	</manualAction>
+	
+	<robot>
+		<!-- 在线时长基础值 ，单位秒-->
+		<onlineDuration>600</onlineDuration>
+		<onlineOffset>600</onlineOffset>
+		<!-- 离线时长达到多久可重新登录，单位秒 -->
+		<offlineDuration>900</offlineDuration>
+		<!-- 随机Action的概率，此值越大，玩家的action越多，100为所有Action -->
+		<probability>85</probability>
+		<!-- 每个Action执行周期的偏移量随机值, 单位为秒 -->
+		<offset>8</offset>
+		<!-- 机器人登录时间间隔，单位ms -->
+		<loginGap>200</loginGap>
+		<!-- 机器人并发登录线程数 -->
+		<loginThreads>4</loginThreads>
+		<!-- 任务线程池 -->
+		<taskThreads>8</taskThreads>
+		<!-- 世界行军遍历时间间隔，单位s -->
+		<tickPeriod>2</tickPeriod>
+		
+		<!-- 低级玩家下线后长时间不再上线的数量 -->
+		<offlineCount>100</offlineCount>
+		<!-- 低级玩家下线后记录到长时间不再上线玩家列表中，一次添加的数量 -->
+		<addCountOnce>10</addCountOnce>
+		<!-- 低级玩家下线后，隔多长时间后重新上线，单位 s-->
+		<loginAgain>36000</loginAgain>
+		<!-- 初始化账号时间间隔 ， 单位 s-->
+		<resetAccountDuration>3600</resetAccountDuration>
+		<!-- 机器人发送聊天信息的概率 -->
+		<chatProbability>35</chatProbability>
+	</robot>
+	
+	<!-- 刷新一次商品列表最多购买多少次 -->
+	<travelShopBuyTimes>10</travelShopBuyTimes>
+	<!-- 一次购买道具最多买多少个 -->
+	<itemBuyRandomRange>10</itemBuyRandomRange>
+	<!-- 购买礼包时间间隔 单位：s-->
+	<giftBuyDuration>1800</giftBuyDuration>
+	<!-- 可发起的行军数量上限 -->
+	<marchCount>200</marchCount>
+	<!-- 世界地图边界 -->
+	<worldMaxX>600</worldMaxX>
+	<worldMaxY>1200</worldMaxY>
+	<!-- 世界移动半径 -->
+	<worldMoveRadius>60</worldMoveRadius>
+	<!-- 世界行军类型权重 --> 
+	<!-- 1-PVP，2-打怪，3-侦查，4-采集资源，5-驻扎，6-集结PVP， 7-参与集结PVP，8-集结打怪， 9-参与集结打怪 ， 16-新版野怪-->
+	<marchTypeWeight>1_30;2_15;3_15;4_10;5_10;6_30;7_20;8_10;9_10;10_10;11_10;12_10;13_10;14_10;16_10;17_10;18_10</marchTypeWeight>
+	
+	<!-- 国王战攻击的最大距离,大于此距离不再攻击王城 -->
+	<presidentAttackRadius>300</presidentAttackRadius>
+	
+	<!-- action循环执行的时间间隔：单位s, 值为0表示此action不执行-->
+	<actionPeriod>
+	<!-- 活动 -->
+		<PlayerActivityAction>123</PlayerActivityAction>
+	<!-- 军队 -->
+		<PlayerArmyAction>400</PlayerArmyAction>
+	<!-- 建筑 -->	
+		<BuildingCreateAction>60</BuildingCreateAction>
+		<BuildingUpgradeAction>70</BuildingUpgradeAction>
+		<BuildingRepairAction>7200</BuildingRepairAction>
+		<ResourceCollectAction>120</ResourceCollectAction>
+		<BuildingOutFireAction>7200</BuildingOutFireAction>
+		<BuildingRemoveAction>600</BuildingRemoveAction>
+		<UnlockBuildAreaAction>600</UnlockBuildAreaAction>
+	<!-- 聊天 -->
+		<PlayerChatAction>0</PlayerChatAction>
+	<!-- 装备 -->	
+		<EquipOperationAction>0</EquipOperationAction>
+	<!-- 联盟 -->	
+		<PlayerGuildAction>600</PlayerGuildAction>
+		<PlayerGuildManorAction>20</PlayerGuildManorAction>
+	<!-- 英雄 -->
+		<PlayerHeroAction>369</PlayerHeroAction>
+		<!-- 联盟大礼包 -->
+		<PlayerGuildBigGiftAction>456</PlayerGuildBigGiftAction>
+	<!-- 商城道具 -->	
+		<PlayerBuyGiftAction>353</PlayerBuyGiftAction>
+		<PlayerGachaAction>383</PlayerGachaAction>
+		<PlayerItemBuyAction>304</PlayerItemBuyAction>
+		<PlayerItemUseAction>313</PlayerItemUseAction>
+		<FoggyBoxOperateAction>1679</FoggyBoxOperateAction>
+		<VipShopOperateAction>1789</VipShopOperateAction>
+	<!-- 邮件 -->
+		<PlayerMailAction>0</PlayerMailAction>
+	<!-- 行军 -->	
+		<PlayerMarchAction>37</PlayerMarchAction>
+		<WorldMarchCallbackAction>63</WorldMarchCallbackAction>
+		<WorldMarchSpeedAction>21</WorldMarchSpeedAction>
+	<!-- 任务 -->
+		<PlayerMissionAction>80</PlayerMissionAction>	
+	<!-- 玩家设置 -->	
+		<PlayerOperationAction>3700</PlayerOperationAction>
+	<!-- 时间队列 -->
+		<PlayerQueueAction>720</PlayerQueueAction>
+	<!-- 排行榜 -->
+		<PlayerRankAction>0</PlayerRankAction>
+	<!-- 战略天赋 -->	
+		<PlayerTalentAction>3700</PlayerTalentAction>
+	<!-- 科技 -->
+		<TechLevelUpAction>388</TechLevelUpAction>
+	<!-- 许愿池 -->
+		<PlayerWishingAction>60</PlayerWishingAction>
+	<!-- 冒泡奖励 -->
+		<BubbleRewardAction>413</BubbleRewardAction>
+	<!-- 好友 -->
+		<FriendAction>10</FriendAction>
+		<PresidentOfficerGiftAction>1000</PresidentOfficerGiftAction>
+	<!-- 国王战 -->
+		<PresidentAction>20</PresidentAction>
+	<!-- RTS -->
+		<PlotAction>0</PlotAction>
+	<!-- 黑市商店 -->
+		<TravelShopAction>900</TravelShopAction>
+	<!-- 主播聊天 -->
+		<AnchorChatAction>5</AnchorChatAction>
+	<!--  超值礼包 -->
+	    <GiftAction>300</GiftAction>
+	<!-- 超级武器 -->
+	    <SuperWeaponAction>60</SuperWeaponAction>
+	<!-- 切换城内外 -->
+	    <ChangeInWorldAction>20</ChangeInWorldAction>    
+	</actionPeriod>
+</root>

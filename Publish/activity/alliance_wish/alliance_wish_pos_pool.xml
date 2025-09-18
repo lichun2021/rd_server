@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" selectWeight="1_1000,2_2000,3_3000,4_4000,5_5000" />
+      <data id="102" selectWeight="1_2000,2_3000,3_4000,4_5000,5_6000" />
+      <data id="103" selectWeight="1_6000,2_4000" />
+</root>

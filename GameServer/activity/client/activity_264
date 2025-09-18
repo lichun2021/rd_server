@@ -1,0 +1,31 @@
+return {
+	prop =
+	{
+		activityId = 264,
+		name = [[盛典祈愿]],
+		title = [[]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.每人每天可以进行一次<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">祈愿</font>。每次祈愿都会获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">礼物</font>。<br/>2.你选择的祈愿辞会被<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">其他人</font>看到。<br/>3.人们的共同祈愿次数每达到一个里程碑，会解锁<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">大礼物</font>。</font>]],
+		priority = 19250,
+		icon = [[Activity_Icon_264_Nor.png]],
+		selecticon = [[Activity_Icon_264_Sel.png]],
+		tips1 = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">达成条件：全服进度达到</font>]],
+		tips2 = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">达成奖励：</font>]],
+		signRewards = [[30000_810001_5,30000_24200039_200]],
+		randomRewards = 2021121,
+		chatTime = [[2_7]],
+		bulletChatCount = 30,
+		supplementaryArticles = 20,
+		defaultNumber = 8,
+		typeface = 30,
+		color = [[242_236_222,255_158_163,249_205_116,239_153_94,203_180_226,168_200_246]],
+		blessingWords = [[@Bless1,@Bless2,@Bless3,@Bless4,@Bless6,@Bless7,@Bless8,@Bless9,@Bless10,@Bless11,@Bless12,@Bless14,@Bless15,@Bless16,@Bless17,@Bless18,@Bless19,@Bless20,@Bless22,@Bless23,@Bless24,@Bless25,@Bless26,@Bless28,@Bless29,@Bless30,@Bless31,@Bless32,@Bless33,@Bless34,@Bless35,@Bless36,@Bless37,@Bless38,@Bless39,@Bless40,@Bless41,@Bless42,@Bless43,@Bless44,@Bless45,@Bless46,@Bless47,@Bless48,@Bless49,@Bless50,@Bless51,@Bless52,@Bless53,@Bless54,@Bless55,@Bless56,@Bless57,@Bless58,@Bless59,@Bless60,@Bless61,@Bless62,@Bless63,@Bless64,@Bless65,@Bless66,@Bless67,@Bless68,@Bless69,@Bless70,@Bless71,@Bless72,@Bless73,@Bless74,@Bless75,@Bless76,@Bless77,@Bless78,@Bless79,@Bless80,@Bless81,@Bless82,@Bless83,@Bless84,@Bless85,@Bless86,@Bless87,@Bless88,@Bless89,@Bless90,@Bless91,@Bless92,@Bless93,@Bless94,@Bless95,@Bless96,@Bless97,@Bless98,@Bless99,@Bless100,@Bless101,@Bless102,@Bless103,@Bless104,@Bless105,@Bless106,@Bless107,@Bless108,@Bless109,@Bless110,@Bless111,@Bless112,@Bless113,@Bless114,@Bless115,@Bless116,@Bless117,@Bless118,@Bless119,@Bless120,@Bless121,@Bless122,@Bless123,@Bless124,@Bless125,@Bless126,@Bless127,@Bless128,@Bless129,@Bless130,@Bless131,@Bless132,@Bless133,@Bless134,@Bless135,@Bless136,@Bless137,@Bless138,@Bless139,@Bless140,@Bless141,@Bless142,@Bless143,@Bless144,@Bless145,@Bless146,@Bless147,@Bless148,@Bless149,@Bless150]],
+	},
+	ssy_full_signin_reward = [[achieveId	conditionValue	rewards
+1	1	2
+2640001	300000	30000_24200039_200,30000_21070056_20,30000_21065001_5,30000_1300027_60,30000_802004_75,30000_21063005_125,30000_1782103_250,30000_802005_25,30000_1782106_10,30000_800002_75,30000_810001_2,30000_1780045_2
+2640002	800000	30000_24200039_300,30000_21070056_40,30000_21065001_10,30000_1300027_120,30000_802004_150,30000_21063005_250,30000_1782103_500,30000_802005_50,30000_1782106_20,30000_800002_150,30000_810001_4,30000_1780045_4
+2640003	1200000	30000_2351000_1,30000_24200039_400,30000_21070056_60,30000_21065001_15,30000_1300027_180,30000_802004_225,30000_21063005_375,30000_1782103_750,30000_802005_75,30000_1782106_30,30000_800002_225,30000_810001_6,30000_1780045_6
+2640004	2000000	30000_24200039_600,30000_21070056_80,30000_21065001_20,30000_1300027_240,30000_802004_300,30000_21063005_500,30000_1782103_1000,30000_802005_100,30000_1782106_40,30000_800002_300,30000_810001_8,30000_1780045_8
+]],
+
+}

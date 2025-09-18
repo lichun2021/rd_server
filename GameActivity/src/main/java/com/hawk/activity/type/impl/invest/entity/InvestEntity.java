@@ -1,0 +1,170 @@
+package com.hawk.activity.type.impl.invest.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Column;
+import org.hawk.annotation.IndexProp;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hawk.db.HawkDBEntity;
+import org.hibernate.annotations.GenericGenerator;
+import com.hawk.activity.type.IActivityDataEntity;
+import com.hawk.serialize.string.SerializeHelper;
+
+@Entity
+@Table(name = "activity_invest")
+public class InvestEntity  extends HawkDBEntity implements IActivityDataEntity {
+    
+	@Id
+	@GenericGenerator(name = "uuid", strategy = "org.hawk.uuid.HawkUUIDGenerator")
+    @GeneratedValue(generator = "uuid")
+    @IndexProp(id = 1)
+	@Column(name = "id", unique = true, nullable = false)
+	private String id;
+	
+    @IndexProp(id = 2)
+	@Column(name = "playerId", nullable = false)
+	private String playerId = null;
+	
+    @IndexProp(id = 3)
+	@Column(name = "termId", nullable = false)
+	private int termId;
+	
+    @IndexProp(id = 4)
+	@Column(name = "investItems", nullable = false)
+	private String investItems;
+
+    @IndexProp(id = 5)
+	@Column(name = "createTime", nullable = false)
+	private long createTime;
+
+    @IndexProp(id = 6)
+	@Column(name = "updateTime", nullable = false)
+	private long updateTime;
+
+    @IndexProp(id = 7)
+	@Column(name = "invalid", nullable = false)
+	private boolean invalid;
+	
+	@Transient
+	private List<InvestItem> itemList = new ArrayList<InvestItem>();
+	
+	public InvestEntity() {
+	}
+	
+	public InvestEntity(String playerId, int termId) {
+		this.playerId = playerId;
+		this.termId = termId;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = playerId;
+	}
+
+	public int getTermId() {
+		return termId;
+	}
+
+	public void setTermId(int termId) {
+		this.termId = termId;
+	}
+
+	@Override
+	public long getCreateTime() {
+		return createTime;
+	}
+
+	@Override
+	protected void setCreateTime(long createTime) {
+		this.createTime = createTime;
+	}
+
+	@Override
+	public long getUpdateTime() {
+		return updateTime;
+	}
+
+	@Override
+	protected void setUpdateTime(long updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	@Override
+	public boolean isInvalid() {
+		return invalid;
+	}
+
+	@Override
+	public void setInvalid(boolean invalid) {
+		this.invalid = invalid;
+	}
+	
+	@Override
+	public String getPrimaryKey() {
+		return this.id;
+	}
+
+	@Override
+	public void setPrimaryKey(String primaryKey) {
+		this.id = primaryKey;
+	}
+	
+	public String getInvestItems() {
+		return investItems;
+	}
+
+	public void setInvestItems(String investItems) {
+		this.investItems = investItems;
+	}
+
+	public void addItem(InvestItem item) {
+		itemList.add(item);
+		this.notifyUpdate();
+	}
+
+	public List<InvestItem> getItemList() {
+		return itemList;
+	}
+
+	public InvestItem getInvestItem(int productId) {
+		for (InvestItem item : itemList) {
+			if (item.getProductId() == productId) {
+				return item;
+			}
+		}
+		
+		return null;
+	}
+	
+	public void removeInvestItem(InvestItem investItem) {
+		itemList.remove(investItem);
+	}
+
+	@Override
+	public void beforeWrite() {
+		this.investItems = SerializeHelper.collectionToString(this.itemList, SerializeHelper.ELEMENT_DELIMITER);
+	}
+	
+	@Override
+	public void afterRead() {
+		this.itemList.clear();
+		SerializeHelper.stringToList(InvestItem.class, this.investItems, this.itemList);
+	}
+
+}

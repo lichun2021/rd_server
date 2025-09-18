@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" redis="3" atkHead="1" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="25_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="2" redis="3" atkHead="1" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_50" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="3" redis="3" atkHead="2" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="4" redis="3" atkHead="2" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="85_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="5" redis="3" atkHead="3" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="130_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="6" redis="3" atkHead="3" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_50" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="7" redis="3" atkHead="4" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_140" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="8" redis="3" atkHead="4" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="9" redis="3" atkHead="5" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_140" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="10" redis="3" atkHead="5" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="11" redis="3" atkHead="6" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_260" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="12" redis="3" atkHead="6" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="25_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="13" redis="3" atkHead="7" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="14" redis="3" atkHead="7" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="85_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="15" redis="3" atkHead="8" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_260" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="16" redis="3" atkHead="8" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="130_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="17" redis="3" atkHead="9" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_80" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="18" redis="3" atkHead="9" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="85_80" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="19" redis="3" atkHead="10" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_140" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="20" redis="3" atkHead="10" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="21" redis="3" atkHead="11" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="115_140" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="22" redis="3" atkHead="11" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="115_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="23" redis="3" atkHead="12" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_230" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="24" redis="3" atkHead="12" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="85_230" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="25" redis="3" atkHead="13" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_130" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="26" redis="3" atkHead="13" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="90_130" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="27" redis="3" atkHead="13" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="65_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="28" redis="3" atkHead="13" tickPeriod="5000" towerAtk="5" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="90_180" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+</root>

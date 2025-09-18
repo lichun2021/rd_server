@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" targetId="1001" lvMin="1" lvMax="19" score="3000" reward="30000_810010_5,30000_850035_2,30000_1510002_3" />
+      <data id="2" targetId="1002" lvMin="1" lvMax="19" score="6000" reward="30000_810010_10,30000_850035_4,30000_1510002_10" />
+      <data id="3" targetId="1003" lvMin="1" lvMax="19" score="15000" reward="30000_104050_1,30000_850036_2,30000_1510003_10,30000_840156_2,30000_850046_1" />
+      <data id="4" targetId="1001" lvMin="20" lvMax="30" score="5000" reward="30000_810010_5,30000_850035_2,30000_1510002_3" />
+      <data id="5" targetId="1002" lvMin="20" lvMax="30" score="15000" reward="30000_810010_10,30000_850035_4,30000_1510002_10" />
+      <data id="6" targetId="1003" lvMin="20" lvMax="30" score="30000" reward="30000_104050_1,30000_850036_2,30000_1510003_10,30000_840156_2,30000_850046_1" />
+</root>

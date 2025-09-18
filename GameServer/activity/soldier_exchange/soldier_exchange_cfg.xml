@@ -1,0 +1,15 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 2592000
+
+# 最小大本等级可见
+buildMinLevel = 35
+
+# 转换消耗
+exchangeCost = 10000_1000_6480
+
+# 活动期间总共转换次数
+exchangeTotalTime = 6
+
+# 转换CD；单位：秒
+exchangeCD = 7200
+

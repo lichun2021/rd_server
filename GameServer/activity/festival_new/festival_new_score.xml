@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="2008001"  conditionType="180105" conditionValue="300" timeLimit="86400" rewards="30000_1000002_10,30000_810001_5,30000_101050_3,30000_103050_3,30000_104050_3,30000_105050_3" />
+      <data achieveId="2008002"  conditionType="180105" conditionValue="600" timeLimit="259200" rewards="30000_1001003_5,30000_810001_10,30000_101050_6,30000_103050_6,30000_104050_6,30000_105050_6" />
+      <data achieveId="2008003"  conditionType="180105" conditionValue="900" timeLimit="432000" rewards="30000_1001003_5,30000_1510003_20,30000_13310003_20,30000_1510002_60,30000_13310002_60" />
+      <data achieveId="2008004"  conditionType="180105" conditionValue="1200" timeLimit="604800" rewards="30000_1001003_20,30000_1510004_20,30000_13310004_20,30000_1510003_60,30000_13310003_60,30000_810001_6,30000_800101_1" />
+</root>

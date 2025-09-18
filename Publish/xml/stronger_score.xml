@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" leftScore="0" rightScore="80" />
+      <data id="2" leftScore="81" rightScore="100" />
+      <data id="3" leftScore="101" rightScore="300" />
+      <data id="4" leftScore="301" rightScore="450" />
+      <data id="5" leftScore="451" rightScore="650" />
+      <data id="6" leftScore="651" rightScore="900" />
+      <data id="7" leftScore="901" rightScore="1000" />
+</root>

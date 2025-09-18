@@ -1,0 +1,214 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+// SW_GAME_SYNC			= 483; // 副本信息同步
+message PBSWGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBSWGuildInfo guildInfo = 3; 
+	repeated PBSWPlayerInfo playerInfo = 4;
+	repeated WorldPointDetailPB builddetail = 5; // 5个建筑信息
+}
+
+// 泰博利亚小地图
+message PBSWSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBSWGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;	
+}
+
+
+message PBSWGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int64 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int64 killHonor = 13;
+	optional string atkPresidentBuff = 14; // 进攻核心额外buff加成
+	optional int32 honorRank = 15;
+}
+
+message PBSWPlayerInfo{
+	// optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional string guildId = 7;
+	optional int32 killHonor = 8;
+	optional int32 killPower = 9;
+	optional int32 deadPower = 10;
+}
+
+
+//SW_GAME_OVER			= 472; // 游戏结束
+message PBSWGameOver{ 
+	optional int64 playerHonor = 1; // 个人积分
+	optional bool win = 2; 
+	optional int32 quitReson = 3; //正常结束 0  主动退出 1
+}
+
+message PBSWKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// SW_PLAYER_QUIT			= 477; // 有玩家退出
+message PBSWPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBSWPlayerMoveCitySync{
+	optional int64 SWMoveCityCD = 1;  // 免费迁城
+	optional int32 SWMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+message PBSWNuclearStart{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 广播核弹发射
+message PBSWNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+}
+
+
+//请求回到原服的玩家.
+message StarWarsInnerBackServerReq {
+	required string playerId = 1;//
+}
+
+//签回玩家.
+message StarWarsMoveBackReq {
+	required string playerId = 1;//
+}
+
+
+
+//***************录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像录像***************//
+message PBSWVideoPackage{
+	required string battleId = 1;
+	required int32 index = 2; // 序号
+	optional bool islast = 3; // 是否最后一个录像包
+	repeated PBSWCmd head = 4; // 头文件, 如果没有场影可用于构建场景. 如果已经在录像播放中则跳过  对应 PLAYER_ENTER_WORLD 请求
+	repeated PBSWCmd cmdList = 5; // 消息列表
+}
+
+message PBSWCmd{
+	required int64 timestemp = 1; // 时间戳
+	required int32 cmd = 2; // 协议id
+	optional bytes cmdBytes = 3; // 协议体.  客户端自行按cmd 解析  
+}
+
+message PBLastVideoIndexReq{
+	required string battleId = 1;
+}
+
+/**取得最新录像序号*/
+message PBLastVideoIndexResp{
+	required string battleId = 1;
+	optional bool hasVideo = 2;
+	optional int32 videoIndex = 3;
+}
+
+message PBVideoOfIndexReq{
+	required string battleId = 1;
+	required int32 index = 2;
+}
+
+
+//*******************************************************星球大战活动状态******************************************************
+// 活动阶段
+enum SWState{
+	SW_CLOSE		= 	-1;//功能关闭
+	SW_NOT_OPEN		=	1; //未开启
+	SW_SIGN_UP		=	2; //资格争夺
+	SW_MATCH		=	3; //资格确认
+	SW_WAR_ONE_WAIT	=	4; //第一场等待开战
+	SW_WAR_ONE_OPEN	= 	5; //第一场战场开启
+	SW_WAR_ONE_CALC	=	6; //第一场结果计算中
+	SW_WAR_TWO_WAIT	= 	7; //第二场等待开战
+	SW_WAR_TWO_OPEN	=	8; //第二场战场开启
+	SW_WAR_TWO_CALC =	9; //第二场结果计算中
+	SW_WAR_THREE_WAIT	= 10; //第三场等待开战
+	SW_WAR_THREE_OPEN	= 11; //第三场战场开启
+	SW_WAR_THREE_CALC	= 12; //第三场结果计算中
+	SW_WAR_FINISH	=	13; //战斗结束
+}
+
+// 联赛活动状态信息
+message SWStateInfo{
+	required SWState state 		= 1;//活动状态
+	optional int32 termId			= 2;//当前期数
+	optional int64 signStartTime	= 3;//本期开启时间(ms)
+	optional int64 signEndTime		= 4;//遴选结束时间(ms)
+	optional int64 matchEndTime		= 5;//匹配结束时间
+	optional int64 warOneMangeEndTime		= 6;//初赛管理结束时间(ms)
+	optional int64 warOneStartTime	= 7;//初赛战斗开启时间(ms)
+	optional int64 warOneEndTime	= 8; //初赛战斗结束时间(ms)
+	optional int64 warTwoMangeEndTime		= 9;//决赛管理结束时间(ms)
+	optional int64 warTwoStartTime	= 10;//决赛战斗阶段结束时间(ms)
+	optional int64 warTwoEndTime	= 11;//决赛战斗阶段结束时间(ms)
+	optional int64 warThreeMangeEndTime		= 12;//决赛管理结束时间(ms)
+	optional int64 warThreeStartTime	= 13;//决赛战斗阶段结束时间(ms)
+	optional int64 warThreeEndTime	= 14;//决赛战斗阶段结束时间(ms)
+	optional int64 endTime			= 15;//本期结束时间
+
+}
+
+// 界面信息
+message SWPageInfo{
+	optional SWStateInfo stateInfo	= 1; //活动状态信息
+	optional bool isJoin			= 2; //是否参与当前期比赛
+	optional int32 zoneId			= 3; //本盟所在赛区
+}
+
+// 联盟基础信息
+message SWGuildBaseInfo{
+	required string id		= 1;
+	required string name	= 2; //名称
+	required string tag		= 3; //简称
+	required int32 guildFlag	= 4; //联盟旗帜
+	required string leaderName = 5;
+	required string serverId	= 6;
+	optional int32 zoneId		= 7;
+	optional int64 power		= 8;
+}
+
+// 排行信息
+message SWGuildRank{
+	required int32 rank = 1;
+	required SWGuildBaseInfo guildInfo = 2;
+}
+
+// 获取星球大战赛区联盟排名
+message GetSWGuildRankReq{
+	required int32 zoneId = 1; // 大区id
+}
+
+message GetSWGuildRankResp{
+	required int32 zoneId = 1; // 大区id
+	repeated SWGuildRank rankInfo = 2;
+	optional SWGuildRank selfRank = 3;	
+}
+
+
+
+//*******************************************************星球大战活动状态******************************************************

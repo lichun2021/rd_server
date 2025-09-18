@@ -1,0 +1,240 @@
+option java_package = "com.hawk.game.protocol";
+
+message DataHolder
+{
+	optional int32 int32Val = 1;	
+	optional int64 int64Val = 2;
+	optional float floatVal = 3;
+	optional string stringVal = 4;
+}
+
+message HPDataWarpper
+{
+	optional bytes data = 1;
+}
+ 
+message HPKeyExchange
+{
+	optional bytes keys = 1;
+}
+
+message HPHeartBeat
+{
+	optional int64 timeStamp = 1;
+	optional bytes data = 2;
+	optional bool resetAccount = 3;  // 只在机器人测试的时候用到
+}
+
+message HPErrorCode
+{
+	required int32  hpCode = 1;	
+	required int32  errCode = 2;
+	optional string errMsg = 3;	
+	//0是错误码 1 是系统框  2是文字提示
+	optional int32  errFlag = 4 [default = 0];
+	repeated string params = 5; // 错误码参数
+}
+
+message EmptyProtocol
+{
+}
+
+// 操作成功的通用协议(不带具体参数和功能数据)
+message HPOperateSuccess
+{
+	required int32  hpCode = 1;	
+	repeated DataHolder datas = 2;
+}
+
+// 服务器信息
+message ServerInfo
+{
+	required string serverId = 1;
+	required string serverIp = 2;
+	required int32 serverPort = 3;
+}
+
+message KVData
+{
+	required string key = 1;
+	optional int32 val = 2;
+	optional string arg = 3;
+}
+
+// 二级密码设置或修改
+message SetPasswdReq 
+{
+	required string passwd = 1;  // 二级密码
+	optional string oldPasswd = 2;  // 老的二级密码
+}
+
+// 关闭密码
+message ClosePasswdReq
+{
+	required bool forceClose = 1;  // 是否是强制关闭
+}
+
+// 二级密码验证
+message PasswdCheckReq
+{
+	required string passwd = 1;  // 二级密码
+}
+
+// 二级密码信息
+message PasswdInfoPB
+{
+	required bool passwd = 1;       // 是否开启了二级密码
+	optional int64 closedTime = 2;  // 强制关闭情况下，关闭生效时间
+}
+
+message CsPlayerDataSync
+{
+	required string playerId = 1;
+}
+
+message PlayerIdList
+{
+	repeated string playerId = 1;
+}
+
+message HPCustomDataDefine
+{
+	required KVData data = 1;
+}
+
+message HPCustomDataSync
+{
+	repeated KVData data = 1;
+}
+
+// 章节引导数据
+message ModuleGuideData
+{
+	required int32 chapterId = 1;
+	required int32 stepId	 = 2;
+}
+
+// 客户端配置返回
+message HPClientCfgResp
+{
+	required string data = 1;
+}
+
+// 客户端事件类型
+enum ClientEventType 
+{
+	AUTHORIZATION_FAILED  = 1;   //授权失败上报
+    ACTIVITY_BUTTON_CLICK = 2;   //活动点击上报 
+	PUSH				  = 3;	 //客户端本地推送数据储存 key: register notify click
+	FIRST_RECHARGE_NOTICE = 4;	 //
+	ENTER_GIFT			  = 5;   //进入超值礼包
+	GAME_VIDEO            = 6;   //真人视频
+	ENTER_EVA_HOTLINE     = 7;   //进入伊娃热线
+	QUERY_QUESTION_EVA    = 8;   //在伊娃热线查询问题
+	STRATEGY_CLICK_EVA    = 9;   //在伊娃热线点击攻略
+	WARRIOR_KING_ENTER    = 10;  //英雄试炼进入 参数：1 通过超时空进入 2 通过机甲 3 通过游戏道具
+	WARRIOR_KING_END      = 11;  //英雄试炼结束 参数 游戏时间_胜利(1)或者失败(0)
+	MECHA                 = 12;  //机甲 参数：1 通过动画插入 2 通过视频机甲开门 3 通过整个剧情进入机甲功能引导
+	FRIEND_ENTRANCE_CLICK = 13;  //密友入口点击上报
+	SCENE_ENTRANCE_CLICK  = 14;  //场景入口点击上报
+}
+
+// 活动按钮类型
+enum ActivityBtns
+{
+	ActivityEntryBtn         =  1; //活动入口按钮
+	ActivityChildBtn         =  2; //子活动按钮
+	ActivityChildCellBtn     =  3; //子活动Cell按钮
+	ActivityJumpBtn          =  4; //点击活动下没有对应的配置ID的跳转按钮
+}
+
+// 首充13堡弹框的数据记录
+enum FirstRechargeEventType
+{
+	FirstRechargePop         	=  1; //首充13堡弹框弹出
+	FirstRechargeGoto         	=  2; //前往首充充值
+	FirstRechargeCancel     	=  3; //取消首充13堡
+	FirstRechargeSuc          	=  4; //首冲成功
+}
+
+// 客户端事件上报
+message ClientEventReport
+{
+	required ClientEventType type = 1; // 1、授权失败上报 2、活动事件上报 3、客户端本地推送数据储存 。。。。。。。
+	
+	// 活动上报args格式：ActivityBtns_ActivityId_AchieveId。ActivityBtns值对应1,2,3; ActivityId对应Activity.proto下的ActivityType，默认0; AchieveId对应成就Id，默认0;
+    // 点击活动按钮时只传ActivityBtns，不传ActivityId和AchieveId；点击子活动按钮时只传ActivityBtns_ActivityId，不传AchieveId
+	required string args = 2;
+}
+
+// 平台token信息更新请求
+message PfTokenUpdateReq 
+{
+	required string pfToken = 1;  // 平台token信息
+}
+
+// 线上紧急逻辑处理请求
+message UrgencyReq
+{
+	required int32 type   = 1;  // 处理类型
+    optional string args  = 2;  // 参数	
+}
+
+// 线上紧急逻辑处理响应
+message UrgencyResp
+{
+	optional string retMsg = 1;  // 处理结果
+}
+
+
+///////////////////////////// 合规-个保法相关内容 //////////////////////////////////////////
+
+// 服务器给客户端传的开关组合成的int32整数（代表31个开关，最高一位是符号位，不算做开关），1~31位每位代表一个对应的开关
+message PersonalProtectSwitchPB
+{
+	repeated int32 switchVals    = 1;  // 31个开关按位组合成的int32数值（最高一位是符号位，不算做开关）;如果大于31个小于62个，则添加第二个int32数值，以此类推
+}
+
+// 客户端向服务器请求设置开关
+message PersonalProtectSetReq
+{
+	required int32 switchIndex  = 1;  // 具体的开关
+	required int32 switchVal   = 2;  // 开关值，开启0（即不受限制），关闭1（受限制）
+}
+
+// 推送活动配置版本信息
+message ActivityCfgVersionInfoPush
+{
+	repeated ActivityCfgVersionInfo info = 1; // 活动配置版本信息
+}
+
+// 活动配置版本信息
+message ActivityCfgVersionInfo
+{
+	required int32 activityId = 1;
+	required string version = 2;
+}
+
+///////////////////////////// 合规-个保法相关内容（以上） //////////////////////////////////////////
+
+// 客户端记录日志
+message ClientTlogReq
+{
+	required string logType = 1; // 日志类型,客户端自己定义
+	required string logInfo = 2; // 日志内容,发JSON格式，里面不要带竖线"|"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

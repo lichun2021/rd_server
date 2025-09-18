@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" targetId="1001" lvMin="1" lvMax="15" score="400" reward="30000_810008_1" difficultLevel="1" />
+      <data id="2" targetId="1001" lvMin="1" lvMax="15" score="600" reward="30000_810008_2" difficultLevel="2" />
+      <data id="3" targetId="1001" lvMin="1" lvMax="15" score="800" reward="30000_810008_3" difficultLevel="3" />
+      <data id="4" targetId="1001" lvMin="16" lvMax="30" score="500" reward="30000_810003_1" difficultLevel="1" />
+      <data id="5" targetId="1001" lvMin="16" lvMax="30" score="750" reward="30000_810003_2" difficultLevel="2" />
+      <data id="6" targetId="1001" lvMin="16" lvMax="30" score="1000" reward="30000_810003_3" difficultLevel="3" />
+      <data id="7" targetId="1002" lvMin="1" lvMax="15" score="4000" reward="30000_810008_10" difficultLevel="1" />
+      <data id="8" targetId="1002" lvMin="1" lvMax="15" score="6000" reward="30000_810008_20" difficultLevel="2" />
+      <data id="9" targetId="1002" lvMin="1" lvMax="15" score="8000" reward="30000_810008_30" difficultLevel="3" />
+      <data id="10" targetId="1002" lvMin="16" lvMax="30" score="5000" reward="30000_810003_10" difficultLevel="1" />
+      <data id="11" targetId="1002" lvMin="16" lvMax="30" score="7500" reward="30000_810003_20" difficultLevel="2" />
+      <data id="12" targetId="1002" lvMin="16" lvMax="30" score="10000" reward="30000_810003_30" difficultLevel="3" />
+      <data id="13" targetId="1003" lvMin="1" lvMax="15" score="40000" reward="30000_810008_100" difficultLevel="1" />
+      <data id="14" targetId="1003" lvMin="1" lvMax="15" score="60000" reward="30000_810008_200" difficultLevel="2" />
+      <data id="15" targetId="1003" lvMin="1" lvMax="15" score="80000" reward="30000_810008_300" difficultLevel="3" />
+      <data id="16" targetId="1003" lvMin="16" lvMax="30" score="50000" reward="30000_810003_100" difficultLevel="1" />
+      <data id="17" targetId="1003" lvMin="16" lvMax="30" score="75000" reward="30000_810003_200" difficultLevel="2" />
+      <data id="18" targetId="1003" lvMin="16" lvMax="30" score="100000" reward="30000_810003_300" difficultLevel="3" />
+      <data id="19" targetId="2001" lvMin="1" lvMax="15" score="400" reward="30000_810008_1" difficultLevel="1" />
+      <data id="20" targetId="2001" lvMin="1" lvMax="15" score="600" reward="30000_810008_2" difficultLevel="2" />
+      <data id="21" targetId="2001" lvMin="1" lvMax="15" score="800" reward="30000_810008_3" difficultLevel="3" />
+      <data id="22" targetId="2001" lvMin="16" lvMax="30" score="500" reward="30000_810003_1" difficultLevel="1" />
+      <data id="23" targetId="2001" lvMin="16" lvMax="30" score="750" reward="30000_810003_2" difficultLevel="2" />
+      <data id="24" targetId="2001" lvMin="16" lvMax="30" score="1000" reward="30000_810003_3" difficultLevel="3" />
+      <data id="25" targetId="2002" lvMin="1" lvMax="15" score="4000" reward="30000_810008_10" difficultLevel="1" />
+      <data id="26" targetId="2002" lvMin="1" lvMax="15" score="6000" reward="30000_810008_20" difficultLevel="2" />
+      <data id="27" targetId="2002" lvMin="1" lvMax="15" score="8000" reward="30000_810008_30" difficultLevel="3" />
+      <data id="28" targetId="2002" lvMin="16" lvMax="30" score="5000" reward="30000_810003_10" difficultLevel="1" />
+      <data id="29" targetId="2002" lvMin="16" lvMax="30" score="7500" reward="30000_810003_20" difficultLevel="2" />
+      <data id="30" targetId="2002" lvMin="16" lvMax="30" score="10000" reward="30000_810003_30" difficultLevel="3" />
+      <data id="31" targetId="2003" lvMin="1" lvMax="15" score="40000" reward="30000_810008_100" difficultLevel="1" />
+      <data id="32" targetId="2003" lvMin="1" lvMax="15" score="60000" reward="30000_810008_200" difficultLevel="2" />
+      <data id="33" targetId="2003" lvMin="1" lvMax="15" score="80000" reward="30000_810008_300" difficultLevel="3" />
+      <data id="34" targetId="2003" lvMin="16" lvMax="30" score="50000" reward="30000_810003_100" difficultLevel="1" />
+      <data id="35" targetId="2003" lvMin="16" lvMax="30" score="75000" reward="30000_810003_200" difficultLevel="2" />
+</root>

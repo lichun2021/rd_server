@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="11" type="1" chapter="1" conditionValue="10" score="10" rewards="30000_101050_80" />
+      <data id="12" type="1" chapter="2" conditionValue="16" score="16" rewards="30000_101050_120" />
+      <data id="13" type="1" chapter="3" conditionValue="19" score="24" rewards="30000_1780050_20" />
+      <data id="14" type="1" chapter="4" conditionValue="22" score="40" rewards="30000_1780050_60" />
+      <data id="15" type="1" chapter="5" conditionValue="25" score="80" rewards="30000_1780050_120" />
+      <data id="16" type="1" chapter="6" conditionValue="28" score="130" rewards="30000_101050_300" />
+      <data id="17" type="1" chapter="7" conditionValue="30" score="200" rewards="30000_1780050_300" />
+      <data id="18" type="1" chapter="8" conditionValue="-1" />
+      <data id="21" type="2" chapter="1" conditionValue="30000" score="5" rewards="30000_103050_80" />
+      <data id="22" type="2" chapter="2" conditionValue="150000" score="8" rewards="30000_103050_120" />
+      <data id="23" type="2" chapter="3" conditionValue="300000" score="12" rewards="30000_1780050_20" />
+      <data id="24" type="2" chapter="4" conditionValue="600000" score="20" rewards="30000_1780050_60" />
+      <data id="25" type="2" chapter="5" conditionValue="1500000" score="40" rewards="30000_1780050_120" />
+      <data id="26" type="2" chapter="6" conditionValue="3000000" score="65" rewards="30000_103050_300" />
+      <data id="27" type="2" chapter="7" conditionValue="5000000" score="100" rewards="30000_1780050_300" />
+      <data id="28" type="2" chapter="8" conditionValue="-1" />
+      <data id="31" type="3" chapter="1" conditionValue="12" score="5" rewards="30000_1490006_80" />
+      <data id="32" type="3" chapter="2" conditionValue="24" score="8" rewards="30000_1490006_120" />
+      <data id="33" type="3" chapter="3" conditionValue="36" score="12" rewards="30000_1490005_20" />
+      <data id="34" type="3" chapter="4" conditionValue="54" score="20" rewards="30000_1490005_40" />
+      <data id="35" type="3" chapter="5" conditionValue="72" score="40" rewards="30000_1490005_60" />
+      <data id="36" type="3" chapter="6" conditionValue="96" score="65" rewards="30000_1490006_200" />
+      <data id="37" type="3" chapter="7" conditionValue="120" score="100" rewards="30000_1490005_80" />
+      <data id="38" type="3" chapter="8" conditionValue="-1" />
+      <data id="41" type="4" chapter="1" conditionValue="100" rewards="30000_1300017_6000" />
+      <data id="42" type="4" chapter="2" conditionValue="300" rewards="30000_1800001_100" />
+      <data id="43" type="4" chapter="3" conditionValue="500" rewards="30000_1800001_300" />
+      <data id="44" type="4" chapter="4" conditionValue="700" rewards="30000_1300017_9000" />
+      <data id="45" type="4" chapter="5" conditionValue="800" rewards="30000_1800001_600" />
+      <data id="46" type="4" chapter="6" conditionValue="900" rewards="30000_1300017_15000" />
+      <data id="47" type="4" chapter="7" conditionValue="1000" rewards="30000_1800001_1000" />
+      <data id="48" type="4" chapter="8" conditionValue="-1" />
+</root>

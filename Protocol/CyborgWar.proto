@@ -1,0 +1,219 @@
+option java_package	= "com.hawk.game.protocol";
+import "Const.proto";
+
+// 队伍信息
+message CWTeamInfo{
+	required string id			= 1;
+	optional string guildId 	= 2;
+	optional string guildName 	= 3;
+	optional string guildTag 	= 4;
+	optional int32 guildFlag	= 5;
+	optional int64 creatTime	= 6; //创建时间
+	required string name		= 7;
+	optional string serverId 	= 8;
+	optional int64 battlePoint	= 9; //参战人员总战力
+	optional int32 memberCnt	= 10; //参战人员数量
+	optional int32 rank			= 11; // 比赛排行
+	optional int64 score		= 12; // 比赛积分
+	optional int32 starChange	= 13; // 本场星数变化
+	optional int32 seasonStar	= 14; // 赛季段位星级(战斗记录中为战斗结算后星数)
+	optional int64 seasonScore	= 15; // 赛季段位总分
+}
+
+// 玩家信息
+message CWPlayerInfo{
+	required string id		= 1;
+	required string name	= 2;
+	required string serverId	= 3;
+	optional int32 icon			= 4;
+	optional string pfIcon		= 5;
+	required string guildId		= 6;
+	required string guildTag	= 7;
+	optional string teamId		= 8; //队伍id
+	required int32 auth			= 9; //权限
+	optional int32 guildOfficer	= 10;
+	required int64 battlePoint	= 11; 
+	optional bool isNew			= 12;//是否新加入成员(对比上期)
+}
+
+
+// 战队排行
+message CWTeamRank{
+	required int32 rank = 1;
+	required CWTeamInfo teamInfo = 2;
+}
+
+
+// 赛博之战本服战队排行
+message GetCWTeamRankResp{
+	repeated CWTeamRank rankInfo = 1;
+	optional CWTeamRank selfRank = 3;	
+}
+
+
+// 获取小队历史战斗记录
+message CWGetHistoryReq{
+	required string teamId = 1;
+}
+
+message CWGetHistoryResp{
+	required string teamId 			= 1;
+	repeated CWBattleLog battleLog	= 2;
+}
+
+// 赛博战斗历史记录
+message CWBattleLog{
+	required string 		roomId = 1;
+	required int32			termId = 2;
+	required int64			time   = 3;
+	repeated CWTeamInfo 	teamInfo = 4;
+}
+
+
+// 活动阶段
+enum CWState{
+	NOT_OPEN	= 	1; //未开启
+	OPEN		=	2; //开启阶段
+	SIGN		=	3; //报名阶段
+	MATCH		=	4; //匹配阶段
+	WAR			= 	5; //战斗阶段 
+}
+
+// 活动状态信息
+message CWStateInfo{
+	required CWState state 			= 1;//活动状态
+	optional int32 stage			= 2;//当前周期数
+	optional int64 openTime			= 3;//活动开启时间
+	optional int64 signStartTime	= 4;//报名开启时间(ms)
+	optional int64 matchStartTime	= 5;//匹配开启时间(ms)
+	repeated CWTeamStateInfo teamState	= 6;//队伍状态信息
+	repeated CWTimeChoose choose	= 7;// 报名选项
+	optional bool canEnter			= 8;// 能否进入战场!!
+}
+
+// 赛博赛季活动阶段
+enum CSWState {
+	CSW_NOT_OPEN	= 1; //未开启
+	CSW_OPEN_SHOW 	= 2; //预热阶段
+	CSW_OPEN		= 3; //开启阶段
+	CSW_END_SHOW	= 4; //结束展示阶段
+}
+
+// 赛博赛季状态信息
+message CSWStateInfo{
+	required CSWState state 		= 1;//赛季状态
+	optional int32 season			= 2;//当前赛季
+	optional int64 openTime			= 3;//展示开启时间
+	optional int64 startTime		= 4;//赛季开启时间(ms)
+	optional int64 endShowTime		= 5;//赛季结束,展示阶段时间(ms)
+	optional int64 endTime			= 6;//赛季关闭时间(ms)
+}
+
+// 战队活动状态
+message CWTeamStateInfo{
+	required string teamId			= 1;//队伍id
+	optional bool isSignUp			= 2;//是否报名
+	optional int64 warStartTime		= 3;//本队战斗开启时间(ms)
+	optional int64 warEndTime		= 4;//本队战斗结束时间(ms)
+	repeated CWTeamInfo oppTeams	= 5;//本队的对手
+}
+
+// 报名选择时间
+message CWTimeChoose{
+	required int32 index	= 1;
+	required int64 time		= 2;
+	optional int32 teamCnt	= 3; // 已报名战队数量
+}
+
+// 战队列表
+message CWTeamList{
+	repeated CWTeamInfo	teamList	= 1; // 本盟战队
+	optional string selfTeam		= 2; // 自己所在战队
+}
+
+// 界面信息
+message CWPageInfo{
+	optional CWStateInfo stateInfo	= 1; //活动状态信息
+	optional CWTeamList teamList	= 2;
+	optional CSWStateInfo cswStateInfo	= 3; //赛季状态信息
+}
+
+// 报名请求
+message CWSignUpReq{
+	required int32 timeIndex	= 1; //报名时间段0,1,2
+	required string teamId		= 2; //战队id
+}
+
+// 创建战队
+message CWCreateTeamReq{
+	required string name	= 1;
+}
+
+// 修改战队名称
+message CWEditTeamNameReq{
+	required string teamId	= 1;
+	required string name	= 2;
+}
+
+// 解散战队
+message CWDismissTeamReq{
+	required string teamId	= 1;
+}
+
+// 获取玩家信息
+message CWGeyPlayerListReq{
+	required string teamId = 1;
+}
+
+message CWGetPlayerListResp
+{
+	required string teamId				= 1;
+	repeated CWPlayerInfo playerInfo	= 2;
+}
+
+// 管理参战人员id
+message CWPlayerManageReq
+{
+	required string teamId		= 1;
+	required int32 type 		= 2; //0 取消出战, 1 出战(包含转队)
+	required string	playerId 	= 3;
+}
+
+
+// 积分商店购买
+message CWBuyItemReq{
+	required int32 id		= 1;
+	required int32 count 	= 2;
+}
+
+// 赛博商店商品信息
+message CWShopItem
+{
+	required int32 id  = 1;  // 商品Id
+	required int32 buyCount = 2; // 已购买次数
+}
+
+// 赛博商店购买信息
+message CWShopInfo 
+{
+	optional int64 cyborgScore      = 1; // 军演积分
+	repeated CWShopItem buyItems 	= 2; // 已购买商品的购买次数
+	optional int64 nextRefreshTime	= 3; // 下次重置时间
+}
+
+
+//请求回到原服的玩家.
+message CyborgWarInnerBackServerReq {
+	required string playerId = 1;//
+}
+
+//签回玩家.
+message CyborgWarMoveBackReq {
+	required string playerId = 1;//
+}
+
+// 赛季联盟积分奖励信息
+message CSWScoreInfo{
+	required int64 score		= 1;
+	repeated int32 rewardedId	= 2;
+}

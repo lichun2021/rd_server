@@ -1,0 +1,57 @@
+package com.hawk.game.service.mssion.type;
+
+import java.util.List;
+
+import com.hawk.game.item.mission.MissionCfgItem;
+import com.hawk.game.item.mission.MissionEntityItem;
+import com.hawk.game.player.Player;
+import com.hawk.game.player.PlayerData;
+import com.hawk.game.service.mssion.Mission;
+import com.hawk.game.service.mssion.MissionEvent;
+import com.hawk.game.service.mssion.MissionType;
+import com.hawk.game.service.mssion.event.EventPlotBattle;
+import com.hawk.game.util.GsConst.MissionState;
+
+/**
+ * rts关卡胜利任务
+ * @author golden
+ *
+ */
+@Mission(missionType = MissionType.MISSION_PLOT_BATTLE)
+public class PlotBattleWinMission implements IMission {
+
+	@Override
+	public <T extends MissionEvent> void refreshMission(PlayerData playerData, T missionEvent, MissionEntityItem entityItem, MissionCfgItem cfg) {
+		EventPlotBattle event = (EventPlotBattle)missionEvent;
+		if (!event.isWin()) {
+			return;
+		}
+		
+		if (entityItem.getState() != MissionState.STATE_NOT_FINISH) {
+			return;
+		}
+		
+		// 关卡id
+		int plotId = event.getPlotId();
+		// conditions为空 或 为0 代表任意的
+		List<Integer> conditions = cfg.getIds();
+		if (!conditions.isEmpty() && !conditions.contains(0) && !conditions.contains(plotId)) {
+			return;
+		}
+		
+		entityItem.addValue(1);
+		checkMissionFinish(entityItem, cfg);
+	}
+	
+	@Override
+	public void initMission(PlayerData playerData, MissionEntityItem entityItem, MissionCfgItem cfg) {
+		if (playerData.isRtsComplete(cfg.getIds().get(0))) {
+			entityItem.addValue(1);
+			checkMissionFinish(entityItem, cfg);
+		}
+	}
+	
+	@Override
+	public <T extends MissionEvent> void refreshGeneralMission(Player player, T missionEvent) {
+	}
+}

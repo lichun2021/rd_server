@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="2900001" conditionType="141007" conditionValue="1" buildLevel="5_15" vipLevel="9_10" rewards="30000_850004_5,30000_850034_5,30000_101050_1,30000_104050_1,30000_1001060_2" />
+      <data achieveId="2900002" conditionType="141007" conditionValue="2" buildLevel="5_15" vipLevel="9_10" rewards="10000_1001_128,30000_810001_2,30000_850051_5,30000_830001_1,30000_1001060_3" />
+      <data achieveId="2900003" conditionType="141007" conditionValue="3" buildLevel="5_15" vipLevel="9_10" rewards="30000_850005_5,30000_850035_5,30000_850015_5,30000_1150042_1,30000_1001060_5" />
+      <data achieveId="2900004" conditionType="141008" lossDay="1" conditionValue="0_10" buildLevel="5_15" vipLevel="9_10" rewards="30000_100050_2,30000_101050_2,30000_104050_2,30000_103050_2,30000_1150042_1" />
+      <data achieveId="2900005" conditionType="141008" lossDay="2" conditionValue="0_15" buildLevel="5_15" vipLevel="9_10" rewards="10000_1001_188,30000_1300008_10,30000_850052_2,30000_840165_25,30000_1150042_1" />
+      <data achieveId="2900006" conditionType="141008" lossDay="3" conditionValue="0_20" buildLevel="5_15" vipLevel="9_10" rewards="30000_1300006_50,30000_1300009_50,30000_800143_5,30000_800110_5,30000_1150042_1" />
+      <data achieveId="2900007" conditionType="141007" conditionValue="1" buildLevel="20_35" vipLevel="11_15" rewards="30000_1510004_5,30000_13310004_5,30000_1510005_5,30000_13310005_5,30000_1150042_1" />
+      <data achieveId="2900008" conditionType="141007" conditionValue="2" buildLevel="20_35" vipLevel="11_15" rewards="10000_1001_288,30000_810005_1,30000_810019_1,30000_810018_1,30000_1150042_1" />
+      <data achieveId="2900009" conditionType="141007" conditionValue="3" buildLevel="20_35" vipLevel="11_15" rewards="30000_100050_2,30000_101050_2,30000_104050_2,30000_103050_2,30000_1150042_1" />
+      <data achieveId="2900010" conditionType="141008" lossDay="1" conditionValue="0_5" buildLevel="20_35" vipLevel="11_15" rewards="10000_1001_188,30000_1300008_10,30000_850052_2,30000_840165_25,30000_1150042_1" />
+      <data achieveId="2900011" conditionType="141008" lossDay="2" conditionValue="0_10" buildLevel="20_35" vipLevel="11_15" rewards="30000_1300006_50,30000_1300009_50,30000_800143_5,30000_800110_5,30000_1150042_1" />
+      <data achieveId="2900012" conditionType="141008" lossDay="3" conditionValue="0_15" buildLevel="20_35" vipLevel="11_15" rewards="30000_1510004_5,30000_13310004_5,30000_1510005_5,30000_13310005_5,30000_1150042_1" />
+</root>

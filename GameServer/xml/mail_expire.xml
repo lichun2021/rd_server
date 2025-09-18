@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data NewPageType="2" maxCount="500" expireDay="15" />
+      <data NewPageType="3" maxCount="500" expireDay="10" />
+      <data NewPageType="4" maxCount="500" expireDay="7" />
+      <data NewPageType="5" maxCount="500" expireDay="15" />
+      <data NewPageType="6" maxCount="100" expireDay="7" />
+      <data NewPageType="7" maxCount="300" expireDay="7" />
+      <data NewPageType="8" maxCount="200" expireDay="7" />
+      <data NewPageType="9" maxCount="100" expireDay="7" />
+</root>

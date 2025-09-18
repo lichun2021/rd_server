@@ -1,0 +1,26 @@
+return {
+	prop =
+	{
+		activityId = 280,
+		name = [[荣耀回归]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，完成账号鉴定，即可领取账号价值礼包。<br/>2.完成账号鉴定后可与您的朋友组成战队，完成组队后即可开启活动任务。<br/>3.活动任务有单人任务和战队任务两种，单人任务在游戏内查看，战队任务请您点击“查看战队”按钮前往相应页面查看。<br/>4.完成相应的单人任务或战队任务后即可领取任务奖励，活动任务及奖励每日重置。</font>]],
+		priority = 10051,
+		icon = [[Activity_Icon_280_Nor.png]],
+		selecticon = [[Activity_Icon_280_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		web = [[https://hongjing.qq.com/act/7126/a20211213hl/master.html]],
+	},
+	team_return_achieve = [[achieveId	configValue	gotoType	gotoValue	rewards	title
+1	1	1	2	2	2
+28000001	10	200	2_0	10000_1004_5000,30000_1780035_1,30000_810003_5,30000_1480001_5,30000_1300017_5	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野外敌军<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}</font>次</font>
+28000002	30	200	2_0	10000_1004_10000,30000_1780035_2,30000_810003_10,30000_1480001_10,30000_1300017_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野外敌军<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}</font>次</font>
+28000003	1000	23	2012	30000_850036_1,30000_850035_1,30000_850043_1,30000_850034_1,30000_810010_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个</font>
+28000004	3000	23	2012	30000_850036_2,30000_850035_2,30000_850043_2,30000_850034_2,30000_810010_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个</font>
+28000005	500000	31	1_1_1007	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_810000_5	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">采集资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}</font>点</font>
+28000006	1500000	31	1_1_1007	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810000_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">采集资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}</font>点</font>
+28000007	1	31	16_0	30000_1300009_5,30000_1300006_5,30000_800143_1,30000_800110_1,30000_800000_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">集结战胜幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}</font>次</font>
+28000008	1500	-1		30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_810001_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">使用道具加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>分钟</font>
+]],
+
+}

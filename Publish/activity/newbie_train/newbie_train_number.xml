@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="3341001" service="0" conditionType="700106" conditionValue="10" rewards="30000_1000003_10,30000_21063005_10,30000_9990032_20,30000_1782106_10" />
+      <data achieveId="3341002" service="0" conditionType="700106" conditionValue="20" rewards="30000_802004_20,30000_21063005_20,30000_9990032_40,30000_1782106_20" />
+      <data achieveId="3341003" service="0" conditionType="700106" conditionValue="30" rewards="30000_802004_30,30000_21063005_30,30000_9990032_60,30000_1782106_30" />
+      <data achieveId="3341004" service="0" conditionType="700106" conditionValue="50" rewards="30000_1000005_2,30000_802004_60,30000_21063005_60,30000_9990032_120" />
+      <data achieveId="3341005" service="0" conditionType="700106" conditionValue="100" rewards="30000_1000005_8,30000_802004_100,30000_21063005_100,30000_9990032_200" />
+      <data achieveId="3341006" service="0" conditionType="700106" conditionValue="150" rewards="30000_1782202_5,30000_1782203_5,30000_800002_10,30000_9990032_10" />
+      <data achieveId="3342001" service="0" conditionType="700107" conditionValue="20" rewards="30000_1782202_6,30000_1782203_6,30000_800002_15,30000_9990032_15" />
+      <data achieveId="3342002" service="0" conditionType="700107" conditionValue="40" rewards="30000_1000003_10,30000_21063005_10,30000_9990032_20,30000_1782106_10" />
+      <data achieveId="3342003" service="0" conditionType="700107" conditionValue="60" rewards="30000_802004_20,30000_21063005_20,30000_9990032_40,30000_1782106_20" />
+      <data achieveId="3342004" service="0" conditionType="700107" conditionValue="100" rewards="30000_802004_30,30000_21063005_30,30000_9990032_60,30000_1782106_30" />
+      <data achieveId="3342005" service="0" conditionType="700107" conditionValue="200" rewards="30000_1000005_2,30000_802004_60,30000_21063005_60,30000_9990032_120" />
+      <data achieveId="3342006" service="0" conditionType="700107" conditionValue="300" rewards="30000_1000005_8,30000_802004_100,30000_21063005_100,30000_9990032_200" />
+      <data achieveId="3343001" service="1" conditionType="700106" conditionValue="10" rewards="30000_1782202_5,30000_1782203_5,30000_800002_10,30000_9990032_10" />
+      <data achieveId="3343002" service="1" conditionType="700106" conditionValue="20" rewards="30000_1782202_6,30000_1782203_6,30000_800002_15,30000_9990032_15" />
+      <data achieveId="3343003" service="1" conditionType="700106" conditionValue="30" rewards="30000_1000003_10,30000_21063005_10,30000_9990032_20,30000_1782106_10" />
+      <data achieveId="3343004" service="1" conditionType="700106" conditionValue="50" rewards="30000_802004_20,30000_21063005_20,30000_9990032_40,30000_1782106_20" />
+      <data achieveId="3343005" service="1" conditionType="700106" conditionValue="100" rewards="30000_802004_30,30000_21063005_30,30000_9990032_60,30000_1782106_30" />
+      <data achieveId="3343006" service="1" conditionType="700106" conditionValue="150" rewards="30000_1000005_2,30000_802004_60,30000_21063005_60,30000_9990032_120" />
+      <data achieveId="3344001" service="1" conditionType="700107" conditionValue="20" rewards="30000_1000005_8,30000_802004_100,30000_21063005_100,30000_9990032_200" />
+      <data achieveId="3344002" service="1" conditionType="700107" conditionValue="40" rewards="30000_1782202_5,30000_1782203_5,30000_800002_10,30000_9990032_10" />
+      <data achieveId="3344003" service="1" conditionType="700107" conditionValue="60" rewards="30000_1782202_6,30000_1782203_6,30000_800002_15,30000_9990032_15" />
+      <data achieveId="3344004" service="1" conditionType="700107" conditionValue="100" rewards="30000_1000003_10,30000_21063005_10,30000_9990032_20,30000_1782106_10" />
+      <data achieveId="3344005" service="1" conditionType="700107" conditionValue="200" rewards="30000_802004_20,30000_21063005_20,30000_9990032_40,30000_1782106_20" />
+      <data achieveId="3344006" service="1" conditionType="700107" conditionValue="300" rewards="30000_802004_30,30000_21063005_30,30000_9990032_60,30000_1782106_30" />
+</root>

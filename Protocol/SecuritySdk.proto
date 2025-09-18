@@ -1,0 +1,29 @@
+option java_package	= "com.hawk.game.protocol";
+
+// SDK用户登入
+message	HPAntiAddUser
+{
+	required string openid = 1; // 用户OpenID
+	required int32 platid = 2; // 用户设备类型, 0: IOS, 1: Android
+	required int32 client_ver = 3; // 客户端版本
+	optional bytes	userExtData = 4; // 用户扩展数据
+
+	//required int64	client_ip = 4; // 客户端ip	
+}
+
+// 反外挂数据
+message	HPAntiRecvDataInfo
+{
+	required string openid = 1; // 用户OpenID
+	required int32 platid = 2; // 用户设备类型, 0: IOS, 1: Android
+	required bytes	antiData = 3; // 反外挂数据
+	optional bytes	userExtData = 4; // 用户扩展数据
+}
+
+// SDK用户登出
+message	HPAntiDelUser
+{
+	required string openid = 1; // 用户OpenID
+	required int32 platid = 2; // 用户设备类型, 0: IOS, 1: Android
+	optional bytes	userExtData = 3; // 用户扩展数据	
+}

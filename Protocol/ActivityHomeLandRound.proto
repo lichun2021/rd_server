@@ -1,0 +1,44 @@
+option java_package	= "com.hawk.game.protocol";
+import "Reward.proto";
+import "Activity.proto";
+// 命运轮盘机活动界面信息
+message HomeLandRoundPageInfo {
+	required int32 dailyTimes = 1;    						// 每日抽奖次数
+	repeated HomeLandRoundItemPB exchangeItem = 2; 			// 兑换商店已购买
+	required int32 floor = 3;								// 当前层数
+	repeated GeneralExchangeTip tips = 4; 					// 通用兑换红点
+	optional int32 lastFloorChange = 5;     				// 上一次层数变化
+	optional int32 floorPity = 6;     						// 当前层保底数
+}
+//
+message HomeLandRoundItemPB {
+	required int32 cfgId = 1; 					//id		
+	required int32 itemCount = 2; 				//数量
+}
+//****************************************************领取************************************************
+// 领取
+message HomeLandRoundTakeRewardReq {
+}
+//****************************************************抽奖************************************************
+// 抽奖
+message HomeLandRoundDrawReq {
+	required int32 drawType = 1; //1:普通,2:保护抽
+}
+// 抽奖结果回调
+message HomeLandRoundDrawRsp {
+	required int32 drawType = 1; 		//1:普通,2:保护抽
+	optional int32 drawFloor = 2;		// 抽到后的层数
+	optional int32 floorChange = 3;     // 层数变化
+	repeated RewardItem reward = 4;		// 通用奖励
+}
+//****************************************************兑换商店************************************************
+//兑换
+message HomeLandRoundExchangeReq {
+	required int32 cfgId = 1;
+	required int32 count = 2;
+}
+//****************************************************购买道具************************************************
+//购买
+message HomeLandRoundBuyReq {
+	required int32 count = 1;
+}

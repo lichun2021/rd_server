@@ -1,0 +1,63 @@
+# 套装组合
+suit_combination = 2_4_6_7
+
+# 装备页签初始值
+armour_page_initial = 1
+
+# 解锁页签消耗
+suitUnlockCost = 10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000
+
+# 额外属性数量
+extraAttrCount = 1_1,2_2,3_3,4_4
+
+#  铠甲套装名字长度
+suitNameLength = 1_8
+
+# 套装最大数量
+suitMaxCount = 8
+
+# 累计抽卡次数可开启宝箱
+gachaTimesBox = 50
+
+# 装备穿戴等级
+cityLevelUnlock = 17
+
+# 铠甲背包上限
+armourMaxCount = 1000
+
+# 每日抽取上限
+gacha_limit = 1000
+
+# 装备随机充能免费次数
+freeCharge = 1
+
+# 装备随机充能金币消耗
+chargeRefreshConsume = 10000_1001_10;10000_1001_20;10000_1001_30;10000_1001_40;10000_1001_60;10000_1001_80;10000_1001_100
+
+# 装备充能普通消耗
+chargeConsumeCommon = 30000_802002_1
+
+# 装备充能高级消耗
+chargeConsumeSpecial = 30000_802003_1
+
+# 升星品质限制
+starQualityLimit = 3,4
+
+# 升星等级限制
+starLevelLimit = 30
+
+# 装备普通充能限制
+chargeCommonLimit = 2000
+
+# 装备高级充能限制
+chargeSpecialLimit = 10000
+
+# 装备普通充能
+chargeCommonRate = 1000_1;1000_2;1000_3;1000_4;1000_5;1000_6;1000_7;1000_8;1000_9
+
+# 装备高级充能
+chargeSpecialRate = 1000_6;1000_7;1000_8;1000_9;1000_10;1000_11;1000_12;1000_13;1000_14
+
+# 星级属性分解比率
+startAttrResolveRate = 8000
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" free="1" minLove="10" maxLove="100" loves="10000_3000,20000_3200,30000_2600,50000_900,100000_300" costItem="30000_16899001_1" />
+      <data id="2" free="0" minLove="360" maxLove="3600" loves="10000_3000,20000_3200,30000_2600,50000_900,100000_300" costItem="10000_1000_98" />
+      <data id="3" free="0" minLove="4500" maxLove="45000" loves="10000_3000,20000_3200,30000_2600,50000_900,100000_300" costItem="10000_1000_998" />
+</root>

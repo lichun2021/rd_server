@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" quality="1" category="2" armsusability="5,6" rogueEffect="105_40000" />
+      <data id="2" quality="1" category="2" armsusability="5,6" rogueEffect="134_40000" />
+      <data id="3" quality="1" category="2" armsusability="5,6" rogueEffect="107_40000" />
+      <data id="4" quality="1" category="2" armsusability="1,2" rogueEffect="110_40000" />
+      <data id="5" quality="1" category="2" armsusability="1,2" rogueEffect="132_40000" />
+      <data id="6" quality="1" category="2" armsusability="1,2" rogueEffect="112_40000" />
+      <data id="7" quality="1" category="2" armsusability="3,4" rogueEffect="115_40000" />
+      <data id="8" quality="1" category="2" armsusability="3,4" rogueEffect="133_40000" />
+      <data id="9" quality="1" category="2" armsusability="3,4" rogueEffect="117_40000" />
+      <data id="10" quality="1" category="2" armsusability="7,8" rogueEffect="120_40000" />
+      <data id="11" quality="1" category="2" armsusability="7,8" rogueEffect="135_40000" />
+      <data id="12" quality="1" category="2" armsusability="7,8" rogueEffect="122_40000" />
+      <data id="13" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="100_30000" />
+      <data id="14" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="136_30000" />
+      <data id="15" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="102_30000" />
+      <data id="16" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="131_1000" />
+      <data id="17" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="141_2000" />
+      <data id="18" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9015_0_1000_400_4000" />
+      <data id="19" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9016_0_5000_50000" />
+      <data id="20" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9017_0_5000_50000" />
+      <data id="21" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9018_0_5000_50000" />
+      <data id="22" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9019_0_100000_10000_100000_5000_50000" />
+      <data id="23" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9020_0_100000_10000_100000_5000_50000" />
+      <data id="24" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9021_0_100000_10000_100000_5000_50000" />
+      <data id="25" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9022_40000" />
+      <data id="26" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9023_40000" />
+      <data id="27" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9024_40000" />
+      <data id="28" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9025_40000" />
+      <data id="29" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9026_40000" />
+      <data id="30" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9027_40000" />
+      <data id="31" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9028_50000" />
+      <data id="32" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9029_50000" />
+      <data id="33" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9030_50000" />
+      <data id="34" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9031_50000" />
+      <data id="35" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9032_50000" />
+      <data id="36" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9033_50000" />
+      <data id="37" quality="1" category="3" armsusability="1,2,3,4,5,6,7,8" collect="1000" />
+      <data id="39" quality="1" category="1" armsusability="1" rogueEffect="1003_50000" />
+      <data id="40" quality="1" category="1" armsusability="2" rogueEffect="1004_50000" />
+      <data id="41" quality="1" category="1" armsusability="3" rogueEffect="1005_50000" />
+      <data id="42" quality="1" category="1" armsusability="4" rogueEffect="1006_50000" />
+      <data id="43" quality="1" category="1" armsusability="5" rogueEffect="1007_50000" />
+      <data id="44" quality="1" category="1" armsusability="6" rogueEffect="1008_50000" />
+      <data id="45" quality="1" category="1" armsusability="8" rogueEffect="1010_50000" />
+      <data id="46" quality="1" category="1" armsusability="7" rogueEffect="1009_50000" />
+      <data id="47" quality="1" category="1" armsusability="1" rogueEffect="1011_50000" />
+      <data id="48" quality="1" category="1" armsusability="2" rogueEffect="1012_50000" />
+      <data id="49" quality="1" category="1" armsusability="3" rogueEffect="1013_50000" />
+      <data id="50" quality="1" category="1" armsusability="4" rogueEffect="1014_50000" />
+      <data id="51" quality="1" category="1" armsusability="5" rogueEffect="1015_50000" />
+      <data id="52" quality="1" category="1" armsusability="6" rogueEffect="1016_50000" />
+      <data id="53" quality="1" category="1" armsusability="8" rogueEffect="1018_50000" />
+      <data id="54" quality="1" category="1" armsusability="7" rogueEffect="1017_50000" />
+      <data id="55" quality="1" category="1" armsusability="1" rogueEffect="1019_50000" />
+      <data id="56" quality="1" category="1" armsusability="2" rogueEffect="1020_50000" />
+      <data id="57" quality="1" category="1" armsusability="3" rogueEffect="1021_50000" />
+      <data id="58" quality="1" category="1" armsusability="4" rogueEffect="1022_50000" />
+      <data id="59" quality="1" category="1" armsusability="5" rogueEffect="1023_50000" />
+      <data id="60" quality="1" category="1" armsusability="6" rogueEffect="1024_50000" />
+      <data id="61" quality="1" category="1" armsusability="8" rogueEffect="1026_50000" />
+      <data id="62" quality="1" category="1" armsusability="7" rogueEffect="1025_50000" />
+      <data id="63" quality="1" category="1" armsusability="1" rogueEffect="1033_4000" />
+      <data id="64" quality="1" category="1" armsusability="2" rogueEffect="1034_4000" />
+      <data id="65" quality="1" category="1" armsusability="3" rogueEffect="1035_4000" />
+      <data id="66" quality="1" category="1" armsusability="4" rogueEffect="1036_4000" />
+      <data id="67" quality="1" category="1" armsusability="5" rogueEffect="1037_4000" />
+      <data id="68" quality="1" category="1" armsusability="6" rogueEffect="1038_4000" />
+      <data id="69" quality="1" category="1" armsusability="8" rogueEffect="1040_4000" />
+      <data id="70" quality="1" category="1" armsusability="7" rogueEffect="1039_4000" />
+      <data id="71" quality="1" category="1" armsusability="1" rogueEffect="1032_1500" />
+      <data id="72" quality="1" category="1" armsusability="2" rogueEffect="9035_1500" />
+      <data id="73" quality="1" category="1" armsusability="3" rogueEffect="9036_1500" />
+      <data id="74" quality="1" category="1" armsusability="4" rogueEffect="9037_1500" />
+      <data id="75" quality="1" category="1" armsusability="5" rogueEffect="9038_1500" />
+      <data id="76" quality="1" category="1" armsusability="6" rogueEffect="9039_1500" />
+      <data id="77" quality="1" category="1" armsusability="8" rogueEffect="9040_1500" />
+      <data id="78" quality="1" category="1" armsusability="7" rogueEffect="9041_1500" />
+      <data id="79" quality="1" category="6" armsusability="1" soldier="100207_800000" />
+      <data id="80" quality="1" category="6" armsusability="2" soldier="100107_800000" />
+      <data id="81" quality="1" category="6" armsusability="3" soldier="100407_800000" />
+      <data id="82" quality="1" category="6" armsusability="4" soldier="100307_800000" />
+      <data id="83" quality="1" category="6" armsusability="5" soldier="100607_800000" />
+      <data id="84" quality="1" category="6" armsusability="6" soldier="100507_800000" />
+      <data id="85" quality="1" category="6" armsusability="8" soldier="100707_800000" />
+      <data id="86" quality="1" category="6" armsusability="7" soldier="100807_800000" />
+      <data id="87" quality="2" category="6" armsusability="1" soldier="100207_1200000" />
+      <data id="88" quality="2" category="6" armsusability="2" soldier="100107_1200000" />
+      <data id="89" quality="2" category="6" armsusability="3" soldier="100407_1200000" />
+      <data id="90" quality="2" category="6" armsusability="4" soldier="100307_1200000" />
+      <data id="91" quality="2" category="6" armsusability="5" soldier="100607_1200000" />
+      <data id="92" quality="2" category="6" armsusability="6" soldier="100507_1200000" />
+      <data id="93" quality="2" category="6" armsusability="8" soldier="100707_1200000" />
+      <data id="94" quality="2" category="6" armsusability="7" soldier="100807_1200000" />
+      <data id="95" quality="2" category="2" armsusability="5,6" rogueEffect="105_60000" />
+      <data id="96" quality="2" category="2" armsusability="5,6" rogueEffect="134_60000" />
+      <data id="97" quality="2" category="2" armsusability="5,6" rogueEffect="107_60000" />
+      <data id="98" quality="2" category="2" armsusability="1,2" rogueEffect="110_60000" />
+      <data id="99" quality="2" category="2" armsusability="1,2" rogueEffect="132_60000" />
+      <data id="100" quality="2" category="2" armsusability="1,2" rogueEffect="112_60000" />
+      <data id="101" quality="2" category="2" armsusability="3,4" rogueEffect="115_60000" />
+      <data id="102" quality="2" category="2" armsusability="3,4" rogueEffect="133_60000" />
+      <data id="103" quality="2" category="2" armsusability="3,4" rogueEffect="117_60000" />
+      <data id="104" quality="2" category="2" armsusability="7,8" rogueEffect="120_60000" />
+      <data id="105" quality="2" category="2" armsusability="7,8" rogueEffect="135_60000" />
+      <data id="106" quality="2" category="2" armsusability="7,8" rogueEffect="122_60000" />
+      <data id="107" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="100_45000" />
+      <data id="108" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="136_45000" />
+      <data id="109" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="102_45000" />
+      <data id="110" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="131_1500" />
+      <data id="111" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="141_3000" />
+      <data id="112" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9015_0_1000_600_6000" />
+      <data id="113" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9016_0_7500_75000" />
+      <data id="114" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9017_0_7500_75000" />
+      <data id="115" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9018_0_7500_75000" />
+      <data id="116" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9019_0_100000_15000_100000_7500_75000" />
+      <data id="117" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9020_0_100000_15000_100000_7500_75000" />
+      <data id="118" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9021_0_100000_15000_100000_7500_75000" />
+      <data id="119" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9022_60000" />
+      <data id="120" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9023_60000" />
+      <data id="121" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9024_60000" />
+      <data id="122" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9025_60000" />
+      <data id="123" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9026_60000" />
+      <data id="124" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9027_60000" />
+      <data id="125" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9028_75000" />
+      <data id="126" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9029_75000" />
+      <data id="127" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9030_75000" />
+      <data id="128" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9031_75000" />
+      <data id="129" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9032_75000" />
+      <data id="130" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" rogueEffect="9033_75000" />
+      <data id="131" quality="2" category="3" armsusability="1,2,3,4,5,6,7,8" collect="1500" />
+      <data id="133" quality="2" category="1" armsusability="1" rogueEffect="1003_75000" />
+      <data id="134" quality="2" category="1" armsusability="2" rogueEffect="1004_75000" />
+      <data id="135" quality="2" category="1" armsusability="3" rogueEffect="1005_75000" />
+      <data id="136" quality="2" category="1" armsusability="4" rogueEffect="1006_75000" />
+      <data id="137" quality="2" category="1" armsusability="5" rogueEffect="1007_75000" />
+      <data id="138" quality="2" category="1" armsusability="6" rogueEffect="1008_75000" />
+      <data id="139" quality="2" category="1" armsusability="8" rogueEffect="1010_75000" />
+      <data id="140" quality="2" category="1" armsusability="7" rogueEffect="1009_75000" />
+      <data id="141" quality="2" category="1" armsusability="1" rogueEffect="1011_75000" />
+      <data id="142" quality="2" category="1" armsusability="2" rogueEffect="1012_75000" />
+      <data id="143" quality="2" category="1" armsusability="3" rogueEffect="1013_75000" />
+      <data id="144" quality="2" category="1" armsusability="4" rogueEffect="1014_75000" />
+      <data id="145" quality="2" category="1" armsusability="5" rogueEffect="1015_75000" />
+      <data id="146" quality="2" category="1" armsusability="6" rogueEffect="1016_75000" />
+      <data id="147" quality="2" category="1" armsusability="8" rogueEffect="1018_75000" />
+      <data id="148" quality="2" category="1" armsusability="7" rogueEffect="1017_75000" />
+      <data id="149" quality="2" category="1" armsusability="1" rogueEffect="1019_75000" />
+      <data id="150" quality="2" category="1" armsusability="2" rogueEffect="1020_75000" />
+      <data id="151" quality="2" category="1" armsusability="3" rogueEffect="1021_75000" />
+      <data id="152" quality="2" category="1" armsusability="4" rogueEffect="1022_75000" />
+      <data id="153" quality="2" category="1" armsusability="5" rogueEffect="1023_75000" />
+      <data id="154" quality="2" category="1" armsusability="6" rogueEffect="1024_75000" />
+      <data id="155" quality="2" category="1" armsusability="8" rogueEffect="1026_75000" />
+      <data id="156" quality="2" category="1" armsusability="7" rogueEffect="1025_75000" />
+      <data id="157" quality="2" category="1" armsusability="1" rogueEffect="1033_6000" />
+      <data id="158" quality="2" category="1" armsusability="2" rogueEffect="1034_6000" />
+      <data id="159" quality="2" category="1" armsusability="3" rogueEffect="1035_6000" />
+      <data id="160" quality="2" category="1" armsusability="4" rogueEffect="1036_6000" />
+      <data id="161" quality="2" category="1" armsusability="5" rogueEffect="1037_6000" />
+      <data id="162" quality="2" category="1" armsusability="6" rogueEffect="1038_6000" />
+      <data id="163" quality="2" category="1" armsusability="8" rogueEffect="1040_6000" />
+      <data id="164" quality="2" category="1" armsusability="7" rogueEffect="1039_6000" />
+      <data id="165" quality="2" category="1" armsusability="1" rogueEffect="1032_2500" />
+      <data id="166" quality="2" category="1" armsusability="2" rogueEffect="9035_2500" />
+      <data id="167" quality="2" category="1" armsusability="3" rogueEffect="9036_2500" />
+      <data id="168" quality="2" category="1" armsusability="4" rogueEffect="9037_2500" />
+      <data id="169" quality="2" category="1" armsusability="5" rogueEffect="9038_2500" />
+      <data id="170" quality="2" category="1" armsusability="6" rogueEffect="9039_2500" />
+      <data id="171" quality="2" category="1" armsusability="8" rogueEffect="9040_2500" />
+      <data id="172" quality="2" category="1" armsusability="7" rogueEffect="9041_2500" />
+      <data id="173" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012028" heroOffice="11001" />
+      <data id="174" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012029" heroOffice="11002" />
+      <data id="175" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012030" heroOffice="11003" />
+      <data id="176" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012031" heroOffice="11104" />
+      <data id="177" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012032" heroOffice="11101" />
+      <data id="178" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012033" heroOffice="11102" />
+      <data id="179" quality="2" category="5" armsusability="1,2,3,4,5,6,7,8" heroData="5012034" heroOffice="11103" />
+      <data id="180" quality="2" category="5" armsusability="1,2" heroData="5012035" heroOffice="10601" />
+      <data id="181" quality="2" category="5" armsusability="5,6" heroData="5012036" heroOffice="10501" />
+      <data id="182" quality="2" category="5" armsusability="7,8" heroData="5012037" heroOffice="10801" />
+      <data id="183" quality="2" category="5" armsusability="3,4" heroData="5012038" heroOffice="10701" />
+      <data id="184" quality="2" category="4" armsusability="1,2,3,4,5,6,7,8" heroData="5012001" heroTalent="5101001,5101002,5101003" />
+      <data id="185" quality="2" category="4" armsusability="2" heroData="5012002" heroTalent="5101102,5101202,5101302" />
+      <data id="186" quality="2" category="4" armsusability="5,6" heroData="5012003" heroTalent="5101105,5101205,5101305" />
+      <data id="187" quality="2" category="4" armsusability="3,4" heroData="5012004" heroTalent="5101104,5101204,5101304" />
+      <data id="188" quality="2" category="4" armsusability="1,2,3,4,5,6,7,8" heroData="5012005" heroTalent="5101001,5101002,5101003" />
+      <data id="189" quality="2" category="4" armsusability="8" heroData="5012006" heroTalent="5101107,5101207,5101307" />
+      <data id="190" quality="2" category="4" armsusability="6" heroData="5012007" heroTalent="5101106,5101206,5101306" />
+      <data id="191" quality="2" category="4" armsusability="1,2,3,4,5,6,7,8" heroData="5012008" heroTalent="5101001,5101002,5101003" />
+      <data id="192" quality="2" category="4" armsusability="3" heroData="5012009" heroTalent="5101103,5101203,5101303" />
+      <data id="193" quality="2" category="4" armsusability="1,2,3,4,5,6,7,8" heroData="5012010" heroTalent="5101001,5101002,5101003" />
+      <data id="194" quality="2" category="4" armsusability="1" heroData="5012011" heroTalent="5101101,5101201,5101301" />
+      <data id="195" quality="2" category="4" armsusability="2" heroData="5012012" heroTalent="5101102,5101202,5101302" />
+      <data id="196" quality="2" category="4" armsusability="7" heroData="5012013" heroTalent="5101107,5101207,5101307" />
+      <data id="197" quality="2" category="4" armsusability="5" heroData="5012014" heroTalent="5101105,5101205,5101305" />
+      <data id="198" quality="2" category="4" armsusability="6" heroData="5012015" heroTalent="5101106,5101206,5101306" />
+      <data id="199" quality="2" category="4" armsusability="8" heroData="5012016" heroTalent="5101108,5101208,5101308" />
+      <data id="200" quality="2" category="4" armsusability="4" heroData="5012017" heroTalent="5101104,5101204,5101304" />
+      <data id="201" quality="2" category="4" armsusability="1,2,3,4,5,6,7,8" heroData="5012018" heroTalent="5101001,5101002,5101003" />
+      <data id="202" quality="2" category="4" armsusability="7" heroData="5012019" heroTalent="5101107,5101207,5101307" />
+      <data id="203" quality="2" category="4" armsusability="3" heroData="5012020" heroTalent="5101103,5101203,5101303" />
+      <data id="204" quality="2" category="4" armsusability="2" heroData="5012021" heroTalent="5101102,5101202,5101302" />
+      <data id="205" quality="2" category="4" armsusability="5" heroData="5012022" heroTalent="5101105,5101205,5101305" />
+      <data id="206" quality="2" category="4" armsusability="6" heroData="5012023" heroTalent="5101106,5101206,5101306" />
+      <data id="207" quality="2" category="4" armsusability="1" heroData="5012024" heroTalent="5101101,5101201,5101301" />
+      <data id="208" quality="2" category="4" armsusability="8" heroData="5012025" heroTalent="5101108,5101208,5101308" />
+      <data id="209" quality="2" category="4" armsusability="1" heroData="5012026" heroTalent="5101101,5101201,5101301" />
+      <data id="210" quality="2" category="4" armsusability="2" heroData="5012027" heroTalent="5101102,5101202,5101302" />
+      <data id="211" quality="1" category="7" armsusability="1,2,3,8" rogueEffect="9045_35000" />
+      <data id="212" quality="1" category="7" armsusability="1,2,3,8" rogueEffect="9046_35000" />
+      <data id="213" quality="1" category="7" armsusability="1,2,3,8" rogueEffect="9047_35000" />
+      <data id="214" quality="1" category="7" armsusability="4,5,6,7" rogueEffect="9048_35000" />
+      <data id="215" quality="1" category="7" armsusability="4,5,6,7" rogueEffect="9049_35000" />
+      <data id="216" quality="1" category="7" armsusability="4,5,6,7" rogueEffect="9050_35000" />
+      <data id="217" quality="2" category="7" armsusability="1,2,3,8" rogueEffect="9045_50000" />
+      <data id="218" quality="2" category="7" armsusability="1,2,3,8" rogueEffect="9046_50000" />
+      <data id="219" quality="2" category="7" armsusability="1,2,3,8" rogueEffect="9047_50000" />
+      <data id="220" quality="2" category="7" armsusability="4,5,6,7" rogueEffect="9048_50000" />
+      <data id="221" quality="2" category="7" armsusability="4,5,6,7" rogueEffect="9049_50000" />
+      <data id="222" quality="2" category="7" armsusability="4,5,6,7" rogueEffect="9050_50000" />
+</root>

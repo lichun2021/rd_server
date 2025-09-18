@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" min="1" max="99" level="3" num="1" point="2" reward="2500010" />
+      <data id="2" min="100" max="500" level="2" num="1" point="5" reward="2500011" />
+      <data id="3" min="501" max="999" level="1" num="1" point="10" reward="2500012" />
+      <data id="4" min="1000" max="5000" level="1" num="2" point="10" reward="2500012" />
+      <data id="5" min="5001" max="999999" level="1" num="3" point="10" reward="2500012" />
+</root>

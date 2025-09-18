@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" reward="30000_1000003_1" rate="2" />
+      <data id="2" reward="30000_1510004_10" rate="6" />
+      <data id="3" reward="30000_100060_1" rate="1" />
+      <data id="4" reward="30000_850009_2" rate="1" />
+      <data id="5" reward="30000_850008_2" rate="3" />
+      <data id="6" reward="30000_850038_2" rate="3" />
+      <data id="7" reward="30000_850039_2" rate="1" />
+      <data id="8" reward="30000_850007_2" rate="13" />
+      <data id="9" reward="30000_850037_2" rate="13" />
+      <data id="10" reward="30000_850017_2" rate="13" />
+      <data id="11" reward="30000_850027_2" rate="12" />
+      <data id="12" reward="30000_101050_2" rate="8" />
+      <data id="13" reward="30000_103050_2" rate="8" />
+      <data id="14" reward="30000_105050_2" rate="8" />
+      <data id="15" reward="30000_104050_2" rate="8" />
+</root>

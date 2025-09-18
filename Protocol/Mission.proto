@@ -1,0 +1,34 @@
+option java_package = "com.hawk.game.protocol";
+
+message MissionPB
+{	
+	required string missionId = 1;//任务唯一id
+	required int32 cfgId = 2;//模板id
+	required int32 state = 3;//状态0=未完成,1=可以领取,2=已领取
+	required int32 num   = 4;//当前进度数量
+}
+
+//获取任务列表
+message MissionListReq
+{
+}
+
+message MissionListRes
+{
+	repeated MissionPB list = 1;
+}
+
+message MissionBonusReq
+{
+	required string missionId=1;
+}
+
+message MissionBonusRes
+{
+	required string removeMissionId=1;//删除任务
+	repeated MissionPB addMission= 2;//添加任务
+}
+
+message MissionRefreshRes{
+	repeated MissionPB refreshMission= 1;//刷新任务	
+}

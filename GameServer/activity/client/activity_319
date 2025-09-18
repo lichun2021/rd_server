@@ -1,0 +1,72 @@
+return {
+	prop =
+	{
+		activityId = 319,
+		name = [[玫瑰之约]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">1.活动期间，指挥官完成活动任务，可领取活动道具奖励：<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">花瓣</font>。指挥官可<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">将花瓣兑换为所需要的其他物品</font>。<br/>2.活动期间，指挥官累计获得花瓣数量达到指定要求时，可领取活动道具：<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">玫瑰</font>。使用花瓣兑换商品，不会消耗累计获得花瓣数量。<br/>3.指挥官可<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">将玫瑰赠送给卡洛琳女士</font>，卡洛琳女士会<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">回赠一份随机礼品</font>，每种礼品有一定获得次数，获得次数用尽后将不会再获取此礼品。<br/>4.一期活动最多可获得40朵玫瑰。最多赠送40朵玫瑰给卡洛琳女士即可获得她的全部礼品，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">赠送40朵玫瑰的花语是：誓死不渝的爱情</font>。<br/>5.本期活动结束后，未赠送出的玫瑰将会凋谢并消失，请及时赠送。<br/>6.活动期间，本服指挥官今日累计获得花瓣数量达到指定要求时，今日充值过任意金额的指挥官可领取本服收集花瓣奖励。<br/>7.本活动累计充值任务会统计周卡、月卡、一元购等内容。<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">抽奖概率公示如下</font>：<br/>1.红色英雄碎片*36:概率1%<br/>2.万能装扮碎片*120:概率2%<br/>3.玫瑰补给卡*25:概率4%<br/>4.炽耀勋章*15:概率20%<br/>5.红色英雄碎片*10:概率10%<br/>6.万能装扮碎片*40:概率21.5%<br/>7.玫瑰补给卡*12:概率21.5%<br/>8.炽耀勋章*20:概率20%</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_319_Nor.png]],
+		selecticon = [[Activity_Icon_319_Sel.png]],
+		petal = 1400009,
+		rose = 1400010,
+		cost = [[30000_1400010_1]],
+		exchangeId = 1400009,
+	},
+	rose_gift_achieve = [[achieveId	type	conditionType	conditionValue	rewards	isReset	title	gotoType	gotoValue
+1	1	1	1	2	1	2	1	2
+319101	1	140900	1	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日登录游戏<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>	-1	
+319102	1	170100	150	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+319103	1	170100	300	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+319104	1	700093	6	30000_1400009_4	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319105	1	700093	30	30000_1400009_18	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319106	1	700093	68	30000_1400009_33	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319107	1	700093	100	30000_1400009_30	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319108	1	700093	300	30000_1400009_60	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319109	1	700093	600	30000_1400009_90	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319110	1	700093	1000	30000_1400009_120	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319111	1	700093	2000	30000_1400009_300	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319112	1	700093	3000	30000_1400009_399	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+319201	2	700091	9	30000_1400010_1	0			
+319202	2	700091	19	30000_1400010_2	0			
+319203	2	700091	99	30000_1400010_3	0			
+319204	2	700091	199	30000_1400010_4	0			
+319205	2	700091	399	30000_1400010_6	0			
+319206	2	700091	599	30000_1400010_8	0			
+319207	2	700091	999	30000_1400010_16	0			
+319301	3	700092	999	30000_802004_10,30000_1782103_20,30000_800002_20,30000_1300017_50,30000_810001_2,30000_1780045_1	1			
+319302	3	700092	2999	30000_1782125_2,30000_802004_20,30000_1782103_40,30000_800002_40,30000_1300017_100,30000_810001_4,30000_1780045_2	1			
+319303	3	700092	5999	30000_1000005_1,30000_1782125_3,30000_802004_30,30000_1782103_60,30000_800002_60,30000_1300017_150,30000_810001_6,30000_1780045_3	1			
+319304	3	700092	9999	30000_1000005_1,30000_1782125_5,30000_802004_40,30000_1782103_100,30000_800002_100,30000_1300017_200,30000_810001_8,30000_1780045_4	1			
+]],
+	rose_gift_exchange = [[id	needItem	gainItem	times
+1	2	2	1
+1001	30000_1400009_4	30000_1000003_5	200
+1002	30000_1400009_2	30000_9990032_35	200
+1003	30000_1400009_2	30000_21063005_20	400
+1004	30000_1400009_2	30000_1782103_40	300
+1005	30000_1400009_2	30000_1300027_36	150
+1006	30000_1400009_1	30000_1300017_125	400
+1007	30000_1400009_2	30000_1800001_8	200
+1008	30000_1400009_1	30000_1800000_80	400
+1009	30000_1400009_2	30000_802004_20	150
+1010	30000_1400009_2	30000_802005_10	100
+1011	30000_1400009_1	30000_800002_18	400
+1012	30000_1400009_3	30000_802003_12	200
+1013	30000_1400009_1	30000_800000_10	200
+1014	30000_1400009_1	30000_820002_1	200
+1015	30000_1400009_1	30000_810001_6	200
+1016	30000_1400009_1	30000_1780040_2	999
+]],
+	rose_gift_draw = [[id	weight	gainItem	times	notice
+1	1	2	1	1
+1001	100	30000_1000005_36	1	1
+1002	200	30000_1400011_120	1	1
+1003	400	30000_1782125_25	2	1
+1004	2000	30000_1300037_15	8	
+1005	1000	30000_1000005_10	2	
+2001	2150	30000_1400011_40	9	
+2002	2150	30000_1782125_12	9	
+2003	2000	30000_1300037_20	8	
+]],
+
+}

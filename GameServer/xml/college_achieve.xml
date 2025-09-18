@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="1" conditionType="1" conditionValue="1" rewards="30000_850054_1,30000_1780040_1,30000_810000_1" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="2" conditionType="1" conditionValue="2" rewards="30000_850054_1,30000_1780040_1,30000_810000_2" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="3" conditionType="1" conditionValue="4" rewards="30000_850054_1,30000_1780040_1,30000_810000_3" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="4" conditionType="1" conditionValue="6" rewards="30000_850054_1,30000_1780040_1,30000_810000_4" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="5" conditionType="2" conditionValue="50" rewards="30000_850054_1,30000_1780040_1,30000_810000_1" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="6" conditionType="2" conditionValue="150" rewards="30000_850054_1,30000_1780040_1,30000_810000_2" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="7" conditionType="2" conditionValue="300" rewards="30000_850054_1,30000_1780040_1,30000_810000_3" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="8" conditionType="2" conditionValue="500" rewards="30000_850054_1,30000_1780040_1,30000_810000_4" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="9" conditionType="3" conditionValue="6" rewards="30000_850054_1,30000_1780040_1,30000_810000_1" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="10" conditionType="3" conditionValue="12" rewards="30000_850054_1,30000_1780040_1,30000_810000_2" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="11" conditionType="3" conditionValue="20" rewards="30000_850054_1,30000_1780040_1,30000_810000_3" collegeScore="30000_21070048_10" collegeExp="10" />
+      <data achieveId="12" conditionType="3" conditionValue="32" rewards="30000_850054_1,30000_1780040_1,30000_810000_4" collegeScore="30000_21070048_10" collegeExp="10" />
+</root>

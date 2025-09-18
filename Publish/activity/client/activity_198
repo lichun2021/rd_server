@@ -1,0 +1,39 @@
+return {
+	prop =
+	{
+		activityId = 198,
+		name = [[武装技术]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">为了应对旷日持久的泰伯利亚战争，博士最近针对所有装备进行了一次全面的技术升级，升级后的装备将均有更强的作战能力。<br/><br/>1. 活动期间通过点击翻牌找到两个相同图案的技术可获得奖励。<br/>2. 每次重置<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">消耗1个技术重置密钥</font>。<br/>3. 活动期间武装任务（部分）、重置次数在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日0点重置</font>。<br/>4. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">本活动涉及的属性增加为装备技术研究提供属性加成，本活动为展示预览效果，不增加实际属性加成。</font><br/>5. 武装任务奖励请及时领取，每日重置后，未领取的奖励将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>。</font>]],
+		priority = 10005,
+		icon = [[Activity_Icon_198_Nor.png]],
+		selecticon = [[Activity_Icon_198_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		singlePrice = [[30000_19810001_1]],
+		itemPrice = [[10000_1001_20]],
+		extReward = [[30000_840172_1]],
+		dailyResetTimes = 20,
+		randReward = 19800001,
+		randRewardShow = [[30000_1800000_1,30000_1800000_2,30000_1800000_3,30000_1800000_5,30000_1800000_10]],
+	},
+	armed_science_task = [[achieveId	conditionType	conditionValue	configValue	gotoType	gotoValue	rewards	title	isReset
+1	1	2	1	1	2	2	2	1
+19800001	700057	1	1	-1		30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2,30000_810001_1	act198TaskTitle1	1
+19800002	200100	0_30	30	31	2_0	30000_850054_1,30000_1510002_10,30000_13310002_10,30000_1780035_1,30000_19810001_1	act198TaskTitle2	1
+19800003	31100	0_1500000	1500000	31	1_1_1007	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_19810001_1	act198TaskTitle3	1
+19800004	20100	0_3000	3000	23	2012	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_19810001_1	act198TaskTitle4	1
+19800005	500020	3	3	31	16_1	30000_1300009_10,30000_1300009_10,30000_1780035_1,30000_810001_1,30000_19810001_1	act198TaskTitle5	1
+19800006	500023	1	1	31	16_1	30000_1300009_10,30000_1300009_10,30000_1780035_1,30000_810001_1,30000_19810001_1	act198TaskTitle6	1
+]],
+	armed_science_package = [[id	name	images	effectShow
+1	2	2	2
+10001	@act198SkillName1	V6EquipPage_Str_Icon_C_01.png	act198effectDes10001
+10002	@act198SkillName2	V6EquipPage_Str_Icon_C_02.png	act198effectDes10002
+10003	@act198SkillName3	V6EquipPage_Str_Icon_C_03.png	act198effectDes10003
+10004	@act198SkillName4	V6EquipPage_Str_Icon_C_04.png	act198effectDes10004
+10005	@act198SkillName5	V6EquipPage_Str_Icon_C_05.png	act198effectDes10005
+10006	@act198SkillName6	V6EquipPage_Str_Icon_C_06.png	act198effectDes10006
+10007	@act198SkillName7	V6EquipPage_Str_Icon_C_07.png	act198effectDes10007
+]],
+
+}

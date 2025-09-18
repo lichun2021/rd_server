@@ -1,0 +1,25 @@
+return {
+	prop =
+	{
+		activityId = 295,
+		name = [[人气海选]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，达成指定任务后即可领取奖励。<br/>2.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">获得的投票道具</font>可前往人气指挥官网页进行投票。<br/>3.人气海选活动每日重置。<br/>4.活动结束后，获得的投票道具后续可进行兑换奖励。</font>]],
+		priority = 20041,
+		icon = [[Activity_Icon_295_Nor.png]],
+		selecticon = [[Activity_Icon_295_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		dailyRefresh = 1,
+		item = [[30000_29500005_1]],
+		buyItem = [[10000_1001_100]],
+	},
+	beauty_contest_achieve = [[achieveId	conditionType	conditionValue	warzoneValue	title	gotoType	gotoValue	rewards
+1	1	2	1	2	1	2	2
+295001	141008	1_20	20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日战胜野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	2_0	30000_29500003_2,30000_1782103_20,30000_1300017_100,30000_810001_1,30000_1780040_1
+295002	31100	0_1500000	1500000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日采集任意资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font></font>	31	1_1_1007	30000_29500003_2,30000_800002_20,30000_1800000_100,30000_810001_1,30000_1780040_1
+295003	160100	0_1000	1000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日使用任意加速道具<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>分钟</font>	207	0	30000_29500003_2,30000_1782103_20,30000_800000_10,30000_810001_1,30000_1780040_1
+295004	112100	30	30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日联盟捐献<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	29	0	30000_29500003_2,30000_800002_20,30000_1800000_100,30000_810001_1,30000_1780040_1
+295005	500023	1_1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日集结摧毁幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	16_1	30000_29500003_4,30000_1300017_100,30000_800000_10,30000_810001_1,30000_1780040_1
+]],
+
+}

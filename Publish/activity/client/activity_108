@@ -1,0 +1,22 @@
+return {
+	prop =
+	{
+		activityId = 108,
+		name = [[低折回馈]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">尊敬的指挥官，我们为您准备了超低折礼包，来答谢您的回归！</font>]],
+		priority = 10004,
+		icon = [[Activity_Icon_108_Nor.png]],
+		selecticon = [[Activity_Icon_108_Sel.png]],
+		bigIcon = [[]],
+	},
+	return_activity_108 = [[id	title	itemId	discount	limit	price	rewards	icon	buttonIcon
+1	2	1	1	1	2	2	2	2
+1	超值资源礼包	1150061	4	5	10000_1000_6480	30000_850009_25,30000_850039_25,30000_850019_25,30000_850029_25	Activity_Icon_107_06.png	V3CommonUI_Icon_Diamonds_01.png
+2	超值加速礼包	1150059	37	5	10000_1000_6480	30000_810002_12,30000_100050_125,30000_810001_125	Activity_Icon_107_02.png	V3CommonUI_Icon_Diamonds_01.png
+3	超值英雄礼包	1150058	13	5	10000_1000_6480	30000_1780080_45,30000_1510004_60,30000_13310004_60,30000_1510003_60,30000_13310003_60	Activity_Icon_107_05.png	V3CommonUI_Icon_Diamonds_01.png
+4	超值机甲礼包	1150060	25	5	10000_1000_6480	30000_840166_500,30000_9990008_6000	Activity_Icon_107_01.png	V3CommonUI_Icon_Diamonds_01.png
+5	超值能量源礼包	1150062	14	5	10000_1000_6480	30000_1480001_1200,30000_1480002_600,30000_1480003_300,30000_1480004_150	Activity_Icon_107_03.png	V3CommonUI_Icon_Diamonds_01.png
+]],
+
+}

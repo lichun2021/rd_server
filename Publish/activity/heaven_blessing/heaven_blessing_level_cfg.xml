@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" androidPayId="302001" iosPayId="302011" customAward="30000_1300017_500,30000_800000_10;30000_29700001_2,30000_29700021_10" randomAward="3020002,3020003" discount="6" />
+      <data id="2" androidPayId="302002" iosPayId="302012" customAward="30000_1300017_500,30000_800000_10;30000_29700001_2,30000_29700021_10" randomAward="3020004,3020005" discount="6" />
+      <data id="3" androidPayId="302003" iosPayId="302013" customAward="30000_1300017_500,30000_800000_10;30000_29700001_2,30000_29700021_10" randomAward="3020006,3020007" discount="6" />
+</root>

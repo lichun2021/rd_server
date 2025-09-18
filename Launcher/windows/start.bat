@@ -1,0 +1,1 @@
+java -server -javaagent:lib/hotfixagent.jar -Dfile.encoding=UTF-8 -jar gameserver.jar

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data officeId="1" canAppoint="0" buff="412_5000" />
+      <data officeId="2" canAppoint="1" buff="136_300" />
+      <data officeId="3" canAppoint="1" buff="320_300" />
+      <data officeId="4" canAppoint="1" buff="100_300" atkAttr="2_300,1_300,4_300,3_300,6_300,5_300,8_300,7_300" />
+      <data officeId="5" canAppoint="1" buff="350_500" />
+</root>

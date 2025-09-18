@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buildType="1001" cover="4,4" quality="3" maxNumber="1" maxSetNumber="1" />
+      <data buildType="1002" cover="2,1" quality="3" maxNumber="2" maxSetNumber="99" />
+      <data buildType="1003" cover="2,2" quality="3" maxNumber="2" maxSetNumber="99" />
+      <data buildType="1004" cover="2,2" quality="4" maxNumber="2" maxSetNumber="99" />
+      <data buildType="1006" cover="3,3" quality="4" maxNumber="3" maxSetNumber="99" />
+      <data buildType="1009" cover="3,3" quality="4" maxNumber="2" maxSetNumber="99" />
+      <data buildType="1011" cover="4,4" quality="5" maxNumber="3" maxSetNumber="99" />
+</root>

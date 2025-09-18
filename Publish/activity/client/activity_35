@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 35,
+		name = [[每日必买]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 点击下方<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">立即前往</font>按钮即可跳转至每日必买页面。<br/>2. 购买每日必买，可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">英雄珍藏宝箱</font>及其他超值道具。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">卡维利珍藏 概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 卡维利碎片数量1概率25%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 紫色英雄碎片数量1概率60%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 橙色英雄碎片数量1概率15%。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">卡维利装备箱 概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 必定获得装备打造券数量1。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 特级突破石数量1概率50%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 特级传承石数量1概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 强化石数量5概率45%。</font>]],
+		priority = 20900,
+		icon = [[Activity_Icon_36_Nor.png]],
+		selecticon = [[Activity_Icon_36_Sel.png]],
+		rewards = [[30000_1001001_1,30000_1000003_1,30000_802003_1,30000_810001_20]],
+		toType = 1,
+		serverDelay = 0,
+		rareMark = [[30000_1001001_1]],
+	},
+
+}

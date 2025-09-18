@@ -1,0 +1,15 @@
+# 刷新点  x_y,刷几个写几个.  半径为偶数 x,y相加必须为奇数
+refreshPoint = 75_181
+
+# 总进度值
+totalPoint = 300
+
+# 破罩时间
+openTime = 15_21,30_36,45_51
+
+# 破罩1分钟后开始争夺
+battleOpen = 1
+
+# 采集部队最小值
+collectArmyMin = 50000
+

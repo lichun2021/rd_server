@@ -1,0 +1,261 @@
+option java_package	= "com.hawk.game.protocol";
+import "Player.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+import "World.proto";
+import "Armour.proto";
+import "Common.proto";
+import "Manhattan.proto";
+import "MechaCore.proto";
+
+//攻防模拟战的活动状态
+enum SimulateWarActivityState {
+	SW_NOT_OPEN			=1;			//活动未开启
+	SW_SHOW				=2;			//显示
+	SW_SIGN_UP			=3;			//报名
+	SW_MANAGE			=4;			//管理
+	SW_MARCH			=5;			//行军
+	SW_FIGHT_SHOW		=6;			//客户端战斗展示
+	SW_REWARD			=7; 		//发奖阶段.
+	SW_HIDDEN			=8;			//隐藏
+}
+
+// 攻防模拟战赛活动状态信息
+message SimulateWarActivityStateInfo{
+	required SimulateWarActivityState state 			= 1;//活动状态
+	optional int32 stage			= 2;//当前周期数
+	optional int64 showStartTime	= 3;//报名开启时间(ms)
+	optional int64 signStartTime	= 4; //开始报名时间
+	optional int64 mangeStarTime	= 5; //管理开始时间.
+	optional int64 marchStartTime 	= 6; //行军开始时间
+	optional int64 fightShowStarTime = 7; //展示战斗开始时间
+	optional int64 rewardStartTime = 8; //发奖时间.
+	optional int64 hiddenTime		= 9; //隐藏时间.
+	optional int64 newlyTime		= 10;//显示新的时间.
+}
+
+//
+enum WayType {
+	TOP 			= 1;//上路
+	MIDDLE			= 2; //中路
+	BOTTOM			= 3; //下路
+}
+
+//报名参战
+message SimulateWarSignUpReq {
+	required WayType way		= 1;
+	required WorldMarchReq marchInfo	= 2;
+}
+
+//调整出兵信息.
+message SimulateWarAdjustMarchReq {
+	required string id = 1; //出兵的唯一ID
+	required WorldMarchReq marchInfo	= 2; //部队的信息.
+}
+
+//报名参战, 客户端收到返回之后，把当前的player 添加到队尾。更新当前界面.
+message SimulateWarSignUpResp {
+	required WayType way		= 1;
+	required PBSimulateWarWayPlayer wayPlayer = 2; //
+}
+
+//调整分路 成功过之后同步 SimulateWarAllMarchResp该结构体.
+message SimulateWarAdjustWayReq {
+	required string	  id = 1; //唯一ID
+	required WayType way = 2; //分路.
+}
+
+//解散某条路上的出兵. 同步SimulateWarAllMarchResp该结构体.
+message SimulateWarDissolveReq {
+	required string id = 1;  //玩家id
+}
+
+//请求分路信息
+message SimulateWarWayPlayersReq {	
+	required WayType			way = 1; //哪路
+}
+
+//请求分路信息
+message SimulateWarWayPlayersResp {
+	repeated PBSimulateWarWayPlayer players = 1; //玩家集合(集合中的下标顺序就是玩家的顺序)
+	required WayType			way = 2; //哪路
+}
+
+//调整列表中的位置.
+message SimulateWarOrderAdjustReq {
+	repeated string 		idList			= 1;//id在列表中的顺序
+	required WayType 		wayType			= 2; //路.
+}
+
+//请求主界面信息
+message SimulateWarPageInfoReq {
+	
+}
+
+//请求主界面信息
+message SimulateWarPageInfoResp {
+	optional SimulateWarActivityStateInfo 	stateInfo	= 1; //阶段信息
+	repeated WayNumInfo numInfo = 2; //分路队伍数.
+	optional int32 encourageTimes = 3; //助威次数.l
+	optional int32 teamTotalCount = 4; //我方的队伍总数
+	optional int32 enemyTeamTotalCount = 5; //敌军的队伍总数
+	optional int32 enemyEncourageTimes = 6;//敌人的助威次数.
+	optional SimulateWarGuildBattle battleInfo = 7;   //战斗展示阶段和奖励领取阶段发送的数据.
+	optional string enemyGuildName		= 8 ;//敌对工会名字
+	optional string enemyGuildServerId  = 9; //敌对工会区服。
+}
+
+//更新主界面信息
+message SimulateWarPageInfoUpdate{
+	repeated WayNumInfo numInfo = 2;
+	optional int32 teamTotalCount = 4; //我方的队伍总数
+}
+
+//玩家的助威信息.
+message SimulateWarEncoureageInfoReq {
+
+}
+
+//玩家的助威信息.
+message SimulateWarEncoureageInfoResp {
+	optional int32 playerEncourageTimes = 1; //玩家自己的助威次数.
+	optional int32 guildEncourageTimes = 2; // 工会的总共助威次数.
+}
+
+//玩家请求助威,成功会同步  SimulateWarEncoureageInfoResp
+message SimulateWarEncourageReq {
+}
+
+//分路报名信息
+message WayNumInfo {
+	required WayType way = 1; //分路信息
+	required int32 num = 2; //个数.
+}
+
+
+// 当前这一路的玩家出兵结构.
+message PBSimulateWarWayPlayer{
+	optional SimulateWarBasePlayerStruct playerInfo = 1;
+	optional PBSimulateWarBattleData battleData =2; //战斗信息.
+}
+
+//请求玩家的三路信息
+message SimulateWarAllMarchReq {
+	
+}
+
+//玩家的三路行军信息.
+message SimulateWarAllMarchResp {
+	repeated PBSimulateWarBattleData battleDatas = 1; //玩家的三路行军信息.
+}
+
+
+//攻防模拟战  服务器存储使用.
+message PBSimulateWarPlayer {
+	required SimulateWarBasePlayerStruct playerInfo = 1;
+	repeated PBSimulateWarBattleData battleDatas = 2; //三路的出兵信息.
+	optional int32 orderNum = 3; //用于生成玩家出兵唯一ID 服务器使用.
+}
+
+message SimulateWarBattlePlayer {
+	required SimulateWarBasePlayerStruct player =1;//
+	optional int32 killCount					=2; //击败多少人.
+	optional int32 armyCnt						=3; // (战斗)部队数量
+	optional int32 disCnt						=4; // (战斗)部队损失数量
+	optional string marchId						=5; //此次出战的march.
+}
+
+//显示玩家的基础信息,就不重用了玩家快照了.
+message SimulateWarBasePlayerStruct {
+	optional string serverId = 1 ;//玩家的注册区服ID
+	optional string playerId = 2; //玩家的id
+	optional string guildTag = 3;  //公会简称
+	optional string guildID = 4; // 公会ID，
+	optional string pfIcon = 6; //pficon
+	optional int32 icon = 7; //玩家的icon
+	optional int64 battlePoint = 8; //战力.
+	optional string name	 = 9; //玩家的名字.
+	optional int32 guildFlag = 10; //工会旗帜	
+	optional int32 cityPlantLevel 		= 11; // 泰能等级
+}
+
+//单场战斗数据.
+message SimulateWarBattelInfo{
+	required string pBattleId		= 1;
+	optional SimulateWarBattlePlayer playerA	= 2;
+	optional SimulateWarBattlePlayer playerB	= 3;	
+	required string winnerId		= 4;	
+}
+
+//攻防模拟战公会出战信息.
+message SimulateWarGuildInfo{
+	required string id			= 1;
+	required string name		= 2; //名称
+	required string tag			= 3; //简称	
+	required string serverId	= 5;
+	optional int32 teamCount	= 6; //参战玩家数量
+	optional int64 totalPower	= 7; //出战总战力
+	optional int32 winCount 	= 8; //公会胜利的场次.
+	repeated WayNumInfo leftNumInfo = 9; //每路的队伍剩余数量.	
+	optional SimulateWarBattlePlayer mvpPlayer = 10; //mvp玩家.
+	optional int32 guildTag		= 11; //联盟旗帜.
+	repeated WayNumInfo totalNumInfo = 12; //每路队伍原来的总数.
+}
+
+
+// 联盟对战数据
+message SimulateWarGuildBattle{
+	optional string 		gBattleId			= 1; //两个联盟公用一份战斗数据, 所以在这里保存一个id 为空的情况说明没有匹配到联盟.
+	optional SimulateWarGuildInfo guildA		= 3;
+	optional SimulateWarGuildInfo guildB		= 4;
+	optional string 			winGuildId		= 5;//胜利的工会ID。
+}
+
+//请求战斗记录.
+message SimulateWarBattleRecordReq {
+	required WayType way = 1; //请求的是哪一路.
+}
+
+//请求单路的战斗记录.
+message SimulateWarBattleRecordResp {
+	required WayType way = 1; //请求的是哪一路.
+	repeated SimulateWarBattelInfo battleInfo = 2; //战斗信息.
+}
+
+//服务器专用于存储数据.
+message SimulateWarBattleList {
+	repeated SimulateWarBattelInfo battleInfos = 1; //用PB存储.
+}
+
+//出战队伍
+message PBSimulateWarBattleData {
+	required string 	id 			=1; //同一个玩家可能会在一条路里面有几个数据, 所以这里服务器会下发一个id.
+	required WayType way		= 2;   //玩家在哪一路.
+	repeated PBSimulateWarSoldier soldiers = 3;	//机甲
+	repeated PBHeroInfo heros = 4;				//英雄
+	optional PBSuperSoldierInfo superSoldier = 5;	//超级兵.
+	repeated PBSimulateWarEff effs = 6;				//作用号
+	optional ArmourBriefInfo 	armourBrief = 7; // 装备
+	optional int32 battleValue			= 8; //战力.	
+	repeated int32 dressId = 9; // 皮肤
+	optional bool manhattanFuncUnlock      = 10; //超武
+	optional PBManhattanInfo manhattanInfo = 11;
+	optional bool mechacoreFuncUnlock      = 12; //机甲核心
+	optional PBMechaCoreInfo mechacoreInfo = 13;
+}
+
+// 作用号
+message PBSimulateWarEff{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+//机甲.
+message PBSimulateWarSoldier{
+	optional int32 armyId =1;
+	optional int32 star = 2;
+	optional int32 count = 3;
+	optional int32 plantStep = 4; // 泰能等级
+	optional int32 plantSkillLevel = 5; // 泰能强化技能等级
+	optional int32 plantMilitaryLevel = 6;//泰能兵军衔等级
+}

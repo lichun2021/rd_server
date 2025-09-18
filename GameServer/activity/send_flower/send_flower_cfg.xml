@@ -1,0 +1,21 @@
+# 拉票cd，单位秒
+lapiaoCd = 3600
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 是否每日重置
+isDailyReset = 0
+
+# 个人排行数量
+selfRankLimit = 5
+
+# 联盟排行数量
+guildRankLimit = 5
+
+# 排行刷新周期(毫秒)
+rankPeriod = 60000
+
+# 送花道具
+sendItem = 1150042
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" pool="1" weight="1070" reward="30000_850007_1" />
+      <data id="102" pool="1" weight="357" reward="30000_850008_1" />
+      <data id="103" pool="1" weight="59" reward="30000_850009_1" />
+      <data id="104" pool="1" weight="1070" reward="30000_850037_1" />
+      <data id="105" pool="1" weight="357" reward="30000_850038_1" />
+      <data id="106" pool="1" weight="59" reward="30000_850039_1" />
+      <data id="107" pool="1" weight="1070" reward="30000_850017_1" />
+      <data id="108" pool="1" weight="357" reward="30000_850018_1" />
+      <data id="109" pool="1" weight="59" reward="30000_850019_1" />
+      <data id="110" pool="1" weight="1070" reward="30000_850027_1" />
+      <data id="111" pool="1" weight="180" reward="30000_850028_1" />
+      <data id="112" pool="1" weight="59" reward="30000_850029_1" />
+      <data id="113" pool="1" weight="595" reward="30000_101041_1" />
+      <data id="114" pool="1" weight="59" reward="30000_101050_1" />
+      <data id="115" pool="1" weight="595" reward="30000_104041_1" />
+      <data id="116" pool="1" weight="59" reward="30000_104050_1" />
+      <data id="117" pool="1" weight="595" reward="30000_105041_1" />
+      <data id="118" pool="1" weight="59" reward="30000_105050_1" />
+      <data id="119" pool="1" weight="595" reward="30000_103041_1" />
+      <data id="120" pool="1" weight="59" reward="30000_103050_1" />
+      <data id="121" pool="1" weight="1070" reward="30000_1480001_2" />
+      <data id="122" pool="1" weight="357" reward="30000_1480001_4" />
+      <data id="123" pool="1" weight="119" reward="30000_1480001_8" />
+      <data id="124" pool="1" weight="59" reward="30000_1480001_16" />
+      <data id="125" pool="1" weight="12" reward="30000_1480001_32" />
+      <data id="201" pool="2" weight="4000" reward="30000_850068_1" />
+      <data id="202" pool="2" weight="1300" reward="30000_850069_1" />
+      <data id="203" pool="2" weight="300" reward="30000_850047_1" />
+      <data id="204" pool="2" weight="200" reward="30000_850070_1" />
+      <data id="205" pool="2" weight="100" reward="30000_850048_1" />
+      <data id="206" pool="2" weight="4000" reward="30000_810001_1" />
+      <data id="207" pool="2" weight="100" reward="30000_810002_1" />
+</root>

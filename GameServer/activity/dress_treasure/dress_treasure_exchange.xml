@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needItem="30000_21062498_8" gainItem="30000_1800001_1" times="500" />
+      <data id="2" needItem="30000_21062498_6" gainItem="30000_802003_1" times="500" />
+      <data id="3" needItem="30000_21062498_10" gainItem="30000_100050_1" times="500" />
+      <data id="4" needItem="30000_21062498_2" gainItem="30000_1800000_5" times="999" />
+      <data id="5" needItem="30000_21062498_1" gainItem="30000_840194_5" times="999" />
+      <data id="6" needItem="30000_21062498_1" gainItem="30000_1780030_2" times="999" />
+      <data id="7" needItem="30000_21062497_1" gainItem="30000_21062401_1" times="100" />
+      <data id="8" needItem="30000_21062497_1" gainItem="30000_21062402_1" times="100" />
+      <data id="9" needItem="30000_21062497_1" gainItem="30000_21062403_1" times="100" />
+      <data id="10" needItem="30000_21062497_1" gainItem="30000_21062404_1" times="100" />
+      <data id="11" needItem="30000_21062497_1" gainItem="30000_21062405_1" times="100" />
+      <data id="12" needItem="30000_21062497_1" gainItem="30000_21062406_1" times="100" />
+      <data id="13" needItem="30000_21062497_1" gainItem="30000_21062407_1" times="100" />
+      <data id="14" needItem="30000_21062497_1" gainItem="30000_21062408_1" times="100" />
+      <data id="15" needItem="30000_21062497_1" gainItem="30000_21062409_1" times="100" />
+      <data id="16" needItem="30000_21062497_1" gainItem="30000_21062410_1" times="100" />
+      <data id="17" needItem="30000_21062497_1" gainItem="30000_21062411_1" times="100" />
+      <data id="18" needItem="30000_21062497_1" gainItem="30000_21062413_1" times="100" />
+      <data id="19" needItem="30000_21062497_1" gainItem="30000_21062414_1" times="100" />
+      <data id="20" needItem="30000_21062497_1" gainItem="30000_21062415_1" times="100" />
+      <data id="21" needItem="30000_21062497_1" gainItem="30000_21062416_1" times="100" />
+      <data id="22" needItem="30000_21062497_1" gainItem="30000_21062417_1" times="100" />
+</root>

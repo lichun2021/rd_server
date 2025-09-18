@@ -1,0 +1,42 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 抽奖道具
+useItem = 30000_1001100_1
+
+# 购买1个抽奖道具的消耗
+price = 10000_1000_50
+
+# 单次操作，抽奖最大次数
+onceMax = 30
+
+# 单次抽奖积分范围，范围内纯随机
+pointRandom = 50_100
+
+# 每日结算刷矿时间点
+refreshTime = 12:00:00_20:00:00
+
+# 服务器积分上限
+serverMaxPoint = 100000
+
+# 每多少积分刷出一个矿
+refreshPoint = 2000
+
+# 刷新的锅的ID，配置：res_treasure表的ID
+refreshTargetId = 3
+
+# 活动结束前X秒不能探索
+noExplorationTime = 14400
+
+# 个人排名记录的总名次
+personRankSize = 100
+
+# 拉锅1次获得的奖励数量
+gatherOnce = 30000_802005_10
+
+# 服务器刷矿记录最大条目数
+serverLogMax = 50
+
+# 各人采矿记录最大条目数
+playerLogMax = 80
+

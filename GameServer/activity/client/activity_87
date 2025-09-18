@@ -1,0 +1,20 @@
+return {
+	prop =
+	{
+		activityId = 87,
+		name = [[SS英雄]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，SS英雄活动限时出售SS英雄宝箱。<br/>2. 开启SS英雄宝箱必定获得英雄兑换券，并额外赠送资源、加速或增益道具。<br/>3. 英雄兑换券可用于兑换 凯恩碎片、希伯特碎片、莉塔碎片、爱莉莎碎片、杰洛特碎片、贾斯汀碎片、艾薇儿碎片、喀秋莎碎片、所罗门碎片、凤凰碎片、资源、加速等道具<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">SS英雄宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得英雄兑换券，30%概率获得1个，30%概率获得2个，25%概率获得3个，15%概率获得5个。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">城建加速2小时*1  11%<br/>部队训练加速2小时*1  11%<br/>科技研究加速2小时*1  11%<br/>医疗加速2小时*1  11%<br/>500000矿石*3  8%<br/>500000石油*3  8%<br/>80000合金*3  8%<br/>20000稀土*3  8%<br/>500000矿石*4  5%<br/>500000石油*4  5%<br/>80000合金*4  5%<br/>20000稀土*4  5%<br/>高级行军加速*1  4%<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">极品资源宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得500000矿石*1。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">500000矿石*2  7.5%<br/>500000石油*2  7.5%<br/>80000合金*2  7.5%<br/>20000稀土*2  7.5%<br/>1500000矿石*1  7.5%<br/>1500000石油*1  7.5%<br/>250000合金*1  7.5%<br/>62500稀土*1  7.5%<br/>1500000矿石*2  5%<br/>1500000石油*2  5%<br/>250000合金*2  5%<br/>62500稀土*2  5%<br/>5000000矿石*1  5%<br/>5000000石油*1  5%<br/>800000合金*1  5%<br/>200000稀土*1  5%<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">极品加速宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得通用加速5分钟*15。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">城建加速5分钟*6  12%<br/>部队训练加速5分钟*6  12%<br/>科技研究加速5分钟*6  12%<br/>医疗加速5分钟*6  12%<br/>城建加速2小时*1  10%<br/>部队训练加速2小时*1  10%<br/>科技研究加速2小时*1  10%<br/>医疗加速2小时*1  10%<br/>城建加速8小时*1  3%<br/>部队训练加速8小时*1  3%<br/>科技研究加速8小时*1  3%<br/>医疗加速8小时*1  3%<br/></font>]],
+		priority = 20239,
+		icon = [[Activity_Icon_87_Nor.png]],
+		selecticon = [[Activity_Icon_87_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+	},
+	supply_station = [[id	itemId	awardId	price	limit
+1	2	1	2	1
+870001	1150092	4900018	10000_1001_60	999
+870002	1150085	4930012	10000_1001_58	100
+870003	1150086	4930013	10000_1001_58	100
+]],
+
+}

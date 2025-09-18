@@ -1,0 +1,32 @@
+option java_package = "com.hawk.game.protocol";
+
+// 任务状态
+enum BattleMissionState
+{
+	INIT     = 0;  //初始状态
+	COMPLETE = 1;  //完成状态
+	RECEIVED = 2;  //已领奖状态
+	END      = 3;  //结束状态
+}
+
+//单条战地任务结构体
+message BattleMissionTask
+{
+	required int32 missionId = 1; //任务Id
+	required int32 currNum = 2;	  //进度
+	required BattleMissionState state = 3;
+}
+
+//战地任务界面信息
+message BattleMissionPage
+{	
+	required int32 chapterId 		    = 1;//章节id
+	required BattleMissionState state   = 2;//章节完成状态
+	repeated BattleMissionTask taskInfo = 3;//章节数据
+}
+
+//领取章节奖励
+message ChapterRewardReq
+{
+	
+}

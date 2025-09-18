@@ -1,0 +1,15 @@
+# 流失时间；单位：秒
+lostTime = 604800
+
+# VIP等级
+vip = 0
+
+# 指挥官等级
+level = 1
+
+# 战斗力达标值
+battlePoint = 1
+
+# 基地等级
+buildlevel = 1
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data type="10" atkAttrMax="13750" hpAttrMax="3750" />
+      <data type="20" atkAttrMax="32500" hpAttrMax="31500" />
+      <data type="30" atkAttrMax="120000" hpAttrMax="120000" param1="2" />
+      <data type="40" atkAttrMax="6000" hpAttrMax="6000" param1="2" />
+      <data type="50" atkAttrMax="13682" hpAttrMax="13682" param1="1068_1076_2" param2="1072_1" param3="1075_1069_2" param4="1071_1" />
+      <data type="60" atkAttrMax="14908" hpAttrMax="14203" param1="1074_1066_1061_1055_1056_4" />
+      <data type="70" atkAttrMax="30712" hpAttrMax="17726" param1="1065_1062_1058_1054_1060_4" />
+      <data type="80" atkAttrMax="100000" hpAttrMax="100000" />
+      <data type="90" atkAttrMax="11000" hpAttrMax="11000" param1="2_1007_1005,1_1011_1002,4_1009_1004,3_1015_1004,6_1008_1003,5_1012_1003,8_1014_1010,7_1013_1006" />
+      <data type="100" atkAttrMax="9200" hpAttrMax="6000" />
+      <data type="110" atkAttrMax="11000" hpAttrMax="10500" />
+      <data type="120" atkAttrMax="28700" hpAttrMax="28700" param1="2500" param2="2500" />
+      <data type="130" atkAttrMax="60000" hpAttrMax="60000" />
+      <data type="140" atkAttrMax="47250" hpAttrMax="47250" />
+      <data type="150" atkAttrMax="102340" hpAttrMax="97080" />
+      <data type="160" atkAttrMax="23000" hpAttrMax="23000" />
+      <data type="170" atkAttrMax="10000" hpAttrMax="10000" />
+      <data type="180" atkAttrMax="90000" hpAttrMax="90000" />
+      <data type="190" atkAttrMax="1000" hpAttrMax="500" />
+      <data type="200" atkAttrMax="300" hpAttrMax="0" />
+      <data type="210" atkAttrMax="1500" hpAttrMax="0" />
+      <data type="220" atkAttrMax="15000" hpAttrMax="15000" />
+      <data type="230" atkAttrMax="600" hpAttrMax="600" />
+      <data type="240" atkAttrMax="2000" hpAttrMax="2000" />
+      <data type="250" atkAttrMax="3000" hpAttrMax="3000" />
+      <data type="260" atkAttrMax="500" hpAttrMax="500" />
+      <data type="270" atkAttrMax="3000" hpAttrMax="3000" />
+      <data type="280" atkAttrMax="13500" hpAttrMax="13500" param1="1082_1087_2" />
+      <data type="290" atkAttrMax="13500" hpAttrMax="13500" param1="1080_1084_2" />
+      <data type="300" atkAttrMax="13900" hpAttrMax="13900" param1="1091_1097_2" />
+      <data type="310" atkAttrMax="270000" hpAttrMax="270000" param1="1090_1092_1094_1096_1099_1102_1103_1105_1107_9" />
+      <data type="320" atkAttrMax="60000" hpAttrMax="40000" />
+      <data type="330" atkAttrMax="105000" hpAttrMax="52500" />
+      <data type="340" atkAttrMax="270000" hpAttrMax="270000" />
+      <data type="350" atkAttrMax="130000" hpAttrMax="130000" />
+      <data type="360" atkAttrMax="62400" hpAttrMax="62400" />
+      <data type="370" atkAttrMax="120000" hpAttrMax="42500" />
+      <data type="380" atkAttrMax="180000" hpAttrMax="150000" />
+      <data type="390" atkAttrMax="270000" hpAttrMax="270000" param1="13636" param2="13636" />
+</root>

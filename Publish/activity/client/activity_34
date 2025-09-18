@@ -1,0 +1,14 @@
+return {
+	prop =
+	{
+		activityId = 34,
+		name = [[首充双倍重置]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">首充双倍重置</font>]],
+		priority = 11400,
+		icon = [[Activity_Icon_25.png]],
+		toType = 1,
+		serverDelay = 0,
+	},
+
+}

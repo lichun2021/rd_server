@@ -1,0 +1,32 @@
+return {
+	prop =
+	{
+		activityId = 196,
+		name = [[南瓜金喜]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，每人每天最高可购买<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">指定次数</font>的南瓜，每次购买消耗对应的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">金条数量</font>，获得的金币数量必然超过消耗的金条数量。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 1.5倍-1.9倍概率65%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 2倍-2.6倍概率34%。</font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18"><br/>3. 3倍概率1%。</font>]],
+		priority = 20200,
+		icon = [[Activity_Icon_196_Nor.png]],
+		selecticon = [[Activity_Icon_196_Sel.png]],
+		awardTips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">可开出150至300金币</font>]],
+		limitTips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">限量{0}/{1}</font>]],
+		supItem = [[30000_1150196_1]],
+		cost = [[10000_1000_100]],
+		gain = [[10000_1001_1]],
+		buyLimit = 66,
+	},
+	dw_gold = [[id	lowLimit	highLimit	rate
+1	1	1	1
+1	150	190	6500
+2	200	260	3400
+3	300	300	100
+]],
+	dw_gold_achieve = [[achieveId	conditionValue	rewards
+1	1	2
+196001	10	30000_850048_2,30000_810001_3,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1
+196002	25	30000_850048_4,30000_810001_6,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+196003	40	30000_850048_6,30000_810001_9,30000_850007_3,30000_850037_3,30000_850017_3,30000_850027_3
+196004	60	30000_850048_10,30000_810001_18,30000_850007_6,30000_850037_6,30000_850017_6,30000_850027_6
+]],
+
+}

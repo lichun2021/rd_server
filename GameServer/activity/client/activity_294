@@ -1,0 +1,40 @@
+return {
+	prop =
+	{
+		activityId = 294,
+		name = [[泰能机密]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间玩家可通过泰能机密钥匙翻开卡牌来寻找机密宝箱的密码。<br/>2.泰能机密宝箱的密码由4位数组成，成功输入可开启宝箱。<br/>3.每个泰能机密宝箱只能输入3次密码，若3次密码输入均错误，则该泰能机密宝箱会自毁。<br/>4.成功开启泰能机密宝箱可以获得奖励，并随着开启泰能机密宝箱数量的提升，泰能机密宝箱的品质会提升，奖励也会随之提升。<br/>5.泰能机密钥匙可通过每日任务积分宝箱和花费金币购买获得。<br/>6.指挥官每天可获得的泰能机密宝箱存在数量限制。</font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_294_Nor.png]],
+		selecticon = [[Activity_Icon_294_Sel.png]],
+		bigIcon = [[]],
+		worldshare = 1,
+		worldshareCD = 600,
+		allianceshare = 3,
+		allianceshareCD = 300,
+		propid = [[30000_29400001_1]],
+		times = 60,
+		price = [[10000_1001_30]],
+		opentime = 3,
+		maxboxs = 3,
+	},
+	taineng_secret_box = [[id	name	upgrade	upgradeshow	specialreward	reward
+1	2	1	1	2	2
+1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">普通宝箱奖励</font>	1	1	30000_21063005_1,20_32	30000_1782103_40,30000_1300017_50,30000_810001_2,30000_1780040_2
+2	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">稀有宝箱奖励</font>	2	1	30000_21063005_1,38_54	30000_1782103_60,30000_1300017_75,30000_810001_3,30000_1780040_3
+3	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">史诗宝箱奖励</font>	3	0	30000_21063005_1,56_76	30000_1782103_100,30000_1300017_125,30000_810001_5,30000_1780040_5
+]],
+	taineng_secret_daily_key = [[id	daily_reward	key
+1	1	2
+1	1	30000_29400001_1
+2	2	30000_29400001_1
+3	3	30000_29400001_1
+4	4	30000_29400001_1
+5	5	30000_29400001_2
+6	6	30000_29400001_3
+7	7	30000_29400001_4
+8	8	30000_29400001_5
+]],
+
+}

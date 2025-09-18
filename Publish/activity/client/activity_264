@@ -1,0 +1,31 @@
+return {
+	prop =
+	{
+		activityId = 264,
+		name = [[粽情祈愿]],
+		title = [[]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 每日登陆游戏，点击祈愿，即可助力粽情祈愿活动。<br/>2. 当全服祈愿数量达到阶段目标后，即可领取对应奖励。<br/>3. 每人每天只能祈愿一次，次日重置次数。<br/>4. 祈愿值为全服数值。<br/>5. 每日祈愿即可获得固定奖励和随机奖励各一份。</font>]],
+		priority = 19250,
+		icon = [[Activity_Icon_264_Nor.png]],
+		selecticon = [[Activity_Icon_264_Sel.png]],
+		tips1 = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">达成条件：全服进度达到</font>]],
+		tips2 = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">达成奖励：</font>]],
+		signRewards = [[30000_810001_3,30000_24200003_100]],
+		randomRewards = 2021121,
+		chatTime = [[2_7]],
+		bulletChatCount = 30,
+		supplementaryArticles = 20,
+		defaultNumber = 8,
+		typeface = 30,
+		color = [[242_236_222,255_158_163,249_205_116,239_153_94,203_180_226,168_200_246]],
+		blessingWords = [[@Bless2,@Bless3,@Bless5,@Bless6,@Bless7,@Bless8,@Bless9,@Bless10,@Bless11,@Bless12,@Bless13,@Bless14,@Bless15,@Bless16,@Bless18,@Bless19,@Bless20,@Bless21,@Bless22,@Bless23,@Bless24,@Bless25,@Bless26,@Bless27,@Bless28,@Bless29,@Bless30,@Bless31,@Bless32,@Bless33,@Bless34,@Bless35,@Bless36,@Bless37,@Bless38,@Bless39,@Bless40,@Bless41,@Bless42,@Bless43,@Bless44,@Bless45,@Bless46,@Bless47,@Bless48,@Bless49,@Bless50,@Bless51,@Bless52,@Bless53,@Bless54,@Bless55,@Bless56,@Bless57,@Bless58,@Bless59,@Bless60,@Bless61,@Bless62,@Bless63,@Bless64,@Bless65,@Bless66,@Bless67,@Bless68,@Bless69,@Bless70]],
+	},
+	ssy_full_signin_reward = [[achieveId	conditionValue	rewards
+1	1	2
+2640001	200000	30000_10000013_1,30000_24200003_100,30000_1780080_2,30000_840194_10,30000_800110_1,30000_810001_1,30000_1780040_2
+2640002	400000	30000_24200003_200,30000_1780080_4,30000_840194_20,30000_800110_2,30000_810001_2,30000_1780040_4
+2640003	800000	30000_24200003_400,30000_1780083_4,30000_840194_30,30000_800110_3,30000_810001_3,30000_1780040_6
+2640004	1200000	30000_24200003_600,30000_1780083_6,30000_840194_40,30000_800110_4,30000_810001_4,30000_1780040_8
+]],
+
+}

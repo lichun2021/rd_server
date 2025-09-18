@@ -1,0 +1,262 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+// YQZZ_GAME_SYNC			= 483; // 副本信息同步
+message PBYQZZGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBYQZZGuildInfo guildInfo = 3; 
+	repeated PBYQZZPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; //怪物数量
+	repeated PBYQZZNationInfo nationInfo = 7; // 国家
+}
+
+// 泰博利亚小地图
+message PBYQZZSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBYQZZGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;	
+	repeated PBYQZZNationInfo nationInfo = 7; // 国家
+}
+
+// 国家统计
+message PBYQZZNationInfo{
+	optional int32 camp = 1; // 阵营
+	optional string serverId = 2;
+	optional int32 nationHonor = 3; // 国家积分
+	optional int32 nationSpaceLevel = 4; // 国家航天中心等级
+	optional int32 nationTechValue = 5; // 国家科技点
+	optional string nationLeaderId = 6; // 司令/一盟主  
+	optional string nationLeaderName = 7; // 司令/一盟主  
+	optional int64 giveupBuildCd = 8; // 放弃建筑冷却
+	optional int32 pylonCnt = 9; // 占领能量塔
+}
+
+// 联盟统计 
+message PBYQZZGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int32 killHonor = 13;
+	optional int32 collectHonor = 14;
+	optional int32 nuclearCount = 15; // 核弹发射次数
+	optional bool nuclearReady = 16; // 核弹是否可用
+	// repeated string nuclearBuildLeaderid = 18; // 控制核弹建筑队长id
+	optional int32 nianKillCnt = 19; // 机甲击杀数
+	optional string teamName = 20; // 队名
+	optional int64 teamPower = 21; // 战力
+	optional int32 killMonster = 22; 
+	repeated int32 controlBuildId = 23; // 本联盟控制建筑 
+	
+	optional string leaderId = 24; //盟主ID
+	optional string leaderName  = 25; //盟主名字
+	repeated PBYQZZBuildHonor buildHonors  = 26;//积分详情 建筑ID - 积分
+	optional int32 guildOrder = 27; // 号令点数 宣战建筑
+	optional int32 declearWarRed = 28; // 宣战红点数
+	optional int64 nextDeclareWarPoint = 29; // 下次回复宣战点数
+	optional int64 declareWarPointSpeed = 30; // 宣战点数恢复速度
+	optional int32 pylonCnt = 31; // 占领能量塔
+}
+
+message PBYQZZPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killPower = 7; // 杀敌战力
+	optional int32 lostPower = 8; // 损失防坦战力
+	optional int32 killMonster = 9; // 杀怪
+	optional sint32	icon			= 10; //玩家头像
+	optional string pfIcon			= 11;//平台头像
+	
+	optional string guildId = 12; //联盟ID
+	repeated PBYQZZMonsterHonor monsterHonors  = 13;//怪物击杀积分 怪物ID - 个数 - 积分
+	repeated PBYQZZFoggyHonor foggyHonors     = 14;//幽灵基地积分 建筑ID - 个数 - 积分
+	repeated PBYQZZResHonor resHonors      = 15;//资源财经积分 矿物ID - 个数 - 积分
+	repeated PBYQZZBuildTime buildTimes     = 16;//在建筑中的时间 建筑ID - 时间
+	repeated PBYQZZPylonHonor pylonHonors = 17; 
+}
+
+
+//YQZZ_GAME_OVER			= 472; // 游戏结束
+message PBYQZZGameOver{ 
+	optional int64 playerHonor  = 1; // 个人积分
+	optional bool win           = 2; 
+	optional int32 quitReson    = 3; //正常结束 0  主动退出 1
+	
+	optional int32 countryRank  = 4; //国家排名
+	optional int32 countryCount = 5; //国家个数
+	optional int32 guildRank    = 6; //联盟排名
+	optional int32 guildCount   = 7; //联盟个数
+	optional int32 playerRank   = 8; //玩家自己排名
+}
+
+message PBYQZZKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// YQZZ_PLAYER_QUIT			= 477; // 有玩家退出
+message PBYQZZPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBYQZZPlayerMoveCitySync{
+	optional int64 yqzzMoveCityCD = 1;  // 免费迁城
+	optional int32 yqzzMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+/**  对建筑宣战*/
+message PBYQZZDeclearWar{
+	optional int32 x =1;
+	optional int32 y =2;
+}
+
+
+// 击杀野怪积分
+message PBYQZZMonsterHonor{
+	optional int32 monsterId = 1;
+	optional int32 killCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 占领建筑积分 每个建筑的产出 
+message PBYQZZBuildHonor{
+	optional string guildId = 1;
+	optional string serverId = 2;
+	optional int32 buildId = 3;
+	optional int32 x = 4;
+	optional int32 y = 5;
+	optional int32 playerHonor = 6; // 积分
+	optional int32 guildHonor = 7; // 积分
+	optional int32 nationHonor = 8; // 积分
+}
+
+// 攻击有利积分
+message PBYQZZFoggyHonor{
+	optional int32 foggyFortressId = 1; //foggy_fortress.xml id 
+	optional int32 killCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 采集积分
+message PBYQZZResHonor{
+	optional int32 resourceId = 1;
+	optional int64 resourceCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 能量塔积分
+message PBYQZZPylonHonor{
+	optional int32 pylonId = 1;
+	optional int64 pylonCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 建筑类型占领时长
+message PBYQZZBuildTime{
+	optional int32 buildType = 1; // 
+	optional int64 buildTimes = 2; // 累计占领时长
+}
+
+// 建筑首战发奖励给跨服本服 
+message PBYQZZFirstControlBuildMail{
+	optional string reward = 1;
+	optional string guildId = 2;
+	repeated string exclude = 3;
+	optional int32 x = 4;
+	optional int32 y =5;
+}
+
+enum PBYQZZOrderType{
+	YQZZ_DAODAN = 1001; // 2.1 精准制导
+	YQZZ_JIJIE = 2001; // 2.2 快速集结
+	YQZZ_YZYD	= 3001; //2.3 严阵以待
+	YQZZ_LJHF = 4001;// 2.4 立即恢复
+}
+
+//号令
+message PBYQZZOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+	required bool active			= 8;  // 是否解锁 
+	optional int32 tarX				= 9; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 10; 
+}
+
+//使用号令
+message PBYQZZOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+	optional int32 tarX				= 2; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 3; 
+}
+
+//号令同步
+message PBYQZZOrderSyncResp{
+	repeated PBYQZZOrder orders = 1;  //号令列表
+	optional int32 camp = 2; // 阵营
+	optional string serverId = 3; 
+}
+
+// 广播核弹发射
+message PBYQZZNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int64 fromX = 6;
+	optional int64 fromY = 7;
+}
+
+// 使用国家科技技能
+message CrossNationTechSkillUse {
+	required int32 techId = 1;
+	required int64 effectStartTime = 2;
+	required int64 efectEndTime = 3;
+	required int64 cdTime = 4;
+}
+
+/**宣战记录*/
+message YQZZDeclareWarUseResp{
+	repeated YQZZDeclareWar records= 1;
+	optional string guildId = 2;
+}
+
+/**战场外收集信息*/
+message YQZZGaiLanResp{
+	optional PBYQZZGameInfoSync lastSyncpbPlayer = 1;
+	optional PBYQZZSecondMapResp secondMap =2;
+	repeated YQZZDeclareWarUseResp declearWarRec = 3;
+}
+
+/**放弃建筑*/
+message YQZZGiveupBuildReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}

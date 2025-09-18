@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data  id="1"   armourId="10000"   level="1" cells="4_13_14_24_34_35_45" />
+      <data  id="2"   armourId="10000"   level="10" cells="4_13_14_24_34_35_45_46" />
+      <data  id="3"   armourId="10000"   level="15" cells="4_12_13_14_24_34_35_45_46" />
+      <data  id="4"   armourId="10000"   level="20" cells="2_4_12_13_14_24_34_35_45_46" />
+      <data  id="5"   armourId="10010"   level="1" cells="2_13_14_24_25_34_35_44_46" />
+      <data  id="6"   armourId="10010"   level="10" cells="2_4_13_14_24_25_34_35_44_46" />
+      <data  id="7"   armourId="10010"   level="15" cells="2_4_13_14_15_24_25_34_35_44_46" />
+      <data  id="8"   armourId="10010"   level="20" cells="2_4_12_13_14_15_24_25_34_35_44_46" />
+      <data  id="9"   armourId="10010"   level="25" cells="2_4_12_13_14_15_23_24_25_34_35_44_46" />
+      <data  id="10"   armourId="10001"   level="1" cells="4_13_14_24_34_35_45" />
+      <data  id="11"   armourId="10001"   level="10" cells="4_13_14_24_34_35_45_46" />
+      <data  id="12"   armourId="10001"   level="15" cells="4_12_13_14_24_34_35_45_46" />
+      <data  id="13"   armourId="10001"   level="20" cells="2_4_12_13_14_24_34_35_45_46" />
+      <data  id="14"   armourId="10011"   level="1" cells="2_13_14_24_25_34_35_44_46" />
+      <data  id="15"   armourId="10011"   level="10" cells="2_4_13_14_24_25_34_35_44_46" />
+      <data  id="16"   armourId="10011"   level="15" cells="2_4_13_14_15_24_25_34_35_44_46" />
+      <data  id="17"   armourId="10011"   level="20" cells="2_4_12_13_14_15_24_25_34_35_44_46" />
+      <data  id="18"   armourId="10011"   level="25" cells="2_4_12_13_14_15_23_24_25_34_35_44_46" />
+      <data  id="19"   armourId="10002"   level="1" cells="4_13_14_24_34_35_45" />
+      <data  id="20"   armourId="10002"   level="10" cells="4_13_14_24_34_35_45_46" />
+      <data  id="21"   armourId="10002"   level="15" cells="4_12_13_14_24_34_35_45_46" />
+      <data  id="22"   armourId="10002"   level="20" cells="2_4_12_13_14_24_34_35_45_46" />
+      <data  id="23"   armourId="10012"   level="1" cells="2_13_14_24_25_34_35_44_46" />
+      <data  id="24"   armourId="10012"   level="10" cells="2_4_13_14_24_25_34_35_44_46" />
+      <data  id="25"   armourId="10012"   level="15" cells="2_4_13_14_15_24_25_34_35_44_46" />
+      <data  id="26"   armourId="10012"   level="20" cells="2_4_12_13_14_15_24_25_34_35_44_46" />
+      <data  id="27"   armourId="10012"   level="25" cells="2_4_12_13_14_15_23_24_25_34_35_44_46" />
+      <data  id="28"   armourId="10003"   level="1" cells="4_13_14_24_34_35_45" />
+      <data  id="29"   armourId="10003"   level="10" cells="4_13_14_24_34_35_45_46" />
+      <data  id="30"   armourId="10003"   level="15" cells="4_12_13_14_24_34_35_45_46" />
+      <data  id="31"   armourId="10003"   level="20" cells="2_4_12_13_14_24_34_35_45_46" />
+      <data  id="32"   armourId="10013"   level="1" cells="2_13_14_24_25_34_35_44_46" />
+      <data  id="33"   armourId="10013"   level="10" cells="2_4_13_14_24_25_34_35_44_46" />
+      <data  id="34"   armourId="10013"   level="15" cells="2_4_13_14_15_24_25_34_35_44_46" />
+      <data  id="35"   armourId="10013"   level="20" cells="2_4_12_13_14_15_24_25_34_35_44_46" />
+      <data  id="36"   armourId="10013"   level="25" cells="2_4_12_13_14_15_23_24_25_34_35_44_46" />
+</root>

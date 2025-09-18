@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2018-12-3 00:00:00" startTime="2018-12-3 00:00:00" endTime="2018-12-7 23:59:59" hiddenTime="2018-12-7 23:59:59" />
+      <data termId="2" showTime="2019-1-4 00:00:00" startTime="2019-1-4 00:00:00" endTime="2019-1-7 23:59:59" hiddenTime="2019-1-7 23:59:59" />
+      <data termId="3" showTime="2019-3-18 00:00:00" startTime="2019-3-18 00:00:00" endTime="2019-3-21 23:59:59" hiddenTime="2019-3-21 23:59:59" />
+      <data termId="4" showTime="2019-5-13 00:00:00" startTime="2019-5-13 00:00:00" endTime="2019-5-16 23:59:59" hiddenTime="2019-5-16 23:59:59" />
+      <data termId="5" showTime="2019-6-10 00:00:00" startTime="2019-6-10 00:00:00" endTime="2019-6-13 23:59:59" hiddenTime="2019-6-13 23:59:59" />
+      <data termId="6" showTime="2019-7-2 00:00:00" startTime="2019-7-2 00:00:00" endTime="2019-7-5 23:59:59" hiddenTime="2019-7-5 23:59:59" />
+      <data termId="7" showTime="2019-7-16 00:00:00" startTime="2019-7-16 00:00:00" endTime="2019-7-19 23:59:59" hiddenTime="2019-7-19 23:59:59" />
+</root>

@@ -1,0 +1,21 @@
+# 刷新折扣消耗道具
+needItem = 30000_1150093_1
+
+# 是否每日0点重置免费刷新次数
+refresh = 1
+
+# 折扣商城重置倒计时（秒）
+resetTime = 7200
+
+# 服务器开服延时开启活动时间；单位:秒
+serverDelay = 1296000
+
+# 每期活动前几次刷新是伪随机
+pseudorandomNum = 1
+
+# 每期活动伪随机的折扣组(int)
+refreshPoolRange = 2
+
+# 每期活动真随机的折扣组(int)
+refreshPoolRealRange = 1
+

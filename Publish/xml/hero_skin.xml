@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data skinId="40001" type="1" step="1" heroId="1006" attrSkin="101_1000|102_500|103_500" powerSkin="2000" />
+      <data skinId="40002" type="1" step="1" heroId="1008" attrSkin="101_1000|102_500|103_500" powerSkin="2000" showTime="2090-12-22 00:00:00" />
+      <data skinId="40003" type="1" step="1" heroId="1017" attrSkin="101_400|102_200|103_200" powerSkin="1000" />
+      <data skinId="40004" type="1" step="1" heroId="1002" attrSkin="101_400|102_200|103_200" powerSkin="1000" />
+      <data skinId="40005" type="1" step="1" heroId="1003" attrSkin="101_200|102_200|103_400" powerSkin="1000" showTime="2020-01-17 00:00:00" />
+      <data skinId="103701" type="2" step="1" unlockItem="30000_10370110_10" stepUpItem="30000_10370120_25" luckRate="4" heroId="1037" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="103701" type="2" step="2" stepUpItem="30000_10370120_50" luckRate="2" heroId="1037" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="103701" type="2" step="3" stepUpItem="30000_10370120_100" luckRate="1" heroId="1037" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="103701" type="2" step="4" stepUpItem="30000_10370120_150" luckRate="0.67" heroId="1037" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="103701" type="2" step="5" stepUpItem="30000_10370120_250" luckRate="0.4" heroId="1037" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="103701" type="2" step="6" heroId="1037" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+      <data skinId="103601" type="2" step="1" unlockItem="30000_10360110_10" stepUpItem="30000_10360120_25" luckRate="4" heroId="1036" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="103601" type="2" step="2" stepUpItem="30000_10360120_50" luckRate="2" heroId="1036" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="103601" type="2" step="3" stepUpItem="30000_10360120_100" luckRate="1" heroId="1036" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="103601" type="2" step="4" stepUpItem="30000_10360120_150" luckRate="0.67" heroId="1036" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="103601" type="2" step="5" stepUpItem="30000_10360120_250" luckRate="0.4" heroId="1036" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="103601" type="2" step="6" heroId="1036" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+      <data skinId="102001" type="2" step="1" unlockItem="30000_10200110_10" stepUpItem="30000_10200120_25" luckRate="4" heroId="1020" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2020-1-3 00:00:00" />
+      <data skinId="102001" type="2" step="2" stepUpItem="30000_10200120_50" luckRate="2" heroId="1020" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2020-1-3 00:00:00" />
+      <data skinId="102001" type="2" step="3" stepUpItem="30000_10200120_100" luckRate="1" heroId="1020" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2020-1-3 00:00:00" />
+      <data skinId="102001" type="2" step="4" stepUpItem="30000_10200120_150" luckRate="0.67" heroId="1020" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2020-1-3 00:00:00" />
+      <data skinId="102001" type="2" step="5" stepUpItem="30000_10200120_250" luckRate="0.4" heroId="1020" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2020-1-3 00:00:00" />
+      <data skinId="102001" type="2" step="6" heroId="1020" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2020-1-3 00:00:00" />
+      <data skinId="104101" type="2" step="1" unlockItem="30000_10410110_10" stepUpItem="30000_10410120_25" luckRate="4" heroId="1041" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="104101" type="2" step="2" stepUpItem="30000_10410120_50" luckRate="2" heroId="1041" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="104101" type="2" step="3" stepUpItem="30000_10410120_100" luckRate="1" heroId="1041" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="104101" type="2" step="4" stepUpItem="30000_10410120_150" luckRate="0.67" heroId="1041" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="104101" type="2" step="5" stepUpItem="30000_10410120_250" luckRate="0.4" heroId="1041" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="104101" type="2" step="6" heroId="1041" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+      <data skinId="104401" type="2" step="1" unlockItem="30000_10440110_10" stepUpItem="30000_10440120_25" luckRate="4" heroId="1044" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104401" type="2" step="2" stepUpItem="30000_10440120_50" luckRate="2" heroId="1044" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104401" type="2" step="3" stepUpItem="30000_10440120_100" luckRate="1" heroId="1044" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104401" type="2" step="4" stepUpItem="30000_10440120_150" luckRate="0.67" heroId="1044" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104401" type="2" step="5" stepUpItem="30000_10440120_250" luckRate="0.4" heroId="1044" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104401" type="2" step="6" heroId="1044" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2020-6-23 00:00:00" />
+      <data skinId="104601" type="2" step="1" unlockItem="30000_10460110_10" stepUpItem="30000_10460120_25" luckRate="4" heroId="1046" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2020-9-2 00:00:00" />
+      <data skinId="104601" type="2" step="2" stepUpItem="30000_10460120_50" luckRate="2" heroId="1046" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2020-9-2 00:00:00" />
+      <data skinId="104601" type="2" step="3" stepUpItem="30000_10460120_100" luckRate="1" heroId="1046" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2020-9-2 00:00:00" />
+      <data skinId="104601" type="2" step="4" stepUpItem="30000_10460120_150" luckRate="0.67" heroId="1046" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2020-9-2 00:00:00" />
+      <data skinId="104601" type="2" step="5" stepUpItem="30000_10460120_250" luckRate="0.4" heroId="1046" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2020-9-2 00:00:00" />
+      <data skinId="104601" type="2" step="6" heroId="1046" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2020-9-2 00:00:00" />
+      <data skinId="105901" type="2" step="1" unlockItem="30000_10590110_10" stepUpItem="30000_10590120_25" luckRate="4" heroId="1059" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="105901" type="2" step="2" stepUpItem="30000_10590120_50" luckRate="2" heroId="1059" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="105901" type="2" step="3" stepUpItem="30000_10590120_100" luckRate="1" heroId="1059" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="105901" type="2" step="4" stepUpItem="30000_10590120_150" luckRate="0.67" heroId="1059" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="105901" type="2" step="5" stepUpItem="30000_10590120_250" luckRate="0.4" heroId="1059" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="105901" type="2" step="6" heroId="1059" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+      <data skinId="106101" type="2" step="1" unlockItem="30000_10610110_10" stepUpItem="30000_10610120_25" luckRate="4" heroId="1061" attrSkin="101_100|102_100|103_600" powerSkin="1000" showTime="2020-09-14 00:00:00" />
+      <data skinId="106101" type="2" step="2" stepUpItem="30000_10610120_50" luckRate="2" heroId="1061" attrSkin="101_200|102_200|103_800" powerSkin="2000" showTime="2020-09-14 00:00:00" />
+      <data skinId="106101" type="2" step="3" stepUpItem="30000_10610120_100" luckRate="1" heroId="1061" attrSkin="101_350|102_350|103_1100" powerSkin="4000" showTime="2020-09-14 00:00:00" />
+      <data skinId="106101" type="2" step="4" stepUpItem="30000_10610120_150" luckRate="0.67" heroId="1061" attrSkin="101_500|102_500|103_1550" powerSkin="6000" showTime="2020-09-14 00:00:00" />
+      <data skinId="106101" type="2" step="5" stepUpItem="30000_10610120_250" luckRate="0.4" heroId="1061" attrSkin="101_700|102_700|103_2150" powerSkin="8000" showTime="2020-09-14 00:00:00" />
+      <data skinId="106101" type="2" step="6" heroId="1061" attrSkin="101_1000|102_1000|103_3050" powerSkin="10000" showTime="2020-09-14 00:00:00" />
+      <data skinId="105301" type="2" step="1" unlockItem="30000_10530110_10" stepUpItem="30000_10530120_25" luckRate="4" heroId="1053" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2021-11-12 00:00:00" />
+      <data skinId="105301" type="2" step="2" stepUpItem="30000_10530120_50" luckRate="2" heroId="1053" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2021-11-12 00:00:00" />
+      <data skinId="105301" type="2" step="3" stepUpItem="30000_10530120_100" luckRate="1" heroId="1053" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2021-11-12 00:00:00" />
+      <data skinId="105301" type="2" step="4" stepUpItem="30000_10530120_150" luckRate="0.67" heroId="1053" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2021-11-12 00:00:00" />
+      <data skinId="105301" type="2" step="5" stepUpItem="30000_10530120_250" luckRate="0.4" heroId="1053" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2021-11-12 00:00:00" />
+      <data skinId="105301" type="2" step="6" heroId="1053" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2021-11-12 00:00:00" />
+      <data skinId="104301" type="2" step="1" unlockItem="30000_10430110_10" stepUpItem="30000_10430120_25" luckRate="4" heroId="1043" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104301" type="2" step="2" stepUpItem="30000_10430120_50" luckRate="2" heroId="1043" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104301" type="2" step="3" stepUpItem="30000_10430120_100" luckRate="1" heroId="1043" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104301" type="2" step="4" stepUpItem="30000_10430120_150" luckRate="0.67" heroId="1043" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104301" type="2" step="5" stepUpItem="30000_10430120_250" luckRate="0.4" heroId="1043" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104301" type="2" step="6" heroId="1043" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2022-01-17 00:00:00" />
+      <data skinId="104901" type="2" step="1" unlockItem="30000_10490110_10" stepUpItem="30000_10490120_25" luckRate="4" heroId="1049" attrSkin="101_600|102_100|103_100" powerSkin="1000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104901" type="2" step="2" stepUpItem="30000_10490120_50" luckRate="2" heroId="1049" attrSkin="101_800|102_200|103_200" powerSkin="2000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104901" type="2" step="3" stepUpItem="30000_10490120_100" luckRate="1" heroId="1049" attrSkin="101_1100|102_350|103_350" powerSkin="4000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104901" type="2" step="4" stepUpItem="30000_10490120_150" luckRate="0.67" heroId="1049" attrSkin="101_1550|102_500|103_500" powerSkin="6000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104901" type="2" step="5" stepUpItem="30000_10490120_250" luckRate="0.4" heroId="1049" attrSkin="101_2150|102_700|103_700" powerSkin="8000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104901" type="2" step="6" heroId="1049" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" showTime="2022-03-18 00:00:00" />
+      <data skinId="104801" type="2" step="1" unlockItem="30000_10480110_10" stepUpItem="30000_10480120_25" luckRate="4" heroId="1048" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="104801" type="2" step="2" stepUpItem="30000_10480120_50" luckRate="2" heroId="1048" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="104801" type="2" step="3" stepUpItem="30000_10480120_100" luckRate="1" heroId="1048" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="104801" type="2" step="4" stepUpItem="30000_10480120_150" luckRate="0.67" heroId="1048" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="104801" type="2" step="5" stepUpItem="30000_10480120_250" luckRate="0.4" heroId="1048" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="104801" type="2" step="6" heroId="1048" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+      <data skinId="105001" type="2" step="1" unlockItem="30000_10500110_10" stepUpItem="30000_10500120_25" luckRate="4" heroId="1050" attrSkin="101_600|102_100|103_100" powerSkin="1000" />
+      <data skinId="105001" type="2" step="2" stepUpItem="30000_10500120_50" luckRate="2" heroId="1050" attrSkin="101_800|102_200|103_200" powerSkin="2000" />
+      <data skinId="105001" type="2" step="3" stepUpItem="30000_10500120_100" luckRate="1" heroId="1050" attrSkin="101_1100|102_350|103_350" powerSkin="4000" />
+      <data skinId="105001" type="2" step="4" stepUpItem="30000_10500120_150" luckRate="0.67" heroId="1050" attrSkin="101_1550|102_500|103_500" powerSkin="6000" />
+      <data skinId="105001" type="2" step="5" stepUpItem="30000_10500120_250" luckRate="0.4" heroId="1050" attrSkin="101_2150|102_700|103_700" powerSkin="8000" />
+      <data skinId="105001" type="2" step="6" heroId="1050" attrSkin="101_3050|102_1000|103_1000" powerSkin="10000" />
+</root>

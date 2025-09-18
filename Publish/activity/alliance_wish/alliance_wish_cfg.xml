@@ -1,0 +1,45 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 邀请祝福人数上限
+wishGuildMemberCount = 5
+
+# 可以发放联盟邀请CD
+wishGuildSendCD = 28800
+
+# 普通祝福随机ID(确定增加位置)
+wishCommPosPoolId = 101
+
+# 璀璨祝福随机ID(确定增加位置)
+wishLuxuryPosPoolId = 102
+
+# 收取获得道具（1积分）
+achiveItem = 30000_2980001_1
+
+# 购买礼包收取时道具翻倍数
+giftMulitParam = 2
+
+# IOS直购礼包ID
+iosPay = 298002
+
+# 安卓直购礼包ID
+androidPay = 298001
+
+# 直购赠送祝福次数
+giftWishCount = 2
+
+# 直购赠送璀璨祝福次数
+giftWishLuxuryCount = 2
+
+# 商店重置消耗道具
+resetCost = 30000_2980001_1000
+
+# 补签消耗
+supplySignCost = 10000_1000_100
+
+# 多少数字
+numCount = 5
+
+# 签到随机池
+wishSignPosPoolId = 101
+

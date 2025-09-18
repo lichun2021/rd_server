@@ -1,0 +1,1 @@
+ALTER TABLE `player_base` ADD COLUMN `levelUpTime` bigint(20) NOT NULL DEFAULT '0';

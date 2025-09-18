@@ -1,0 +1,72 @@
+# 战旗范围半径
+flagRadius = 5
+
+# tick周期(ms),服务器控制
+tickPeriod = 1000
+
+# 最大建筑值
+maxBuildLife = 18000
+
+# 产出资源周期(s)
+productResourcePeriod = 900
+
+# 战地旗帜产出
+flagResource = 10000_1007_15000,10000_1008_15000,10000_1010_2400,10000_1009_600
+
+# 玩家旗帜资源上限
+flagResourceLimit = 10000_1007_100000000,10000_1008_100000000,10000_1009_16000000,10000_1010_5000000
+
+# 联盟旗帜数量(战力_人数_数量)
+flagCount = 0_0_10,50000000_10_20,100000000_15_30,150000000_20_40,200000000_25_50,300000000_30_60,400000000_40_70,500000000_50_80
+
+# 旗帜复制资源点比例（万分比）
+pointProRate = 10000
+
+# 旗帜建造完成的占领值
+flagOccupy = 18000
+
+# 占领值时比建造时加速倍数
+flagOccupyDouble = 2
+
+# 母旗建造值
+bigFlagOccupy = 50000
+
+# 小旗达到指定数量可解锁母旗
+unlockBigFlag = 20_40_60_77
+
+# 母旗拥有产出宝箱的格子数
+bigFlagCells = 30
+
+# 母旗宝箱格子tick奖励时间（秒）
+bigFlagCellsTickTime = 3600
+
+# 母旗在黑土地特殊奖励内容
+bigFlagSpecialReward = 30000_21070002_1
+
+# 母旗结算时间节点（每日整点）
+bigFlagAccountTimeList = 11_23
+
+# 母旗辐射半径
+bigFlagRadius = 13
+
+# 母旗结算时间延迟(秒)
+bigFlagAccountTimeDelay = 300
+
+# 母旗可以激活数量(连接到总部)
+bigFlagActiveCount = 4
+
+# 宝箱奖励优先级（高的在前）
+bigFlagRewardSort = 21070002_21070007_21070006_21070005_21070004_21070003
+
+# 自主收回小旗时间（单位：秒）
+removeFlagTime = 600
+
+# 自主回收母旗时间（单位：秒）
+centerRemoveFlagTime = 1500
+
+# 建旗最小速度的时间单位（秒）
+autoLifeAddPeroid = 60
+
+# 建旗最小速度的建筑值
+autoLifeAdd = 200
+

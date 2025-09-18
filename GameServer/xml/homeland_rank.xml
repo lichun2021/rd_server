@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" range="1" maxNum="1000" delay="10000" />
+      <data id="2" type="1" range="2" maxNum="500" delay="10000" />
+      <data id="3" type="1" range="3" maxNum="100" delay="10000" />
+      <data id="4" type="2" range="1" maxNum="1000" delay="10000" />
+      <data id="5" type="2" range="2" maxNum="500" delay="10000" />
+      <data id="6" type="2" range="3" maxNum="100" delay="10000" />
+</root>

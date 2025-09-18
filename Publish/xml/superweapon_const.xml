@@ -1,0 +1,36 @@
+# 驻守奖励tick周期(ms)
+occupyAwardTickPeriod = 120000
+
+# 初始和平时间(s)
+initPeaceTime = 3888000
+
+# 初始开始的星期数，只能配1-7
+initday = 6
+
+# 初始开始时间点（下午两点）
+initTime = 14
+
+# 占领首都到成为国王过度时间(s)
+occupationTime = 10800
+
+# 战争时期周期(s)
+warfareTime = 32400
+
+# tick周期(ms)
+tickPeriod = 30000
+
+# 开启前邮件时间
+mailBeforeTime = 1800_600_300
+
+# 结束前邮件时间
+mailAfterTime = 1800_600_120
+
+# 报名时间
+signUpTime = 172800
+
+# 报名结束准备时间
+signUpReadyTime = 1800
+
+# 超级武器活动预热时间
+prepareTime = 86400
+

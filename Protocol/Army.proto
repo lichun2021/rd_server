@@ -1,0 +1,209 @@
+option java_package	= "com.hawk.game.protocol";
+
+message	ArmyInfoPB
+{
+	required string	id				= 1; //	唯一id
+	required int32 armyId			= 2; //	兵种Id
+	required int32 freeCount		= 3; //	家里空闲的兵
+	optional int32 marchCount		= 4; //	派出行军的兵
+	optional int32 defenceCount		= 5; //	防御兵（没用，不用管它）
+	optional int32 inTrainCount		= 6; //	正在训练的兵
+	optional int32 finishTrainCount	= 7; //	训练完成的兵
+	optional int32 woundedCount		= 8; //	伤兵
+	optional int32 cureCount		= 9; //	正在治疗的兵
+	optional int32 cureFinishCount	= 10; // 治疗完成待收取的兵
+	optional int32 killCount		= 11; // （没用，不管它）
+	optional int32 addCount			= 12; // 立即造兵或治疗伤兵、道具加速完成造兵或伤兵治疗队列时, 添加的兵的数量
+	optional int32 enchantLevel     = 13; // 强化等级
+	optional int32 itemId0          = 14; // 装备位1物品id
+	optional int32 itemId0Count     = 15; // 装备位1物品数量
+	optional int32 itemId1          = 16;
+	optional int32 itemId1Count     = 17;
+	optional int32 itemId2          = 18;
+	optional int32 itemId2Count     = 19;
+	optional int32 itemId3          = 20;
+	optional int32 itemId3Count     = 21;
+	optional int32 itemId4          = 22;
+	optional int32 itemId4Count     = 23;
+	optional int32 itemId5          = 24;
+	optional int32 itemId5Count     = 25;
+	optional int32 star 			= 26; // 星级
+	optional bool  latest           = 27; // 是否是最近造过的兵
+	optional int64 lastTrainTime    = 28; // 最近一次训练此兵种的时间
+    optional int32 taralabsCount    = 29; // 超时空急救站的死兵
+}
+
+message	HPArmyInfoSync
+{
+	repeated ArmyInfoPB	armyInfos  = 1;
+	required ArmyChangeCause cause = 2;	 //	兵种变化原因
+}
+
+enum ArmyChangeCause
+{
+	DEFAULT				= 0;
+	MARCH				= 1;	// 出征
+	WOUNDED				= 2;	// 受伤
+	MARCH_BACK			= 4;	// 出征回来，包括死亡士兵和正常返回
+	TRAIN				= 5;	// 正在训练
+	TRAIN_FINISH		= 6;	// 训练结束待领取
+	TRAIN_CANCEL		= 7;	// 取消训练
+	SOLDIER_COLLECT		= 8;	// 收兵领取
+	SOLDIER_CURE		= 9;	// 治疗伤兵中
+	CURE_FINISH			= 10;	// 治疗结束
+	CURE_CANCEL			= 11;	// 取消治疗
+	FIRE				= 12;	// 解雇
+	CURE_FINISH_COLLECT	= 13;	// 收取治疗好的兵
+	SOLDIER_LEVELUP     = 14;	// 强化士兵
+	WEAR_EQUIPMENT      = 15;   // 添加装备
+	STAR_UP				= 16;	// 升星
+	SOLDIER_FIRST_AID   = 17;   // 回收超时空急救站的死兵
+	RECEIVE_PROTECT_SOLDIER = 18; // 新兵救援领取
+	NATION_HOSPITAL_COLLECT = 19; // 从国家医院收兵
+}
+
+// 训练士兵
+message	HPAddSoldierReq
+{
+	required int32 armyId			= 1;
+	required int32 soldierCount		= 2;
+	required string	buildingUUID	= 3;
+	required bool isImmediate		= 4;
+	optional int32 flag				= 5; //特殊造兵处理标志位
+	optional bool useGold           = 6; // 非立即训练时，是否用水晶替补不足的资源
+}
+
+// 士兵晋升
+message	HPAdvanceSoldierReq
+{
+	required int32 armyId			= 1; //消耗兵种
+	required int32 toArmyId			= 2; // 目标兵种
+	required int32 soldierCount		= 3;
+	required string	buildingUUID	= 4;
+	required bool isImmediate		= 5;
+	optional bool useGold           = 6; // 非立即训练时，是否用水晶替补不足的资源
+}
+
+// 强化士兵
+message	HPUpgradeSoldierReq
+{
+	required int32 armyId			= 1;
+}
+
+//装备士兵
+message HPSoldierWearReq
+{
+	required int32 armyId			= 1;
+	required int32 index           = 2;
+}
+
+message HPSoldierStarUpReq
+{
+	required int32 armyId = 1;
+}
+
+// 收集士兵
+message	HPCollectSoldierReq
+{
+	required string	buildingUUID = 1;
+}
+
+message	HPCollectSoldierResp
+{
+	required bool result			= 1;
+	optional int32 armyId			= 2;
+	optional string	buildingUUID	= 3;
+	optional int32 collectNum		= 4;
+}
+
+message	HPCureSoldierReq
+{
+	repeated ArmySoldierPB soldiers	= 1;
+	required bool isImmediate		= 2;
+	required string	buildingUUID	= 3;
+	optional bool useGold           = 4; // 非立即治疗时，是否用水晶替补不足的资源
+}
+
+// 回收超时空急救站的死兵
+message	SoldierFirstAidReq
+{
+	repeated ArmySoldierPB soldiers	= 1;
+	required string	buildingUUID	= 2;
+	optional bool useGold           = 3; // 资源不足的情况下，是否用水晶替补不足的资源
+}
+
+// 解雇士兵请求
+message	HPFireSoldierReq
+{
+	repeated ArmySoldierPB soldiers	= 1;
+	required bool isWounded         = 2;
+}
+
+// 兵种信息	MarchArmy
+message	ArmySoldierPB
+{
+	required int32 armyId			= 1;	// 兵种id
+	optional int32 count			= 2;	// 兵的数量
+	optional int32 enchantLevel 	= 3;	// 品阶
+	optional int32 star = 4; //星级
+	optional int32 woundedCount = 5; //伤兵数量
+	optional int32 plantStep = 6; // 泰能等级
+	optional int32 save1634			= 7;// 1634 回城直接转为free的数量
+	optional int32 plantSkillLevel = 8; // 泰能强化技能等级
+	optional int32 plantMilitaryLevel = 9; // 泰能兵军衔等级
+}
+
+message ArmyHeroPB
+{
+	required int32 heroId = 1; //英雄id
+	optional int32 level = 2;  // 等级
+	optional int32 star = 3; //星级
+	optional int32 hp = 4; // 血量
+}
+
+// 援军军队数据
+message	AssistArmyPB
+{
+	repeated ArmySoldierPB armySoldier	= 1;
+}
+
+// 打开造兵界面通知（只有有新解锁出兵种后第一次进入页面才发送）
+message OpenSoldierPageNotice
+{
+	required string buildingUUID = 1;  // 造兵建筑的uuid
+	required int32  armyId       = 2;  // 新解锁出的兵种
+}
+
+
+// 新兵救援领取
+message ProtectSoldierReceiveReq
+{
+	repeated ArmySoldierPB receiveSoldier	= 1;
+}
+
+// 新兵救援信息推送
+message ProtectSoldierPushPB
+{
+	repeated ArmySoldierPB deadSoldier	= 1;  // 死兵信息
+    optional int32 receiveTotalCount    = 2;  // 已领取总量
+    optional int32 receiveCountDay      = 3;  // 当日已领取数量
+    optional int64 lastReceiveTime      = 4;  // 上一次领取时间
+}
+
+// 大R复仇死兵信息
+message RevengeInfoPB
+{
+	required int64 startTime = 1;         // 触发功能开启的时间
+	required int32 deadSoldierTotal = 2;  // 死兵总数
+	repeated ArmySoldierPB deadSoldierInfo = 3;  // 死兵信息
+	repeated RevengeShopItemInfo boughtShopItem = 4;     // 已购买过的折扣商品信息
+	optional int64 endTime = 5;  // 复仇商店结束时间
+}
+
+// 所购买的折扣商品信息
+message RevengeShopItemInfo
+{
+	required int32 shopId   = 1;   // 所购买商品ID
+	required int32 count    = 2;   // 已经买了的个数
+}
+

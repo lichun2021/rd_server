@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pay="30000_2700003_1688" gain="30000_9257000_1" exchangeCount="1" />
+      <data id="2" pay="30000_2700003_666" gain="30000_9316000_1" exchangeCount="1" />
+      <data id="3" pay="30000_2700003_28,30000_2700002_30" gain="30000_9165000_1" exchangeCount="1" />
+      <data id="4" pay="30000_2700003_15,30000_2700002_30" gain="30000_10000005_1" exchangeCount="1" />
+      <data id="5" pay="30000_2700003_5,30000_2700002_20" gain="30000_9700000_1" exchangeCount="1" />
+      <data id="6" pay="30000_2700003_5,30000_2700002_20" gain="30000_9411000_1" exchangeCount="1" />
+      <data id="7" pay="30000_2700003_50,30000_2700002_10" gain="30000_9257003_1" exchangeCount="1" />
+      <data id="8" pay="30000_2700003_20,30000_2700002_10" gain="30000_9316003_1" exchangeCount="1" />
+      <data id="9" pay="30000_2700002_100" gain="30000_1000003_1" exchangeCount="3" />
+      <data id="10" pay="30000_2700002_20" gain="30000_810001_1" exchangeCount="50" />
+      <data id="11" pay="30000_2700003_1" gain="30000_810001_1" exchangeCount="999" />
+      <data id="12" pay="30000_2700002_1" gain="30000_1780025_1" exchangeCount="999" />
+</root>

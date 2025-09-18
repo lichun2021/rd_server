@@ -1,0 +1,271 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+///////星海激战
+// XHJZ_GAME_SYNC			= 483; // 副本信息同步
+message PBXHJZGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBXHJZGuildInfo guildInfo = 3; 
+	repeated PBXHJZPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; //怪物数量
+	optional int32 winCamp = 7;
+}
+
+// 泰博利亚小地图
+message PBXHJZSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBXHJZGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;	
+}
+
+// 联盟统计 
+message PBXHJZGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int32 killHonor = 13;
+	optional int32 collectHonor = 14;
+	optional int32 nuclearCount = 15; // 核弹发射次数
+	optional bool nuclearReady = 16; // 核弹是否可用
+	// repeated string nuclearBuildLeaderid = 18; // 控制核弹建筑队长id
+	optional int32 nianKillCnt = 19; // 机甲击杀数
+	optional string teamName = 20; // 队名
+	optional int64 teamPower = 21; // 战力
+	optional int32 killMonster = 22; 
+	repeated int32 controlBuildId = 23; // 本联盟控制建筑 
+	
+	optional string leaderId = 24; //盟主ID
+	optional string leaderName  = 25; //盟主名字
+	repeated PBXHJZBuildHonor buildHonors  = 26;//积分详情 建筑ID - 积分
+	optional int32 guildOrder = 27; // 号令点数 宣战建筑
+	optional int32 declearWarRed = 28; // 宣战红点数
+	optional int32 xhjzGasoline = 29; // 星海燃油
+	optional int32 xhjzGasolinePerSecond = 30; // 星海燃油每秒
+	optional int32 xhjzPlayerGasolinePerSecond = 31; // 个人星海燃油每秒
+	repeated string leaders = 32; // 星海指挥官
+	optional int32 marchFuelAdd = 33; // 额外携带燃油
+	optional int32 allianceScore = 34; // 建筑占领得分, 丢失建筑会扣掉的分
+}
+
+message PBXHJZPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killPower = 7; // 杀敌战力
+	optional int32 lostPower = 8; // 损失防坦战力
+	optional int32 killMonster = 9; // 杀怪
+	optional sint32	icon			= 10; //玩家头像
+	optional string pfIcon			= 11;//平台头像
+	
+	optional string guildId = 12; //联盟ID
+	repeated PBXHJZMonsterHonor monsterHonors  = 13;//怪物击杀积分 怪物ID - 个数 - 积分
+	repeated PBXHJZFoggyHonor foggyHonors     = 14;//幽灵基地积分 建筑ID - 个数 - 积分
+	repeated PBXHJZResHonor resHonors      = 15;//资源财经积分 矿物ID - 个数 - 积分
+	repeated PBXHJZBuildTime buildTimes     = 16;//在建筑中的时间 建筑ID - 时间
+	repeated PBXHJZPylonHonor pylonHonors = 17; 
+	optional int32 xhjzGasoline = 18; // 星海燃油
+	optional int32 xhjzDistributeGasoline = 19; // 星海燃油已分配
+	optional bool isMidwayQuit = 20; // 是否中途退出
+}
+
+
+//XHJZ_GAME_OVER			= 472; // 游戏结束
+message PBXHJZGameOver{ 
+	optional int64 playerHonor  = 1; // 个人积分
+	optional bool win           = 2; 
+	optional int32 quitReson    = 3; //正常结束 0  主动退出 1
+	
+	optional int32 countryRank  = 4; //国家排名
+	optional int32 countryCount = 5; //国家个数
+	optional int32 guildRank    = 6; //联盟排名
+	optional int32 guildCount   = 7; //联盟个数
+	optional int32 playerRank   = 8; //玩家自己排名
+}
+
+message PBXHJZKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// XHJZ_PLAYER_QUIT			= 477; // 有玩家退出
+message PBXHJZPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBXHJZPlayerMoveCitySync{
+	optional int64 XHJZMoveCityCD = 1;  // 免费迁城
+	optional int32 XHJZMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+/**  对建筑宣战*/
+message PBXHJZDeclearWar{
+	optional int32 x =1;
+	optional int32 y =2;
+}
+
+
+// 击杀野怪积分
+message PBXHJZMonsterHonor{
+	optional int32 monsterId = 1;
+	optional int32 killCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 占领建筑积分 每个建筑的产出 
+message PBXHJZBuildHonor{
+	optional string guildId = 1;
+	optional string serverId = 2;
+	optional int32 buildId = 3;
+	optional int32 x = 4;
+	optional int32 y = 5;
+	optional int32 playerHonor = 6; // 积分
+	optional int32 guildHonor = 7; // 积分
+	optional int32 nationHonor = 8; // 积分
+}
+
+// 攻击有利积分
+message PBXHJZFoggyHonor{
+	optional int32 foggyFortressId = 1; //foggy_fortress.xml id 
+	optional int32 killCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 采集积分
+message PBXHJZResHonor{
+	optional int32 resourceId = 1;
+	optional int64 resourceCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 能量塔积分
+message PBXHJZPylonHonor{
+	optional int32 pylonId = 1;
+	optional int64 pylonCount = 2;
+	optional int32 playerHonor = 3; // 积分
+	optional int32 guildHonor = 4; // 积分
+	optional int32 nationHonor = 5; // 积分
+}
+
+// 建筑类型占领时长
+message PBXHJZBuildTime{
+	optional int32 buildType = 1; // 
+	optional int64 buildTimes = 2; // 累计占领时长
+}
+
+// 建筑首战发奖励给跨服本服 
+message PBXHJZFirstControlBuildMail{
+	optional string reward = 1;
+	optional string guildId = 2;
+	repeated string exclude = 3;
+	optional int32 x = 4;
+	optional int32 y =5;
+}
+
+enum PBXHJZOrderType{
+	XHJZ_DAODAN = 1001; // 2.1 精准制导
+	XHJZ_JIJIE = 2001; // 2.2 快速集结
+	XHJZ_YZYD	= 3001; //2.3 严阵以待
+	XHJZ_LJHF = 4001;// 2.4 立即恢复
+}
+
+//号令
+message PBXHJZOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+	required bool active			= 8;  // 是否解锁 
+	optional int32 tarX				= 9; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 10; 
+}
+
+//使用号令
+message PBXHJZOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+	optional int32 tarX				= 2; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 3; 
+}
+
+//号令同步
+message PBXHJZOrderSyncResp{
+	repeated PBXHJZOrder orders = 1;  //号令列表
+	optional int32 camp = 2; // 阵营
+	optional string serverId = 3; 
+}
+
+// 广播核弹发射
+message PBXHJZNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int64 fromX = 6;
+	optional int64 fromY = 7;
+}
+
+
+
+
+/**放弃建筑*/
+message XHJZGiveupBuildReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+/**分配联盟燃油*/
+message XHJZDistributeGasolineReq{
+	repeated XHJZDistributeGasoline distribute = 1; //
+}
+
+message XHJZDistributeGasoline{
+	optional string playerId = 1;
+	optional int32 xhjzGasoline = 2; // 分多少
+}
+
+/**建筑内行军*/
+message PBXHJZQuartedMarchReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+/**分配记录*/
+message XHJZDistributeGasolineRecord{
+	optional string playerName = 1;
+	optional int32 xhjzGasoline = 2; // 分多少
+	optional int64 time = 3;
+	optional string leaderName = 4; // 分配人
+}
+
+message XHJZDistributeGasolineRecordResp{
+	repeated XHJZDistributeGasolineRecord records = 1; 
+}
+
+
+message	XHJZWorldMarchGuaiWanReq
+{
+	optional string	marchId			= 1;	// 参加集结的队长marchId
+	repeated Position xhjzPoints 	= 2; // 星海激战行军路线
+}

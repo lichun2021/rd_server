@@ -1,0 +1,23 @@
+return {
+	prop =
+	{
+		activityId = 270,
+		name = [[图纸达人]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间，基地内收取资源、领取补给与基地外采集、消灭野外敌军时均有概率获得锻造图纸，活动期间每日最多获得200个，在活动结束前可用于兑换重燃碎片。</font>]],
+		priority = 10271,
+		icon = [[Activity_Icon_270_Nor.png]],
+		selecticon = [[Activity_Icon_270_Sel.png]],
+		typeName = [[]],
+		mainCCBName = [[RAActivity270NodeV5.ccbi]],
+		collectCellCCBName = [[RAActivity270NodeCellV5.ccbi]],
+	},
+	dress_drawing_search_collect = [[id	priority	funcType	name	des	icon	gotoType	dropParam	dropLimit	dropId	mailId
+1	1	1	2	2	2	1	1	1	1	1
+100	1	100	资源收取	基地内收取资源有概率获得锻造图纸	V5Activity_270_u_Cell_01.png	1	25200	432000	2900006	2021111001
+200	2	200	野外采集	野外采集资源有概率获得锻造图纸	V5Activity_270_u_Cell_02.png	1	3600	432000	2900007	2021111002
+300	3	300	击败敌军	击败野外敌军有概率获得锻造图纸	V5Activity_270_u_Cell_03.png	1	1		2900008	2021111003
+400	4	400	补给	请求补给有概率获得锻造图纸	V5Activity_270_u_Cell_04.png	1	1		2900009	2021111004
+]],
+
+}

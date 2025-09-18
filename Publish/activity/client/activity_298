@@ -1,0 +1,57 @@
+return {
+	prop =
+	{
+		activityId = 298,
+		name = [[盟军祝福]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，每日签到可从右至左依次解锁一个数字。<br/>2.所有数字解锁完成后，可领取对应数量的 祝福星，用于祝福商店中兑换各种稀有奖励。<br/>3.活动期间，可消耗金条进行补签。<br/>4.邀请盟友可获得祝福次数，每日可发送一次联盟邀请。<br/>5.购买璀璨祝福，可获得祝福次数和璀璨祝福次数，并能使最终获得的祝福星翻倍。<br/>6.祝福：随机增加某一个数字。<br/>7.璀璨祝福：必定增加千位或万位上的一个数字。<br/>8.每位数字的最大值为9，若某位数字已达到最大值，祝福和璀璨祝福随机到该位后，不会使该位数字增加。<br/>9.祝福概率：<br/>个位：40%<br/>十位：32%<br/>百位：20%<br/>千位：4%<br/>万位：4%<br/>10.璀璨祝福概率：<br/>千位：60%<br/>万位：40%</font>]],
+		priority = 10015,
+		icon = [[Activity_Icon_298_Nor.png]],
+		selecticon = [[Activity_Icon_298_Sel.png]],
+		bigIcon = [[]],
+		wishGuildMemberCount = 5,
+		wishGuildSendCount = 1,
+		wishCommPosPoolId = 101,
+		wishLuxuryPosPoolId = 102,
+		achiveItem = [[30000_2980001_1]],
+		giftMulitParam = 2,
+		iosPay = 298002,
+		androidPay = 298001,
+		giftWishCount = 2,
+		giftWishLuxuryCount = 2,
+		resetCost = [[30000_2980001_1000]],
+		supplySignCost = [[10000_1000_100]],
+		buyTips = [[@Act298BuyTips1,@Act298BuyTips2,@Act298BuyTips3]],
+		buyParam = [[2,2,1]],
+	},
+	alliance_wish_sign = [[id	pos	signWeight
+1	1	1
+1	1	1_2000,2_2000,3_2000,4_2000,5_2000
+2	2	1_3000,2_2000,3_2000,4_2000,5_1000
+3	3	1_4000,2_2000,3_2000,4_1000,5_1000
+4	4	1_5000,2_3000,3_2000
+5	5	1_6000,2_3500,3_500
+]],
+	alliance_wish_pool = [[id	selectWeight	addWeight
+1	2	2
+101	1_4000,2_3200,3_2000,4_400,5_400	1_2500,2_2500,3_2500,4_2500
+102	4_6000,5_4000	1_2500,2_2500,3_2500,4_2500
+]],
+	alliance_wish_exchange = [[id	priority	needItem	gainItem	des	times
+1	1	2	2	2	1
+1	1	30000_2980001_1000	30000_1800001_1	ActivityExchangeGainItemDes1	10
+2	2	30000_2980001_1500	30000_802003_1	ActivityExchangeGainItemDes1	10
+3	3	30000_2980001_5000	30000_1000003_1	ActivityExchangeGainItemDes1	5
+4	4	30000_2980001_50	30000_1800000_1	ActivityExchangeGainItemDes1	500
+5	5	30000_2980001_50	30000_1300017_1	ActivityExchangeGainItemDes1	500
+6	6	30000_2980001_30	30000_840194_1	ActivityExchangeGainItemDes1	800
+7	7	30000_2980001_300	30000_800000_1	ActivityExchangeGainItemDes1	80
+8	8	30000_2980001_6000	30000_1490005_1	ActivityExchangeGainItemDes1	20
+9	9	30000_2980001_2000	30000_820002_1	ActivityExchangeGainItemDes1	50
+10	10	30000_2980001_1	30000_850010_1	ActivityExchangeGainItemDes1	999
+11	11	30000_2980001_1	30000_850040_1	ActivityExchangeGainItemDes1	999
+12	12	30000_2980001_1	30000_850020_1	ActivityExchangeGainItemDes1	999
+13	13	30000_2980001_1	30000_850030_1	ActivityExchangeGainItemDes1	999
+]],
+
+}

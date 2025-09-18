@@ -1,0 +1,30 @@
+# 周几开放 1_3_7表示周一、周三、周日、开放
+days = 1_2
+
+# 开始时间 10:00 表示早上10点开启
+startTime = 10:00:00
+
+# 结束时间 23:55 表示晚上23点结束
+endTime = 23:30:00
+
+# 联盟副本开关，如果为false，表示不开,需要读取白名单是否包含本服，如果包含就开；如果为true，表示开，则不需要理会白名单；
+warCollegeSwitch = true
+
+# 联盟副本白名单，格式：[10020,10021]
+warCollegeWhiteList = []
+
+# 退出副本保护时长/分
+warCollegeQuitSheld = 1
+
+# 退副本CD
+warCollegeQuitCd = 1,2,3,5,10,15
+
+# 老带新奖励每日次数上限
+dailyTeacherReward = 3
+
+# 开服第X天，固定开放，多个日期_分隔
+serverDaysOpen = 1_2
+
+# 开服第X天起（包含），走days字段的排期。
+normalDays = 3
+

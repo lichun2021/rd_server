@@ -1,0 +1,18 @@
+return {
+	prop =
+	{
+		activityId = 71,
+		name = [[物资补给]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">购买物资召唤币，可参与抽奖，每抽奖10次，赠送一次高级奖池抽奖机会，花费召唤币组团，可获得小队奖励，组团次数达到一定数量，可获得积分，积分可用来兑换奖励</font>]],
+		priority = 11200,
+		icon = [[Activity_Icon_71_Nor.png]],
+		selecticon = [[Activity_Icon_71_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20250522hj/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20250522hj/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20250522hj/index.html]],
+		platform = [[]],
+		urlDailyReward = [[]],
+	},
+
+}

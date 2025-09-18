@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" dayCount="1" posId="1" rewards="30000_810001_1,30000_810000_20,30000_850079_1" onlineTime="60" />
+      <data id="2" dayCount="1" posId="2" rewards="30000_810001_1,30000_810000_20,30000_850079_2" onlineTime="60" />
+      <data id="3" dayCount="1" posId="3" rewards="30000_810001_1,30000_810000_20,30000_850079_3" onlineTime="60" />
+      <data id="4" dayCount="1" posId="4" rewards="30000_810001_1,30000_810000_20,30000_850079_4" onlineTime="60" />
+      <data id="5" dayCount="1" posId="5" rewards="30000_810001_1,30000_810000_20,30000_850079_5" onlineTime="60" />
+      <data id="6" dayCount="2" posId="1" rewards="30000_810001_1,30000_810000_20,30000_850079_6" onlineTime="60" />
+      <data id="7" dayCount="2" posId="2" rewards="30000_810001_1,30000_810000_20,30000_850079_7" onlineTime="60" />
+      <data id="8" dayCount="2" posId="3" rewards="30000_810001_1,30000_810000_20,30000_850079_8" onlineTime="60" />
+      <data id="9" dayCount="2" posId="4" rewards="30000_810001_1,30000_810000_20,30000_850079_9" onlineTime="60" />
+      <data id="10" dayCount="2" posId="5" rewards="30000_810001_1,30000_810000_20,30000_850079_10" onlineTime="60" />
+</root>

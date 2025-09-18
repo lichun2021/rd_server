@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- redis="4" 半径 ， atkHead=1 攻击哪一个id  tickPeriod ="3000" 3 秒攻击一次  towerAtk ="3" 每次攻击降低3点   攻击频率最好设置的快一些 每次扣少一点-->
+<root>
+      <data id="1" redis="4" atkHead="1" tickPeriod ="3000" towerAtk ="3" firstControlHonor="0" firstControlGuildHonor="0" refreshPoint="45_210" honor="0.083333" guildHonor="0.833333" collectArmyMin="50000" controlCountDown="30" />
+      <data id="2" redis="4" atkHead="1" tickPeriod ="3000" towerAtk ="3" firstControlHonor="0" firstControlGuildHonor="0" refreshPoint="105_90" honor="0.083333" guildHonor="0.833333" collectArmyMin="50000" controlCountDown="30" />
+</root>

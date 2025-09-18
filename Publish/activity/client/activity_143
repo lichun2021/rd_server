@@ -1,0 +1,163 @@
+return {
+	prop =
+	{
+		activityId = 143,
+		name = [[联盟总动员]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1.活动参与条件:<br/>活动开始前，所有加入联盟的人均可参与活动<br/><font color="#c1ec84" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">注意:<br/>本活动无需报名，活动开始后，您所在的联盟将被定为参与活动联盟，更换联盟将无法获得活动奖励。<br/><font color="#adb0c0" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">2.关于动员任务:<br/><font color="#c1ec84" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">活动期间动员任务仅有10次接取次数，每日使用金币可购买1次。<br/><font color="#adb0c0" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">动员任务同时只能接取1个任务，每个任务有时间限制，您需要在时间限制内完成任务。<br/>完成相应动员任务可以获得积分，任务难度越高，获得的积分越多。<br/>3.关于奖励:<br/>奖励分为普通奖励和进阶奖励。<br/>当您的联盟达成奖励条件后，<font color="#c1ec84" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">活动开始前<font color="#adb0c0" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">加入联盟的人都将获得相应奖励<br/>奖励将会发到您的邮箱中，请您注意查收。</font></font></font></font></font></font></font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_143_Nor.png]],
+		selecticon = [[Activity_Icon_143_Sel.png]],
+		bigIcon = [[]],
+		defaultReceiveTime = 10,
+		npc = [[V3Guide_Single_Britney]],
+		buyLimit = 1,
+		buyPrice = 50,
+		item_icon = [[V5Activity_143_u_Icon_Integral_01.png]],
+		item_color = 4,
+		awardLvLimit = 30,
+		awardScore = 3000,
+		award = [[30000_1300017_10,30000_810001_1]],
+	},
+	alliance_carnival_level = [[level	levelUpExp	normalReward	advReward	advancePlayerNum	coreLevel
+1	1	2	2	1	1
+1	200	30000_850007_1	30000_1300017_10,30000_850007_2	50	
+2	400	30000_810001_1	30000_1300017_10,30000_810001_1	50	
+3	800	30000_1510003_5	30000_1300017_10,30000_1510003_10	50	
+4	1400	30000_13310003_5	30000_1300017_10,30000_13310003_10	100	
+5	2200	30000_800100_1	30000_1300017_80,30000_800101_1	100	
+6	3200	30000_850037_2	30000_1300017_10,30000_850037_4	100	
+7	4400	30000_810001_2	30000_1300017_10,30000_810001_2	150	
+8	5800	30000_1510003_10	30000_1300017_10,30000_1510003_20	150	
+9	7400	30000_13310003_10	30000_1300017_10,30000_13310003_20	200	
+10	9200	30000_800143_10	30000_1300017_80,30000_800143_20	250	1
+11	11200	30000_850018_1	30000_1300017_10,30000_850018_2	300	
+12	13200	30000_810001_3	30000_1300017_10,30000_810001_3	350	
+13	15200	30000_1510003_15	30000_1300017_10,30000_1510003_30	400	
+14	17200	30000_13310003_15	30000_1300017_10,30000_13310003_30	450	
+15	19200	30000_800110_10	30000_1300017_80,30000_800110_20	500	
+16	21700	30000_850028_1	30000_1300017_10,30000_850028_2	550	
+17	24200	30000_810001_4	30000_1300017_10,30000_810001_4	600	
+18	26700	30000_1510003_20	30000_1300017_10,30000_1510003_40	650	
+19	29200	30000_13310003_20	30000_1300017_10,30000_13310003_40	700	
+20	31700	30000_800000_5	30000_1300017_80,30000_800001_100	800	1
+21	34700	30000_850008_2	30000_1300017_10,30000_850008_4	800	
+22	37700	30000_810001_5	30000_1300017_10,30000_810001_5	800	
+23	40700	30000_850078_10	30000_1300017_10,30000_850078_10	800	
+24	43700	30000_840165_50	30000_1300017_10,30000_840165_100	900	
+25	46700	30000_1300017_30	30000_1300017_150,30000_810005_2	900	
+26	49700	30000_850038_2	30000_1300017_30,30000_850038_4	900	
+27	52700	30000_810002_1	30000_1300017_30,30000_810019_2	1000	
+28	55700	30000_800100_3	30000_1300017_30,30000_800101_3	1000	
+29	58700	30000_1480001_100	30000_1300017_30,30000_1480001_100	1000	
+30	61700	30000_1000003_2	30000_1300017_200,30000_1000003_8	1000	1
+]],
+	alliance_carnival_achieve = [[achieveId	conditionType	conditionValue	exp	refreshDelay	timeLimit	name	des	icon	quest_renward_icon	gotoType	gotoParam
+1	1	2	1	1	1	2	2	2	2	2	2
+143100001	300100	0_25	65	1800	43200	@alliance_active_mission1	alliance_active_missionTips1	QuestIcon_Enemy.png	V5Activity_143_u_Icon_Integral.png	31	2_0
+143100002	300100	0_45	72	1800	43200	@alliance_active_mission1	alliance_active_missionTips1	QuestIcon_Enemy.png	V5Activity_143_u_Icon_Integral.png	31	2_0
+143100003	300100	0_60	80	1800	43200	@alliance_active_mission1	alliance_active_missionTips1	QuestIcon_Enemy.png	V5Activity_143_u_Icon_Integral.png	31	2_0
+143100004	300100	0_75	90	1800	43200	@alliance_active_mission1	alliance_active_missionTips1	QuestIcon_Enemy.png	V5Activity_143_u_Icon_Integral.png	31	2_0
+143200001	31100	0_4500000	65	1800	86400	@alliance_active_mission2	alliance_active_missionTips2	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143200002	31100	0_6000000	72	1800	86400	@alliance_active_mission2	alliance_active_missionTips2	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143200003	31100	0_7500000	80	1800	86400	@alliance_active_mission2	alliance_active_missionTips2	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143200004	31100	0_9000000	90	1800	86400	@alliance_active_mission2	alliance_active_missionTips2	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143210001	31100	1007_4500000	65	1800	86400	@alliance_active_mission3	alliance_active_missionTips3	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143210002	31100	1007_6000000	72	1800	86400	@alliance_active_mission3	alliance_active_missionTips3	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143210003	31100	1007_7500000	80	1800	86400	@alliance_active_mission3	alliance_active_missionTips3	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143210004	31100	1007_9000000	90	1800	86400	@alliance_active_mission3	alliance_active_missionTips3	newBuildLevelUp2101.png	V5Activity_143_u_Icon_Integral.png	31	1007
+143220001	31100	1008_4500000	65	1800	86400	@alliance_active_mission4	alliance_active_missionTips4	newBuildLevelUp2102.png	V5Activity_143_u_Icon_Integral.png	31	1008
+143220002	31100	1008_6000000	72	1800	86400	@alliance_active_mission4	alliance_active_missionTips4	newBuildLevelUp2102.png	V5Activity_143_u_Icon_Integral.png	31	1008
+143220003	31100	1008_7500000	80	1800	86400	@alliance_active_mission4	alliance_active_missionTips4	newBuildLevelUp2102.png	V5Activity_143_u_Icon_Integral.png	31	1008
+143220004	31100	1008_9000000	90	1800	86400	@alliance_active_mission4	alliance_active_missionTips4	newBuildLevelUp2102.png	V5Activity_143_u_Icon_Integral.png	31	1008
+143230001	31100	1010_720000	65	1800	86400	@alliance_active_mission5	alliance_active_missionTips5	newBuildLevelUp2104.png	V5Activity_143_u_Icon_Integral.png	31	1010
+143230002	31100	1010_960000	72	1800	86400	@alliance_active_mission5	alliance_active_missionTips5	newBuildLevelUp2104.png	V5Activity_143_u_Icon_Integral.png	31	1010
+143230003	31100	1010_1200000	80	1800	86400	@alliance_active_mission5	alliance_active_missionTips5	newBuildLevelUp2104.png	V5Activity_143_u_Icon_Integral.png	31	1010
+143230004	31100	1010_1440000	90	1800	86400	@alliance_active_mission5	alliance_active_missionTips5	newBuildLevelUp2104.png	V5Activity_143_u_Icon_Integral.png	31	1010
+143240001	31100	1009_180000	65	1800	86400	@alliance_active_mission6	alliance_active_missionTips6	newBuildLevelUp2103.png	V5Activity_143_u_Icon_Integral.png	31	1009
+143240002	31100	1009_240000	72	1800	86400	@alliance_active_mission6	alliance_active_missionTips6	newBuildLevelUp2103.png	V5Activity_143_u_Icon_Integral.png	31	1009
+143240003	31100	1009_300000	80	1800	86400	@alliance_active_mission6	alliance_active_missionTips6	newBuildLevelUp2103.png	V5Activity_143_u_Icon_Integral.png	31	1009
+143240004	31100	1009_360000	90	1800	86400	@alliance_active_mission6	alliance_active_missionTips6	newBuildLevelUp2103.png	V5Activity_143_u_Icon_Integral.png	31	1009
+143300001	220100	5	65	1800	43200	@alliance_active_mission7	alliance_active_missionTips7	newBuildLevelUp2213.png	V5Activity_143_u_Icon_Integral.png	1136	
+143300002	220100	7	72	1800	43200	@alliance_active_mission7	alliance_active_missionTips7	newBuildLevelUp2213.png	V5Activity_143_u_Icon_Integral.png	1136	
+143300003	220100	9	80	1800	64800	@alliance_active_mission7	alliance_active_missionTips7	newBuildLevelUp2213.png	V5Activity_143_u_Icon_Integral.png	1136	
+143300004	220100	11	90	1800	86400	@alliance_active_mission7	alliance_active_missionTips7	newBuildLevelUp2213.png	V5Activity_143_u_Icon_Integral.png	1136	
+143400001	111100	60	65	1800	86400	@alliance_active_mission8	alliance_active_missionTips8	newBuildLevelUp2016.png	V5Activity_143_u_Icon_Integral.png	111	2016
+143400002	111100	100	72	1800	86400	@alliance_active_mission8	alliance_active_missionTips8	newBuildLevelUp2016.png	V5Activity_143_u_Icon_Integral.png	111	2016
+143400003	111100	150	80	1800	86400	@alliance_active_mission8	alliance_active_missionTips8	newBuildLevelUp2016.png	V5Activity_143_u_Icon_Integral.png	111	2016
+143400004	111100	200	90	1800	86400	@alliance_active_mission8	alliance_active_missionTips8	newBuildLevelUp2016.png	V5Activity_143_u_Icon_Integral.png	111	2016
+143110001	500020	3	65	1800	43200	@alliance_active_mission9	alliance_active_missionTips9	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143110002	500020	5	72	1800	43200	@alliance_active_mission9	alliance_active_missionTips9	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143110003	500020	7	80	1800	43200	@alliance_active_mission9	alliance_active_missionTips9	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143110004	500020	10	90	1800	43200	@alliance_active_mission9	alliance_active_missionTips9	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143120001	500024	1	65	1800	43200	@alliance_active_mission10	alliance_active_missionTips10	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143120002	500024	2	72	1800	43200	@alliance_active_mission10	alliance_active_missionTips10	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143120003	500024	3	80	1800	43200	@alliance_active_mission10	alliance_active_missionTips10	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143120004	500024	5	90	1800	43200	@alliance_active_mission10	alliance_active_missionTips10	QuestIcon_0019.png	V5Activity_143_u_Icon_Integral.png	31	16_0
+143500001	42000	100000	72	1800	43200	@alliance_active_mission11	alliance_active_missionTips11	V5Activity_143_u_Icon_Atk.png	V5Activity_143_u_Icon_Integral.png		
+143500002	42000	200000	80	1800	43200	@alliance_active_mission11	alliance_active_missionTips11	V5Activity_143_u_Icon_Atk.png	V5Activity_143_u_Icon_Integral.png		
+143500003	42000	300000	88	1800	43200	@alliance_active_mission11	alliance_active_missionTips11	V5Activity_143_u_Icon_Atk.png	V5Activity_143_u_Icon_Integral.png		
+143500004	42000	500000	100	1800	43200	@alliance_active_mission11	alliance_active_missionTips11	V5Activity_143_u_Icon_Atk.png	V5Activity_143_u_Icon_Integral.png		
+143510001	42300	80000	72	1800	43200	@alliance_active_mission12	alliance_active_missionTips12	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143510002	42300	160000	80	1800	43200	@alliance_active_mission12	alliance_active_missionTips12	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143510003	42300	240000	88	1800	43200	@alliance_active_mission12	alliance_active_missionTips12	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143510004	42300	400000	100	1800	43200	@alliance_active_mission12	alliance_active_missionTips12	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143520001	42100	5000	72	1800	43200	@alliance_active_mission13	alliance_active_missionTips13	newBuildLevelUp2010.png	V5Activity_143_u_Icon_Integral.png	0	0
+143520002	42100	10000	80	1800	43200	@alliance_active_mission13	alliance_active_missionTips13	newBuildLevelUp2010.png	V5Activity_143_u_Icon_Integral.png	0	0
+143520003	42100	15000	88	1800	43200	@alliance_active_mission13	alliance_active_missionTips13	newBuildLevelUp2010.png	V5Activity_143_u_Icon_Integral.png	0	0
+143520004	42100	25000	100	1800	43200	@alliance_active_mission13	alliance_active_missionTips13	newBuildLevelUp2010.png	V5Activity_143_u_Icon_Integral.png	0	0
+143530001	42200	6000	72	1800	43200	@alliance_active_mission14	alliance_active_missionTips14	newBuildLevelUp2015.png	V5Activity_143_u_Icon_Integral.png	204	
+143530002	42200	12000	80	1800	43200	@alliance_active_mission14	alliance_active_missionTips14	newBuildLevelUp2015.png	V5Activity_143_u_Icon_Integral.png	204	
+143530003	42200	18000	88	1800	43200	@alliance_active_mission14	alliance_active_missionTips14	newBuildLevelUp2015.png	V5Activity_143_u_Icon_Integral.png	204	
+143530004	42200	30000	100	1800	43200	@alliance_active_mission14	alliance_active_missionTips14	newBuildLevelUp2015.png	V5Activity_143_u_Icon_Integral.png	204	
+143610001	330200	1_2_10000	72	1800	43200	@alliance_active_mission15	alliance_active_missionTips15	newBuildLevelUp2012.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143610002	330200	1_2_20000	80	1800	43200	@alliance_active_mission15	alliance_active_missionTips15	newBuildLevelUp2012.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143610003	330200	1_2_30000	88	1800	43200	@alliance_active_mission15	alliance_active_missionTips15	newBuildLevelUp2012.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143610004	330200	1_2_50000	100	1800	43200	@alliance_active_mission15	alliance_active_missionTips15	newBuildLevelUp2012.png	V5Activity_143_u_Icon_Integral.png	23	2012
+143620001	330200	3_4_10000	72	1800	43200	@alliance_active_mission16	alliance_active_missionTips16	newBuildLevelUp2014.png	V5Activity_143_u_Icon_Integral.png	23	2014
+143620002	330200	3_4_20000	80	1800	43200	@alliance_active_mission16	alliance_active_missionTips16	newBuildLevelUp2014.png	V5Activity_143_u_Icon_Integral.png	23	2014
+143620003	330200	3_4_30000	88	1800	43200	@alliance_active_mission16	alliance_active_missionTips16	newBuildLevelUp2014.png	V5Activity_143_u_Icon_Integral.png	23	2014
+143620004	330200	3_4_50000	100	1800	43200	@alliance_active_mission16	alliance_active_missionTips16	newBuildLevelUp2014.png	V5Activity_143_u_Icon_Integral.png	23	2014
+143630001	330200	5_6_10000	72	1800	43200	@alliance_active_mission17	alliance_active_missionTips17	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2011
+143630002	330200	5_6_20000	80	1800	43200	@alliance_active_mission17	alliance_active_missionTips17	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2011
+143630003	330200	5_6_30000	88	1800	43200	@alliance_active_mission17	alliance_active_missionTips17	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2011
+143630004	330200	5_6_50000	100	1800	43200	@alliance_active_mission17	alliance_active_missionTips17	newBuildLevelUp2011.png	V5Activity_143_u_Icon_Integral.png	23	2011
+143640001	330200	7_8_10000	72	1800	43200	@alliance_active_mission18	alliance_active_missionTips18	newBuildLevelUp2013.png	V5Activity_143_u_Icon_Integral.png	23	2013
+143640002	330200	7_8_20000	80	1800	43200	@alliance_active_mission18	alliance_active_missionTips18	newBuildLevelUp2013.png	V5Activity_143_u_Icon_Integral.png	23	2013
+143640003	330200	7_8_30000	88	1800	43200	@alliance_active_mission18	alliance_active_missionTips18	newBuildLevelUp2013.png	V5Activity_143_u_Icon_Integral.png	23	2013
+143640004	330200	7_8_50000	100	1800	43200	@alliance_active_mission18	alliance_active_missionTips18	newBuildLevelUp2013.png	V5Activity_143_u_Icon_Integral.png	23	2013
+143700001	500004	5000	72	1800	43200	@alliance_active_mission20	alliance_active_missionTips20	Item_GeneralSpeed.png	V5Activity_143_u_Icon_Integral.png	1312	
+143700002	500004	7500	80	1800	43200	@alliance_active_mission20	alliance_active_missionTips20	Item_GeneralSpeed.png	V5Activity_143_u_Icon_Integral.png	1312	
+143700003	500004	10000	88	1800	43200	@alliance_active_mission20	alliance_active_missionTips20	Item_GeneralSpeed.png	V5Activity_143_u_Icon_Integral.png	1312	
+143700004	500004	15000	100	1800	43200	@alliance_active_mission20	alliance_active_missionTips20	Item_GeneralSpeed.png	V5Activity_143_u_Icon_Integral.png	1312	
+143800001	230100	15	65	1800	43200	@alliance_active_mission21	alliance_active_missionTips21	newBuildLevelUp2212.png	V5Activity_143_u_Icon_Integral.png	203	2212
+143800002	230100	25	72	1800	43200	@alliance_active_mission21	alliance_active_missionTips21	newBuildLevelUp2212.png	V5Activity_143_u_Icon_Integral.png	203	2212
+143800003	230100	35	80	1800	64800	@alliance_active_mission21	alliance_active_missionTips21	newBuildLevelUp2212.png	V5Activity_143_u_Icon_Integral.png	203	2212
+143800004	230100	50	90	1800	86400	@alliance_active_mission21	alliance_active_missionTips21	newBuildLevelUp2212.png	V5Activity_143_u_Icon_Integral.png	203	2212
+143900001	240100	15	65	1800	43200	@alliance_active_mission22	alliance_active_missionTips22	newBuildLevelUp2021.png	V5Activity_143_u_Icon_Integral.png	1137	
+143900002	240100	25	72	1800	43200	@alliance_active_mission22	alliance_active_missionTips22	newBuildLevelUp2021.png	V5Activity_143_u_Icon_Integral.png	1137	
+143900003	240100	40	80	1800	43200	@alliance_active_mission22	alliance_active_missionTips22	newBuildLevelUp2021.png	V5Activity_143_u_Icon_Integral.png	1137	
+143900004	240100	60	90	1800	43200	@alliance_active_mission22	alliance_active_missionTips22	newBuildLevelUp2021.png	V5Activity_143_u_Icon_Integral.png	1137	
+143910001	500013	401_410_10	65	1800	43200	@alliance_active_mission23	alliance_active_missionTips23	QuestIcon_0017.png	V5Activity_143_u_Icon_Integral.png	1338	
+143910002	500013	401_410_20	72	1800	43200	@alliance_active_mission23	alliance_active_missionTips23	QuestIcon_0017.png	V5Activity_143_u_Icon_Integral.png	1338	
+143910003	500013	401_410_40	80	1800	43200	@alliance_active_mission23	alliance_active_missionTips23	QuestIcon_0017.png	V5Activity_143_u_Icon_Integral.png	1338	
+143910004	500013	401_410_70	90	1800	43200	@alliance_active_mission23	alliance_active_missionTips23	QuestIcon_0017.png	V5Activity_143_u_Icon_Integral.png	1338	
+143920001	500013	201_210_15	65	1800	43200	@alliance_active_mission24	alliance_active_missionTips24	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	1
+143920002	500013	201_210_30	72	1800	43200	@alliance_active_mission24	alliance_active_missionTips24	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	1
+143920003	500013	201_210_60	80	1800	43200	@alliance_active_mission24	alliance_active_missionTips24	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	1
+143920004	500013	201_210_100	90	1800	43200	@alliance_active_mission24	alliance_active_missionTips24	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	1
+143930001	500013	301_310_15	65	1800	43200	@alliance_active_mission25	alliance_active_missionTips25	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	2
+143930002	500013	301_310_30	72	1800	43200	@alliance_active_mission25	alliance_active_missionTips25	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	2
+143930003	500013	301_310_60	80	1800	43200	@alliance_active_mission25	alliance_active_missionTips25	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	2
+143930004	500013	301_310_100	90	1800	43200	@alliance_active_mission25	alliance_active_missionTips25	newBuildLevelUp2208.png	V5Activity_143_u_Icon_Integral.png	130	2
+1431100001	151100	1001_1000	100	1800	43200	@alliance_active_mission27	alliance_active_missionTips27	V5Activity_143_u_Icon_Coin.png	V5Activity_143_u_Icon_Integral.png		
+1431100002	151100	1001_2000	125	1800	86400	@alliance_active_mission27	alliance_active_missionTips27	V5Activity_143_u_Icon_Coin.png	V5Activity_143_u_Icon_Integral.png		
+1431100003	151100	1001_3000	150	1800	129600	@alliance_active_mission27	alliance_active_missionTips27	V5Activity_143_u_Icon_Coin.png	V5Activity_143_u_Icon_Integral.png		
+1431100004	151100	1001_5000	200	1800	172800	@alliance_active_mission27	alliance_active_missionTips27	V5Activity_143_u_Icon_Coin.png	V5Activity_143_u_Icon_Integral.png		
+1431200001	151100	1000_1000	100	1800	43200	@alliance_active_mission28	alliance_active_missionTips28	V5Activity_143_u_Icon_Gold.png	V5Activity_143_u_Icon_Integral.png		
+1431200002	151100	1000_2500	125	1800	86400	@alliance_active_mission28	alliance_active_missionTips28	V5Activity_143_u_Icon_Gold.png	V5Activity_143_u_Icon_Integral.png		
+1431200003	151100	1000_5000	200	1800	129600	@alliance_active_mission28	alliance_active_missionTips28	V5Activity_143_u_Icon_Gold.png	V5Activity_143_u_Icon_Integral.png		
+1431200004	151100	1000_10000	300	1800	172800	@alliance_active_mission28	alliance_active_missionTips28	V5Activity_143_u_Icon_Gold.png	V5Activity_143_u_Icon_Integral.png		
+]],
+
+}

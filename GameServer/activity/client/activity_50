@@ -1,0 +1,16 @@
+return {
+	prop =
+	{
+		activityId = 50,
+		icon = [[Activity_Icon_48.png]],
+		title = [[活动详情]],
+		name = [[感恩巨献]],
+		priority = 21100,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动说明：<br/>1.本次感恩巨献活动，仅限本次测试阶段于2018年7月27日21点之前注册用户参与。<br/>2.活动开放时间为2018年7月28日凌晨5点整至2018年7月30日23时59分59秒。<br/>3.活动期间登录游戏点击领取后，即可获得荣耀主城基地装备（14天）及价值28888巨献礼包；<br/>4.同时成功参与活动的玩家于不删档测试开启后，可再次领取巨献礼包及永久神秘基地装扮一套。</font>]],
+	},
+	gratitude_gift = [[id	name	bigIcon	title	rewards
+1	2	2	2	2
+360001	尊享礼包	Activity_Recharge_u_Rendered_04.png	GratitudeTitleDes	30000_9020314_1,10000_1001_888,30000_1000003_20,30000_810002_8,30000_850009_2,30000_850039_2
+]],
+
+}

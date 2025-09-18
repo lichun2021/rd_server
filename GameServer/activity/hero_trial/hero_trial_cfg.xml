@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 每次刷新价格
+refreshCost = 10000_1001_20
+
+# 自动刷新时间
+autoRefreshTime = 0_6_12_18
+
+# 每日接受任务数量
+trialLimit = 10
+
+# 一次刷新任务数量
+refreshCount = 3
+
+# 一次试炼英雄数量限制
+oneTrialHeroLimit = 2
+
+# 刷新次数限制，防IOS审核
+refresTimesLimit = 9999
+

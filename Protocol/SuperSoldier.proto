@@ -1,0 +1,242 @@
+option java_package = "com.hawk.game.protocol";
+import "Equip.proto";
+
+
+enum PBSuperSoldierState{
+	SUPER_SOLDIER_STATE_FREE 	= 1; // 空闲
+	SUPER_SOLDIER_STATE_MARCH 	= 2; // 出征
+	//HERO_STATE_QUARTER	= 3; // 驻扎
+}
+
+
+// 推送超级兵信息
+message PBSuperSoldierListPush{
+	repeated PBSuperSoldierInfo superSoldiers		=1; // 超级兵列表
+}
+
+
+// 请求委任官职
+message PBSuperSoldierOfficeAppointRequest{
+	repeated PBSuperSoldierOffice office = 1;
+}
+
+// 超级兵升星
+message PBSuperSoldierStarUpRequest{
+	optional int32 superSoldierId = 1; // 机甲id
+	optional int32 toStar = 2; // 升至星级
+	optional int32 toStep = 3; // 升至步骤
+	optional int32 itemId = 4; // 万能碎片id 发这个id表示需要兑换
+	repeated SuperSoliderStarUpExchange exchanges = 5; // 兑换目标
+}
+
+// 机甲升星兑换
+message SuperSoliderStarUpExchange {
+	required int32 toItemId = 1; // 需要兑换的道具id
+	required int32 toItemCount = 2; // 需要兑换的道具数量
+}
+
+// 使用超级兵经验道具
+message PBUseSuperSoldierExpItemRequest{
+	required int32 superSoldierId = 1;
+	repeated PBSuperSoldierItem itemUse= 2;
+}
+
+
+// 使用超级兵技能经验道具
+message PBUseSuperSoldierSkillExpItemRequest{
+	required int32 superSoldierId = 1;
+	required int32 index = 2;
+	repeated PBSuperSoldierItem itemUse= 3;
+	required int32 type = 4; // 1 自带技能, 2 学习技能
+}
+
+
+message PBSuperSoldierItem{
+	required int32 itemId = 1;
+	required int32 count = 2; 
+}
+
+message PBSuperSoldierOffice{
+	optional int32 superSoldierId = 1; // 超级兵
+	optional int32 office = 2; // 官职
+}
+
+
+
+// 超级兵详情
+message PBSuperSoldierInfo{
+	optional int32 superSoldierId =1;			// cfg id
+	optional int32 level = 2;			// cfg id
+	optional int32 totalExp =5;			// 总经验
+	optional int32 star =6;				// 星级
+	optional int32 office = 7;			// 官职
+	repeated PBSuperSoldierSkillSlot passiveSkillSlot = 8;		// 被动技能
+	repeated PBSuperSoldierSkillSlot skillSlot = 9;		// 可学习技能
+	optional PBSuperSoldierState state = 10;		// 状态 空闲/出征/驻扎
+	repeated PBSuperSoldierAttr attr   =11;  // 四属性
+	optional int32 power	= 15;      // 战力
+	optional int32 cityDefense = 16; // 城防官职  107 /108
+	repeated PBSuperSoldierEffect marchEffect = 17; //出征值
+	optional int32 step = 18; // 阶
+	optional int32 shareCount = 19; // 分享平台次数
+	optional int32 skinUse = 20; // 当前皮肤
+	repeated PBSuperSoldierSkin skinList = 21; // 皮肤
+	optional bool unlockAnyWhere = 22; // 解锁无处不在
+	repeated int32 unlockSkins = 23;//已经解锁的皮肤
+	// 内部数据
+	optional string unlockPieces = 28; // 解锁碎片
+	optional int32 qualityColor = 29; // 品质
+	repeated int32 energys = 30; // 赋能
+}
+
+// 赋能
+message PBSuperSoldierEnergyReq {
+	optional int32 superSoldierId = 1; // 机甲id
+	optional int32 energy = 2; // 赋能部件
+}
+
+// 解锁赋能
+message PBUnlockEnergyReq {
+	optional int32 superSoldierId = 1; // 机甲id
+}
+
+message PBSuperSoldierSkin{
+	optional int32 skinId = 1;
+	optional int64 starTime = 2;
+	optional int64 endTime = 3;
+}
+
+message PBSuperSoldierAttr{
+	optional int32 attrId = 1;
+	optional int32 number = 2; 
+}
+
+message PBSuperSoldierEffect{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+// 技能槽
+message PBSuperSoldierSkillSlot{
+	optional int32 index = 1;
+	optional int32 unlockLevel = 2; // 解锁需要星级
+	optional PBSuperSoldierSkillInfo skill = 3;
+}
+
+// 技能信息
+message PBSuperSoldierSkillInfo{
+	optional int32 skillId = 1; 
+	optional int32 superSoldierId =3;		// cfg id
+	optional int64 coolDown = 4; 	// 技能冷却时间
+	optional int32 totalExp =5;			// 总经验
+	optional int32 level = 6;
+	repeated PBSuperSoldierEffect effect = 7; // 做用号
+}
+
+
+
+// 请求释放超级兵技能
+message PBCastSuperSoldierSkillRequest{
+	optional int32 superSoldierId = 1;			// cfg id
+	optional int32 skillId = 2;			// cfg id
+}
+
+
+// 碎片解锁超级兵
+message PBUnlockSuperSoldierRequest{
+	optional int32 superSoldierId = 1;	//超级兵cfg id
+}
+
+// 查看指定玩家超级兵信息
+message PBSuperSoldierInfoRequest{
+	required int32 superSoldierId =1;
+	required int32 playerId = 2;
+}
+
+//分享超级兵
+message HPSuperSoldierShareReq{
+	required int32 superSoldierId = 1;
+	optional int32 shareTo = 2; // 0:到联盟  1: 到 QQ  WX 社交平台 
+}
+
+// 使用皮肤道具
+message HPSuperSoldierUseSkinItemReq{
+	optional string skinItem = 1;
+}
+
+// 更换皮肤
+message HPSuperSoldierChangeSkinReq{
+	optional int32 superSoldierId = 1;
+	optional int32 skinId = 2;
+}
+
+// 请求进化.  首先更新机甲信息, 再回复通用success.  
+message HPEvolutionSuperSoldierReq{
+	optional int32 evolutionSoldierId =1; // 进化解锁获得机甲id. 将来可能出现同一机甲进化为不同方向 
+}
+
+// 超级兵兑换道具计数. 当兑换数改变时也会推送
+message HPSupersoldierExchangeItemResp{
+	repeated HPSupersoldierExchangeItem items = 1; 
+}
+
+message HPSupersoldierExchangeItem{
+	optional int32 itemId = 1; 
+	optional int32 exchangeCount = 2; // 已兑换数
+}
+
+// 解锁无处不在
+message HPSupersoldierUnlockAnyWhereReq{
+	optional int32 superSoldierId = 1;
+	optional int32 skinId = 2;
+}
+
+
+
+// 任务推送数据
+message PBSupersoldierTaskPush {
+	repeated PBSupersoldierTaskInfo taskInfo = 1;
+}
+
+// 任务信息：机甲部位ID,任务类型,任务参数
+message PBSupersoldierTaskInfo
+{
+	required SupersoldierTaskType taskType = 1;  // 任务类型ID
+	required int32 num                     = 2;  // 任务进度数据
+	required int32 unitId                  = 3;  // 部件ID
+	optional bool finished                 = 4;  // 是否已修复完成
+}
+
+// 任务类型
+enum SupersoldierTaskType 
+{
+	ATTACK_MONSTER_TASK    = 1; // 打野
+	ATTACK_YUTI_BASE       = 2; // 攻击幽灵基地
+	INTELLIGENCE_TASK      = 3; // 完成情报任务
+	UNLOCK_AREA_TASK       = 4; // 解锁地块
+}
+
+// 机甲部件修复请求
+message SuperSoldierPartRepairReq
+{
+	required int32 unitId                = 1;  // 部件ID
+}
+
+//同步已经解锁的机甲皮肤
+message PBSuperSoldierSkinInfoResp
+{
+	repeated int32 skinIds = 1;//
+}
+
+//批量换装
+message PBSuperSoldierBatchChangeSkinReq
+{
+	required int32 skinId = 1;//
+	repeated int32 superSoldierIds = 2;//幻化的机甲
+}
+
+//解锁皮肤
+message PBSuperSoldierUnlockSkinReq
+{
+	required int32 skinId = 1;//
+}

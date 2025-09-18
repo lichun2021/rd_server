@@ -1,0 +1,36 @@
+return {
+	prop =
+	{
+		activityId = 240,
+		name = [[周年签到]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动描述：<br/>每天签到可获得签到累计奖励。</font>]],
+		priority = 20200,
+		icon = [[Activity_Icon_240_Nor.png]],
+		selecticon = [[Activity_Icon_240_Sel.png]],
+		shareReward = [[30000_1780080_1,30000_24210001_50,30000_810001_1,30000_850006_1,30000_850036_1]],
+	},
+	celebration_course_achieve = [[achieveId	conditionValue	rewards
+1	1	2
+24000001	1	30000_1780083_1,30000_24210001_50,30000_810001_3,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1
+24000002	3	30000_1780083_2,30000_24210001_100,30000_810001_6,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+24000003	5	30000_1000003_2,30000_24210001_150,30000_810001_9,30000_850007_3,30000_850037_3,30000_850017_3,30000_850027_3
+24000004	7	30000_1000003_3,30000_24210001_200,30000_810001_12,30000_850007_4,30000_850037_4,30000_850017_4,30000_850027_4
+]],
+	celebration_course_picture = [[id	sharePicUnlockTime	picture
+1	1	2
+1	0	V5Activity_240_ShareBG_01_A.png,V5Activity_240_ShareBG_01_B.png
+2	0	V5Activity_240_ShareBG_02_A.png,V5Activity_240_ShareBG_02_B.png
+3	86400	V5Activity_240_ShareBG_03_A.png,V5Activity_240_ShareBG_03_B.png
+4	86400	V5Activity_240_ShareBG_04_A.png,V5Activity_240_ShareBG_04_B.png
+5	172800	V5Activity_240_ShareBG_05_A.png,V5Activity_240_ShareBG_05_B.png
+6	172800	V5Activity_240_ShareBG_06_A.png,V5Activity_240_ShareBG_06_B.png
+7	259200	V5Activity_240_ShareBG_07_A.png,V5Activity_240_ShareBG_07_B.png
+8	259200	V5Activity_240_ShareBG_08_A.png,V5Activity_240_ShareBG_08_B.png
+9	345600	V5Activity_240_ShareBG_09_A.png,V5Activity_240_ShareBG_09_B.png
+10	432000	V5Activity_240_ShareBG_10_A.png,V5Activity_240_ShareBG_10_B.png
+11	518400	V5Activity_240_ShareBG_11_A.png,V5Activity_240_ShareBG_11_B.png
+12	518400	V5Activity_240_ShareBG_12_A.png,V5Activity_240_ShareBG_12_B.png
+]],
+
+}

@@ -1,0 +1,42 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 安卓付费点
+androidPayId = 316001
+
+# IOS付费点
+iosPayId = 316002
+
+# 注水目标经验
+floodAimExp = 436000
+
+# 注水开始时间
+floodBegin = 259200
+
+# 注水结束时间
+floodEnd = 514800
+
+# 注水检测时间周期
+floodCd = 300
+
+# 捐献道具换算比例（全服经验_个人经验_攻坚点数）
+donateProp = 10_10_10
+
+# 捐献暴击参数
+donatMultiple = 1_400,2_300,3_200,5_90,10_10
+
+# 可捐献道具ID
+donateItemId = 30000_3170001_1
+
+# 攻坚点道具ID
+stormingItemId = 30000_3170002_1
+
+# 特权掉落倍数
+giftDropMultiple = 2
+
+# 排行榜展示数量
+rankShowSize = 100
+
+# 单次捐献最高上限
+maxDonateLimit = 1000
+

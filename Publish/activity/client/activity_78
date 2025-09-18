@@ -1,0 +1,33 @@
+return {
+	prop =
+	{
+		activityId = 78,
+		name = [[经典归来]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官参与界面指定的游戏行为即有几率获得对应的道具；<br/>2. 道具可在兑换界面进行兑换，兑换指定道具达指定次数，即可领对应奖励；<br/>3. 每日将兑换任务奖励全部领取还可领取额外大奖；<br/>4. 兑换任务每日重置；<br/>5. 兑换限定次数，活动期间不重置；</font>]],
+		priority = 10025,
+		icon = [[Activity_Icon_78_Nor.png]],
+		selecticon = [[Activity_Icon_78_Sel.png]],
+		everydayAward = [[30000_1510003_20,30000_13310003_20,30000_840165_30,30000_800110_3,30000_1610002_3]],
+	},
+	activity_allybeatback_type = [[id	priority	funcType	name	icon	gotoType	dropParam	dropLimit	dropId	mailId
+1	1	1	2	2	1	1	1	1	1
+200	2	200	野外采集	V3Activity_Icon_Mission_04.png	1	3360	50	2940042	20181033
+300	3	300	击败敌军	V3Activity_Icon_Mission_05.png	1	1		2940043	20181033
+400	4	400	补给	V3Activity_Icon_Mission_03.png	1	1		2940044	20181033
+]],
+	activity_allybeatback_item = [[id	priority	needItem	gainItem	times
+1	1	2	2	1
+1	1	30000_1780159_1,30000_1780161_1,30000_1780160_2	30000_1780162_1	999
+2	2	30000_1780159_1	30000_840001_1	999
+3	3	30000_1780161_1	30000_13310002_1	999
+4	4	30000_1780160_1	30000_1510002_1	999
+]],
+	activity_allybeatback_achieve = [[achieveId	configValue	rewards
+1	1	2
+780001	5	30000_850007_1,30000_850037_1,30000_850017_1,30000_810001_1,30000_1510002_20
+780002	15	30000_850007_2,30000_850037_2,30000_850017_2,30000_810001_2,30000_13310002_30
+780003	30	30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_4,30000_840156_6
+]],
+
+}

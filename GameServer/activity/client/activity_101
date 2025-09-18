@@ -1,0 +1,40 @@
+return {
+	prop =
+	{
+		activityId = 101,
+		name = [[装扮兑换]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，装扮兑换券可用于兑换 各类永久装扮、装扮信使、资源、加速等道具。<br/>2. 可以通过“装扮专场”活动，开启装扮宝箱获取兑换券。<br/>3. 已有装扮不建议进行兑换，请谨慎操作！<br/>4. 您可于【物品】内将原有装扮主题对应的专属兑换券以1:1的比例转换为装扮兑换券</font>]],
+		priority = 20011,
+		icon = [[Activity_Icon_101_Nor.png]],
+		selecticon = [[Activity_Icon_101_Sel.png]],
+		bigIcon = [[]],
+	},
+	rose_exchange = [[id	priority	needItem	gainItem	des	times	showDiscount
+1	1	2	2	2	1	2
+1	1	30000_1150083_960	30000_9269000_1	ActivityExchangeGainItemDes1	1	
+2	2	30000_1150083_480	30000_9322000_1	ActivityExchangeGainItemDes1	1	
+3	3	30000_1150083_960	30000_9267000_1	ActivityExchangeGainItemDes1	1	
+4	4	30000_1150083_480	30000_9319000_1	ActivityExchangeGainItemDes1	1	
+5	5	30000_1150083_960	30000_9266000_1	ActivityExchangeGainItemDes1	1	
+6	6	30000_1150083_960	30000_9257000_1	ActivityExchangeGainItemDes1	1	
+7	7	30000_1150083_480	30000_9316000_1	ActivityExchangeGainItemDes1	1	
+8	8	30000_1150083_960	30000_9254000_1	ActivityExchangeGainItemDes1	1	
+9	9	30000_1150083_480	30000_9312000_1	ActivityExchangeGainItemDes1	1	
+10	10	30000_1150083_960	30000_9024500_1	ActivityExchangeGainItemDes1	1	
+11	11	30000_1150083_480	30000_9031000_1	ActivityExchangeGainItemDes1	1	
+12	12	30000_1150083_960	30000_9024300_1	ActivityExchangeGainItemDes1	1	
+13	13	30000_1150083_960	30000_9023800_1	ActivityExchangeGainItemDes1	1	
+14	14	30000_1150083_960	30000_9022800_1	ActivityExchangeGainItemDes1	1	
+15	15	30000_1150083_1	30000_1150098_1	ActivityExchangeGainItemDes1	3	
+16	16	30000_1150083_15	30000_850008_1	ActivityExchangeGainItemDes1	30	
+17	17	30000_1150083_15	30000_850038_1	ActivityExchangeGainItemDes1	30	
+18	18	30000_1150083_15	30000_850018_1	ActivityExchangeGainItemDes1	30	
+19	19	30000_1150083_15	30000_850028_1	ActivityExchangeGainItemDes1	30	
+20	20	30000_1150083_8	30000_810002_1	ActivityExchangeGainItemDes1	60	
+21	21	30000_1150083_1	30000_1510003_3	ActivityExchangeGainItemDes1	999	
+22	22	30000_1150083_1	30000_13310003_3	ActivityExchangeGainItemDes1	999	
+23	23	30000_1150083_1	30000_1480001_12	ActivityExchangeGainItemDes1	999	
+]],
+
+}

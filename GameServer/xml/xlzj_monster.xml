@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- worldEnemy对应world_enemy -->
+      <data id="1" recNum="1" refreshTime="30,60,90" refreshCount="100" guildHonor="100" playerHonor="40" worldEnemy="302002"  />
+      <data id="2" recNum="2" refreshTime="30,60,90" refreshCount="100" guildHonor="100" playerHonor="40" worldEnemy="200037"  />
+</root>

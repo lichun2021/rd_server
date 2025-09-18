@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="1" conditionType="1" conditionValue="1" rewards="30000_810001_3,30000_820002_3,30000_9990051_15,30000_9990052_5,30000_21070033_1" collegeScore="30000_1300017_6" collegeExp="10" />
+      <data achieveId="2" conditionType="2" conditionValue="1" rewards="30000_850007_2,30000_850037_2,30000_810001_2,30000_9990051_5,30000_9990052_2" collegeScore="30000_1300017_6" collegeExp="20" />
+      <data achieveId="3" conditionType="3" conditionValue="3" rewards="30000_850017_3,30000_850027_3,30000_810001_3,30000_9990051_10,30000_9990052_3" collegeScore="30000_1300017_6" collegeExp="30" />
+</root>

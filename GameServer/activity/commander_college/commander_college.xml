@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data stageId="100" order="1" funcType="1" rankId="100" time="259200" buyCountAssist="43200_86400_480_1,86400_172800_1800_1" showNumLimit="150" />
+      <data stageId="200" order="2" funcType="4" rankId="200" time="172800" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+      <data stageId="300" order="3" funcType="2" rankId="300" time="172800" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+      <data stageId="400" order="4" funcType="3" rankId="400" time="86400" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+      <data stageId="500" order="5" funcType="5" rankId="500" time="86400" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+      <data stageId="600" order="6" funcType="7" rankId="600" time="86400" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+      <data stageId="700" order="7" funcType="6" rankId="700" time="86400" buyCountAssist="0_3600_75_1,3600_68400_720_1" showNumLimit="150" />
+</root>

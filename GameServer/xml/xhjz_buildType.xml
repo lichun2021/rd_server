@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buildTypeId="1" gridCnt="2" peaceTime="180" allianceScore="0" allianceScoreAdd="0" occupyTime="3" />
+      <data buildTypeId="2" gridCnt="2" peaceTime="180" allianceScore="0" allianceScoreAdd="0" playerFuelAdd="0.05" allianceFuelAdd="0.4" occupyTime="60" />
+      <data buildTypeId="3" gridCnt="2" peaceTime="180" allianceScore="150" allianceScoreAdd="0.5" occupyTime="60" />
+      <data buildTypeId="4" gridCnt="2" peaceTime="180" allianceScore="300" allianceScoreAdd="1" specialEffect="5_100_20000,5_103_20000,5_102_20000" occupyTime="90" />
+      <data buildTypeId="5" gridCnt="4" towerAtkPeriod="30000" towerAtk="150" coolDownReducePercentage="50" peaceTime="600" allianceScore="1000" allianceScoreAdd="3.333333" occupyTime="90" />
+      <data buildTypeId="6" gridCnt="4" occupyMarchFree="1" occupyMarchSpeedUp="70" peaceTime="180" allianceScore="500" allianceScoreAdd="1.666667" occupyTime="90" />
+      <data buildTypeId="7" gridCnt="5" peaceTime="1200" allianceScore="2000" allianceScoreAdd="6.666667" occupyTime="120" />
+      <data buildTypeId="8" gridCnt="5" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="9" gridCnt="4" towerAtkPeriod="30000" towerAtk="150" occupyMarchFuel="0" peaceTime="600" allianceScore="1000" allianceScoreAdd="3.333333" buildEffect="100_30000,136_30000,102_30000" occupyTime="90" />
+      <data buildTypeId="10" gridCnt="2" peaceTime="180" allianceScore="300" allianceScoreAdd="1" specialEffect="9_100_20000,9_103_20000,9_102_20000" occupyTime="90" />
+      <data buildTypeId="11" gridCnt="2" peaceTime="180" allianceScore="300" allianceScoreAdd="1" specialEffect="7_100_20000,7_103_20000,7_102_20000" occupyTime="90" />
+      <data buildTypeId="12" gridCnt="2" peaceTime="180" allianceScore="300" allianceScoreAdd="1" occupyTime="90" />
+      <data buildTypeId="21" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="22" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="23" gridCnt="2" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="24" gridCnt="2" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="25" gridCnt="3" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="31" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="32" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="33" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="34" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+      <data buildTypeId="35" gridCnt="1" allianceScore="0" allianceScoreAdd="0" />
+</root>

@@ -1,0 +1,22 @@
+CREATE TABLE `activity_homeland_puzzle`  (
+  `id` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `playerId` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `termId` int(11) NOT NULL DEFAULT '0',
+  `loginDays` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `createTime` bigint(20) NOT NULL DEFAULT '0',
+  `updateTime` bigint(20) NOT NULL DEFAULT '0',
+  `invalid` tinyint(1) NOT NULL DEFAULT '0',
+  `drawCount` int(11) NOT NULL DEFAULT '0',
+  `pCombine` int(11) NOT NULL DEFAULT '0',
+  `pGrandPrize` int(11) NOT NULL DEFAULT '0',
+  `pItem` int(11) NOT NULL DEFAULT '0',
+  `collectedCombinationItems` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `grandPrizeWon` int(11) NOT NULL DEFAULT '0',
+  `freeTimes` int(11) NOT NULL DEFAULT '0',
+  `shopItems` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `recordItems` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exchangeItems` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `playerPoint` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`),
+ KEY `playerId_index` (`playerId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

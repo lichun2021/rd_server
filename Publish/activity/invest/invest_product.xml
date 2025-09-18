@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="125001" productProfit="500" productDuration="259200" customerId="1250001" productMinAmount="10000_1000_1000" productMaxAmount="10000_1000_3000" />
+      <data id="125002" productProfit="1200" productDuration="604800" customerId="1250002" productMinAmount="10000_1000_4000" productMaxAmount="10000_1000_8000" />
+      <data id="125003" productProfit="2600" productDuration="1296000" customerId="1250003" productMinAmount="10000_1000_9000" productMaxAmount="10000_1000_15000" />
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10101" isglory="0" attrId="102" unlockBuildingType="2015" unlockLevel="1" prioritySkill="2104008|2104010" weight="19" attrOfficeEffect="401_0.33" threadUsed="3" />
+      <data id="10102" isglory="0" attrId="102" unlockBuildingType="2015" unlockLevel="13" prioritySkill="2104008|2104010" weight="20" attrOfficeEffect="401_0.33" threadUsed="3" />
+      <data id="10201" isglory="0" attrId="102" unlockBuildingType="2010" unlockLevel="1" prioritySkill="101301" weight="21" attrOfficeEffect="301_0.5" />
+      <data id="10202" isglory="0" attrId="102" unlockBuildingType="2010" unlockLevel="13" prioritySkill="101301" weight="22" attrOfficeEffect="301_0.5" />
+      <data id="10301" isglory="0" attrId="102" unlockBuildingType="2024" unlockLevel="1" prioritySkill="2102009|2102010|2102011|2102012" weight="23" attrOfficeEffect="350_1" />
+      <data id="10302" isglory="0" attrId="102" unlockBuildingType="2024" unlockLevel="16" prioritySkill="2102009|2102010|2102011|2102012" weight="24" attrOfficeEffect="350_1" />
+      <data id="10401" isglory="0" attrId="103" unlockBuildingType="2026" unlockLevel="1" prioritySkill="2104001|2104002|2104003" weight="9" attrOfficeEffect="413_0.5" threadUsed="5" />
+      <data id="10402" isglory="0" attrId="103" unlockBuildingType="2026" unlockLevel="13" prioritySkill="2104001|2104002|2104003" weight="10" attrOfficeEffect="413_0.5" threadUsed="5" />
+      <data id="10501" isglory="0" attrId="103" unlockBuildingType="2011" unlockLevel="1" prioritySkill="101001|101501|101601|2103005|2103006" weight="11" attrOfficeEffect="403_0.33" threadUsed="4_13" />
+      <data id="10502" isglory="0" attrId="103" unlockBuildingType="2011" unlockLevel="16" prioritySkill="101001|101501|101601|2103005|2103006" weight="12" attrOfficeEffect="403_0.33" threadUsed="4_13" />
+      <data id="10601" isglory="0" attrId="103" unlockBuildingType="2012" unlockLevel="1" prioritySkill="101001|101501|101601|2103001|2103002" weight="13" attrOfficeEffect="404_0.33" threadUsed="4_13" />
+      <data id="10602" isglory="0" attrId="103" unlockBuildingType="2012" unlockLevel="16" prioritySkill="101001|101501|101601|2103001|2103002" weight="14" attrOfficeEffect="404_0.33" threadUsed="4_13" />
+      <data id="10701" isglory="0" attrId="103" unlockBuildingType="2014" unlockLevel="1" prioritySkill="101001|101501|101601|2103003|2103004" weight="15" attrOfficeEffect="405_0.33" threadUsed="4_13" />
+      <data id="10702" isglory="0" attrId="103" unlockBuildingType="2014" unlockLevel="16" prioritySkill="101001|101501|101601|2103003|2103004" weight="16" attrOfficeEffect="405_0.33" threadUsed="4_13" />
+      <data id="10801" isglory="0" attrId="103" unlockBuildingType="2013" unlockLevel="1" prioritySkill="101001|101501|101601|2103007|2103008" weight="17" attrOfficeEffect="406_0.33" threadUsed="4_13" />
+      <data id="10802" isglory="0" attrId="103" unlockBuildingType="2013" unlockLevel="16" prioritySkill="101001|101501|101601|2103007|2103008" weight="18" attrOfficeEffect="406_0.33" threadUsed="4_13" />
+      <data id="10901" isglory="0" attrId="102" unlockBuildingType="2217" unlockLevel="1" prioritySkill="2103009|2103010|2103011" weight="25" attrOfficeEffect="176_0.5" threadUsed="12" />
+      <data id="10902" isglory="0" attrId="102" unlockBuildingType="2217" unlockLevel="16" prioritySkill="2103009|2103010|2103011" weight="26" attrOfficeEffect="176_0.5" threadUsed="12" />
+      <data id="11001" isglory="1" attrId="103" unlockBuildingType="2020" unlockLevel="1" weight="5" attrOfficeEffect="1144_0.1" threadUsed="7" />
+      <data id="11002" isglory="1" attrId="103" unlockBuildingType="2020" unlockLevel="30" weight="6" attrOfficeEffect="1144_0.1" threadUsed="7" />
+      <data id="11003" isglory="1" attrId="103" unlockBuildingType="2020" unlockLevel="34" weight="7" attrOfficeEffect="1144_0.1" threadUsed="7" />
+      <data id="11004" isglory="1" attrId="103" unlockBuildingType="2020" unlockLevel="37" weight="8" attrOfficeEffect="1144_0.1" threadUsed="7" />
+      <data id="11101" isglory="1" attrId="103" unlockBuildingType="2018" unlockLevel="1" weight="1" attrOfficeEffect="1147_0.1" threadUsed="7" />
+      <data id="11102" isglory="1" attrId="103" unlockBuildingType="2018" unlockLevel="30" weight="2" attrOfficeEffect="1147_0.1" threadUsed="7" />
+      <data id="11103" isglory="1" attrId="103" unlockBuildingType="2018" unlockLevel="34" weight="3" attrOfficeEffect="1147_0.1" threadUsed="7" />
+      <data id="11104" isglory="1" attrId="103" unlockBuildingType="2018" unlockLevel="37" weight="4" attrOfficeEffect="1147_0.1" threadUsed="7" />
+      <data id="11201" isglory="0" attrId="102" unlockBuildingType="2234" unlockLevel="1" weight="27" attrOfficeEffect="4126_0.33" threadUsed="20" />
+      <data id="11202" isglory="0" attrId="102" unlockBuildingType="2234" unlockLevel="1" weight="28" attrOfficeEffect="4126_0.33" threadUsed="20" />
+      <data id="11301" isglory="0" attrId="103" unlockBuildingType="2236" unlockLevel="1" weight="29" attrOfficeEffect="4128_0.33" threadUsed="21" />
+      <data id="11302" isglory="0" attrId="103" unlockBuildingType="2236" unlockLevel="1" weight="30" attrOfficeEffect="4128_0.33" threadUsed="21" />
+      <data id="11401" isglory="0" attrId="103" unlockBuildingType="2235" unlockLevel="1" weight="31" attrOfficeEffect="4127_0.5" threadUsed="22" />
+      <data id="11402" isglory="0" attrId="103" unlockBuildingType="2235" unlockLevel="1" weight="32" attrOfficeEffect="4127_0.5" threadUsed="22" />
+</root>

@@ -1,0 +1,3448 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 登录标记
+enum LoginFlag
+{
+	// 启动连接
+	LAUNCH_CONNECT = 0;
+	// 断线重连
+	BROKEN_CONNECT = 1;
+}
+
+// 数据类型定义
+enum ItemType
+{
+	// 玩家属性
+	PLAYER_ATTR	= 1;
+	// 角色
+	ROLE = 2;
+	// 道具
+	TOOL = 3;
+	// 装备
+	EQUIP =	4;
+	// 技能
+	SKILL =	5;
+	// 建筑
+	BUILDING = 6;
+	// 士兵
+	SOLDIER	= 7;
+	// 铠甲
+	ARMOUR = 8;
+	// 国家资源属性
+	NATIONAL_RES_ATTR = 9;
+	// 机甲核心模块
+	MECHA_CORE_MODULE = 10;
+
+}
+
+// 玩家属性类型定义
+enum PlayerAttr
+{
+	DIAMOND				= 1000; // 钻石--来源：充值
+	GOLD				= 1001;	// 水晶--来源：活动,可被钻石1:1替换
+	COIN				= 1002;	// 银元
+	LEVEL				= 1003;	// 等级
+	EXP					= 1004;	// 经验
+	VIP_POINT			= 1005;	// vip点数
+	ELECTRIC			= 1006;	// 电力
+	GOLDORE_UNSAFE		= 1007;	// 矿石精鍊厂(非保护)
+	OIL_UNSAFE			= 1008;	// 石油(非保护)
+	STEEL_UNSAFE		= 1009;	// 铀矿(非保护)
+	TOMBARTHITE_UNSAFE	= 1010;	// 合金(非保护)
+	
+	VIT					= 1011;	// 体力
+	ELECTRIC_MAX		= 1012;	// 电力上限
+	VIP_END_TIME		= 1013;	// vip结束时间
+	GUILD_CONTRIBUTION	= 1014;	// 联盟贡献
+	RECRUITS            = 1015; // 新兵
+	ACTIVITY_SCORE      = 1016; // 活动积分
+	GUILD_SCORE			= 1017; // 联盟积分(只在有联盟时增加联盟的积分)
+	MILITARY_EXP		= 1018;	// 军衔经验(功勋)
+	MILITARY_SCORE      = 1019; // 军演积分
+	CYBORG_SCORE		= 1021; // 赛博之战积分
+	TRAVEL_SHOP_FRIENDLY= 1026; // 旅行商店好友度
+	DYZZ_SCORE          = 1028; //达雅之战积分
+	CROSS_TALENT_POINT	= 1029; // 跨服战略点
+	NATION_MILITARY				= 1031; // 国家军功
+	NATION_MILITARY_BATTLE		= 1032; // 国家军功 战斗类
+
+	GOLDORE				= 1107;	// 矿石精鍊厂
+	OIL					= 1108;	// 石油
+	STEEL				= 1109;	// 铀矿
+	TOMBARTHITE			= 1110;	// 合金
+}
+
+// 国家资源
+enum NationalResAttr
+{
+	ALUMINUM_ALLOY			= 1207;	// 铝合金
+	TITANIUM_ALLOY			= 1208;	// 钛合金
+	CARBON_FIBER			= 1209;	// 碳纤维
+	SUPE_CRYSTAL        	= 1210;	// 超导晶体
+}
+
+// 聊天类型
+enum ChatType
+{
+	// 世界聊天
+	CHAT_WORLD = 0;
+	// 公会聊天
+	CHAT_ALLIANCE =	1;
+	// 聊天广播
+	CHAT_BROADCAST = 2;
+	// 系统公告（超链接）
+	SPECIAL_BROADCAST =	3;
+	// 联盟聊天超链接
+	GUILD_HREF = 4;
+	// 世界聊天超链接
+	WORLD_HREF = 5;
+	// 聊天室超链接
+	CHAT_ROOM_HREF = 6;
+
+	CHAT_FUBEN = 9;//联盟锦标赛内部聊天
+	CHAT_FUBEN_TEAM = 10; //联盟锦标赛小队
+	CHAT_FUBEN_SPECIAL_BROADCAST = 11;
+	CHAT_FUBEN_TEAM_SPECIAL_BROADCAST = 12; //战队+跑马灯
+	
+	CHAT_FUBEN_NATION = 13;  //国家频道
+
+	// 系统公告
+	SYS_BROADCAST =	9999;
+}
+
+/**
+ * 系统广播
+ */
+enum NoticeCfgId {	
+	//不带参数广播
+	NO_PARM = 0;
+	//联盟招募
+	GUILD_RECURIT = 1;
+	// 邮件分享
+	MAIL_SHARE = 9;
+	//国王战将要开始
+	PRESIDENT_WAR_WILL_START = 15;
+	//国王战已经开始
+	PRESIDENT_WAR_STARTED = 16;
+	//国王战将要进入加时
+	PRESIDENT_WAR_WILL_TO_OVERTIME = 17;
+	//国王战已经结束
+	PRESIDENT_WAR_ENDED = 18;
+	//国王变更
+	PRESIDENT_CHANGED = 19;
+	//国王任命1（直接任命）
+	PRESIDENT_APPOINT_TITLE = 20;
+	//国王任命2（更改官职）
+	PRESIDENT_CHANGE_TITLE = 21;
+	//国王任命3（任命官职，之前玩家被撤销）
+	PRESIDENT_APPOINT_TITLE_WITH_DISMISS = 22;
+	//国王任命4（更改官职，之前玩家被撤职）
+	PRESIDENT_CHANGE_TITLE_WITH_DISMISS = 23;
+	//国王礼包
+	PRESIDENT_GIFT = 24;
+	//国王征税
+	PRESIDENT_TAX = 25;
+	//国王任命5（玩家被撤销）
+	PRESIDENT_PLAYER_BE_DISMISSED = 30;
+	//联盟分享抽到英雄卡
+	GUILD_GACHA_HERO = 37;
+	//联盟商店补货通知
+	GUILD_INVITE_ADD_SHOP_ITEM = 38;
+	//宝藏挖掘求助
+	STORE_HOUSE_QUERY_HELP = 39;
+	//尤里行军支援
+	YURI_MONSTER_QUERY_HELP = 40;
+	//集结打野怪
+	MASS_FRO_YURI_BOSS = 41;
+	//坐标分享
+	SHARECOORDINATE = 42;
+	//集结玩家
+	MASSFORPLAYER = 43;
+	//集结联盟
+	MASSFORGUILDMANOR = 44;
+	//非尤里行军求援助
+	MARCH_QUERY_HELP = 45;
+	//加入联盟
+	JOIN_GUILD_MSG = 46;
+	//邀请入盟
+	INVITE_JOIN_GUILD = 47;
+	//国王战进入加时状态
+	PRESIDENT_WAR_OVERTIME = 48;
+	//国王战已经结束(无国王)
+	PRESIDENT_WAR_ENDED_NO_WIN = 49;
+	//国王战归属发生变化时同时
+	PRESIDENT_CHANGE = 50;
+	//集结打国王战
+	PRESIDENT_MASS_ATTACK = 51;
+	// 提升赏金
+	COUNTERATTACK_UPBOUNTY = 53;
+	// 集结迷雾要塞
+	FOGGY_MASS = 54;
+	// 超级武器报名开始前预告
+	SUPERWEAPON_SIGNUP_WILL_START = 55;
+	// 超级武器报名已经开始
+	SUPERWEAPON_SIGNUP_STARTED = 56;
+	// 超级武器报名结束
+	SUPERWEAPON_SIGNUP_OVER = 57;
+	// 超级武器争夺即将开始
+	SUPERWEAPON_WAR_WILL_START = 58;
+	// 超级武器争夺已经开始
+	SUPERWEAPON_WAR_STARTED = 59;
+	// 初次占领超级武器
+	SUPERWEAPON_HAS_OCCUPY = 60;
+	// 超级武器战归属发生变化时
+	SUPERWEAPON_CHANGE = 61;
+	// 成功占领超级武器
+	SUPERWEAPON_OCCUPY_SUCC = 62;
+	// 超级武器没有人报名
+	SUPERWEAPON_NO_SIGNUP = 63;
+	// 超级武器即将进入加时
+	SUPERWEAPON_WAR_WILL_TO_OVERTIME = 64;
+	// 超级武器进入加时
+	SUPERWEAPON_WAR_OVERTIME = 65;
+	// 没有占领结束
+	SUPERWEAPON_WAR_ENDED_NO_WIN = 66;
+	GetNewHero = 67; // 获得英雄
+	// 通知盟主建群
+	CREATE_GROUP_REMIND = 70;
+	// 通知联盟成员入群
+	JOIN_GROUP_REMIND = 71;
+	// 集结超级武器
+	MASS_FOR_SUPER_WEAPON = 72;
+	// 超级武器还有5分钟报名结束
+	SUPERWEAPON_SIGNUP_WILL_OVER = 73;
+	// 集结超级武器(有玩家占领)
+	MASS_FOR_SUPER_WEAPON_HAVE_PLAYER = 74;
+	// 超级武器战胜npc
+	SUPER_BARRACK_FIGHT_NPC_WIN = 75;
+	// 联盟悬赏达成
+	GUILD_COUNTERATTACK_WIN = 76;
+	// 超级兵营控制到和平
+	SUER_BARRAKE_CONTROL_TO_PACE = 77;
+	// 超级兵营战斗即将结束
+	SUPER_BARRACK_WARFRE_WILL_OVER = 78;
+	// 放置联盟标记
+	ALLIANCE_SIGN_NOTICE = 79;
+	ALLIANCE_CARE 			= 80; // 联盟关怀
+	WAR_COLLEGE_TEAM_INVITE  = 81; //战争学院邀请
+	PRESIDENT_APPOINT_NOTICE = 82; //总统任命公告
+	
+	WORLD_GUNDAM_REFRESH = 83; // 机甲刷新公告
+	WORLD_GUNDAM_PLAYER_KILLED = 84; // 机甲被击杀公告-个人
+	WORLD_GUNDAM_GUILD_KILLED = 85; // 机甲被击杀公告-联盟
+	WORLD_GUNDAM_MASS = 86; // 机甲集结
+	GetNewSuperSoldier= 87;  // 分享得到机甲
+	ONE_RMB_PURCHASE  = 88;  // 一元购获得稀有道具走马灯显示
+	
+	LMJY_PLAYER_JOIN = 89;//玩家加入军事演习－频道自动喊话	89
+	LMJY_PLAYER_QUIT = 90;//玩家手动退出军事演习频道－频道自动喊话	90
+	LMJY_MASSSINGE= 91; //我向{0}发起了集结攻击，请加入我的集结部队！	91
+	LMJY_KILL_NPC = 92; //玩家XXX华丽的一击消灭了NPCXXX	92
+	LMJY_FIRE_OUT = 93;//玩家XXXX城防值耗尽，退出了战场	93
+	LMJY_CITY_DEF_30 = 94; //玩家XXX城防值已经低于30%	94
+	LMJY_TIME_LEFT= 95;//军事演习副本剩余X分钟，大家注意	95
+	
+	RED_ENVELOPE_SYSTEM = 96; //红包活动获得特殊奖励
+	//----------个人红包需要的六个noticeID----------
+	RED_ENVELOPE_PLAYER_ONE   = 97;
+	RED_ENVELOPE_PLAYER_TWO   = 98;
+	RED_ENVELOPE_PLAYER_THREE = 99;
+	RED_ENVELOPE_PLAYER_FOUR  = 100;
+	RED_ENVELOPE_PLAYER_FIVE  = 101;
+	RED_ENVELOPE_PLAYER_SIX   = 102;
+	
+	RED_ENVELOPE_PLAYER_SEVTEN = 103; //小字(谁领取了你的红包)
+	RED_ENVELOPE_PLAYER_EIGHT = 104; //小字 手气王
+
+	SEND_FLOWER_QIGAI = 105; // 送我一个花吧
+	//----------个人红包需要的六个noticeID----------
+	
+	WORLD_NIAN_GUNDAM_REFRESH = 106;// 年兽刷新公告
+	WORLD_NIAN_PLAYER_KILLED =107; 	// 年兽被击杀公告-个人
+	WORLD_NIAN_GUILD_KILLED = 108; 	// 年兽被击杀公告-联盟
+	WORLD_NIAN_PLAYER_ONCE = 109; 	// 年兽被致命一击公告-个人
+	WORLD_NIAN_GUILD_ONCE = 110; 	// 机甲被致命一击公告-联盟
+	WORLD_NIAN_MASS = 111; 			// 年兽集结
+	
+	REFRESH_TREASURE_HUNT_RESOURCE = 112; //寻宝刷新金猪
+	REFRESH_TREASURE_HUNT_MONSTER = 113;  //寻宝刷新齐天金猴
+	
+	WAR_FLAG_BE_OCCUPY_NOTICE = 114; //战旗被占领
+	WAR_FLAG_TAKE_BACK = 115; //战旗夺回
+	WAR_FLAG_BUILD_COMPLATE = 116; //战旗建造完成
+	RES_TREASURE_PUT = 117; // 放置资源宝库
+	COLLEGE_INVITE = 118; // 邀请加入战争学院
+	BOUNTY_HUNTER_OK = 119; // 赏金猎人大奖
+	WORLD_MASS_CORSS_FORTRESS_HAVE_PLAYER = 120; // 向有人占领的远征要塞发起集结
+	WORLD_MASS_CORSS_FORTRESS = 121; // 向无人占领的远征要塞发起集结
+	
+	TBLY_122	= 122; // 控制权变更
+	TBLY_123	= 123; //  开战
+	TBLY_124	= 124; //  保护期结束
+	TBLY_125	= 125; //  中心开放
+	TBLY_126	= 126; // 刷矿了
+
+	TBLY_MARCH_QUERY_HELP = 127; // 求援
+	TBLY_TENMIN_OVER = 128; //泰伯利亚战场结束前10分钟跑马灯提示	127
+	TBLY_BUILD_CONTROL = 129; //泰伯利亚战场建筑控制提示	128
+	TBLY_SHARECOORDINATE = 130; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	TBLY_MASS_START_PLAYER = 131;//我向XXX占领的基地发起了集结（泰伯利亚内的）	130
+	TBLY_MASS_START_BUILD = 132; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	TBLY_BUILD_CONTROL_ADD = 370;// 获得的悬赏积分分值
+	
+	REMOVE_TIMEOUT_NIAN = 133; //年兽到期移除
+	REMOVE_TIMEOUT_NIAN_NOTICE = 134; //年兽到期移除
+	GUARD_CREATE			= 135; //守护关系建立。，
+	PARTITION_KING_136 = 136;   //三军统帅任命
+	PARTITION_KING_137 = 137;   //三军统帅改任.
+	PARTITION_KING_138 = 138;   //三军统帅把A任命为某职位导致原职位B被撤职。
+	PARTITION_KING_139 = 139;   //三军统帅把A从X职位改为Y职位导致B从Y职位撤职、。
+	PARTITION_KING_140 = 140;   //三军统帅撤职某玩家
+	WORLD_KING_141 		= 141; //世界统帅任命
+	WORLD_KING_142		= 142;  //世界统帅改任.
+	WORLD_KING_143		= 143;  //世界统帅把A任命为某职导致原职的人被撤职
+	WORLD_KING_144      = 144; //世界统帅把A从X职位改为Y职位导致B从Y职位撤职
+    WORLD_KING_145      = 145;  //世界统帅撤职玩家。
+	
+	SW_MARCH_QUERY_HELP = 156; // 求援
+	SW_SHARECOORDINATE = 159; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	SW_MASS_START_PLAYER = 160;//我向XXX占领的基地发起了集结（泰伯利亚内的）	130
+	SW_MASS_START_BUILD = 161; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	
+	AC_BASE_AWARD = 162; // 联盟总动员基础奖励
+	AC_ADV_AWARD = 163; // 联盟总动员进阶奖励、
+	
+	ACTIVITY_REDKOI_AWARD = 164;   //红警锦鲤获奖广播跑马灯
+	
+	GHOST_1 = 165; // 幽灵机甲刷新
+	GHOST_2 = 166; // 幽灵机甲击杀-个人
+	GHOST_3 = 167; // 幽灵机甲击杀-联盟
+	GHOST_4 = 168; // 幽灵机甲致命-个人
+	GHOST_5 = 169; // 幽灵机甲致命-联盟
+	GHOST_6 = 170; // 幽灵机甲发起集结
+	GHOST_7 = 171; // 幽灵机甲消失
+	GHOST_8 = 172; // 幽灵机甲消失倒计时
+	GHOST_9	= 173; // 挖掘极品幽灵机甲宝箱
+
+	SW_174 = 174; //报名前24小时，全服每小时滚动一次，提示玩家即将确认资格（id=174，参数=【战斗资格确认时间点】）
+	SW_175 = 175; //统帅号令颁布后，全服跑马灯通知统帅号令的信息（id=175，参数=【统帅区服】【统帅联盟简称】【统帅玩家名】【号令颁布区服信息】（这个1-3个））
+	SW_176 = 176; //建筑占领权变更，跑马灯战场通知（类似泰伯利亚）（id=176，参数=【建筑名称】【建筑坐标】【占领者联盟简称】【占领者名字】）
+	SW_177 = 177; //连续占领还剩10分钟就要赢了，跑马灯战场通知（id=177，参数=【占领联盟简称】【占领联盟名称】）
+	SW_178 = 178; //累计占领还剩10分钟就要赢了，跑马灯战场通知（id=178，参数=【占领联盟简称】【占领联盟名称】）
+	SW_179 = 179; //战场还有30/20/10分钟关闭，跑马灯通知（id=179，参数=【距离战场关闭的时间】）
+	SW_180 = 180; //开战，飞横幅提示开打了，全军统帅（id=180/181/185，参数=无）
+	SW_181 = 181; //开战，飞横幅提示开打了，世界霸主（id=180/181，参数=无）
+	SW_182 = 182; //电塔开放争夺（id=182，参数=无）
+	SW_183 = 183; //核心区域开放争夺（id=183，参数=无）
+	CHANGE_STAR_WARS_KING =  184; //改任霸主公告.
+	SW_185 = 185; //开战，飞横幅提示开打了，统帅之地（id=180/181，参数=无）
+	PART_KING_SEND_GIFT		= 186; //全军统帅发礼包
+	WORLD_KING_SEND_GIFT 	= 187; //霸主发礼包.
+
+	ASK_FOR_FU_ZI = 200; // 索要一个福字
+	ACTIVITY_DIVIDE_GOLD_BEST = 201;   //瓜分金币最高奖广播跑马灯
+	ACTIVITY_EQUIP_TECH_SS = 202;      //装备科技抽取到ss级别广播跑马灯
+	
+	CROSS_CHARGE_START		= 203; // 跨服充能开始
+	CROSS_VOTE_START		= 204; // 跨服投票开始
+	CROSS_VOTE_NO_WIN_START	= 205; // 跨服投票开始(没有服务器充能完成)
+	CROSS_VOTE_PARPARE		= 206; // 跨服进入备战阶段
+	CROSS_PRESIDENT_START	= 207; // 跨服开始争夺
+	CROSS_PRESIDENT_END		= 208; // 跨服总部活动结束
+	
+	CROSS_RES_REFRESH		= 209; // 跨服9级刷矿
+	CROSS_PRESIDENT_WAR_END	= 210; //跨服王战结束.
+	
+	SNOWBALL_NOTICE_211 = 211; // 该场次雪球大战开启
+	SNOWBALL_NOTICE_212 = 212; // 该场次雪球大战还有10min开启
+	SNOWBALL_NOTICE_213 = 213; // 该场次雪球大战结束
+	SNOWBALL_NOTICE_214 = 214; // 恭喜x将雪球推进x
+	SNOWBALL_NOTICE_215 = 215; // 
+	
+	
+	TBLY_NUCLEAR_SHOT_BUILD		= 216; // tbly核弹发射 建筑
+	TBLY_NUCLEAR_SHOT_PLAYR		= 217; // tbly核弹发射 玩家
+	TBLY_NIAN_CHUXIAN		= 218;
+	TBLY_NIAN_KILLED		= 219;
+	TBLY_HOT_BLOOD_MOD		= 220;
+	TBLY_NIAN_MASS			= 221;
+
+	WORLD_CHRISTMAS_BOSS_REFRESH = 222; //Boss 刷新.
+	WORLD_CHRISTMAS_KILLED_PERSONAL = 223; //圣诞boss击杀 个人.
+	WORLD_CHRISTMAS_KILLED_GUILD = 224; //圣诞boss击杀， 工会		
+	WORLD_CHRISTMAS_PERSONAL_ONCE		= 225; //圣诞boss, 个人单次公告
+	WORLD_CHRISTMAS_GUILD_ONCE		= 226; //圣诞boss, 单次工会公告.
+	WORLD_CHRISTMAS_MASS				= 227 ;//发起集结(联盟聊天.)
+	WORLD_CHRISTMAS_BOSS_RUN_AWAY       = 228; //机甲逃走
+	WORLD_CHRISTMAS_BOSS_PREPARE_RUN_AWAY = 229; //机甲准备逃走.
+	WORLD_CHRISTMAS_BOX					= 230; //圣诞宝箱拾取公告.
+	
+	SNOWBALL_NOTICE_231 = 231; // 远征要塞阶段开启
+	SNOWBALL_NOTICE_232 = 232; // 盟军总部阶段开启
+
+	CYBORG_122	= 240;// 122; // 控制权变更
+	CYBORG_123	= 241;//123; //  开战
+	CYBORG_124	= 242;//124; //  保护期结束
+	CYBORG_125	= 243;//125; //  中心开放
+	CYBORG_126	= 244;//126; // 刷矿了
+	CYBORG_MARCH_QUERY_HELP = 245;//127; // 求援
+	CYBORG_TENMIN_OVER = 246;//128; //泰伯利亚战场结束前10分钟跑马灯提示	127
+	CYBORG_BUILD_CONTROL = 247;//129; //泰伯利亚战场建筑控制提示	128
+	CYBORG_SHARECOORDINATE = 248;//130; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	CYBORG_MASS_START_PLAYER = 249;//131;//我向XXX占领的基地发起了集结（泰伯利亚内的）	130
+	CYBORG_MASS_START_BUILD = 250;//132; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	CYBORG_NUCLEAR_SHOT_BUILD		= 251;//216; // tbly核弹发射 建筑
+	CYBORG_NUCLEAR_SHOT_PLAYR		= 252;//217; // tbly核弹发射 玩家
+	CYBORG_NIAN_CHUXIAN		= 253;//218;
+	CYBORG_NIAN_KILLED		= 254;//219;
+	CYBORG_HOT_BLOOD_MOD		= 255;//220;
+	CYBORG_NIAN_MASS			= 256;//221;
+	
+	
+	BACK_PLAYER_ASK = 270;    // 老玩家问候
+	BACK_PLAYER_GIFT_RECEIVE = 271;  //收到回礼提示
+	
+	RESOURCE_DEFENSE_HELP = 272; // 资源保卫战，请求帮助
+	
+	BACK_PLAYER_GIFT_PRESSED_BACK = 273;  //催促回信
+	PRESIDENT_LOGIN		= 274;			//司令上线.
+	
+	ACTIVITY_GHOST_SECRET_AWARD = 275;   //幽灵秘宝特等奖
+	
+	DRAGON_BOAT_GIFT_REFRESH = 276;  //龙船奖励刷新
+	
+	ACTIVITY_RECHARGE_WELFARE_LOTTERY_AWARD = 277;   //充值福利抽奖特等奖
+	
+	ACTIVITY_GREETINGS = 278;   		//祝福语活动聊天寄语
+	
+	WAR_FLAG_MASS_NOTICE = 279;   		// 集结战旗
+	WAR_FLAG_CENTER_MASS_NOTICE = 280; // 集结母旗
+	
+	CAKE_SHARE_GIFT_REFRESH = 281;   //共享蛋糕奖励刷新	
+
+	XLZJ_122	= 285; // 控制权变更
+	XLZJ_123	= 286; //  开战
+	XLZJ_124	= 287; //  保护期结束
+	XLZJ_125	= 288; //  中心开放
+	XLZJ_126	= 289; // 刷矿了
+	XLZJ_MARCH_QUERY_HELP = 290; // 求援
+	XLZJ_TENMIN_OVER = 291; //泰伯利亚战场结束前10分钟跑马灯提示	127
+	XLZJ_BUILD_CONTROL = 292; //泰伯利亚战场建筑控制提示	128
+	XLZJ_SHARECOORDINATE = 293; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	XLZJ_MASS_START_PLAYER = 294;//我向XXX占领的基地发起了集结（泰伯利亚内的）	130
+	XLZJ_MASS_START_BUILD = 295; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	XLZJ_NUCLEAR_SHOT_BUILD		= 296; // tbly核弹发射 建筑
+	XLZJ_NUCLEAR_SHOT_PLAYR		= 297; // tbly核弹发射 玩家
+	XLZJ_NIAN_CHUXIAN		= 298;
+	XLZJ_NIAN_KILLED		= 299;
+	XLZJ_HOT_BLOOD_MOD		= 300;
+	XLZJ_NIAN_MASS			= 301;
+	
+	
+	XZQ_SIGNUP_START = 310;    // 小站区报名开始
+	XZQ_BATTLE_START = 311;    // 小站区争夺开始
+	XZQ_OCCUPY       = 312;    //小站区攻占成功
+	XZQ_CONTROL_SUCC = 313;    //小站区控制权发生变化
+	MASS_FOR_XZQ     = 314;         //集结超级武器
+	MASS_FOR_XZQ_HAVE_PLAYER = 315; //集结超级武器(有玩家占领)
+	XZQ_SIGNUP_HOUR  = 316; //小站区距离报名结束还有一小时
+	XZQ_OPEN_HOUR    = 317; //小站区距离开战还有一小时
+
+	TBLY_MONSTER_HERALD = 318;//泰伯利亚野怪首次刷新提示	318
+    TBLY_MONSTER_REFRASH = 319; //泰伯利亚野怪刷新提示	319
+	TBLY_MONSTER_REFRASH_OVER = 320; //泰伯利亚野怪全部刷新完毕提示	320
+	TBLY_MONSTER_KILLALL= 321; //泰伯利亚野怪全部击杀	321
+	TBLY_MONSTER_ORDER = 322;// 泰伯利亚号令使用广播	322
+	
+	TIME_LIMIT_BUY = 323;// 限时抢购还要xxx时间开启
+	
+	TBLY_MONSTER_ORDER_BROAD_CAST = 324; //泰伯利亚号令使用广播,战场频道,跑马灯广播	324
+	CAKE_SHARE_BIG_REWARD_CAST  = 325;  //蛋糕活动中大奖广播
+	
+	XZQ_CONTROL_GIVE_UP  = 326;  //小站区放弃广播
+	DYZZ_GUILD_INVIT  = 327;  //达雅之战,联盟邀请
+
+	DYZZ_MASS_START_PLAYER = 330;//我向XXX占领的基地发起了集结（达亚之战内的）	130
+	DYZZ_MASS_START_BUILD  = 331; //我向{0}发起了集结攻击，请加入我的集结部队！（达亚之战内的）	131
+	DYZZ_MARCH_QUERY_HELP = 332; // 求援
+	DYZZ_MONSTER_ORDER = 333;// 打压之站号令使用广播	322
+	DYZZ_334 = 334; //泰伯利亚战场建筑控制提示	334
+	DYZZ_335 = 335; //我分享了XXX的坐标XXX（泰伯利亚内的）	335
+	DYZZ_336 = 336; //5v5欢迎来到陨晶战场	336 1
+	DYZZ_337 = 337; //能源井刷新	337
+	DYZZ_338 = 338; //5v5欢迎来到陨晶战场	336 2
+	DYZZ_339 = 339; //开始进军	339
+	DYZZ_340 = 340; //激战阶段	340
+	DYZZ_341 = 341; //鏖战阶段	341
+	DYZZ_342 = 342; //一方主基地血量下降至60%	342
+	DYZZ_343 = 343; //一方主基地血量下降至30%	343
+	DYZZ_344 = 344; //决胜时刻（双方主基地血量均下降至10%触发）	344
+	PLANT_SECRET_CHAT_SHARE = 345; //泰能机密聊天分享
+	DYZZ_SEASON_SHARE = 346; //大雅赛季分享
+	
+
+	CYBORG_MONSTER_HERALD = 348;//泰伯利亚野怪首次刷新提示	318
+    CYBORG_MONSTER_REFRASH = 349; //泰伯利亚野怪刷新提示	319
+	CYBORG_MONSTER_REFRASH_OVER = 350; //泰伯利亚野怪全部刷新完毕提示	320
+	CYBORG_MONSTER_KILLALL= 351; //泰伯利亚野怪全部击杀	321
+	CYBORG_IRON_ORDER = 352;// 铁木号令广播      泰伯利亚号令使用广播	322
+	CYBORG_IRON_ORDER_BROAD_CAST = 353; //铁木号令广播     泰伯利亚号令使用广播,战场频道,跑马灯广播	324
+	CYBORG_WEATHER_ORDER = 354;// 天气号令广播     泰伯利亚号令使用广播	322
+	CYBORG_WEATHER_ORDER_BROAD_CAST = 355; // 天气号令广播    泰伯利亚号令使用广播,战场频道,跑马灯广播	324
+	CYBORG_CHRONO_SPHERE_ORDER = 356;// 超时空号令广播       泰伯利亚号令使用广播	322
+	CYBORG_CHRONO_SPHERE_BROAD_CAST = 357; // 超时空号令广播   泰伯利亚号令使用广播,战场频道,跑马灯广播	324
+	
+	DYZZ_358 = 358;// 摧毁一个防御规整
+	RED_ENVELOPE_PLAYER_LAST_REC = 359;  // 最后一个人领取红包
+	ALLIANCE_WISH_SEND_GUILD_HELP = 360; //盟军祝福，发送联盟帮助
+
+	HIDDEN_TREASURE_BIG_RAWARD = 361; // 土拨鼠大奖
+	HIDDEN_TREASURE_CHENGHAO = 366; // 土拨鼠称号
+	
+	CROSS_GIFT_SEND = 367; // 发跨服礼包
+
+	NATION_TECH_SKILL = 401; // 使用国家科技技能
+	DYZZ_CAMP_NOTICE = 402; // 陨晶战场队内消息
+	DYZZ_HIGH_TOWER_OCCUPY = 403; // 陨晶高塔占领
+	DYZZ_HIGH_TOWER_OCCUPY_END = 404; // 陨晶高塔占领结束
+	
+	CROSS_ACTIVITY_NOTICE_362 = 362; // 航海远征积分赛结束
+	CROSS_ACTIVITY_NOTICE_363 = 363; // 航海远征盟总开启
+	CROSS_ACTIVITY_NOTICE_364 = 364; // 航海远征盟总-征服成功
+	CROSS_ACTIVITY_NOTICE_365 = 365; // 航海远征盟总-防守成功
+	
+	NATION_MISSION_NOTICE_368 = 368; // 国家任务刷出限时任务
+
+	GRATEFUL_BENEFITS_HELP_NOTICE = 369; // 感恩福利帮助邀请
+	
+	
+	PLAYER_UNLOCK_HERO_NOTICE = 371; //玩家解锁英雄,跑马灯广播
+	
+	
+
+	YQZZ_MARCH_QUERY_HELP = 381;// 156; // 求援
+	YQZZ_SHARECOORDINATE = 382;// 159; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	YQZZ_MASS_START_PLAYER = 383;// 160;//我向XXX占领的基地发起了集结（泰伯利亚内的）	130
+	YQZZ_MASS_START_BUILD = 384;// 161; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	
+	
+	YQZZ_GUILD_DECLEAR_BUILD            = 372; //我方联盟对某建筑发起宣战时	战场内自己联盟的玩家	372
+	YQZZ_GUILD_DECLEAR_BUILD_OVER       = 373; //我方联盟对某建筑宣战结束时	战场内自己联盟的玩家	373
+	YQZZ_ENEMY_GUILD_DECLEAR_BUILD      = 374; //其他联盟对我方联盟占领的建筑发起宣战时	战场内自己联盟的玩家	374
+	YQZZ_ENEMY_GUILD_DECLEAR_BUILD_OVER = 375;//其他联盟对我方联盟占领的建筑宣战结束时	战场内自己联盟的玩家	375
+	YQZZ_GUILD_CONTORY_BUILD            = 376; //我方联盟成功控制了某个建筑时	战场内自己联盟的玩家	376
+	YQZZ_GUILD_CONTORY_BUILD_FAIL       = 377; //我方联盟未能成功控制某个建筑时	战场内自己联盟的玩家	377
+	YQZZ_GUILD_DEFEND_BUILD_SUCESS      = 378;//我方联盟成功防守了其他联盟对某建筑的争夺时	战场内自己联盟的玩家	378
+	YQZZ_GUILD_DEFEND_BUILD_FAIL        = 379;//我方联盟未能成功防守其他联盟对某建筑的争夺时	战场内自己联盟的玩家	379
+	YQZZ_BUILD_CONTROL_CHANGE           = 380;//关键建筑的占领权变化时：建筑类型：	战场内所有玩家	380
+	YQZZ_BATTLE_STAGE_START_2 = 385;//阶段2开始时	战场内所有玩家	385
+	YQZZ_BATTLE_STAGE_START_3 = 386;//阶段3开始时	战场内所有玩家	386
+	YQZZ_BATTLE_STAGE_START_4 = 387;//阶段4开始时	战场内所有玩家	387
+	YQZZ_BATTLE_STAGE_START_5 = 388;//阶段5开始时	战场内所有玩家	388
+	YQZZ_BATTLE_STAGE_START_6 = 389;//阶段6开始时	战场内所有玩家	389
+	YQZZ_BATTLE_STAGE_START_7 = 390;//阶段7开始时	战场内所有玩家	390
+	YQZZ_BATTLE_STAGE_START_8 = 391;//阶段8开始时	战场内所有玩家	391
+	YQZZ_BATTLE_STAGE_START_9 = 392;//阶段9开始时	战场内所有玩家	392
+	YQZZ_BATTLE_OVER_MINUTE   = 393;//距离比赛结束还有10分钟时	战场内所有玩家	393
+
+	NEWYEAR_LOTTERY_GUILD_ACHIEVE_COMMON  = 405; // 双旦活动普通进度解锁可领奖
+	NEWYEAR_LOTTERY_GUILD_ACHIEVE_ADVANCE = 406; // 双旦活动高级进度解锁可领奖
+	NEWYEAR_LOTTERY_COMMON_ENABLE         = 407; // 双旦活动普通头彩可抽取
+	NEWYEAR_LOTTERY_ADVANCE_ENABLE        = 408; // 双旦活动高级头彩可抽取
+	NEWYEAR_LOTTERY_BIG_AWARD             = 409; // 双旦活动抽中头彩
+
+	SHAREGLORY_ENERGY_LEVELUP_A = 420; //荣耀同享能量柱A升级
+	SHAREGLORY_ENERGY_LEVELUP_B = 421; //荣耀同享能量柱B升级
+	
+	SPACE_MECHA_OFFICER_CALL_MEMBER  = 422; //星甲召唤官员号召盟友
+	SPACE_MECHA_STAGE_CHANGE_GUILD   = 423; //星甲召唤阶段变更（1-4阶段）联盟
+	SPACE_MECHA_STAGE_CHANGE_PERSON  = 424; //星甲召唤阶段变更（1-4阶段）个人
+	SPACE_MECHA_DOWN_REMAIND         = 425; //放置太空舱后联盟提醒
+	SPACE_MECHA_SLAVE_DEF_FAIL       = 426;	//子舱防守失败
+	SPACE_MECHA_SLAVE_DEF_WIN        = 427;	//子舱防守成功
+	SPACE_MECHA_SPHOLD_BROKEN_GUILD  = 428;	//特殊据点被击破 联盟
+	SPACE_MECHA_SPHOLD_BROKEN_PERSON = 429;	//特殊据点被击破 个人
+	SPACE_MECHA_SPHOLD_NO_BROKEN     = 430;	//特殊据点未被击破
+	SPACE_MECHA_MAIN_DEF_FAIL        = 431;	//主舱防守失败
+	SPACE_MECHA_MAIN_DEF_WIN_LAST    = 432;	//主舱最终防守成功
+	SPACE_MECHA_SHUTDOWN_NOTICE	     = 433;	//停服中断玩法后联盟提醒
+	SPACE_MECHA_MAIN_SPACE_MASS      = 434; //星甲召唤集结主舱
+	SPACE_MECHA_STRONGHOLD_MASS      = 435; //星甲召唤集结据点
+
+	ROSE_GIFT_NOTICE     = 436; //玫瑰赠礼广播
+	SPACE_MECHA_STAGE_1_START   = 437; //星甲召唤防守阶段1开启
+	SPACE_MECHA_STAGE_2_START   = 438; //星甲召唤防守阶段2开启
+	SPACE_MECHA_STAGE_3_START   = 439; //星甲召唤防守阶段3开启
+	SPACE_MECHA_STAGE_4_START   = 440; //星甲召唤防守阶段4开启
+
+	YQZZ_NUCLEAR_SHOT_BUILD		= 395;//精准制导公告	395
+	YQZZ_KUAI_JIJIE = 396; //快速集结公告	396
+	YQZZ_YAN_ZHEN = 397; //严阵以待公告	397
+	YQZZ_LIJIHUIFU = 398; //立即恢复公告	398
+	TBLY_KUAI = 441; // 快速占领
+	YQZZ_FOGGY_MASS = 442;
+
+	PDD_INViTE = 443;//拼单福利活动-发起拼单信息
+
+	LUCK_GET_GOLD_UP = 444;//到达阈值，概率提升
+	LUCK_GET_GOLD_CORE_ITEM = 445;//获得核心物品
+	LUCK_GET_GOLD_WIN = 446;//中奖
+
+
+
+	TBLY_TECH_LAB_OPEN		= 451;//：秘密科技实验室开放占领时
+	TBLY_TECH_LAB_CLOSE		= 452;//：秘密科技实验室争夺结束时
+	TBLY_DOUBLE_JIFEN		= 453;//：某方使用增加积分技能时
+	TBLY_WEIKUN				= 454; // 围困
+	TBLY_CHIYUAN			= 455;// 驰援
+	YQZZ_GIVEUP_BUILD = 456; // 放弃建筑
+	YQZZ_ALLIANCE_SIGN_NOTICE = 457;
+	PLANET_TREASURE_PUT = 458; //星能锅放置
+	XHJZ_MASS_START_BUILD = 459; //我向{0}发起了集结攻击，请加入我的集结部队！（泰伯利亚内的）	131
+	XHJZ_SHARECOORDINATE = 460; //我分享了XXX的坐标XXX（泰伯利亚内的）	129
+	
+	LOTTERY_TICKET_REWARD = 463; //呱呱乐自刮大奖
+	LOTTERY_TICKET_REWARD_ASSIST = 464; //刮刮乐帮刮大奖
+
+	XHJZ_START = 		471;//  1. 建筑开始争夺时
+  	XHJZ_BUILD_TWO = 	472;//2. 2个功能建筑开始争夺时
+  	XHJZ_BUILD_THREE = 	473;//3. 4级岛屿开始争夺时
+  	XHJZ_OVER_FIVE = 	474;//4. 距离比赛结束还有5分钟时
+
+  	FGYL_MASS_START_BUILD = 478; // 我向{0}发起了集结攻击，请加入我的集结部队！（r反公幽灵的）	131
+  	FGYL_SHARECOORDINATE = 479; //我分享了XXX的坐标XXX（反公幽灵的）	129
+  	FGYL_START = 		480;//  1. 建筑开始争夺时
+	
+	BEST_PRIZE_BIG_AWARD  = 481; // 361活动抽中了A奖
+	BEST_PRIZE_LAST_AWARD = 482; // 361活动获得了最终将
+	
+	PLAYER_IMMIGRATE_IN = 483; //玩家迁入广播
+
+
+	XQHX_TENMIN_OVER 		= 485; //先驱回响战场结束前10分钟跑马灯提示	127
+	XQHX_BUILD_CONTROL 		= 486; //先驱回响战场建筑控制提示	128
+	XQHX_SHARECOORDINATE 	= 487; //我分享了XXX的坐标XXX（先驱回响内的）	129
+	XQHX_MASS_START_PLAYER 	= 488;//我向XXX占领的基地发起了集结（先驱回响内的）	130
+	XQHX_MASS_START_BUILD 	= 489; //我向{0}发起了集结攻击，请加入我的集结部队！（先驱回响内的）	131
+	XQHX_MARCH_QUERY_HELP 	= 490;// 156; // 求援
+	XQHX_122	= 492; // 控制权变更
+	XQHX_123	= 493; //  开战
+	XQHX_124	= 494; //  保护期结束
+	XQHX_125	= 495; //  中心开放
+	XQHX_126	= 496; // 刷矿了
+	XQHX_HOT_BLOOD_MOD = 497; // 热血模式开启
+	XQHX_MONSTER_HERALD = 498;//先驱回响野怪首次刷新提示	318
+    XQHX_MONSTER_REFRASH = 499; //先驱回响野怪刷新提示	319
+	XQHX_MONSTER_REFRASH_OVER = 500; //先驱回响野怪全部刷新完毕提示	320
+	XQHX_MONSTER_KILLALL= 501; //先驱回响野怪全部击杀	321
+    XQHX_PYLON_REFRASH = 503; //先驱回响能量塔刷新提示	319
+	XQHX_PYLON_REFRASH_OVER = 504; //先驱回响能量塔全部刷新完毕提示	320
+	XQHX_PYLON_HERALD = 505;//先驱回响能量塔首次刷新提示	318
+
+	MREGE_COMPETE_MAX_LEVEL_GIFT = 502; //合服比拼活动--玩家触发最高档位的嘉奖礼包时，需要在本服世界频道及跑马灯公告
+	AFTER_COMPETITION_PARTY_BIG_AWARD = 506; //赛后庆典活动大奖
+	
+	
+	MASS_FOR_GUILD_DRAGON_TRAP = 507; //巨龙陷阱集结
+	MT_TRUCK_SHARE = 508; // 分享押镖
+	DEEP_TREASURE_BIG_RAWARD = 510; // 秘藏宝箱大奖
+	DEEP_TREASURE_CHENGHAO = 509; // 秘藏宝箱大奖土拨鼠称号 = 509
+	MT_TRUCK_CREATE_SHARE = 511; // 分享押镖 联盟车
+	HOME_LAND_SELF_SHARE = 512; // 分享自己家园
+	HOME_LAND_OTHER_SHARE = 513; // 分享他人家园
+	
+}
+
+// 公告类型
+enum NoticeType{
+	// 系统公告
+	SYS_NOTICE = 1;
+	// 警告
+	WARN_NOTICE	= 2;
+	//核弹警告
+	NUCLEAR_NOTICE = 3;
+	//闪电风暴警告
+	STROM_NOTICE = 4;
+}
+
+//语言类型
+enum LangType
+{
+	ALL			= 0	;	//所有语言
+	CHINESE		= 1	;	//简体中文
+	TRCHINESE	= 2	;	//繁体中文
+	ENGLISH		= 3	;	//英语
+	FRENCH		= 4	;	//法语
+	GERMAN		= 5	;	//德语
+	RUSSIAN		= 6	;	//俄语
+	KOREAN		= 7	;	//韩语
+	THAI		= 8	;	//泰语
+	JAPANESE	= 9	;	//日语
+	PORTUGUESE	= 10 ;	//葡萄牙语
+	SPANISH		= 11 ;	//西班牙语
+	TURKISH		= 12 ;	//土耳其语
+	INDONESIA	= 13 ;	//印度尼西亚语
+	ITALIAN		= 14 ;	//意大利
+	POLISH		= 15 ;	//波兰语
+	DUTCH		= 16 ;	//荷兰语
+	ARABIC		= 17 ;	//阿拉伯语
+}
+
+// 玩家状态常量
+enum PlayerState
+{
+	REWARD_LEVEL					= 0	; //领升级奖励等级
+}
+
+//State类型
+enum StateType
+{
+	BUFF_STATE = 0;
+	PLAYER_STATE = 1;
+}
+
+// 区分排行榜页签
+enum RankGroup
+{
+	PLAYER_TYPE		= 0;	// 领主
+	ALLIANCE_TYPE	= 1;	// 联盟
+}
+
+//活动积分类型
+enum ActivityScoreType
+{
+	Collect_Res		= 0;	//采集资源
+	Power_Up		= 1;	//建筑战力
+	Train_Soldier	= 2;	//训练士兵
+	Kill_Enemy		= 3;	//我击杀士兵
+	Kill_Moster		= 4;	//击杀怪物
+}
+
+// 物品类型定义
+enum ToolType
+{
+	SPEED_UP		         = 1; //加速类道具
+	EFFECT			         = 2; //作用号类道具
+	STATUS			         = 3; //状态类道具
+	REWARD			         = 4; //开箱子类道具
+	ADD_ATTR		         = 5; //加属性道具
+	SOLDIER_EQUIP            = 9; //士兵装备
+	HERO_CHIP		         = 10; //英雄碎片
+	HERO      		         = 11; //英雄卡牌
+	WISH_ITEM		         = 14; //增加许愿次数道具
+	HERO_EXP		         = 15; //增加英雄经验
+	FOGGY_BOX		         = 16; //迷雾要塞宝箱
+	
+	TRAIN_QUANTITY_ADD_ONCE   = 17; // 单次征兵令
+	TRAIN_QUANTITY_ADD_PERIOD = 18; // 时效征兵令
+	ADVANCE_QUANTITY_ADD_ONCE = 19; // 单次晋升
+	
+	EQUIP_MATERIAL	         = 88; //装备材料
+	RANDOM_MOVE_ITEM         = 100; //随机迁城
+	CHANGE_NAME      	     = 103; //改名卡
+	CHANGE_STYLE     	     = 104; //改形象卡
+	TALENT_RESET  	       	 = 105; //战略重置
+	HORN                     = 106; //喇叭
+	TALENT_SWITCH            = 107; //战略切换
+	GAHA_A 			         = 109; //普通英雄抽奖卷
+	GAHA_B 			         = 110; //高级英雄抽奖卷
+	BUILD_QUEUE_UNLOCK       = 112; //第二建造队列解锁道具
+	CALL_MONSTER		     = 113; //召唤野怪
+	CALL_RES_TREASURE		 = 114; //召唤资源宝库
+	HERO_SKILL		         = 131; //英雄技能
+	HERO_SKILL_CHIP          = 132; //技能碎片
+	HERO_SKILL_EXP           = 133; //技能经验
+	ALLIANCE_MOVE_ITEM       = 134; //联盟迁城
+	HERO_SPECIAL_TRAIN	     = 135; //英雄特训
+	DRESS			         = 141; //装扮
+	GUARD_DRESS				 = 142; //守护特效。
+	GAHA_C 			         = 143; //芯片抽奖卷(我也不想的. 不知道策划为什么非要占上这么多类型.我说抽奖券都用一个类型就可以了.他们不干)
+	ICON_UNLOCK_ITEM         = 144; //头像解锁物品
+	ICONFRAME_UNLOCK_ITEM    = 145; //头像框解锁物品
+	HERO_SKIN				 = 147;  // 英雄皮肤
+	SUPER_LAB_STONE					 = 148; // 超级那啥
+	SUPER_ENERGY_DETECTOR            = 149; //超级能量探测器
+	SUPER_SOLDIER_SKILL		         = 151; //超级兵技能
+	SUPER_SOLDIER_SKILL_EXP          = 152; //超级兵技能经验
+	SUPER_SOLDIER_SKIN				 = 153;  // 超级兵皮肤
+	SUPER_SOLDIER_EXP		         = 154; //超级兵经验
+	SUPER_SOLDIER_CHIP		         = 155; //超级兵碎片
+	BOX_CHOOSE_REWARD                = 156; //自选奖励宝箱道具
+	
+	TREASURE_HUNT_TOOL		 = 160; //寻宝道具
+	ARMOUR_TOOL		         = 161; //铠甲相关道具
+	HERO_SKIN_CHIP			 = 162; // 英雄皮肤碎片
+	ACTIVITY_GOTOITEM		 = 163; //活动跳转道具
+	ACTIVITY_GREETINGS_ITEM	 = 164; //祝福语活动发寄语道具
+	
+	NATIONAL_BUILDING_VAL_ITEM       = 205; //增加国家建筑建设值
+	NATIONAL_HOSPITAL_RECOVER_SPEED  = 206; //国家医院死兵恢复加速
+	NATIONAL_TECH                    = 207; //国家科技道具
+	TRAIN_PLANT_ADD_ONCE             = 208; //泰能兵征召令
+	NATION_RESOURCE_ITEM             = 209; //国家资源道具
+	MONTHCARD_ACTIVE_ITEM            = 210; //月卡激活道具
+	GUARD_EXP_ITEM                   = 213; //守护经验道具
+	CHAT_EMOTION_ITEM                = 214; //聊天表情解锁道具
+	GACHA_MODULE_ADD_PRODUCT         = 215; //机甲核心模块产能提升器
+	HOME_LAND_BUILD    				 = 300; //家园建筑	
+	OTHER_TOOLS			     = 999; //杂项道具
+}
+
+enum GachaType
+{
+	NORMAL_ONE  = 101; //英雄普通一次
+	NORMAL_TEN  = 110; //英雄普通十次
+	ADVANCE_ONE = 201;// 英雄高级一次
+	ADVANCE_TEN = 210; // 英雄高级十次
+	SKILL_ONE   = 301;// 芯片普通一次
+	SKILL_TEN   = 310; // 芯片普通十次
+	ARMOUR_ONE  = 401; // 铠甲普通一次
+	ARMOUR_TEN  = 410; // 铠甲普通十次
+	ARMOUR_BOX  = 501; // 铠甲宝箱一次
+	MODULE_ONE  = 601; // 机甲核心模块一次
+	MODULE_TEN  = 610; // 机甲核心模块十次
+	MODULE_BOX  = 701; // 机甲核心宝箱一次
+}
+
+// 加速道具加速作用类型
+enum ToolSpeedUpType
+{
+	TOOL_SPEED_COMMON				= 0; //	通用加速
+	TOOL_SPEED_BUILDING				= 1; //	造功能建筑
+	TOOL_SPEED_BUILDING_DEFENCE		= 2; //	造防御建筑加
+	TOOL_SPEED_SCIENCE				= 3; //	科技加速
+	TOOL_SPEED_SOILDER				= 4; //	造兵加速
+	TOOL_SPEED_CURE					= 5; //	治疗加速
+	TOOL_SPEED_EQUIP				= 6; //	造装备加速
+	TOOL_SPEED_MARCH				= 7; //	行军加速
+	TOOL_SPEED_GUILD_STATUE			= 8; //	联盟科技雕像加速
+}
+
+
+//战斗生效技能类型
+enum BattleSkillType
+{
+	BATTLE_SKILL_NONE		= 1; // 未使用
+	BATTLE_SKILL_LIFESAVING	= 2; // 救援
+	BATTLE_SKILL_DUEL		= 3; // 决斗
+}
+
+//通用结果
+enum Result
+{
+	SUCCESS	= 1;	//成功
+	FAIL	= 2;	//失败
+}
+
+//战斗邮件结果
+enum FightResult
+{
+	ATTACK_SUCC		= 1;	//进攻成功
+	ATTACK_FAIL		= 2;	//进攻失败
+	DEFENCE_SUCC	= 3;	//防守成功
+	DEFENCE_FAIL	= 4;	//防守失败
+}
+
+// 邮件状态
+enum MailStatus
+{
+	NOT_READ	= 0;	//未读
+	READ		= 1;	//已读
+};
+
+// 邮件奖励状态
+enum MailRewardStatus
+{
+	NOT_GET	= 0;	//未领取
+	GET		= 1;	//已领取
+};
+
+//常用道具ID
+enum ItemId
+{
+	ITEM_CHANGE_NAME			= 800103;	//改名
+	ITEM_CHANGE_ICON			= 800104;	//改头像（待删除）
+	ITEM_TALENT_CLEAR			= 800105;	//洗点
+	ITEM_TALENT_CHANGE			= 800107;	//天赋方案切换
+	ITEM_CHAT_BROADCAST			= 800106;	//广播
+	ITEM_RANDOM_MOVE_CITY		= 800100;	//随机迁城
+	ITEM_SELECT_MOVE_CITY		= 800101;	//定点迁城
+	ITEM_WORLD_MARCH_CALLBACK	= 800102;	//行军召回道具id
+	ITEM_SELECT_MOVE_CITY_NEW	= 800108;	//定点迁城（新手）
+	ITEM_GUILD_MOVE_CITY		= 800134;	//公会迁城
+	ITEM_WORLD_MARCH_SPEEDUPH	= 820002;	//高级行军加速道具id
+	ITEM_WORLD_MARCH_SPEEDUPL	= 820001;	//低级行军加速道具id
+	ITEM_HERO_SS_CHIP           = 1000003;  //SS级通用碎片（传说通用碎片）
+	ITEM_HERO_SSS_CHIP          = 1000005;  //SSS级通用碎片（荣耀通用碎片）
+}
+
+//常用商城物品ID
+enum ShopId
+{
+	SHOP_CHANGE_NAME			= 901117;	//改名
+	SHOP_CHANGE_ICON			= 901118;	//改头像（待删除）
+	SHOP_TALENT_CLEAR			= 901119;	//洗点
+	SHOP_TALENT_CHANGE			= 901121;	//天赋切方案
+	SHOP_ADD_EXP1				= 901072;	//经验道具1
+	SHOP_ADD_EXP2				= 901073;	//经验道具2
+	SHOP_ADD_EXP3				= 901074;	//经验道具3
+	SHOP_ADD_POWER1				= 901069;	//体力道具1
+	SHOP_ADD_POWER2				= 901070;	//体力道具2
+	SHOP_ADD_POWER3				= 901071;	//体力道具3
+}
+
+// 天赋类型
+enum TalentRouteType
+{
+	TalentRouteType_0			= 0;	//天赋路线1
+	TalentRouteType_1			= 1;	//天赋路线2
+	TalentRouteType_2           = 2;    //天赋路线3
+	TalentRouteType_3           = 3;    //天赋路线4
+	TalentRouteType_4           = 4;    //天赋路线5
+	TalentRouteType_5           = 5;    //天赋路线6
+	TalentRouteType_6           = 6;    //天赋路线7
+	TalentRouteType_7           = 7;    //天赋路线8
+}
+
+//作用号，分两种类型，数值型和万分比型，数值型直接使用，万分比型用时*0.0001（GsConst.EFF_PER）
+enum EffType
+{
+	EFF_12711 = 12711;
+	EFF_12712 = 12712;
+	EFF_12713 = 12713;
+	EFF_12714 = 12714;
+	WAR_TROOP_ATK_PER				= 100;	//所有部队攻击加成（百分比）	兵种（100-149）
+	WAR_TROOP_DEF_NUM				= 101;	//所有部队防御（数值型）
+	WAR_TROOP_HP_PER				= 102;	//所有部队生命加成（百分比）
+	WAR_TROOP_DEF_PER				= 103;	//所有部队防御（百分比）
+	WAR_FOOT_ATK					= 105;	//大兵攻击加成
+	WAR_FOOT_DEF_NUM				= 106;	//大兵防御加成（数值型）
+	WAR_FOOT_HP						= 107;	//大兵生命加成
+	WAR_TANK_ATK					= 110;	//坦克攻击加成
+	WAR_TANK_DEF_NUM				= 111;	//坦克防御加成（数值型）
+	WAR_TANK_HP						= 112;	//坦克生命加成
+	WAR_PLANE_ATK					= 115;	//飞机攻击加成
+	WAR_PLANE_DEF_NUM				= 116;	//飞机防御加成（数值型）
+	WAR_PLANE_HP					= 117;	//飞机生命加成
+	WAR_CANNON_ATK					= 120;	//重火器攻击加成
+	WAR_CANNON_DEF_NUM				= 121;	//重火器防御（数值型）
+	WAR_CANNON_HP					= 122;	//重火器生命加成
+	WAR_TROOP_ATK_NUM				= 125;	//所有部队攻击加成（数值型）
+	WAR_TROOP_HP_NUM				= 126;	//所有部队生命加成（数值型）
+			
+	WAR_LESS_TANK_GET_HURT			= 127;	//减少坦克受到的伤害
+	WAR_LESS_PLANE_GET_HURT			= 128;	//减少飞机受到的伤害
+	WAR_LESS_FOOT_GET_HURT			= 129;	//减少大兵受到的伤害
+	WAR_LESS_CANNON_GET_HURT		= 130;	//减少重火器受到的伤害
+	WAR_LESS_TROOP_GET_HURT			= 131;	//减少全兵种受到的伤害
+	WAR_TANK_DEF					= 132;	//坦克防御加成
+	WAR_PLANE_DEF					= 133;	//飞机防御加成
+	WAR_FOOT_DEF					= 134;	//大兵防御加成
+	WAR_CANNON_DEF					= 135;	//重火器防御加成
+	WAR_ALL_DEF						= 136;	//全兵种防御加成	
+	WAR_TANK_HURT					= 137;	//坦克伤害加成
+	WAR_PLANE_HURT					= 138;	//飞机伤害加成
+	WAR_FOOT_HURT					= 139;	//大兵伤害加成
+	WAR_CANNON_HURT					= 140;	//重火器伤害加成
+	WAR_ALL_HURT					= 141;	//全兵种伤害加成
+	WAR_TROOP_ATK_MONSTER			= 142;	//部队攻击增加-打怪时
+	WAR_TROOP_ATK_IN_DEF			= 143;	//部队攻击增加-防守时
+	WAR_TROOP_DEF_IN_DEF			= 144;	//部队防御增加-防守时
+	WAR_LESS_FOOT_HURT				= 145;	//减少敌方大兵造成的伤害
+	WAR_LESS_TANK_HURT				= 146;	//减少敌方坦克造成的伤害
+	WAR_LESS_PLANE_HURT				= 147;	//减少敌方飞机造成的伤害
+	WAR_LESS_CANNON_HURT			= 148;	//减少敌方重火器造成的伤害
+	WAR_SELF_ATK_WOUND_RATE			= 149;	//单人进攻战斗中，一定比例的死兵转伤兵
+		
+		
+	WAR_CITYDEF_VAL					= 170;	//城防值增加 数值
+	WAR_TRAP_ATK					= 171;	//陷阱攻击增加
+	WAR_TRAP_LIMIT_VAL				= 172;	//陷阱上限增加 数值
+	WAR_ACKACK_ATK_PLANE			= 173;	//防空火炮对飞机伤害提高
+	WAR_ANTITANK_ATK_TANK			= 174;	//反坦克火箭对坦克伤害提高
+	WAR_LANDMINE_ATK_FOOT			= 175;	//地雷对大兵伤害提高
+	WAR_TRAP_SPEED					= 176;	//陷阱制造加速
+	WAR_WOUND_RATE					= 177;	//出征战斗中，损失士兵一定比例转化为伤兵
+	WAR_TRAP_COST_REDUCE			= 178;	//消耗陷阱数量减少
+			
+			
+	WAR_BARTIZAN_ATK				= 180;	//箭塔攻击增加（百分比）
+	WAR_BARTIZAN_SPEED				= 181;	//箭塔攻速增加（百分比）
+	
+	// 182-198(除185外) 万分比
+	WAR_TANK_DOUBLE_ATK				= 182;	//坦克攻击时，有概率连续攻击2次
+	WAR_SELF_MARCH_BUTCHER			= 183;	//个人出征进攻战斗中，有概率将敌人在战斗中产生的所有伤兵转化为死兵
+	WAR_SELF_MARCH_ATK_DEBUF		= 184;	//个人出征进攻战斗中，敌方所有部队的攻击力降低
+	WAR_ATK_CITY_CITYDEF_HURT		= 185;	//攻城成功后，敌方的城防值额外降低(数值)
+	WAR_ATK_CITY_LESS_ACKACK_HURT	= 186;	//攻城时，部队受到防空火炮的伤害降低
+	WAR_ATK_CITY_LESS_ANTITANK_HURT	= 187;	//攻城时，部队受到反坦克火箭的伤害降低
+	WAR_ATK_CITY_LESS_LANDMINE_HURT	= 188;	//攻城时，部队受到地雷的伤害降低
+	WAR_SELF_MARCH_WOUND_SURVIVE	= 189;	//个人进攻战斗中产生的伤兵，战斗结束后一定比例立即恢复
+	WAR_DEF_CITY_TANK_ATK			= 190;	//城防战中坦克攻击增加
+	WAR_DEF_CITY_TANK_DEF			= 191;	//城防战中坦克防御增加
+	WAR_DEF_CITY_PLANE_ATK			= 192;	//城防战中空军攻击增加
+	WAR_DEF_CITY_PLANE_DEF			= 193;	//城防战中空军防御增加
+	WAR_DEF_CITY_FOOT_ATK			= 194;	//城防战中步兵攻击增加
+	WAR_DEF_CITY_FOOT_DEF			= 195;	//城防战中步兵防御增加
+	WAR_DEF_CITY_CANNON_ATK			= 196;	//城防战中重火器攻击增加
+	WAR_DEF_CITY_CANNON_DEF			= 197;	//城防战中重火器防御增加
+	WAR_DEF_CITY_ALL_ATK			= 198;	//城防战中所有部队攻击增加
+
+
+	
+	TROOP_STRENGTH_PER				= 200;	//单支部队兵力上限加成 行军相关（200-299）
+	TROOP_STRENGTH_NUM				= 201;	//单支部队兵力上限增加值
+	MARCH_TROOP_NUM					= 202;	//部队数量增加值
+	MARCH_SPD						= 203;	//行军速度增加-所有
+	MARCH_SPD_MONSTER				= 204;	//行军速度增加-野怪
+	MARCH_TIME_REDUCE				= 205;	//行军时间减少百分比	行军时间*(1-作用值)
+	MARCH_SPD_SPY           		= 206;  //侦查行军加速
+	MARCH_SPD_SNOW_LAND     		= 207;  //雪地（王座外围黑土地）行军加速
+	MARCH_SPD_MASS          		= 208;  //部队集结时新军加速
+	TROOP_STRENGTH_PER_ITEM			= 209;	//单支部队兵力上限加成(道具专用)
+	TROOP_STRENGTH_PER_SKILL		= 210;	//单支部队兵力上限加成(技能专用)
+	MARCH_SPD_NEW_MONSTER			= 211;	//新版野怪行军加速
+	MARCH_SPD_ALL_MONSTER			= 212;	//野怪行军加速
+	
+	MARCH_SPD_TANK_SOLDIER_1		= 213;  //兵种速度作用号，兵种1
+	MARCH_SPD_TANK_SOLDIER_2		= 214;  //兵种速度作用号，兵种2
+	MARCH_SPD_PLANE_SOLDIER_3		= 215;  //兵种速度作用号，兵种3
+	MARCH_SPD_PLANE_SOLDIER_4		= 216;  //兵种速度作用号，兵种4
+	MARCH_SPD_FOOT_SOLDIER_5		= 217;  //兵种速度作用号，兵种5
+	MARCH_SPD_FOOT_SOLDIER_6		= 218;  //兵种速度作用号，兵种6
+	MARCH_SPD_CANNON_SOLDIER_7		= 219;  //兵种速度作用号，兵种7
+	MARCH_SPD_CANNON_SOLDIER_8		= 220;  //兵种速度作用号，兵种8
+	
+	MARCH_SPD_GUNDAM				= 221;	//高达行军加速
+	MARCH_SPD_ALL_MONSTER_CARD		= 222;	//野怪行军加速（月卡专用）
+	
+	RES_OUTPUT						= 300;	//总产量加成（基础产量）资源相关 范围：（300-399）
+	RES_OUTPUT_BOOST                = 301;  //总产量加成（最外层加成 同boost）
+	RES_OUTPUT_GOLDORE				= 302;	//金矿产量（基础产量）
+	RES_OUTPUT_GOLDORE_BOOST		= 303;	//金矿产量加成（最外层加成 同boost）
+	RES_OUTPUT_OIL					= 304;	//石油产量（基础产量）
+	RES_OUTPUT_OIL_BOOST			= 305;	//石油产量加成（最外层加成 同boost）
+	RES_OUTPUT_ALLOY				= 306;	//合金币产量（基础产量）
+	RES_OUTPUT_ALLOY_BOOST			= 307;	//合金币产量加成（最外层加成 同boost）
+	RES_OUTPUT_STEEL				= 308;	//铀矿产量（基础产量）
+	RES_OUTPUT_STEEL_BOOST			= 309;	//铀矿产量加成（最外层加成 同boost）
+	RES_OUTPUT_TERRITORY_BOOST		= 310;	//所有资源产量加成, 联盟领地效果（最外层加成 同boost）
+		
+	RES_COLLECT_BOOST				= 320;	//所有资源采集速度加成（最外层加成 同boost）
+	RES_GOLD_COLLECT_BOOST			= 321;	//金矿采集速度加成（最外层加成 同boost）
+	RES_OIL_COLLECT_BOOST			= 322;	//石油采集速度加成（最外层加成 同boost）
+	RES_ALLOY_COLLECT_BOOST			= 323;	//合金采集速度加成（最外层加成 同boost）
+	RES_STEEL_COLLECT_BOOST			= 324;	//铀矿采集速度加成（最外层加成 同boost）
+	RES_COLLECT_BUF					= 325;	//所有资源采集速度加成（道具用，状态表里会填）
+	RES_CRYSTAL_COLLECT				= 326;	//水晶采集速度加成
+	RES_COLLECT			            = 327;	//所有资源采集速度加成
+	RES_GOLD_COLLECT			    = 328;	//金矿采集速度加成
+	RES_OIL_COLLECT			        = 329;	//石油采集速度加成
+	RES_ALLOY_COLLECT			    = 330;	//合金采集速度加成
+	RES_STEEL_COLLECT			    = 331;	//铀矿采集速度加成
+	RES_COLLECT_SKILL               = 332;  //所有资源采集速度加成，技能专用
+	RES_COLLECT_MONTH_CARD          = 333;  //所有资源采集速度加成，月卡专用
+	RES_COLLECT_NEW_SERVER          = 334;  //所有资源采集速度加成，全军出击活动专用
+
+	EFF_335 = 335; //【345】【万分比】泰能研究聚能核心消耗减少 +XX%
+	EFF_336 = 336; //【万分比】研究资源消耗减少 +XX%
+	EFF_337 = 337; //【万分比】进攻野外敌军胜利时，指挥官经验额外 +XX%
+	EFF_338 = 338; //【万分比】进攻野外敌军胜利时，有 +XX% 概率额外获得1份材料补给（每日限定 100 份）
+	EFF_339 = 339; //【万分比】治疗资源减少 +XX%
+	EFF_340 = 340; //【万分比】研究矿石消耗减少 +XX%
+	EFF_341 = 341; //【万分比】研究石油消耗减少 +XX%
+	EFF_342 = 342; //【万分比】研究合金消耗减少 +XX%
+	EFF_343 = 343; //【万分比】研究稀土消耗减少 +XX%
+	EFF_344 = 344; //【万分比】泰能研究资源消耗减少 +XX%
+	EFF_345 = 345; //【万分比】泰能研究聚能核心消耗减少 +XX%
+	EFF_346 = 346; //【万分比】泰能研究复制晶体消耗减少 +XX%
+	EFF_347 = 347; //【万分比】泰能研究泰矿母体消耗减少 +XX%
+
+	HERO_12611 = 12611;
+	HERO_12612 = 12612;
+	HERO_12613 = 12613;
+	HERO_12614 = 12614;
+	HERO_12615 = 12615;
+	HERO_12616 = 12616;
+	HERO_12617 = 12617;
+	HERO_12621 = 12621;
+	HERO_12622 = 12622;
+	HERO_12631 = 12631;
+	HERO_12632 = 12632;
+	HERO_12633 = 12633;
+	HERO_12634 = 12634;
+
+	EFF_12641 = 12641;
+	EFF_12642 = 12642;
+	EFF_12651 = 12651;
+	RES_PROTECTED_PER				= 350;	//仓库资源保护增加百分比
+	RES_PROTECTED_VAL				= 351;	//仓库资源保护增加值
+	RES_TROOP_WEIGHT				= 352;	//部队负重加成
+			
+	RES_EXTRA_AWARD					= 366;	//资源采集额外奖励
+	PREY_RES						= 367;	//掠夺资源
+	YURI_EXPLORE_SPEED_UP			= 368;  //尤里探索计算时间减少
+	
+	GOLDORE_PROTECTED_PER           = 369;  //仓库保护黄金增加
+	OIL_PROTECTED_PER               = 370;  //仓库保护石油增加
+	TOMBARTHITE_PROTECTED_PER       = 371;  //仓库保护合金增加
+	STEEL_PROTECTED_PER             = 372;  //仓库保护铀矿增加
+	PREY_RES_PER                    = 373;  //掠夺资源比率增加
+	SODLIER_8_RES_TROOP_WEIGHT      = 374;  //运载车负重增加
+	NEW_MONSTER_EXTR_AWARD			= 375;	//新版野怪额外奖励
+	MONSTER_EXTR_AWARD				= 376;	//野怪额外奖励
+	MONSTER_EXTR_AWARD_HERO			= 377;	//英雄技能击杀野怪额外奖励
+	SKILL_RESOURCE_NUM_UP			= 378;  //技能产出的9级资源矿的资源上限提升
+	SKILL_RESOURCE_COLLECT_SPEED_UP = 379;  //技能产出的9级资源矿的采集速度额外提升
+	SUPER_MINE_RESOURCE_NUM			= 380;	//联盟超级矿初始容量增加
+	
+	CITY_SPD_BUILD					= 400;	//建筑速度加成 城堡发展(400-499)
+	CITY_SPD_SCIENCE				= 401;	//研究速度加成
+	CITY_SPD_ALL					= 402;	//造兵速度加成
+	CITY_SPD_FOOT					= 403;	//造兵速度加成大兵
+	CITY_SPD_TANK					= 404;	//造兵速度加成坦克
+	CITY_SPD_PLANE					= 405;	//造兵速度加成飞机
+	CITY_SPD_CANNON					= 406;	//造兵速度加成重火器
+	CITY_ARMY_TRAIN_NUM				= 407;	//单次训练士兵更多（所有兵种）
+	CITY_ARMY_TRAIN_REDUCE			= 408;	//士兵训练消耗减少
+			
+	CITY_HURT_PER					= 411;	//伤兵上限增加百分比
+	CITY_HURT_NUM					= 412;	//伤兵上限增加值
+	CITY_HURT_CRUT_SPD				= 413;	//伤兵治疗加快
+	CITY_HURT_CRUT_REDUCE			= 414;	//治疗消耗资源降低
+	CITY_HURT_TRANS_ATK				= 415;	//急救属性，进攻部队有一定比例转化为伤兵（不挑地点）
+	CITY_HURT_TRANS_HELP			= 416;	//急救属性，援助部队有一定比例转化为伤兵（不挑地点，城堡）
+	CITY_BUILD_REDUCE_TIME			= 417;	//普通建筑时间按固定时间减少	结算后（电力影响前）减该值（秒）
+	CITY_BUILD_FREE_TIME			= 418;	//免费立即建造时间
+	// 419-420已废弃
+	CITY_HURT_MANOR					= 419;	//急救属性，联盟成员在拥有且生效的联盟大本（堡垒）内发生的战斗产生伤兵，比例值挂在联盟医院上。
+	CITY_HURT_MANOR_TRANS			= 420;	//急救属性，联盟援军作用号，A和B同盟，A援助B的城堡，B的城堡必须在生效领地内，发生战斗后，A的死亡部队有一定比例转化为伤兵，比例值挂在联盟医院上
+	
+	TRAIN_QUANTITY_ADD_NUM          = 421;  // 时效征兵令
+	
+	// 430-436已废弃		
+	CITYDEF_SPD_BUILD				= 430;	//城防设施升级速度加快
+	CITYDEF_SPD_UPGRADE				= 431;	//城防设施修理速度加快
+	CITY_ELECTRIC_OVERLOAD			= 432;	//电厂电力加成（超载）
+	CITY_ELECTRIC_REDUCE			= 433;	//总占用电力降低
+	CITY_ELECTRIC_BUILD				= 434;	//普通建筑占用电力降低
+	CITY_ELECTRIC_CANNON			= 435;	//防御武器占用电力降低
+	CITY_ELECTRIC_SOLDIER			= 436;	//士兵占用电力降低
+
+	CITY_TROOP_COST_REDUCE			= 437;	//部队消耗石油减少（百分比）	
+	CITY_SHIELD						= 440;	//城市保护
+	CITY_SCORT_NO					= 441;	//反侦察
+	CITY_SCORT_MIRROR				= 442;	//部队镜像
+	TECH_RESERH_REDUCE				= 443;	//科技研究时消耗资源数量减少
+	CITY_RES_PROTECT				= 444;	//基地资源保护
+	CITY_ENEMY_MARCH_SPD			= 445;	//玩家基地被侦察或攻击时，敌人行军时间提升XX倍（boost）
+	CITY_FIRE_SPD					= 446;	//增加基地的燃烧速度
+	
+	CITY_TECH_FREE_TIME				= 448;	//免费立即研究时间
+	
+	CITY_FIRE_SPEED_SLOW			  = 449;	// 英雄委任为总督时，减慢城墙的燃烧速度
+	BUILD_UPGRADE_GOLDORE_REDUCE      = 450;	// 英雄委任为城建官时，升级建筑黄金消耗减少
+	BUILD_UPGRADE_OIL_REDUCE		  = 451;	// 英雄委任为城建官时，升级建筑石油消耗减少
+	BUILD_UPGRADE_TOMBARTHITE_REDUCE  = 452;	// 英雄委任为城建官时，升级建筑合金消耗减少
+	BUILD_UPGRADE_STEEL_REDUCE		  = 453;	// 英雄委任为城建官时，升级建筑铀矿消耗减少
+	BUILD_UPGRADE_ALL_RES_REDUCE      = 454;	// 英雄委任为城建官时，升级建筑所有消耗减少
+	TANK_TRAIN_ADD_ONCE				  = 455;	// 单次训练坦克的数量增加
+	PLANE_TRAIN_ADD_ONCE			  = 456;	// 单次训练空军的数量增加
+	FOOT_TRAIN_ADD_ONCE			      = 457;	// 单次训练步兵的数量增加
+	CANNON_TRAIN_ADD_ONCE		      = 458;	// 单次训练重武器的数量增加
+	TRAP_CREATE_ADD_ONCE			  = 459;	// 单次建造陷阱的数量增加
+	
+	TECH_RESEARCH_CONSUME_REDUCE      = 460;	// 科技研究消耗减少  实际消耗资源 = 配置消耗资源 * （1 - 作用值/10000）；向上取整
+	ARMY_TRAIN_CONSUME_REDUCE		  = 461;	// 部队训练消耗减少  实际消耗资源 = 配置消耗资源 * （1 - 作用值/10000）；各兵种计算完毕后，最终向上取整
+	ARMY_RECOVER_CONSUME_REDUCE		  = 462;	// 伤兵恢复消耗减少  实际消耗资源 = 配置消耗资源 * （1 - 作用值/10000）；各兵种计算完毕后，最终向上取整
+	
+	BUILD_SPEED_LEVEL1_PER            = 463;   // 1-18级城建加速, 对建筑队列下所有1-18级建筑生效, 建造时间 = 基础时间/(1+作用值/10000）
+	BUILD_SPEED_LEVEL2_PER            = 464;   // 19-25级城建加速, 对建筑队列下所有19-25级建筑生效, 建造时间 = 基础时间/(1+作用值/10000）
+	BUILD_SPEED_LEVEL3_PER            = 465;   // 26-29级城建加速, 对建筑队列下所有26-29级建筑生效, 建造时间 = 基础时间/(1+作用值/10000）
+	RESEARCH_SPEED_LEVEL1_PER         = 466;   // 1-18级研究加速, 研究队列下所有1-18级科技生效, 研究时间 = 基础时间/(1+作用值/10000）
+	RESEARCH_SPEED_LEVEL2_PER         = 467;   // 19-25级研究加速, 研究队列下所有19-25级科技生效, 研究时间 = 基础时间/(1+作用值/10000）
+	RESEARCH_SPEED_LEVEL3_PER         = 468;   // 26-29级研究加速, 研究队列下所有26-29级科技生效, 研究时间 = 基础时间/(1+作用值/10000）
+	RESEARCH_GOLDORE_REDUCE_PER       = 469;   // 研究科技黄金消耗减少，实际消耗黄金 = 配置消耗黄金 * （1 - 作用值/10000）；向上取整；不得小于0
+	RESEARCH_OIL_REDUCE_PER           = 470;    // 研究科技石油消耗减少，实际消耗石油 = 配置消耗石油 * （1 - 作用值/10000）；向上取整；不得小于0
+	RESEARCH_TOMBARTHITE_REDUCE_PER   = 471;    // 研究科技合金消耗减少，实际消耗合金 = 配置消耗合金 * （1 - 作用值/10000）；向上取整；不得小于0
+	RESEARCH_STEEL_REDUCE_PER         = 472;    // 研究科技铀矿消耗减少，实际消耗铀矿 = 配置消耗铀矿 * （1 - 作用值/10000）；向上取整；不得小于0
+	TRAIN_GOLDORE_REDUCE_PER          = 473;    // 部队训练黄金消耗减少，实际消耗黄金 = 配置消耗黄金 * （1 - 作用值/10000）；向上取整；不得小于0
+	TRAIN_OIL_REDUCE_PER              = 474;    // 部队训练石油消耗减少，实际消耗石油 = 配置消耗石油 * （1 - 作用值/10000）；向上取整；不得小于0
+	TRAIN_TOMBARTHITE_REDUCE_PER      = 475;    // 部队训练合金消耗减少，实际消耗合金 = 配置消耗合金 * （1 - 作用值/10000）；向上取整；不得小于0
+	TRAIN_STEEL_REDUCE_PER            = 476;    // 部队训练铀矿消耗减少，实际消耗铀矿 = 配置消耗铀矿 * （1 - 作用值/10000）；向上取整；不得小于0
+	CURE_TANK_SPEED_PER				  = 477;	// 治疗坦克兵种加速，治疗时间 = 基础治疗时间/(1+作用值/10000）
+	CURE_PLANE_SPEED_PER			  = 478;	// 治疗空军加速，治疗时间 = 基础治疗时间/(1+作用值/10000）
+	CURE_FOOT_SPEED_PER			      = 479;	// 治疗步兵加速，治疗时间 = 基础治疗时间/(1+作用值/10000）
+	CURE_CANNON_SPEED_PER		      = 480;	// 治疗重武兵种加速，治疗时间 = 基础治疗时间/(1+作用值/10000）
+	CURE_GOLDORE_REDUCE_PER           = 481;    // 治疗黄金消耗减少，实际消耗黄金 = 配置消耗黄金 * （1 - 作用值/10000）；向上取整；不得小于0
+	CURE_OIL_REDUCE_PER               = 482;    // 治疗石油消耗减少，实际消耗石油 = 配置消耗石油 * （1 - 作用值/10000）；向上取整；不得小于0
+	CURE_TOMBARTHITE_REDUCE_PER       = 483;    // 治疗合金消耗减少，实际消耗合金 = 配置消耗合金 * （1 - 作用值/10000）；向上取整；不得小于0
+	CURE_STEEL_REDUCE_PER             = 484;    // 治疗铀矿消耗减少，实际消耗铀矿 = 配置消耗铀矿 * （1 - 作用值/10000）；向上取整；不得小于0
+	CITY_TROOP_COST_ADD_PER			  = 485;	// 部队消耗石油增加（百分比）
+	REPAIR_CITY_DEF_ADD               = 486;    // 修复城墙时，修复的城防值增加
+	
+	PRODUCE_TRAP_SPEED_101          = 487;  // 制造陷阱地雷加速
+	PRODUCE_TRAP_SPEED_102          = 488;  // 制造陷阱防空火炮加速
+	PRODUCE_TRAP_SPEED_103          = 489;  // 制造陷阱反坦克火箭加速
+	
+	TRAIN_SPEED_TANK_1              = 490;  // 坦克1训练加速
+	TRAIN_SPEED_TANK_2              = 491;  // 坦克2训练加速
+	TRAIN_SPEED_PLANE_3             = 492;  // 空军1训练加速
+	TRAIN_SPEED_PLANE_4             = 493;  // 空军2训练加速
+	TRAIN_SPEED_FOOT_5              = 494;  // 步兵1训练加速
+	TRAIN_SPEED_FOOT_6              = 495;  // 步兵2训练加速
+	TRAIN_SPEED_CANNON_7            = 496;  // 战车1训练加速
+	TRAIN_SPEED_CANNON_8            = 497;  // 战车2训练加速
+	TRAIN_COUNT_ADD_PER             = 498;  // 全兵营训练数量增加，万分比
+	PROCTED_CANNON_8_CAP			= 499;	// 采矿车额外医院容量(数值)
+	
+	
+	PLAYER_EXP_PER					= 500;	//将军经验加成 将军相关（500-599）
+	PLAYER_VIT_PER					= 502;	//将军体力恢复速度加成
+	PLAYER_VIT_MAX_NUM				= 504;	//将军体力上限
+	PLAYER_VIT_MAX_PER				= 505;	//将军体力上限（百分比）
+	MULT_ATK_MONSTER				= 506;	//开启连续模式（打怪）
+	
+	PLAYER_EXP_ADD_PER              = 512;  // 指挥官经验增加（不论经验来源，当指挥官经验增加时，额外增加一定比率）
+	NEW_MONSTER_EXP_ADD				= 513;	// 新版野怪，打怪经验增加
+	TRAVEL_SHOP_REFRESH_TIMES_ADD   = 514;  // 黑市商店免费刷新次数增加
+	PLAYER_EXP_PER_MONSTER			= 515;  // 打野指挥官经验增加
+	OPEN_TRAVLE_SHOP				= 516;  //开启黑市商店额外的购买资格
+	
+	PLAYER_VIT_PER_CARD				= 517;	// 将军体力恢复速度加成（月卡专用）
+	PLAYER_VIT_MAX_NUM_CARD			= 518;	// 将军体力上限（月卡专用）
+	
+	GUILD_MEMBER_NUM				= 600;	//增加联盟成员数量 联盟相关	范围：（600-699）
+	GUILD_HELP_NUM					= 601;	//帮助人数上限增加
+	GUILD_TRADE_TAXRATE				= 602;	//降低交易税率（百分比）援助者
+	GUILD_TRADE_WEIGHT				= 603;	//提高交易负重（数值）援助者
+	GUILD_REINFORCE_ARMY			= 604;	//援军士兵数上限增加
+	GUILD_TEAM_MEMBER				= 605;	//组队队员空位增加
+	GUILD_TEAM_ARMY_PER				= 606;	//集结士兵数量上限（百分比）
+	GUILD_TEAM_ARMY_NUM				= 607;	//集结士兵数量上限（数值）
+	GUILD_HELP_TIME					= 608;	//联盟帮助时间增加 数值
+	GUILD_WEARHOUSE_LIMIT			= 609;	//联盟仓库每日存储上限增加(万分比)
+	GUILD_TRADE_MARCH_SPD			= 610;	//联盟交易时行军加速
+	GUILD_TECH_RESEARH_SPD			= 611;	//联盟科技的研究速度加快
+	GUILD_MASS_ATK					= 612;	//集结进攻时，部队攻击增加
+	GUILD_HELP_DEF					= 613;	//联盟援助时，援军部队防御增加
+	GUILD_HELP_MARCH_SPD			= 614;	//联盟援助时，援军部队行军速度加快
+	GUILD_TECH_CNBT_RATE			= 615;	//联盟科技，捐献时有几率获得双倍的科研进度
+	GUILD_TECH_CNBT_SCORE			= 616;	//联盟科技，捐献时有几率获得双倍的贡献值和积分值
+	GUILD_BUILD_SPEED_UP			= 617;	//联盟建造速度增加
+	GUILD_MASS_TIME_REDUCE_PER      = 618;  //集结所需时间减少，实际集结时间 = 基础集结时间 * （1 - 作用值/10000）；向上取整；不得小于0
+	GUILD_WEARHOUSE_LIMIT_VAL		= 619;	//联盟仓库每日存储上限增加(绝对值)
+	GUILD_XZQ_BUILD_CONTROL_VAL     = 620;  //联盟可以占据小站区数量
+
+	PLANT_FACTORY_SPEED				= 621;  // 效果：增加泰能研究所，3条生产线的每日产量及最大容量
+	PLANT_FACTORY_SPEED_622  		= 622;  // 效果：增加勋章的生产速度及容量，万分比
+	PLANT_FACTORY_SPEED_623			= 623;  // 效果：增加复制晶体的生产速度及容量，万分比
+	PLANT_FACTORY_SPEED_624			= 624;  // 效果：增加聚能核心的生产速度及容量，万分比
+	
+	PLANT_FACTORY_SPEED_625  		= 625;  // 母体周卡  【万分比】增加泰能勋章生产时的生产速度和容量上限（与现有622作用号效果完全一致）
+	PLANT_FACTORY_SPEED_626			= 626;  // 母体周卡  【万分比】增加泰能复制晶体生产时的生产速度和容量上限（与现有623作用号效果完全一致）
+	PLANT_FACTORY_SPEED_627			= 627;  // 母体周卡  【万分比】增加泰能聚能核心生产时的生产速度和容量上限（与现有624作用号效果完全一致）
+	MARCH_SPEED_ITEM_BACK_628       = 628;  // 行军加速返送 
+	
+	YQZZ_629 = 629; //月球之巅矿石采集获得国家材料增加	629
+	YQZZ_630 = 630; //月球之巅石油采集获得国家材料增加	630
+	YQZZ_631 = 631; //月球之巅合金采集获得国家材料增加	631
+	YQZZ_632 = 632; //月球之巅铀矿采集获得国家材料增加	632
+	YQZZ_633 = 633; //月球之巅战场行军速度增加
+	YQZZ_634 = 634; //月球之巅战场部队集结上限增加	
+
+	PLANT_FACTORY_SPEED_635  		= 635;  // 效果：增加辉煌勋章的生产速度及容量，万分比
+	PLANT_FACTORY_SPEED_636			= 636;  // 母体周卡  【万分比】增加辉煌勋章生产时的生产速度和容量上限（与现有635作用号效果完全一致）
+	PLANT_FACTORY_SPEED_637			= 637;  // 母体周卡  【万分比】增加辉煌勋章生产时的生产速度和容量上限（与现有635作用号效果完全一致）
+	PLANT_FACTORY_SPEED_638			= 638; 
+	PLANT_FACTORY_SPEED_651			= 651;
+	PLANT_FACTORY_SPEED_652			= 652;
+	
+	LIFE_TIME_CARD_639              = 639;  //活跃积分宝箱奖励+XX%
+	LIFE_TIME_CARD_640              = 640;  //情报中心刷新时补充的任务上限+XX
+	LIFE_TIME_CARD_641              = 641;  //周卡月卡每日领取的奖励+XX%
+	LIFE_TIME_CARD_642              = 642;  //每日幽灵基地的可领奖次数+XX
+	LIFE_TIME_CARD_643              = 643;  //机甲觉醒（活动ID=103）致命一击和最终一击的奖励+XX%
+	LIFE_TIME_CARD_644              = 644;  //联合军演战斗获得的积分+XX%
+	LIFE_TIME_CARD_645              = 645;  //联合军演商店每个奖励的兑换次数+XX%
+	LIFE_TIME_CARD_646              = 646;  //泰能工厂产量+XX%
+	LIFE_TIME_CARD_647              = 647;  
+
+	MEDAL_648 = 648; 
+	MEDAL_649 = 649; 
+	MEDAL_650 = 650;
+	MEDAL_653 = 653;
+	MEDAL_654 = 654;   
+	MEDAL_655 = 655; 
+	TBLY530_656 = 656; 
+	TBLY530_657 = 657; 
+	TBLY530_658 = 658; 
+	TBLY530_659 = 659;   
+	
+	EQUIP_ALL						= 800;	//提高所有装备的属性 装备相关	范围：（800-899）
+	EQUIP_SHOE						= 801;	//提高战靴的属性（百分比）
+	EQUIP_LEG						= 802;	//提高腿甲的属性（百分比）
+	EQUIP_ARMOR						= 803;	//提高铠甲的属性（百分比）
+	EQUIP_HELMET					= 804;	//提高头盔的属性（百分比）
+	EQUIP_RING						= 805;	//提高戒指的属性（百分比）
+	EQUIP_WEAPON					= 806;	//提高武器的属性（百分比）
+	EQUIP_DRAGON_STONE				= 807;	//提高龙晶的属性（百分比）
+	EQUIP_WEAPON_MATERIAL			= 808;	//装备材料生产加速（百分比）
+	EQUIP_STEEL_REDUCE				= 809;	//减少锻造装备时的钢材消耗（百分比）
+	EQUIP_STEEL_WISHING				= 810;	//提高许愿时钢材的基础值（百分比）
+	EQUIP_MATERIAL_RATE				= 811;	//提高采集时获得装备材料的概率（百分比）暂不开发
+	EQUIP_SPEED_UP					= 812;	//装备(合成,升品,拆解)加速（百分比）
+	EQUIP_FORGE_SPEED_UP			= 813;	//装备(合成,升品)加速（百分比）
+	EQUIP_RESOLVE_SPEED_UP			= 814;	//装备(拆解)加速（百分比） 	
+	
+	SKILL_LIFESAVING_BUF			= 901;	// 技能效果:救援
+	SKILL_DUEL_BUF					= 902;	// 技能效果:决斗
+	
+	MONTHCARD_REWARD_DOUBLE_910     = 910;  //周卡月卡有百分之几的几率特权双倍领取buff
+	
+	ATK_MONSTER_DEF_PER             = 1001;  // 打怪防御增加
+	ATK_MONSTER_HP_PER              = 1002;  // 打怪生命增加
+
+	TANK_A_ATK_PER					= 1003; // 所有坦克A攻击增加	万分比	所有坦克A（兵种类型 = 1）攻击增加
+	TANK_B_ATK_PER					= 1004; // 所有坦克B攻击增加	万分比	所有坦克B（兵种类型 = 2）攻击增加
+	PLAN_A_ATK_PER					= 1005; // 所有空军A攻击增加	万分比	所有空军A（兵种类型 = 3）攻击增加
+	PLAN_B_ATK_PER					= 1006; // 所有空军B攻击增加	万分比	所有空军B（兵种类型 = 4）攻击增加
+	FOOT_A_ATK_PER					= 1007; // 所有步兵A攻击增加	万分比	所有步兵A（兵种类型 = 5）攻击增加
+	FOOT_B_ATK_PER					= 1008; // 所有步兵B攻击增加	万分比	所有步兵B（兵种类型 = 6）攻击增加
+	CANNON_A_ATK_PER				= 1009; // 所有重武A攻击增加	万分比	所有重武A（兵种类型 = 7）攻击增加
+	CANNON_B_ATK_PER			    = 1010; // 所有重武B攻击增加	万分比	所有重武B（兵种类型 = 8）攻击增加
+	
+	TANK_A_DEF_PER					= 1011; // 所有坦克A防御增加	万分比	所有坦克A（兵种类型 = 1）防御增加
+	TANK_B_DEF_PER					= 1012; // 所有坦克B防御增加	万分比	所有坦克B（兵种类型 = 2）防御增加
+	PLAN_A_DEF_PER					= 1013; // 所有空军A防御增加	万分比	所有空军A（兵种类型 = 3）防御增加
+	PLAN_B_DEF_PER					= 1014; // 所有空军B防御增加	万分比	所有空军B（兵种类型 = 4）防御增加
+	FOOT_A_DEF_PER					= 1015; // 所有步兵A防御增加	万分比	所有步兵A（兵种类型 = 5）防御增加
+	FOOT_B_DEF_PER					= 1016; // 所有步兵B防御增加	万分比	所有步兵B（兵种类型 = 6）防御增加
+	CANNON_A_DEF_PER				= 1017; // 所有重武A防御增加	万分比	所有重武A（兵种类型 = 7）防御增加
+	CANNON_B_DEF_PER				= 1018; // 所有重武B防御增加	万分比	所有重武B（兵种类型 = 8）防御增加
+	
+	TANK_A_HP_PER					= 1019; // 所有坦克A生命增加	万分比	所有坦克A（兵种类型 = 1）生命增加
+	TANK_B_HP_PER					= 1020; // 所有坦克B生命增加	万分比	所有坦克B（兵种类型 = 2）生命增加
+	PLAN_A_HP_PER					= 1021; // 所有空军A生命增加	万分比	所有空军A（兵种类型 = 3）生命增加
+	PLAN_B_HP_PER					= 1022; // 所有空军B生命增加	万分比	所有空军B（兵种类型 = 4）生命增加
+	FOOT_A_HP_PER					= 1023; // 所有步兵A生命增加	万分比	所有步兵A（兵种类型 = 5）生命增加
+	FOOT_B_HP_PER					= 1024; // 所有步兵B生命增加	万分比	所有步兵B（兵种类型 = 6）生命增加
+	CANNON_A_HP_PER					= 1025; // 所有重武A生命增加	万分比	所有重武A（兵种类型 = 7）生命增加
+	CANNON_B_HP_PER					= 1026; // 所有重武B生命增加	万分比	所有重武B（兵种类型 = 8）生命增加
+	
+	FOOT_B_GT30_ATK_PER				= 1027; // 当部队中步兵B大于30%时，部队攻击增加	万分比	当部队中步兵B（兵种类型 = 6）大于30%时，部队攻击增加
+	NO_GT60_ATK_PER					= 1028; // 当部队中没有兵种占比超过60%时，所有部队攻击增加	万分比	当部队中没有兵种（不同id算不同的）占比超过60%时，所有部队攻击增加
+	NO_GT60_DEF_PER					= 1029; // 当部队中没有兵种占比超过60%时，所有部队防御增加	万分比	当部队中没有兵种（不同id算不同的）占比超过60%时，所有部队防御增加
+	NO_GT60_HP_PER					= 1030; // 当部队中没有兵种占比超过60%时，所有部队生命增加	万分比	当部队中没有兵种（不同id算不同的）占比超过60%时，所有部队生命增加
+	TANK_B_GT30_DEF_PER				= 1031; // 当部队中坦克A大于30%时，部队防御增加	万分比	当部队中坦克B（兵种类型 = 1）大于30%时，部队防御增加
+	
+	WAR_LESS_TANK_A_GET_HURT		= 1032; // 所有坦克A收到伤害减少	万分比	所有坦克A（兵种类型 = 1）受到伤害减少
+	WAR_TANK_A_HURT					= 1033;	// 所有坦克A伤害增加	万分比	所有坦克A（兵种类型 = 1）伤害增加
+	WAR_TANK_B_HURT					= 1034;	// 所有坦克B伤害增加	万分比	所有坦克B（兵种类型 = 2）伤害增加
+	WAR_PLAN_A_HURT					= 1035;	// 所有空军A伤害增加	万分比	所有空军A（兵种类型 = 3）伤害增加
+	WAR_PLAN_B_HURT					= 1036;	// 所有空军B伤害增加	万分比	所有空军B（兵种类型 = 4）伤害增加
+	WAR_FOOT_A_HURT					= 1037;	// 所有步兵A伤害增加	万分比	所有步兵A（兵种类型 = 5）伤害增加
+	WAR_FOOT_B_HURT					= 1038;	// 所有步兵B伤害增加	万分比	所有步兵B（兵种类型 = 6）伤害增加
+	WAR_CANNON_A_HURT				= 1039;	// 所有重武A伤害增加	万分比	所有重武A（兵种类型 = 7）伤害增加
+	WAR_CANNON_B_HURT				= 1040;	// 所有重武B伤害增加	万分比	所有重武B（兵种类型 = 8）伤害增加
+	WAR_HURT_IN_CITY_DEF			= 1041; // 基地守军伤害增加		万分比	所有基地守军伤害增加
+	ATK_NEW_MONSTER_HURT_PER        = 1042; // 打新版野怪伤害增加
+	ATK_NEW_MONSTER_ATK_PER         = 1043; // 打新版野怪攻击增加
+	WAR_LANDMINE_ATK_PER			= 1044;	// 地雷攻击增加			万分比	兵种类型 = 101
+	WAR_ACKACK_ATK_PER				= 1045;	// 防空火炮攻击增加		万分比	兵种类型 = 102
+	WAR_ANTITANK_ATK_PER			= 1046;	// 反坦克火箭攻击增加	万分比	兵种类型 = 103
+	SOLDIER_SKILL_701				= 1047; //【1047】兵种技能伤害增加 （对技能 "蓄力冲击"（id = 70101）和"超强蓄力"（id = 70102）生效）                 对应技能参数p1
+	SOLDIER_SKILL_402				= 1048; //【1048】兵种技能伤害增加 （对技能 "资源战挂载"（id = 40201）生效）                                                           对应技能参数p1
+	SOLDIER_SKILL_303				= 1049; //【1049】兵种技能伤害增加 （对技能 "俯冲轰炸"（id = 30301）和"基洛夫轰炸"（id = 30302）生效）              对应技能参数p3
+	SOLDIER_SKILL_201				= 1050; //【1050】兵种技能伤害增加 （对技能 "防空系统"（id = 20101）和"爱国者防空系统"（id = 20102）生效）       对应技能参数p1
+	SOLDIER_SKILL_503				= 1051; //【1051】兵种技能伤害增加 （对技能 "爆破弹药"（id = 50301）和"辐射弹药"（id = 50302）生效）                 对应技能参数p1
+	ATK_MONSTER_HURT_PER       		= 1052; // 打怪伤害增加
+	ATK_MONSTER_ATK_PER         	= 1053; // 打怪攻击增加
+	SOLDIER_SKILL_507_P1			= 1082; // 兵种技能伤害增加 （对技能 "爆破弹药"（id = 50701）和"辐射弹药"（id = 50702）生效）                 对应技能参数p1
+	SOLDIER_DEF_1093				= 1093; // 有一定几率闪避
+	SOLDIER_ATK_1094				= 1094; // 攻击时忽略乱方防御力
+	WAR_SOLDIER_TROOP_HP_PER	    = 1095;	//所有部队生命加成（百分比）复制102
+
+	SUPER_SOLDIER_1300				= 1300; // 当部队中防御坦克占比超过X%时, 所有部队防御提升
+	SUPER_SOLDIER_1301				= 1301; // 当部队中防御坦克占比超过X%时, 所有坦克防御提升
+	SUPER_SOLDIER_1302				= 1302; // 当部队中防御坦克占比超过X%时, 所有部队血量提升
+	SUPER_SOLDIER_1303				= 1303; // 当部队中防御坦克占比超过X%时, 所有坦克血量提升
+	SUPER_SOLDIER_1304				= 1304; // 如果本轮突击步兵最高type5 , 则下一回合突击步兵增加X%攻击力
+	SUPER_SOLDIER_1305				= 1305; // 如果本轮突击步兵最高type5 , 则下一回合所有部队加X%攻击力
+	SUPER_SOLDIER_1307				= 1307; // 防御坦克1 受步兵伤害降低 5  , 6
+	SOLDIER_1308 					= 1308; //【1308】：主战坦克（兵种类型 = 2）占比超过20%时，主战坦克受到主战坦克伤害减少；【万分比】（与其他减少伤害的计算为累乘关系）   注：实际受到伤害 = 基础伤害 * （1 - 某作用号减免） * （1 - 【1308】）
+	SOLDIER_1309					= 1309; //【1309】：主战坦克（兵种类型 = 2）占比超过20%时，主战坦克暴击伤害增加；【万分比】  注：此作用号与作用号【1421】（鲍里斯的天赋）叠加计算
+
+	SOLDIER_SKILL_TRIGER_504		= 1054; // 强化连击技能触发概率 对应技能id 504
+	SOLDIER_SKILL_TRIGER_503		= 4014; // 强化弹药伤害触发概率 对应技能id 503 
+	WAR_ATK_CITY_LESS_DEF_WEAPON_HURT	= 1055;	// 攻城时，部队受到防御武器的伤害降低
+	SOLDIER_SKILL_TRIGER_202		= 1056; // 强化防空触发概率
+	SOLDIER_SKILL_TRIGER_403		= 1057; // 强化突进触发概率
+	SOLDIER_SKILL_TRIGER_303		= 1058; // 强化飞机轰炸触发概率
+	SOLDIER_SKILL_104				= 1059; // 强化盾墙 成长为抵挡伤害万分比
+	WAR_SELF_ATK_BUTCHER			= 1060; // 屠城:个人出征进攻是,有xx(配置)概率触发杀死敌方万分之x伤兵
+	
+	DEAD_TO_WOUND_TANK_A			= 1061; // 战斗结束时,死亡的装甲坦克一定比例转换为伤兵
+	DEAD_TO_WOUND_TANK_B			= 1062; // 战斗结束时,死亡的主战坦克一定比例转换为伤兵
+	DEAD_TO_WOUND_PLAN_A			= 1063; // 战斗结束时,死亡的轰炸机一定比例转换为伤兵
+	DEAD_TO_WOUND_PLAN_B			= 1064; // 战斗结束时,死亡的直升机一定比例转换为伤兵
+	DEAD_TO_WOUND_FOOT_A			= 1065; // 战斗结束时,死亡的特种兵一定比例转换为伤兵
+	DEAD_TO_WOUND_FOOT_B			= 1066; // 战斗结束时,死亡的狙击手一定比例转换为伤兵
+	DEAD_TO_WOUND_CANNON_A			= 1067; // 战斗结束时,死亡的攻坚战车一定比例转换为伤兵
+	DEAD_TO_WOUND_CANNON_B			= 1068; // 战斗结束时,死亡的运载车一定比例转换为伤兵
+	SOLDIER5_ATK_SPEED				= 1069; // 兵种类型5 攻击速度增加(万分比)
+	SOLDIER_SKILL_203_105			= 1070; // 兵种1,2 强化爆击技能触发概率
+	SOLDIER_2_ATK_ONCE				= 1071; // 兵种2 有概率额外攻击一次
+	SOLDIER_SKILL_505				= 1073; // 加额外普通攻击伤害比率
+	SOLDIER_SKILL_403_303			= 1075; // 强化403 303 影响battle_soldier_skill表的p3字段数值；实际伤害 = 技能基础伤害系数 + 作用值/10000
+	CANNON_ATK_CITY_HERT			= 1076;  // 【万分比】：运载战车（兵种类型 = 8） 和 攻坚战车（兵种类型 = 7） 在攻城战斗中，攻击增加
+	WAR_ATK_CITY_ATK_PER			= 1077;	// 攻打他人基地时,所有部队攻击增加(万分比)
+	WAR_ATK_CITY_DEF_PER			= 1078;	// 攻打他人基地时,所有部队防御增加(万分比)
+	WAR_ATK_CITY_HP_PER				= 1079;	// 攻打他人基地时,所有部队血量增加(万分比)
+	WAR_TROOP_ATK_PER_CARD			= 1080;	// 所有部队攻击加成（月卡）
+	WAR_TROOP_DEF_PER_CARD			= 1081;	// 所有部队防御加成（月卡）
+	WAR_DEF_CITY_TANK_HP_PER		= 1083; // 城防战中所有坦克生命增加	万分比	生命增加
+	WAR_DEF_CITY_PLAN_HP_PER		= 1084; // 城防战中所有空军生命增加	万分比	生命增加
+	WAR_DEF_CITY_FOOT_HP_PER		= 1085; // 城防战中所有步兵生命增加	万分比	生命增加
+	WAR_DEF_CITY_CANNON_HP_PER		= 1086; // 城防战中所有战车生命增加	万分比	生命增加
+	SHADOW_ARMY						= 1087;	// 超时空援军 万分比 复制参战部队中数量最多的一个army参与战斗
+	WAR_ATK_ALL_ARMY				= 1088;	// 全员(包括集结成员)部队攻击加成  万分比
+	SOLDIER_SKILL_505_1089			= 1089; // 加额外普通攻击伤害比率 SOLDIER_SKILL_505废弃
+	SOLDIER_SKILL_605_1090			= 1090; // 605技能额外伤害
+
+	CROSS_DEAD_TO_HURT				= 1092;	// 【万分比】跨服活动开启期间,战斗损失士兵一定比例转化为伤兵
+	
+	SELF_ATK_CITY_HURT_TO_DEAD		= 1100; // 【万分比】个人攻城战斗中，将敌人在战斗中产生的所有伤兵按一定比率转化为死兵
+	ATK_CITY_DEAD_TO_HURT			= 1101; // 【万分比】攻城战斗中，损失士兵一定比例转化为伤兵
+	WAR_DEF_CITY_1102				= 1102; //收成兵防御提升
+	WAR_DEF_CITY_1103				= 1103; //收成兵防伤害升
+	WAR_DEF_CITY_1104				= 1104; //收成兵减伤提升
+	WAR_ATK_CITY_1105				= 1105; //攻城伤害提升
+	WAR_ATK_CITY_1106				= 1106; //车兵攻城伤害提升
+	TALENT_SKILL_CD_REDUS			= 1107; //技能冷却时间减少
+	SOLDIER_2_1108					= 1108; // 20201 20202 伤害提升
+	SOLDIER_2_1109					= 1109; // 20201 20202 发动概率提升
+	SOLDIER_1110 					= 1110; // 远征攻击
+	SOLDIER_1111 					= 1111; // 远征防御
+	SOLDIER_1112 					= 1112; // 远征生命
+	EFF_1150 = 1150;//类似作用号【1420】，原【1416】效果为 攻城车【兵种类型：7】每损失10%士兵，攻城车伤害额外增加XX%修改成  采矿车【兵种类型：8】每损失10%士兵，采矿车生命额外增加XX%
+
+	PIFU_1162 = 1162; // 集结叠加10层
+	HQ_1163 = 1163;//【1163】个人战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加攻击。实际攻击 =  基础攻击 *（1+其他攻击加成+【1163】）
+	HQ_1164 = 1164;//【1164】个人战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加生命。实际生命 =  基础生命 *（1+其他攻击加成+【1164】）
+	HQ_1165 = 1165;//【1165】个人战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加防御。实际防御 =  基础防御 *（1+其他攻击加成+【1165】）
+	HQ_1166 = 1166;//【1166】个人战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加攻击 实际攻击 =  基础攻击 *（1+其他攻击加成+【1166】）
+	HQ_1167 = 1167;//【1167】个人战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加生命。实际生命 =  基础生命 *（1+其他攻击加成+【1167】）
+	HQ_1168 = 1168;//【1168】个人战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加防御。实际防御 =  基础防御 *（1+其他攻击加成+【1168】）
+	HQ_1169 = 1169;//【1169】集结战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加攻击。实际攻击 =  基础攻击 *（1+其他攻击加成+【1169】）
+	HQ_1170 = 1170;//【1170】集结战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加生命。实际生命 =  基础生命 *（1+其他攻击加成+【1170】）
+	HQ_1171 = 1171;//【1171】集结战斗时，士兵类型：1，2，3，8 （防御坦克，主战坦克，轰炸机，采矿车）可生效，增加防御。实际防御 =  基础防御 *（1+其他攻击加成+【1171】）
+	HQ_1172 = 1172;//【1172】集结战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加攻击。实际攻击 =  基础攻击 *（1+其他攻击加成+【1172】）
+	HQ_1173 = 1173;//【1173】集结战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加生命。实际生命 =  基础生命 *（1+其他攻击加成+【1173】）
+	HQ_1174 = 1174;//【1174】集结战斗时，士兵类型：4，5，6，7 （直升机，突击步兵，狙击兵，攻城车）可生效，增加防御。实际防御 =  基础防御 *（1+其他攻击加成+【1174】）
+	TBLY_SKIN_1175 = 1175; // tbly atk  
+
+	CROSST_1176 = 1176;//【1176】【万分比】集结战斗时，坦克防御增加（兵种类型=1或2）
+	CROSST_1177 = 1177;//【1177】【万分比】集结战斗时，空军防御增加（兵种类型=3或4）
+	CROSST_1178 = 1178;//【1178】【万分比】集结战斗时，步兵防御增加（兵种类型=5或6）
+	CROSST_1179 = 1179;//【1179】【万分比】集结战斗时，战车防御增加（兵种类型=7或8）注：上述作用号在集结战斗时即可生效，不论集结进攻或集结防守 注：上述作用号计算时与其他作用号累加计算
+	CROSST_1180 = 1180;//【1180】【万分比】个人战斗时，坦克攻击增加
+	CROSST_1181 = 1181;//【1181】【万分比】个人战斗时，空军攻击增加
+	CROSST_1182 = 1182;//【1182】【万分比】个人战斗时，步兵攻击增加
+	CROSST_1183 = 1183;//【1183】【万分比】个人战斗时，战车攻击增加
+	CROSST_1184 = 1184;//【1184】【万分比】个人战斗时，坦克防御增加
+	CROSST_1185 = 1185;//【1185】【万分比】个人战斗时，空军防御增加
+	CROSST_1186 = 1186;//【1186】【万分比】个人战斗时，步兵防御增加
+	CROSST_1187 = 1187;//【1187】【万分比】个人战斗时，战车防御增加
+	CROSST_1188 = 1188;//【1188】【万分比】个人战斗时，坦克生命增加
+	CROSST_1189 = 1189;//【1189】【万分比】个人战斗时，空军生命增加
+	CROSST_1190 = 1190;//【1190】【万分比】个人战斗时，步兵生命增加
+	CROSST_1191 = 1191;//【1191】【万分比】个人战斗时，战车生命增加 注：上述作用号在个人战斗时即可生效，不论个人进攻或防守 注：上述作用号计算时与其他作用号累加计算
+	CROSST_1192 = 1192;//【1192】【万分比】在战区战斗时，部队攻击增加
+	CROSST_1193 = 1193;//【1193】【万分比】在战区战斗时，部队防御增加
+	CROSST_1194 = 1194;//【1194】【万分比】在战区战斗时，部队生命增加
+	CROSST_1195 = 1195;//【1195】【万分比】在电塔战斗时，部队攻击增加
+	CROSST_1196 = 1196;//【1196】【万分比】在电塔战斗时，部队防御增加
+	CROSST_1197 = 1197;//【1197】【万分比】在电塔战斗时，部队生命增加
+	CROSST_1198 = 1198;//【1198】【万分比】在盟总战斗时，部队攻击增加
+	CROSST_1199 = 1199;//【1199】【万分比】在盟总战斗时，部队防御增加
+	CROSST_1200 = 1200;//【1200】【万分比】在盟总战斗时，部队生命增加 注：上述作用号在对应玩法建筑内战斗时即可生效，不论进攻还是防御，不论玩家当前所在服务器状态 注：上述作用号计算时与其他作用号累加计算
+	CROSST_1251 = 1251;//【1251】【万分比】跨服活动期间，部队攻击增加
+	CROSST_1252 = 1252;//【1252】【万分比】跨服活动期间，部队防御增加
+	CROSST_1253 = 1253;//【1253】【万分比】跨服活动期间，部队生命增加
+	CROSST_1254 = 1254;//【1254】【万分比】跨服活动期间，攻城战时敌方伤转死比例增加 注：跨服活动期间起始时间为cross_time表的startTime字段，结束时间为cross_time表的endTime字段 注：上述作用号在对应活动期间即可生效 注：上述作用号计算时与其他作用号累加计算 注：实际伤转死比例 = 【1100】+【1254】
+
+	COLLECT_RESOURCE_EXTRA_PER      = 1306;  // 每次收取资源时，额外收取万分比X的安全资源
+
+	T3_1400	= 1400;// 还英雄出征 全兵种功击提高 atk
+	T3_1401 = 1401;// 英雄工业值提高
+	T3_1402 = 1402;// 军事担高
+	T3_1403 = 1403;// 后勤提高
+	T3_1404 = 1404;// 英雄驻防时 全兵种atk
+	T3_1405 = 1405; // 工业类技能上等级上限提高
+	T3_1406 = 1406; // 军事类技能上等级上限提高
+	T3_1407 = 1407; // 后勤类技能上等级上限提高
+	T3_1408 = 1408; // 英雄出征全兵种伤害提高 hurt
+	T3_1409 = 1409; // 工业转化属性时效果提升
+	T3_1410 = 1410; // 军事转化属性时效果提升
+	T3_1411 = 1411; // 后勤转化属性时效果提升
+	T3_1412 = 1412; // 英雄驻防受到伤害降低 max(0.5 , 1-eff/10000)
+
+	SUPER_SOLDIER_1413 = 1413; //	提升伤害比例=（轰炸机发动30301时与目标距离+2）*作用号/10000，此伤害提升与1075作用号为相加（即在同一个括号内）	
+	SUPER_SOLDIER_1414 = 1414;	//直升机（兵种TYPE=4）,每次发动技能（技能ID=40301）时触发叠加规则，战斗结束后清零。 最大值=作用号/10000	
+	SUPER_SOLDIER_1415 = 1415;//	轰炸机（兵种TYPE=3）,每次发动技能（技能ID=30301）时触发叠加规则，战斗结束后清零。 最大值=作用号/10000	
+	SUPER_SOLDIER_1416 = 1416;//	20%为固定常量（读const表中，gouda_percent字段），X%=作用号/10000，当兵种类型type=3与type=4的部队之和占单人出征的30%触发，仅个人单独计算，不会计算全部队	
+	SUPER_SOLDIER_1417 = 1417;//	20%为固定常量（读const表中，gouda_percent字段），X%=作用号/10000，当兵种类型type=3与type=4的部队之和占单人出征的30%触发，仅个人单独计算，不会计算全部队	
+	SOLDIER_1418 = 1418;
+	SOLDIER_1419 = 1419;
+
+	EFF_1421 = 1421; // 鲍里斯	主战坦克暴击额外伤害提升25%	1421	兵种type=2，技能203附加伤害（P1+新作用号）	数值=作用号数值/10000
+	EFF_1422 = 1422; //喀秋莎	突击步兵忽略敌方防御加成	1422	兵种type=5，攻击时，降低敌方防御力。敌方防御力=部队数量^0.31*兵种防御力*（1+防御力加成-新作用号)	数值=作用号数值/10000
+	EFF_1423 = 1423; //莉塔	轰炸机护盾发动概率提升	1423	兵种type=3，技能302，发动几率=trigger+新作用号	数值=作用号数值/10000
+	EFF_1424 = 1424; //艾薇儿	狙击兵发动狙击概率提升	1424	兵种type=6，技能605，发动机率=trigger+新作用号	数值=作用号数值/10000
+	EFF_1425 = 1425; //所罗门	影子部队的损伤有X%不计入战损	1425	所罗门的士兵受损直接死亡，在结算时计算战损，降低这部分的战损=新作用号	数值=作用号数值/10000
+	EFF_1426 = 1426; //贾斯汀	范围攻击的附加伤害提升	1426	兵种type=7，技能705，技能伤害=P4+1089作用号+新作用号	数值=作用号数值/10000
+					
+	EFF_1420 = 1420; //芯片	effectID=1420	攻城车（type=7）伤害提升X%，每损失10%的时候，伤害提升额外的X%，最多5倍X%	X%=作用号/10000，数值（伤害加成）与1039作用号为加法计算	损失0%时也有一层BUFF加成。损失比例=战斗中损伤数量/开战时此部队数量。所罗门的影子部队不影响损失比例	损失40%以上达到最大值	
+	EFF_1427 = 1427; // 降自己防御
+	EFF_1428 = 1428; // 降防御
+	EFF_1429 = 1429;// 还能再战两回合
+	EFF_1430 = 1430;//所有部队防御力提升14%，组队时对全部队伍生效。 1088是几乎一样的，增加攻击力的作用号。
+	EFF_1431 = 1431;//1431：:战斗开始时判定：当部队中的防御坦克超过10%时，防御坦克会在其他部队受到伤害时，分担X%（数值=作用号/10000）的伤害来自己承担。集结组队时，某单个玩家的防御坦克超过全部集结部队总和的10%才会触发。每回合都需要判定：组队时且多个神存在时，只有防御坦克数量最多的那支部队，不同等级算作不同的部队才会触发。
+	EFF_1432 = 1432;//1432：防御坦克受到伤害时，复仇X%的受到伤害给伤害来源。（受到的伤害必须是真实伤害，即1个兵10血，被打了10000点伤害，但是只会按照10血的扣血来进行复仇） 复仇是直接结算战损，不会再去计算减伤等buff，即复仇的伤害=真实受到的伤害*作用号/10000,然后此值直接进行战斗损失扣除，坦克损失=复仇伤害/目标加成后血量。 复仇不会触发复仇，也不会触发任何后续逻辑，到此扣除即逻辑中止。
+
+	HERO_XLSL_1440 = 1440; // 数量
+	HERO_XLSD_1441 = 1441; // 万分比
+
+	EFF_1451 = 1451; //	防御坦克（兵种type=1）有一定概率（25%，写死或填const表）本回合不进行攻击，防御大幅提升。提升比例=作用号/10000.
+	EFF_1452 = 1452; //	主战坦克（兵种type=2）命中空军（兵种type=3或者4）后，会降低对方部队的攻击力10/20/30/50%，括号里加入减法，不要做乘法。降低百分比=作用号/10000
+	EFF_1453 = 1453; //	突击步兵每次攻击时（兵种type=5），每次命中目标会提高自己的攻击力，最多叠加100层（写死），每层增加攻击=作用号/10000
+	EFF_1454 = 1454; //	采矿车受到伤害降低（兵种type=8），伤害降低效果与之前的作用号之后数值相乘。数值=作用号/10000
+	EFF_1455 = 1455; //	投石车防御力提升X%，每损失10%的投石车，还会额外提升防御力X%，最多5X%，与血战到底搭配,(与1420相似），数值=作用号/10000
+	EFF_1456 = 1456; //	直升机发动技能40301时，有概率对目标进行2次伤害，第二次伤害值=第一次。  概率=作用号/10000
+	EFF_1457 = 1457; //	轰炸机(兵种type=3），技能302的减伤比例提升，数值=作用号的绝对值，  最终减伤效果=（P1+作用号）/10000
+	EFF_1458 = 1458; //	集结攻击力加成。完全复刻一个新的1088，跟1088同时生效，但是同1458作用号存在，仅最高的一个玩家生效。
+
+
+	EFF_1461 = 1461; //	建筑升级消耗资源减少X/10000 (矿石.石油.合金.稀土)
+	EFF_1462 = 1462; // 建筑升级消耗矿石减少X/10000
+	EFF_1463 = 1463; //	建筑升级消耗石油减少X/10000
+	EFF_1464 = 1464; //	建筑升级消耗合金减少X/10000
+	EFF_1465 = 1465; //	建筑升级消耗稀土减少X/10000
+	EFF_1466 = 1466; //	建筑升级所需时间减少X/10000
+	EFF_1467 = 1467; //	研发科技消耗资源减少x/10000(矿石.石油.合金.稀土)
+	EFF_1468 = 1468; //	研发科技消耗矿石资源减少x/10000
+	EFF_1469 = 1469; //	研发科技消耗石油资源减少X/10000
+	EFF_1470 = 1470; //	研发科技消耗合金资源减少X/10000
+	EFF_1471 = 1471; //	研发科技消耗稀土资源减少X/10000
+	EFF_1472 = 1472; //	研发科技所需时间减少X/10000
+	EFF_1473 = 1473; //	部队训练消耗资源减少x/10000(矿石.石油.合金.稀土)
+	EFF_1474 = 1474; //	部队训练消耗矿石减少x/10000
+	EFF_1475 = 1475; //	部队训练消耗石油减少x/10000
+	EFF_1476 = 1476; //	部队训练消耗合金减少x/10000
+	EFF_1477 = 1477; //	部队训练消耗稀土减少x/10000
+	EFF_1478 = 1478; //	部队训练所需时间减少X/10000
+	EFF_1479 = 1479;
+
+	MASS_1481 = 1481; //【1481】：集结进攻或防守时，主战坦克（兵种类型 = 2） 攻击 增加；【万分比】
+	MASS_1482 = 1482; //【1482】：集结进攻或防守时，防御坦克（兵种类型 = 1） 生命 增加；【万分比】
+	MASS_1483 = 1483; //【1483】：集结进攻或防守时，直升机（兵种类型 = 4） 攻击 增加；【万分比】
+	MASS_1484 = 1484; //【1484】：集结进攻或防守时，轰炸机（兵种类型 = 3） 攻击 增加；【万分比】
+	MASS_1485 = 1485; //【1485】：集结进攻或防守时，狙击兵（兵种类型 = 6） 攻击 增加；【万分比】
+	MASS_1486 = 1486; //【1486】：集结进攻或防守时，突击步兵（兵种类型 = 5） 攻击 增加；【万分比】
+	MASS_1487 = 1487; //【1487】：集结进攻或防守时，运粮车（兵种类型 = 8） 生命 增加；【万分比】
+	MASS_1488 = 1488; //【1488】：集结进攻或防守时，攻城车（兵种类型 = 7） 攻击 增加；【万分比】
+
+	MASS_1489 = 1489; // 集结时攻击增加. 只加自己. 叠加
+	// 主战坦克（兵种类型=2）每3回合发动1次给自身的buff效果，共4个buff效果，持续1回合（注：4个buff效果同步添加，同步清除，但在开发上分4个作用号进行开发）
+	TANK_1490 = 1490; //【1490】【万分比】：主战坦克每3回合发动1次，持续1回合，主战坦克攻击增加XX%（注：该数值和加攻击的其他作用号叠加）
+	TANK_1491 = 1491; //【1491】【万分比】：主战坦克每3回合发动1次，持续1回合，主战坦克暴击伤害增加XX%（注：该数值和加暴击伤害（如【1421】）的其他作用号叠加）
+	TANK_1492 = 1492; //【1492】【万分比】：主战坦克每3回合发动1次，持续1回合，主战坦克攻击造成敌方"战斗减员"后，自身会反噬XX%的"战斗减员"（注：该反噬效果不走伤害结算逻辑，直接进行战斗减员，在主战坦克攻击结算后敌方部队减员后即进行结算；“战斗减员”在战斗内为死兵，在战斗结束结算后 实际为死兵或伤兵根据战斗模式决定）（注：造成敌方城防武器"战斗减员"不会受到对应反噬效果） 
+	TANK_1493 = 1493; //【1493】【万分比】：主战坦克每3回合发动1次，持续1回合，主战坦克暴击率增加XX%（注：该作用号数值与【1070】叠加）
+
+	GC_1494 = 1494; // 锦标赛攻击减少
+	GC_1495 = 1495; // 锦标赛防御减少
+	GC_1496 = 1496; // 锦标赛生命减少
+   
+	SOLDIER_1497 = 1497;// 【1497】【绝对值】增加决斗战略的部队数量（进攻和防守都加）
+	SOLDIER_1498 = 1498;// 【1498】【万分比】集结进攻或防守时，主战坦克（兵种类型 = 2）攻击增加【全员光环】注：若集结部队中存在多个玩家拥有此作用号，可叠加但至多叠加至100%（写死）
+	SOLDIER_1499 = 1499;// 【1499】【万分比】集结进攻或防守时，防御坦克（兵种类型 = 1）防御增加【全员光环】
+	SOLDIER_1500 = 1500;// 【1500】【万分比】集结进攻或防守时，直升机（兵种类型 = 4）攻击增加【全员光环】 
+	SOLDIER_1501 = 1501;// 【1501】【万分比】集结进攻或防守时，轰炸机（兵种类型 = 3）攻击增加【全员光环】
+	SOLDIER_1502 = 1502;// 【1502】【万分比】集结进攻或防守时，狙击兵（兵种类型 = 6）攻击增加【全员光环】
+	SOLDIER_1503 = 1503;// 【1503】【万分比】集结进攻或防守时，突击步兵（兵种类型 = 5）攻击增加【全员光环】
+	SOLDIER_1504 = 1504;// 【1504】【万分比】集结进攻或防守时，采矿车（兵种类型 = 8）防御增加【全员光环】
+	SOLDIER_1505 = 1505;// 【1505】【万分比】集结进攻或防守时，攻城车（兵种类型 = 7）攻击增加【全员光环】
+   
+    SOLDIER_1506 = 1506; //【1506】【万分比】狙击兵（兵种类型 = 6）攻击时，有概率再攻击1次
+	DEAD_TO_HURT_1507				= 1507;	// 【万分比】战斗损失士兵一定比例转化为伤兵,累乘计算
+	SOLDIER_1508 = 1508; //【专属芯片】【1508】 攻城车攻击时，每次最多可命中3个随机目标，造成XX%伤  注：不同等级不同兵种类型均视为不同目标，纯随机 注：当敌方目标小于等于3个时，全中 注：实际伤害 = 基础伤害 * XX%（命中不同目标时按照对应目标防御值计算对应基础伤害）
+	SOLDIER_1509 = 1509; //【专属天赋】【1509】专属芯片对应的伤害效果额外提升MM% 注：实际伤害 = 基础伤害 * XX% * （1 + MM%）
+ 	AILISHA_1510 = 1510; // 对soldiertype = 1 额外伤害 英雄爱丽沙独有
+ 	AILISHA_1511 = 1511; // 对soldiertype = 8 额外伤害 英雄爱丽沙独有
+
+ 	HERO_1512 = 1512; //【1512】【万分比】突击步兵（兵种类型 = 5）攻击时，有概率造成贯穿效果，对攻击目标后排至多2个其他目标造成贯穿伤害XX%（贯穿伤害数值随目标站位距离衰减）
+   	HERO_1513 = 1513; //【1513】【万分比】触发【1512】作用号的贯穿效果时，贯穿伤害数值增加
+	DOLDIER_1121 = 1121; //【1121】【万分比】突击步兵（兵种类型 = 5）受到攻击时，有概率减少所受伤害的XX%
+   	DOLDIER_1113 = 1113; //【1113】【万分比】当攻击目标为敌方主战坦克（兵种类型 = 2）时，伤害增加
+	DOLDIER_1114 = 1114; //【1114】【万分比】当攻击目标为敌方防御坦克（兵种类型 = 1）时，伤害增加
+	DOLDIER_1115 = 1115; //【1115】【万分比】当攻击目标为敌方直升机（兵种类型 = 4）时，伤害增加
+	DOLDIER_1116 = 1116; //【1116】【万分比】当攻击目标为敌方轰炸机（兵种类型 = 3）时，伤害增加
+	DOLDIER_1117 = 1117; //【1117】【万分比】当攻击目标为敌方狙击兵（兵种类型 = 6）时，伤害增加
+	DOLDIER_1118 = 1118; //【1118】【万分比】当攻击目标为敌方突击步兵（兵种类型 = 5）时，伤害增加
+	DOLDIER_1119 = 1119; //【1119】【万分比】当攻击目标为敌方采矿车（兵种类型 = 8）时，伤害增加
+	DOLDIER_1120 = 1120; //【1120】【万分比】当攻击目标为敌方攻城车（兵种类型 = 7）时，伤害增加
+
+	DOLDIER_1122 = 1122; //【1122】【万分比】当受到敌方主战坦克（兵种类型 = 2）攻击时，减少所受伤害
+	DOLDIER_1123 = 1123; //【1123】【万分比】当受到敌方防御坦克（兵种类型 = 1）攻击时，减少所受伤害
+	DOLDIER_1124 = 1124; //【1124】【万分比】当受到敌方直升机（兵种类型 = 4）攻击时，减少所受伤害
+	DOLDIER_1125 = 1125; //【1125】【万分比】当受到敌方轰炸机（兵种类型 = 3）攻击时，减少所受伤害
+	DOLDIER_1126 = 1126; //【1126】【万分比】当受到敌方狙击兵（兵种类型 = 6）攻击时，减少所受伤害
+	DOLDIER_1127 = 1127; //【1127】【万分比】当受到敌方突击步兵（兵种类型 = 5）攻击时，减少所受伤害
+	DOLDIER_1128 = 1128; //【1128】【万分比】当受到敌方采矿车（兵种类型 = 8）攻击时，减少所受伤害
+	DOLDIER_1129 = 1129; //【1129】【万分比】当受到敌方攻城车（兵种类型 = 7）攻击时，减少所受伤害
+
+	SINCE_1514 = 1514; //【1514】【万分比】集结战斗（包含进攻和防守，下同）时，坦克（兵种类型 = 1或2）攻击增加
+	SINCE_1515 = 1515; //【1515】【万分比】集结战斗时，空军（兵种类型 = 3或4）攻击增加
+	SINCE_1516 = 1516; //【1516】【万分比】集结战斗时，步兵（兵种类型 = 5或6）攻击增加
+	SINCE_1517 = 1517; //【1517】【万分比】集结战斗时，战车（兵种类型 = 7或8）攻击增加
+	SINCE_1518 = 1518; //【1518】【万分比】集结战斗时，坦克生命增加
+	SINCE_1519 = 1519; //【1519】【万分比】集结战斗时，空军生命增加
+	SINCE_1520 = 1520; //【1520】【万分比】集结战斗时，步兵生命增加
+	SINCE_1521 = 1521; //【1521】【万分比】集结战斗时，战车生命增加
+	DEAD_TO_HURT_1522 = 1522; // 【1522】【万分比】战斗损失士兵一定比例转化为伤兵
+	DEAD_TO_HURT_1523 = 1523; // 【1523】【万分比】攻城战中,战斗损失士兵一定比例转化为伤兵
+
+	HERO_1524 = 1524; 
+	HERO_1525 = 1525;
+	HERO_1526 = 1526;
+	EFF_1527 = 1527; // 兵种7,8 集结伤害上升
+
+	HERO_1528 = 1528; //ID57982974
+	HERO_1529 = 1529; //ID57982974
+	HERO_1530 = 1530; //ID57982974
+	HERO_1531 = 1531; //ID57982974
+	S403_1532 = 1532; //【1532】直升机（兵种类型=4）发动技能40301时，有概率额外触发1次技能40301。每次释放技能40301，则进行充能，充能值=自身直升机攻击距离（battle_soldier attackDis字段）+受击目标攻击距离+原有充能值（战斗初始为0）
+	S403_1533 = 1533; // 【1533】直升机（兵种类型=4）攻击时，若充能值>eff1，充能值=充能值-eff1，变更攻击选敌逻辑，敌方单体输出越高的敌军目标，被攻击的概率越大，对目标造成 XXX% 的额外伤害。
+	S403_1534 = 1534; //【1534】提高技能40301的伤害  实际伤害= 直升机基础技能伤害*（1+其他伤害加成+【1534】）
+
+	JIDIEN_1535 = 1535;
+	JIDIEN_1536 = 1536;
+	JIDIEN_1537 = 1537;
+	JIDIEN_1538 = 1538;
+	JIDIEN_1539 = 1539;
+
+	MDWS_1540 = 1540; // 58003238
+	MDWS_1541 = 1541;
+	MDWS_1542 = 1542;
+
+	MDS_1543 = 1543;//【1543】轰炸机（兵种类型=3）攻击时，每3个回合（第一次释放是接敌后，接敌概念：首次进行距离内攻击）必定执行一次技能303（技能skill表，30301，30302，30303），并强制本次修改本技能目标选区逻辑，选择目标最后排目标。实际伤害 = 基础伤害*（1 + 【1543】+其他伤害加成）+【1544】*eff
+	MDS_1544 = 1544;//【1544】轰炸机（兵种类型=3）攻击时，当2次【1543】间隔中（首次将从战斗开始，到首次【1543】），触发了所有轰炸机技能 302（技能skill表，30201，30202，30203 智能护盾）的抵扣伤害 总和记为eff。抵扣伤害  =  轰炸机未受到技能302减免时的hurtVal  * （技能302的p1+【1545】）
+	MDS_1545 = 1545;//【1545】增加技能302（技能skill表，30201，30202，30203 智能护盾）免伤比例最终受到伤害 =  实际伤害 * （1-p1-【1545】）
+
+	HERO_1546 = 1546;//【1546】集结作战时，可使集结部队上限生效
+	HERO_1547 = 1547;//【1547】集结作战时，20万叠atk
+
+	HERO_1548 = 1548;//【1548】个人作战时（进攻或防守都生效，组队不生效），出征或驻防每满10W的士兵数（根据战斗开始的部队数量计算，并不是每回合计算生效层数），部队攻击增加【1548】，最多生效eff次实际攻击 = 基础部队攻击*（1+ MIN(个人士兵数量/10W,eff) *【1548】 + 其他攻击加成）eff 参数读取const表，字段effect1548Maxinum（非万分比数值 ，填20，即最多20次攻击） 
+	HERO_1549 = 1549;//【1549】个人作战时（进攻或防守都生效，组队不生效），出征或驻防每满10W的士兵数（根据战斗开始的部队数量计算，并不是每回合计算生效层数），部队防御增加【1549】，最多生效eff2次实际防御 = 基础部队防御*（1+ MIN(个人士兵数量/10W,eff2) *【1549】 + 其他防御加成）eff2 参数读取const表，字段effect1549Maxinum（非万分比数值 ，填20，即最多20次防御）
+	HERO_1550 = 1550;//【1550】玩家战略技能：急救帐篷     skill表 ID:10103  buffId:23067   效果：减少此技能的cd时间 技能cd时间 = 原技能基础cd*（1-【1550】-其他技能缩减时间）  【1550】是万分比数值  
+	HERO_1551 = 1551;//【1551】玩家战略技能：急救帐篷     skill表 ID:10103  buffId:23067  效果：再使用急救帐篷之后，并再撞敌人基地的时候，清除了此23067buff,有【1551】概率使此技能的冷却时间直接重置可2次使用，由【1551】概率引发的 战略技能急救帐篷，无法2次触发【1551】（也就是第二次急救帐篷，不能再触发立即冷却）
+
+	HERO_1552 = 1552;//【1552】效果描述：主战坦克暴击（专属）实现逻辑：主战坦克（兵种类型=2)暴击概率增加【1552】，【1552】是万分比数值,   【1552】与【1070】作用号互斥 两者同为万分比，作用值作用在同一目标时候高者生效.实际暴击概率 = 其他暴击率加成  + 【1552】
+	HERO_1553 = 1553;//【1553】效果描述：主战坦克强化主炮命中空军后，降低目标发动轰炸概率 +XX.XX%，持续2回合（专属芯片改良的轰炸技能，不会受到影响，多个新英雄携带的主战坦克单位命中同一目标，军事值最高附带减益生效）实现逻辑：主战坦克（兵种类型=2) 触发主战坦克技能强化主炮 （技能ID =20201-20204）命中的受击的单位如果是空军（兵种类型=3或4)  降低其 对应轰炸技能（技能ID =30301-30303 和 40301-40304）触发几率持续2回合（即本回合，被打中的时候和下回合整个回合生效），若被不同的【1553】击中同一个目标，取数值最高的【1553】生效，此效果持续逻辑类似之前开发的【1320】https://tapd.tencent.com/10144051/prong/stories/view/1110144051857810726 轰炸机 技能303触发几率 =  基础触发几率 + 其他303轰炸触发几率 - 【1553】直升机 技能403触发几率 =  基础触发几率 + 其他403轰炸触发几率 - 【1553】【1553】是万分比数值注意：【1553】 只会影响 轰炸机（兵种类型=3）的技能303和 直升机（兵种类型=4）的技能403 并不能影响其专属改良的技能效果 即无法影响  反击轰炸 作用号【1543】改良的技能303    无法影响  地狱火轰炸 作用号【1533】改良的技能403
+	HERO_1554 = 1554;//【1554】效果描述：轰炸拦截：集结作战时，敌方空军触发轰炸，以及芯片改良的轰炸，有XX.XX%概率强制敌方选取我方最前排作为敌方攻击目标(多个新英雄，此效果可叠加，最高概率25%） 实现逻辑：战斗开始前，将我方玩家所有携带【1554】作用号值的进行累加 敌方 轰炸机和直升机攻击时，若执行一下攻击行为1.轰炸机（兵种类型=3）的技能303 2.直升机（兵种类型=4）的技能403 3.改良技能 反击轰炸 作用号【1543】改良的技能303 https://tapd.tencent.com/10144051/prong/stories/view/11101440510580154404.地狱火轰炸 作用号【1533】改良的技能403 https://tapd.tencent.com/10144051/prong/stories/view/1110144051057987426以上4个均 有 min(【1554】，eff) 的概率强制其目标攻击我方最前排单位 ，eff值  读取const表 effect1554limit   【1554】是万分比数值，2500=25% 概率拦截敌方空军攻击我方首排单位。
+
+	HERO_1555 = 1555;//【1555】玩家战略技能：行军扩编     skill表 ID:10102  buffId:23066   效果：此技能开启期间时，集结或援助（等所有组队行为） 部队（兵种类型 = 1-8全兵种生效）攻击增加 【1555】类型：【1555】是万分比数值   公式：部队攻击 = 基础攻击 * （1 + 其他攻击加成 + 【1555】
+	HERO_1556 = 1556;//【1556】玩家战略技能：行军扩编     skill表 ID:10102  buffId:23066   效果：此技能开启期间时，集结或援助（等所有组队行为） 部队（兵种类型 = 1-8全兵种生效）防御增加 【1556】类型：【1556】是万分比数值  公式：部队防御 = 基础防御 * （1 + 其他防御加成 + 【1556】
+	HERO_1557 = 1557;//【1557】玩家战略技能：行军扩编     skill表 ID:10102  buffId:23066   效果：此技能  增加出征士兵效果额外增加 【1557】类型：【1557】是万分比数值  公式：出征士兵数量 = 基础数量 * （1 + 其他扩编效果加成 + 【1557】）
+
+	SW_4026 = 4026;//【万分比】治疗伤兵时所有资源消耗数量减少
+	SW_1558 = 1558;//】【万分比】统帅之战战场内全局死转伤比例增加
+	SW_1559 = 1559;//】【万分比】统帅之战战场内，在电塔建筑中战斗时死转伤比例增加
+	SW_1560 = 1560;//】【万分比】统帅之战战场内，在盟总建筑中战斗时死转伤比例增加
+	CYBORG_1561 = 1561; // 赛博内 部队攻击增加
+
+	HERO_1562 = 1562; //【万分比】【专属芯片用】突击步兵攻击每命中1次目标后，攒1个豆（若命中目标为主战坦克，可额外攒1个豆），当豆攒至100个时，触发1次额外范围攻击效果；范围攻击效果：对所有【近战部队】造成1次XX%伤害的范围攻击（对坦克部队造成2倍XX%  注：额外触发的范围攻击不攒豆，触发范围攻击后豆清空至0 注：希伯特贯穿同时打3个目标时，算作命中了3次目标，攒3次豆 注：额外触发的范围攻击在每次攻击结算后单独判定是否触发，若触发则在本次攻击结束后即释放范围攻击 注：额外触发的范围攻击目标选择：若敌方当前存在【近战部队】则取敌方所有【近战部队】为攻击目标，若敌方当前不存在【近战部队】则选取敌方所有【远程部队】为攻击目标；【近战部队】：防御坦克、采矿车、主战坦克、轰炸机（兵种类型 = 1、2、3、8）；【远程部队】：直升机、突击步兵、狙击兵、攻城车（兵种类型 = 4、5、6、7）注：该作用号变化数值为范围攻击的基础伤害 注：范围攻击的伤害随目标数量变化 注：伤害随目标数量变化数值读取const表，字段effect1562DamageParam；配置格式：数量1_伤害1,数量2_伤害2_......（目标数量在配置1~2之间时取伤害1，在数量2之上时取伤害2，以此类推；伤害数值为万分比） 注：攒豆数量达到XX时，触发范围攻击；该数值读取const表，字段effect1562TimesLimit，配置格式：上限数值（int）注：对坦克部队造成X倍伤害数值读取const表，字段effect1562DamageUpParam；配置格式：额外伤害倍数_兵种类型1_兵种类型2_......（额外伤害倍数为万分比数值）注：即范围攻击伤害 = 基础伤害 * 【1562】/10000 * 目标伤害参数值/10000 *（1 + if（坦克，额外伤害倍数/10000，0））
+	HERO_1563 = 1563; //【万分比】【专属天赋用】触发作用号【1562】效果时，范围攻击的伤害额外增加XX% 注：即范围攻击伤害 = 基础伤害 * 【1562】/10000 * 目标伤害参数值/10000*（1 + if（坦克，额外伤害倍数/10000，0）） * （1 + 【1563】/10000） 注：基础伤害按照被攻击方防御数值分别计算基础伤害数值
+	HERO_1564 = 1564; //【万分比】突击步兵受到空军（兵种类型 = 3、4）攻击后，受到伤害减少XX% 注：该作用号计算时与【1121】累乘计算；即：受到伤害 = 基础伤害*（1 - 【1121】）*（1 - 【1564】） 注：【1121】投放在突击步兵芯片【扭曲力场】上，概率触发
+
+	SOLDIER12_1565 = 1565;//【1565】【万分比】进攻战斗中，坦克（兵种类型 = 1或2）攻击增加
+	SOLDIER12_1566 = 1566;//【1566】【万分比】进攻战斗中，空军（兵种类型 = 3或4）攻击增加
+	SOLDIER12_1567 = 1567;//【1567】【万分比】进攻战斗中，步兵（兵种类型 = 5或6）攻击增加
+	SOLDIER12_1568 = 1568;//【1568】【万分比】进攻战斗中，战车（兵种类型 = 7或8）攻击增加
+
+	SOLDIER12_1569 = 1569;//【1569】【万分比】进攻战斗中，坦克（兵种类型 = 1或2）防御增加
+	SOLDIER12_1570 = 1570;//【1570】【万分比】进攻战斗中，空军（兵种类型 = 3或4）防御增加
+	SOLDIER12_1571 = 1571;//【1571】【万分比】进攻战斗中，步兵（兵种类型 = 5或6）防御增加
+	SOLDIER12_1572 = 1572;//【1572】【万分比】进攻战斗中，战车（兵种类型 = 7或8）防御增加
+
+	SOLDIER12_1573 = 1573;//【1573】【万分比】进攻战斗中，坦克（兵种类型 = 1或2）生命增加
+	SOLDIER12_1574 = 1574;//【1574】【万分比】进攻战斗中，空军（兵种类型 = 3或4）生命增加
+	SOLDIER12_1575 = 1575;//【1575】【万分比】进攻战斗中，步兵（兵种类型 = 5或6）生命增加
+	SOLDIER12_1576 = 1576;//【1576】【万分比】进攻战斗中，战车（兵种类型 = 7或8）生命增加 注：上述作用号均仅在【进攻战斗】时生效，与其他加成作用号累加计算；即实际属性 = 基础属性*（1 + 作用值A/10000 + 本作用值/10000） 注：上述作用号在精炼战报中体现在对应兵种的攻击、防御或生命属性上
+
+	SOLDIER12_1577 = 1577;//【1577】【万分比】防守战斗中，坦克（兵种类型 = 1或2）攻击增加
+	SOLDIER12_1578 = 1578;//【1578】【万分比】防守战斗中，空军（兵种类型 = 3或4）攻击增加
+	SOLDIER12_1579 = 1579;//【1579】【万分比】防守战斗中，步兵（兵种类型 = 5或6）攻击增加
+	SOLDIER12_1580 = 1580;//【1580】【万分比】防守战斗中，战车（兵种类型 = 7或8）攻击增加
+
+	SOLDIER12_1581 = 1581;//【1581】【万分比】防守战斗中，坦克（兵种类型 = 1或2）防御增加
+	SOLDIER12_1582 = 1582;//【1582】【万分比】防守战斗中，空军（兵种类型 = 3或4）防御增加
+	SOLDIER12_1583 = 1583;//【1583】【万分比】防守战斗中，步兵（兵种类型 = 5或6）防御增加
+	SOLDIER12_1584 = 1584;//【1584】【万分比】防守战斗中，战车（兵种类型 = 7或8）防御增加
+
+	SOLDIER12_1585 = 1585;//【1585】【万分比】防守战斗中，坦克（兵种类型 = 1或2）生命增加
+	SOLDIER12_1586 = 1586;//【1586】【万分比】防守战斗中，空军（兵种类型 = 3或4）生命增加
+	SOLDIER12_1587 = 1587;//【1587】【万分比】防守战斗中，步兵（兵种类型 = 5或6）生命增加
+	SOLDIER12_1588 = 1588;//【1588】【万分比】防守战斗中，战车（兵种类型 = 7或8）生命增加 注：上述作用号均仅在【防守战斗】时生效，与其他加成作用号累加计算；即实际属性 = 基础属性*（1 + 作用值A/10000 + 本作用值/10000）注：上述作用号在精炼战报中体现在对应兵种的攻击、防御或生命属性上
+
+	SOLDIER12_1589 = 1589;//【1589】【绝对值】解锁12级防御坦克（兵种类型 = 1）
+	SOLDIER12_1590 = 1590;//【1590】【绝对值】解锁12级轰炸机（兵种类型 = 3）
+	SOLDIER12_1591 = 1591;//【1591】【绝对值】解锁12级突击步兵（兵种类型 = 5）
+	SOLDIER12_1592 = 1592;//【1592】【绝对值】解锁12级攻城车（兵种类型 = 7）
+
+	SOLDIER12_4028 = 4028;//【4028】【万分比】12级防御坦克（兵种类型 = 1）训练速度增加
+	SOLDIER12_4029 = 4029;//【4029】【万分比】12级轰炸机（兵种类型 = 3）训练速度增加
+	SOLDIER12_4030 = 4030;//【4030】【万分比】12级突击步兵（兵种类型 = 5）训练速度增加
+	SOLDIER12_4031 = 4031;//【4031】【万分比】12级攻城车（兵种类型 = 7）训练速度增加 注：上述作用号仅对指定兵种生效，与其他加成作用号累加计算；即实际训练时间 = 基础时间/（1 + 作用值A/10000 + 本作用值/10000）注：【前端同学】需要在训练界面和晋升界面中展示对应训练或晋升时间
+
+	SOLDIER12_4032 = 4032;//【4032】【万分比】12级防御坦克（兵种类型 = 1）治疗速度增加
+	SOLDIER12_4033 = 4033;//【4033】【万分比】12级轰炸机（兵种类型 = 3）治疗速度增加
+	SOLDIER12_4034 = 4034;//【4034】【万分比】12级突击步兵（兵种类型 = 5）治疗速度增加
+	SOLDIER12_4035 = 4035;//【4035】【万分比】12级攻城车（兵种类型 = 7）治疗速度增加 注：上述作用号仅对指定兵种生效，与其他加成作用号累加计算；即实际治疗时间 = 基础时间/（1 + 作用值A/10000 + 本作用值/10000）注：【前端同学】需要在伤兵治疗界面中展示对应治疗时间
+
+	ARMOUR_1593 = 1593; //【1593】【万分比】主战坦克（兵种类型 = 2）触发《主炮袭击》技能时，若当前随机攻击的目标中存在空军（兵种类型 = 3或4）时，有XX%概率优先选定空军作为攻击目标
+	ARMOUR_1594 = 1594; //【1594】【万分比】集结战斗时，每有一个队友则增加自身防御坦克（兵种类型 = 1）生命加成（至多叠加10层）
+	ARMOUR_1595 = 1595; //【1595】【万分比】直升机（兵种类型 = 4）攻击命中步兵（兵种类型 = 5或6）时，降低其攻击加成（持续2回合）
+    ARMOUR_1596 = 1596; //【1596】【万分比】轰炸机（兵种类型 = 3）触发《智能护盾》技能时，再触发《俯冲轰炸》技能时伤害提升（持续2回合）
+	ARMOUR_1597 = 1597; //【1597】【万分比】狙击兵（兵种类型 = 6）攻击时，无视目标部分生命加成属性（仅对本次攻击生效）
+    ARMOUR_1598 = 1598; //【1598】【万分比】突击步兵（兵种类型 = 5）攻击时，每命中1个目标单位，增加自身防御和生命加成（至多叠加100层）
+ 	ARMOUR_1599 = 1599; //【1599】【万分比】采矿车（兵种类型 = 8）参与战斗中，【光环】所有友军的【近战部队】（兵种类型 = 1 2 3 或8）攻击增加（至多叠加2层）
+ 	ARMOUR_1600 = 1600; //【1600】【绝对值】装备附加属性条目增加
+ 	ARMOUR_1601 = 1601; //【1601】【绝对值】装备强化等级上限增加
+ 	ARMOUR_1602 = 1602; //【1602】【万分比】装备附加属性条目若为完美条目，额外增加属性加成 注：仅对条目为完美的附加属性生效（都所有品质的完美条目属性都生效）    注：实际属性 = 完美基础属性*（1 + 本作用值/10000）*（1 + 装备研究的附加属性加成/10000）
+	ARMOUR_1603 = 1603; //【1603】【绝对值】解锁装备7件套装效果 注：开关型作用号，数值大于0即生效
+
+	ZHUANGBAN_1604 = 1604;//【1604】【万分比】部队攻击、防御、生命增加 注：该作用号无条件，在任意场景下均生效 注：该作用号数值与其他作用号累加计算；即：实际攻击 = 基础攻击*（1 + 其他作用值/10000 + 本作用值/10000）
+	ZHUANGBAN_1605 = 1605;//【1605】【万分比】集结战斗时，部队攻击、防御、生命增加 注：该作用号仅在集结战斗时生效（包含集结进攻和防守）注：该作用号数值与其他作用号累加计算；即：实际攻击 = 基础攻击*（1 + 其他作用值/10000 + 本作用值/10000）
+	ZHUANGBAN_1606 = 1606;//【1606】【万分比】个人战斗时，部队攻击、防御、生命增加 注：该作用号仅在个人战斗时生效（包含个人进攻和防守） 注：该作用号数值与其他作用号累加计算；即：实际攻击 = 基础攻击*（1 + 其他作用值/10000 + 本作用值/10000）
+	ZHUANGBAN_1607 = 1607;//【1607】【万分比】个人战斗时，部队伤害增加 注：该作用号仅在个人战斗时生效（包含个人进攻和防守）注：该作用号数值与其他作用号累加计算；即：实际伤害 = 基础伤害*（1 + 其他作用值/10000 + 本作用值/10000）
+
+	HERO_1608 = 1608;//【1608】【万分比】与其他进行决斗时，本次决斗战斗时，部队伤害增加注：不论决斗发起方还是接收方均生效 注：仅在本次决斗战斗时生效
+	HERO_1609 = 1609;//【1609】【万分比】决斗时，杀死敌方部队比例增加 注：《决斗》技能触发时，目前是按照固定比例死兵，该作用号效果为增加该比例数值；即《决斗》实际死兵 = 技能固定比例 + 【1609】
+	
+	HERO_1610 = 1610;//【1610】【万分比】集结战斗时，己方部队数量每大于等于敌方部队数量XX，增加自身部队攻击（至多叠加 15 层）
+	HERO_1611 = 1611;//【1611】【万分比】集结战斗时，己方部队数量每大于等于敌方部队数量XX，增加自身部队防御（至多叠加 15 层）
+	HERO_1612 = 1612;//【1612】【万分比】集结战斗时，己方部队数量每大于等于敌方部队数量XX，增加自身部队生命（至多叠加 15 层）注：上述作用号的高于敌方部队数量的数值参数对应读取const表，effect1610NumParam、effect1611NumParam、effect1612NumParam；绝对值 注：具体算式：增加属性 = min（int（（己方集结数量 - 敌方集结数量）/参数数值），15）；若己方集结部队数量低于敌方，则不增加属性 注：上述作用号均仅在集结战斗时（包含集结进攻和集结防守）生效，在战斗开始时进行判定并计算对应数值，战中不再改变  注：上述作用号数值计算时均为累加计算，即 实际数值 = 基础数值*（1 + 其他作用值/10000 + 本作用值/10000） 注：上述作用号均展示在战报中，且在精简战报中合并至所有兵种的对应属性展示
+	HERO_1613 = 1613;//【1613】【万分比】集结战斗时，己方部队每存在1个不同类型的兵种，增加自身部队攻击（至多叠加 8 层）
+	HERO_1614 = 1614;//【1614】【万分比】集结战斗时，己方部队每存在1个不同类型的兵种，增加自身部队防御（至多叠加 8 层）
+	HERO_1615 = 1615;//【1615】【万分比】集结战斗时，己方部队每存在1个不同类型的兵种，增加自身部队生命（至多叠加 8 层） 注：战斗开始时按照兵种类型（1-8）筛选去重己方参与战斗的不同的兵种类型数，增加属性 = 去重数量*作用值/10000 注：上述作用号均仅在集结战斗时（包含集结进攻和集结防守）生效，在战斗开始时进行判定并计算对应数值，战中不再改变 注：上述作用号数值计算时均为累加计算，即 实际数值 = 基础数值*（1 + 其他作用值/10000 + 本作用值/10000） 注：上述作用号均展示在战报中，且在精简战报中合并至所有兵种的对应属性展示
+
+	HERO_1616 = 1616;//【1616】【万分比】【专属芯片用】复制原作用号【1090】注：【1616】与【1090】互斥，两作用号同时存在时，生效【1616】
+	HERO_1617 = 1617;//【1617】【万分比】【专属芯片用】狙击步兵攻击每命中1次目标后，给自己加1层印记，印记达到effect1617TimesLimit层时，进入”猎杀状态“给自己加BUFF，下两次攻击必定触发【1616】，并且无需瞄准直接攻击
+	HERO_1618 = 1618;//【1618】【万分比】【专属天赋用】集结战斗时，触发隐匿【1093】概率 +xx% 注：【1093】触发的隐匿效果为：有概率躲避空军的轰炸
+	HERO_1619 = 1619;//【1619】【万分比】【专属芯片用】印记达到effect1617TimesLimit层处于精准设计状态时隐匿【1093】触发概率 +xx%
+	
+	SUPER_SOLDIER_1633 = 1633;//每N回合（取const中effect1633TimesLimit字段）给队伍 最前排 套上采矿车最大血量 XX% 的护盾，带有护盾的目标被攻击时，优先扣除护盾血量，护盾在N回合结束时清零，下一回合开始时重新套。
+
+	HERO_1634 = 1634;//防御坦克（兵种类型 =1）在战斗中所损失和受伤的数量，按照【1634】的比例战斗结束后复活。实际复活士兵数量 = 玩家损失士兵*（【1634】+ 【1635】*层数）层数上限effect1634Maxinum控制 填 75 = 最高可受到75次增益
+	HERO_1635 = 1635;//1635 为固定值，不受军事值（三值成长影响），效果值 由const.xml effect1635BaseVal 控制 填 10= 0.1% 1.自身主战坦克（兵种类型 =2）出征士兵数量大于目标防御坦克（兵种类型 =1） 的X% X由const.xml effect1635Maxinum控制 填5000 = 50%  2.若战斗中对空军产生了暴击 3.则对所有满足的目标防御坦克（包含集结）且防御坦克归属玩家的身上携带【1634】增加一层复活
+
+	HERO_1637 = 1637;
+	HERO_1638 = 1638;
+
+	HERO_1639 = 1639;
+	HERO_1640 = 1640;
+	HERO_1641 = 1641;
+	HERO_1642 = 1642;
+	HERO_1643 = 1643;//触发逻辑：自身轰炸机（兵种类型 =3）在每次触发 【士兵技能：battle_soldier_skill_303】和 【专属行芯片聚能反击作用号：1543】后赋予效果，持续至战斗结束。额外触发逻辑：判断个人或集结内，有没有单排直升机（兵种类型 =4）士兵数量>= 玩家自身轰炸机士兵数量*X%，effect1643SoldierPer控制 填5000= 50%，若有，【1643】效果逻辑翻倍注意无需每回合都要判断战斗开始满足即可，享受永久双倍速叠加效果逻辑：轰炸机攻击增加，每次满足触发条件，均可触发堆叠，堆叠有上限轰炸机攻击加成 = 1+其他攻击加成+ Min{【1643】,X}最大可叠加X%攻击加成，X由const.xml effect1643Maxinum控制 填10000  即100%
+	HERO_1644 = 1644;//触发逻辑：自身直升机（兵种类型 =4）在每次触发 【士兵技能：battle_soldier_skill_304】和 【专属行芯片地狱火轰炸作用号：1533】后赋予效果，持续至战斗结束。额外触发逻辑：判断个人或集结内，有没有单排轰炸机（兵种类型 =3）士兵数量>= 玩家自身直升机士兵数量*X%，effect1644SoldierPer控制 填5000= 50%，若有，【1644】效果逻辑翻倍注意无需每回合都要判断战斗开始满足即可，享受永久双倍速叠加效果逻辑：直升机攻击增加，每次满足触发条件，均可触发堆叠，堆叠有上限直升机攻击加成 = 1+其他攻击加成+ Min{【1644】,X}最大可叠加X%攻击加成，X由const.xml effect1644Maxinum控制 填10000  即100%
+
+	HERO_1645 = 1645;//自身直升机（兵种类型 =4）在每次触发黑鹰轰炸 【士兵技能：battle_soldier_skill_403】时。有 【1645】的概率 使队伍中 小于上述直升机士兵数量200%的轰炸机（兵种类型 =3）对直升机打击的目标释放俯冲轰炸【士兵技能：battle_soldier_skill_303】，
+	HERO_1646 = 1646;
+
+	HERO_1647 = 1647;
+	HERO_1648 = 1648;
+	HERO_1649 = 1649;
+
+	HERO_1650 = 1650;
+	HERO_1651 = 1651;
+	HERO_1652 = 1652;
+	HERO_1653 = 1653;
+
+	HERO_1654 = 1654;
+	HERO_1655 = 1655;
+	HERO_1656 = 1656;
+	HERO_1657 = 1657;
+	HERO_1658 = 1658;
+
+	HERO_1659 = 1659;
+	HERO_1660 = 1660;
+	HERO_1661 = 1661;
+	HERO_1662 = 1662;
+
+	HERO_1663 = 1663;
+	HERO_1664 = 1664;
+	HERO_1665 = 1665;
+	HERO_1666 = 1666;
+	HERO_1667 = 1667;
+	HERO_1668 = 1668;
+
+	HERO_1669 = 1669;
+	HERO_1670 = 1670;
+	HERO_1671 = 1671;
+	HERO_1672 = 1672;
+	HERO_1673 = 1673;
+
+	HERO_1681 = 1681;
+	HERO_1682 = 1682;
+	HERO_1683 = 1683;
+	HERO_1684 = 1684;
+	EFF_1685 = 1685;
+
+	HERO_12001 = 12001;
+	HERO_12002 = 12002;
+	HERO_12003 = 12003;
+	HERO_12004 = 12004;
+	HERO_12005 = 12005;
+	HERO_12006 = 12006;
+	HERO_12007 = 12007;
+	HERO_12008 = 12008;
+	HERO_12009 = 12009;
+	HERO_12010 = 12010;
+	HERO_12011 = 12011;
+	HERO_12012 = 12012;
+	HERO_12013 = 12013;
+	HERO_12014 = 12014;
+	HERO_12015 = 12015;
+	HERO_12016 = 12016;
+	HERO_12017 = 12017;
+	HERO_12018 = 12018;
+	HERO_12019 = 12019;
+	HERO_12020 = 12020;
+	HERO_12021 = 12021;
+	HERO_12022 = 12022;
+	HERO_12023 = 12023;
+
+	HERO_12131 = 12131;
+	HERO_12132 = 12132;
+	HERO_12133 = 12133;
+	HERO_12134 = 12134;
+	HERO_12141 = 12141;
+	HERO_12142 = 12142;
+	HERO_12143 = 12143;
+
+	HERO_12151 = 12151;
+	HERO_12152 = 12152;
+	HERO_12153 = 12153;
+	HERO_12154 = 12154;
+
+	HERO_12161 = 12161;
+	HERO_12162 = 12162;
+	HERO_12163 = 12163;
+	HERO_12164 = 12164;
+	HERO_12165 = 12165;
+	HERO_12166 = 12166;
+	HERO_12167 = 12167;
+	HERO_12168 = 12168;
+	HERO_12169 = 12169;
+	HERO_12170 = 12170;
+	HERO_12171 = 12171;
+	HERO_12172 = 12172;
+	HERO_12173 = 12173;
+	HERO_12181 = 12181;
+
+	HERO_12361 = 12361;
+	HERO_12362 = 12362;
+	HERO_12363 = 12363;
+	HERO_12364 = 12364;
+	HERO_12365 = 12365;
+	HERO_12371 = 12371;
+	HERO_12381 = 12381;
+	HERO_12382 = 12382;
+	HERO_12383 = 12383;
+	HERO_12384 = 12384;
+	HERO_12385 = 12385;
+
+	HERO_12391 = 12391;
+	HERO_12392 = 12392;
+	HERO_12393 = 12393;
+	HERO_12394 = 12394;
+
+	HERO_12401 = 12401;
+	HERO_12402 = 12402;
+	HERO_12403 = 12403;
+	HERO_12404 = 12404;
+
+	EFF_11041 = 11041;
+	EFF_11042 = 11042;
+	EFF_11043 = 11043;
+	EFF_11044 = 11044;
+	EFF_11045 = 11045;
+
+	EFF_11051 = 11051;
+	EFF_11052 = 11052;
+	EFF_11053 = 11053;
+	EFF_11054 = 11054;
+	EFF_11055 = 11055;
+	EFF_11056 = 11056;
+	EFF_11057 = 11057;
+	EFF_11058 = 11058;
+	EFF_11059 = 11059;
+
+	EFF_11061 = 11061;
+	EFF_11062 = 11062;
+	EFF_11063 = 11063;
+	EFF_11064 = 11064;
+	EFF_11065 = 11065;
+	EFF_11066 = 11066;
+	EFF_11067 = 11067;
+	EFF_11068 = 11068;
+	EFF_11069 = 11069;
+
+	HERO_12411 = 12411;
+	HERO_12412 = 12412;
+	HERO_12413 = 12413;
+	HERO_12414 = 12414;
+	HERO_12421 = 12421;
+	HERO_12431 = 12431;
+	HERO_12432 = 12432;
+	HERO_12433 = 12433;
+	HERO_12434 = 12434;
+	HERO_12435 = 12435;
+
+	HERO_12441 = 12441;
+	HERO_12442 = 12442;
+	HERO_12443 = 12443;
+	EFF_12451 = 12451;
+	EFF_12491 = 12491;
+
+	BASE_DEFD = 10049;// 【10049】部队基础防御减少，万分比。部队基础防御=原基础防御*（1+其他修正-【10049】/10000）
+	BASE_HPD  = 10050;// 【10050】部队基础生命减少，万分比。部队基础生命=原基础生命*（1+其他修正-【10050】/10000）
+	BASE_ATKD = 10051;// 【10051】部队基础攻击减少，万分比。部队基础攻击=原基础攻击*（1+其他修正-【10051】/10000）
+
+	HERO_12461 = 12461;
+	HERO_12462 = 12462;
+	HERO_12463 = 12463;
+	HERO_12464 = 12464;
+	HERO_12465 = 12465;
+	HERO_12466 = 12466;
+	HERO_12467 = 12467;
+	HERO_12468 = 12468;
+	HERO_12469 = 12469;
+	HERO_12471 = 12471;
+	HERO_12481 = 12481;
+	HERO_12482 = 12482;
+	HERO_12483 = 12483;
+	HERO_12484 = 12484;
+	HERO_12485 = 12485;
+
+	HERO_12501 = 12501;
+	HERO_12502 = 12502;
+	HERO_12503 = 12503;
+	HERO_12504 = 12504;
+
+	HERO_12601 = 12601;
+	HERO_12602 = 12602;
+	HERO_12603 = 12603;
+	HERO_12604 = 12604;
+
+	ARMOUR_1801 = 1801;//【1801】【万分比】防御坦克（兵种类型 = 1）受到攻击时，伤害减少
+	ARMOUR_1802 = 1802;//【1802】【万分比】狙击兵（兵种类型 = 6）攻击远程部队（兵种类型 = 4/6/5/7）时，伤害增加
+	ARMOUR_1803 = 1803;//【1803】【万分比】采矿车（兵种类型 = 8）受到近战部队（兵种类型 = 2/1/3/8）攻击时，伤害减少
+	ARMOUR_1804 = 1804;//【1804】【万分比】攻城车（兵种类型 = 7）受到空军部队（兵种类型 = 4/3）攻击时，伤害减少
+	// 注：上述伤害增加的作用号在计算时为累加算式。即实际伤害 = 基础伤害 * （1 + 其他作用值/10000 + 本作用值/10000）
+	// 注：上述伤害减少的作用号在计算时为累乘算式。即实际伤害 = 基础伤害 *（1 - 其他作用值/10000）*（1 - 本作用值/10000）
+	
+	EFF_1805 = 1805;//：主战坦克（兵种类型=2）对近战（兵种类型=1/2/3/4）伤害增加
+	EFF_1806 = 1806;//：直升机（兵种类型=4）受到近战（兵种类型=1/2/3/4）伤害减少
+	EFF_1807 = 1807;//：防御坦克（兵种类型=1）集结时，受到伤害减少。这个作用号不和原本的减伤作用号叠加，在伤害计算最外层*（1 - 减免）
+	EFF_1808 = 1808;//：攻城车（兵种类型=7）集结时，受到伤害减少。这个作用号不和原本的减伤作用号叠加，在伤害计算最外层*（1 - 减免）
+	EFF_1809 = 1809;//：攻击防御坦克（兵种类型=1）时，攻击增加
+	EFF_1810 = 1810;//：攻击采矿车（兵种类型=8）时，攻击增加
+	EFF_1811 = 1811;//：攻击直升机（兵种类型=4）时，攻击增加
+	EFF_1812 = 1812;//：攻击攻城车（兵种类型=7）时，攻击增加
+	EFF_1813 = 1813;//：受到主战坦克（兵种类型=2）攻击时，防御增加
+	EFF_1814 = 1814;//：受到轰炸机（兵种类型=3）攻击时，防御增加
+	EFF_1815 = 1815;//：受到突击步兵（兵种类型=5）攻击时，防御增加
+	EFF_1816 = 1816;//：受到狙击兵（兵种类型=6）攻击时，防御增加
+
+	EFF_12031 = 12031;
+	EFF_12032 = 12032;
+	EFF_12033 = 12033;
+	EFF_12034 = 12034;
+	EFF_12035 = 12035;
+	EFF_12036 = 12036;
+	EFF_12037 = 12037;
+	EFF_12038 = 12038;
+	EFF_12039 = 12039;
+	EFF_12040 = 12040;
+	EFF_12041 = 12041;
+	EFF_12042 = 12042;
+	EFF_12043 = 12043;
+	EFF_12044 = 12044;
+	EFF_12045 = 12045;
+	EFF_12046 = 12046;
+	EFF_12047 = 12047;
+	EFF_12048 = 12048;
+	EFF_12049 = 12049;
+
+	EFF_12051 = 12051;
+	EFF_12052 = 12052;	
+	EFF_12053 = 12053;
+	EFF_12054 = 12054;
+	EFF_12061 = 12061;
+	EFF_12062 = 12062;
+	EFF_12063 = 12063;
+	EFF_12064 = 12064;
+	EFF_12065 = 12065;
+	EFF_12066 = 12066;
+	EFF_12071 = 12071;
+	EFF_12072 = 12072;
+	EFF_12073 = 12073;
+	EFF_12074 = 12074;
+	EFF_12075 = 12075;
+
+	EFF_12081 = 12081;
+	EFF_12082 = 12082;
+	EFF_12083 = 12083;
+	EFF_12084 = 12084;
+	EFF_12085 = 12085;
+	EFF_12086 = 12086;
+	EFF_12087 = 12087;
+	EFF_12088 = 12088;
+	EFF_12089 = 12089;
+	EFF_12090 = 12090;
+	EFF_12091 = 12091;
+	EFF_12092 = 12092;
+
+	EFF_4050 = 4050;
+	EFF_4051 = 4051;
+
+	HERO_12221 = 12221;
+	HERO_12222 = 12222;
+	HERO_12223 = 12223;
+	HERO_12224 = 12224;
+
+	HERO_12331 = 12331;
+	HERO_12332 = 12332;
+	HERO_12333 = 12333;
+	HERO_12334 = 12334;
+	HERO_12335 = 12335;
+	HERO_12336 = 12336;
+	HERO_12337 = 12337;
+	HERO_12338 = 12338;
+	HERO_12339 = 12339;
+	HERO_12341 = 12341;
+	HERO_12351 = 12351;
+	HERO_12352 = 12352;
+	HERO_12353 = 12353;
+	HERO_12354 = 12354;
+	HERO_12355 = 12355;
+	HERO_12356 = 12356;
+	HERO_12357 = 12357;
+
+	HERO_12511 = 12511;
+	HERO_12512 = 12512;
+	HERO_12513 = 12513;
+	HERO_12514 = 12514;
+	HERO_12515 = 12515;
+	HERO_12516 = 12516;
+	HERO_12517 = 12517;
+	HERO_12518 = 12518;
+	
+	HERO_12521 = 12521;
+	
+	HERO_12531 = 12531;
+	HERO_12532 = 12532;
+	HERO_12533 = 12533;
+	HERO_12534 = 12534;
+
+	EFF_12541 = 12541;
+	EFF_12551 = 12551;
+	EFF_12552 = 12552;
+	EFF_12553 = 12553;
+	EFF_12554 = 12554;
+	EFF_12555 = 12555;
+	EFF_12556 = 12556;
+
+	XQHX_10052 = 10052;
+	XQHX_10053 = 10053;
+	XQHX_10054 = 10054;
+	XQHX_10055 = 10055;
+	XQHX_10056 = 10056;
+	XQHX_10057 = 10057;
+	XQHX_10058 = 10058;
+	XQHX_10059 = 10059;
+	XQHX_10060 = 10060;
+	XQHX_10061 = 10061;
+	XQHX_10062 = 10062;
+	XQHX_10063 = 10063;
+	XQHX_10064 = 10064;
+	XQHX_10065 = 10065;
+	XQHX_10066 = 10066;
+	XQHX_10067 = 10067;
+	XQHX_10068 = 10068;
+	XQHX_10069 = 10069;
+	XQHX_10070 = 10070;
+	XQHX_10071 = 10071;
+	XQHX_10072 = 10072;
+	XQHX_10073 = 10073;
+	XQHX_10074 = 10074;
+	XQHX_10075 = 10075;
+	XQHX_10076 = 10076;
+	XQHX_10077 = 10077;
+
+	EFF_12571 = 12571;
+	EFF_12572 = 12572;
+	EFF_12573 = 12573;
+	EFF_12574 = 12574;
+	EFF_12575 = 12575;
+	EFF_12576 = 12576;
+	EFF_12577 = 12577;
+	EFF_12578 = 12578;
+	EFF_12581 = 12581;
+	EFF_12591 = 12591;
+	EFF_12592 = 12592;
+	EFF_12593 = 12593;
+	EFF_12594 = 12594; 
+
+	//	- 战场内，自身携带XX机甲时，队伍中每存在一个解锁精神赋能的机甲，自身XX兵种超能攻击增加。
+ EFF_5001 = 5001;// - 5001：携带天霸（机甲ID：1011），防御坦克（兵种ID：1）。
+ EFF_5002 = 5002;// - 5002：携带黑武士（机甲ID：1007），主站坦克（兵种ID：2）。
+ EFF_5003 = 5003;// - 5003：携带深渊梦魇（机甲ID：1015），轰炸机（兵种ID：3）。
+ EFF_5004 = 5004;// - 5004：携带大天使（机甲ID：1009），直升机（兵种ID：4）。
+ EFF_5005 = 5005;// - 5005：携带阿努比斯（机甲ID：1012），突击步兵（兵种ID：5）。
+ EFF_5006 = 5006;// - 5006：携带极寒毁灭（机甲ID：1008），狙击兵（兵种ID：6）。
+ EFF_5007 = 5007;// - 5007：携带煞星（机甲ID：1013），攻城车（兵种ID：7）。
+ EFF_5008 = 5008;// - 5008：携带捍卫者（机甲ID：1014），采矿车（兵种ID：8）。
+	//- 战场内，自身携带XX机甲时，自身XX兵种攻击增加。
+ EFF_5011 = 5011;// - 5011：携带天霸（机甲ID：1011），防御坦克（兵种ID：1）。
+ EFF_5012 = 5012;// - 5012：携带黑武士（机甲ID：1007），主站坦克（兵种ID：2）。
+ EFF_5013 = 5013;// - 5013：携带深渊梦魇（机甲ID：1015），轰炸机（兵种ID：3）。
+ EFF_5014 = 5014;// - 5014：携带大天使（机甲ID：1009），直升机（兵种ID：4）。
+ EFF_5015 = 5015;// - 5015：携带阿努比斯（机甲ID：1012），突击步兵（兵种ID：5）。
+ EFF_5016 = 5016;// - 5016：携带极寒毁灭（机甲ID：1008），狙击兵（兵种ID：6）。
+ EFF_5017 = 5017;// - 5017：携带煞星（机甲ID：1013），攻城车（兵种ID：7）。
+ EFF_5018 = 5018;// - 5018：携带捍卫者（机甲ID：1014），采矿车（兵种ID：8）。
+//- 战场内，自身携带XX机甲时，自身XX兵种防御增加。
+ EFF_5021 = 5021;// - 5021：携带天霸（机甲ID：1011），防御坦克（兵种ID：1）。
+ EFF_5022 = 5022;// - 5022：携带黑武士（机甲ID：1007），主站坦克（兵种ID：2）。
+ EFF_5023 = 5023;// - 5023：携带深渊梦魇（机甲ID：1015），轰炸机（兵种ID：3）。
+ EFF_5024 = 5024;// - 5024：携带大天使（机甲ID：1009），直升机（兵种ID：4）。
+ EFF_5025 = 5025;// - 5025：携带阿努比斯（机甲ID：1012），突击步兵（兵种ID：5）。
+ EFF_5026 = 5026;// - 5026：携带极寒毁灭（机甲ID：1008），狙击兵（兵种ID：6）。
+ EFF_5027 = 5027;// - 5027：携带煞星（机甲ID：1013），攻城车（兵种ID：7）。
+ EFF_5028 = 5028;// - 5028：携带捍卫者（机甲ID：1014），采矿车（兵种ID：8）。
+//- 战场内，自身携带XX机甲时，自身XX兵种生命增加。
+ EFF_5031 = 5031;// - 5031：携带天霸（机甲ID：1011），防御坦克（兵种ID：1）。
+ EFF_5032 = 5032;// - 5032：携带黑武士（机甲ID：1007），主站坦克（兵种ID：2）。
+ EFF_5033 = 5033;// - 5033：携带深渊梦魇（机甲ID：1015），轰炸机（兵种ID：3）。
+ EFF_5034 = 5034;// - 5034：携带大天使（机甲ID：1009），直升机（兵种ID：4）。
+ EFF_5035 = 5035;// - 5035：携带阿努比斯（机甲ID：1012），突击步兵（兵种ID：5）。
+ EFF_5036 = 5036;// - 5036：携带极寒毁灭（机甲ID：1008），狙击兵（兵种ID：6）。
+ EFF_5037 = 5037;// - 5037：携带煞星（机甲ID：1013），攻城车（兵种ID：7）。
+ EFF_5038 = 5038;// - 5038：携带捍卫者（机甲ID：1014），采矿车（兵种ID：8）。
+//- 战场内，自身携带XX机甲时，自身XX兵种攻击/防御/生命增加。
+ EFF_5041 = 5041;// - 5041：携带天霸（机甲ID：1011），防御坦克（兵种ID：1）。
+ EFF_5042 = 5042;// - 5042：携带黑武士（机甲ID：1007），主站坦克（兵种ID：2）。
+ EFF_5043 = 5043;// - 5043：携带深渊梦魇（机甲ID：1015），轰炸机（兵种ID：3）。
+ EFF_5044 = 5044;// - 5044：携带大天使（机甲ID：1009），直升机（兵种ID：4）。
+ EFF_5045 = 5045;// - 5045：携带阿努比斯（机甲ID：1012），突击步兵（兵种ID：5）。
+ EFF_5046 = 5046;// - 5046：携带极寒毁灭（机甲ID：1008），狙击兵（兵种ID：6）。
+ EFF_5047 = 5047;// - 5047：携带煞星（机甲ID：1013），攻城车（兵种ID：7）。
+ EFF_5048 = 5048;// - 5048：携带捍卫者（机甲ID：1014），采矿车（兵种ID：8）。
+
+ EFF_12321 = 12321; //- 【绝对值】【12321】荣耀凯恩（英雄id = 1078），战技持续时间 +XX
+ EFF_12322 = 12322; //- 【绝对值】【12322】荣耀所罗门（英雄id = 1081），战技持续时间 +XX
+ EFF_12323 = 12323; //- 【绝对值】【12323】埃托莉亚（英雄id = 1083），战技持续时间 +XX
+ EFF_12324 = 12324; //- 【绝对值】【12324】杰拉尼（英雄id = 1086），战技持续时间 +XX
+ EFF_12325 = 12325; //- 【绝对值】【12325】伊娜莉莎（英雄id = 1088），战技持续时间 +XX
+ EFF_12326 = 12326; //- 【绝对值】【12326】埃琳娜（英雄id = 1089），战技持续时间 +XX
+ EFF_12327 = 12327; //- 【绝对值】【12327】米卡（英雄id = 1093），战技持续时间 +XX
+ EFF_12328 = 12328; //- 【绝对值】【12328】杰西卡（英雄id = 1095），战技持续时间 +XX
+ EFF_12329 = 12329; //- 【绝对值】【12329】卡尔（英雄id = 1098），战技持续时间 +XX
+
+ EFF_12231 = 12231; 
+ EFF_12232 = 12232; 
+ EFF_12241 = 12241; 
+ EFF_12242 = 12242; 
+ EFF_12251 = 12251; 
+ EFF_12252 = 12252; 
+ EFF_12253 = 12253; 
+ EFF_12254 = 12254; 
+ EFF_12261 = 12261; 
+ EFF_12262 = 12262; 
+ EFF_12263 = 12263; 
+ EFF_12264 = 12264; 
+ EFF_12271 = 12271; 
+ EFF_12272 = 12272; 
+ EFF_12273 = 12273; 
+ EFF_12281 = 12281; 
+ EFF_12282 = 12282; 
+ EFF_12291 = 12291; 
+ EFF_12292 = 12292; 
+ EFF_12293 = 12293; 
+ EFF_12301 = 12301; 
+ EFF_12302 = 12302; 
+ EFF_12311 = 12311; 
+ EFF_12312 = 12312; 
+
+
+ 	EFF_12101 = 12101;
+ 	EFF_12102 = 12102;
+ 	EFF_12103 = 12103;
+ 	EFF_12104 = 12104;
+
+ 	EFF_12111 = 12111;
+ 	EFF_12112 = 12112;
+ 	EFF_12113 = 12113;
+ 	EFF_12114 = 12114;
+ 	EFF_12115 = 12115;
+ 	EFF_12116 = 12116;
+
+	EFF_12121 = 12121;
+	EFF_12122 = 12122;
+	EFF_12123 = 12123;
+
+	HERO_12191 = 12191;
+	HERO_12192 = 12192;
+	HERO_12193 = 12193;
+	HERO_12194 = 12194;
+
+	HERO_12201 = 12201;
+	HERO_12202 = 12202;
+	HERO_12203 = 12203;
+	HERO_12204 = 12204;
+	HERO_12205 = 12205;
+	HERO_12206 = 12206;
+	HERO_12207 = 12207;
+	HERO_12208 = 12208;
+	HERO_12211 = 12211;
+
+	JIJIA_1322 = 1322;//：【万分比】机甲出征或驻防时，轰炸机（兵种类型=3）每次触发俯冲轰炸（技能ID=30301），下次俯冲轰炸伤害 +X%  可持续叠加至战斗结束
+	JIJIA_1323 = 1323;//：【万分比】机甲出征或驻防时，且轰炸机（兵种类型=3）比例超过部队20%时，所有部队生命 +X%   参考作用号1316
+	JIJIA_1324 = 1324;//：【万分比】机甲出征或驻防时，且轰炸机（兵种类型=3）比例超过部队20%时，所有部队攻击 +X%   参考作用号1317
+
+	// 注：上述所有的集结战斗均包含集结进攻和集结防守的战斗
+	// 注：上述计算百分比的敌方是指对方所有参与战斗的部队，己方也是指自身所在队伍的所有参战部队
+	// 注：所谓击杀敌方1%的部队，指的是战斗中的部队损失；所罗门在参战时，生成的影子部队也算作参战部队，即10万实际部队进入战斗后变为10+5万后，战斗中的部队以15万为准；另外吉迪恩的黑洞吞噬只是转移了敌方部队，不视为击杀
+	// 注：所谓己方受伤1%的部队，指的是战斗中的部队损失；同上述说明
+	// 注：上述各作用号叠加层数上限独立，各读取const表，字段effect1620Maxinum、effect1621Maxinum、effect1622Maxinum、effect1623Maxinum、effect1624Maxinum、effect1625Maxinum
+	// 注：上述所有作用号均可于战报中展示，并于精简战报中合并至对应属性展示
+	HERO_1620 = 1620;//【1620】【万分比】委任在集结指挥部时，集结战斗中每击杀敌方1%的部队，自身部队攻击增加XX%（至多叠加XX层）
+	HERO_1621 = 1621;//【1621】【万分比】委任在集结指挥部时，集结战斗中每击杀敌方1%的部队，自身部队防御增加XX%（至多叠加XX层）
+	HERO_1622 = 1622;//【1622】【万分比】委任在集结指挥部时，集结战斗中每击杀敌方1%的部队，自身部队生命增加XX%（至多叠加XX层）
+	HERO_1623 = 1623;//【1623】【万分比】委任在集结指挥部时，集结战斗中己方每受伤1%的部队，自身部队攻击增加XX%（至多叠加XX层）
+	HERO_1624 = 1624;//【1624】【万分比】委任在集结指挥部时，集结战斗中己方每受伤1%的部队，自身部队防御增加XX%（至多叠加XX层）
+	HERO_1625 = 1625;//【1625】【万分比】委任在集结指挥部时，集结战斗中己方每受伤1%的部队，自身部队生命增加XX%（至多叠加XX层）
+
+	HERO_1626 = 1626;//【1626】【万分比】 进攻战斗时，攻城车（兵种类型 = 7）伤害增加XX%         注：对发起进攻的战斗都生效，包含单人进攻和集结进攻     注：伤害增加计算与其他作用号累加换算；即实际伤害 = 基础伤害*（1 + 其他作用号 + 【1626】/10000）
+	
+	//关于技能 1627，1628，1630都是战略技能开启生效，可参考原来作用号 1555.1556得实现逻辑
+	HERO_1627 = 1627;//作用号：1627 当战略技能：缓兵之计开启时，我方守城部队免伤增加 x %  ( x 是万分比单位)。
+	HERO_1628 = 1628;//作用号：1628 当战略技能：缓兵之计开启时，在此技能持续期间，我方每阵亡和受伤1W士兵，部队伤害增加 x % （最高可叠加 y 层，y层 通过const.xml控制上限）
+	//部队伤害 = 部队基础伤害* （1 + 其他伤害加成 + 作用号1628 * y 层）
+	//此作用号效果，为战斗前进行加成，举例：开启技能后，第一次遭到进攻，实际加成都为0层，第一次战斗中，我方阵亡or伤兵 5万，那么在，第二次遭到进攻的时候，我方部队开场就获得全军 5 * x 的伤害加成），依次论推，战斗中，不进行层数叠加
+	HERO_1629 = 1629;//1629 延长战略技能 ： 缓兵之计的持续时间           实际持续时间 =  基础时间 * （1 + 作用号1629）
+	HERO_1630 = 1630;//作用号：1630  当战略技能：缓兵之计开启时，在此技能持续期间，我方守城部队受到伤兵致死比例降低 （医院未满的情况） 守方阵亡比例  =  基础伤兵比例 * Max ((  攻城战消灭伤兵增加 - 作用号1630）,0)
+
+	HERO_1631 = 1631; // 定向援护 
+	HERO_1632 = 1632; // 【1632】援护触发时，防御坦克受到伤害减免 ，仅限制本次援护 实际受到伤害 =  基础伤害 * （1+其他伤害加成-【1632】）
+
+	GANDA_1310 = 1310; //【1310】【万分比】攻城车（兵种类型 = 7）占比超20%时，部队攻击增加
+	GANDA_1311 = 1311; //【1311】【万分比】攻城战中，攻城车伤害增加
+    GANDA_1312 = 1312; // 主战占比超单人20%  地方主战坦克每次攻击任意单位, 我方全体主战坦克爆机提升
+	SINCE_1130 = 1130; //【1130】【绝对值】解锁11级主战坦克（兵种类型 = 2）
+	SINCE_1131 = 1131; //【1131】【绝对值】解锁11级直升机（兵种类型 = 4）
+	SINCE_1132 = 1132; //【1132】【绝对值】解锁11级狙击兵（兵种类型 = 6）
+	SINCE_1133 = 1133; //【1133】【绝对值】解锁11级采矿车（兵种类型 = 8）
+
+	SINCE_1134 = 1134; //【1134】【万分比】携带英雄进攻时，全兵种伤害增加
+	SINCE_1135 = 1135; //【1135】【万分比】携带英雄进攻时，坦克（兵种类型 = 1或2）伤害增加
+	SINCE_1136 = 1136; //【1136】【万分比】携带英雄进攻时，空军（兵种类型 = 3或4）伤害增加
+	SINCE_1137 = 1137; //【1137】【万分比】携带英雄进攻时，步兵（兵种类型 = 5或6）伤害增加
+	SINCE_1138 = 1138; //【1138】【万分比】携带英雄进攻时，战车（兵种类型 = 7或8）伤害增加
+
+	SINCE_1139 = 1139; //【1139】【万分比】携带英雄防守时，全兵种伤害增加
+	SINCE_1140 = 1140; //【1140】【万分比】携带英雄防守时，坦克（兵种类型 = 1或2）伤害增加
+	SINCE_1141 = 1141; //【1141】【万分比】携带英雄防守时，空军（兵种类型 = 3或4）伤害增加
+	SINCE_1142 = 1142; //【1142】【万分比】携带英雄防守时，步兵（兵种类型 = 5或6）伤害增加
+	SINCE_1143 = 1143; //【1143】【万分比】携带英雄防守时，战车（兵种类型 = 7或8）伤害增加
+
+	SINCE_1144 = 1144; //【1144】【万分比】个人战斗中，全兵种攻击增加
+	SINCE_1145 = 1145; //【1145】【万分比】个人战斗中，全兵种防御增加
+	SINCE_1146 = 1146; //【1146】【万分比】个人战斗中，全兵种生命增加
+	SINCE_1147 = 1147; //【1147】【万分比】集结战斗中，全兵种攻击增加
+	SINCE_1148 = 1148; //【1148】【万分比】集结战斗中，全兵种防御增加
+	SINCE_1149 = 1149; //【1149】【万分比】集结战斗中，全兵种生命增加
+
+	SOLIDER_6_1313 = 1313;// ID57994724
+	SOLIDER_6_1314 = 1314;// ID57994724
+	EFF_1315 = 1315;//【1315】效果：个人，组队（进攻和防守均生效）。我方直升机【兵种类型：4】部队黑鹰轰炸发动几率【技能；403触发概率】每回合提升+XX%。最多可堆叠eff层  （Const表字段，effect1312Maxinum）。【技能：403】发动几率 =  【1315】* eff +其他概率加成
+	EFF_1316 = 1316;//【1316】效果：类似作用号【1416】，原【1416】效果为 空军超过【兵种类型：3和4】20%，个人的全部部队生命提升+XX% ，修改成  直升机超过【兵种类型：4】20%，个人的全部部队生命提升+XX% 。
+	EFF_1317 = 1317;//【1317】效果：类似作用号【1417】，原【1417】效果为 空军超过【兵种类型：3和4】20%，个人的全部部队攻击提升+XX% ，修改成  直升机超过【兵种类型：4】20%，个人的全部部队攻击提升+XX% 。
+    JSZ_1318 = 1318;//【1318】单人出征或集结时，如果采矿车（兵种类型=8）超过自身部队的20%，自身采矿车生命增加【1318】实际生命 =  基础生命值 * （1+其他生命加成+【1318】）
+	JSZ_1319 = 1319;//【1319】单人出征或集结时，如果采矿车（兵种类型=8）超过部队总数的10%（组队集结，按照部队总量的10%计算），自身和友方 所有防御坦克，主战坦克，轰炸机，采矿车【兵种类型 =1，2，3，8】生命增加【1319】实际生命 =  基础生命值 * （1+其他生命加成+【1319】
+	M5_1320 = 1320; // 防坦每损失10% 免伤 持续2回合
+	JIJIA_1321 = 1321;//【1321】作用号简述：突击步兵攻击时，有xx%的几率无视敌人 xx%的生命加成
+	EFF_1325 = 1325;
+	EFF_1326 = 1326;
+	EFF_1327 = 1327;
+	EFF_1328 = 1328;
+	EFF_1329 = 1329;
+	EFF_1330 = 1330;
+	EFF_1331 = 1331;
+	EFF_1332 = 1332;
+	EFF_1333 = 1333;
+	EFF_1334 = 1334;
+	EFF_1335 = 1335;
+	EFF_12561 = 12561;
+	EFF_12701 = 12701;
+
+	EFF_367814 = 367814;
+	EFF_367815 = 367815;
+	EFF_367816 = 367816;
+	EFF_367817 = 367817;
+	EFF_367818 = 367818;
+	EFF_367819 = 367819;
+
+	HERO_12671 = 12671;
+	HERO_12672 = 12672;
+	HERO_12673 = 12673;
+	HERO_12674 = 12674;
+	HERO_12675 = 12675;
+	HERO_12676 = 12676;
+	HERO_12681 = 12681;
+	HERO_12691 = 12691;
+	HERO_12692 = 12692;
+	HERO_12693 = 12693;
+	HERO_12694 = 12694;
+	HERO_12695 = 12695;
+
+	EFF_11070  = 11070;
+
+	LABRORA_1201 = 1201; //作用号【1201】效果描述：主战坦克暴击增加 作用号逻辑：类似原作用号1070 原作用号对坦克（兵种类型1和2）都生效，1201仅对主战坦克（兵种类型 = 1）生效，增加主战坦克暴击几率 作用号数值：【1201】是万分比数值  10000 =  100% 作用号公式：主战坦克实际暴击几率 =  其他暴击几率 + 【1201】 
+	LABRORA_1202 = 1202; //作用号【1202】效果描述：防御坦克受近战伤害减作用号逻辑：当防御坦克（兵种类型 =1）受到  主战坦克，防御坦克，轰炸机，采矿车（兵种类型1，2，3，8)攻击时，受到伤害减少作用号数值：【1202】是万分比数值  10000 =  100% 作用号公式：防御坦克实际受伤= 基础伤害 * （1 - 其他伤害减免 - 【1202】）
+	LABRORA_1203 = 1203; //作用号【1203】效果描述：轰炸机受远程伤害减作用号逻辑：当轰炸机（兵种类型 =3）受到  直升机，突击步兵，狙击兵，攻城车（兵种类型4，5，6，7)攻击时，受到伤害减少作用号数值：【1203】是万分比数值  10000 =  100%作用号公式：轰炸机实际受伤= 基础伤害 * （1 - 其他伤害减免 - 【1203】）
+	LABRORA_1204 = 1204; //作用号【1204】效果描述：突击步兵对近战伤害加作用号逻辑：当突击步兵（兵种类型 =5）攻击主战坦克，防御坦克，轰炸机，采矿车（兵种类型1，2，3，8)时，伤害增加作用号数值：【1204】是万分比数值  10000 =  100%作用号公式：突击步兵实际伤害 = 基础伤害* （1+其他伤害加成+【1204】）
+	LABRORA_1205 = 1205; //作用号【1205】效果描述：狙击兵受近战伤害减作用号逻辑：当狙击兵（兵种类型 =6）受到  主战坦克，防御坦克，轰炸机，采矿车（兵种类型1，2，3，8)攻击时，受到伤害减少作用号数值：【1205】是万分比数值  10000 =  100%作用号公式：狙击兵实际受伤= 基础伤害 * （1 - 其他伤害减免 - 【1205】）
+	LABRORA_1206 = 1206; //作用号【1206】效果描述：攻城车对远程伤害加作用号逻辑：当攻城车（兵种类型=7）攻击 直升机，突击步兵，狙击兵，攻城车（兵种类型4，5，6，7)时，伤害增加作用号数值：【1206】是万分比数值  10000 =  100%作用号公式：攻城车实际伤害 = 基础伤害* （1+其他伤害加成+【1206】）
+	LABRORA_1207 = 1207; //作用号【1207】效果描述：集结时采矿车防御增加作用号逻辑：当采矿车（兵种类型=8）参与集结作战时，防御增加作用号数值：【1207】是万分比数值  10000 =  100%作用号公式：攻城车实际防御 = 基础防御* （1+其他防御加成+【1207】）
+	
+	TBLY_EFF_1701 = 1701;// 【1701】【万分比】【泰伯利亚副本内】进攻战斗时，主战坦克（类型 = 2）外围攻击/防御/生命增加
+	TBLY_EFF_1702 = 1702;// 【1702】【万分比】【泰伯利亚副本内】进攻战斗时，防御坦克（类型 = 1）外围攻击/防御/生命增加
+	TBLY_EFF_1703 = 1703;// 【1703】【万分比】【泰伯利亚副本内】进攻战斗时，直升机（类型 = 4）外围攻击/防御/生命增加
+	TBLY_EFF_1704 = 1704;// 【1704】【万分比】【泰伯利亚副本内】进攻战斗时，轰炸机（类型 = 3）外围攻击/防御/生命增加
+	TBLY_EFF_1705 = 1705;// 【1705】【万分比】【泰伯利亚副本内】进攻战斗时，狙击兵（类型 = 6）外围攻击/防御/生命增加
+	TBLY_EFF_1706 = 1706;// 【1706】【万分比】【泰伯利亚副本内】进攻战斗时，突击步兵（类型 = 5）外围攻击/防御/生命增加
+	TBLY_EFF_1707 = 1707;// 【1707】【万分比】【泰伯利亚副本内】进攻战斗时，采矿车（类型 = 8）外围攻击/防御/生命增加
+	TBLY_EFF_1708 = 1708;// 【1708】【万分比】【泰伯利亚副本内】进攻战斗时，攻城车（类型 = 7）外围攻击/防御/生命增加
+	//注：上述作用号仅在进攻（包含个人进攻和集结进攻）时生效
+
+	TBLY_EFF_1709 = 1709;// 【1709】【万分比】【泰伯利亚副本内】防守战斗时，主战坦克（类型 = 2）外围攻击/防御/生命增加
+	TBLY_EFF_1710 = 1710;// 【1710】【万分比】【泰伯利亚副本内】防守战斗时，防御坦克（类型 = 1）外围攻击/防御/生命增加
+	TBLY_EFF_1711 = 1711;// 【1711】【万分比】【泰伯利亚副本内】防守战斗时，直升机（类型 = 4）外围攻击/防御/生命增加
+	TBLY_EFF_1712 = 1712;// 【1712】【万分比】【泰伯利亚副本内】防守战斗时，轰炸机（类型 = 3）外围攻击/防御/生命增加
+	TBLY_EFF_1713 = 1713;// 【1713】【万分比】【泰伯利亚副本内】防守战斗时，狙击兵（类型 = 6）外围攻击/防御/生命增加
+	TBLY_EFF_1714 = 1714;// 【1714】【万分比】【泰伯利亚副本内】防守战斗时，突击步兵（类型 = 5）外围攻击/防御/生命增加
+	TBLY_EFF_1715 = 1715;// 【1715】【万分比】【泰伯利亚副本内】防守战斗时，采矿车（类型 = 8）外围攻击/防御/生命增加
+	TBLY_EFF_1716 = 1716;// 【1716】【万分比】【泰伯利亚副本内】防守战斗时，攻城车（类型 = 7）外围攻击/防御/生命增加
+	//注：上述作用号仅在防守（包含个人防守和集结防守）时生效
+	//注：上述【1701~1716】作用号计算方式均为最外层加成。即实际属性 = 基础属性 * （1 + 常规各类作用号加成）*（1 + 本次新增作用号加成）
+	TBLY_EFF_1717 = 1717;// 【1717】【绝对值】【泰伯利亚副本内】占领建筑所需时间减少XX秒     注：实际占领时间 = 配置基础时间/（1 + 占领加速增加） - 本作用值；（不得低于0）注：在占领建筑过程中，若此作用号数值变化，需要即时计算。
+
+	TBLY_EFF_1718 = 1718;// 【1718】【万分比】【泰伯利亚副本内】采集泰伯矿点速度增加     注：实际采集速度 = 配置基础速度 * （1 + 采矿速度增加）     注：泰伯矿与世界上的资源矿实现方式不同，每次tick周期下均会实际采集速度
+
+	TBLY_EFF_1719 = 1719;// 	在泰伯矿点战斗时，部队基础攻击增加	1719
+	TBLY_EFF_1720 = 1720;// 在泰伯矿点战斗时，部队基础防御增加	1720
+	TBLY_EFF_1721 = 1721;// 在泰伯矿点战斗时，部队基础生命增加	1721
+
+	DYZZ_9001 = 9001;//商品buff	【9001】【万分比】【5V5副本内】占领建筑所需时间减少		注：实际占领时间 = 配置基础时间/（1 + 占领加速增加）*（1 - 本作用值/10000）；（向下取整，不得低于0）		注：在攻占建筑时判定作用值效果，计算出本次占领所需时长。作用号数值变化不影响已处于占领中的建筑的剩余时长		
+	DYZZ_9002 = 9002;//商品buff	【9002】【万分比】【5V5副本内】采集陨晶矿速度增加		注：实际采集速度 = 配置基础速度 * （1 + 采矿速度增加）		注：陨晶矿采集速度每分钟增加，即基础速度增加					
+	DYZZ_9003 = 9003;//商品buff	【9003】【万分比】【5V5副本内】发起集结所需时间减少		实际时间 = 基础时间 * （1 -作用值/10000）					
+	DYZZ_9004 = 9004;//商品buff	【9004】【万分比】【5V5副本内】所有部队攻击增加	显示	合并至攻击
+	DYZZ_9005 = 9005;//商品buff	【9005】【万分比】【5V5副本内】所有部队防御增加	显示	合并至防御
+	DYZZ_9006 = 9006;//商品buff	【9006】【万分比】【5V5副本内】所有部队生命增加	显示	合并至生命
+	DYZZ_9007 = 9007;//商品buff	【9007】【万分比】【5V5副本内】所有部队造成的伤害增加	显示	合并至伤害增加
+	DYZZ_9008 = 9008;//商品buff	【9008】【万分比】【5V5副本内】所有部队受到的伤害减少	显示	合并至伤害减少			
+	DYZZ_9009 = 9009;//商品buff	【9009】【万分比】【5V5副本内】单支部队出征上限增加		注：出征部队数 =部队出征配置基础值*（1 + 作用值【9009】/10000）					
+	DYZZ_9010 = 9010;//副本基础加成	【9010】【万分比】【5V5副本内】所有部队攻击增加	显示	合并至攻击
+	DYZZ_9011 = 9011;//副本基础加成	【9011】【万分比】【5V5副本内】所有部队防御增加	显示	合并至防御
+	DYZZ_9012 = 9012;//副本基础加成	【9012】【万分比】【5V5副本内】所有部队生命增加	显示	合并至生命		
+	DYZZ_9013 = 9013;//【9013】【万分比】【5V5副本内】我方部队在我方初始归属防御塔战斗时造成的伤害增加	显示	合并至伤害增加
+	DYZZ_9014 = 9014;//【9014】【万分比】【5V5副本内】我方部队在我方区域战斗时受到的伤害减少	显示	合并至伤害减少
+
+	DYZZ_9015 =  9015;//	9015_0_1000_600_6000	9015	【单位/万分比/万分比】团队每拥有陨晶矿数量a，提升伤害b，至多提升N 注:提升伤害值=min（N，（我方团队拥有陨晶矿数量/a）*b）	注:我方造成伤害 = 基础伤害 * （1 + 伤害加成作用值/10000 - 敌方伤害减少作用值/10000）																		注:对所有兵种均生效																	
+	DYZZ_9016 =  9016;//	9016_0_7500_75000	9016	【万分比/万分比】每分钟部队攻击力提升M（风暴聚集），至多提升N																	
+	DYZZ_9017 =  9017;//	9017_0_7500_75000	9017	【万分比/万分比】每分钟部队防御力提升M（风暴聚集），至多提升N																	
+	DYZZ_9018 =  9018;//	9018_0_7500_75000	9018	【万分比/万分比】每分钟部队生命力提升M（风暴聚集），至多提升N	注：玩家获得此作用号后，获得属性加成=min（N，游戏进行时长*M） 注：此加成对所有兵种生效	 注：实际攻击 = 基础攻击 * （1 + 作用值/10000） 	实际防御 = 基础防御 * （1 + 作用值/10000）	实际生命= 基础生命 * （1 + 作用值/10000）																	
+	DYZZ_9019 =  9019;//	9019_0_100000_15000_100000_7500_75000	9019	【万分比】每消灭/重伤对方N士兵，攻击力提升N%；每阵亡/重伤N士兵，攻击力下降N%，至多提升N																	
+	DYZZ_9020 =  9020;//	9020	【万分比】每消灭/重伤对方N士兵，防御力提升N%；每阵亡/重伤N士兵，防御力下降N%，至多提升N																	
+	DYZZ_9021 =  9021;//	9021	【万分比】每消灭/重伤对方N士兵，生命力提升N%；每阵亡/重伤N士兵，生命力下降N%，至多提升N																																																					
+	DYZZ_9022 =  9022;//	9022	【万分比】我方部队在防御外塔发生战斗时，攻击力提升N%																	
+	DYZZ_9023 =  9023;//	9023	【万分比】我方部队在防御外塔发生战斗时，防御力提升N%	9015																
+	DYZZ_9024 =  9024;//	9024	【万分比】我方部队在防御外塔发生战斗时，生命力提升N%																	
+	DYZZ_9025 =  9025;//	9025	【万分比】我方部队在防御内塔发生战斗时，攻击力提升N%																	
+	DYZZ_9026 =  9026;//	9026	【万分比】我方部队在防御内塔发生战斗时，防御力提升N%																	
+	DYZZ_9027 =  9027;//	9027	【万分比】我方部队在防御内塔发生战斗时，生命力提升N%																	
+	DYZZ_9028 =  9028;//	9028	【万分比】我方部队在陨晶矿发生战斗时，攻击力提升N%																	
+	DYZZ_9029 =  9029;//	9029	【万分比】我方部队在陨晶矿发生战斗时，防御力提升N%																	
+	DYZZ_9030 =  9030;//	9030	【万分比】我方部队在陨晶矿发生战斗时，生命力提升N%																	
+	DYZZ_9031 =  9031;//	9031	【万分比】我方部队在能源井发生战斗时，攻击力提升N%																	
+	DYZZ_9032 =  9032;//	9032	【万分比】我方部队在能源井发生战斗时，防御力提升N%																	
+	DYZZ_9033 =  9033;//	9033	【万分比】我方部队在能源井发生战斗时，生命力提升N%																															
+	DYZZ_9034 =  9034;//	9034	【万分比】所有防御坦克受到伤害减少；	1																															
+	DYZZ_9035 =  9035;//	9035	【万分比】所有主战坦克受到伤害减少；	2																
+	DYZZ_9036 =  9036;//	9036	【万分比】所有轰炸机受到伤害减少；	3																
+	DYZZ_9037 =  9037;//	9037	【万分比】所有直升机受到伤害减少	4																
+	DYZZ_9038 =  9038;//	9038	【万分比】所有突击步兵受到伤害减少	5																
+	DYZZ_9039 =  9039;//	9039	【万分比】所有狙击手受到伤害减少	6																
+	DYZZ_9040 =  9040;//	9040	【万分比】所有采矿车受到伤害减少	8																
+	DYZZ_9041 =  9041;//	9041	【万分比】所有攻城车受到伤害减少	7																																		
+	DYZZ_9045 =  9045;//	9045	【万分比】近战攻击提升																	
+	DYZZ_9046 =  9046;//	9046	【万分比】近战防御提升																	
+	DYZZ_9047 =  9047;//	9047	【万分比】近战生命提升																																			
+	DYZZ_9048 =  9048;//	9048	【万分比】远程攻击提升																	
+	DYZZ_9049 =  9049;//	9049	【万分比】远程防御提升																	
+	DYZZ_9050 =  9050;//	9050	【万分比】远程生命提升
+
+	CROSS_SELF_SCORE_REWARD_DOUBLE		= 3001; //【绝对值】跨服活动个人积分的宝箱奖励内容双倍
+	CROSS_MONSTER_SCORE_ADD				= 3002; //【万分比】跨服活动打怪时个人积分增加
+	CROSS_RES_COLLECT_SCORE_ADD			= 3003; //【万分比】跨服活动采集时个人积分增加
+	CROSS_ARMY_KILL_SCORE_ADD			= 3004; //【万分比】跨服活动杀敌时个人积分增加
+	CROSS_STRONGPOINT_SCORE_ADD			= 3005; //【万分比】跨服活动成功占领幽灵兵营时个人积分增加
+	CROSS_SELF_TASK_REWARD_DOUBLE		= 3006; //【绝对值】跨服活动个人任务的奖励内容双倍
+	GUILD_DONATE_SPEED					= 3007; //【万分比】联盟捐献CD加速 注：实际捐献CD = 基础CD/（1+ 加速比率）【以秒为单位向上取整】
+	GUILD_HELP_CNT_ADD					= 3008; //【绝对值】联盟帮助次数增加 注：实际次数 = 联盟大厦基础次数 + 作用号增加值
+	GUILD_GIFT_REWARD_DOUBLE			= 3009; //【绝对值】领取联盟礼物时奖励内容双倍
+	CROSS_GUILD_SCORE_REWARD_DOUBLE		= 3010; //【绝对值】跨服活动联盟积分的宝箱奖励内容双倍
+	CROSS_TECH_EFF_3013 = 3013; // 解锁航海远征个人积分高阶档位
+	CROSS_TECH_EFF_3014 = 3014; // 解锁航海远征联盟积分高阶档位
+	CROSS_TECH_EFF_3015 = 3015; // 航海远征最终服务器排名奖励双倍
+	CROSS_TECH_EFF_3016 = 3016; // 航海远征占领能量他
+
+	CROSS_3012 = 3012; // 【万分比】本服世界范围内，所有世界资源点容量增加
+	
+	TRAIN_COUNT_TYPE2_ADD_NUM          	 = 4001; // 主战坦克训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE1_ADD_NUM            = 4002; // 装甲坦克训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE3_ADD_NUM            = 4003; // 轰炸机训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE4_ADD_NUM            = 4004; // 直升机训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE5_ADD_NUM            = 4005; // 特种兵训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE6_ADD_NUM            = 4006; // 狙击手训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE7_ADD_NUM            = 4007; // 攻坚车训练数量单次训练数量增加，绝对值
+	TRAIN_COUNT_TYPE8_ADD_NUM            = 4008; // 运载车训练数量单次训练数量增加，绝对值
+	
+	WEAPON_BUILD_TYPE101_ADD_NUM         = 4009; // 地雷建造数量单次建造数量增加，绝对值
+	WEAPON_BUILD_TYPE102_ADD_NUM         = 4010; // 防空火炮建造数量单次建造数量增加，绝对值
+	WEAPON_BUILD_TYPE103_ADD_NUM         = 4011; // 反坦克火箭建造数量单次建造数量增加，绝对值
+
+	PRODUCT_INC_TIME_ADD_PER             = 4012; // 使用增产道具时，增产时间增加，万分比
+	
+	TRAIN_SPEED_PRE7_PER                 = 4015; // 7级以下士兵训练速度提升（全兵营），万分比
+	TRAIN_SPEED_EQ8_PER                  = 4016; // 8级士兵训练速度提升（全兵营），万分比
+	TRAIN_SPEED_EQ9_PER                  = 4017; // 9级士兵训练速度提升（全兵营），万分比
+	TRAIN_SPEED_EQ10_PER                 = 4018; // 10级士兵训练速度提升（全兵营），万分比
+
+	SPY_CONSUM_REDUS	                 = 4019; // 侦查消耗减少
+	SPY_MARCH_SPEED_ADD	                 = 4020; // 侦查行军速度提升
+	ATK_MONSTER_VIT_ADD	                 = 4021; // 攻击怪物体力消耗提升
+	KILL_MONSTER_AWARD_ADD               = 4022; // 消灭怪物奖励提升
+	
+	SKILL_COST_VIT_ADD					 = 4023; // 技能消耗的体力上限数值提升
+
+	TRAIN_RES_4024						 = 4024; // 训练部队消耗资源减少
+	TRAIN_ARMY11_SPEED_4025				= 4025; // 11兵训练加速
+
+	EXTRA_ARMY_1_2_PER                  = 4036;  // 训练并收取坦克（兵种类型 = 1或2）时，万分比概率获取额外的士兵
+	EXTRA_ARMY_3_4_PER                  = 4037;  // 训练并收取空军（兵种类型 = 3或4）时，万分比概率获取额外的士兵
+	EXTRA_ARMY_5_6_PER                  = 4038;  // 训练并收取步兵（兵种类型 = 5或6）时，万分比概率获取额外的士兵
+	EXTRA_ARMY_7_8_PER                  = 4039;  // 训练并收取战车（兵种类型 = 7或8）时，万分比概率获取额外的士兵
+	
+	HERO_SKIN_DUYE						= 40001; // 英雄皮肤毒液
+	HERO_SKIN_40002						= 40002; // ....皮肤
+	HERO_SKIN_40003						= 40003; // ....皮肤
+	HERO_SKIN_40004						= 40004; // ....皮肤
+	HERO_SKIN_40005						= 40005; // ....皮肤
+	HERO_SKIN_40006						= 40006; // ....皮肤
+	HERO_SKIN_40007						= 40007; // ....皮肤
+	HERO_SKIN_40008						= 40008; // ....皮肤
+	HERO_SKIN_40009						= 40009; // ....皮肤
+	HERO_SKIN_40010						= 40010; // ....皮肤
+	HERO_SKIN_40011						= 40011; // ....皮肤
+	HERO_SKIN_40012						= 40012; // ....皮肤
+	HERO_SKIN_40013						= 40013; // ....皮肤
+	HERO_SKIN_40014						= 40014; // ....皮肤
+	HERO_SKIN_40015						= 40015; // ....皮肤
+	HERO_SKIN_40016						= 40016; // ....皮肤
+	HERO_SKIN_40017						= 40017; // ....皮肤
+	HERO_SKIN_40018						= 40018; // ....皮肤
+	HERO_SKIN_40019						= 40019; // ....皮肤
+	HERO_SKIN_40020						= 40020; // ....皮肤
+	HERO_SKIN_40021						= 40021; // ....皮肤
+
+	PLANT_SOLDIER_SKILL_824 = 1000001; // 服务器自定义做用号 泰能兵技能824
+	PLANT_SOLDIER_SKILL_144 = 1000002; // 服务器自定义做用号 泰能兵技能144
+	PLANT_SOLDIER_SKILL_344 = 1000003; // 服务器自定义做用号 泰能兵技能344
+	PLANT_SOLDIER_SKILL_444 = 1000004; // 服务器自定义做用号 泰能兵技能344
+	PLANT_SOLDIER_SKILL_644 = 1000005; // 服务器自定义做用号 泰能兵技能644
+	PLANT_SOLDIER_SKILL_744 = 1000006; // 服务器自定义做用号 泰能兵技能644
+	PLANT_SOLDIER_SKILL_844 = 1000007; // 服务器自定义做用号 泰能兵技能644
+	SSS_SKILL_12143_P2 = 1000008; // 服务器自定义做用号 泰能兵技能644
+	
+	EFF_SOLDIER_SKILL_14501 = 1014501; // 服务器自定义做用号 泰能兵技能144
+	EFF_SOLDIER_SKILL_44501 = 1044501; // 服务器自定义做用号 泰能兵技能144
+	EFF_SOLDIER_SKILL_64501 = 1064501; // 服务器自定义做用号 泰能兵技能144
+	EFF_SOLDIER_SKILL_54501 = 1054501; // 服务器自定义做用号 泰能兵技能144
+	EFF_SOLDIER_SKILL_84501 = 1084501; // 服务器自定义做用号 泰能兵技能144
+	EFF_SOLDIER_SKILL_74501 = 1074501; // 服务器自定义做用号 泰能兵技能144
+
+	EFF_12661 = 12661;
+	EFF_12662 = 12662;
+	EFF_12663 = 12663;
+	EFF_12664 = 12664;
+
+	PLANT_SOLDIER_4101 = 4101; //	绝对值	泰能医院容量上限增加	实际容量 = 基础容量 + 作用值
+	PLANT_SOLDIER_4102 = 4102; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）治疗速度增加	实际治疗时间 = 基础时间/（1+作用值/10000）
+	PLANT_SOLDIER_4103 = 4103; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）治疗速度增加	
+	PLANT_SOLDIER_4104 = 4104; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）治疗速度增加	
+	PLANT_SOLDIER_4105 = 4105; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）治疗速度增加	
+	PLANT_SOLDIER_4106 = 4106; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）治疗速度增加	
+	PLANT_SOLDIER_4107 = 4107; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）治疗速度增加	
+	PLANT_SOLDIER_4108 = 4108; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）治疗速度增加	
+	PLANT_SOLDIER_4109 = 4109; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）治疗速度增加	
+	PLANT_SOLDIER_4110 = 4110; //	绝对值	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）训练上限增加	实际训练上限 = 基础值 + 作用值
+	PLANT_SOLDIER_4111 = 4111; //	绝对值	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）训练上限增加	
+	PLANT_SOLDIER_4112 = 4112; //	绝对值	泰能直升机（兵种类型 = 4，兵种等级 = 13）训练上限增加	
+	PLANT_SOLDIER_4113 = 4113; //	绝对值	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）训练上限增加	
+	PLANT_SOLDIER_4114 = 4114; //	绝对值	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）训练上限增加	
+	PLANT_SOLDIER_4115 = 4115; //	绝对值	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）训练上限增加	
+	PLANT_SOLDIER_4116 = 4116; //	绝对值	泰能采矿车（兵种类型 = 8，兵种等级 = 13）训练上限增加	
+	PLANT_SOLDIER_4117 = 4117; //	绝对值	泰能攻城车（兵种类型 = 7，兵种等级 = 14）训练上限增加	
+	PLANT_SOLDIER_4118 = 4118; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）训练速度增加	实际训练时间 = 基础时间/（1+作用值/10000）
+	PLANT_SOLDIER_4119 = 4119; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）训练速度增加	
+	PLANT_SOLDIER_4120 = 4120; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）训练速度增加	
+	PLANT_SOLDIER_4121 = 4121; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）训练速度增加	
+	PLANT_SOLDIER_4122 = 4122; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）训练速度增加	
+	PLANT_SOLDIER_4123 = 4123; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）训练速度增加	
+	PLANT_SOLDIER_4124 = 4124; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）训练速度增加	
+	PLANT_SOLDIER_4125 = 4125; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）训练速度增加	
+	PLANT_SOLDIER_4126 = 4126; //	万分比	泰能科技研究速度增加	实际研究时间 = 基础时间/（1 + 原科技研究速度 + 本作用值/10000）	
+	PLANT_SOLDIER_4127 = 4127; //	万分比	泰能兵种（兵种类型 = 1~8，兵种等级 = 13~14）治疗速度增加
+	PLANT_SOLDIER_4128 = 4128; //	万分比	泰能兵种（兵种类型 = 1~8，兵种等级 = 13~14）训练速度增加
+	PLANT_SOLDIER_4129 = 4129; //	【4129】泰能训练资源减少
+	PLANT_SOLDIER_4130 = 4130; //	4130】泰能治疗资源减少
+	PLANT_SOLDIER_1901 = 1901; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）攻击增加	实际攻击 = 基础攻击*（1 + 其他作用号加成 + 本作用值/10000）
+	PLANT_SOLDIER_1902 = 1902; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）攻击增加	
+	PLANT_SOLDIER_1903 = 1903; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）攻击增加	
+	PLANT_SOLDIER_1904 = 1904; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）攻击增加	
+	PLANT_SOLDIER_1905 = 1905; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）攻击增加	
+	PLANT_SOLDIER_1906 = 1906; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）攻击增加	
+	PLANT_SOLDIER_1907 = 1907; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）攻击增加	
+	PLANT_SOLDIER_1908 = 1908; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）攻击增加	
+	PLANT_SOLDIER_1909 = 1909; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）防御增加	实际防御 = 基础防御*（1 + 其他作用号加成 + 本作用值/10000）
+	PLANT_SOLDIER_1910 = 1910; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）防御增加	
+	PLANT_SOLDIER_1911 = 1911; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）防御增加	
+	PLANT_SOLDIER_1912 = 1912; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）防御增加	
+	PLANT_SOLDIER_1913 = 1913; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）防御增加	
+	PLANT_SOLDIER_1914 = 1914; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）防御增加	
+	PLANT_SOLDIER_1915 = 1915; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）防御增加	
+	PLANT_SOLDIER_1916 = 1916; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）防御增加	
+	PLANT_SOLDIER_1917 = 1917; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）生命增加	实际生命 = 基础生命*（1 + 其他作用号加成 + 本作用值/10000）
+	PLANT_SOLDIER_1918 = 1918; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）生命增加	
+	PLANT_SOLDIER_1919 = 1919; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）生命增加	
+	PLANT_SOLDIER_1920 = 1920; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）生命增加	
+	PLANT_SOLDIER_1921 = 1921; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）生命增加	
+	PLANT_SOLDIER_1922 = 1922; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）生命增加	
+	PLANT_SOLDIER_1923 = 1923; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）生命增加	
+	PLANT_SOLDIER_1924 = 1924; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）生命增加	
+	PLANT_SOLDIER_1925 = 1925; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）基础攻击增加	实际基础攻击 = 兵种基础值 + 作用值/10000
+	PLANT_SOLDIER_1926 = 1926; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）基础攻击增加	
+	PLANT_SOLDIER_1927 = 1927; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）基础攻击增加	
+	PLANT_SOLDIER_1928 = 1928; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）基础攻击增加	
+	PLANT_SOLDIER_1929 = 1929; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）基础攻击增加	
+	PLANT_SOLDIER_1930 = 1930; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）基础攻击增加	
+	PLANT_SOLDIER_1931 = 1931; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）基础攻击增加	
+	PLANT_SOLDIER_1932 = 1932; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）基础攻击增加	
+	PLANT_SOLDIER_1933 = 1933; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）基础防御增加	实际基础防御 = 兵种基础值 + 作用值/10000
+	PLANT_SOLDIER_1934 = 1934; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）基础防御增加	
+	PLANT_SOLDIER_1935 = 1935; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）基础防御增加	
+	PLANT_SOLDIER_1936 = 1936; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）基础防御增加	
+	PLANT_SOLDIER_1937 = 1937; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）基础防御增加	
+	PLANT_SOLDIER_1938 = 1938; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）基础防御增加	
+	PLANT_SOLDIER_1939 = 1939; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）基础防御增加	
+	PLANT_SOLDIER_1940 = 1940; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）基础防御增加	
+	PLANT_SOLDIER_1941 = 1941; //	万分比	泰能主战坦克（兵种类型 = 2，兵种等级 = 13）基础生命增加	实际基础生命 = 兵种基础值 + 作用值/10000
+	PLANT_SOLDIER_1942 = 1942; //	万分比	泰能防御坦克（兵种类型 = 1，兵种等级 = 14）基础生命增加	
+	PLANT_SOLDIER_1943 = 1943; //	万分比	泰能直升机（兵种类型 = 4，兵种等级 = 13）基础生命增加	
+	PLANT_SOLDIER_1944 = 1944; //	万分比	泰能轰炸机（兵种类型 = 3，兵种等级 = 14）基础生命增加	
+	PLANT_SOLDIER_1945 = 1945; //	万分比	泰能狙击兵（兵种类型 = 6，兵种等级 = 13）基础生命增加	
+	PLANT_SOLDIER_1946 = 1946; //	万分比	泰能突击步兵（兵种类型 = 5，兵种等级 = 14）基础生命增加	
+	PLANT_SOLDIER_1947 = 1947; //	万分比	泰能采矿车（兵种类型 = 8，兵种等级 = 13）基础生命增加	
+	PLANT_SOLDIER_1948 = 1948; //	万分比	泰能攻城车（兵种类型 = 7，兵种等级 = 14）基础PLANT_SOLDIER_命增加	 = 命增加	; //
+
+	SOLDIER_1949 = 1949; //	万分比	主战坦克（兵种类型 = 2，兵种等级 = 13）基础攻击增加	实际基础攻击 = 兵种基础值 + 作用值/10000
+	SOLDIER_1950 = 1950; //	万分比	防御坦克（兵种类型 = 1，兵种等级 = 14）基础攻击增加	
+	SOLDIER_1951 = 1951; //	万分比	直升机（兵种类型 = 4，兵种等级 = 13）基础攻击增加	
+	SOLDIER_1952 = 1952; //	万分比	轰炸机（兵种类型 = 3，兵种等级 = 14）基础攻击增加	
+	SOLDIER_1953 = 1953; //	万分比	狙击兵（兵种类型 = 6，兵种等级 = 13）基础攻击增加	
+	SOLDIER_1954 = 1954; //	万分比	突击步兵（兵种类型 = 5，兵种等级 = 14）基础攻击增加	
+	SOLDIER_1955 = 1955; //	万分比	采矿车（兵种类型 = 8，兵种等级 = 13）基础攻击增加	
+	SOLDIER_1956 = 1956; //	万分比	攻城车（兵种类型 = 7，兵种等级 = 14）基础攻击增加	
+	SOLDIER_1957 = 1957; //	万分比	主战坦克（兵种类型 = 2，兵种等级 = 13）基础防御增加	实际基础防御 = 兵种基础值 + 作用值/10000
+	SOLDIER_1958 = 1958; //	万分比	防御坦克（兵种类型 = 1，兵种等级 = 14）基础防御增加	
+	SOLDIER_1959 = 1959; //	万分比	直升机（兵种类型 = 4，兵种等级 = 13）基础防御增加	
+	SOLDIER_1960 = 1960; //	万分比	轰炸机（兵种类型 = 3，兵种等级 = 14）基础防御增加	
+	SOLDIER_1961 = 1961; //	万分比	狙击兵（兵种类型 = 6，兵种等级 = 13）基础防御增加	
+	SOLDIER_1962 = 1962; //	万分比	突击步兵（兵种类型 = 5，兵种等级 = 14）基础防御增加	
+	SOLDIER_1963 = 1963; //	万分比	采矿车（兵种类型 = 8，兵种等级 = 13）基础防御增加	
+	SOLDIER_1964 = 1964; //	万分比	攻城车（兵种类型 = 7，兵种等级 = 14）基础防御增加	
+	SOLDIER_1965 = 1965; //	万分比	主战坦克（兵种类型 = 2，兵种等级 = 13）基础生命增加	实际基础生命 = 兵种基础值 + 作用值/10000
+	SOLDIER_1966 = 1966; //	万分比	防御坦克（兵种类型 = 1，兵种等级 = 14）基础生命增加	
+	SOLDIER_1967 = 1967; //	万分比	直升机（兵种类型 = 4，兵种等级 = 13）基础生命增加	
+	SOLDIER_1968 = 1968; //	万分比	轰炸机（兵种类型 = 3，兵种等级 = 14）基础生命增加	
+	SOLDIER_1969 = 1969; //	万分比	狙击兵（兵种类型 = 6，兵种等级 = 13）基础生命增加	
+	SOLDIER_1970 = 1970; //	万分比	突击步兵（兵种类型 = 5，兵种等级 = 14）基础生命增加	
+	SOLDIER_1971 = 1971; //	万分比	采矿车（兵种类型 = 8，兵种等级 = 13）基础生命增加	
+	SOLDIER_1972 = 1972; //	万分比	攻城车（兵种类型 = 7，兵种等级 = 14）基础PLANT_SOLDIER_命增加	 = 命增加	; //
+
+	FIRE_1980 = 1980;// 部队火焰攻击力加成：1980
+	FIRE_1981 = 1981;// 坦克火焰攻击力加成：1981 兵种ID：1、2
+	FIRE_1982 = 1982;// 飞机火焰攻击力加成：1982 兵种ID：3、4
+	FIRE_1983 = 1983;// 步兵火焰攻击力加成：1983 兵种ID：5、6
+	FIRE_1984 = 1984;// 战车火焰攻击力加成：1984 兵种ID：7、8
+	FIRE_DEF_1990 = 1990;// 部队火焰抗性：1990
+	FIRE_DEF_1991 = 1991;// 坦克火焰抗性加成：1991  兵种ID：1、2
+	FIRE_DEF_1992 = 1992;// 飞机火焰抗性加成：1992  兵种ID：3、4
+	FIRE_DEF_1993 = 1993;// 步兵火焰抗性加成：1993 兵种ID：5、6
+	FIRE_DEF_1994 = 1994;// 战车火焰抗性加成：1994 兵种ID：7、8
+	FIRE_2001 = 2001;// 防御坦克火焰攻击力加成：2001兵种ID：1
+	FIRE_2002 = 2002;// 主站坦克火焰攻击力加成：2002 兵种ID：2
+	FIRE_2003 = 2003;// 轰炸机火焰攻击力加成：2003兵种ID：3
+	FIRE_2004 = 2004;// 直升机火焰攻击力加成：2004兵种ID：4
+	FIRE_2005 = 2005;// 突击步兵火焰攻击力加成：2005 兵种ID：5
+	FIRE_2006 = 2006;// 狙击兵火焰攻击力加成：2006 兵种ID：6
+	FIRE_2007 = 2007;// 攻城车火焰攻击力加成：2007 兵种ID：7
+	FIRE_2008 = 2008;// 采矿车火焰攻击力加成：2008 兵种ID：8
+	 
+	FIRE_DEF_2011 = 2011;// 防御坦克火焰抗性加成：2011兵种ID：1
+	FIRE_DEF_2012 = 2012;// 主站坦克火焰抗性加成：2012兵种ID：2
+	FIRE_DEF_2013 = 2013;// 轰炸机火焰抗性加成：2013兵种ID：3
+	FIRE_DEF_2014 = 2014;// 直升机火焰抗性加成：2014 兵种ID：4
+	FIRE_DEF_2015 = 2015;// 突击步兵火焰抗性加成：2015 兵种ID：5
+	FIRE_DEF_2016 = 2016;// 狙击兵火焰抗性加成：2016 兵种ID：6
+	FIRE_DEF_2017 = 2017;// 攻城车火焰抗性加成：2017 兵种ID：7
+	FIRE_DEF_2018 = 2018;// 采矿车火焰抗性加成：2018 兵种ID：8
+	
+	
+	CROSS_EFF_10001 = 10001; //	绝对值	发起国家集结时，集结空位增加	实际空位 = 基础空位 + 作用值	"1. 【前端】需要在国家集结界面中展示2. 这里不包含发起者自身占有1个空位"
+	CROSS_EFF_10002 = 10002; //	绝对值	发起国家集结时，集结部队数量上限增加	实际上限 = 基础上限 + 作用值	"1. 【前端】需要在国家集结界面中展示2. 这里不包含发起者的自身携带部队数量"
+	CROSS_EFF_10003 = 10003; //	万分比	攻击命中敌方主战坦克（兵种类型 = 2）时，伤害增加	实际伤害 = 基础伤害*（1 + 其他伤害加成）*（1 + 本作用值/10000）	这里伤害加成方式为累乘计算
+	CROSS_EFF_10004 = 10004; //	万分比	攻击命中敌方防御坦克（兵种类型 = 1）时，伤害增加		
+	CROSS_EFF_10005 = 10005; //	万分比	攻击命中敌方直升机（兵种类型 = 4）时，伤害增加		
+	CROSS_EFF_10006 = 10006; //	万分比	攻击命中敌方轰炸机（兵种类型 = 3）时，伤害增加		
+	CROSS_EFF_10007 = 10007; //	万分比	攻击命中敌方狙击兵（兵种类型 = 6）时，伤害增加		
+	CROSS_EFF_10008 = 10008; //	万分比	攻击命中敌方突击步兵（兵种类型 = 5）时，伤害增加		
+	CROSS_EFF_10009 = 10009; //	万分比	攻击命中敌方采矿车（兵种类型 = 8）时，伤害增加		
+	CROSS_EFF_10010 = 10010; //	万分比	攻击命中敌方攻城车（兵种类型 = 7）时，伤害增加		
+	CROSS_EFF_10011 = 10011; //	万分比	受到敌方主战坦克（兵种类型 = 2）攻击时，伤害减少	实际伤害 = 基础伤害 *（1 - 其他伤害减免）*（1 - 本作用值/10000）	这里伤害减免为累乘计算
+	CROSS_EFF_10012 = 10012; //	万分比	受到敌方防御坦克（兵种类型 = 1）攻击时，伤害减少		
+	CROSS_EFF_10013 = 10013; //	万分比	受到敌方直升机（兵种类型 = 4）攻击时，伤害减少		
+	CROSS_EFF_10014 = 10014; //	万分比	受到敌方轰炸机（兵种类型 = 3）攻击时，伤害减少		
+	CROSS_EFF_10015 = 10015; //	万分比	受到敌方狙击兵（兵种类型 = 6）攻击时，伤害减少		
+	CROSS_EFF_10016 = 10016; //	万分比	受到敌方突击步兵（兵种类型 = 5）攻击时，伤害减少		
+	CROSS_EFF_10017 = 10017; //	万分比	受到敌方采矿车（兵种类型 = 8）攻击时，伤害减少		
+	CROSS_EFF_10018 = 10018; //	万分比	受到敌方攻城车（兵种类型 = 7）攻击时，伤害减少		
+	CROSS_EFF_10019 = 10019; //	万分比	主战坦克（兵种类型 = 2）基础防御增加	实际防御 = 基础防御*（1 + 其他外围防御加成）*（1 + 本作用值/10000 + 【10027】/10000 + 【10028】/10000）	这里为基础防御属性，与常规外围防御属性为累乘计算
+	CROSS_EFF_10020 = 10020; //	万分比	防御坦克（兵种类型 = 1）基础防御增加		
+	CROSS_EFF_10021 = 10021; //	万分比	直升机（兵种类型 = 4）基础防御增加		
+	CROSS_EFF_10022 = 10022; //	万分比	轰炸机（兵种类型 = 3）基础防御增加		
+	CROSS_EFF_10023 = 10023; //	万分比	狙击兵（兵种类型 = 6）基础防御增加		
+	CROSS_EFF_10024 = 10024; //	万分比	突击步兵（兵种类型 = 5）基础防御增加		
+	CROSS_EFF_10025 = 10025; //	万分比	采矿车（兵种类型 = 8）基础防御增加		
+	CROSS_EFF_10026 = 10026; //	万分比	攻城车（兵种类型 = 7）基础防御增加		
+	CROSS_EFF_10027 = 10027; //	万分比	于电塔建筑内战斗时，部队（兵种类型 = 1~8）基础防御增加		
+	CROSS_EFF_10028 = 10028; //	万分比	于盟总建筑内战斗时，部队（兵种类型 = 1~8）基础防御增加		
+	CROSS_EFF_10029 = 10029; //	万分比	主战坦克（兵种类型 = 2）基础生命增加	实际生命 = 基础生命*（1 + 其他外围生命加成）*（1 + 本作用值/10000 + 【10037】/10000 + 【10038】/10000）	这里为基础生命属性，与常规外围生命属性为累乘计算
+	CROSS_EFF_10030 = 10030; //	万分比	防御坦克（兵种类型 = 1）基础生命增加		
+	CROSS_EFF_10031 = 10031; //	万分比	直升机（兵种类型 = 4）基础生命增加		
+	CROSS_EFF_10032 = 10032; //	万分比	轰炸机（兵种类型 = 3）基础生命增加		
+	CROSS_EFF_10033 = 10033; //	万分比	狙击兵（兵种类型 = 6）基础生命增加		
+	CROSS_EFF_10034 = 10034; //	万分比	突击步兵（兵种类型 = 5）基础生命增加		
+	CROSS_EFF_10035 = 10035; //	万分比	采矿车（兵种类型 = 8）基础生命增加		
+	CROSS_EFF_10036 = 10036; //	万分比	攻城车（兵种类型 = 7）基础生命增加		
+	CROSS_EFF_10037 = 10037; //	万分比	于电塔建筑内战斗时，部队（兵种类型 = 1~8）基础生命增加		
+	CROSS_EFF_10038 = 10038; //	万分比	于盟总建筑内战斗时，部队（兵种类型 = 1~8）基础生命增加		
+	CROSS_EFF_10039 = 10039; //	万分比	主战坦克（兵种类型 = 2）基础攻击增加	实际攻击 = 基础攻击*（1 + 其他外围攻击加成）*（1 + 本作用值/10000 + 【10047】/10000 + 【10048】/10000）	这里为基础攻击属性，与常规外围攻击属性为累乘计算
+	CROSS_EFF_10040 = 10040; //	万分比	防御坦克（兵种类型 = 1）基础攻击增加		
+	CROSS_EFF_10041 = 10041; //	万分比	直升机（兵种类型 = 4）基础攻击增加		
+	CROSS_EFF_10042 = 10042; //	万分比	轰炸机（兵种类型 = 3）基础攻击增加		
+	CROSS_EFF_10043 = 10043; //	万分比	狙击兵（兵种类型 = 6）基础攻击增加		
+	CROSS_EFF_10044 = 10044; //	万分比	突击步兵（兵种类型 = 5）基础攻击增加		
+	CROSS_EFF_10045 = 10045; //	万分比	采矿车（兵种类型 = 8）基础攻击增加		
+	CROSS_EFF_10046 = 10046; //	万分比	攻城车（兵种类型 = 7）基础攻击增加		
+	CROSS_EFF_10047 = 10047; //	万分比	于电塔建筑内战斗时，部队（兵种类型 = 1~8）基础攻击增加		
+	CROSS_EFF_10048 = 10048; //	万分比	于盟总建筑内战斗时，部队（兵种类型 = 1~8）基础攻击增加 
+
+	ARMOUR_11001 = 11001;//	万分比	装备泰晶属性额外提升	装备泰晶实际属性 = 泰晶基础配置/10000 *（1 + 本作用值/10000）	"这里改变的是装备泰晶的属性 对应装备界面中泰晶的属性展示和其在战报中的展示自动变化"
+	ARMOUR_11002 = 11002;//	万分比	装备充能属性额外提升	装备充能实际属性 = 充能基础属性/10000 * 充能进度/10000 *（1 + 本作用值/10000）	"这里改变的是装备充能的属性 对应装备界面中充能的属性展示和其在战报中的展示自动变化"
+	ARMOUR_11003 = 11003;//	万分比	主战坦克（兵种类型 = 2）攻击每命中1个不同的目标后，自身暴击伤害增加XX%（至多叠加X层）	实际伤害 = 基础伤害 *（1 + 其他伤害加成 + 本作用值/10000）	"不同目标定义：战斗中的独立战斗单位，即只有同玩家同兵种id的才算同一目标，其他情况都是不同的目标单位（这里只算部队-兵种类型 = 1~8的） 至多叠加层数读取const表，字段effect11003TimesLimit"
+	ARMOUR_11004 = 11004;//	万分比	防御坦克（兵种类型 = 2）每受到1次攻击后，受到伤害减少XX%（至多叠加X层）	实际受到伤害 = 基础伤害*（1 - 其他作用号减免）*（1 - 本作用值/10000）	至多叠加层数读取const表，字段effect11004TimesLimit
+	ARMOUR_11005 = 11005;//	万分比	直升机（兵种类型 = 4）战斗开始时，增加己方所有空军（兵种类型 = 4或3）部队XX%的攻击加成（至多叠加X层）	实际攻击 = 基础攻击 *（1 + 其他作用号 + 本作用值/10000）	"每个玩家拥有此作用号只会生效1层 个人和集结战斗都生效，对战斗中所有玩家生效 至多叠加层数读取const表，字段effect11005TimesLimit"
+	ARMOUR_11006 = 11006;//	万分比	轰炸机（兵种类型 = 3）在触发技能【智能护盾 = 302】时，增加自身XX%生命加成（持续2回合）	实际生命 = 基础生命 *（1 + 其他作用号 + 本作用值/10000）	
+	ARMOUR_11007 = 11007;//	万分比	狙击兵（兵种类型 = 6）在自身后排存在其他兵种时，增加自身XX%伤害加成	实际伤害 = 基础伤害 *（1 + 其他伤害加成 + 本作用值/10000）	"自身后排的兵种只算部队-兵种类型 = 1~8的 个人和集结战斗都生效"
+	ARMOUR_11008 = 11008;//	万分比	狙击兵（兵种类型 = 6）在自身后排不存在其他兵种时，增加自身XX%生命加成	实际生命 = 基础生命 *（1 + 其他作用号 + 本作用值/10000）	
+	ARMOUR_11009 = 11009;//	万分比	突击步兵（兵种类型 = 5）在战斗中每损失XX%的数量时，增加自身YY%伤害加成（至多叠加X层）	"实际伤害 = 基础伤害 *（1 + 其他伤害加成 + 本作用值/10000）损失比率 = 战斗中突击步兵损失数量/战斗初始化时突击步兵部队数量战斗初始化时突击步兵部队数量 = 实际数量 * （1 + 所罗门效果）"	"这里计算战斗中的部队损失，若携带所罗门上阵，则战斗初始化时部队数量会高于实际携带部队数量至多叠加层数读取const表，字段effect11009TimesLimit【扭曲力场】为作用号1121的效果【扭曲力场】基础触发概率读取const表，字段effect1121Prob至多叠加层数读取const表，字段effect11010TimesLimit"
+	ARMOUR_11010 = 11010;//	万分比	突击步兵（兵种类型 = 5）在战斗中每损失XX%的数量时，芯片【扭曲力场】触发概率额外增加YY%（至多叠加X层）	"实际概率 = 基础概率 + 额外增加概率/10000实际概率合法取值区间【0,1】"	
+	ARMOUR_11011 = 11011;//	万分比	采矿车（兵种类型 = 8）在受到近战部队（兵种类型 = 2/1/3/8）攻击时，所受伤害减少XX%	实际受到伤害 = 基础伤害*（1 - 其他作用号减免）*（1 - 本作用值/10000）	
+	ARMOUR_11012 = 11012;//	万分比	攻城车（兵种类型 = 7）攻击命中敌方部队后，降低其XX%生命加成（至多叠加X层）	实际生命 = 基础生命 *（1 + 其他作用号 - 本作用值/10000）	"每个玩家拥有此作用号后，造成效果只会生效1层该debuff效果记录在敌方部队身上至多叠加层数读取const表，字段effect11012TimesLimit"
+	ARMOUR_11013 = 11013;//	万分比	攻城车（兵种类型 = 7）攻击每命中1个敌方部队后，增加自身XX%生命加成（至多叠加X层）	实际生命 = 基础生命 *（1 + 其他作用号 + 本作用值/10000）	"每攻击命中敌方1个目标，层数+1至多叠加层数读取const表，字段effect11013TimesLimit"
+
+	ARMOUR_STAR_EXPLORE_11014 = 11014; // 主武器基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11015 = 11015; // 手枪基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11016 = 11016; // 匕首基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11017 = 11017; // 投掷武器基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11018 = 11018; // 头盔基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11019 = 11019; // 护甲基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11020 = 11020; // 鞋子基础属性增加。装备实际基础属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11021 = 11021; // 主武器附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11022 = 11022; // 手枪附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11023 = 11023; // 匕首附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11024 = 11024; // 投掷武器附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11025 = 11025; // 头盔附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11026 = 11026; // 护甲附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11027 = 11027; // 鞋子附加属性增加。装备实际附加属性 = 附加配置/10000 *（1 + 本作用值/10000）（注意：若1602同时生效，这两个为累加关系）
+	ARMOUR_STAR_EXPLORE_11028 = 11028; // 装备阵列属性增加。装备实际阵列属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11029 = 11029; // 装备特殊属性增加。装备特殊阵列属性 = 基础配置/10000 *（1 + 本作用值/10000）
+	ARMOUR_STAR_EXPLORE_11030 = 11030; // 装备全属性增加。装备实际属性 = 基础配置/10000 *（1 + 本作用值/10000）（基础属性，阵列属性，特殊属性，泰晶属性，附加属性，泰能属性，套装属性）
+	ARMOUR_STAR_EXPLORE_11031 = 11031; //  - 11031：每解锁一个红装，全部装备阵列属性增加。
+  	ARMOUR_STAR_EXPLORE_11032 = 11032; // - 11032：每解锁一个红装，全部装备特殊属性增加。
+  	ARMOUR_STAR_EXPLORE_11034 = 11034; // - 11034：每解锁一个红装，全部装备附加属性增加。（和11021-11027一样，再次累加）（完美词条颜色变红）
+  	ARMOUR_STAR_EXPLORE_11035 = 11035; //  - 11035：全部装备附加属性增加。（和11021-11027，11034一样，再次累加）
+	
+	ATK_MONSTER_ENERGY_DETECTOR			= 50001; // 打怪能量探测器翻倍
+	ATK_MONSTER_HONNER_DETECTOR			= 50002; // 打怪勋章探测器翻倍
+	
+	ADD_ARMY_ATK					= 60001; // 增加部队攻击
+	RES_TO_PROTECTED				= 60003; // 采集和生产资源转化为保护资源
+	RED_TREATE_ARMY_TIME			= 60005; // 减少治疗士兵消耗时间
+	SKILL_10304						= 60006; // 打野技能专用buff
+	
+	IMAGE_CIRCLE_BUFF_73000 = 73000;  // 新年头像框-永久	
+	IMAGE_CIRCLE_BUFF_74000 = 74000;  // 情人节头像框-永久
+	IMAGE_CIRCLE_BUFF_76000 = 76000;  // 远航头像框-永久
+	IMAGE_CIRCLE_BUFF_77000 = 77000;  // 冰火王座头像框-永久
+	IMAGE_CIRCLE_BUFF_78000 = 78000;  // 半周年头像框-永久
+	
+    AUTO_ATK_MONSTER        = 80001;  // 自动打野buff
+
+	IMAGE_CIRCLE_BUFF_711000 = 711000;  // 战区A级头像框-永久
+	IMAGE_CIRCLE_BUFF_711001 = 711001;  // 战区A级头像框（1天）
+	IMAGE_CIRCLE_BUFF_711003 = 711003;  // 战区A级头像框（3天）
+	IMAGE_CIRCLE_BUFF_711007 = 711007;  // 战区A级头像框（7天）
+	IMAGE_CIRCLE_BUFF_711014 = 711014;  // 战区A级头像框（14天）
+	IMAGE_CIRCLE_BUFF_711030 = 711030;  // 战区A级头像框（30天）
+	IMAGE_CIRCLE_BUFF_712000 = 712000;  // 战区B级头像框-永久
+	IMAGE_CIRCLE_BUFF_712001 = 712001;  // 战区B级头像框（1天）
+	IMAGE_CIRCLE_BUFF_712003 = 712003;  // 战区B级头像框（3天）
+	IMAGE_CIRCLE_BUFF_712007 = 712007;  // 战区B级头像框（7天）
+	IMAGE_CIRCLE_BUFF_712014 = 712014;  // 战区B级头像框（14天）
+	IMAGE_CIRCLE_BUFF_712030 = 712030;  // 战区B级头像框（30天）
+	IMAGE_CIRCLE_BUFF_750001 = 750001;  // 盟军司令战头像框（1天）
+	IMAGE_CIRCLE_BUFF_750003 = 750003;  // 盟军司令战头像框（3天）
+	IMAGE_CIRCLE_BUFF_750007 = 750007;  // 盟军司令战头像框（7天）
+	IMAGE_CIRCLE_BUFF_750014 = 750014;  // 盟军司令战头像框（14天）
+	IMAGE_CIRCLE_BUFF_750030 = 750030;  // 盟军司令战头像框（30天）
+	IMAGE_CIRCLE_BUFF_790000 = 790000;  // 战区S级头像框-永久
+	IMAGE_CIRCLE_BUFF_790001 = 790001;  // 战区S级头像框（1天）
+	IMAGE_CIRCLE_BUFF_790003 = 790003;  // 战区S级头像框（3天）
+	IMAGE_CIRCLE_BUFF_790007 = 790007;  // 战区S级头像框（7天）
+	IMAGE_CIRCLE_BUFF_790014 = 790014;  // 战区S级头像框（14天）
+	IMAGE_CIRCLE_BUFF_790030 = 790030;  // 战区S级头像框（30天）
+	
+	BACK_PRIVILEGE_ATK_MONSTER_VIT_REDUCE         = 28101;  //回流特权-打怪体力减少
+	BACK_PRIVILEGE_ATK_MONSTER_AWARD_DOUBLE_TIMES = 28102;  //回流特权-每日前x次打野掉落翻倍（包含奖励和经验）
+	BACK_PRIVILEGE_VIT_PER                        = 28103;  //回流特权-体力恢复加速, effectid=502
+	BACK_PRIVILEGE_RES_COLLECT                    = 28104;  //回流特权-采集资源加速, effectid=333
+	BACK_PRIVILEGE_RES_OUTPUT_BOOST               = 28105;  //回流特权-生产资源加速, effectid=301
+	BACK_PRIVILEGE_CITY_SPD_BUILD                 = 28106;  //回流特权-城建加速, effectid=400
+	BACK_PRIVILEGE_CITY_SPD_SCIENCE               = 28107;  //回流特权-研究加速, effectid=401
+	BACK_PRIVILEGE_CITY_SPD_SOLDIER				  = 28108;	//回流特权-造兵速度加成effectid=402
+
+	AUTO_PUT_RESOURCE     = 28109; //超时空特权 自动放锅
+	AUTO_GATHER_RESOURCE  = 28110; //超时空特权 自动拉锅
+	
+	BLACK_TECH_367811 = 367811; // 升级建筑勋章减少
+	BLACK_TECH_367812 = 367812; // 升级科技勋章减少
+	BLACK_TECH_367813 = 367813; // 训练士兵勋章减少
+	
+	SPACE_MECHA_BOSS_SOLDIER_ADD  = 367820;  // 星甲召唤boss兵力增益：万分比
+	SPACE_MECHA_BOSS_SOLDIER_SUB  = 367821;  // 星甲召唤boss兵力减益：万分比
+
+	EFF_519 						= 519;  // 建筑升级所需时间减少X/10000 作用叠加1466
+	EFF_520 						= 520;  // 所有资源采集速度加成，全军出击活动专用 作用叠加334
+	EFF_521 						= 521;  // 研发科技所需时间减少X/10000 作用叠加1472
+	EFF_522 						= 522;  // 部队训练所需时间减少X/10000 作用叠加1478
+	EFF_523 						= 523;  // 将军体力恢复速度加成 作用叠加502
+
+	EFF_10080 = 10080;// 【10080】【万分比】【10080】于建筑中驻防时，部队造成伤害增加XX.XX%于任意建筑中驻防时均生效，包括各副本中建筑该作用号为外围伤害加成效果，与其他伤害增加作用号累加计算（与12101等伤害增加作用号加法运算）即 实际伤害 = 基础伤害*（1 + 各类伤害加成+【本作用值】）*（1 - 各类减免）配置格式为万分比
+	EFF_10081 = 10081;// 【10081】【万分比】【10081】集结战斗受到伤害减少XX.XX%仅集结中生效该作用号为伤害减少效果，与其他减伤作用号累乘计算即 实际伤害 = 基础伤害*（1 - 其他作用号）*（1 - 【本作用值】）配置格式为万分比
+	EFF_10082 = 10082;// 【10081】【10082】【万分比】【10082】集结战斗造成伤害增加XX.XX%仅集结中生效该作用号为外围伤害加成效果，与其他伤害增加作用号累加计算（与12101等伤害增加作用号加法运算）即 实际伤害 = 基础伤害*（1 + 各类伤害加成+【本作用值】）*（1 - 各类减免）配置格式为万分比
+}
+
+// 限制某一个类型的建筑数目上限
+enum LimitType
+{
+	LIMIT_TYPE_MAIN_BUILDING			= 100 ;	//建筑工厂
+	LIMIT_TYPE_SOILDER					= 101 ;	//兵营
+	LIMIT_TYPE_WAR_FACTORY				= 102 ;	//战车工厂
+	LIMIT_TYPE_REMOTE_FIRE_FACTORY		= 103 ;	//重型武器工厂
+	LIMIT_TYPE_AIR_FORCE_COMMAND		= 104 ;	//空指部
+	LIMIT_TYPE_FIGHTING_LABORATORY		= 105 ;	//作战实验室
+	LIMIT_TYPE_EMBASSY					= 106 ;	//大使馆
+	LIMIT_TYPE_TRADE_CENTRE				= 107 ;	//贸易中心
+	LIMIT_TYPE_SATELLITE_COMMUNICATIONS	= 108 ;	//卫星通讯所
+	LIMIT_TYPE_EQUIP_RESEARCH_INSTITUTE	= 109 ;	//装备研究所
+	LIMIT_TYPE_FIGHTING_COMMAND			= 110 ;	//作战指挥部
+	LIMIT_TYPE_ARMS_DEALER				= 111 ;	//军火商
+	LIMIT_TYPE_RADAR					= 112 ;	//雷达
+	LIMIT_TYPE_GAP_GENERATOR			= 113 ;	//裂缝产生器
+	LIMIT_TYPE_WAREHOUSE				= 114 ;	//仓库
+	LIMIT_TYPE_POWER_PLANT				= 115 ;	//发电厂
+	LIMIT_TYPE_HOSPITAL_STATION			= 116 ;	//医护维修站
+	LIMIT_TYPE_HELP_PROMPT				= 117 ;	//帮助提示牌
+	LIMIT_TYPE_RESOURCES_VIEW			= 118 ;	//资源总览
+	LIMIT_TYPE_SOILDER_DETAIL_FLAG		= 119 ;	//部队详情旗帜
+	LIMIT_TYPE_PRISON					= 120 ;	//监狱
+	LIMIT_TYPE_BUIDING_STEEL			= 200 ;	//铀矿
+	LIMIT_TYPE_BUIDING_ORE_REFINING     = 201 ; //黄金田
+	LIMIT_TYPE_BUIDING_OIL_WELL			= 202 ; //石油田
+	LIMIT_TYPE_BUIDING_RARE_EARTH		= 203 ; //合金田
+	//LIMIT_TYPE_BUILDING_DEFENDER		= 300 ;	//防御建筑
+	LIMIT_TYPE_BUILDING_PRISM_TOWER		= 301 ; //光陵塔
+	LIMIT_TYPE_BUILDING_PATRIOT			= 302 ; //爱国者
+	LIMIT_TYPE_BUILDING_PILLBOX			= 303 ; //机枪堡垒
+	LIMIT_TYPE_ACTIVITY_CENTER			= 122 ; //活动中心
+	LIMIT_TYPE_SOLDIER_ENHANCE_BASE		= 123 ; //新作战实验室
+	LIMIT_TYPE_PVE_ENTRANCE				= 124 ; //超时空转换器 --PVE副本入口
+	LIMIT_TYPE_HERO_BASE                = 125 ; //英雄大厦--英雄升级、治疗等的养成入口
+    LIMIT_TYPE_RES_SOLDIER_FACTORY      = 126 ; //征兵处--类似于资源建筑，按时长产出新兵
+	
+	LIMIT_TYPE_CITY_WALL                = 127;    //城墙
+	LIMIT_TYPE_WISHING_WELL			    = 128;	  //许愿池
+	LIMIT_TYPE_WHARF                    = 129;    //码头
+	LIMIT_TYPE_FRIENDLY_HALL            = 130;    //兄弟会
+	LIMIT_TYPE_SOLDIER_CONTROL_HALL     = 131;    //复制中心
+	LIMIT_TYPE_WAR_FORTS                = 132;    //战争堡垒
+	LIMIT_TYPE_SOLDIER_CAVE             = 133;    //藏兵洞
+    LIMIT_TYPE_FOGGY_LABORATORY         = 134;    //迷雾研究所
+    LIMIT_135                           = 135;
+	LIMIT_136                           = 136;    // 135和136不知是哪位同学负责的功能添加的，但在这里没有加上，这里先给一个临时的名字，主要是把135和136这两个limitType给补上
+    LIMIT_FIRST_AID_STATION             = 137;    // 超时空急救站
+	LIMIT_RESOURCE_HUB                  = 138;    // 资源枢纽
+	LIMIT_TYPE_SUER_SOLDIER_BUILD		= 139;    // 超级兵营
+	LIMIT_SUPER_WP_BUILD                = 140;    // 新超级武器
+	LIMIT_ARCHIVES_BUILD                = 141;    // 档案馆建筑
+	LIMIT_GHOST_TOWER                   = 143;    //幽灵工厂
+	LIMIT_OBELISK                   	= 145;    //方尖碑
+	LIMIT_PLANT_FACTORY                 = 146;    //泰能工厂
+	LIMIT_PLANT_SCIENCE                 = 147;    //泰能科技
+	LIMIT_PLANT_HOSPITAL                = 148;    //泰能医院
+	LIMIT_PLANT_ADVANCE           		= 149;  //泰能进化所
+	LIMIT_PLANT_POYISUO           		= 150;  //泰能战士破译所
+	LIMIT_TOUCAI_FACTORY           		= 151;  //偷菜工厂
+	LIMIT_MANHATTAN               		= 152;  //超武建筑
+	LIMIT_HOMELAND               		= 153;  //家园建筑
+}
+
+// 建筑物类型,每一个建筑物是一个类型
+enum BuildingType
+{
+	CONSTRUCTION_FACTORY	 = 2010;	//建筑工厂
+	BARRACKS				 = 2011;	//兵营
+	WAR_FACTORY				 = 2012;	//战车工厂（坦克工厂）
+	REMOTE_FIRE_FACTORY		 = 2013;	//重型武器工厂（战车工厂）
+	AIR_FORCE_COMMAND		 = 2014;	//空指部
+	FIGHTING_LABORATORY		 = 2015;	//作战实验室
+	EMBASSY					 = 2016;	//大使馆（联盟大厦）
+	TRADE_CENTRE			 = 2017;	//贸易中心
+	SATELLITE_COMMUNICATIONS = 2018;	//卫星通讯所（集结指挥部）
+	EQUIP_RESEARCH_INSTITUTE = 2019;	//装备研究所
+	FIGHTING_COMMAND		 = 2020;	//作战指挥部（指挥中心）
+	ARMS_DEALER				 = 2021;	//军火商
+	RADAR					 = 2022;	//雷达
+	GAP_GENERATOR			 = 2023;	//裂缝产生器
+	WAREHOUSE				 = 2024;	//仓库
+	POWER_PLANT				 = 2025;	//发电厂
+	HOSPITAL_STATION		 = 2026;	//医护维修站
+	PRISON					 = 2027;	//监狱
+	EINSTEIN_LODGE			 = 2028;	//爱因斯坦小屋
+	ORE_REFINING_PLANT		 = 2101;	//矿石精鍊厂
+	OIL_WELL				 = 2102;	//油井
+	STEEL_PLANT				 = 2103;	//铀矿厂
+	RARE_EARTH_SMELTER		 = 2104;	//合金冶炼厂
+	PRISM_TOWER				 = 2151;	//光棱塔
+	PATRIOT_MISSILE			 = 2152;	//爱国者飞弹
+	PILLBOX					 = 2153;	//机枪碉堡
+	CANNON					 = 2154;	//巨炮
+	HELP_PROMPT				 = 2201;	//帮助提示牌
+	RESOURCES_VIEW			 = 2202;	//资源总览
+	SOILDER_DETAIL_FLAG		 = 2203;	//部队详情旗帜
+	ACTIVITY_CENTER			 = 2205;    //活动中心
+
+    SOLDIER_ENHANCE_BASE     = 2206;    //新作战实验室 （原有作战实验室先保留）--兵种升阶用的
+	PVE_ENTRANCE             = 2207;    //超时空转换器 --PVE副本入口
+	HERO_BASE                = 2208;    //英雄大厦--英雄升级、治疗等的养成入口
+    RES_SOLDIER_FACTORY      = 2209;    //征兵处--类似于资源建筑，按时长产出新兵
+	CITY_WALL                = 2210;    //城墙   
+	DRINKING_HOUSE           = 2211;    //酒馆
+	WISHING_WELL			 = 2212;	//许愿池
+	WHARF                    = 2213;    //码头
+	FRIENDLY_HALL            = 2214;    //兄弟会
+	SOLDIER_CONTROL_HALL     = 2216;    //复制中心
+	WAR_FORTS                = 2217;    //城防工厂
+	CARGO_SHIP               = 2218;    //联盟关怀货船
+	FOGGY_LABORATORY         = 2219;    //迷雾研究所
+	SOLDIER_CAVE         	 = 2220;    //藏兵洞
+	VIP_STORE 				 = 2221;    //贵族商城
+	AIRCRAFT_CARRIER         = 2222;    //航空母舰
+	FIRST_AID_STATION        = 2223;    // 超时空急救站
+	RESOURCE_HUB             = 2224;    // 资源枢纽
+	SUER_SOLDIER_BUILD       = 2225;    //超级兵营
+	SUPER_WP_BUILD			= 2226; // 新超级武器
+	
+	ARMOUR_BUILD			= 2227; // 铠甲
+	ARCHIVES_BUILD          = 2228; // 档案馆建筑
+	GHOST_TOWER             = 2230;  //幽灵工厂
+	OBELISK             	= 2232;  //方尖碑
+	PLANT_FACTORY           = 2233;  //泰能工厂
+	PLANT_SCIENCE           = 2234;  //泰能科技
+	PLANT_HOSPITAL          = 2235;  //泰能医院
+	PLANT_ADVANCE           = 2236;  //泰能进化所
+	PLANT_POYISUO           = 2237;  //泰能战士破译所
+	TOUCAI_FACTORY			= 2238;  //偷菜工厂
+	MANHATTAN               = 2239;  //超武建筑
+	HOMELAND                = 2240;  //家园
+}
+
+// 普通类型和防御类型
+enum QueueBuildType
+{
+	COMMON_BUILDING	= 1;
+	DEFENCE_BUILDING = 2;
+}
+
+// 建筑状态
+enum BuildingStatus
+{
+	COMMON				= 0; //	默认状态
+	SOILDER_HARVEST		= 1; //	训练完成待收兵
+	SOLDIER_WOUNDED		= 2; //	有伤兵待治疗
+	CURE_FINISH_HARVEST = 3; // 治疗完成待收兵
+	DAMAGED             = 4; // 爱因斯坦时光机器损毁状态
+	READY_TO_CREATE     = 5; // 爱因斯坦时光机器待建造状态
+    ENHANCE_BASE_STATE  = 6; // 新作战实验室特殊状态
+	HERO_HARVEST		= 7; // 英雄收集
+	RES_SOLDIER_HARVEST = 8; // 征兵处代收
+	PVE_BASE_STATE  	= 9; // 超时空转换器特状态
+    TRAP_HARVEST        = 10;     // 陷阱制造完成待收取
+    CITYWALL_ONFIRE_STATUS  = 11; // 城墙燃烧状态
+    CITYWALL_DAMAGED_STATUS = 12; // 城墙损毁状态
+	BUILDING_CREATING       = 13; // 新建建筑在建中...
+    RES_MINERAL_HARVEST		= 14; // 客户端用于判定资源类建筑是否可以收取资源
+	TRAVEL_SHOP_LIFE        = 15; // 有货物.
+	WISHING_FREE            = 16; // 许愿池有免费次数了
+	HAS_FRIEND_APPLY        = 17; // 有好友申请
+	MATERIAL_HARVEST        = 18; // 有挖掘好的材料待收取 
+	GUILD_HELP_STATUS       = 19; // 可以进行联盟帮助了
+	TRAVEL_SHOP_REFRESH		= 20; //特惠商人刷新了.
+    FIRST_AID_BUILDING_RECOVER       = 21; // 超时空急救站冷却中
+    FIRST_AID_BUILDING_HARVEST       = 22; // 超时空急救站有兵待回收
+	TIME_LIMIT_STORE                 = 23; // 限时商店已开启
+	
+	PLANT_SOLDIER_WOUNDED		= 24; //	泰能兵等待治疗
+	PLANT_CURE_FINISH_HARVEST   = 25; // 泰能兵治疗完成待收兵
+	
+	
+}
+
+// 队列状态
+enum QueueStatus
+{
+	QUEUE_STATUS_COMMON		= 0;// 普通状态，其他队列使用
+	QUEUE_STATUS_UPGRADE	= 1;// 防御建筑升级中  目前升级走的都是 普通状态0
+	QUEUE_STATUS_REPAIR		= 2;// 防御建筑维修中
+	QUEUE_GUILD_SCIENCE		= 3;// 联盟科技队列
+	QUEUE_STATUS_REBUILD	= 4;// 建筑改建中
+	QUEUE_HERO_CURE         = 5;// 英雄治疗中
+    QUEUE_HERO_TRAIN        = 6;// 英雄训练中
+	QUEUE_STATUS_CREATE     = 7;// 新建建筑
+    QUEUE_STATUS_REMOVE     = 8;// 拆除建筑
+	QUEUE_BUILDING_RECOVER  = 9;// 超时空急救站冷却恢复
+}
+
+// 队列类型
+enum QueueType
+{
+	BUILDING_QUEUE			= 1;	// 建造或者升级
+	BUILDING_DEFENER		= 2;	// 防御建筑升级或者维修队列
+	SCIENCE_QUEUE			= 3;	// 研究科技
+	SOILDER_QUEUE			= 4;	// 造兵
+	CURE_QUEUE				= 5;	// 治疗伤兵
+	EQUIP_QUEUE				= 6;	// 装备队列
+	MARCH_QUEUE				= 7;	// 行军
+	GUILD_SCIENCE_QUEUE		= 8;	// 联盟科技
+	NUCLEAR_CREATE_QUEUE	= 9;	// 制造超级武器
+	NUCLEAR_MACHINE_QUEUE	= 10;	// 建造超级武器发射平台
+	HERO_QUEUE              = 11;   // 英雄队列
+    TRAP_QUEUE              = 12;   // 制造陷阱
+    SOLDIER_ADVANCE_QUEUE   = 13;   // 兵种进阶
+    GUILD_HOSPICE_QUEUE		= 14;   // 联盟关怀
+	FOGGY_BOX_QUEUE         = 15;   // 迷雾要塞宝箱队列
+	YURISTRIKE_CLEAN		= 16;   // 净化尤里行军
+	BUILDING_RECOVER_QUEUE	= 17;   // 超时空急救站冷却恢复
+	CROSS_TECH_QUEUE		= 18;	// 远征科技研究队列
+	EQUIP_RESEARCH_QUEUE	= 19;	// 装备研究
+	PLANT_SCIENCE_QUEUE     = 20;   //泰能科技研究
+	PLANT_ADVANCE_QUEUE		= 21;   // 泰能兵进化
+	CURE_PLANT_QUEUE        = 22;   //泰能兵治疗
+	NATIONAL_HOSPITAL_RECOVER  = 23;  // 国家医院死兵恢复
+	NATIONAL_HOSPITAL_TSZZ_RECOVER = 24;  // 国家医院统帅之战死兵恢复
+	ACTIVITY_378_RECOVER    = 25; //热血畅战死兵恢复
+}
+
+//联盟权限
+enum GuildAuthority
+{
+	L0 = 0;
+	L1 = 1;
+	L2 = 2;
+	L3 = 3;
+	L4 = 4;
+	L5 = 5;   //盟主
+	L14 = 14; //官员
+}
+
+//兵种类型
+enum SoldierType
+{
+	XXXXXXXXXXXMAN					= 0;    // 占位
+	TANK_SOLDIER_1					= 1;	//1装甲坦克（大兵）
+	TANK_SOLDIER_2					= 2;	//2主战坦克（枪兵）
+	PLANE_SOLDIER_3					= 3;	//3战斗飞行器（骑兵 冲锋）
+	PLANE_SOLDIER_4					= 4;	//4战术飞行器（弓骑兵 冲锋）
+	FOOT_SOLDIER_5					= 5;	//5轻大兵（弓兵 1回合攻击2次）
+	FOOT_SOLDIER_6					= 6;	//6重型大兵（弩兵)
+	CANNON_SOLDIER_7				= 7;	//7远程工程车（投石器 2回合攻击1次）
+	CANNON_SOLDIER_8				= 8;	//8远程装甲车（冲车）
+	
+	BARTIZAN_100					= 100;	//100 箭塔 回合开始前攻击一次
+	WEAPON_LANDMINE_101				= 101;	//101 地雷 （地雷 3、6、9……回合结束时攻击一次） 
+	WEAPON_ACKACK_102				= 102;	//102 防空火炮 （火箭 3、6、9……回合结束时攻击一次）
+	WEAPON_ANTI_TANK_103			= 103;	//103 反坦克火箭 （反坦克火箭 3、6、9……回合结束时攻击一次）
+
+}
+
+enum PBSoldierSkill{
+	
+	// 装甲强化	增加坦克防御力。	
+	// 超强装甲	极大的提升装甲坦克的防御能力。	
+	TANK_SOLDIER_1_SKILL_1 = 101;
+	// 坦克改装	提升坦克的生命值。	
+	TANK_SOLDIER_1_SKILL_2 = 102;
+	// 坦克防御系统（天启防御系统） 10301 10302
+	// 降低坦克所受到的伤害，尤其是某些type的兵种造成的伤害。
+	// Trigger不填。
+	// P1=“任何伤害的减伤百分比”，
+	// P2=“指定兵种type，大类即可” （2，4，6）
+	// P3=“这些兵种对装甲坦克造成伤害时，会额外降低一个百分比“   
+	// P1+P3才是指定兵种的减伤比例。
+	// 这个减伤不要和已有的减伤百分比相加，要单独制作，是相乘的关系。单独写作用号，避免减伤太多堆叠到一个很夸张的程度。并且写一个保护机制，此类减伤不能超过50%。
+	TANK_SOLDIER_1_SKILL_3 = 103;
+	// 盾墙 
+	// Trigger=发动概率  
+	// P1= 抵挡伤害/万分比
+	TANK_SOLDIER_1_SKILL_4 = 104;
+	// 致命一击	有一定几率造成2倍伤害。配置参数10% 2倍伤害。 多重致命一击	有一定几率造成3倍伤害。15%，2.5倍伤害 参数: trigger(触发几率/万分比)  , param1 伤害加成(2.5倍 配置15000)
+	TANK_SOLDIER_1_SKILL_5 = 105;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	TANK_SOLDIER_1_SKILL_66 = 166;
+	TANK_SOLDIER_1_SKILL_34 = 134; //10星堡垒解锁技能
+	TANK_SOLDIER_1_SKILL_44 = 144; //【防御坦克】【144】- 【防御坦克】【泰能坦克庇护】：集结战斗时，自身出征数量最多的防御坦克每受到1次攻击后，己方全体坦克部队防御、生命 +XX.XX%（至多叠加 X 层，至多有 2 个防御坦克单位生效）- 仅对集结战斗生效（包含集结进攻和集结防守）- 自身出征数量最多的防御坦克- 真实出征部队数量，在战斗开始前判定，即参谋技军威、所罗门、吉迪恩 这种战斗中改变部队数量的机制对此无影响- 该技能为【光环】效果，对己方全体坦克部队生效- 坦克部队类型：主战坦克（兵种类型 = 2）和防御坦克（兵种类型 = 1）- 该技能为常规属性外围加成效果，即： 实际属性 = 基础属性*（1 + 其他加成 +【本技能值】）- （至多叠加 X 层，至多有 2 个防御坦克单位生效）- 层数记录在己方坦克部队身上，这里限制层数上限- 另外集结战斗时，若己方存在多个此技能，限制其生效个数上限（若超出此上限，优先取数值高的）；即这里只能有 2 个玩家携带的防御坦克技能生效- 对应技能参数如下- trigger：无意义- p1：单次加成防御和生命值- 配置格式：万分比- p2：叠加层数上限- 配置格式：绝对值- p3：生效单位上限- 配置格式：绝对值
+	
+	// 防空系统	增加对飞机造成的伤害。配置	30%
+	// 爱国者防空系统	大幅提升对飞机造成的伤害。配置	70%。
+	// 参数:trigger(触发几率/万分比) param1 伤害/万分比
+	TANK_SOLDIER_2_SKILL_1 = 201;
+	//技能：高能火炮 id：20201
+	//效果：有一定几率随机攻击攻击范围内的敌方部队。随机权重不是概率平分 而是兵种数量的^0.3次方加权平分
+	//几率控制：trigger （默认25%），随机选择时，范围内目标随机选择，但是会先排除当前目标，若射程内无其他有效目标，则选中当前目标，攻击结束后恢复锁定为技能发动前的目标，此次攻击会触发防空伤害加成（如果攻击到了空军。）
+	//伤害加成：P1（默认0%），可以在发动随机攻击附加一定的伤害。
+	TANK_SOLDIER_2_SKILL_2 = 202;
+	// 致命一击	有一定几率造成2倍伤害。配置参数10% 2倍伤害。多重致命一击	有一定几率造成3倍伤害。15%，2.5倍伤害 参数: trigger(触发几率/万分比)  , param1 伤害加成(2.5倍 配置15000)
+	TANK_SOLDIER_2_SKILL_3 = 203;
+
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	TANK_SOLDIER_2_SKILL_66 = 266;
+	TANK_SOLDIER_2_SKILL_34 = 234; //10星堡垒解锁技能
+	TANK_SOLDIER_2_SKILL_44 = 244;//【主战坦克】【244】- 【主战坦克】【泰能定点防空】主战坦克每次攻击命中空军部队时，自身生命 +XX.XX%（至多叠加 X 层）- 空军部队类型：直升机（兵种类型 = 4）和轰炸机（兵种类型 = 3）- 该技能为常规生命外围加成效果，即 实际生命 = 基础生命*（1 + 其他加成 +【本技能值】）- （至多叠加 X 层）- 层数记录在己方主战坦克部队身上，这里限制层数上限- 对应技能参数如下- trigger：无意义- p1：单次加成生命值 - 配置格式：万分比 - p2：叠加层数上限      - 配置格式：绝对值
+
+	// 飞行	提升行军速度。		
+	// 疾速飞行	大幅提升行军速度		
+	PLANE_SOLDIER_3_SKILL_1 = 301;
+	// 在受到伤害时有一定几率进行智能防御，降低此次受到的伤害。
+	//Trigger=几率。P1=“减伤百分比”
+	PLANE_SOLDIER_3_SKILL_2 = 302;
+	// 发动一次超强力的俯冲轰炸，优先攻击步兵单位且几率优先选中步兵中部队最多的单位。若无步兵，随机攻击一个目标，也有可能攻击当前目标。附加一定的额外伤害。若格子内有相同的部队，则可以攻击多个部队，最多攻击X个部队。
+	// Trigger=发动概率  
+	// P1= 攻击步兵部队数量最多的那个部队的几率
+	// 否则随机攻击敌方任意部队。
+	// P2=“最多攻击目标个数”   
+	// P3=“额外伤害
+	PLANE_SOLDIER_3_SKILL_3 = 303;
+
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	PLANE_SOLDIER_3_SKILL_66 = 366;
+	PLANE_SOLDIER_3_SKILL_34 = 334; //10星堡垒解锁技能
+	PLANE_SOLDIER_3_SKILL_44 = 344; //【轰炸机】【344】 - 【轰炸机】【泰能钻击爆弹】：轰炸机攻击命中敌方远程部队时，无视其防御加成 +XX.XX%（仅本次攻击生效）- 远程部队类型：直升机（兵种类型 = 4）、突击步兵（兵种类型 = 5）、狙击兵（兵种类型 = 6）、攻城车（兵种类型 = 7）- 该技能为常规属性外围削减效果，即： 实际属性 = 基础属性*（1 + 其他加成 -【本技能值】）- 该防御属性削减效果即对轰炸机攻击时生效- 对应技能参数如下- trigger：无意义- p1：防御属性削减数值  - 配置格式：万分比
+
+	// 飞行	提升行军速度。		
+	// 疾速飞行	大幅提升行军速度	
+	PLANE_SOLDIER_4_SKILL_1 = 401;
+	// 资源战挂载	在资源点战斗时有攻击加成。配置	提升30%攻击力。	
+	// 参数: trigger(触发几率/万分比) ,param1 功击力加成/万分比
+	PLANE_SOLDIER_4_SKILL_2 = 402;
+	// 发动一次突袭，优先攻击步兵单位且几率优先选中步兵中部队最多的单位。若无步兵，随机攻击一个目标，也有可能攻击当前目标。附加一定的额外伤害。
+	// Trigger=发动概率  
+	// P1= 攻击步兵部队数量最多的那个部队的几率
+	// 否则随机攻击敌方任意部队。
+	// P2=“额外伤害“
+	PLANE_SOLDIER_4_SKILL_3 = 403;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	PLANE_SOLDIER_4_SKILL_66 = 466;
+	PLANE_SOLDIER_4_SKILL_34 = 434; //10星堡垒解锁技能
+	PLANE_SOLDIER_4_SKILL_44 = 444; //【直升机】【444】 - 【直升机】【泰能定点防护】：直升机受到坦克部队攻击时，伤害减少 +XX.XX% - 坦克部队类型：主战坦克（兵种类型 = 2）和防御坦克（兵种类型 = 1）- 该伤害减少效果与其他伤害减少效果累乘计算；即实际伤害 = 基础伤害*（1 + 敌方各类伤害加成）*（1 - 己方某伤害减少）*（1 - 本技能伤害减少）- 对应技能参数如下- trigger：无意义- p1：伤害减少数值  - 配置格式：万分比
+
+	//增加攻击速度，万分比. 每回合累计P1  达到10000时额外攻击一次			
+	FOOT_SOLDIER_5_SKILL_1 = 501;
+	// 穿甲弹 忽略敌方一定比例的护甲。Trigger=概率。P1=伤害 P2=不生效的兵种ID（这里改为固定的兵种ID而非兵种Type）
+	FOOT_SOLDIER_5_SKILL_2 = 502;
+	// 爆破弹药	攻击时有几率附加一定额外伤害。15%生效，提升20%。			
+	// 辐射弹药	攻击时有几率附加辐射伤害，效果强于爆破弹药。20%生效，提升20%。			
+	// 参数: trigger(触发几率/万分比) , param1 额外伤害/万分比
+	FOOT_SOLDIER_5_SKILL_3 = 503;
+	// 连击 有概率触发额外攻击
+	// 参数: trigger(触发几率/万分比) 
+	FOOT_SOLDIER_5_SKILL_4 = 504;
+	//trigger=触发概率 P1=触发所需出征英雄的ID P2=触发所需部队数量 P3=技能相当于普攻伤害（万分比伤害）。  
+	//作用号作用于P3。注意 P3=10000，则技能伤害=普攻伤害而非二倍伤害。
+	FOOT_SOLDIER_5_SKILL_5 = 505;
+	// 同技能503
+	FOOT_SOLDIER_5_SKILL_7 = 507;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	FOOT_SOLDIER_5_SKILL_66 = 566;
+	FOOT_SOLDIER_5_SKILL_34 = 534; //10星堡垒解锁技能
+	FOOT_SOLDIER_5_SKILL_44 = 544; //【突击步兵】【544】 - 【突击步兵】【泰能装甲爆破】：突击步兵攻击命中敌方坦克部队后，使其受到攻击时受到伤害 +XX.XX%（持续 2 回合）- 坦克部队类型：主战坦克（兵种类型 = 2）和防御坦克（兵种类型 = 1）- 此伤害加成效果为debuff效果，记在被攻击方身上- 该效果不可叠加，先到先得，持续回合结束后消失- 此伤害加成效果与其他伤害加成累加计算；即 实际伤害 = 基础伤害*（1 + 各类伤害加成 + 【本作用值】）- 对应技能参数如下- trigger：无意义- p1：伤害加成数值- 配置格式：万分比- p2：持续回合数- 配置格式：绝对值- 注：由被附加开始到当前回合结算，算作 1 回合
+
+	// 瞄准	大幅提高狙击兵的攻击力。			
+	// 精确瞄准	大幅提升狙击兵的攻击力，效果强于瞄准。			
+	FOOT_SOLDIER_6_SKILL_1 = 601;
+	// 守株待兔	守城时提升狙击兵的攻击力。配置参数	提升30%。		
+	// 参数: trigger(触发几率/万分比) , param1 攻击力加成/万分比
+	FOOT_SOLDIER_6_SKILL_2 = 602;
+	// 狙击	大幅提升攻击射程。直接配置攻击距离。			
+	// 有几率(p1)造成2倍(P2)伤害 ,有较低几率(P3) 命中要害,造成5倍(P4)伤害			
+	FOOT_SOLDIER_6_SKILL_3 = 603;
+	// 触发, 本回合不攻击, 下回合爆机
+	FOOT_SOLDIER_6_SKILL_5 = 605;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	FOOT_SOLDIER_6_SKILL_66 = 666;
+	FOOT_SOLDIER_6_SKILL_34 = 634; //10星堡垒解锁技能
+	FOOT_SOLDIER_6_SKILL_44 = 644; //【狙击兵】【644】- 【狙击兵】【泰能潜行伪装】：狙击兵受到敌方步兵攻击时，伤害减少 +XX.XX%- 步兵类型：狙击兵（兵种类型 = 6）和突击步兵（兵种类型 = 5）- 该伤害减少效果与其他伤害减少效果累乘计算；即实际伤害 = 基础伤害*（1 + 敌方各类伤害加成）*（1 - 己方某伤害减少）*（1 - 本技能伤害减少）- 对应技能参数如下- trigger：无意义- p1：伤害减少数值- 配置格式：万分比
+
+	//  进行一轮蓄力后攻击（使用round直接配置），发动后本轮有伤害加成，但是攻击力提升不在面板显示而改为由技能附加。这里只填附加伤害。
+	// trigger=发动几率，
+	// P1=附加伤害百分比	
+	CANNON_SOLDIER_7_SKILL_1 = 701;
+	// 火炮	在进攻敌方基地时，大幅提升自身攻击力。			攻城：提升30%攻击力。
+	// 参数: trigger(触发几率/万分比) , param1 攻击力加成
+	CANNON_SOLDIER_7_SKILL_2 = 702;
+	// 远程打击	大幅提升攻坚车的射程。			
+	// 要塞	提升要塞的射程，防御和血量，移动的战斗堡垒。			
+	CANNON_SOLDIER_7_SKILL_3 = 703;
+	//trigger=触发概率 P1=触发所需出征英雄的ID P2=触发所需部队数量 P3=技能相当于普攻伤害（万分比伤害）。  
+	//作用号作用于P3。注意 P3=10000，则技能伤害=普攻伤害而非二倍伤害。
+	CANNON_SOLDIER_7_SKILL_5 = 705;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	CANNON_SOLDIER_7_SKILL_66 = 766;
+	CANNON_SOLDIER_7_SKILL_34 = 734; //10星堡垒解锁技
+	CANNON_SOLDIER_7_SKILL_44 = 744; //【攻城车】【744】- 【攻城车】【泰能火力掩护】：集结战斗时，自身出征数量最多的攻城车攻击命中敌方部队时，降低其攻击、防御、生命 +XX.XX%（持续 2 回合，至多有 2 个攻城车单位生效）- 仅对集结战斗生效（包含集结进攻和集结防守）- 自身出征数量最多的攻城车- 真实出征部队数量，在战斗开始前判定，即参谋技军威、所罗门、吉迪恩 这种战斗中改变部队数量的机制对此无影响- 该效果不可叠加，先到先得，持续回合结束后消失- 该技能为常规属性外围削减效果，即： 实际属性 = 基础属性*（1 + 其他加成 -【本技能值】）- （至多有 2 个攻城车单位生效）- 集结战斗时，若己方存在多个此技能，限制其生效个数上限（若超出此上限，优先取数值高的）；即这里只能有 2 个玩家携带的攻城车技能生效- 对应技能参数如下- trigger：无意义- p1：攻击、防御、生命削减数值- 配置格式：万分比- p2：持续回合数- 配置格式：绝对值- 注：由被附加开始到当前回合结算，算作 1 回合
+
+	// 负载系统	提升运载车的负载，大大提升资源运输效率。			
+	// 高级负载系统	大幅提升采矿车的负载，效果强于负载。			
+	CANNON_SOLDIER_8_SKILL_1 = 801;
+	// 防护	提升运载车的安全性，护甲和血量有效提升。			
+	CANNON_SOLDIER_8_SKILL_2 = 802;
+	//技能：攻城防御
+	//效果：进攻敌方基地（城池），运载战车的防御力大幅提升。
+	//几率：100%触发。
+	//参数控制：p1=万分比防御加成。 默认3000，30%。			
+	CANNON_SOLDIER_8_SKILL_3 = 803;
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	CANNON_SOLDIER_8_SKILL_66 = 866;
+	CANNON_SOLDIER_8_SKILL_34 = 834; //10星堡垒解锁技
+	CANNON_SOLDIER_8_SKILL_44 = 844; //【采矿车】【844】- 【采矿车】【泰能近战护卫】：集结战斗开始前，自身出征数量最多的采矿车为己方全体近战部队提供防御加成 +XX.XX%（至多有 2 个采矿车单位生效）- 仅对集结战斗生效（包含集结进攻和集结防守）- 自身出征数量最多的采矿车- 真实出征部队数量，在战斗开始前判定，即参谋技军威、所罗门、吉迪恩 这种战斗中改变部队数量的机制对此无影响- 该技能为常规防御外围加成效果，即 实际防御 = 基础防御*（1 + 其他加成 +【本技能值】）- 该技能为【光环】效果，对己方全体近战部队生效- 近战部队类型：主战坦克（兵种类型 = 2）、防御坦克（兵种类型 = 1）、采矿车（兵种类型 = 8）、轰炸机（兵种类型 = 3）- （至多有 2 个采矿车单位生效）- 集结战斗时，若己方存在多个此技能，该加成数值可叠加，限制其生效个数上限（若超出此上限，优先取数值高的）；即这里只能有 2 个玩家携带的采矿车技能生效- 对应技能参数如下- trigger：无意义- p1：加成防御- 配置格式：万分比- p2：生效单位上限- 配置格式：绝对值
+
+	BARTIZAN_100_SKILL_1					= 10001;	//100 箭塔 回合开始前攻击一次
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	BARTIZAN_100_SKILL_66 = 10066;
+
+	WEAPON_LANDMINE_101_SKILL_1				= 10101;	//101 地雷 （地雷 3、6、9……回合结束时攻击一次） 
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	WEAPON_LANDMINE_101_SKILL_66 = 10166;
+
+	WEAPON_ACKACK_102_SKILL_1				= 10201;	//102 防空火炮 （火箭 3、6、9……回合结束时攻击一次）
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	WEAPON_ACKACK_102_SKILL_66 = 10266;
+	
+	WEAPON_ANTI_TANK_103_SKILL_1			= 10301;	//103 反坦克火箭 （反坦克火箭 3、6、9……回合结束时攻击一次）
+	// 兵种相克  p2="type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比|type_万分比"
+	WEAPON_ANTI_TANK_103_SKILL_66 = 10366;
+
+	SOLDIER_SKILL_114 = 114; // ID57992792
+	SOLDIER_SKILL_214 = 214; // ID57992792
+	SOLDIER_SKILL_314 = 314; // ID57992792
+	SOLDIER_SKILL_414 = 414; // ID57992792
+	SOLDIER_SKILL_514 = 514; // ID57992792
+	SOLDIER_SKILL_614 = 614; // ID57992792
+	SOLDIER_SKILL_714 = 714; // ID57992792
+	SOLDIER_SKILL_814 = 814; // ID57992792
+
+	// 1	主战坦克	2	224	攻击命中空军（兵种类型 =  4或3）时，降低其攻击加成（至多叠加X层），并有概率追加1次攻击	"1. 命中后就降低其攻击加成，叠加的层数记录在被攻击的目标兵种身上，不论数值大小，按层数叠加上限// 触发追击后，相当于针对目标再结算1次攻击伤害（本次攻击不会触发连击，也不消耗连击次数）// 追加后不可再追加，追加时不降低目标的攻击加成 常规攻击和连击攻击 都可以触发本技能效果"	10000	"降低攻击加成 万分比"	"叠加层数上限 绝对值"	"触发追击概率 万分比"	
+	SOLDIER_SKILL_224 = 224;								
+	// 2	防御坦克	1	124	受到近战部队（兵种类型 = 2 1 3或8）攻击时，伤害减少XX%	"该伤害减免与其他伤害减免累乘计算 即：实际伤害 = 基础伤害*（1 - 其他作用号）*（1 - 本作用值/10000）"	10000	"伤害减免比率万分比"												
+	SOLDIER_SKILL_124 = 124;
+	// 3	直升机	4	424	"攻击命中步兵（兵种类型 = 6或5）时，对其添加1枚标记（至多叠加X层）此后我方空军（兵种类型 = 4或3）对其进行攻击时，无视其标记层数 * XX%的防御和生命加成"	"无视的是敌方部队的外围属性加成即：敌方属性 = 基础属性*（1 + 敌方加成 - 本作用值/10000）"	10000	"叠加层数上限绝对值"	"降低防御加成万分比"	"降低生命加成 万分比"									
+	SOLDIER_SKILL_424 = 424;
+	// 4	轰炸机	3	324	【俯冲轰炸】技能命中步兵（兵种类型 = 6或5）时，伤害额外增加	"仅本次攻击生效该伤害加成与其他伤害加成累加计算 即：实际伤害 = 基础伤害*（1 + 其他作用号 + 本作用值/10000）"	10000	"伤害加成比例万分比"												
+	SOLDIER_SKILL_324 = 324;
+	// 5	狙击兵	6	624	"战斗中每击杀敌方X个步兵（兵种类型 = 6或5）时，增加自身XX%的伤害加成（至多叠加X层）"	"在战斗中判定生效，与战斗结束后的伤兵结算逻辑无关该伤害加成与其他伤害加成累加计算即：实际伤害 = 基础伤害*（1 + 其他作用号 + 本作用值/10000）"	10000	"叠加层数上限绝对值"	"伤害加成比例万分比"											
+	SOLDIER_SKILL_624 = 624;
+	//6	突击步兵	5	524	攻击命中坦克（兵种类型 =  2或1）时，降低其暴击几率（持续X回合）	"至多叠加1层，持续回合数从当前回合开始算起即：敌方暴击率 = 基础暴击率 + 其他作用号加成 - 本作用值/10000暴击率有效数值在【0,100%】之间"	10000	"持续回合数绝对值"	"降低暴击几率万分比"											
+	SOLDIER_SKILL_524 = 524;
+	// 7	采矿车	8	824	"战斗开始时，增加己方所有坦克部队（兵种类型 = 2或1）的防御和生命加成（至多叠加X层）"	"增加的是己方部队的外围属性加成 即：己方属性 = 基础属性*（1 + 其他作用号加成 + 本作用值/10000）"	10000	"叠加层数上限绝对值"	"防御加成比例 万分比"	"生命加成比例 万分比"										
+	SOLDIER_SKILL_824 = 824;
+	// 8	攻城车	7	724	攻击命中远程部队（兵种类型 = 4 5 6 或7）时，降低其攻击加成（至多叠加X层）	"降低的是敌方部队的外围属性加成即：敌方属性 = 基础属性*（1 + 敌方加成 - 本作用值/10000）"	10000	"叠加层数上限绝对值"	"降低攻击比例 万分比"											
+	SOLDIER_SKILL_724 = 724;
+
+	SOLDIER_SKILL_14101 = 141;//：防坦受到近战部队攻击时，生命+XX%
+	SOLDIER_SKILL_24101 = 241;//：主战攻击近战部队时，暴击伤害+XX%
+	SOLDIER_SKILL_34101 = 341;//：轰炸攻击远程部队时，轰炸伤害+XX%
+	SOLDIER_SKILL_44101 = 441;//：直升机攻击远程部队时，减少目标生命加成+XX%
+	SOLDIER_SKILL_54101 = 541;//：突击步兵攻击近战部队时，伤害+XX%
+	SOLDIER_SKILL_64101 = 641;//：狙击兵攻击远程部队时，伤害+XX%
+	SOLDIER_SKILL_74101 = 741;//：攻城车受到远程部队攻击时，生命+XX%
+	SOLDIER_SKILL_84101 = 841;//：采矿车攻击近战部队时，减少目标生命加成+XX%
+
+	SOLDIER_SKILL_14501 = 145;
+	SOLDIER_SKILL_24501 = 245;
+	SOLDIER_SKILL_34501 = 345;
+	SOLDIER_SKILL_44501 = 445;
+	SOLDIER_SKILL_54501 = 545;
+	SOLDIER_SKILL_64501 = 645;
+	SOLDIER_SKILL_74501 = 745;
+	SOLDIER_SKILL_84501 = 845;
+
+	SOLDIER_SKILL_14601 = 146;
+	SOLDIER_SKILL_24601 = 246;
+	SOLDIER_SKILL_34601 = 346;
+	SOLDIER_SKILL_44601 = 446;
+	SOLDIER_SKILL_54601 = 546;
+	SOLDIER_SKILL_64601 = 646;
+	SOLDIER_SKILL_74601 = 746;
+	SOLDIER_SKILL_84601 = 846;
+
+}
+
+// 资源带常量
+enum ResourceZone
+{
+	ZONE_1 = 1;
+	ZONE_2 = 2;
+	ZONE_3 = 3;
+	ZONE_4 = 4;
+	ZONE_5 = 5;
+	ZONE_6 = 6;
+	ZONE_BLACK = 7;
+}
+
+// 联盟职位
+enum GuildPositon
+{
+	LEADER = 1;	  // 盟主
+	COLEADER = 2; //外交官
+	MEMBER = 3;	  // 普通
+}
+
+// 购买商品的类型
+enum GoodsType
+{
+	NORMAL = 1;	// 普通
+	GIFT = 2;	// 礼包
+}
+
+// 联盟战争类型
+enum GuildWarType
+{
+	GUILDWAR_MASS	= 1; //	集结
+	GUILDWAR_DFC	= 2; //	防守
+	GUILDWAR_ATK	= 3; //	攻击
+}
+
+
+//周期任务活动类型
+enum RoundTaskActivityType
+{
+	BUILDING_CREATE_EVENT	 = 1;	// 建造建筑
+	BUILDING_UPGRADE_EVENT	 = 2;	// 升级建筑
+	TRAIN_SOLDIER_EVENT		 = 3;	// 训练部队
+	ATTACK_MONSTER_WON_EVENT = 4;	// 战胜尤里部队
+	WIPEOUT_MONSTER_EVENT	 = 5;	// 消灭尤里部队
+	COLLECT_RES_EVENT		 = 6;	// 采集世界资源
+	ATTACK_PLAYER_EVENT		 = 7;	// 击杀其它玩家部队
+	ATTACK_SUPERMONSTER_WON_EVENT   = 8;   // 攻打超级怪战斗胜利
+	WIPEOUT_SUPERMONSTER_EVENT      = 9;   // 消灭清除超级怪
+}
+
+// 联盟建筑类型
+enum TerritoryType{
+	GUILD_BASTION	= 1;			//-- 联盟大本营(哨塔)
+	GUILD_SILO		= 2;			//-- 联盟核弹发射井
+	GUILD_URANIUM	= 3;			//-- 联盟铀矿
+	GUILD_WEATHER	= 4;			//-- 联盟天气控制室
+	GUILD_ELECTRIC	= 5;			//-- 联盟发电厂
+	GUILD_HOSPITAL	= 6;			//-- 联盟医院
+	GUILD_SHOP		= 7;			//-- 联盟商店
+	GUILD_MINE		= 8;			//-- 联盟超级矿
+	GUILD_CANNON	= 9;			//-- 联盟巨炮
+	GUILD_STATUE	= 10;			//-- 联盟雕像
+	GUILD_MOVABLE_BUILDING	= 11;	//-- 联盟移动建筑
+	GUILD_BARTIZAN	=12;			//-- 联盟箭塔
+	GUILD_STOREHOUSE = 13;			//-- 联盟仓库
+	GUILD_WAR_FLAG = 14;			//-- 联盟战旗
+	GUILD_CENTER_WAR_FLAG = 15;			//-- 联盟战旗(母旗)
+	GUILD_DRAGON_TRAP = 16;         //联盟巨龙陷阱
+}
+
+// 联盟移动建筑id
+enum TerritoryBuilding {	
+	NUCLEAR = 122;	// 移动核弹发射机
+	WEATHER = 123;	// 移动天气控制权
+}
+
+//推送消息类型
+enum PushMsgType
+{
+	BUILDING_QUEUE_FINISHED					= 11;//	建筑升级完成
+	SOILDER_QUEUE_FINISHED					= 12;//	部队训练完成
+	CURE_QUEUE_FINISHED						= 13;//	伤病治疗完成
+	SCIENCE_QUEUE_FINISHED					= 14;//	科技研究完成
+	SOILDER_PROMOTION_QUEUE_FINISHED		= 15;//	部队进阶完成
+	
+	BE_ATTACKED								= 21;//	受到攻击
+	BE_DETECTED								= 22;//	受到侦查   
+	BE_MASSED								= 23;//	被集结     
+	
+	RES_COLLECT_PUSH						= 31;//	所有资源建筑满容量
+	PLANT_RESOURCE_FULL_PUSH                = 32; // 泰能研究所物品生产已
+	WHARF_REWARD_PUSH					    = 41;//	空降资源奖励
+	ALLIANCE_TREASURE_REWARD				= 42;//	联盟宝藏可领取
+	DAILY_LOGIN_ACTIVITY					= 43;//	每日礼包
+	
+	ALLIANCE_ASSISTANCE_RES					= 51;//	收到盟友援助资源  
+	ALLIANCE_ASSISTANCE_ARMY				= 52;//	收到盟友援助部队  
+	
+	NEW_MSG									= 61;//	个人邮件信息  
+	
+	ALLIANCE_NEW_MSG						= 71;// 联盟高级成员全体邮件  
+	
+	YURI_ACTIVITY_OPEN	            		= 81;// 尤里的复仇活动开启     
+	WORLD_BOX_CD_END            			= 82;// 随机宝箱冷却时间结束   
+	
+	ALLIANCE_MASSED_BOSS					= 91;// 联盟集结怪物  
+	ALLIANCE_MASSED_PLAYER					= 92;// 联盟集结玩家  
+	ALLIANCE_MASSED_FOGGY                   = 93;// 联盟集结迷雾要塞
+	
+	ASSISTANCE_ARMY_RETURN					= 101;// 派出的援助部队已返回  
+	COLLECT_ARMY_RETURNED					= 102;// 派出的采集部队已返回  
+	ACTTACK_ARMY_RETURN						= 103;// 派出进攻的部队已返回  
+	ACTTACK_BOSS_ARMY_RETURN				= 104;// 派出打怪的部队已返回  
+	ARMY_ARRIVED							= 105;// 行军部队达到目的地
+	ATTACK_FOGGY_ARMY_RETURN                = 106;// 派出攻打迷雾要塞的行军已返回                
+	
+	PROTECT_10_END							= 111;// 保护罩还有10分钟消失
+	PROTECT_END								= 112;// 保护罩消失
+	
+	OFFLINE_TIME_REACH						= 121;// 长时间不上线的召回推送消息--玩家离线时间达到XX
+
+	SOLDIERCAVE_WILL_END					= 122;// 藏兵洞藏兵时间即将结束
+	SOLDIERCAVE_END							= 123;// 藏兵洞藏兵时间结束
+	
+	ANCHOR_ONLINE							= 141;// 主播上线通知
+	COLLEGE_INVITE_LOGIN					= 142;// 军事学院邀请上线
+	
+	TIBERIUM_ACT_OPEN                       = 151;   // 泰伯利亚活动开启
+	WAR_ZONE_WAR_OPEN                       = 152;   // 战区争夺活动开启
+	ALLIED_HEADQUARTERS_WAR_OPEN            = 153;   // 盟军总部争夺战开启
+	STAR_WAR_OPEN                           = 154;   //统帅之战开启
+	
+	LOSS_PLAYER_PUSH_ONE                    = 155;    //8-15天未登陆
+	LOSS_PLAYER_PUSH_TWO                    = 156;    //16-45天未登陆
+	LOSS_PLAYER_PUSH_THREE                  = 157;    //46-100天未登陆
+	LOSS_FRIEND_APPLY_PUSH                  = 158;   //给流失角色添加好友信息时
+	LOSS_GAME_FRIEND_PUSH                   = 159;  //游戏内好友7天未上线
+	LOSS_PLATFORM_FRIEND_PUSH               = 160;  //平台内好友7天未上线
+	
+	RESOURCE_DEFENSE_PUSH					= 161; // 资源保卫战推送
+	ACT_DOUBLE_TWELVE_LIMITED_SPIKE_PUSH	= 162; // 限时购买推送
+
+	TOUCAI_BEI_TOU = 163; //{0}正在夺取您的勋章工厂产物！
+	TOUCAI_PRODUCT_1 = 164; //勋章工厂1队列生产完成
+	TOUCAI_PRODUCT_2 = 165; //勋章工厂2队列生产完成
+	TOUCAI_PRODUCT_3 = 166; //勋章工厂3队列生产完成
+	TOUCAI_PRODUCT_4 = 167; //勋章工厂4队列生产完成
+}
+
+
+/** 钻石兑换时间权重类型 */
+enum SpeedUpTimeWeightType 
+{
+	//** 城建时间价值钻石的权重*/
+	TIME_WEIGHT_BUILDING = 1;
+	//** 造兵时间价值钻石的权重*/
+	TIME_WEIGHT_TRAINSOLDIER = 2;
+	//** 部队治疗时间价值钻石的权重*/
+	TIME_WEIGHT_CURESOLDIER = 3;
+	//** 英雄治疗时间价值钻石的权重*/
+	TIME_WEIGHT_CUREHERO = 4;
+	//** 英雄训练时间价值钻石的权重*/
+	TIME_WEIGHT_TRAINHERO = 5;
+	//** 科技研究时间价值钻石的权重*/
+	TIME_WEIGHT_TECHNOLOGY= 6;
+	// 加速挖掘宝藏
+	SPEEDUP_COEFFICIENT = 7;
+	//** 装备合成/升品/分解时间价值钻石的权重*/
+	EQUIP_OPERATION = 8;
+	// 英雄试炼
+	HERO_TRIAL = 9;
+	// 装备科技
+	EQUIP_RESEARCH = 10;
+}
+
+//联盟成员查看页面
+enum AllianceMemberContentType
+{
+SelfAlliance=0;
+OtherAlliance=1;
+
+}

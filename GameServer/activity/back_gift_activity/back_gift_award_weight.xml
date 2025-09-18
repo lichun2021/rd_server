@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" lotteryNum="2,10,25,45" weight="200" type="1" />
+      <data id="2" weight="2000" type="2" />
+      <data id="3" weight="7800" type="3" />
+</root>

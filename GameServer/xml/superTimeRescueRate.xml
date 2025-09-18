@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!--
+超时空救援兵种等级概率 对应表
+id 兵种等级
+rete 救援万分比
+-->
+      <data id="1" rate="10000" />
+	  <data id="2" rate="9500" />
+	  <data id="3" rate="9000" />
+	  <data id="4" rate="8500" />
+	  <data id="5" rate="8000" />
+	  <data id="6" rate="7500" />
+	  <data id="7" rate="7000" />
+	  <data id="8" rate="6500" />
+	  <data id="9" rate="6000" />
+	  <data id="10" rate="5500" />
+</root>

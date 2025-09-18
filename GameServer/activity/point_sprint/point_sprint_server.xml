@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data groupId="1" serverList="10001_10002_10004_10011_10013" />
+      <data groupId="2" serverList="10005_10009_10016_10018_10022" />
+      <data groupId="3" serverList="10024_10026_10029_10041_10043" />
+      <data groupId="4" serverList="10032_10036_10045_10047_10056" />
+      <data groupId="5" serverList="10067_10124_10144_10162_10166" />
+      <data groupId="6" serverList="10149_10159_10206_10231_10232" />
+      <data groupId="7" serverList="10253_10267_10275_10411_10441" />
+      <data groupId="8" serverList="10311_10334_10506_10545_10590" />
+      <data groupId="9" serverList="10607_10609_10634_10703_10713" />
+      <data groupId="10" serverList="10647_10693_10716_10722_10731" />
+      <data groupId="11" serverList="10764_10769_10770_10777_10779" />
+      <data groupId="12" serverList="10773_10775_10781_10783_10785" />
+      <data groupId="13" serverList="10787_10789_10791_10796_10797" />
+      <data groupId="14" serverList="10793_10795_10798_10799_10800" />
+      <data groupId="15" serverList="10801_10802_10803_10806_10807" />
+      <data groupId="16" serverList="10804_10805_10808_10809_10810" />
+      <data groupId="17" serverList="10811_10812_10813_10814_10815" />
+      <data groupId="18" serverList="10816_10817_10818_10819_10820" />
+      <data groupId="19" serverList="20001_20004_20006_20021_20032" />
+      <data groupId="20" serverList="20011_20015_20058_20072_20080" />
+      <data groupId="21" serverList="20107_20119_20124_20159_20169" />
+      <data groupId="22" serverList="20126_20144_20186_20198_20207" />
+      <data groupId="23" serverList="20225_20245_20313_20395_20405" />
+      <data groupId="24" serverList="20334_20379_20406_20409_20411" />
+      <data groupId="25" serverList="20413_20415_20417_20421" />
+      <data groupId="26" serverList="20419_20420_20422_20423" />
+</root>

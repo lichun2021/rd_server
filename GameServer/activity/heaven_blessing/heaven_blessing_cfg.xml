@@ -1,0 +1,24 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 玩家注册天数大于N开启
+registerDays = 30
+
+# 玩家主堡等级大于N开启
+buildingLevel = 16
+
+# N天内仅可触发一次（s）
+loopDays = 518400
+
+# 活动持续时间（s）
+continuouslyTime = 86400
+
+# 免费奖励
+freeAward = 3020001
+
+# 腾讯接口
+addr = http://apps.datamore.tencent-cloud.net/api/pkg_rules/result?rbk_id=10789&secret=3f57a5ff3a57dce331760db6133f4d49&vroleid={0}
+
+# 腾讯接口
+addrL5 = 64186497:28966912
+

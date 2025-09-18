@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" scoreRange="1800" />
+      <data id="2" scoreRange="1500_1799" />
+      <data id="3" scoreRange="1200_1499" />
+      <data id="4" scoreRange="900_1199" />
+      <data id="5" scoreRange="600_899" />
+      <data id="6" scoreRange="300_599" />
+      <data id="7" scoreRange="0_299" />
+</root>

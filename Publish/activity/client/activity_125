@@ -1,0 +1,27 @@
+return {
+	prop =
+	{
+		activityId = 125,
+		icon = [[Activity_Icon_125_Nor.png]],
+		selecticon = [[Activity_Icon_125_Sel.png]],
+		name = [[理财顾问]],
+		title = [[活动详情]],
+		bottomText = [[购买理财客服服务可额外增加利率与投资上限]],
+		bannerText = [[38%]],
+		tips = [[<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1. 活动上线时开放<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">3</font>天，活动结束后，预留展示<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">15</font>天；<br/>2. 理财产品分短、中、长三档，分别为<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">3、7、15</font>天，三档产品的基本利率为<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">5%、12%、26%</font>；<br/>3. 理财产品通过金条购买，初始投资额为<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1000到15000金条</font>，到期后返还本金金条，收益为<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">金币</font>；<br/>4. 购买<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">理财专属客服服务</font>，会额外<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">增加利率与投资额上限</font>；<br/>5. 玩家可随时（包括展示期）中途放弃理财产品，<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">但放弃只能返还本金，无任何收益</font>；同时您购买的理财客服也将<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">停止服务，且不会返还购买服务的金额</font>；<br/>6. 三档理财产品可同时购买；<br/>7. 产品到期后，您需要<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">主动领取</font>最终收益，但购买的理财客服服务不会返还。若您在展示期结束后未领取，统一通过<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">邮件</font>发放。</font>]],
+		priority = 1,
+	},
+	invest_product = [[id	productIcon	productName	productBannerText	productProfit	productDuration	customerId	productMinAmount	productMaxAmount
+1	2	2	2	2	2	2	2	2
+125001	V5Activity_125_u_Box_01.png	@InvestProductName1	InvestProductBannerText1	500	259200	1250001	10000_1000_1000	10000_1000_3000
+125002	V5Activity_125_u_Box_02.png	@InvestProductName2	InvestProductBannerText2	1200	604800	1250002	10000_1000_4000	10000_1000_8000
+125003	V5Activity_125_u_Box_03.png	@InvestProductName3	InvestProductBannerText3	2600	1296000	1250003	10000_1000_9000	10000_1000_15000
+]],
+	invest_customer = [[customerId	customerIcon	customerName	customerProfit	customerAmout	customerPrice
+1	2	2	2	2	2
+1250001	V5Activity_125_Icon_Assistant_01.png	@InvestCustomerName1	200	10000_1000_700	10000_1000_58
+1250002	V5Activity_125_Icon_Assistant_02.png	@InvestCustomerName2	500	10000_1000_2000	10000_1000_328
+1250003	V5Activity_125_Icon_Assistant_03.png	@InvestCustomerName3	1200	10000_1000_4000	10000_1000_1288
+]],
+
+}

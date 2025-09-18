@@ -1,0 +1,36 @@
+return {
+	prop =
+	{
+		activityId = 130,
+		name = [[稀有芯片]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，稀有芯片活动限时出售限定芯片宝箱。<br/>2. 开启限定芯片宝箱必定获得芯片兑换券，并额外赠送资源、加速、增益道具，更有机会直接获得 空中压制芯片、制空权芯片、突击步兵连击芯片、连击火炮芯片、双层装甲芯片、毁灭战车芯片等。<br/>3. 芯片兑换券可用于兑换 空中压制碎片、制空权碎片、突击步兵连击碎片、连击火炮碎片、双层装甲碎片、毁灭战车碎片、震慑碎片、联合火力碎片、基因强化碎片、钢铁阵地碎片、加速、资源等道具<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">限定芯片宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得芯片兑换券，20%概率获得1个，40%概率获得2个，25%概率获得3个，15%概率获得5个。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">城建加速5分钟*10  8%<br/>科技研究加速5分钟*10  8%<br/>部队训练加速5分钟*10  8%<br/>医疗加速5分钟*10  8%<br/>城建加速2小时*1  4%<br/>科技研究加速2小时*1  4%<br/>部队训练加速2小时*1  4%<br/>医疗加速2小时*1  4%<br/>150000矿石*2  8%<br/>150000石油*2  8%<br/>25000合金*2  8%<br/>6250稀土*2  8%<br/>500000矿石*1  4%<br/>500000石油*1  4%<br/>80000合金*1  4%<br/>20000稀土*1  4%<br/>高级行军加速*1  3.82%<br/>空中压制芯片*1  0.01%<br/>制空权芯片*1  0.01%<br/>突击步兵连击芯片*1  0.01%<br/>连击火炮芯片*1  0.01%<br/>双层装甲芯片*1  0.01%<br/>毁灭战车芯片*1  0.01%<br/>震慑芯片*1  0.02%<br/>联合火力芯片*1  0.03%<br/>基因强化芯片*1  0.03%<br/>钢铁阵地芯片*1  0.04%<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">极品资源宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得500000矿石*1。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">500000矿石*2  7.5%<br/>500000石油*2  7.5%<br/>80000合金*2  7.5%<br/>20000稀土*2  7.5%<br/>1500000矿石*1  7.5%<br/>1500000石油*1  7.5%<br/>250000合金*1  7.5%<br/>62500稀土*1  7.5%<br/>1500000矿石*2  5%<br/>1500000石油*2  5%<br/>250000合金*2  5%<br/>62500稀土*2  5%<br/>5000000矿石*1  5%<br/>5000000石油*1  5%<br/>800000合金*1  5%<br/>200000稀土*1  5%<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">极品加速宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得通用加速5分钟*15。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">城建加速5分钟*6  12%<br/>部队训练加速5分钟*6  12%<br/>科技研究加速5分钟*6  12%<br/>医疗加速5分钟*6  12%<br/>城建加速2小时*1  10%<br/>部队训练加速2小时*1  10%<br/>科技研究加速2小时*1  10%<br/>医疗加速2小时*1  10%<br/>城建加速8小时*1  3%<br/>部队训练加速8小时*1  3%<br/>科技研究加速8小时*1  3%<br/>医疗加速8小时*1  3%<br/></font>]],
+		priority = 20245,
+		icon = [[Activity_Icon_130_Nor.png]],
+		selecticon = [[Activity_Icon_130_Sel.png]],
+		bigIcon = [[]],
+	},
+	universal_exchange_two = [[id	priority	needItem	gainItem	des	times
+1	1	2	2	2	1
+1	1	30000_1150081_50	30000_1323101029_1	ActivityExchangeGainItemDes1	20
+2	2	30000_1150081_50	30000_1323101050_1	ActivityExchangeGainItemDes1	20
+3	3	30000_1150081_50	30000_1323101055_1	ActivityExchangeGainItemDes1	20
+4	4	30000_1150081_50	30000_1323101011_1	ActivityExchangeGainItemDes1	20
+5	5	30000_1150081_50	30000_1323101030_1	ActivityExchangeGainItemDes1	20
+6	6	30000_1150081_50	30000_1323101057_1	ActivityExchangeGainItemDes1	20
+7	7	30000_1150081_20	30000_1323101010_1	ActivityExchangeGainItemDes1	20
+8	8	30000_1150081_10	30000_1323101017_1	ActivityExchangeGainItemDes1	20
+9	9	30000_1150081_10	30000_1323101019_1	ActivityExchangeGainItemDes1	20
+10	10	30000_1150081_10	30000_1323101018_1	ActivityExchangeGainItemDes1	20
+11	11	30000_1150081_4	30000_810001_1	ActivityExchangeGainItemDes1	99
+12	12	30000_1150081_1	30000_1510003_1	ActivityExchangeGainItemDes1	999
+13	13	30000_1150081_1	30000_13310003_1	ActivityExchangeGainItemDes1	999
+]],
+	universal_exchange_two_package = [[id	itemId	awardId	price	limit
+1	1	1	2	1
+1300001	1150082	4900017	10000_1001_25	999
+1300002	1150085	4930012	10000_1001_58	100
+1300003	1150086	4930013	10000_1001_58	100
+]],
+
+}

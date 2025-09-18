@@ -1,0 +1,88 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+
+// 宝藏列表
+message	HPStorehouseList
+{
+	optional int64 refrashTime			=1; // 自动刷新时间
+	repeated int32 storeId				=2; // 可挖宝藏
+	optional int32 exc					=3;	// 挖掘数
+	optional int64 excRecover			=4; // 下次挖掘数回复
+	optional int32 help					=5; // 帮助数
+	optional int64 helpRecover			=6; // 下次帮助数回复	
+	optional string excavateCost		=7; // 宝藏挖掘费用
+	optional string refrashCost			=8; // 宝藏刷新费用
+	repeated HPStore storeList			= 9; // 我的挖掘中
+	repeated HPStoreHelp helpList		= 10; //帮助列表
+	optional int64 freeExcTime			= 11; // 免费挖掘时间
+	optional int64 joinGuildTime		= 12; // 加入联盟时间
+}
+
+//帮助和可帮助的
+message HPStoreHelp{
+	optional string	 playerId			= 1;	// 玩家ID
+	optional string	name				= 2;	// 玩家name
+	optional string	allianceName		= 3;	// 联盟名字
+	optional int32 vip					= 4;	// vip等级
+	optional int32 icon					= 5;	// 头像
+	optional int32 office				= 6;	// 官职
+	optional bool vipActive				= 7;	// vip是否激活
+	optional string pfIcon              = 8;   // 平台头像
+	optional int64 level				= 9;   // 等级
+	optional int32 storeId				= 10; // 宝藏id
+	optional int64 openTime				= 11; // 宝藏开启时间
+	optional int32 state				= 12; // 1 帮助中 , 2 未帮助 , 3锁定 
+	optional string storeUUID			= 13; // 宝藏UUID
+	optional PlayerCommon common		= 14; // 玩家通用数据
+}
+
+// 我的宝藏
+message HPStore{
+	optional int32 storeId		=1; 
+	optional int64 openTime		=2;	
+	optional int32 helped 		=3; //已被帮助 0 否 1 是
+	optional int32 quieryHelp	=4; // 是否可求助. 0 否 1 是
+	optional string storeUUID	=5; // 宝藏UUID
+
+	optional string	 help_playerId			= 11;	// 玩家ID
+	optional string	help_name				= 12;	// 玩家name
+	optional string	help_allianceName		= 13;	// 联盟名字
+	optional int32 help_vip					= 14;	// vip等级
+	optional int32 help_icon				= 15;	// 头像
+	optional int32 help_office				= 16;	// 官职
+	optional bool help_vipActive			= 17;	// vip是否激活
+	optional string help_pfIcon             = 18;   // 平台头像
+	optional int64 help_level				= 19;   // 等级
+	optional PlayerCommon common			= 20; // 玩家通用数据
+}
+
+// 挖宝
+message HPExcavateReq{
+	optional int32 storeId			=1; 
+}
+
+// 帮玩家挖宝
+message HPHelpHPExcavateReq{
+	optional string playerId 	=1; // 宝藏所属人id
+	optional string storeUUID	=2; // 对方宝藏UUID
+}
+
+// 挖宝加速
+message HPHelpHPExcavateSpeedupReq{
+	optional string helpUUID	=1; // 已方宝藏帮助UUID
+}
+
+// 取得帮助奖励
+message HPGetHelpRewardReq{
+	optional string helpUUID = 1;// 已方宝藏帮助UUID
+}
+
+// 取得帮助奖励
+message HPGetRewardReq{
+	optional string storeUUID = 1;// 已方宝藏帮助UUID
+}
+//请求帮助挖掘
+message HPQueryHelpReq{
+	optional string storeUUID = 1;// 已方宝藏帮助UUID	
+}

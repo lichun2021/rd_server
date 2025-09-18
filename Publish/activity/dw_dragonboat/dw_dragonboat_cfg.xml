@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 登录奖励,三段式
+loginAward = 30000_850004_1,30000_850034_1
+
+# 龙船奖励award ID
+boatAward = 2930018
+
+# 奖励数量
+giftCount = 200
+
+# 奖品刷新时间段
+refreshTimes = 12_20
+
+# 龙船刷新点
+dragonPoint = 88_88
+
+# 半径
+areaRadius = 100
+

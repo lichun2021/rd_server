@@ -1,0 +1,34 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+
+
+//LMJY_GAME_SYNC			= 475; // 副本信息同步
+message PBLMJYGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	optional int32 battleCfgId = 3; // 副本配置文件id. 可取得难度等
+	repeated string destroyedNpc = 4; // 被击败的npc数量
+	optional int32 quitCnt = 5; // 退场次数 
+}
+
+//LMJY_GAME_OVER			= 472; // 游戏结束
+message PBLMJYGameOver{
+	optional int64 gameUseTime = 1; // 游戏持续时间
+	optional PlayerSnapshotPB vipsnapshot	= 2; //vip玩家信息
+	repeated PlayerSnapshotPB teamPlayers   = 3; // 队伍全员
+	repeated PBLMJYKillInfo	 killInfo 		= 4;  // 击杀信息
+	optional string awards = 5; // 奖励
+	optional bool win = 6; // 胜负
+	optional int32 overState = 7;  // 1 胜利 2 被npc击败  3 时间结束 
+}
+
+message PBLMJYKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// LMJY_PLAYER_QUIT			= 477; // 有玩家退出
+message PBLMJYPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}

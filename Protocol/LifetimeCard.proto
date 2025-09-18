@@ -1,0 +1,36 @@
+option java_package = "com.hawk.game.protocol";
+import "PlantFactory.proto";
+import "Reward.proto";
+
+// 终身卡信息同步
+message LifeTimeCardInfo
+{
+	required bool moduleUnlock = 1; // 功能是否解锁(为true的情况才有下面的字段)
+	optional bool commonUnlock = 2; // 普通卡是否解锁
+	optional bool advancedUnlock = 3; // 进阶卡是否解锁
+	optional int64 advancedEndTime = 4; // 进阶卡结束时间
+	optional bool weekAwarded = 5; // 每周奖励是否已经领取
+	optional bool monthAwarded = 6; // 每月奖励是否已经领取
+	optional int64 freeEndTime = 7; // 免费体验结束时间
+	optional int64 sevenDayAwardTake = 8; //7日宝箱可再次领取的时间
+	optional int64 thirtyDayAwardTake = 9; //30日宝箱可再次领取的时间
+}
+
+//每日活动量
+message PBPlantFactoryDayItem
+{
+	required PBPlantFactoryType type = 1;//类型
+	required int32 before = 2;//之前
+	required int32 after = 3;//之后
+}
+
+message LifeTimeCardPlantFactoryDayResp
+{
+	repeated PBPlantFactoryDayItem items = 1;//变化量
+}
+
+message LifeTimeCardPlantFactoryRewardResp
+{
+	repeated RewardItem reward  = 1;//获得物品 
+	repeated RewardItem cardReward  = 2;//月卡物品 
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/HawkEngine"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-configuration-1.9.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-httpclient-3.0.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/fastjson-1.2.11.jar" sourcepath="/HawkEngine/lib/fastjson-1.2.11-sources.zip"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-api-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-core-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-slf4j-impl-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/servlet-api-3.1.jar" sourcepath="C:/Users/ADMINI~1/AppData/Local/Temp/decompiler/source/javax.servlet-api-3.1.0-sources-1501040713444.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/zmq.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/hawk.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/protobuf-java-2.5.0.jar" sourcepath="/Package/jars/protobuf-2.5.0.zip"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/protobuf-java-format-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

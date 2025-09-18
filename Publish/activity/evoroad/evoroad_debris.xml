@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1" normalReward="30000_1001047_1" />
+      <data level="2" normalReward="30000_1001047_1" />
+      <data level="3" normalReward="30000_1001047_1" />
+      <data level="4" normalReward="30000_1001047_1" />
+      <data level="5" normalReward="30000_1001047_2" />
+      <data level="6" normalReward="30000_1001047_2" />
+      <data level="7" normalReward="30000_1001047_5" />
+      <data level="8" normalReward="30000_1001047_5" />
+      <data level="9" normalReward="30000_1001047_5" />
+      <data level="10" normalReward="30000_1001047_5" />
+      <data level="11" normalReward="30000_1001047_10" />
+      <data level="12" normalReward="30000_1001047_10" />
+      <data level="13" normalReward="30000_1001047_15" />
+      <data level="14" normalReward="30000_1001047_20" />
+      <data level="15" normalReward="30000_1001047_25" />
+</root>

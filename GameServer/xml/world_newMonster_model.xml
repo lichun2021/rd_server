@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" week="1" modelType="1" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="2" week="2" modelType="6" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="3" week="3" modelType="2" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="4" week="4" modelType="7" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="5" week="5" modelType="3" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="6" week="6" modelType="8" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+      <data id="7" week="7" modelType="4" typeWeight="50_50" oldMonsterModelType="11_12_13_14_15_16_17" oldMonsterTypeWeight="1_1_1_1_1_1_1" />
+</root>

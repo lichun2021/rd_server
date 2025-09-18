@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 35,
+		name = [[每日必买]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 点击下方<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">立即前往</font>按钮即可跳转至每日必买页面。<br/>2. 购买每日必买，可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">卡维利甄选</font>及其他超值道具。</font>]],
+		priority = 20900,
+		icon = [[Activity_Icon_35_Nor.png]],
+		selecticon = [[Activity_Icon_35_Sel.png]],
+		rewards = [[30000_1000005_1,30000_840344_1,30000_850047_1]],
+		toType = 1,
+		serverDelay = 0,
+		rareMark = [[30000_1000005_1]],
+	},
+
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data skillId="301111" unlockCondition="0" effect="7000_3200,7001_3200" skillEffectPower="0" />
+      <data skillId="301112" unlockCondition="0" effect="7000_6400,7001_6400" skillEffectPower="1000" />
+      <data skillId="301113" unlockCondition="0" effect="7000_9600,7001_9600" skillEffectPower="2000" />
+      <data skillId="301114" unlockCondition="0" effect="7000_12800,7001_12800" skillEffectPower="3000" />
+      <data skillId="301115" unlockCondition="0" effect="7000_16000,7001_16000" skillEffectPower="4000" />
+      <data skillId="301121" unlockCondition="1" unlock="3_3_0" effect="1003_140,1004_140,1011_140,1012_140,1019_140,1020_140" skillEffectPower="2000" />
+      <data skillId="301122" unlockCondition="1" unlock="3_3_0" effect="1003_280,1004_280,1011_280,1012_280,1019_280,1020_280" skillEffectPower="4000" />
+      <data skillId="301123" unlockCondition="1" unlock="3_3_0" effect="1003_420,1004_420,1011_420,1012_420,1019_420,1020_420" skillEffectPower="6000" />
+      <data skillId="301124" unlockCondition="1" unlock="3_3_0" effect="1003_560,1004_560,1011_560,1012_560,1019_560,1020_560" skillEffectPower="8000" />
+      <data skillId="301125" unlockCondition="1" unlock="3_3_0" effect="1003_700,1004_700,1011_700,1012_700,1019_700,1020_700" skillEffectPower="10000" />
+      <data skillId="302111" unlockCondition="0" effect="7006_50" skillEffectPower="0" />
+      <data skillId="302112" unlockCondition="0" effect="7006_100" skillEffectPower="1000" />
+      <data skillId="302113" unlockCondition="0" effect="7006_150" skillEffectPower="2000" />
+      <data skillId="302114" unlockCondition="0" effect="7006_200" skillEffectPower="3000" />
+      <data skillId="302115" unlockCondition="0" effect="7006_250" skillEffectPower="4000" />
+      <data skillId="302121" unlockCondition="1" unlock="3_3_0" effect="1005_140,1006_140,1013_140,1014_140,1021_140,1022_140" skillEffectPower="2000" />
+      <data skillId="302122" unlockCondition="1" unlock="3_3_0" effect="1005_280,1006_280,1013_280,1014_280,1021_280,1022_280" skillEffectPower="4000" />
+      <data skillId="302123" unlockCondition="1" unlock="3_3_0" effect="1005_420,1006_420,1013_420,1014_420,1021_420,1022_420" skillEffectPower="6000" />
+      <data skillId="302124" unlockCondition="1" unlock="3_3_0" effect="1005_560,1006_560,1013_560,1014_560,1021_560,1022_560" skillEffectPower="8000" />
+      <data skillId="302125" unlockCondition="1" unlock="3_3_0" effect="1005_700,1006_700,1013_700,1014_700,1021_700,1022_700" skillEffectPower="10000" />
+      <data skillId="303111" unlockCondition="0" effect="7011_300" skillEffectPower="0" />
+      <data skillId="303112" unlockCondition="0" effect="7011_600" skillEffectPower="1000" />
+      <data skillId="303113" unlockCondition="0" effect="7011_900" skillEffectPower="2000" />
+      <data skillId="303114" unlockCondition="0" effect="7011_1200" skillEffectPower="3000" />
+      <data skillId="303115" unlockCondition="0" effect="7011_1500" skillEffectPower="4000" />
+      <data skillId="303121" unlockCondition="1" unlock="3_3_0" effect="1007_140,1008_140,1015_140,1016_140,1023_140,1024_140" skillEffectPower="2000" />
+      <data skillId="303122" unlockCondition="1" unlock="3_3_0" effect="1007_280,1008_280,1015_280,1016_280,1023_280,1024_280" skillEffectPower="4000" />
+      <data skillId="303123" unlockCondition="1" unlock="3_3_0" effect="1007_420,1008_420,1015_420,1016_420,1023_420,1024_420" skillEffectPower="6000" />
+      <data skillId="303124" unlockCondition="1" unlock="3_3_0" effect="1007_560,1008_560,1015_560,1016_560,1023_560,1024_560" skillEffectPower="8000" />
+      <data skillId="303125" unlockCondition="1" unlock="3_3_0" effect="1007_700,1008_700,1015_700,1016_700,1023_700,1024_700" skillEffectPower="10000" />
+      <data skillId="304111" unlockCondition="0" effect="7015_1258,7016_1258" skillEffectPower="0" />
+      <data skillId="304112" unlockCondition="0" effect="7015_2516,7016_2516" skillEffectPower="1000" />
+      <data skillId="304113" unlockCondition="0" effect="7015_3774,7016_3774" skillEffectPower="2000" />
+      <data skillId="304114" unlockCondition="0" effect="7015_5032,7016_5032" skillEffectPower="3000" />
+      <data skillId="304115" unlockCondition="0" effect="7015_6290,7016_6290" skillEffectPower="4000" />
+      <data skillId="304121" unlockCondition="1" unlock="3_3_0" effect="1009_140,1010_140,1017_140,1018_140,1025_140,1026_140" skillEffectPower="2000" />
+      <data skillId="304122" unlockCondition="1" unlock="3_3_0" effect="1009_280,1010_280,1017_280,1018_280,1025_280,1026_280" skillEffectPower="4000" />
+      <data skillId="304123" unlockCondition="1" unlock="3_3_0" effect="1009_420,1010_420,1017_420,1018_420,1025_420,1026_420" skillEffectPower="6000" />
+      <data skillId="304124" unlockCondition="1" unlock="3_3_0" effect="1009_560,1010_560,1017_560,1018_560,1025_560,1026_560" skillEffectPower="8000" />
+      <data skillId="304125" unlockCondition="1" unlock="3_3_0" effect="1009_700,1010_700,1017_700,1018_700,1025_700,1026_700" skillEffectPower="10000" />
+      <data skillId="311111" unlockCondition="0" effect="7002_172,7003_172" skillEffectPower="0" />
+      <data skillId="311112" unlockCondition="0" effect="7002_344,7003_344" skillEffectPower="1000" />
+      <data skillId="311113" unlockCondition="0" effect="7002_516,7003_516" skillEffectPower="2000" />
+      <data skillId="311114" unlockCondition="0" effect="7002_688,7003_688" skillEffectPower="3000" />
+      <data skillId="311115" unlockCondition="0" effect="7002_860,7003_860" skillEffectPower="4000" />
+      <data skillId="311121" unlockCondition="1" unlock="4_3_0" effect="1003_180,1004_180,1011_180,1012_180,1019_180,1020_180" skillEffectPower="2000" />
+      <data skillId="311122" unlockCondition="1" unlock="4_3_0" effect="1003_360,1004_360,1011_360,1012_360,1019_360,1020_360" skillEffectPower="4000" />
+      <data skillId="311123" unlockCondition="1" unlock="4_3_0" effect="1003_540,1004_540,1011_540,1012_540,1019_540,1020_540" skillEffectPower="6000" />
+      <data skillId="311124" unlockCondition="1" unlock="4_3_0" effect="1003_720,1004_720,1011_720,1012_720,1019_720,1020_720" skillEffectPower="8000" />
+      <data skillId="311125" unlockCondition="1" unlock="4_3_0" effect="1003_900,1004_900,1011_900,1012_900,1019_900,1020_900" skillEffectPower="10000" />
+      <data skillId="311211" unlockCondition="0" effect="7004_800,7005_72" skillEffectPower="0" />
+      <data skillId="311212" unlockCondition="0" effect="7004_1600,7005_144" skillEffectPower="1000" />
+      <data skillId="311213" unlockCondition="0" effect="7004_2400,7005_216" skillEffectPower="2000" />
+      <data skillId="311214" unlockCondition="0" effect="7004_3200,7005_288" skillEffectPower="3000" />
+      <data skillId="311215" unlockCondition="0" effect="7004_4000,7005_360" skillEffectPower="4000" />
+      <data skillId="311221" unlockCondition="1" unlock="6_4_0" effect="1003_480,1004_480,1011_480,1012_480,1019_480,1020_480" skillEffectPower="2000" />
+      <data skillId="311222" unlockCondition="1" unlock="6_4_0" effect="1003_960,1004_960,1011_960,1012_960,1019_960,1020_960" skillEffectPower="4000" />
+      <data skillId="311223" unlockCondition="1" unlock="6_4_0" effect="1003_1440,1004_1440,1011_1440,1012_1440,1019_1440,1020_1440" skillEffectPower="6000" />
+      <data skillId="311224" unlockCondition="1" unlock="6_4_0" effect="1003_1920,1004_1920,1011_1920,1012_1920,1019_1920,1020_1920" skillEffectPower="8000" />
+      <data skillId="311225" unlockCondition="1" unlock="6_4_0" effect="1003_2400,1004_2400,1011_2400,1012_2400,1019_2400,1020_2400" skillEffectPower="10000" />
+      <data skillId="312111" unlockCondition="0" effect="7007_100,7008_228" skillEffectPower="0" />
+      <data skillId="312112" unlockCondition="0" effect="7007_200,7008_456" skillEffectPower="1000" />
+      <data skillId="312113" unlockCondition="0" effect="7007_300,7008_684" skillEffectPower="2000" />
+      <data skillId="312114" unlockCondition="0" effect="7007_400,7008_912" skillEffectPower="3000" />
+      <data skillId="312115" unlockCondition="0" effect="7007_500,7008_1140" skillEffectPower="4000" />
+      <data skillId="312121" unlockCondition="1" unlock="4_3_0" effect="1005_180,1006_180,1013_180,1014_180,1021_180,1022_180" skillEffectPower="2000" />
+      <data skillId="312122" unlockCondition="1" unlock="4_3_0" effect="1005_360,1006_360,1013_360,1014_360,1021_360,1022_360" skillEffectPower="4000" />
+      <data skillId="312123" unlockCondition="1" unlock="4_3_0" effect="1005_540,1006_540,1013_540,1014_540,1021_540,1022_540" skillEffectPower="6000" />
+      <data skillId="312124" unlockCondition="1" unlock="4_3_0" effect="1005_720,1006_720,1013_720,1014_720,1021_720,1022_720" skillEffectPower="8000" />
+      <data skillId="312125" unlockCondition="1" unlock="4_3_0" effect="1005_900,1006_900,1013_900,1014_900,1021_900,1022_900" skillEffectPower="10000" />
+      <data skillId="312211" unlockCondition="0" effect="7009_60,7010_5" skillEffectPower="0" />
+      <data skillId="312212" unlockCondition="0" effect="7009_120,7010_10" skillEffectPower="1000" />
+      <data skillId="312213" unlockCondition="0" effect="7009_180,7010_15" skillEffectPower="2000" />
+      <data skillId="312214" unlockCondition="0" effect="7009_240,7010_20" skillEffectPower="3000" />
+      <data skillId="312215" unlockCondition="0" effect="7009_300,7010_25" skillEffectPower="4000" />
+      <data skillId="312221" unlockCondition="1" unlock="6_4_0" effect="1005_480,1006_480,1013_480,1014_480,1021_480,1022_480" skillEffectPower="2000" />
+      <data skillId="312222" unlockCondition="1" unlock="6_4_0" effect="1005_960,1006_960,1013_960,1014_960,1021_960,1022_960" skillEffectPower="4000" />
+      <data skillId="312223" unlockCondition="1" unlock="6_4_0" effect="1005_1440,1006_1440,1013_1440,1014_1440,1021_1440,1022_1440" skillEffectPower="6000" />
+      <data skillId="312224" unlockCondition="1" unlock="6_4_0" effect="1005_1920,1006_1920,1013_1920,1014_1920,1021_1920,1022_1920" skillEffectPower="8000" />
+      <data skillId="312225" unlockCondition="1" unlock="6_4_0" effect="1005_2400,1006_2400,1013_2400,1014_2400,1021_2400,1022_2400" skillEffectPower="10000" />
+      <data skillId="313111" unlockCondition="0" effect="7012_72" skillEffectPower="0" />
+      <data skillId="313112" unlockCondition="0" effect="7012_144" skillEffectPower="1000" />
+      <data skillId="313113" unlockCondition="0" effect="7012_216" skillEffectPower="2000" />
+      <data skillId="313114" unlockCondition="0" effect="7012_288" skillEffectPower="3000" />
+      <data skillId="313115" unlockCondition="0" effect="7012_360" skillEffectPower="4000" />
+      <data skillId="313121" unlockCondition="1" unlock="4_3_0" effect="1007_180,1008_180,1015_180,1016_180,1023_180,1024_180" skillEffectPower="2000" />
+      <data skillId="313122" unlockCondition="1" unlock="4_3_0" effect="1007_360,1008_360,1015_360,1016_360,1023_360,1024_360" skillEffectPower="4000" />
+      <data skillId="313123" unlockCondition="1" unlock="4_3_0" effect="1007_540,1008_540,1015_540,1016_540,1023_540,1024_540" skillEffectPower="6000" />
+      <data skillId="313124" unlockCondition="1" unlock="4_3_0" effect="1007_720,1008_720,1015_720,1016_720,1023_720,1024_720" skillEffectPower="8000" />
+      <data skillId="313125" unlockCondition="1" unlock="4_3_0" effect="1007_900,1008_900,1015_900,1016_900,1023_900,1024_900" skillEffectPower="10000" />
+      <data skillId="313211" unlockCondition="0" effect="7013_110,7014_1200" skillEffectPower="0" />
+      <data skillId="313212" unlockCondition="0" effect="7013_220,7014_2400" skillEffectPower="1000" />
+      <data skillId="313213" unlockCondition="0" effect="7013_330,7014_3600" skillEffectPower="2000" />
+      <data skillId="313214" unlockCondition="0" effect="7013_440,7014_4800" skillEffectPower="3000" />
+      <data skillId="313215" unlockCondition="0" effect="7013_550,7014_6000" skillEffectPower="4000" />
+      <data skillId="313221" unlockCondition="1" unlock="6_4_0" effect="1007_480,1008_480,1015_480,1016_480,1023_480,1024_480" skillEffectPower="2000" />
+      <data skillId="313222" unlockCondition="1" unlock="6_4_0" effect="1007_960,1008_960,1015_960,1016_960,1023_960,1024_960" skillEffectPower="4000" />
+      <data skillId="313223" unlockCondition="1" unlock="6_4_0" effect="1007_1440,1008_1440,1015_1440,1016_1440,1023_1440,1024_1440" skillEffectPower="6000" />
+      <data skillId="313224" unlockCondition="1" unlock="6_4_0" effect="1007_1920,1008_1920,1015_1920,1016_1920,1023_1920,1024_1920" skillEffectPower="8000" />
+      <data skillId="313225" unlockCondition="1" unlock="6_4_0" effect="1007_2400,1008_2400,1015_2400,1016_2400,1023_2400,1024_2400" skillEffectPower="10000" />
+      <data skillId="314111" unlockCondition="0" effect="7017_7000,7018_83,7019_83" skillEffectPower="0" />
+      <data skillId="314112" unlockCondition="0" effect="7017_7000,7018_166,7019_166" skillEffectPower="1000" />
+      <data skillId="314113" unlockCondition="0" effect="7017_7000,7018_250,7019_250" skillEffectPower="2000" />
+      <data skillId="314114" unlockCondition="0" effect="7017_7000,7018_333,7019_333" skillEffectPower="3000" />
+      <data skillId="314115" unlockCondition="0" effect="7017_7000,7018_416,7019_416" skillEffectPower="4000" />
+      <data skillId="314121" unlockCondition="1" unlock="4_3_0" effect="1009_180,1010_180,1017_180,1018_180,1025_180,1026_180" skillEffectPower="2000" />
+      <data skillId="314122" unlockCondition="1" unlock="4_3_0" effect="1009_360,1010_360,1017_360,1018_360,1025_360,1026_360" skillEffectPower="4000" />
+      <data skillId="314123" unlockCondition="1" unlock="4_3_0" effect="1009_540,1010_540,1017_540,1018_540,1025_540,1026_540" skillEffectPower="6000" />
+      <data skillId="314124" unlockCondition="1" unlock="4_3_0" effect="1009_720,1010_720,1017_720,1018_720,1025_720,1026_720" skillEffectPower="8000" />
+      <data skillId="314125" unlockCondition="1" unlock="4_3_0" effect="1009_900,1010_900,1017_900,1018_900,1025_900,1026_900" skillEffectPower="10000" />
+      <data skillId="314211" unlockCondition="0" effect="7020_492,7021_220" skillEffectPower="0" />
+      <data skillId="314212" unlockCondition="0" effect="7020_984,7021_440" skillEffectPower="1000" />
+      <data skillId="314213" unlockCondition="0" effect="7020_1476,7021_660" skillEffectPower="2000" />
+      <data skillId="314214" unlockCondition="0" effect="7020_1968,7021_880" skillEffectPower="3000" />
+      <data skillId="314215" unlockCondition="0" effect="7020_2460,7021_1100" skillEffectPower="4000" />
+      <data skillId="314221" unlockCondition="1" unlock="6_4_0" effect="1009_480,1010_480,1017_480,1018_480,1025_480,1026_480" skillEffectPower="2000" />
+      <data skillId="314222" unlockCondition="1" unlock="6_4_0" effect="1009_960,1010_960,1017_960,1018_960,1025_960,1026_960" skillEffectPower="4000" />
+      <data skillId="314223" unlockCondition="1" unlock="6_4_0" effect="1009_1440,1010_1440,1017_1440,1018_1440,1025_1440,1026_1440" skillEffectPower="6000" />
+      <data skillId="314224" unlockCondition="1" unlock="6_4_0" effect="1009_1920,1010_1920,1017_1920,1018_1920,1025_1920,1026_1920" skillEffectPower="8000" />
+      <data skillId="314225" unlockCondition="1" unlock="6_4_0" effect="1009_2400,1010_2400,1017_2400,1018_2400,1025_2400,1026_2400" skillEffectPower="10000" />
+</root>

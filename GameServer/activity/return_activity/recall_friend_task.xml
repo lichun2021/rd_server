@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="501031051" conditionType="50103" conditionValue="1" rewards="30000_850005_1,30000_850035_1,30000_810000_10" reset="1" />
+      <data achieveId="501041052" conditionType="50104" conditionValue="1" rewards="30000_850005_1,30000_850035_1,30000_810000_10" reset="1" />
+      <data achieveId="501041053" conditionType="50104" conditionValue="2" rewards="30000_850005_1,30000_850035_1,30000_810000_10" reset="0" />
+</root>

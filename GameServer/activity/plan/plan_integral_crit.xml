@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" multiple="1" weight="3500" />
+      <data id="2" multiple="2" weight="4000" />
+      <data id="3" multiple="3" weight="2000" />
+      <data id="4" multiple="5" weight="500" />
+</root>

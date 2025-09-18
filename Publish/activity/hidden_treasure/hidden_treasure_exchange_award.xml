@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" exchangerequirements="30000_30000002_5000" exchangeobtain="30000_9714007_1" limittimes="1" noticeId="366" />
+      <data id="2" exchangerequirements="30000_30000002_200" exchangeobtain="30000_1490005_1" limittimes="30" />
+      <data id="3" exchangerequirements="30000_30000002_80" exchangeobtain="30000_820002_1" limittimes="50" />
+      <data id="4" exchangerequirements="30000_30000002_20" exchangeobtain="30000_800000_1" limittimes="100" />
+      <data id="5" exchangerequirements="30000_30000002_20" exchangeobtain="30000_810001_1" limittimes="300" />
+      <data id="6" exchangerequirements="30000_30000002_3" exchangeobtain="30000_1300017_1" limittimes="500" />
+      <data id="7" exchangerequirements="30000_30000002_3" exchangeobtain="30000_1800000_1" limittimes="500" />
+      <data id="8" exchangerequirements="30000_30000002_2" exchangeobtain="30000_840194_1" limittimes="500" />
+      <data id="9" exchangerequirements="30000_30000002_1" exchangeobtain="30000_850010_1" limittimes="99999" />
+</root>

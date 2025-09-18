@@ -1,0 +1,24 @@
+# 邀请消耗道具
+inviteCost = 30000_1150128_1
+
+# 邀请有效时间（秒）
+validityTime = 10800
+
+# 守护TA功能解锁需求好感度
+needGuardianValue = 20
+
+# 解除守护关系，保留好感度万分比
+keepRate = 8000
+
+# 帮助灭火价格
+putOutFirePrice = 10000_1000_20
+
+# 守护值排行榜最多排名数量
+rankMaxNum = 100
+
+# 守护值排行榜上榜条件
+rankCondition = 100
+
+# 守护排行榜刷新周期时间（毫秒）
+perioTime = 300000
+

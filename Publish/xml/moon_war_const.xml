@@ -1,0 +1,33 @@
+# 取单服个人实力前X名的玩家参与队伍实力换算
+moonMatchNumLimit = 100
+
+# 取月球之战玩法历史排名场次
+moonMatchTimesLimit = 10
+
+# 单场战斗排名折合修正系数
+moonMatchBattleResultCof = 500_300_100_-100_-300_-500
+
+# 修正系数最高值
+moonMatchCofMaxValue = 3000
+
+# 修正系数最低值
+moonMatchCofMinValue = -3000
+
+# 灰度服
+openServer = 60017,60018
+
+# 随意出入人数
+playerJoinFreeCount = 100
+
+# 额外共享人数 150
+playerJoinExtraCount = 150
+
+# 参赛联盟数量
+joinGuildCount = 5
+
+# 玩家积分榜成员数量
+playerScoreRankSize = 1000
+
+# 开服多长时间以内的 服务器不开放（单位：秒，不需要就填0）
+serverDelay = 0
+

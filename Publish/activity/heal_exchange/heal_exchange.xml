@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" termId="1" pay="30000_1789003_2" gain="30000_1490005_1" exchangeCount="1" />
+      <data id="2" termId="1" pay="30000_1789003_1" gain="30000_840194_50" exchangeCount="1" />
+      <data id="3" termId="1" pay="30000_1789002_15" gain="30000_800000_1" exchangeCount="1" />
+      <data id="4" termId="1" pay="30000_1789002_6" gain="30000_840198_1" exchangeCount="1" />
+      <data id="5" termId="2" pay="30000_1789002_6" gain="30000_1490006_1" exchangeCount="2" />
+      <data id="6" termId="2" pay="30000_1789002_5" gain="30000_810001_1" exchangeCount="2" />
+      <data id="7" termId="2" pay="30000_1789002_4" gain="30000_1800000_2" exchangeCount="2" />
+      <data id="8" termId="2" pay="30000_1789002_3" gain="30000_1300017_1" exchangeCount="2" />
+      <data id="9" termId="3" pay="30000_1789002_3" gain="30000_840194_2" exchangeCount="3" />
+      <data id="10" termId="3" pay="30000_1789002_2" gain="30000_1480001_5" exchangeCount="3" />
+      <data id="11" termId="3" pay="30000_1789002_1" gain="30000_1780030_1" exchangeCount="3" />
+      <data id="12" termId="3" pay="30000_1789002_6" gain="30000_1490006_1" exchangeCount="3" />
+</root>

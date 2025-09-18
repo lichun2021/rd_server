@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data stageId="100" name="资源采集" order="1" funcType="1" scoreCof="1007_1,1008_1,1010_6,1009_24,1001_24000" scoreWeightCof="10" prepareTime="0" continueTime="86400" targetId="1001_1002_1003" rankId="100" />
+      <data stageId="200" name="基地发展" order="2" funcType="2" scoreCof="100_100" scoreWeightCof="1500" prepareTime="0" continueTime="86400" targetId="2001_2002_2003" rankId="200" />
+      <data stageId="300" name="硝烟弥漫" order="4" funcType="3" scoreCof="100_200_300_400_500_600_700_800_900_1000_1100_1200_1300_1400_1500_1600_1700_1800_1900_2000_2100_2200_2300_2400_2500_2600_2700_2800_2900_3000_3100_3200_3300_3400_3500_3600_3700_3800_3900_4000_4100_4200_4300_4400_4500_4600_4700_4800_4900_5000" scoreWeightCof="2000" prepareTime="0" continueTime="86400" targetId="3001_3002_3003" rankId="300" />
+      <data stageId="400" name="战力提升" order="5" funcType="4" scoreCof="1" scoreWeightCof="10000" prepareTime="0" continueTime="86400" targetId="4001_4002_4003" rankId="400" />
+      <data stageId="500" name="喋血枭雄" order="6" funcType="5" scoreCof="10_20_40_75_130_215_330_490_700_970_1300_1680_2000_2000,1_2_4_7_13_21_33_49_70_97_130_168_200_200" scoreLimit="999900000000_100000000" scoreWeightCof="1800" prepareTime="0" continueTime="172800" targetId="5001_5002_5003" rankId="500" />
+      <data stageId="250" name="部队训练" order="3" funcType="6" scoreCof="10_15_20_25_35_45_60_75_90_105_120_135_150_150" scoreWeightCof="1000" prepareTime="0" continueTime="86400" targetId="2501_2502_2503" rankId="250" />
+</root>

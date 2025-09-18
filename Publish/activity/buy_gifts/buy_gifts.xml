@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100001" awardId="4950031" androidPayId="450001" iosPayId="460001" />
+      <data id="100002" awardId="4950032" androidPayId="450002" iosPayId="460002" />
+      <data id="100003" awardId="4950033" androidPayId="450003" iosPayId="460003" />
+      <data id="100004" awardId="4950034" androidPayId="450004" iosPayId="460004" />
+      <data id="100005" awardId="4950035" androidPayId="450005" iosPayId="460005" />
+      <data id="100006" awardId="4950036" androidPayId="450006" iosPayId="460006" />
+</root>

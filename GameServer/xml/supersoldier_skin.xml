@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data skinId="10001" />
+      <data skinId="10002" />
+      <data skinId="10003" />
+      <data skinId="10004" />
+      <data skinId="10005" />
+      <data skinId="10006" />
+      <data skinId="10007" />
+      <data skinId="10008" />
+      <data skinId="10009" attrSkin="100_500|102_500|136_500" cost="30000_21062409_100" powerSkin="20000" />
+      <data skinId="10010" attrSkin="100_500|102_500|136_500" cost="30000_21062410_100" powerSkin="20000" />
+      <data skinId="20001" attrSkin="100_500|102_500|136_500" cost="30000_21062411_100" powerSkin="20000" />
+      <data skinId="20002" attrSkin="100_500|102_500|136_500" cost="30000_21062413_100" powerSkin="20000" />
+      <data skinId="20003" attrSkin="100_500|102_500|136_500" cost="30000_21062414_100" powerSkin="20000" />
+      <data skinId="20004" attrSkin="100_500|102_500|136_500" cost="30000_21062415_100" powerSkin="20000" />
+      <data skinId="20005" attrSkin="100_500|102_500|136_500" cost="30000_21062416_100" powerSkin="20000" />
+      <data skinId="20006" attrSkin="100_500|102_500|136_500" cost="30000_21062417_100" powerSkin="20000" />
+</root>

@@ -1,0 +1,55 @@
+option java_package = "com.hawk.game.protocol";
+
+enum State{
+	CLOSE			= 1; //活动关闭(对应活动开启倒计时)
+	OPEN			= 2; //活动开放-未开启(对应活动结束倒计时)
+	OPEN_FIGHTING	= 3; //活动开放-开启中(取波次时间)
+	OPEN_FINISHED	= 4; //活动开放-战斗结束,待发奖励(对应发奖倒计时)
+}
+
+// 尤里复仇波次信息
+message YuriTurnInfo{
+	required int32 turn	= 1; //波次
+	required int32 posX		= 2; //出兵点坐标
+	required int32 posY 	= 3;
+}
+
+// 尤里复仇主界面信息
+message YuriRevengePageInfoResp{
+	required State state 			= 1; //活动状态 
+	required int64 stateEndTime		= 2; //当前活动状态结束时间
+	required int32 selfScore		= 3; //个人积分
+	required int64 guildScore		= 4; //联盟积分
+	optional YuriTurnInfo turnInfo	= 5; //波次信息
+}
+
+// 排行类型
+enum YuriRankType{
+	SELF_RANK	= 1;
+	GUILD_RANK	= 2;
+}
+
+// 获取尤里复仇排行榜信息
+message GetYuriRankInfo{
+	required YuriRankType rankType = 1;
+}
+
+message GetYuriRankInfoResp{
+	repeated YuriRankInfo rankInfo = 1; //排行信息
+	optional YuriRankInfo selfRank = 2; //己方个人/联盟排行
+	required YuriRankType rankType = 3;
+	
+}
+
+// 尤里复仇排行信息
+message YuriRankInfo{
+	required int32 rank		= 1;
+	optional int32 flagId	= 2; //联盟旗帜
+	required string name	= 3; //玩家/联盟名称
+	optional string guildTag= 4; //联盟简称
+	required int64 score	= 5; //积分
+    optional string playerId = 6; //玩家ID
+    repeated int32 personalProtectSwitch = 7; // playerId那个player对应的个保法开关
+}
+
+

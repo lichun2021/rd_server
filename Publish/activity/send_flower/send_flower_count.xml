@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" count="30000_1150042_1" money="10000_1001_10" />
+      <data id="2" count="30000_1150042_10" money="10000_1001_100" />
+      <data id="3" count="30000_1150042_99" money="10000_1001_990" />
+      <data id="4" count="30000_1150042_999" money="10000_1001_9990" />
+</root>

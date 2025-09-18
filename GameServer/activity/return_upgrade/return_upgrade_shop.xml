@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" itemType="1" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_1480001_10" buyTimes="500" />
+      <data id="102" itemType="1" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_1480001_8" buyTimes="1500" />
+      <data id="103" itemType="1" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_1480001_6" buyTimes="3000" />
+      <data id="201" itemType="2" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_1782106_3" buyTimes="300" />
+      <data id="202" itemType="2" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_1782106_2" buyTimes="900" />
+      <data id="203" itemType="2" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_1782106_1" buyTimes="1800" />
+      <data id="301" itemType="3" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_21063005_4" buyTimes="300" />
+      <data id="302" itemType="3" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_21063005_3" buyTimes="900" />
+      <data id="303" itemType="3" buildLevel="1_45" payItem="30000_3460001_3" gainItem="30000_21063005_2" buyTimes="1800" />
+      <data id="401" itemType="4" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_843006_3" buyTimes="80000" />
+      <data id="402" itemType="4" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_843006_2" buyTimes="100000" />
+      <data id="403" itemType="4" buildLevel="1_45" payItem="30000_3460001_1" gainItem="30000_843006_1" buyTimes="200000" />
+</root>

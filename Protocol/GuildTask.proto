@@ -1,0 +1,44 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 任务类型
+enum TaskType
+{
+	DAILY 		= 0;//日常任务  
+	STOCHASTIC	= 1;//随机任务
+}
+enum TaskStatus
+{
+	NOT_REACH			= 0;	// 未达成
+	NOT_REWARD			= 1;	// 已达成未领取
+	TOOKEN				= 2;	// 已领取
+}
+
+//联盟任务信息
+message TashInfo
+{
+	required int32 taskId		= 1; //任务id
+	required int32 taskValue 	= 2; //任务进度
+	required TaskStatus status	= 3; //任务状态 
+}
+
+
+// 玩家联盟任务信息
+message GuildTaskInfo
+{
+	repeated TashInfo taskInfo = 1;
+}
+
+// 领取联盟任务奖励
+message GuildTaskTakeRewardReq
+{
+	repeated int32 taskId	= 1; //任务id
+}
+
+
+// 玩家联盟签到信息
+message GuildSignInfo
+{
+	required int32 signTimes = 1; //已签到天数
+	required bool  signed	 = 2; //今天是否已签到
+}
+

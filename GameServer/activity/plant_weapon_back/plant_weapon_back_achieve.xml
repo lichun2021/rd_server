@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="360000001" conditionType="36001" conditionValue="5" rewards="30000_21070051_40" />
+      <data achieveId="360000002" conditionType="36001" conditionValue="10" buff="1" />
+      <data achieveId="360000003" conditionType="36001" conditionValue="25" rewards="30000_21070051_60" />
+      <data achieveId="360000004" conditionType="36001" conditionValue="40" buff="2" />
+      <data achieveId="360000005" conditionType="36001" conditionValue="60" rewards="30000_21070051_100" />
+      <data achieveId="360000006" conditionType="36001" conditionValue="80" buff="3" />
+      <data achieveId="360000007" conditionType="36001" conditionValue="110" rewards="30000_21070051_120" />
+      <data achieveId="360000008" conditionType="36001" conditionValue="140" buff="4" />
+      <data achieveId="360000009" conditionType="36001" conditionValue="200" rewards="30000_21070051_180" />
+</root>

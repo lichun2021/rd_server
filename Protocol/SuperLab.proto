@@ -1,0 +1,41 @@
+option java_package = "com.hawk.game.protocol";
+//import "Equip.proto";
+
+/**合成请求*/
+message PBSuperLabItemComposeReq{
+	repeated PBSuperLabItem consume = 1; // 消耗
+	optional PBSuperLabItem get = 2; // 期望得到
+}
+
+/**分解请求*/
+message PBSuperLabItemDeComposeReq{
+	repeated PBSuperLabItem consume = 1; // 消耗
+}
+
+message PBSuperLabItem{
+	optional int32 itemId = 1;
+	optional int32 itemCount = 2;
+}
+
+
+// 激活
+message PBSuperLabJiHuo{
+	optional int32 id = 1;// 激活
+}
+
+
+
+// 取消激活
+message PBSuperLabNoJiHuo{
+	optional int32 id = 1;// 激活
+}
+
+// 激活历史
+message PBSuperLabJiHuoLiShi{
+	repeated int32 history = 1;
+}
+
+message PBSuperLabShouCangReq{
+	optional int32 type = 1; // 1 添加, 2 取消
+	optional int32 id = 2; // 
+}

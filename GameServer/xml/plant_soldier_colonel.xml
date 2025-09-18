@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data soldierType="1" frontStrengthen="5" frontBuild="20124000" initChips="611000,612000,613000,614000,615000" />
+      <data soldierType="2" frontStrengthen="5" frontBuild="20124000" initChips="621000,622000,623000,624000,625000" />
+      <data soldierType="3" frontStrengthen="5" frontBuild="20144000" initChips="631000,632000,633000,634000,635000" />
+      <data soldierType="4" frontStrengthen="5" frontBuild="20144000" initChips="641000,642000,643000,644000,645000" />
+      <data soldierType="5" frontStrengthen="5" frontBuild="20114000" initChips="651000,652000,653000,654000,655000" />
+      <data soldierType="6" frontStrengthen="5" frontBuild="20114000" initChips="661000,662000,663000,664000,665000" />
+      <data soldierType="7" frontStrengthen="5" frontBuild="20134000" initChips="671000,672000,673000,674000,675000" />
+      <data soldierType="8" frontStrengthen="5" frontBuild="20134000" initChips="681000,682000,683000,684000,685000" />
+</root>

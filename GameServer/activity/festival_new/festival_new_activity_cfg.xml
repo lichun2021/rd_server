@@ -1,0 +1,6 @@
+# 领奖合法时间
+receiveRewardLimitDay = 8
+
+# 活动终止时间
+startDate = 2020-6-10 00:00:00
+

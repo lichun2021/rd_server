@@ -1,0 +1,27 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 个人去兵战力榜最大名次
+rankType1ShowMax = 300
+
+# 联盟去兵战力榜最大名次
+rankType2ShowMax = 10
+
+# 个人体力消耗榜最大名次
+rankType3ShowMax = 300
+
+# 全军嘉奖积分榜最大名次
+rankType4ShowMax = 30
+
+# 区服积分榜最大名次
+rankType5ShowMax = 2
+
+# 个人去兵战力榜-本服前X给国家积分
+rankType1LocalNum = 20
+
+# 联盟去兵战力榜-本服前X给国家积分
+rankType2LocalNum = 3
+
+# 个人体力消耗榜-本服前X给国家积分
+rankType3LocalNum = 20
+

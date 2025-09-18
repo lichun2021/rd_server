@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 个人排名记录的总名次
+personRankSize = 100
+
+# 联盟排名记录的总名次
+guildRankSize = 10
+
+#  超能机甲召唤积分
+summonScore = 600004_50
+
+# 超能机甲击杀积分
+killScore = 600004_200
+
+# # 打怪掉落情报概率(万分比)
+extraRewardRate = 2500
+
+# # 打怪掉落超能机甲传送器id
+extraReward = 30000_1400006_1
+

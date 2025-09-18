@@ -1,0 +1,47 @@
+return {
+	prop =
+	{
+		activityId = 289,
+		name = [[精装夺宝]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，消耗金条可以投掷骰子，每次投掷均可获得与消耗金条等量的精装夺宝币。<br/>2.当两个骰子数字之和落在高亮区域时，能从上方奖池中获得一份随机奖励，各奖励获得概率如下：<br/>数据核心*1000：53.91%<br/>未来机甲宝箱*300：26.95%<br/>阿努比斯精装碎片*3：13.48%<br/>阿努比斯精装碎片*6：5.39%<br/>阿努比斯精装碎片*11：0.27%<br/>3.每次落在高亮区域并获得随机奖励后，下次投掷的高亮区域会重置，以及投掷所花费的金条会增加。<br/>4.当两个骰子数量之和落在非高亮区域时，下次投掷时的蓝色区域将向外扩充一格。<br/>5.当上方奖池的奖励全部得到时，活动进度将自动重置。<br/>6.点击重置按钮，可手动重置当前进度。活动期间，手动重置与自动重置次数总和为20次。<br/>7.精装夺宝币用于夺宝商店兑换各种稀有奖励。</font>]],
+		priority = 10015,
+		icon = [[Activity_Icon_289_Nor.png]],
+		selecticon = [[Activity_Icon_289_Sel.png]],
+		bigIcon = [[]],
+		scoreAdd = [[30000_21062498_1]],
+		awardPoolRandomStart  = 2,
+		awardPoolRandomEnd = 12,
+		randomStart = 1,
+		randomEnd = 6,
+		resetCost = [[10000_1001_50]],
+		resetCountLimit = 20,
+		extendCount = 1,
+	},
+	dress_treasure_random_range = [[id	rangeStart	rangeEnd	randomCost
+1	1	1	1
+1	4	10	10000_1000_98
+2	4	9	10000_1000_298
+3	5	9	10000_1000_498
+4	5	9	10000_1000_698
+5	5	9	10000_1000_998
+]],
+	dress_treasure_award = [[id	awards	weight
+1	2	1
+1	30000_9990008_1000	2000
+2	30000_840194_300	1000
+3	30000_21062405_3	500
+4	30000_21062405_6	200
+5	30000_21062405_11	10
+]],
+	dress_treasure_exchange = [[id	priority	needItem	gainItem	des	exchangeTips	times
+1	1	2	2	2	1	1
+1	1	30000_21062498_50	30000_1800001_1	ActivityExchangeGainItemDes1	1	200
+2	2	30000_21062498_100	30000_802003_1	ActivityExchangeGainItemDes1	1	200
+3	3	30000_21062498_20	30000_100050_1	ActivityExchangeGainItemDes1	1	200
+4	4	30000_21062498_5	30000_1800000_1	ActivityExchangeGainItemDes1	1	999
+5	5	30000_21062498_3	30000_840194_1	ActivityExchangeGainItemDes1	1	999
+6	6	30000_21062498_3	30000_1780030_1	ActivityExchangeGainItemDes1	1	999
+]],
+
+}

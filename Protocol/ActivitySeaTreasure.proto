@@ -1,0 +1,47 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 秘海寻珍活动界面信息
+message SeaTreasurePageInfo {
+	required int32 treasureTimes = 1; // 寻宝次数
+	required int32 toolBuyTimes = 2; // 道具购买次数
+	repeated SeaTreasureBoxInfo boxInfos = 3; // 宝箱信息
+	repeated SeaTreasureReceiveCommon receiveCommon = 4; // 获得的普通奖励信息
+	repeated SeaTreasureReceiveAdvanced receiveAdvanced = 5; // 获得的宝箱奖励信息
+}
+
+// 宝箱信息
+message SeaTreasureBoxInfo {
+	required int32 grid = 1; // 格子id
+	required int32 advancedRewardId = 2; // 宝箱id
+	required int64 startTime = 3; // 开始挖掘时间
+	required bool start = 4; // 是否已经启动
+}
+
+// 获得的普通奖励
+message SeaTreasureReceiveCommon {
+	required int32 id = 1; // 奖励id
+	required int32 count = 2; // 数量
+}
+
+// 获得特殊奖励信息
+message SeaTreasureReceiveAdvanced {
+	required int32 advancedRewardId = 1; // 宝箱信息
+	required int32 remainTimes = 2; // 剩余可获取次数
+	required int64 receiveTime = 3; // 获取时间
+}
+
+// 宝箱操作通用
+message SeaTreasureBoxCommonReq {
+	required int32 grid = 1; // 格子id
+}
+
+// 购买道具
+message SeaTreasureBuyItemReq {
+	required int32 count = 1;
+	optional int32 grid = 2; // 格子id
+}
+
+// 寻宝返回
+message SeaTreasureOpenResp {
+	required int32 reawrdId = 1;
+}

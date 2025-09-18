@@ -1,0 +1,19 @@
+return {
+	prop =
+	{
+		activityId = 72,
+		name = [[霸服月卡]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">应用宝专属霸服月卡来袭，特权奖励都在这里！</font>]],
+		priority = 11210,
+		icon = [[Activity_Icon_72_Nor.png]],
+		selecticon = [[Activity_Icon_72_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://imgcache.qq.com/club/themes/mobile/middle_page/index.html?url=https%3a%2f%2fqzs.qq.com%2fopen%2fbaymax%2f5%2f12205_0585b4a85057c827025265bb91af2a8e_0.html]],
+		urlWX = [[https://imgcache.qq.com/club/themes/mobile/middle_page/index.html?url=https%3a%2f%2fqzs.qq.com%2fopen%2fbaymax%2f5%2f12205_0585b4a85057c827025265bb91af2a8e_0.html]],
+		guestUrl = [[https://imgcache.qq.com/club/themes/mobile/middle_page/index.html?url=https%3a%2f%2fqzs.qq.com%2fopen%2fbaymax%2f5%2f12205_0585b4a85057c827025265bb91af2a8e_0.html]],
+		platform = [[]],
+		urlDailyReward = [[]],
+	},
+
+}

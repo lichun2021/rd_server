@@ -1,0 +1,479 @@
+option java_package = "com.hawk.game.protocol";
+
+import "BattleCfg.proto";
+
+// 战斗版本号
+enum BattleVersion
+{
+	CODE = 1;
+}
+
+// 战斗类型定义
+enum BattleType
+{
+	PVE = 1;							// 打怪推图
+	PVE_FIELD = 2;						// 野外打怪
+	PVP = 3;							// 有防守基地的PVP（含国王战）
+	PVP_FIELD = 4;						// 野外PVP	
+}
+
+// 输赢类型定义
+enum ResultType
+{
+	WIN = 1;							// 攻方胜利
+	LOST = 2;							// 攻方失败
+}
+
+// 战斗错误码
+enum BattleError
+{
+	MODULE_ERROR = -1;					// 模块错误
+	SUCCESS_OK = 0;						// 成功
+	VERSION_ERROR = 1;					// 战斗版本不兼容
+	PARAMS_INVALID = 3;					// 参数错误
+	PROTOCOL_ERROR = 4;					// 协议解析错误
+	MAP_DATA_ERROR = 5;					// 地图错误
+	INIT_TROOP_ERROR = 6;				// 初始化部队错误
+	CONFIG_ERROR = 7;					// 配置错误
+	BATTLE_NOT_EXIST = 8;				// 战斗不存在(battleId不存在)
+}
+
+// 战斗模式
+enum BattleControlMode
+{
+    BCM_MANUALLY = 1;
+    BCM_AUTO = 2;
+}
+
+// 战场行为定义
+enum ActionType
+{
+	INIT = 1;							// 初始化
+	CREATE = 2;							// 创建
+	MOVE = 3;							// 移动
+	FLY = 4;							// 飞翔
+	GLIDE = 5;							// 滑翔
+	STOP = 6;							// 停止
+	WARNING = 7;						// 警戒行为
+	
+	ATTACK = 10;						// 攻击
+	FLY_ATTACK = 11;					// 飞行攻击
+	SKILL_CAST = 12;					// 施放技能
+	BUFF_ATTACH = 13;					// Buff挂载
+	BUFF_REMOVE = 14;					// Buff移除
+	BUFF_AFFECT = 15;					// Buff效果
+	DEAD = 16;							// 死亡
+	REVIVE = 17;						// 复活
+	DISAPPEAR = 18;						// 消失
+    
+    BUSY = 19;                          // 单位忙碌读条状态
+	
+	FINISH = 20;						// 战斗结束
+    
+    EXTEND_STATE = 21;                  // 战斗单位扩展状态更新
+    
+    CHANGE_TROOP = 22;                   // 修改战斗单位阵营
+	
+	STATE_DATA_UPDATE = 30;				// 状态数据更新
+}
+
+// 读条类型
+enum BusyType
+{
+    RESCUING = 1; // 忙于解救
+    SHUTDOWN_POWER = 2; // 忙于切断电源
+}
+
+enum UnitExtendState
+{
+    UES_INVULNERABLE = 1; // 无敌，不可被攻击
+    UES_LAZY = 2; // 懒惰状态，破罐子破摔， 不锁敌，不攻击敌军
+    UES_RESCUING = 4; // 正在被拯救
+    UES_BERESCUING = 8; // 正在被拯救
+    UES_GOBACKING = 16; // 单位正在返回出生点
+    UES_ATTACKING = 32; // 士兵正在攻击敌人
+    UES_BEING_ATTACKED = 64; // 士兵正在被攻击
+    UES_NPC = 128; // 设置单位NPC状态，不可被玩家操控
+}
+
+// 施放技能
+message	CastSkill
+{
+	required int32 unitId = 1;			// 战斗单元id
+	required int32 skillId = 2;			// 技能id
+	required int32 castTime = 3;		// 施放时间
+	
+	optional int32 targetId = 4;		// 施放目标战斗单元id，有id优先用id
+	optional UnitPos targetPos = 5;		// 施放目标位置
+}
+
+// 参与战斗运算的配置
+message	BattleConfig
+{
+	required int32 version = 1;			// 战斗版本号, 考虑版本向低兼容
+	required int32 battleType = 2;		// 战斗类型, @see BattleType
+	optional int32 randSeed = 3;		// 随机种子
+	optional int32 tickPeriod = 4;		// tick周期
+	optional int32 missionId = 5;		// 关卡ID(只在pve下才有)
+	optional int32 difficultyPer = 6;	// 关卡难度系数万分比(只在pve下才有)
+	optional int32 mapId = 7;			// 地图ID（PVP需要）
+	optional string trigger_conf_prefix = 8;			// 触发脚本前缀
+	
+	optional string	playerId = 10;		// 发起战斗玩家ID
+	repeated int32 defTargetItems = 11;	// 防方需要保护的目标单元列表（PVP需要）
+	optional int32 timeLimit = 12;		// 战斗限制时长（PVP需要）
+	
+	optional int32 debugMode = 20;		// 调试模式
+}
+
+// 战斗单元伤害
+message	UnitDamage
+{
+	required int32 unitId = 1;
+	required int32 count = 2;			// 剩余数量
+	required int32 hp = 3;				// 剩余血量
+	required int32 damage = 4;			// 伤害血量（正为加血负为减血）
+	optional int32 type = 5;			// 伤害类型(参考DamageType)
+}
+
+// 战斗组
+message	BattleTroop
+{
+	repeated UnitData units = 1;
+    optional UnitPos deployPos = 2;
+}
+
+// 战斗输入
+message	BattleParams
+{
+	required BattleConfig cfg = 1;		// 配置对象
+	optional BattleTroop attacker = 2;	// 攻击方
+	optional BattleTroop defender = 3;	// 防守方
+	repeated CastSkill castSkills = 4;	// 施放技能
+	optional int32 controlMode = 5; // 战斗控制模式，开始战斗时设置控制模式 ---> 新版战斗
+    optional string	battleId = 6;		// 战斗ID
+    repeated int32 waitingDeployList = 7; // 待上阵兵种ID列表, itemId
+	optional bytes extParams = 10;		// 额外参数(主要用来做版本兼容的数据参数)
+}
+
+// 士兵上阵数据
+message DeployUnitData
+{
+    required int32 itemId = 1;			// 战斗单元配置ID
+	required int32 count = 2;			// 战斗单元当前组成的数量
+    required UnitPos unitPos = 3;                // 用户布局位置
+}
+
+// 命令士兵移动或攻击目标, 优先级最高 ---> 新版战斗
+message MoveOrAttackOrder
+{
+    required int32 orderUnitId = 1; // 被控制士兵Id
+    optional int32 targetId = 2; // 攻击目标单位Id, 若存在这个字段, 则攻击某个目标, 否则，移动至moveDestPos
+    optional UnitPos movePos = 3; // 移动目标
+}
+
+message UserOrder
+{
+    required int32 orderId = 1;
+    repeated MoveOrAttackOrder orderList = 2;
+}
+
+// Lua表现通知触发器系统
+message UINotification
+{
+    required int32 code = 1; // 通知码, 具体由Lua表现实现
+    optional string params = 2; // 通知参数json格式
+}
+
+// 战斗帧更新输入
+message	BattleTickParams
+{
+	required string	battleId = 1;		// 战斗ID
+	required int32 period = 2;			// tick时间
+	required int32 tickRate = 3;		// tick倍率(1,2,3,4)
+    optional int32 controlMode = 4; // 战斗控制模式: 战斗过程中改变控制模式 ---> 新版战斗
+    optional UserOrder userOrder = 5; // 士兵移动或攻击控制 ---> 新版战斗
+    repeated UINotification notifications = 6; // UI通知触发器
+	repeated CastSkill castSkills = 10;	// 施放技能, 新版战斗暂无英雄技能需求
+}
+
+// 初始化行为（玩家的兵）
+message	InitAction
+{
+	required UnitPos pos = 1;
+	required int32 unitHp = 2;			// 总血量
+	required int32 hp = 3;				// 当前血量
+}
+
+// 移动行为
+message	MoveAction
+{
+	required int32 targetId = 1;		// 向战斗单元移动
+	required UnitPos curPos = 2;		// 当前位置
+	required UnitPos movePos = 3;		// 下一步移动位置
+	required int32 moveDir = 4;			// 移动方向
+	optional int32 movePeriod = 5;		// 移动时间
+	optional int32 turnPeriod = 6;		// 转身时间
+}
+
+// 飞行行为
+message	FlyAction
+{
+	required int32 targetId = 1;		// 向战斗单元移动
+	required UnitPos fromPos = 2;		// 当前位置
+	required UnitPos targetPos = 3;		// 下一步移动位置
+	required int32 flyTime = 4;			// 总飞行时间
+	required int32 flyDist = 5;			// 飞行格子距离
+}
+
+// 飞行攻击行为
+message	FlyAttackAction
+{
+	required UnitPos fromPos = 1;		// 当前位置
+	optional int32 targetId = 2;		// 向本对象移动
+	required UnitPos targetPos = 3;		// 下一步移动位置
+	required int32 flyTime = 4;			// 总飞行时间
+	required int32 flyDist = 5;			// 飞行格子距离
+	
+	optional UnitPos flyBackPos = 6;	// 回程飞行位置
+	optional int32 flyBackTime = 7;		// 回程总飞行时间
+	optional int32 flyBackDist = 8;		// 回程飞行格子距离	
+}
+
+// 滑翔行为
+message	GlideAction
+{
+	required int32 glideTime = 1;		// 滑翔时间
+	optional UnitPos glidePos = 2;		// 滑翔中心位置
+}
+
+// 移动停止
+message	StopAction
+{
+	required UnitPos curPos = 1;		// 当前位置
+}
+
+// 攻击行为
+message	AttackAction
+{
+	required int32 skillId = 1;			// 攻方技能id
+	required int32 targetId = 2;		// 目标方id
+	required int32 bulletTime = 3;		// 弹导时间
+	required UnitPos targetPos = 4;		// 目标位置
+	repeated UnitDamage	damage = 5;		// 伤害列表同步
+	
+}
+
+// 施放技能行为
+message	SkillCastAction
+{
+	required int32 skillId = 1;			// 技能ID
+	optional int32 targetId = 2;		// 目标ID（如辐射工兵）
+	optional UnitPos targetPos = 3;		// 目标位置（如伞兵队长）
+}
+
+// buff挂载
+message	BuffAttachAction
+{
+	required int32 buff = 1;			// 造成伤害的buff类型
+	required int32 period = 2;			// 到期时间
+}
+
+// buff移除
+message	BuffRemoveAction
+{
+	required int32 buff = 1;			// 要移除的buff类型
+}
+
+// buff伤害
+message	BuffAffectAction
+{
+	required int32 buff = 1;			// 造成伤害的buff类型
+	repeated UnitDamage	damage = 2;		// 单元伤害
+}
+
+// 复活行为
+message	ReviveAction
+{
+	required UnitPos pos = 1;
+	required int32 count = 2;
+	required int32 hp = 3;
+}
+
+// 创建的数据单元
+message	CreateData
+{
+	required UnitData unit = 1;
+	optional UnitPos targetPos = 2;		// 目标点，V3用于方向
+	optional int32 targetUnit = 3;		// 目标unitId
+}
+
+// 创建行为
+message	CreateAction
+{
+	required int32 skillId = 1;
+	repeated CreateData data = 2;
+}
+
+// 消失行为
+message	DisappearAction
+{
+}
+
+// 死亡行为
+message	DeadAction
+{
+	required int32 count = 1;
+	required int32 hp = 2;
+}
+
+// 警报行为
+message WarningAction
+{
+	required int32 troopType = 1;
+}
+
+// 战斗结束行为
+message	FinishAction
+{
+	required int32 winTroop = 1;
+	repeated CastSkill castSkills = 2;	// 英雄施放技能列表
+}
+
+// 移动数据更新
+message MoveDataUpdate
+{
+	required int32 moveTargetId = 1;	// 向本对象移动
+	required UnitPos moveTargetPos = 2;	// 下一步移动位置
+	required int32 moveDir = 3;			// 移动方向
+	required int32 movePeriod = 4;		// 移动时间	
+	required int32 forwardTime = 5;		// 提前判断时间
+	optional int32 turnPeriod = 6;		// 转身时间
+}
+
+// 飞行攻击数据更新
+message FlyAttackDataUpdate
+{
+	required int32 targetId	 = 1;		// 目标方id
+	required UnitPos targetPos = 2;		// 目标位置
+	repeated UnitDamage	damage = 3;		// 伤害列表同步
+}
+
+// 状态数据更新行为
+message StateDataUpdateAction
+{
+	required int32 updateAction = 1;
+	
+	optional MoveDataUpdate moveData = 10;
+	optional FlyAttackDataUpdate flyAttackData = 11;	
+}
+
+// 单位忙碌行为， 需要内部系统设置单位的附加状态: Lazy(不索敌，不攻击)
+message BusyAction
+{
+    required BusyType busyType = 1; // 读条类型
+    required int32 duration = 2; // 读条持续时间
+    optional string extParams = 3; // 扩展参数
+}
+
+message ChangeTroopAction
+{
+    required int32 troopType = 1; // 改变单位阵营
+}
+
+message ChangeExtendStateAction
+{ // 位于操作
+    required int32 esfPrev = 1; // 前一个状态
+    required int32 esfNew = 2; // 新状态
+}
+
+// 战斗行为
+message	BattleAction
+{
+	required int32 time = 1;				// 行为发起时间
+	required int32 type = 2;				// 行为类型, 参考ActionType
+	required int32 unitId = 3;
+		
+	optional InitAction	init = 10;
+	optional MoveAction	move = 11;
+	optional FlyAction fly = 12;
+	optional FlyAttackAction flyAttack = 13;
+	optional AttackAction attack = 14;
+	optional StopAction	stop = 15;
+	optional DeadAction	dead = 16;
+	optional BuffAttachAction buffAttach = 17;
+	optional BuffRemoveAction buffRemove = 18;
+	optional BuffAffectAction buffAffect = 19;
+
+	optional DisappearAction disappear = 21;
+	optional CreateAction create = 22;
+	optional FinishAction finish = 23;
+	optional SkillCastAction skillCast = 24;
+	optional ReviveAction revive = 25;
+	optional GlideAction glide = 26;
+	optional WarningAction warning = 27;
+    
+    optional BusyAction busy = 28;
+    
+    optional ChangeTroopAction changeTroop = 29;
+	
+	optional StateDataUpdateAction stateDataUpdate = 30;
+    optional ChangeExtendStateAction changeExtendState = 31; 
+}
+
+// 战斗细节过程
+message	BattleDetail
+{
+	// 所有战斗行为
+	repeated BattleAction actions = 1;		// 细节行为列表
+}
+
+// 战斗简报
+message	BattleBulletin
+{
+	required string battleId = 1;			// 战场唯一id
+	required int32 result = 2;				// 胜负类型, 参考ResultType
+	optional int32 calcTime = 3;			// 战斗计算时间ms
+	optional int32 battleTime = 4;			// 战斗过程总时间ms
+	optional BattleTroop attacker = 5;		// 攻击方存活+击杀数量
+	optional BattleTroop defender = 6;		// 防守方存活+击杀数量
+}
+
+// 移动或攻击命令寻路路线，用作路线表现
+message OrderAStarPath
+{
+    required int32 orderUnitId = 1; // 士兵Id
+    required bool isAttack = 2; // 是否是攻击命令 
+    repeated UnitPos nodeList = 3; // 路径
+}
+
+// 指挥行军，实际单位移动目标点，用于区分移动新军路线
+message OrderTargetPos
+{
+    required int32 objId = 1; // 士兵实例id
+    required UnitPos targetPos = 2; // 移动目标点
+}
+
+// 触发器执行完毕后通知lua
+message TriggerActionToLua
+{
+    required int32 actionId = 1; // 事件id
+    required int32 actionType = 2; // 事件类型
+    optional string actionParam = 3; // 事件参数json格式
+}
+
+// 战斗返回结果
+message	BattleResult
+{
+	required int32 result = 1;				// 战斗结果码(0为正确, 其他为BattleError中定义的错误码)
+	required int32 gameState = 2;			// 游戏状态
+	optional BattleDetail detail = 3;		// 过程细节, 客户端用
+	optional BattleBulletin	bulletin = 4;	// 结算数据, 服务器用
+    optional bool targetInvulnerable = 5;   // 用户指定攻击目标处于无敌状态
+    repeated TriggerActionToLua triggerActionList = 6; // 触发器事件
+    repeated OrderAStarPath orderPathList = 7; // 命令路径，用于表现
+    repeated OrderTargetPos orderTargetPosList = 8; // 指挥行军，实际单位移动目标点列表
+	repeated int32 finishedOrderList = 9; // 执行完毕的命令列表    
+	optional string debugInfo = 10;			// 调试信息
+}
+

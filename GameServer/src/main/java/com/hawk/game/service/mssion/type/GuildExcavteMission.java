@@ -1,0 +1,40 @@
+package com.hawk.game.service.mssion.type;
+
+import com.hawk.game.item.mission.MissionCfgItem;
+import com.hawk.game.item.mission.MissionEntityItem;
+import com.hawk.game.player.Player;
+import com.hawk.game.player.PlayerData;
+import com.hawk.game.service.mssion.Mission;
+import com.hawk.game.service.mssion.MissionEvent;
+import com.hawk.game.service.mssion.MissionType;
+import com.hawk.game.service.mssion.event.EventGuildExcavte;
+
+/**
+ * 联盟宝藏挖掘任务
+ * 
+ * @author golden
+ *
+ */
+@Mission(missionType = MissionType.MISSION_GUILD_EXCAVTE)
+public class GuildExcavteMission implements IMission {
+
+	@Override
+	public <T extends MissionEvent> void refreshMission(PlayerData playerData, T missionEvent, MissionEntityItem entityItem, MissionCfgItem cfg) {
+		EventGuildExcavte event = (EventGuildExcavte) missionEvent;
+		entityItem.addValue(event.getTimes());
+		checkMissionFinish(entityItem, cfg);
+	}
+
+	@Override
+	public <T extends MissionEvent> void refreshGeneralMission(Player player, T missionEvent) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void initMission(PlayerData playerData, MissionEntityItem entityItem, MissionCfgItem cfg) {
+		int count = playerData.getStorehouseBase().getExcCount();
+		entityItem.setValue(count);
+		checkMissionFinish(entityItem, cfg);
+	}
+}

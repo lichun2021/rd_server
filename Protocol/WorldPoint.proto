@@ -1,0 +1,80 @@
+option java_package	= "com.hawk.game.protocol";
+
+// redis存储世界点信息
+// 所有字段不可删除
+// 字段索引不可修改
+// 新增字段往后添加
+message	PointData
+{
+	required int32 id = 1;
+	optional int32 x = 2;
+	optional int32 y= 3;
+	optional int32 areaId = 4;
+	optional int32 zoneId = 5;
+	optional int32 pointType = 6;
+	optional int32 pointStatus = 7;
+	optional string playerId = 8;
+	optional string playerName = 9;
+	optional int32 cityLevel = 10;
+	optional int32 playerIcon = 11;
+	optional int64 lastActiveTime = 12;
+	optional int32 resourceId = 13;
+	optional int32 monsterId = 14;
+	optional int64 lifeStartTime = 15;
+	optional int64 remainResNum = 16;
+	optional int32 remainBlood = 17;
+	optional string marchId = 18;
+	optional string guildId = 19;
+	optional string guildBuildId = 20;
+	optional int32 buildingId = 21;
+	optional int64 protectedEndTime = 22;
+	optional int64 commonHurtEndTime = 23;
+	optional string showEffect = 24;
+	optional string ownerId = 25;
+	optional string foggyInfo = 26;
+	
+	optional PBSerializeData extryData = 99;
+	optional int64 createTime = 100;
+	optional int64 updateTime = 101;
+	optional bool invalid = 102;
+	optional string personalProtectInfo = 103; // 个保法相关开关设置
+	optional string equipTechLevel = 104;   // 装备科技等级，多个拼在一起
+	optional int32 plantMilitaryLevel = 105; //泰能军衔等级
+	optional int32 atkSwId = 106; //部署的进攻型超武配置id
+	optional int32 defSwId = 107; //部署的防御型超武配置id
+	optional int32 atkSwSkillId = 108; //部署的进攻型超武技能id
+	optional int32 defSwSkillId = 109; //部署的防御型超武技能id
+	optional int32 plantMilitaryShow = 110; //泰能军衔等级外显开关
+	optional string mechacoreShowInfo = 111; //机甲核心外显（一个或逗号分隔的多个外显id）
+}
+
+
+
+// 额外携带的信息.不同点自定义
+message PBSerializeData{
+	optional bytes param1 = 1;
+	optional bytes param2 = 2;
+	optional bytes param3 = 3;
+	optional bytes param4 = 4;
+	optional bytes param5 = 5;
+	optional bytes param6 = 6;
+	optional bytes param7 = 7;
+	optional bytes param8 = 8;
+	optional bytes param9 = 9;
+	optional bytes param10 = 10;
+	optional bytes param11 = 11;
+	optional bytes param12 = 12;
+	optional bytes param13 = 13;
+	optional bytes param14 = 14;
+	optional bytes param15 = 15;
+	optional bytes param16 = 16;
+	optional bytes param17 = 17;
+	optional bytes param18 = 18;
+	optional bytes param19 = 19;
+	optional bytes param20 = 20;
+	repeated bytes param21 = 21;
+	repeated bytes param22 = 22;
+	repeated bytes param23 = 23;
+	repeated bytes param24 = 24;
+	repeated bytes param25 = 25;
+}

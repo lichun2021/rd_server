@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 71,
+		name = [[战友集结]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">赛博S2火爆开启，战友集结再战红警。</font>]],
+		priority = 11200,
+		icon = [[Activity_Icon_71_Nor.png]],
+		selecticon = [[Activity_Icon_71_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20220524hl/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20220524hl/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20220524hl/index.html]],
+		platform = [[]],
+	},
+
+}

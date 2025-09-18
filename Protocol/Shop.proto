@@ -1,0 +1,64 @@
+option java_package	= "com.hawk.game.protocol";
+
+//商店类型
+enum ShopType{
+    XHJZ_SHOP                   = 1;//星海商店
+    CYBORG_SHOP                 = 2;//赛博商店
+    DYZZ_SHOP                   = 3;//陨晶商店
+    LMJY_SHOP                   = 4;//军演商店
+	FGYL_SHOP                   = 5;//反攻幽灵商店
+	CROSS_SHOP                  = 6;//航海远征商店
+}
+
+//商店信息
+message ShopDataPB{
+    required ShopType type      = 1;//商店类型
+    repeated ShopItemPB items   = 2;//物品信息
+    optional int64 refreshTime  = 3;//刷新时间 
+}
+
+//物品信息
+message ShopItemPB{
+    optional int32 id           = 1;//物品ID
+	optional int32 count        = 2;//已经兑换个数
+    optional int32 tip          = 3;//标识 0为去掉勾 1为勾上
+    optional int32 maxCount     = 4;//最大兑换次数（作用号增加的时候有值）
+    optional bool isHide        = 5;//是否隐藏
+}
+
+//商店信息请求 SHOP_INFO_REQ     		= 54071
+message ShopInfoReq{
+    repeated ShopType types     = 1;//商店类型
+}
+
+//商店信息返回 SHOP_INFO_RESP    		= 54072
+message ShopInfoResp{
+    repeated ShopDataPB datas   = 1;//商店信息
+}
+
+//兑换请求 SHOP_EXCHANGE_REQ     	= 54073
+message ShopExchangeReq{
+    required ShopType type      = 1;//商店类型
+    optional int32 id           = 2;//物品ID
+	optional int32 count        = 3;//兑换个数
+}
+
+//兑换返回 SHOP_EXCHANGE_RESP    	= 54074
+message ShopExchangeResp{
+    required ShopType type      = 1;//商店类型
+    required ShopItemPB item    = 2;//物品信息
+}
+
+//勾选提醒请求 SHOP_TIP_REQ     		= 54075
+message ShopTipReq{
+    required ShopType type      = 1;//商店类型
+    optional int32 id           = 2;//物品ID
+	optional int32 tip          = 3;//标识 0为去掉勾 1为勾上
+    optional bool isAll         = 4;//是否全部操作
+}
+
+//勾选提醒返回 SHOP_TIP_RESP   		= 54076
+message ShopTipResp{
+    required ShopType type      = 1;//商店类型
+    repeated ShopItemPB item    = 2;//物品信息
+}

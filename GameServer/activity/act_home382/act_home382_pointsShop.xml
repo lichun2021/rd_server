@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="58" needItem="30000_21070104_200" gainItem="30000_6101401_1" refreshType="2" />
+      <data id="2" times="10" needItem="30000_21070104_100" gainItem="30000_6101101_1" refreshType="2" />
+      <data id="3" times="9999" needItem="30000_21070104_1" gainItem="30000_810001_1" refreshType="2" />
+      <data id="4" times="9999" needItem="30000_21070104_1" gainItem="30000_850009_5" refreshType="2" />
+      <data id="5" times="9999" needItem="30000_21070104_1" gainItem="30000_850039_5" refreshType="2" />
+      <data id="6" times="9999" needItem="30000_21070104_1" gainItem="30000_850019_5" refreshType="2" />
+      <data id="7" times="9999" needItem="30000_21070104_1" gainItem="30000_850029_5" refreshType="2" />
+</root>

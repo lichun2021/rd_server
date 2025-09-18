@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" playerType="1" dailySendGiftLimit="25" dailyGainReceiptLimit="10" gainReceiptReward="30000_850051_5" dailyGainMessageLimit="25" dailyGainGiftLimit="10" gainGiftReward="30000_850051_1,30000_1780050_4,30000_810001_3" />
+      <data id="2" playerType="2" dailySendGiftLimit="25" dailyGainReceiptLimit="10" gainReceiptReward="30000_850051_3" dailyGainMessageLimit="25" dailyGainGiftLimit="10" gainGiftReward="30000_850051_1,30000_1780050_4,30000_810001_3" />
+      <data id="3" playerType="3" dailySendGiftLimit="25" dailyGainReceiptLimit="10" gainReceiptReward="30000_850051_2" dailyGainMessageLimit="25" dailyGainGiftLimit="10" gainGiftReward="30000_850051_1,30000_1780050_4,30000_810001_3" />
+</root>

@@ -1,0 +1,25 @@
+#奖池1每次消耗代币
+findCost1=10000_1001_1,10000_1001_2,10000_1001_3
+#奖池2每次消耗代币
+findCost2=10000_1001_1,10000_1001_2,10000_1001_3
+#奖池3每次消耗代币
+findCost3=10000_1001_1,10000_1001_2,10000_1001_3
+#锁定最高档系数
+lockTopGrade=1.5
+
+#奖池抽取次数
+pool1FindTimes=3
+pool2FindTimes=3
+pool3FindTimes=3
+
+
+#奖池可重置次数
+pool1ResetTimes=3
+pool2ResetTimes=3
+pool3ResetTimes=3
+
+#购买道具消耗金条数
+ticketCost=10000_1001_10
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800

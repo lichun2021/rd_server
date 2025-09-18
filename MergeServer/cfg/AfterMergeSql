@@ -1,0 +1,24 @@
+-- 该文件仅支持sql的注释. 只在主区执行的sql
+
+-- update sql  
+
+-- clear president 
+delete from president;
+delete from officer;
+
+-- guild building and manor 
+update guild_building set buildTime=0,buildLife=0,pos=null,lastTickTime=0,lastTakeBackTime=UNIX_TIMESTAMP() * 1000,buildingStat=2 WHERE buildingStat > 2;
+update guild_manor set buildingLife=0,lastTickTime=0,lastTakeBackTime=UNIX_TIMESTAMP() * 1000,manorState=2,pos=null where manorState > 2;
+
+-- march and amy
+DELETE FROM world_march;
+UPDATE army SET free=free+march;
+UPDATE army SET march=0;
+
+--  server_identify
+DELETE FROM server_identify;
+
+-- edit duplicate guild name  append server Id
+-- update guild_info a set a.`name`=concat(a.`name`, '-', (select serverId from player where id = a.leaderId)) where EXISTS ( select 1 from (select name from guild_info) gi where gi.name = a.name GROUP BY gi.name HAVING count(gi.name) > 1);
+-- eidt duplicate guild tag append server id
+-- update guild_info a set a.`tag`=concat(a.`tag`, '-', (select serverId from player where id = a.leaderId)) where EXISTS ( select 1 from (select tag from guild_info) gi where gi.`tag` = a.`tag` GROUP BY gi.`tag` HAVING count(gi.`tag`) > 1);

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" price="10000_1000_60" exp="600" />
+      <data id="2" price="10000_1000_300" exp="3300" />
+      <data id="3" price="10000_1000_680" exp="8160" />
+      <data id="4" price="10000_1000_1280" exp="16640" />
+      <data id="5" price="10000_1000_3280" exp="45920" />
+      <data id="6" price="10000_1000_6480" exp="97200" />
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" unlockNum="2" unlockFixedSkill="11028_1000" fixedSkillGrow="11028_1" consume="30000_802005_20" fixedSkillLimit="11028_7000" unlockRandomSkill="11031_100" randomSkillRange="11031_100_500" randomSkillFinal="4000" maxLogistics="7000" atkAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" hpAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" />
+      <data id="2" unlockNum="4" unlockFixedSkill="11029_1000" fixedSkillGrow="11029_1" consume="30000_802005_20" fixedSkillLimit="11029_7000" unlockRandomSkill="11032_100" randomSkillRange="11032_100_500" randomSkillFinal="4000" maxLogistics="7000" atkAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" hpAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" />
+      <data id="3" unlockNum="7" unlockFixedSkill="11035_1000" fixedSkillGrow="11035_1" consume="30000_802005_20" fixedSkillLimit="11035_13000" unlockRandomSkill="11034_100" randomSkillRange="11034_100_1000" randomSkillFinal="8000" maxLogistics="13000" atkAttr="2_130000,1_130000,4_130000,3_130000,6_130000,5_130000,8_130000,7_130000" hpAttr="2_130000,1_130000,4_130000,3_130000,6_130000,5_130000,8_130000,7_130000" />
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data effectId="100" atkAttr="2_10000,1_10000,4_10000,3_10000,6_10000,5_10000,8_10000,7_10000" />
+      <data effectId="136" />
+      <data effectId="102" hpAttr="2_10000,1_10000,4_10000,3_10000,6_10000,5_10000,8_10000,7_10000" />
+      <data effectId="115" atkAttr="4_10000,3_10000" />
+      <data effectId="133" />
+      <data effectId="117" hpAttr="4_10000,3_10000" />
+      <data effectId="1004" atkAttr="2_10000" />
+      <data effectId="1003" atkAttr="1_10000" />
+      <data effectId="1006" atkAttr="4_10000" />
+      <data effectId="1005" atkAttr="3_10000" />
+      <data effectId="1008" atkAttr="6_10000" />
+      <data effectId="1007" atkAttr="5_10000" />
+      <data effectId="1010" atkAttr="8_10000" />
+      <data effectId="1009" atkAttr="7_10000" />
+      <data effectId="1012" />
+      <data effectId="1011" />
+      <data effectId="1014" />
+      <data effectId="1013" />
+      <data effectId="1016" />
+      <data effectId="1015" />
+      <data effectId="1018" />
+      <data effectId="1017" />
+      <data effectId="1020" hpAttr="2_10000" />
+      <data effectId="1019" hpAttr="1_10000" />
+      <data effectId="1022" hpAttr="4_10000" />
+      <data effectId="1021" hpAttr="3_10000" />
+      <data effectId="1024" hpAttr="6_10000" />
+      <data effectId="1023" hpAttr="5_10000" />
+      <data effectId="1026" hpAttr="8_10000" />
+      <data effectId="1025" hpAttr="7_10000" />
+</root>

@@ -1,0 +1,36 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 老角色基地等级要求
+baseLimit = 1
+
+# 新角色和账号注册时间的时间间隔（天）
+timeLimit = 1
+
+# 活动触发后持续x天
+lastTime = 20
+
+# 触发基地等级
+openLimit = 10
+
+# 活动触发间隔（秒）
+intervalTime = 5184000
+
+# 新服创建角色后，在新服持续时间内x天内可触发该活动
+openDay = 20
+
+# 大于x天判断为老服
+OldOrNewServer = 20
+
+# 返利上限
+rewardLimit = 10000_1000_20000
+
+# 该时间后的服务器可见此活动
+openTimeLimit = 2025-7-17 00:00:00
+
+# 直充返利万分比（专服_非专服）
+payBack = 10000_10000
+
+# 0=都开,1=专服开，2=非专服开
+specialServerOpen = 1
+

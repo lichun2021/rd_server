@@ -1,0 +1,15 @@
+return {
+	prop =
+	{
+		activityId = 318,
+		name = [[合服预告]],
+		title = [[合服预告]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间指挥官可通过花费金条抽取荣耀凭证，兑换荣耀凯恩碎片。<br/>2.活动期间，指挥官累计抽取上限为999次。<br/>3.活动期间指挥官每日登录，每日活跃积分到达对应值可免费领取荣耀凭证。</font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_318_Nor.png]],
+		selecticon = [[Activity_Icon_318_Sel.png]],
+		bigIcon = [[]],
+		noticeTime = 1728000,
+	},
+
+}

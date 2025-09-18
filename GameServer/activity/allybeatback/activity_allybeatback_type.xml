@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="200" funcType="200" name="野外采集" dropParam="3360" dropLimit="50" dropId="2920002" mailId="2013067" />
+      <data id="300" funcType="300" name="击败敌军" dropParam="1" dropId="2920003" mailId="2013068" />
+      <data id="400" funcType="400" name="补给" dropParam="1" dropId="2920004" mailId="2013069" />
+</root>

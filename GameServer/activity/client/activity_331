@@ -1,0 +1,56 @@
+return {
+	prop =
+	{
+		activityId = 331,
+		name = [[参谋培养]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1.活动期间，指挥官可通过完成<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">活动任务</font>获得训练手册等道具奖励。<br/>2.指挥官可通过消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练手册</font>购买城建礼包并对乔希进行能力训练，每次训练可获得随机道具奖励，训练手册不足时可消耗金条进行训练。<br/>3.每次训练有几率提升乔希的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">智力、逻辑、推理</font>能力，当某一能力达到特定值，可额外领取<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">能力培养奖励</font>。<br/>4.某一项能力达到上限后，继续训练将不再增加此项能力；三种能力均达到上限后，可领取<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">能力培养终极奖励</font>。<br/>5.活动期间，可进行作战训练900次。<br/>6.能力提升概率如下：<br/>1）2%概率提升20智力；<br/>2）8%概率提升10智力；<br/>3）10%概率提升5智力；<br/>4）4%概率提升20逻辑；<br/>5）10%概率提升10逻辑；<br/>6）16%概率提升5逻辑；<br/>7）4%概率提升20推理；<br/>8）10%概率提升10推理；<br/>9）16%概率提升5推理；<br/>10）20%概率训练失败，不提升任何能力。</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_331_Nor.png]],
+		selecticon = [[Activity_Icon_331_Sel.png]],
+		heroId = 1113,
+		oneCost = [[30000_1400012_1]],
+		oneGoldCost = [[10000_1000_68]],
+		limitTimes = 900,
+	},
+	appoint_get_achieve = [[achieveId	conditionType	conditionValue	rewards	isReset	title	gotoType	gotoValue
+1	1	1	2	1	2	1	2
+331001	140900	1	30000_1400012_1,30000_840424_3,30000_800143_3	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日登录游戏<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>次</font>	-1	
+331002	180101	340	30000_1400012_1,30000_840424_5,30000_800143_5	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">每日活跃积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>点</font>	-1	-1
+331003	131300	1	30000_840424_10,30000_840156_10,30000_100050_3	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">拥有英雄<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希</font>并分享{0}/{1}次</font>	-1	-1
+331004	100102	2	30000_1001113_2,30000_840424_20,30000_840156_20,30000_100050_5	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>星</font>	-1	-1
+331005	100102	3	30000_1001113_3,30000_840424_30,30000_840156_30,30000_100050_8	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>星</font>	-1	-1
+331006	100100	40	30000_840424_10,30000_800143_10,30000_820002_3,30000_100050_3	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>级</font>	-1	-1
+331007	100100	60	30000_840424_20,30000_800143_20,30000_820002_5,30000_100050_5	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>级</font>	-1	-1
+331008	100100	80	30000_840424_30,30000_800143_30,30000_820002_8,30000_100050_8	0	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">乔希达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}/{1}</font>级</font>	-1	-1
+]],
+	appoint_get_box = [[achieveId	conditionType	type	conditionValue	rewards
+1	1	1	1	2
+331501	331001	1	75	30000_1001113_10,30000_1510002_4,30000_1510003_4,30000_1510004_4,30000_1510005_4
+331502	331001	1	200	30000_1001113_12,30000_1510002_8,30000_1510003_8,30000_1510004_8,30000_1510005_8
+331503	331001	1	420	30000_1001113_15,30000_1510002_12,30000_1510003_12,30000_1510004_12,30000_1510005_12
+331504	331001	1	800	30000_1001113_20,30000_1510002_15,30000_1510003_15,30000_1510004_15,30000_1510005_15
+331505	331002	2	40	30000_1000005_6,30000_1510002_4,30000_1510003_4,30000_1510004_4,30000_1510005_4
+331506	331002	2	220	30000_1000005_8,30000_1510002_8,30000_1510003_8,30000_1510004_8,30000_1510005_8
+331507	331002	2	480	30000_1000005_10,30000_1510002_12,30000_1510003_12,30000_1510004_12,30000_1510005_12
+331508	331002	2	960	30000_1000005_12,30000_1510002_15,30000_1510003_15,30000_1510004_15,30000_1510005_15
+331509	331003	3	160	30000_1000005_6,30000_1510002_4,30000_1510003_4,30000_1510004_4,30000_1510005_4
+331510	331003	3	360	30000_1000005_8,30000_1510002_8,30000_1510003_8,30000_1510004_8,30000_1510005_8
+331511	331003	3	800	30000_1000005_10,30000_1510002_12,30000_1510003_12,30000_1510004_12,30000_1510005_12
+331512	331003	3	1200	30000_1000005_12,30000_1510002_15,30000_1510003_15,30000_1510004_15,30000_1510005_15
+331513	331004		1	30000_1001113_40,30000_1510002_50,30000_1510003_50,30000_1510004_50,30000_1510005_50
+]],
+	appoint_get_draw = [[id	weight	gainItem	notice
+1	1	2	1
+1	500	30000_1001113_1	
+2	30	30000_1001113_3	
+3	10	30000_1001113_10	
+4	1500	30000_850008_3	
+5	1500	30000_850038_3	
+6	1500	30000_850018_3	
+7	1500	30000_850028_3	
+8	1000	30000_100060_1	
+9	1000	30000_100050_3	
+10	1460	30000_820002_1	
+]],
+
+}

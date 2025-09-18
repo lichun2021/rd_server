@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" firstAttribute="100_300_50" secondAttribute="136_300_25" thirdAttribute="1147_300_25" />
+      <data id="2" firstAttribute="136_300_50" secondAttribute="1148_300_25" thirdAttribute="1149_300_25" />
+      <data id="3" firstAttribute="100_300_25" secondAttribute="102_300_25" thirdAttribute="1147_300_50" />
+      <data id="4" firstAttribute="1980_300_50" secondAttribute="100_300_25" thirdAttribute="1147_300_25" />
+      <data id="5" firstAttribute="141_300_25" secondAttribute="1980_300_50" thirdAttribute="102_300_25" />
+      <data id="6" firstAttribute="102_300_50" secondAttribute="1148_300_25" thirdAttribute="1149_300_25" />
+      <data id="7" firstAttribute="100_300_50" secondAttribute="136_300_25" thirdAttribute="102_300_25" />
+</root>

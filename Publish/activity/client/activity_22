@@ -1,0 +1,18 @@
+return {
+	prop =
+	{
+		activityId = 22,
+		icon = [[Activity_Icon_20_Nor.png]],
+		selecticon = [[Activity_Icon_20_Sel.png]],
+		name = [[首充奖励]],
+		title = [[活动详情]],
+		exRewardCondition = [[建筑工厂15级前充值]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官进入游戏后，首次充值任意金额即可激活SS英雄谭雅和领取超值礼包。<br/>2. 建筑工厂15级前充值还有额外奖励。</font>]],
+		priority = 20600,
+	},
+	first_recharge_reward = [[id	cityLvlLimit	commonAward	extrAward	showDynamicEffect	rareMark
+1	1	2	2	2	2
+220001	15	30000_1001017_10,30000_21063001_1,30000_810003_60,30000_810001_5,30000_800110_2	30000_800143_3,30000_800110_1,30000_1510004_15,30000_850045_6,30000_850053_1,30000_850005_25,30000_850035_25	30000_1001017_10	30000_1001017_10
+]],
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" coreRankLevel="0" techLevelLimit="0" atkAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="2" coreRankLevel="1" techLevelLimit="10" coreRankAttr="1980_2000,1990_2000" power="500" needItem="30000_21070056_20" atkAttr="2_2000,1_2000,4_2000,3_2000,6_2000,5_2000,8_2000,7_2000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="3" coreRankLevel="2" techLevelLimit="20" coreRankAttr="1980_4000,1990_4000" power="1500" needItem="30000_21070056_60" atkAttr="2_4000,1_4000,4_4000,3_4000,6_4000,5_4000,8_4000,7_4000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="4" coreRankLevel="3" techLevelLimit="30" coreRankAttr="1980_6500,1990_6500" power="3000" needItem="30000_21070056_100" atkAttr="2_6500,1_6500,4_6500,3_6500,6_6500,5_6500,8_6500,7_6500" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="5" coreRankLevel="4" techLevelLimit="40" coreRankAttr="1980_9000,1990_9000" power="5000" needItem="30000_21070056_200" atkAttr="2_9000,1_9000,4_9000,3_9000,6_9000,5_9000,8_9000,7_9000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="6" coreRankLevel="5" techLevelLimit="50" coreRankAttr="1980_12000,1990_12000" coreRankEffectId="1325_1000,1326_5" power="8500" needItem="30000_21070056_360" atkAttr="2_12000,1_12000,4_12000,3_12000,6_12000,5_12000,8_12000,7_12000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="7" coreRankLevel="6" techLevelLimit="60" coreRankAttr="1980_15000,1990_15000" coreRankEffectId="1325_1200,1326_10" power="13500" needItem="30000_21070056_560" atkAttr="2_15000,1_15000,4_15000,3_15000,6_15000,5_15000,8_15000,7_15000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="8" coreRankLevel="7" techLevelLimit="70" coreRankAttr="1980_18500,1990_18500" coreRankEffectId="1325_1400,1326_15" power="20000" needItem="30000_21070056_900" atkAttr="2_18500,1_18500,4_18500,3_18500,6_18500,5_18500,8_18500,7_18500" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="9" coreRankLevel="8" techLevelLimit="80" coreRankAttr="1980_22000,1990_22000" coreRankEffectId="1325_1600,1326_20" power="28000" needItem="30000_21070056_1300" atkAttr="2_22000,1_22000,4_22000,3_22000,6_22000,5_22000,8_22000,7_22000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="10" coreRankLevel="9" techLevelLimit="90" coreRankAttr="1980_26000,1990_26000" coreRankEffectId="1325_1800,1326_25" power="38000" needItem="30000_21070056_1800" atkAttr="2_26000,1_26000,4_26000,3_26000,6_26000,5_26000,8_26000,7_26000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+      <data id="11" coreRankLevel="10" techLevelLimit="100" coreRankAttr="1980_30000,1990_30000" coreRankEffectId="1325_2000,1326_30" power="50000" needItem="30000_21070056_2700" atkAttr="2_30000,1_30000,4_30000,3_30000,6_30000,5_30000,8_30000,7_30000" hpAttr="2_0,1_0,4_0,3_0,6_0,5_0,8_0,7_0" />
+</root>

@@ -1,0 +1,14 @@
+return {
+	prop =
+	{
+		activityId = 253,
+		name = [[心灵战场]],
+		title = [[活动详情]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1. 开服前14天为选拔阶段<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">选拔阶段</font>。<br/>(1) 选拔阶段将分别在开服第<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">3、7、11天</font>开启3场心灵战场争夺。<br/>(2) 选拔期首场争夺仅开放心灵能量站建筑的争夺，之后每场会新解锁下一级心灵建筑的争夺。<br/>2. 开服14天后，将开始心灵战场的 <font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">循环阶段</font>。<br/>(1) 循环阶段，心灵战场将在每周二晚8点开启争夺。<br/>(2) 循环阶段，每场都将开启所有级别心灵建筑的争夺。<br/>(3) 进入循环阶段后，将提供心灵建筑放弃功能。<br/>(4) 功能上线时开服已超过14天的服务器，将直接进入循环阶段。<br/>3. 参与心灵战场需要报名，联盟盟主及官员可报名。<br/>4. 心灵战场的争夺需要起点建筑。当所在联盟没有占领任何心灵建筑时，只能报名 <font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">心灵尖塔</font>作为起点建筑，报名需要消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">电磁干扰屏蔽装置</font>。装置可通过进攻幽灵基地获得，每人每天最多为联盟获取2个。每场争夺结束后将清空未使用的屏蔽装置。 <br/>5. 当占领一个心灵建筑后，即可通过供能范围向外扩张。报名方式改为只能报名已占领心灵建筑供能范围内的建筑，供能范围可在心灵建筑的详情界面中查看。报名不再需要电磁干扰屏蔽装置。<br/>6. 联盟可以占领的心灵建筑数量上限，初始值为<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1座</font>。提升联盟科技<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">【心灵扩张】</font>的等级将增加可占领数量。<br/>7. 当联盟报名的是战场起点建筑时，每场仅能报名1个建筑。当联盟报名的是供能范围内建筑时，每场可报名多个建筑，但不能超过联盟剩余可占领建筑数量上限。<br/>8. 争夺阶段开始后，攻守双方的联盟成员可派遣部队进行进攻或驻守。<br/>9. 进攻方攻破守军后，可进入建筑开始占领倒计时，连续占领<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">30分钟</font>将获得该建筑的控制权。<br/>10. 防守方的驻守不会触发占领倒计时。如果争夺结束时，没有进攻方连续占领该建筑30分钟，则争夺结束，心灵建筑的控制权仍属于防守方。<br/>11. 争夺期间，参与争夺的联盟不能进行踢人和退盟操作。<br/>12. 心灵战场的战斗，玩法本身只产生伤兵，不会产生死兵，但其他因素可能导致死兵，如伤兵超过医院容量、敌军带有伤转死属性等。伤兵具体比例为:<br/>(1) 选拔阶段<br/>1-3场伤兵比例上限依次为:<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">20%、35%、50%</font>，超过比例的伤兵将作为正常士兵直接返还。<br/>(2) 循环阶段<br/> 各场伤兵比例上限为<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">50%</font>，超过比例的伤兵将作为正常士兵直接返还。<br/>13. 联盟占领心灵建筑后，将会获得心灵建筑的奖励。包括以下内容:<br/>(1) 心灵建筑历史上首次被攻破和占领时，对应联盟将分别获得攻破奖励和控制奖励，后续再被攻破和占领不会再次发放。其中的盟主分配奖励可在联盟心灵战场界面中进行分配。<br/>(2) 心灵建筑历史上首次被攻破和占领时，对应联盟和个人的信息将铭刻于建筑详情面板，合服后可以选择查看各服刻字信息。<br/>(3) 联盟占领心灵建筑后，将会获得心灵建筑的加成。不同等级的心灵建筑，加成效果可同时生效。具体的加成效果见奖励说明页面。 </font>]],
+		priority = 10324,
+		icon = [[Activity_Icon_253_Nor.png]],
+		selecticon = [[Activity_Icon_253_Sel.png]],
+		bigIcon = [[Activity_SuperWeapon_u_Rendered.png]],
+	},
+
+}

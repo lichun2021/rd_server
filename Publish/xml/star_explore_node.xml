@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" starId="1" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="102" starId="1" exploreSchedule="6000" />
+      <data id="103" starId="1" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="201" starId="2" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="202" starId="2" exploreSchedule="6000" />
+      <data id="203" starId="2" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="301" starId="3" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="302" starId="3" exploreSchedule="6000" />
+      <data id="303" starId="3" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="401" starId="4" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="402" starId="4" exploreSchedule="6000" />
+      <data id="403" starId="4" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="501" starId="5" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="502" starId="5" exploreSchedule="6000" />
+      <data id="503" starId="5" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="601" starId="6" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="602" starId="6" exploreSchedule="6000" />
+      <data id="603" starId="6" exploreSchedule="10000" scheduleAttribute="100_300" />
+      <data id="701" starId="7" exploreSchedule="3000" scheduleAttribute="100_200" />
+      <data id="702" starId="7" exploreSchedule="6000" />
+      <data id="703" starId="7" exploreSchedule="10000" scheduleAttribute="100_300" />
+</root>

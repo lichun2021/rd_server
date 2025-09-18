@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buffID="1101" weight="80" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1102" weight="240" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1103" weight="560" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1104" weight="720" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1201" weight="80" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1202" weight="240" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1203" weight="560" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1204" weight="720" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1301" weight="80" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1302" weight="240" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1303" weight="560" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1304" weight="720" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1401" weight="80" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1402" weight="240" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1403" weight="560" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1404" weight="720" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1501" weight="180" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1502" weight="540" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1503" weight="1260" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1504" weight="1620" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1601" weight="400" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1602" weight="1200" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1603" weight="2800" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="1604" weight="3600" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2101" weight="40" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2102" weight="120" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2103" weight="280" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2104" weight="360" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2201" weight="40" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2202" weight="120" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2203" weight="280" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2204" weight="360" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2301" weight="40" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2302" weight="120" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2303" weight="280" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2304" weight="360" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2401" weight="40" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2402" weight="120" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2403" weight="280" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2404" weight="360" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2501" weight="90" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2502" weight="270" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2503" weight="630" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2504" weight="810" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2601" weight="200" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2602" weight="600" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2603" weight="1400" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="2604" weight="1800" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3101" weight="30" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3102" weight="90" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3103" weight="210" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3104" weight="270" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3201" weight="30" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3202" weight="90" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3203" weight="210" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3204" weight="270" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3301" weight="30" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3302" weight="90" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3303" weight="210" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3304" weight="270" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3401" weight="30" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3402" weight="90" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3403" weight="210" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3404" weight="270" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3501" weight="68" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3502" weight="202" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3503" weight="473" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3504" weight="608" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3601" weight="150" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3602" weight="450" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3603" weight="1050" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3604" weight="1350" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" />
+      <data buffID="3678114" weight="3000" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" buildLimit="30" />
+      <data buffID="3678113" weight="7000" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" buildLimit="30" />
+      <data buffID="3678124" weight="1500" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" buildLimit="30" />
+      <data buffID="3678123" weight="3500" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" buildLimit="30" />
+      <data buffID="3678134" weight="1125" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" taskLimit="1400020" />
+      <data buffID="3678133" weight="2625" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" taskLimit="1400020" />
+      <data buffID="3608" weight="700" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" unlockEquipResearch="1" />
+      <data buffID="3610" weight="900" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" unlockEquipResearch="1" />
+      <data buffID="7011" weight="675" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" taskLimit="1400000" />
+      <data buffID="7012" weight="1575" packageID="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18" buffTime="3600" taskLimit="1400000" />
+</root>

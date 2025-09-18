@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data chapterId="1" chapterHeroId="1021,1017,1004,1003,1001,1002,1018,1020" />
+      <data chapterId="2" chapterHeroId="1035,1036,1041,1042,1043,1044,1045,1046,1048,1049,1050,1037" />
+      <data chapterId="3" chapterHeroId="1051,1052,1053,1057,1059,1064,1067,1070,1073,1077" />
+      <data chapterId="4" chapterHeroId="1068,1076,1072,1079,1069,1075,1071,1085" />
+      <data chapterId="5" chapterHeroId="1055,1061,1066,1074,1054,1058,1062,1065" />
+</root>

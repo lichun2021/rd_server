@@ -1,0 +1,15 @@
+option java_package	= "com.hawk.game.protocol";
+
+enum ScriptError
+{
+	SUCCESS_OK				= 0;	// 成功
+	
+	EXCEPTION				= 99;	// 出现异常
+	PARAMS_ERROR			= 100;	// 参数错误
+	CONFIG_ERROR			= 101;	// 配置文件错误
+	
+	ACCOUNT_NOT_EXIST		= 200;	// 玩家账号不存在
+	ACCOUNT_IS_ONLINE		= 201;	// 玩家在线不允许操作
+	WORLD_POSITION_ERROR    = 202;  // 位置信息错误
+	NOT_IN_CROSS			= 301;  // 玩家不在跨服中. 
+}

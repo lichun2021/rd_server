@@ -1,0 +1,37 @@
+return {
+	prop =
+	{
+		activityId = 203,
+		name = [[世界霸主]],
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Font/HiraginoSansGB-W3.ttf" fontsize = "18">世界霸主争夺战是以<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">司令所在联盟</font>为单位进行的对抗战。由每个服务器的司令联盟将代表本服出战，与全服所有司令联盟争夺世界霸主。<br/><br/>战斗场次设定:<br/>世界霸主争夺战共有<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">3轮战斗</font>，3轮战斗均为<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">淘汰战</font>。3轮地图分别为:统帅之地→荣耀之地→霸主之巅<br/><br/>参战资格确认:<br/>第1轮参战资格:<br/>第1轮霸主争夺战前确认，将由<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">盟军司令所在联盟</font>代表本服出战。开战后，再获得司令也将<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无法参与</font>霸主争夺战。<br/>本区<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无盟军司令</font>将由<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">战力第一联盟</font>代替参战，当霸主争夺战开始后；再获得战力第一联盟也将<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无法参与</font>霸主争夺战。<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（由于系统有延迟，资格确认时间会提前1小时截止统计）</font><br/>跨服获得其他区的盟军总部司令，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无法获得</font>霸主争夺战参战资格。<br/>第2,3轮参战资格:<br/>在战役中顺利<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">晋级</font>的联盟可参战下轮战役。<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">注意:霸主争夺战期间有参战资格的联盟无法解散，开战前1小时及争夺期间无法变更联盟成员。</font><br/><br/>战场胜负判断:<br/>1.战场中成功夺得中心雕像<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">连续占领1小时</font>或<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计占领2小时</font>的联盟，将取得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">晋级资格</font>。<br/>2.战斗结束时，若没有联盟连续占领1小时或累计占领2小时，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计占领时间最长的联盟将获得最终晋级资格。</font><br/><br/>战场进入限制:<br/>战场只能进入一次，退出后将<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">无法再次进入</font>。战场内同时最多只能进入<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">50个</font>联盟成员，<br/><br/>战场伤死兵规则:<br/>本次战场中将为各位指挥官提供多种<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">战场增益</font>，包括<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">死兵转伤兵增益</font>，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">治疗伤兵资源减少增益</font>，最大限度<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">降低战损</font>。此外，在战场内一定比例的死兵会进入盟军医院，且不占用盟军医院容量上限。请注意:在战场中无法收取盟军医院恢复的死兵。<br/><br/>进攻基地限制:<br/>在霸主争夺战战场中，无法对其他联盟的玩家基地发起侦查、攻击和集结。<br/><br/>建筑说明:<br/>中心雕像:战场中最重要的建筑，比赛获胜的关键。占领雕像时每分钟可获得480荣誉点。<br/>电塔:战场中共有6个电塔，当占领电塔的联盟与占领雕像的联盟为不同联盟时，电塔会周期性攻击雕像内的部队。此外联盟占领1个电塔时，可获得3%部队基础攻击、基础防御、基础生命属性加成，占领2个及以上电塔时，可获得6%部队基础攻击、基础防御、基础生命属性加成，该属性加成仅在雕像战斗时生效。占领单个电塔，每分钟可获得60荣誉点。<br/><br/>参战奖励:<br/>每场战斗中，获得胜利的联盟，将会获得胜利奖励。<br/>每场战斗中，占领建筑可获得荣誉点，比赛结束后，将根据联盟的荣誉点排名发送荣誉点排名奖励。<br/>每场战斗中，个人损失和消灭敌军战力达到指定目标，可获得目标奖励，达成多个目标时，仅发送最高档位奖励。<br/>以上奖励均为比赛结束后，通过邮件发放，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">注意:只有参战过的盟友才会获得奖励</font><br/>最终获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">世界霸主</font>及<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">全军统帅</font>，还将获得额外专属特权与奖励。<br/>世界霸主默认参战联盟的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">盟主</font>获得，在获得世界霸主后的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">4小时</font>内可转让世界霸主给联盟内其他成员<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（仅可转让1次）</font>，若超时未转让则后续无法继续转让。<br/><br/>官职增益:<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">统帅官职增益:</font><br/>部队攻击增加15%<br/>部队防御增加15%<br/>行军上限增加10%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">全军统帅官职增益:</font><br/>部队攻击增加20%<br/>部队防御增加20%<br/>部队生命增加20%<br/>行军上限增加15%<br/>行军速度增加10%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">世界霸主官职增益:</font><br/>部队攻击增加30%<br/>部队防御增加30%<br/>部队生命增加30%<br/>行军上限增加20%<br/>行军速度增加15%<br/>统帅、全军统帅、世界霸主官职增益效果<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">不叠加</font>，官职持续14天。</font>]],
+		icon1 = [[V6StarWars_Main_u_Chest_03.png]],
+		title1 = [[世界霸主，全服展示]],
+		tips1 = [[全服霸主雕像内专属展示]],
+		button1 = [[查看详情]],
+		icon2 = [[V6StarWars_Main_u_Chest_02.png]],
+		title2 = [[霸主奖励，独一无二]],
+		tips2 = [[特殊霸主皮肤、头像框等专属大奖]],
+		button2 = [[查看详情]],
+		icon3 = [[V6StarWars_Main_u_Chest_01.png]],
+		title3 = [[霸主嘉奖，分享胜利]],
+		tips3 = [[特殊奖励与盟友共享]],
+		button3 = [[查看详情]],
+		priority = 900001,
+		icon = [[Activity_Icon_203_Nor.png]],
+		selecticon = [[Activity_Icon_203_Sel.png]],
+		bigIcon = [[Activity_SuperWeapon_u_Rendered.png]],
+		overLordReward = [[30000_9024300_1,30000_9014700_1,30000_1000003_20,30000_820002_20,30000_800000_40,30000_800110_40,30000_840156_40,30000_1780050_6,]],
+	},
+	star_wars_part = [[id	areaId	wxqq	icon	num	name	teamTab1	teamTab2	zone	team	pos2	pos3	serverIdList	title
+1	1	1	2	1	2	2	2	1	1	2	2	2	2
+1	1	1		0	@sw_worldname1			0	0	960_820		10959,10966,10961,10964,10960,10965,10962,10963	@sw_title_3
+2	1	1	V6StarWars_Main_Icon_land_A_01,png	1	@sw_zonename1	V6StarWars_Main_Icon_land_A_01.png	V6StarWars_Main_Icon_land_A_01_S.png	1	0	470_1150		10959,10966,10961,10964	@sw_title_2
+3	1	1	V6StarWars_Main_Icon_land_A_01,png	1	@sw_teamname1	V6StarWars_Main_Icon_land_A_01.png	V6StarWars_Main_Icon_land_A_01_S.png	1	1	250_1300	900_470,400_450,600_250,700_800,800_280,500_650,500_850,1150_800,1100_600,1000_300,320_240,950_850,300_750,300_300	10959,10966	@sw_title_1
+4	1	1	V6StarWars_Main_Icon_land_A_01,png	2	@sw_teamname2	V6StarWars_Main_Icon_land_A_02.png	V6StarWars_Main_Icon_land_A_02_S.png	1	2	300_950	900_470,400_450,600_250,700_800,800_280,500_650,500_850,1150_800,1100_600,1000_300,320_240,950_850,300_750,300_300	10961,10964	@sw_title_1
+7	1	1	V6StarWars_Main_Icon_land_A_01,png	2	@sw_zonename2	V6StarWars_Main_Icon_land_A_02.png	V6StarWars_Main_Icon_land_A_02_S.png	2	0	500_400		10960,10965,10962,10963	@sw_title_2
+8	1	1	V6StarWars_Main_Icon_land_A_01,png	5	@sw_teamname5	V6StarWars_Main_Icon_land_A_01.png	V6StarWars_Main_Icon_land_A_01_S.png	2	1	250_200	900_470,400_450,600_250,700_800,800_280,500_650,500_850,1150_800,1100_600,1000_300,320_240,950_850,300_750,300_300	10960,10965	@sw_title_1
+9	1	1	V6StarWars_Main_Icon_land_A_01,png	6	@sw_teamname6	V6StarWars_Main_Icon_land_A_02.png	V6StarWars_Main_Icon_land_A_02_S.png	2	2	300_550	900_470,400_450,600_250,700_800,800_280,500_650,500_850,1150_800,1100_600,1000_300,320_240,950_850,300_750,300_300	10962,10963	@sw_title_1
+]],
+
+}

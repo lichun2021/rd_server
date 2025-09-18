@@ -1,0 +1,449 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "Army.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+// 国王战的周期状态
+enum PresidentPeriod
+{
+	INIT	 = 1;
+	PEACE 	 = 2;
+	WARFARE  = 3;
+	OVERTIME = 4;
+}
+
+// 国王战事件类型定义
+enum PresidentEventType
+{
+	// 占领无主宫殿
+	OCCUPY_PALACE = 1;
+	// 进攻失败
+	ATTACK_FAILED = 2;
+	// 进攻成功
+	ATTACK_WIN = 3;
+	// 当选国王
+	PRESIDENT_ELECTED = 4;
+	// 援助
+	PRESIDENT_ASSISTANCE = 5;
+}
+
+// 官职
+enum OfficerType
+{
+	OFFICER_00	= 0; // 无官职
+	OFFICER_01	= 304101;
+	OFFICER_02	= 304102;
+	OFFICER_03	= 304103;
+	OFFICER_04	= 304104;
+	OFFICER_05	= 304105;
+	OFFICER_06	= 304106;
+	OFFICER_07	= 304107;
+	OFFICER_08	= 304108;
+	OFFICER_09	= 304109;
+	OFFICER_10	= 304110;
+	OFFICER_11	= 304111;
+	OFFICER_12	= 304112;
+	OFFICER_13	= 304113;
+	OFFICER_14	= 304114;
+	OFFICER_15	= 304115;
+	OFFICER_16	= 304116;
+	OFFICER_17	= 304117;
+	OFFICER_CROSS_PRESIDENT = 305001;
+}
+
+// 官职信息
+message OfficerInfo
+{
+	required int32  officerId 	= 1; // 官职id，@see OfficerType
+	optional int64  endTime 	= 2; // 冷却结束时间
+	optional MiniPlayerMsg playerMsg 	=3; // 玩家信息
+	optional string guildTag	= 4; //工会简称.
+}
+
+// 官职信息同步
+message OfficerInfoSync
+{	
+	repeated OfficerInfo officers = 1;
+	optional int64 appointEndTime = 2; //可以任命总统时间. 
+}
+
+// 设置（授予、撤销）官职信息
+message OfficerSetReq
+{
+	required int32  officerId 	= 1; // 官职id，@see OfficerType
+	required string playerId 	= 2; // 玩家id
+}
+
+// 官职历史信息
+message OfficerRecord
+{
+	required int64  time 			= 1; // 时间
+	required string playerNameSet	= 2; // 玩家名
+	required int32  oriOfficerId	= 3; // 原官职
+	required int32  curOfficerId	= 4; // 现官职
+	optional string playerNameUnset	= 5; // 撤销官职玩家名
+}
+
+// 官职历史信息同步
+message OfficerRecordSync
+{
+	repeated OfficerRecord records = 1;
+}
+
+// 征税历史信息
+message TaxGuildRecord
+{
+	required string taxPlayerId 	= 1; // 国王id
+	required string taxPlayerName	= 2; // 国王名
+	required string taxGuildName	= 3; // 国王联盟名
+	required int64  taxTime 		= 4; // 征税时间
+	required string playerId 		= 5; // 盟主id
+	required string playerName		= 6; // 盟主名
+	required string guildName		= 7; // 联盟名字
+	
+}
+
+// 征税目标信息
+message TaxGuildInfo
+{
+	required string guildId 		= 1; // 联盟id
+	required string playerId 		= 2; // 盟主id
+	required string playerName		= 3; // 盟主名
+	required int32  guildIcon		= 4; // 联盟图标
+	required int32  guildLevel 		= 5; // 联盟等级
+	required string guildName		= 6; // 联盟名字
+	required string guildTag 		= 7; // 联盟简称
+
+	required int64  taxTime 		= 10;// 征税时间
+	required int64  goldore 		= 11;// 金矿
+	required int64  oil 			= 12;// 石油
+	required int64  steel 			= 13;// 钢铁
+	required int64  tombarthite		= 14;// 合金
+}
+
+// 征税信息同步
+message TaxGuildInfoSync
+{
+	repeated TaxGuildInfo taxInfos 	= 1;
+	repeated TaxGuildRecord records = 2;
+}
+
+// 向联盟盟主征税
+message TaxGuildReq
+{
+	required string playerId 	= 1; // 玩家id
+}
+
+// 国王战基础数据
+message PresidentInfo
+{
+	// 时期阶段
+	required int32 periodType = 1;
+	// 第几期
+	required int32 turnCount = 2;
+	
+	// 当前阶段的结束时间
+	optional int64 periodEndTime = 10;
+	
+	//本次国王战的开启时间
+	optional int64 warStartTime = 11;
+	
+	// 占领时间
+	optional int64 occupyTime = 12;
+	
+	// 国家信息
+	optional string countryName = 20;
+	optional int32 countryNameModifyTimes = 21; //国家名字修改次数
+	
+	// 国王的信息
+	optional string presidentId = 30;
+	optional string presidentName = 31;
+	optional int32 presidentIcon = 32;
+	optional int64 tenureTime = 33; // 任期开始时间
+	optional string presidentPfIcon = 34; // 国王平台头像
+	
+	// 国王联盟信息
+	optional string presidentGuildId = 40;
+	optional string presidentGuildName = 41;
+	optional string presidentGuildTag = 42;
+	optional int32 presidentGuildFlagId = 43;
+	
+	optional string leaderId 	= 44;
+	optional string leaderName 	= 45;
+	optional int32 leaderIcon 	= 46;
+	optional string leaderPfIcon 		= 47;
+	optional string leaderGuildId 	= 48;
+	optional string leaderGuildTag = 49;
+	optional string leaderGuildName = 50;
+	optional int32 leaderGuildFlag = 51;
+	optional string leaderServerId = 52; //区服.
+	optional string presidentServerId = 53; //总统的区服
+	
+	optional int64 rate = 54; // 进度条进度
+	optional int64 starOccupyTime = 55; // 开始占领时间
+	optional int64 speed = 56; // 推进度条速度
+	optional bool isAtk = 57; // 是否是攻击方
+	optional int32 leaderOfficerId = 58; // 占领者官职
+}
+
+// 国王战基础信息同步
+message PresidentInfoSync
+{
+	// 指定服的
+	required string serverName = 1;	
+	optional PresidentInfo info = 2;
+}
+
+//箭塔状态
+enum PresidentTowerStatus
+{
+	TOWER_PEACE  = 1; //和平
+	TOWER_FIGHT  = 2; //开战
+}
+
+//国王战箭塔信息同步
+message PresidentTowerInfoSync
+{
+	required int32 towerIdx = 1; // 箭塔索引
+	required PresidentTowerStatus status = 2; // 箭塔状态
+	optional int64 occupyTime = 3; //占领时间
+	optional string leaderId = 4; // 箭塔占领者
+	optional string leaderName = 5;
+	optional string leaderGuildId = 6; // 箭塔占领联盟
+	optional string leaderGuildName = 7;
+	optional string leaderGuildTag = 8;
+	optional int32 leaderGuildFlagId = 9;
+	required int32 x = 10; // 箭塔坐标
+	required int32 y = 11;
+	optional int32 leaderIcon = 12;
+	optional string leaderPfIcon = 13;
+	optional string leaderServerId = 14;
+	optional string crossOwnerServer = 15; // 跨服电塔归属国
+	optional bool isCrossFightGuild = 16; // 是否是国家军
+	optional int32 leaderOfficerId = 17; // 占领者官职
+}
+
+// 王国名字和徽标设定
+message CountryInfoSettingReq
+{
+	optional string countryName = 1;
+}
+
+// 历代国王信息
+message PresidentHistory
+{
+	required int32 turnCount = 1;
+	
+	optional string playerId = 2;
+	optional string playerName = 3;
+	optional int32 playerIcon = 4;
+	
+	optional string guildId = 5;
+	optional string guildName = 6;
+	optional string guildTag = 7;
+	optional int32 guildFlag = 8;
+	
+	optional int64 turnTime = 9;
+	
+	optional string pfIcon = 10;
+	
+	optional string serverId = 11;
+}
+
+// 历代国王信息同步
+message PresidentHistorySync
+{
+	repeated PresidentHistory history = 1;
+}
+
+// 国王战期间事件定义
+message PresidentEvent
+{	
+	required int32 eventType = 1;
+	required int64 eventTime = 2;
+	
+	// 主动方
+	optional string guildTag = 3;
+	optional string playerName = 4;
+	
+	// 被动方
+	optional string enemyGuildTag = 5;
+	optional string enemyPlayerName = 6;	
+	
+	optional string serverId = 7;
+	optional string enemyServerId = 8;
+}
+
+// 国王战事件同步
+message PresidentEventSync
+{
+	repeated PresidentEvent event = 1;
+}
+
+// 获取指定服的国王战信息
+message FetchPresidentInfoReq
+{
+	optional string serverName = 1;
+}
+
+// 国王战礼包数据
+message GiftInfo
+{
+	required int32 giftId = 1;
+	required int32 residueNumber = 2;
+	required int32 totalNumber = 3;
+}
+
+// 国王战礼包初始化
+message PresidentGiftInfo
+{
+	repeated GiftInfo giftInfo = 1;
+}
+
+// 国王战礼包中搜索玩家请求
+message PresidentSearchReq
+{
+	required string name = 1;
+	required int32 type = 2;  //1礼包(过滤掉已经领取礼包,并且在联盟的玩家)， 2好官职 过滤已经有官职,并且不在联盟的玩家, 3坏官职 过滤掉已经有官职,不在联盟,并且不在悬赏上面的玩家.
+}
+
+// 搜索成员信息
+message MemeberInfo
+{	
+	required MiniPlayerMsg miniPlayer = 1; //玩家的基础信息
+	required int32 officer = 5;
+	required bool isSendGift = 6; // 是否可以发送王战礼包
+	required int32 buildingLevel = 9;
+}
+
+// 国王战礼包中搜索玩家响应
+message PresidentSearchRes
+{
+	repeated MemeberInfo memeberInfo = 1;
+	optional string msg  = 2;//提示信息，当这个字段不为空时，不管memeberInfo，直接按msg弹框提示
+}
+
+// 国王战颁发礼包请求
+message PresidentSendGiftReq
+{
+	required int32 giftId = 1;
+	repeated string playerIds = 2;
+}
+
+// 礼包颁发记录数据
+message GiftRecord
+{
+	required int64 sendTime = 1;
+	required int32 giftId = 2;      //礼包ID
+	required string playerName = 3; //玩家名字
+	required string playerId = 4; //玩家ID
+	optional string guildTag = 5; //玩家的工会名称
+	required string presidentName = 6; //总统的名字
+	optional string serverId = 7; //区分id
+	
+}
+
+// 国王战礼包颁发记录
+message PresidentGiftRecordRes
+{
+	repeated GiftRecord giftRecord = 1;
+}
+
+//颁发礼物时候同步此增量协议
+message PresidentGiftRecordsUpdate {
+	repeated GiftRecord giftRecord = 1;
+}
+
+// 国王禁言玩家（或解除禁言）
+message PresidentSilentPlayerReq
+{
+	required string playerId = 1;
+}
+
+//请求资源信息
+message PresidentResourceInfoReq {
+}
+
+//同步资源信息
+message PresidentResourceInfoSyn {
+	optional int32 lastSetTime = 1; //上次的设置时间
+	optional int32 attrType = 2; //资源类型， 同PlayerAttr 0代表当前没有设置的
+}
+
+//设置资源信息
+message PresidentResourceSetReq{
+	optional int32 attrType = 1; //资源类型 同PlayerAttr
+}
+
+// 请求联盟箭塔驻军信息
+message PresidentTowerInfoReq
+{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+// 总统府驻扎部队行军信息
+message PresidentQuarterMarch
+{
+	required string playerId = 1;
+	required string name 	 = 2;
+	optional string pfIcon   = 3;
+	optional string guildTag = 4;
+	optional int32 icon 	 = 5;
+	repeated ArmySoldierPB army = 6;
+	required string marchId = 7;
+	repeated PBHeroInfo hero = 8;
+	optional PBSuperSoldierInfo ssoldier 	= 9; 
+}
+
+// 总统府驻扎部队信息
+message PresidentQuarterInfo
+{
+	repeated PresidentQuarterMarch quarterMarch = 1;
+	optional int32 massSoldierNum = 2; //队长集结上限
+}
+
+// 请求箭塔事件
+message PresidentTowerEventReq
+{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+//司令赐福的相关buff
+message PresidentBuffInfoReq {
+	
+}
+
+//请求国王赐福的buff信息
+message PresidentBuffInfoResp {
+	repeated PresidentBuffMsg buffMsgs = 1;
+}
+
+//请求国王赐福的buff信息
+message PresidentBuffMsg {
+	required int32 buffId = 1; //buff的ID
+	required int64 endTime = 2; //buff的结束时间
+}
+
+//成功之后会再推送一次 #PresidentBuffInfoResp协议(只有三条全量推送即可)
+message PresidentBuffOpenReq {
+	required int32 buffId = 1; //buff的ID
+}
+
+//宣言
+message PresidentManifestoReq {
+	
+}
+
+//宣言
+message PresidentManifestoResp {
+	required string manifesto = 1; //宣言
+	required int32 updateTimes = 2; //修改的次数(用于前端在修改的时候提示消耗.)
+}
+
+//修改成功之后同步一次resp
+message PresidentManifestoUpdate {
+	required string manifesto = 1; //宣言	
+}

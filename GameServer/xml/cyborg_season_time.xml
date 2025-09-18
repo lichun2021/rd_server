@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data season="1" showTime="2020-5-19 0:00:00" openTime="2020-5-23 0:00:00" endShowTime="2020-8-10 23:15:00" endTime="2020-8-15 0:00:00" beginTerm="9" endTerm="20" />
+      <data season="2" showTime="2022-6-7 0:00:00" openTime="2022-6-11 0:00:00" endShowTime="2022-8-29 23:15:00" endTime="2022-9-3 0:00:00" beginTerm="114" endTerm="125" />
+      <data season="3" showTime="2023-4-18 00:00:00" openTime="2023-4-22 00:00:00" endShowTime="2023-7-10 23:15:00" endTime="2023-7-15 00:00:00" beginTerm="159" endTerm="170" />
+      <data season="4" showTime="2023-10-27 00:00:00" openTime="2023-11-4 00:00:00" endShowTime="2024-4-8 23:15:00" endTime="2024-4-11 23:59:59" beginTerm="184" endTerm="195" />
+      <data season="5" showTime="2024-6-14 00:00:00" openTime="2024-6-15 00:00:00" endShowTime="2024-11-18 23:15:00" endTime="2024-11-21 23:59:59" beginTerm="200" endTerm="211" />
+      <data season="6" showTime="2025-1-9 00:00:00" openTime="2025-1-11 00:00:00" endShowTime="2025-6-30 23:15:00" endTime="2025-7-5 23:59:59" beginTerm="215" endTerm="227" />
+      <data season="7" showTime="2025-8-22 00:00:00" openTime="2025-8-23 00:00:00" endShowTime="2026-1-26 23:15:00" endTime="2026-1-31 23:59:59" beginTerm="231" endTerm="242" />
+</root>

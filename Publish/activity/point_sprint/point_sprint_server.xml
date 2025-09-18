@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data groupId="1" serverList="10001_10002_10005_10009_10011" />
+      <data groupId="2" serverList="10016_10018_10024_10026_10036" />
+      <data groupId="3" serverList="10045_10067_10072_10097_10149" />
+      <data groupId="4" serverList="10162_10183_10231_10232_10241" />
+      <data groupId="5" serverList="10270_10293_10326_10331_10337" />
+      <data groupId="6" serverList="10340_10401_10411_10421_10453" />
+      <data groupId="7" serverList="10469_10480_10506_10513_10532" />
+      <data groupId="8" serverList="10545_10569_10590_10595_10607" />
+      <data groupId="9" serverList="10609_10622_10624_10634_10645" />
+      <data groupId="10" serverList="10647_10657_10666_10677_10686" />
+      <data groupId="11" serverList="10688_10693_10701_10703_10705" />
+      <data groupId="12" serverList="10709_10713_10716_10718_10722" />
+      <data groupId="13" serverList="10728_10730_10731_10732_10735" />
+      <data groupId="14" serverList="10739_10744_10754_10758_10764" />
+      <data groupId="15" serverList="10747_10753_10766_10768_10772" />
+      <data groupId="16" serverList="10769_10770_10771_10774_10775" />
+      <data groupId="17" serverList="10773_10776_10777_10778_10779" />
+      <data groupId="18" serverList="10780_10781_10782_10783_10784" />
+      <data groupId="19" serverList="10785_10786_10787_10788_10789" />
+      <data groupId="20" serverList="10790_10791_10792_10793_10794" />
+      <data groupId="21" serverList="10795_10796_10797_10798_10799" />
+      <data groupId="22" serverList="20001_20004_20011_20015_20020" />
+      <data groupId="23" serverList="20021_20058_20072_20119_20124" />
+      <data groupId="24" serverList="20159_20169_20186_20198_20215" />
+      <data groupId="25" serverList="20225_20265_20241_20255_20275" />
+      <data groupId="26" serverList="20313_20323_20334_20345_20352" />
+      <data groupId="27" serverList="20354_20369_20371_20383_20385" />
+      <data groupId="28" serverList="20377_20379_20387_20392_20395" />
+      <data groupId="29" serverList="20399_20403_20407_20408_20409" />
+      <data groupId="30" serverList="20405_20406_20410_20411_20412" />
+      <data groupId="31" serverList="20413_20414_20415_20416" />
+      <data groupId="32" serverList="20417_20418_20419_20420_60004" />
+</root>

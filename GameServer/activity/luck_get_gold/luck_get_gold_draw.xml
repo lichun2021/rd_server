@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" poolId="1" weight="15" gainItem="30000_21065001_888" />
+      <data id="1002" poolId="1" weight="135" gainItem="30000_21063005_888" />
+      <data id="1003" poolId="1" weight="200" gainItem="30000_21065001_40" />
+      <data id="1004" poolId="1" weight="800" gainItem="30000_21065001_15" />
+      <data id="1005" poolId="1" weight="1650" gainItem="30000_21063005_80" />
+      <data id="1006" poolId="1" weight="800" gainItem="30000_100060_1" />
+      <data id="1007" poolId="1" weight="1600" gainItem="30000_810002_1" />
+      <data id="1008" poolId="1" weight="2400" gainItem="30000_100050_1" />
+      <data id="1009" poolId="1" weight="2400" gainItem="30000_1780040_20" />
+      <data id="2001" poolId="2" weight="15" gainItem="30000_21070056_2888" />
+      <data id="2002" poolId="2" weight="135" gainItem="30000_1000005_8" />
+      <data id="2003" poolId="2" weight="200" gainItem="30000_21070056_128" />
+      <data id="2004" poolId="2" weight="800" gainItem="30000_21070056_40" />
+      <data id="2005" poolId="2" weight="1650" gainItem="30000_1000005_1" />
+      <data id="2006" poolId="2" weight="800" gainItem="30000_100060_1" />
+      <data id="2007" poolId="2" weight="1600" gainItem="30000_810002_1" />
+      <data id="2008" poolId="2" weight="2400" gainItem="30000_100050_1" />
+      <data id="2009" poolId="2" weight="2400" gainItem="30000_1780040_20" />
+      <data id="3001" poolId="3" weight="15" gainItem="30000_850067_10888" />
+      <data id="3002" poolId="3" weight="135" gainItem="30000_850067_1888" />
+      <data id="3003" poolId="3" weight="200" gainItem="30000_850067_888" />
+      <data id="3004" poolId="3" weight="800" gainItem="30000_850067_188" />
+      <data id="3005" poolId="3" weight="1650" gainItem="30000_850067_68" />
+      <data id="3006" poolId="3" weight="800" gainItem="30000_100060_1" />
+      <data id="3007" poolId="3" weight="1600" gainItem="30000_810002_1" />
+      <data id="3008" poolId="3" weight="2400" gainItem="30000_100050_1" />
+      <data id="3009" poolId="3" weight="2400" gainItem="30000_1780040_20" />
+</root>

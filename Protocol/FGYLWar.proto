@@ -1,0 +1,100 @@
+option java_package	= "com.hawk.game.protocol";
+
+
+// 活动阶段
+enum PBFGYLWarState{
+	FGYL_SHOW        = 1; //预热展示
+	FGYL_OPEN_FREE   = 2; //未报名
+	FGYL_OPEN_SIGN   = 3; //已经报名等待开始
+	FGYL_OPEN_FIGHT  = 4; //战斗中
+	FGYL_OPEN_WIN    = 5; //已经胜利
+	FGYL_OPEN_FAIL   = 6; // 失败
+	FGYL_END         = 7; //结束展示
+	FGYL_HIDDEN      = 8; //不在活动期间内
+}
+
+
+
+//活动信息
+message PBFGYLWarStateInfo{
+	required int32 termId                 = 1; //期数
+	required PBFGYLWarState state         = 2; //状态
+	optional int64 showTime 			  = 3; //开始时间
+	optional int64 startTime              = 4; //匹配开时间
+	optional int64 endTime                = 5; //战斗结束时间
+	optional int64 hiddenTime		      = 6; //发奖结束时间
+	
+	optional int32 signCount              = 7; //已经报名的次数
+	optional int32 signLevel              = 8; //报名的难度
+	optional int32 signWarTimeIndex       = 9; //报名的战斗时段
+	optional int64 figthTime              = 10; //开打时间
+	repeated PBFGYLWarBattleStage stage   = 11; //阶段时间点
+	optional PBFGYLWarBattleRlt battleRlt = 12; //战斗结果
+	optional int32 passLevel              = 13; //通关难度
+	optional int32 winReward              = 14; //是否已经获取了胜利奖励
+	optional bool joined                  = 15; //是否已经加入过当前副本
+}
+
+
+
+//战斗阶段时间点
+message PBFGYLWarBattleStage{
+	required int32 stage = 1; //阶段
+	required int64 startTime = 2; //开始时间
+	required int64 endTime = 3; //结束时间
+}
+
+//战斗结果
+message PBFGYLWarBattleRlt{
+	required int64 startTime       = 1; //开始时间
+	required int32 level           = 2;  //难度
+	required int32 timeUse         = 3;  //耗时
+	required int32 win             = 4; //是否胜利
+}
+
+
+
+//联盟排行
+message PBFGYLWarGuildRankMember{
+	required int32 termId     = 1; //期数
+	required string serverId  = 2; //服务器ID
+	required string id		  = 3; //联盟ID
+	required string name	  = 4; //名称
+	required string tag		  = 5; //简称
+	required int32 guildFlag  = 6; //联盟旗帜
+	required int32 guildRank  = 7; //玩家的名次
+	required int32 passLevel  = 8; //开战的时间
+	required int32 timeUse    = 9; //时长
+}
+
+
+
+
+
+
+//活动数据整体返回
+message PBFGYLWarStateInfoResp{
+	required PBFGYLWarStateInfo warInfo = 1; //整体数据
+}
+
+
+
+//报名
+message PBFGYLSignUpReq{
+	required int32 level     = 1; //难度
+	required int32 timeIndex = 2; //时段
+}
+
+
+
+//当前期联盟榜
+message PBFGYLWarGuildTermRankResp{
+	repeated PBFGYLWarGuildRankMember members = 1; //成员
+	optional PBFGYLWarGuildRankMember self    = 2; //自己联盟信息
+}
+
+//历史荣耀榜
+message PBFGYLWarGuildHonorRankResp{
+	repeated PBFGYLWarGuildRankMember members = 1; //成员
+	optional PBFGYLWarGuildRankMember self    = 2; //自己联盟信息
+}

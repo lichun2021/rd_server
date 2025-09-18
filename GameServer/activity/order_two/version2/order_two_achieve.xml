@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" repeatVal="100" orderType="1019" conditionVal="1_99_5" exp="500" />
+      <data id="1002" repeatVal="1" orderType="1019" conditionVal="10_99_1" exp="2000" />
+      <data id="1003" repeatVal="1" orderType="1019" conditionVal="15_99_1" exp="3000" />
+      <data id="1004" repeatVal="1" orderType="1019" conditionVal="20_99_1" exp="5000" />
+      <data id="1005" repeatVal="60" orderType="1028" conditionVal="0_500000" exp="500" />
+      <data id="1006" repeatVal="20" orderType="1038" conditionVal="10" exp="500" />
+      <data id="1007" repeatVal="50" orderType="1035" conditionVal="10" exp="500" />
+      <data id="1008" repeatVal="100" orderType="1036" conditionVal="1" exp="200" />
+      <data id="1009" repeatVal="200" orderType="1018" conditionVal="36000" exp="100" />
+      <data id="1010" repeatVal="200" orderType="1017" conditionVal="301_310_10" exp="50" />
+      <data id="1011" repeatVal="200" orderType="1017" conditionVal="201_210_10" exp="100" />
+      <data id="1012" repeatVal="200" orderType="1017" conditionVal="401_410_10" exp="100" />
+      <data id="1013" repeatVal="10" orderType="1012" conditionVal="6000_1" exp="500" />
+      <data id="1014" repeatVal="10" orderType="1014" conditionVal="3" exp="1000" />
+      <data id="1015" repeatVal="30" orderType="1033" conditionVal="1" exp="500" />
+      <data id="1016" repeatVal="10" orderType="1011" conditionVal="1" exp="2000" />
+      <data id="1017" repeatVal="1" orderType="1021" conditionVal="1" exp="5000" />
+      <data id="1018" repeatVal="1" orderType="1010" conditionVal="1" exp="10000" />
+      <data id="1019" repeatVal="1" orderType="1031" conditionVal="1200_1" exp="20000" />
+      <data id="1020" repeatVal="10" orderType="1006" conditionVal="1" exp="5000" />
+</root>

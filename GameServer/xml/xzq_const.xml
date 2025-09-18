@@ -1,0 +1,36 @@
+# 联盟允许占领的小战区数量上限基础值
+alliancePointUpperLimitBase = 1
+
+# 开服前多少天使用 xzq_openserver_time
+openTimeDays = 7
+
+# 正赛占领需要时间 秒
+battleControlTime = 1800
+
+# 上色需要控制数量
+allianceColorNeedPointNum = 5
+
+# 势力上色色值
+allianceColors = 255,119,157_225,112,72_255,248,66_212,231,113_244,133,202_164,124,255_143,172,255_218,128,255_130,216,160_255,163,107
+
+# 小战区上线时间点（用于区分上线前的老区）
+xzqOpenTime = 2022-3-10 0:00:00
+
+# 受限的联盟科技
+xzqLimitGuildScience  = 140
+
+# 每日为联盟获取门票数量上限
+attackAchiveticketNum = 2
+
+# 灰度开放的服务器（不配置为全开放）
+xzqLimitServer = 
+
+# 上色冷却时间
+colorResetTime = 7200
+
+# 小战区数据修理时间1
+xzqFixTime = 2022-4-7 0:00:00
+
+# 小站区区结束时间点
+xzqCloseTime = 
+

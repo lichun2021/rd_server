@@ -1,0 +1,107 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 当前阶段
+enum InviteMergeTurn
+{
+	INVITE_MERGE_TURN_0 = 0; // 预览阶段
+	INVITE_MERGE_TURN_1 = 1; // 司令选择合服目标
+	INVITE_MERGE_TURN_2 = 2; // 玩家投票
+	INVITE_MERGE_TURN_3 = 3; // 本轮次投票结果展示
+	INVITE_MERGE_TURN_4 = 4; // 司令选择合服目标
+	INVITE_MERGE_TURN_5 = 5; // 玩家投票
+	INVITE_MERGE_TURN_6 = 6; // 本轮次投票结果展示
+	INVITE_MERGE_TURN_7 = 7; // 展示最终结果
+}
+
+// 界面信息
+message InviteMergePageInfo
+{
+	required InviteMergeTurn inviteMergeTurn = 1; // 当前阶段
+	optional InviteMergeLeaderInfo leader = 2; // 选择合服目标玩家信息
+	optional string targetServerId = 3; // 目标区服ID
+	optional int32 aApproveCnt = 4; // 我方赞成数量
+	optional int32 aOpposeCnt = 5; // 我方反对数量
+	optional int32 bApproveCnt = 6; // 对方赞成数量
+	optional int32 bOpposeCnt = 7; // 对方反对数量
+	optional bool deal = 8; // 投票是否通过
+	optional int32 mySatus = 9; // 我的投票状态 -1 无权限 0 未投票 1赞成 2反对
+	required InviteMergeTimeInfo timeInfo = 10; // 时间信息
+	
+	optional InviteMergeRankCellInfo targetServceInfo = 11; // 目标区服信息
+}
+
+// 时间信息
+message InviteMergeTimeInfo
+{
+	required int64 showTime = 1;
+	required int64 startTime = 2;
+	required int64 inviteEndTime1 = 3;
+	required int64 voteEntTime1 = 4;
+	required int64 showEndTime1 = 5;
+	required int64 inviteEndTime2 = 6;
+	required int64 voteEntTime2 = 7;
+	required int64 showEndTime2 = 8;
+	required int64 endTime = 9;
+	required int64 hiddenTime = 10;
+}
+
+// 选择合服目标玩家信息
+message InviteMergeLeaderInfo
+{
+	required string leaderName = 1; // 名字
+	required string leaderId = 2; // ID
+	optional string leaderGuildTag = 3; // 联盟简称
+}
+
+// 邀请合服信息(实力排行,邀请目标,接受邀请)
+message InviteMergeInfo
+{
+	repeated InviteMergeRankCellInfo info = 1; // 排名信息
+	optional InviteMergeRankCellInfo myInfo = 2; // 我的排名信息
+}
+
+message InviteMergeRankCellInfo
+{
+	required int32 rank = 1; // 服务器排名
+	required string serverId = 2; // 服务器ID
+	optional string leaderGuildTag = 3; // 联盟简称
+	optional string leaderName = 4; // 玩家名字
+	required int64 power = 5; // 战力
+	required bool isSuper = 6; // 是否是王者国家
+	required bool invited = 7; // 是否已经邀请
+	required bool beInvited = 8; // 是否被邀请
+	required bool connected = 9; // 是否已经建立联系
+	required bool dealed = 10; // 是否已经最终确认
+	optional int32 type = 11; //服务器类型
+}
+
+// 合服进度
+message InviteMergeProgress
+{
+	repeated InviteMergeProgressCell cell = 1;
+}
+
+message InviteMergeProgressCell
+{
+	required bool deal = 1; // 是否已经确定
+	
+	required string aServerId = 2; // 服务器ID
+	required bool aIsSuper = 3; // 是否是王者国家
+	required int32 aRank = 4; // 服务器排名
+	required int64 aPower = 5; // 战力
+	
+	required string bServerId = 6; // 服务器ID
+	required bool bIsSuper = 7; // 是否是王者国家
+	required int32 bRank = 8; // 服务器排名
+	required int64 bPower = 9; // 战力
+	
+	optional int32 aType = 10; //服务器类型
+	optional int32 bType = 11;
+}
+
+// 合服邀请操作
+message InviteMergeOper
+{
+	optional string serverId = 1;
+	optional bool ticket = 2; // true赞成 false反对
+}

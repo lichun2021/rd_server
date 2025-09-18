@@ -1,0 +1,67 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 从100000开始使用
+enum code {
+	ENTER_CROSS 			= 100001; //玩家进入跨服
+	EXIT_CORSS				= 100002; //玩家退出跨服.
+	INNER_LOGOUT			= 100003; //玩家退出(在玩家掉线的时候 A->B)
+	INNER_BACK_SERVER		= 100004; //回到本服(玩家在A服点击退出之后B处理完,再发此协议回A)
+	CROSS_SERVER_LIST_REQ	= 100006; //请求当前可以跨服的列表
+	CROSS_SERVER_LIST_RESP 	= 100007; //返回当前服可以跨服的列表
+	INNER_ENTER_CROSS_REQ  	= 100008; //请求跨服
+	INNER_ENTER_CROSS_RESP	= 100009; //请求跨服返回值.
+	ON_SPY_REQ				= 100010; //请求当前可以跨服的列表
+	ON_SPY_RESP 			= 100011; //返回当前服可以跨服的列表
+	CROSS_BEGIN				= 100012; //跨服开始
+	CROSS_FINISH			= 100013; //跨服完成
+	CROSS_BACK_BEGIN		= 100014; //跨服返回开始
+	CROSS_BACK_FINISH		= 100015; //跨服返回完成
+	CROSS_MOVE_BACK			= 100016; //强制签回	
+	INNER_COMMON_BACK_SERVER_REQ = 100017; //通用的从跨服回到原服协议.	
+	COMMON_CROSS_BEGIN		= 100021; //通用跨服开始
+	COMMON_CROSS_SIMULATE_BEGIN = 100022; //通用跨服模拟开始.
+	COMMON_CROSS_BACK_FINISH	= 100023; //通用跨服返回.
+	COMMON_CROSS_SIMULATE_BACK_FINISH = 100024;//通用跨服返回.
+	
+	/****************100100-100200跨服活动******************/
+	CROSS_STATE_INFO_SYNC	= 100100;	// 同步跨服活动状态信息
+	CROSS_ACHIEVE_INFO_SYNC	= 100102;	// 同步跨服活动成就信息
+	CROSS_RESULT_SYNC		= 100104;	// 同步跨服活动结果信息
+	
+	CROSS_GET_PAGE_INFO_C	= 100110;	// 获取跨服活动界面信息
+	CROSS_GET_PAGE_INFO_S	= 100111;
+	
+	CROSS_GET_RANK_INFO_C	= 100112;	// 获取跨服活动排行信息
+	CROSS_GET_RANK_INFO_S	= 100113;
+	
+	CROSS_GET_ACHIEVE_REWARD_C	= 100114;	// 领取跨服活动成就奖励
+	
+	/****************100100-100200跨服活动******************/
+	
+	
+	/*****************达雅之战100201 - 100230*****************************/
+	
+	
+	CROSS_DDZY_TEAM_MATCHING_REQ             = 100201;   //达雅之战匹配
+	CROSS_DDZY_CANCEL_TEAM_MATCHING_REQ      = 100202;   //达雅之战取消匹配
+	CROSS_DDZY_TEAM_MATCHING_STATE_RESP      = 100203;   //达雅之战队伍状态同步
+	CROSS_DDZY_WAR_FINISH                    = 100204;   //达雅之战打完收工
+	
+	/*****************达雅之战100201 - 100260*****************************/
+
+	YQZZ_FIRST_CONTROL_MAIL 	= 100205; // 建筑首战发奖励给跨服本服 
+	
+	CROSS_CHANGE_TECH_VALUE= 100206; // 跨服修改国家科技值
+	CROSS_NATATION_TECH_SKILL_USE = 100207; // 跨服使用国家技能
+
+	YQZZ_GIVEUP_BUILD_MAIL_REQ = 100211; // 放弃建筑邮件
+
+	NEW_START_CS_INFO_REQ	= 100221;//跨服请求玩家信息
+	NEW_START_CS_INFO_RESP	= 100222;//跨服返回玩家信息
+	
+	
+	
+	/**************************先驱回响*******************************/
+	XQHX_DATA_UPDATE = 100260;   //通知战斗房间状态变更
+	/**************************先驱回响*******************************/
+}

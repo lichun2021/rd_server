@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data vip="1" payGroup="0_1000,1;1001_3000,2;3001_10000,3" />
+      <data vip="2" payGroup="0_1000,1;1001_3000,2;3001_10000,3" />
+      <data vip="3" payGroup="0_1000,1;1001_3000,2;3001_10000,3" />
+      <data vip="4" payGroup="0_1000,1;1001_3000,2;3001_10000,3" />
+</root>

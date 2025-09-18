@@ -1,0 +1,55 @@
+option java_package = "com.hawk.game.protocol";
+
+// 聊天详细内容
+message ChatData {
+	optional string playerId = 1; //数据发送者
+	optional string message = 2; //发送内容
+	optional string voiceId				= 4;   // 如果有语音,语音id
+	optional int32 voiceLength			= 5; 	// 语音时长/秒
+	optional string guildTag 			=6 ; // 联盟简称
+	optional int64 msgTime				= 7; // 时间
+	optional int32 officeId				= 8; // 官职
+	optional int32 dressTitle	= 9; // 称号
+	optional int32 dressTitleType = 10; // 称号显示类型 0 默认
+}
+
+// 聊天室数据
+message PlayerChatRoom {
+	required string roomId = 1; //房间ID
+	required int32 lock = 2;
+	required int32 status = 3;
+	required int64 joinTime = 4; //加入房间时间
+	required int64 lastMsg = 5; // 最后更新时间
+}
+
+// 聊天内容
+message ChatMessage{
+	repeated ChatData chat = 1;
+}
+
+// 成员数据
+message MemberData{
+	required string playerId = 1;
+	required bool isDelete = 2; //是否删除聊天室
+}
+
+// 全服缓存数据
+message ChatRoomData{
+	required string createrId = 1;
+	optional string name = 2;
+	repeated MemberData members = 3;
+	repeated string joinMembers = 4;
+	required int64 effectTime = 5;
+	optional ChatType chatType = 6;
+}
+
+enum ChatType{
+	NORMAL = 0; //普通
+	P2P =1; // 1对1 聊天
+	GUILD_MAIL_SELF = 2; // 全体A
+}
+
+// 邮件体
+message MailEntityContent{
+	repeated bytes content =1;
+}

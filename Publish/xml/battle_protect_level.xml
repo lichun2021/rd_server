@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data levelgap="1" triggerround="5" lossrate="0.99" percent="0.2" />
+      <data levelgap="2" triggerround="5" lossrate="0.99" percent="0.2" />
+      <data levelgap="3" triggerround="5" lossrate="0.5" percent="0.2" />
+      <data levelgap="4" triggerround="5" lossrate="0.5" percent="0.2" />
+      <data levelgap="5" triggerround="0" lossrate="0" percent="0.23" />
+      <data levelgap="6" triggerround="0" lossrate="0" percent="0.26" />
+      <data levelgap="7" triggerround="0" lossrate="0" percent="0.29" />
+      <data levelgap="8" triggerround="0" lossrate="0" percent="0.32" />
+      <data levelgap="9" triggerround="0" lossrate="0" percent="0.35" />
+      <data levelgap="10" triggerround="0" lossrate="0" percent="0.38" />
+      <data levelgap="11" triggerround="0" lossrate="0" percent="0.41" />
+      <data levelgap="12" triggerround="0" lossrate="0" percent="0.44" />
+      <data levelgap="13" triggerround="0" lossrate="0" percent="0.47" />
+      <data levelgap="14" triggerround="0" lossrate="0" percent="0.5" />
+      <data levelgap="15" triggerround="0" lossrate="0" percent="0.53" />
+      <data levelgap="16" triggerround="0" lossrate="0" percent="0.56" />
+      <data levelgap="17" triggerround="0" lossrate="0" percent="0.59" />
+      <data levelgap="18" triggerround="0" lossrate="0" percent="0.62" />
+      <data levelgap="19" triggerround="0" lossrate="0" percent="0.65" />
+      <data levelgap="20" triggerround="0" lossrate="0" percent="0.68" />
+      <data levelgap="21" triggerround="0" lossrate="0" percent="0.71" />
+      <data levelgap="22" triggerround="0" lossrate="0" percent="0.74" />
+      <data levelgap="23" triggerround="0" lossrate="0" percent="0.77" />
+      <data levelgap="24" triggerround="0" lossrate="0" percent="0.8" />
+      <data levelgap="25" triggerround="0" lossrate="0" percent="0.83" />
+      <data levelgap="26" triggerround="0" lossrate="0" percent="0.86" />
+      <data levelgap="27" triggerround="0" lossrate="0" percent="0.89" />
+      <data levelgap="28" triggerround="0" lossrate="0" percent="0.92" />
+      <data levelgap="29" triggerround="0" lossrate="0" percent="0.95" />
+      <data levelgap="30" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="31" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="32" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="33" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="34" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="35" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="36" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="37" triggerround="0" lossrate="0" percent="0.98" />
+      <data levelgap="38" triggerround="0" lossrate="0" percent="0.98" />
+</root>

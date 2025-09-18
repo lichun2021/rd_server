@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2023-10-30 10:00:00" startTime="2023-10-30 10:00:00" endTime="2023-11-5 23:59:55" hiddenTime="2023-11-5 23:59:55" />
+      <data termId="2" showTime="2024-4-29 00:00:00" startTime="2024-4-29 00:00:00" endTime="2024-5-5 23:59:55" hiddenTime="2024-5-5 23:59:55" />
+      <data termId="3" showTime="2024-6-29 00:00:00" startTime="2024-6-29 00:00:00" endTime="2024-7-5 23:59:55" hiddenTime="2024-7-5 23:59:55" />
+      <data termId="4" showTime="2024-7-28 00:00:00" startTime="2024-7-28 00:00:00" endTime="2024-8-3 23:59:55" hiddenTime="2024-8-3 23:59:55" />
+      <data termId="5" showTime="2024-9-26 00:00:00" startTime="2024-9-26 00:00:00" endTime="2024-10-2 23:59:55" hiddenTime="2024-10-2 23:59:55" />
+      <data termId="6" showTime="2024-10-29 00:00:00" startTime="2024-10-29 00:00:00" endTime="2024-11-4 23:59:55" hiddenTime="2024-11-4 23:59:55" />
+      <data termId="7" showTime="2024-12-24 00:00:00" startTime="2024-12-24 00:00:00" endTime="2024-12-30 23:59:55" hiddenTime="2024-12-30 23:59:55" />
+      <data termId="8" showTime="2025-3-2 00:00:00" startTime="2025-3-2 00:00:00" endTime="2025-3-8 23:59:55" hiddenTime="2025-3-8 23:59:55" />
+      <data termId="9" showTime="2025-4-27 00:00:00" startTime="2025-4-27 00:00:00" endTime="2025-5-3 23:59:55" hiddenTime="2025-5-3 23:59:55" />
+      <data termId="10" showTime="2025-6-21 00:00:00" startTime="2025-6-21 00:00:00" endTime="2025-6-27 23:59:55" hiddenTime="2025-6-27 23:59:55" />
+      <data termId="11" showTime="2025-08-26 00:00:00" startTime="2025-08-26 00:00:00" endTime="2025-09-01 23:59:55" hiddenTime="2025-09-01 23:59:55" />
+</root>

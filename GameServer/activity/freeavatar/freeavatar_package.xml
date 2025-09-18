@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" item="30000_1890001_1" needLevel="6" price="10000_1000_25" discount="2" num="40" priority="101" />
+      <data id="102" item="30000_1782103_10" needLevel="6" price="10000_1001_24" discount="0.8" num="50" priority="102" />
+      <data id="103" item="30000_802004_20" needLevel="6" price="10000_1000_42" discount="0.7" num="50" priority="103" />
+      <data id="104" item="30000_1000003_1" needLevel="6" price="10000_1000_25" discount="0.25" num="50" priority="104" />
+      <data id="201" item="30000_1890001_1" needLevel="11" price="10000_1000_25" discount="2" num="40" priority="201" />
+      <data id="202" item="30000_100050_1" needLevel="11" price="10000_1001_15" discount="2" num="100" priority="202" />
+      <data id="203" item="30000_1782106_10" needLevel="11" price="10000_1000_70" discount="0.7" num="20" priority="203" />
+      <data id="204" item="30000_800002_10" needLevel="11" price="10000_1001_40" discount="2" num="150" priority="204" />
+      <data id="301" item="30000_1890001_1" needLevel="16" price="10000_1000_25" discount="2" num="40" priority="301" />
+      <data id="302" item="30000_802004_20" needLevel="16" price="10000_1000_36" discount="0.6" num="50" priority="302" />
+      <data id="303" item="30000_1300006_10" needLevel="16" price="10000_1001_14" discount="7" num="100" priority="303" />
+      <data id="304" item="30000_1000005_1" needLevel="16" price="10000_1000_175" discount="1" num="5" priority="304" />
+      <data id="401" item="30000_1890001_1" needLevel="19" price="10000_1000_25" discount="2" num="40" priority="401" />
+      <data id="402" item="30000_1300009_10" needLevel="19" price="10000_1001_8" discount="8" num="100" priority="402" />
+      <data id="403" item="30000_21063005_10" needLevel="19" price="10000_1000_11" discount="0.37" num="100" priority="403" />
+      <data id="404" item="30000_1000005_1" needLevel="19" price="10000_1000_140" discount="0.8" num="5" priority="404" />
+      <data id="501" item="30000_1890001_1" needLevel="22" price="10000_1000_25" discount="2" num="40" priority="501" />
+      <data id="502" item="30000_1782103_10" needLevel="22" price="10000_1000_10" discount="0.33" num="100" priority="502" />
+      <data id="503" item="30000_1782106_10" needLevel="22" price="10000_1000_50" discount="0.5" num="30" priority="503" />
+      <data id="504" item="30000_800002_10" needLevel="22" price="10000_1000_9" discount="0.45" num="100" priority="504" />
+      <data id="601" item="30000_1890001_1" needLevel="25" price="10000_1000_25" discount="2" num="40" priority="601" />
+      <data id="602" item="30000_802005_10" needLevel="25" price="10000_1000_28" discount="2.8" num="200" priority="602" />
+      <data id="603" item="30000_21063005_10" needLevel="25" price="10000_1000_10" discount="0.33" num="100" priority="603" />
+      <data id="604" item="30000_1000005_1" needLevel="25" price="10000_1000_105" discount="0.6" num="10" priority="604" />
+</root>

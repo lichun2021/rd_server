@@ -1,0 +1,78 @@
+# 可被偷取次数
+pickupCoverLimit = 5
+
+# 每日可偷取次数
+pickupLimit = 10
+
+# 偷取列表数量
+pickupListNum = 10
+
+# 事件触发时间
+eventTime = 28800
+
+# 事件处理获得经验
+eventExp = 1000
+
+# 收取资源获得经验
+collectExp = 600
+
+# 偷取资源获得经验
+pickupExp = 800
+
+# 上油增长百分比
+noEnsureIds = 1000
+
+# 满仓时间
+resourceTime = 36000
+
+# 购买经验次数，整个活动期间
+purchaseExp = 1
+
+# 资源建筑数量限制
+stationCountLimit = 4
+
+# 资源建筑对应类型
+stationResourceType = 1780158_1780157_1780156_1780155
+
+# 解锁高级礼包后获得经验
+unlockGiftExp = 1000
+
+# 可被偷取晶体数量限制
+canBeStealResLimit = 1
+
+# 被帮助次数限制
+beHelpTimesLimit = 10
+
+# 帮助时间减少（万份比）
+helpTimeReduce = 250
+
+# 记录数量
+recordLimit = 10
+
+# 零点增加次数
+stealZeroTimeAdd = 3
+
+# 偷取次数增加周期(秒)
+stealAddPeriod = 7200
+
+# 偷取次数最大值
+stealTimesMax = 10
+
+# 偷取一个玩家的cd时间(秒)
+stealOneCd = 3600
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 各类机器人每日可偷晶体个数
+robotStealNum = 2_3,3_3
+
+# 各类型机器人刷出改率
+robotRefreshWeight = 1_4000,2_3000
+
+# 各类机器人最多可同时出现个数
+robotShowNum = 1_1,2_1,3_1
+
+# 每日免费刷新能力次数
+abilityfreeFreshNum = 1
+

@@ -1,0 +1,12 @@
+# 活跃任务积分要求
+integral = 300
+
+# 活跃任务奖励会员经验数
+rewardExperience = 100
+
+# 每日登录基础经验及递增值
+dailyLogin = 50,50
+
+# 每日登录任务最大值
+loginMaximum = 500
+

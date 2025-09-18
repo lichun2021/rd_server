@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="333101" conditionType="700076" conditionValue="20" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="1" />
+      <data achieveId="333102" conditionType="700103" conditionValue="300" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="1" />
+      <data achieveId="333103" conditionType="700083" conditionValue="1" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="1" />
+      <data achieveId="333104" conditionType="700105" conditionValue="10" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="1" />
+      <data achieveId="333105" conditionType="700076" conditionValue="20" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="0" />
+      <data achieveId="333106" conditionType="700104" conditionValue="5" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="0" />
+      <data achieveId="333107" conditionType="141009" conditionValue="2" rewards="30000_850007_1,30000_850037_1,30000_850051_1" resetting="0" />
+</root>

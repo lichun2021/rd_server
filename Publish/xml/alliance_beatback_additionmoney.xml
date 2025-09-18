@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rechargeMoney="100" beAddToMoney="10000_1000_10000" additionalMoney="10000_1000_1000" />
+      <data id="2" rechargeMoney="200" beAddToMoney="10000_1000_20000" additionalMoney="10000_1000_2000" />
+      <data id="3" rechargeMoney="300" beAddToMoney="10000_1000_30000" additionalMoney="10000_1000_3000" />
+      <data id="4" rechargeMoney="400" beAddToMoney="10000_1000_40000" additionalMoney="10000_1000_4000" />
+      <data id="5" rechargeMoney="500" beAddToMoney="10000_1000_50000" additionalMoney="10000_1000_5000" />
+      <data id="6" rechargeMoney="600" beAddToMoney="10000_1000_60000" additionalMoney="10000_1000_6000" />
+      <data id="7" rechargeMoney="700" beAddToMoney="10000_1000_70000" additionalMoney="10000_1000_7000" />
+      <data id="8" rechargeMoney="800" beAddToMoney="10000_1000_80000" additionalMoney="10000_1000_8000" />
+      <data id="9" rechargeMoney="900" beAddToMoney="10000_1000_90000" additionalMoney="10000_1000_9000" />
+      <data id="10" rechargeMoney="1000" beAddToMoney="10000_1000_100000" additionalMoney="10000_1000_10000" />
+      <data id="11" rechargeMoney="1200" beAddToMoney="10000_1000_120000" additionalMoney="10000_1000_12000" />
+      <data id="12" rechargeMoney="1400" beAddToMoney="10000_1000_140000" additionalMoney="10000_1000_14000" />
+      <data id="13" rechargeMoney="1600" beAddToMoney="10000_1000_160000" additionalMoney="10000_1000_16000" />
+      <data id="14" rechargeMoney="1800" beAddToMoney="10000_1000_180000" additionalMoney="10000_1000_18000" />
+      <data id="15" rechargeMoney="2000" beAddToMoney="10000_1000_200000" additionalMoney="10000_1000_20000" />
+      <data id="16" rechargeMoney="2500" beAddToMoney="10000_1000_250000" additionalMoney="10000_1000_25000" />
+      <data id="17" rechargeMoney="3000" beAddToMoney="10000_1000_300000" additionalMoney="10000_1000_30000" />
+      <data id="18" rechargeMoney="3500" beAddToMoney="10000_1000_350000" additionalMoney="10000_1000_35000" />
+      <data id="19" rechargeMoney="4000" beAddToMoney="10000_1000_400000" additionalMoney="10000_1000_40000" />
+      <data id="20" rechargeMoney="4500" beAddToMoney="10000_1000_450000" additionalMoney="10000_1000_45000" />
+      <data id="21" rechargeMoney="5000" beAddToMoney="10000_1000_500000" additionalMoney="10000_1000_50000" />
+      <data id="22" rechargeMoney="5500" beAddToMoney="10000_1000_550000" additionalMoney="10000_1000_55000" />
+      <data id="23" rechargeMoney="6000" beAddToMoney="10000_1000_600000" additionalMoney="10000_1000_60000" />
+      <data id="24" rechargeMoney="6500" beAddToMoney="10000_1000_650000" additionalMoney="10000_1000_65000" />
+      <data id="25" rechargeMoney="7000" beAddToMoney="10000_1000_700000" additionalMoney="10000_1000_70000" />
+      <data id="26" rechargeMoney="7500" beAddToMoney="10000_1000_750000" additionalMoney="10000_1000_75000" />
+      <data id="27" rechargeMoney="8000" beAddToMoney="10000_1000_800000" additionalMoney="10000_1000_80000" />
+      <data id="28" rechargeMoney="8500" beAddToMoney="10000_1000_850000" additionalMoney="10000_1000_85000" />
+      <data id="29" rechargeMoney="9000" beAddToMoney="10000_1000_900000" additionalMoney="10000_1000_90000" />
+      <data id="30" rechargeMoney="9500" beAddToMoney="10000_1000_950000" additionalMoney="10000_1000_95000" />
+      <data id="31" rechargeMoney="10000" beAddToMoney="10000_1000_1000000" additionalMoney="10000_1000_100000" />
+</root>

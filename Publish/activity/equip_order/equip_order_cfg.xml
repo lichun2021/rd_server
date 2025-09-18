@@ -1,0 +1,12 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 2592000
+
+# 解锁金条公式,1点经验所需X点金条（万分比数据）
+unlockGold = 500
+
+# 解锁金条消耗id
+unlockCostId = 1000
+
+# 解锁每周购买次数
+unlockTime = 10
+

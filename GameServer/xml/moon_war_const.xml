@@ -1,0 +1,51 @@
+# 取单服个人实力前X名的玩家参与队伍实力换算
+moonMatchNumLimit = 100
+
+# 取月球之战玩法历史排名场次
+moonMatchTimesLimit = 11
+
+# 单场战斗排名折合修正系数
+moonMatchBattleResultCof = 500_300_100_-100_-300_-500
+
+# 修正系数最高值
+moonMatchCofMaxValue = 3000
+
+# 修正系数最低值
+moonMatchCofMinValue = -3000
+
+# 随意出入人数
+playerJoinFreeCount = 100
+
+# 排名100名以后的玩家，可进入的初始人数
+playerJoinExtraCount = 50
+
+# 排名100名以后的玩家，每分钟增加的进入名额
+playerJoinExtraCountMin = 10
+
+# 参赛联盟数量
+joinGuildCount = 5
+
+# 玩家积分榜成员数量
+playerScoreRankSize = 1000
+
+# 开服多长时间以内的 服务器不开放（单位：秒，不需要就填0）
+serverDelay = 0
+
+# 相对于凌晨的前后多长时间不可操作进入跨服，退出跨服
+unoperatorTime = 900
+
+# 进入战场的CD时间，单位毫秒
+joinBattleCdTime = 600000
+
+# 新服评分系数百分比
+newServerMatch = 1_180,60;181_360,80;361_720,90
+
+# 月球赛季-常规积分赛阶段，不同名次获得的积分多少
+groupRankAdd = 1,10000;2,6000;3,4000;4,3000;5,2000;6,1000
+
+# 月球赛季-常规积分赛阶段，国家胜利点系数。常规赛增加的积分=排名分（由排名决定，1~6名）+groupWinpointAdd*国家胜利点/10000（向下取整）
+groupWinpointAdd = 100
+
+# 根据开服时间划分不同匹配池
+serverMatchOpenDays = 1_90,91_365,366_999999
+

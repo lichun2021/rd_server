@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2022-9-14 00:00:00" startTime="2022-9-18 00:00:00" endTime="2022-9-18 23:59:59" hiddenTime="2022-9-18 23:59:59" battleTime="9月17日" />
+      <data termId="2" showTime="2022-9-21 00:00:00" startTime="2022-9-25 00:00:00" endTime="2022-9-25 23:59:59" hiddenTime="2022-9-25 23:59:59" battleTime="9月24日" />
+      <data termId="3" showTime="2022-9-28 00:00:00" startTime="2022-10-02 00:00:00" endTime="2022-10-02 23:59:59" hiddenTime="2022-10-02 23:59:59" battleTime="10月1日" />
+</root>

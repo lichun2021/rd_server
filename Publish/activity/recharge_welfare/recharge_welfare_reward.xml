@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" pool="1" reward="30000_800002_500" weight="50" defaultChoose="1" />
+      <data id="1005" pool="1" reward="30000_1800001_200" weight="50" defaultChoose="0" />
+      <data id="1010" pool="1" reward="30000_1000003_25" weight="50" defaultChoose="0" />
+      <data id="1015" pool="1" reward="30000_802003_150" weight="50" defaultChoose="0" />
+      <data id="1020" pool="1" reward="30000_21063002_320" weight="50" defaultChoose="0" />
+      <data id="1025" pool="1" reward="30000_21063003_320" weight="50" defaultChoose="0" />
+      <data id="2005" pool="2" reward="30000_1780083_3" weight="775" defaultChoose="0" />
+      <data id="2007" pool="2" reward="30000_802003_2" weight="775" defaultChoose="1" />
+      <data id="2010" pool="2" reward="30000_1300017_50" weight="775" defaultChoose="1" />
+      <data id="2015" pool="2" reward="30000_800000_8" weight="775" defaultChoose="0" />
+      <data id="2020" pool="2" reward="30000_1490006_12" weight="775" defaultChoose="0" />
+      <data id="3005" pool="3" reward="30000_840194_15" weight="1400" defaultChoose="1" />
+      <data id="3010" pool="3" reward="30000_1800000_8" weight="1400" defaultChoose="1" />
+      <data id="3015" pool="3" reward="30000_840198_8" weight="1400" defaultChoose="1" />
+      <data id="3020" pool="3" reward="30000_1480001_40" weight="1400" defaultChoose="1" />
+      <data id="3025" pool="3" reward="30000_800110_2" weight="1400" defaultChoose="1" />
+      <data id="3030" pool="3" reward="30000_800143_6" weight="1400" defaultChoose="1" />
+      <data id="3035" pool="3" reward="30000_1510003_15" weight="1400" defaultChoose="0" />
+      <data id="3040" pool="3" reward="30000_13310003_15" weight="1400" defaultChoose="0" />
+      <data id="3045" pool="3" reward="30000_101050_2" weight="1400" defaultChoose="0" />
+      <data id="3050" pool="3" reward="30000_103050_2" weight="1400" defaultChoose="0" />
+      <data id="3055" pool="3" reward="30000_104050_2" weight="1400" defaultChoose="0" />
+      <data id="3060" pool="3" reward="30000_105050_2" weight="1400" defaultChoose="0" />
+</root>

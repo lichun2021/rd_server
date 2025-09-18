@@ -1,0 +1,20 @@
+return {
+	prop =
+	{
+		activityId = 119,
+		icon = [[Activity_Icon_119_Nor.png]],
+		selecticon = [[Activity_Icon_119_Sel.png]],
+		name = [[0元礼包]],
+		title = [[活动详情]],
+		bottomText = [[活动结束后，未返还的金币将会通过邮件返还给您。]],
+		tips = [[<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1. 活动期间消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">金币</font>购买礼包可参与返还活动；<br/>2. 在到达相应天数后会通过<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">邮件</font>返还金币；<br/>3. <font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">每个档位</font>的礼包只限购买一次；<br/>4. 0元礼包只可在活动开启时的两周内购买；<br/>5. 活动结束后进入<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">为期5天的活动展示期</font>，在展示期内只可查看无法购买！</font>]],
+		priority = 1,
+	},
+	gift_zero_reward = [[id	spineName	spineScale	cellName	award	price	consumeReturn	returnDays
+1	2	1	2	2	2	2	2
+119001	V3Guide_Single_Lara	0.65	RAActivity119NodeAV5.ccbi	30000_1001026_90,30000_1510003_30,30000_13310003_30,30000_810001_5,30000_850006_5,30000_850036_5	10000_1001_1000	10000_1001_1000	5
+119002	V3Guide_Single_BlackWidow	0.8	RAActivity119NodeBV5.ccbi	30000_1001021_30,30000_1510004_30,30000_13310004_30,30000_810001_25,30000_850007_10,30000_850037_10	10000_1001_10000	10000_1001_10000	3
+119003	V3Guide_Single_Boris	0.62	RAActivity119NodeCV5.ccbi	30000_1001002_90,30000_1510005_30,30000_13310005_30,30000_810001_50,30000_850008_10,30000_850038_10	10000_1001_20000	10000_1001_20000	1
+]],
+
+}

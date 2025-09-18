@@ -1,0 +1,17 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 小红点信息
+message AccumulateOnlineRedPointSync
+{
+	required bool hasActivity = 1;
+	required bool hasRedPoint = 2;
+}
+
+// 所有信息
+message AccumulateOnlineInfoResp
+{
+	required int32 nextCanReceived 	= 1; //下一个可领取id
+	required int64 nextRewardTime	= 2; //下一次领奖时间
+	required int64 tonightTime		= 3; //当晚0点时间
+	required int32 serverOpenDays	= 4; //开服第x天
+}

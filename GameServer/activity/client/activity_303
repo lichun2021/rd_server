@@ -1,0 +1,22 @@
+return {
+	prop =
+	{
+		activityId = 303,
+		name = [[金币福利]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，指挥官可免费获得感恩福利金币。<br/>2.福利金币数与指挥官注册天数，签到天数和邀请好友数相关。<br/>3.指挥官可每天分享一次活动，分享可获得分享好礼。</font>]],
+		priority = 10015,
+		icon = [[Activity_Icon_303_Nor.png]],
+		selecticon = [[Activity_Icon_303_Sel.png]],
+		bigIcon = [[]],
+		cdTime = 2,
+		maxPlayer = 5,
+		baseGold = 1888,
+		playerWeight = 166,
+		punchWeight = 266,
+		shareCount = 1,
+		registrationDeadline = [[2024/10/16]],
+		shareReward = [[30000_24200026_200,10000_1001_66,30000_810001_10,30000_850007_10,30000_850037_10,30000_850017_10,30000_850027_10]],
+	},
+
+}

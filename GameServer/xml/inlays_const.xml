@@ -1,0 +1,45 @@
+# 初始免费次数
+initialFree = 10
+
+# 2231建筑每级提升免费次数
+extraPerLevel = 2
+
+# 冷却时间秒数
+produceCooldownSeconds = 240
+
+# 单次生产经验量
+expPerProduce = 1
+
+# 定向打造券1
+gachaType1CostItem = 30000_9160001_1
+
+# 定向打造券2
+gachaType2CostItem = 30000_9160002_1
+
+# 定向打造券3
+gachaType3CostItem = 30000_9160003_1
+
+# 定向打造券4
+gachaType4CostItem = 30000_9160004_1
+
+# 通用打造道具
+gachaType5CostItem = 30000_9160005_1
+
+# 转化道具
+transformItem = 30000_9140002_1
+
+# 升品几合一
+upgradeNeedItemNum = 3
+
+# 转化几合一
+transformNeedItemNum = 3
+
+# 天赋树品质阶段对应作用号
+talentTreeEffect = 820
+
+# 镶嵌物道具类型
+inlaysItemType = 190
+
+# 每日打造上限
+dailyProduceMaxNums = 999
+

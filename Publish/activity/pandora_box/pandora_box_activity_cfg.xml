@@ -1,0 +1,27 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1
+
+# 使用道具
+itemOnce = 30000_9990004_1
+
+# 道具价格
+itemOnecePrice = 10000_1000_56
+
+# 购买1次获得固定奖励
+extReward = 30000_840172_1
+
+# 获得积分
+scoreOnce = 1
+
+# 
+scoreTen = 10
+
+# 免费重置
+reset = 1
+
+# 
+free = 1
+
+# 抽奖次数限制
+maxDailyLotteryTimes = 308
+

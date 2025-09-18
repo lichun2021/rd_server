@@ -1,0 +1,56 @@
+return {
+	prop =
+	{
+		activityId = 151,
+		icon = [[Activity_Icon_151_Nor.png]],
+		selecticon = [[Activity_Icon_151_Sel.png]],
+		title = [[活动详情]],
+		name = [[勋章行动]],
+		priority = 10061,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，完成活动任务能获得</font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">宝藏钥匙</font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20"></font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">2. 使用宝藏钥匙可以开启（活动期间每日限定抽取999次）</font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">勋章宝藏</font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20"></font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 星耀勋章*80概率18%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 星耀勋章数量588概率2.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 星耀勋章数量2888概率0.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 荣誉勋章数量500概率18%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 荣誉勋章数量8888概率1%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 500万矿石数量3概率12.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">7. 500万石油数量3概率12.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">8. 80万合金数量3概率12.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">9. 20万稀土数量3概率12.5%</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">10. 城建加速2小时数量8概率10%</font>]],
+		singlePrice = [[30000_15100001_1]],
+		tenPrice = [[30000_15100001_9_10]],
+		itemPrice = [[10000_1000_68]],
+		extReward = [[30000_840172_1]],
+		dailyTimes = 999,
+	},
+	medal_action_achieve = [[achieveId	title	gotoType	gotoValue	conditionType	conditionValue	warzoneValue	rewards
+1	2	1	2	1	2	1	2
+190830	AchieveName190830	1001	1	160200	60	60	30000_15100001_3,30000_850047_1,30000_800110_5,30000_1780045_2,30000_810001_3
+190831	AchieveName190831	1001	1	160200	300	300	30000_15100001_6,30000_850048_1,30000_800110_10,30000_1780050_2,30000_810001_8
+190832	AchieveName190832	-1	0	141001	1	1	30000_800143_5,30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2
+190833	AchieveName190833	31	2_0	500011	0_999_20	20	30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1510003_20,30000_13310003_20
+190834	AchieveName190834	31	1_1_1007	31100	1007_1008_1500000	1500000	30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1780035_3,30000_1780030_3
+190835	AchieveName190835	23	2012	20100	0_3000	3000	30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_104050_2,30000_850036_3
+190836	AchieveName190836	228		500024	1	1	30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1300009_20,30000_1300006_20
+]],
+	medal_action_cell_cfg = [[id	Quality	rewards
+1	1	2
+1001	3	30000_1300027_2888
+1002	1	30000_850009_3
+1003	1	30000_1300027_80
+1004	2	30000_1300017_500
+1005	1	30000_850039_3
+1006	2	30000_1300027_588
+1007	1	30000_850019_3
+1008	1	30000_850029_3
+1009	2	30000_1300017_8888
+1010	1	30000_101050_8
+]],
+	medal_action_activity_cfg = [[itemPrice	10000_1000_68
+singlePrice	30000_15100001_1
+serverDelay	1728000
+extReward	30000_840172_1
+dailyTimes	999
+isDailyReset	1
+]],
+	medal_task_achieve = [[achieveId	conditionType	conditionValue	rewards
+1	2	1	2
+700017	700017	10	30000_1300027_150,30000_1300017_1000,30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2
+700018	700017	30	30000_1300027_450,30000_1300017_2500,30000_850009_3,30000_850039_3,30000_850019_3,30000_850029_3
+700019	700017	90	30000_1300027_750,30000_1300017_5000,30000_850009_4,30000_850039_4,30000_850019_4,30000_850029_4
+700020	700017	180	30000_1300027_1200,30000_1300017_7500,30000_850009_5,30000_850039_5,30000_850019_5,30000_850029_5
+700021	700017	300	30000_1300027_1888,30000_1300017_10000,30000_850009_6,30000_850039_6,30000_850019_6,30000_850029_6
+]],
+
+}

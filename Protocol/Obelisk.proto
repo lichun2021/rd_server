@@ -1,0 +1,78 @@
+option java_package = "com.hawk.game.protocol";
+import "Rank.proto";
+
+//里程碑任务
+message PBObelisk{	
+	optional int32 cfgId 				= 1;	//模板id
+	optional int32 num   				= 2;	//当前进度数量
+	optional PBObeliskPlayerState state = 3;	//玩家状态
+	optional int64 startTime 			= 4;	//开始时间
+	optional int64 endTime 				= 5;	//结束时间
+	optional int32 contribution 		= 6;	//玩家贡献度
+	optional HPPushRank rankInfo		= 7;	//排行榜信息
+	optional RankType rankType			= 8;	//排行榜类型
+
+}
+
+//获取任务列表req
+message PBObeliskListReq{
+}
+
+//任务列表同步
+message PBObeliskListSync{
+	repeated PBObelisk obeliskPB = 1;
+	optional int32 termId = 2; //当前使用的期数
+}
+
+
+//领取奖励req
+message OPBbeliskRecRewardReq{
+	optional int32 id 	= 1;	//任务表的id
+}
+
+//领取奖励resp
+message PBObeliskRecRewardResp{
+	repeated PBObelisk list = 1;
+}
+
+//玩家任务完成状态 
+enum PBObeliskPlayerState{
+	NOT_OPEN    = 0;        // 任务未开始
+	OPENING		= 1;		// 进行中 
+	FAILED		= 2;	    // 任务失败
+	FINISHED  	= 3;	    // 已完成
+	REWARDED 	= 4;	    // 已领奖
+}
+
+//任务状态 . 整体, 与玩家无关
+enum PBObeliskMissionState{
+	NOTOPEN	= 0;	    // 未开始
+	OPEN  	= 1;	    // 已开始
+	CLOSED 	= 2;	    // 已结束
+}
+
+//任务开启条件
+enum PBObeliskOpenType{
+	OPEN_PRE_TASK 	= 1;	    // 按前置条件开启
+	OPEN_TIME  		= 2;	    // 按时间开启
+	
+}
+
+//任务关闭条件
+enum PBObeliskCloseType{
+	CLOSE_NUM_FINISH 	= 1;	    // 条件数量完成关闭
+	CLOSE_TIME  		= 2;	    // 结束时间关闭
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

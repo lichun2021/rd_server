@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 每日刷新时间间隔（分钟）
+dailyRefreshTime = 15
+
+# 活动可抽取时间段
+drawTimes = 8:00-22:00
+
+# 基地等级大于等于xx级
+baseLevelLimit = 13
+
+# 贵族等级大于x级
+vipLevelLimit = 8
+
+# 分组数量
+groupAmount = 3
+
+# 抽奖存储数据
+saveDataLimit = 200
+

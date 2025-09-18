@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" score="10" />
+      <data id="2" type="2" score="20" />
+      <data id="3" type="3" score="40" />
+      <data id="4" type="4" score="100" />
+      <data id="5" type="5" score="30" />
+      <data id="6" type="6" score="60" />
+</root>

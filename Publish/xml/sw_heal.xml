@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" deadNumMin="0" deadNumMax="1000000" healRate="5000" />
+      <data id="1002" deadNumMin="1000001" deadNumMax="2000000" healRate="6000" />
+      <data id="1003" deadNumMin="2000001" deadNumMax="999999999" healRate="7000" />
+</root>

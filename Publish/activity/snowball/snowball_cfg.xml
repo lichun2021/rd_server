@@ -1,0 +1,51 @@
+# 开服延迟开放时间
+serverDelay = 0
+
+# 游戏开始时间
+beginTime = 12:00
+
+# 游戏持续时间(s)
+continueTime = 36000
+
+# 击中积分
+atkScore = 1
+
+# 进球助攻积分
+goalAssistScore = 2
+
+# 运输车刷新数量
+refreshBallCount = 20
+
+# 踢一个球的次数限制
+kickOnceLimit = 100
+
+# 进球奖励获得限制
+goalRewardLimit = 30
+
+# 行军加速buff值(万分比)
+marchSpeedValue = 10000
+
+# 行军加速buff值上限(万分比)
+marchSpeedValueMax = 50000
+
+# 刷新区域外层
+refreshRangeOuter = 189_378,571_1142
+
+# 刷新区域内层
+refreshRangeInter = 252_504,508_1016
+
+# 检测周期
+tickPeriod = 10
+
+# 行军距离
+marchDistance = 50000_5,100000_10,200000_20
+
+# 个人排行榜行数限制
+selfRankLimit = 100
+
+# 联盟排行榜行数限制
+guildRankLimit = 10
+
+# 球门范围（x1,y1,10;x2,y2,10）
+torRange = 426,760,5;380,806,5;332,760,5;380,714,5;380,760,11
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" weight="100" effect="352_200" />
+      <data id="102" weight="200" effect="102_5000,136_5000" />
+      <data id="103" weight="300" effect="352_200,102_5000,136_5000" />
+</root>

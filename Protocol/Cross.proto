@@ -1,0 +1,149 @@
+option java_package	= "com.hawk.game.protocol";
+
+
+//跨服客户端传过来的参数结构体.
+message EnterCrossMsg {
+	required string serverId = 1; //需要跨的区服ID
+	required int32 x = 2; //坐标
+	required int32 y = 3; //坐标
+}
+
+//进入跨服.
+message EnterCross {
+	required EnterCrossMsg enterCrossMsg = 1; 
+}
+
+//获取可以跨服的列表.
+message CrossServerListResp {
+	repeated string serverList = 1;//区服列表
+}
+
+//封装一个消息结构体放在登录协议里面.
+message InnerEnterCrossMsg {
+	optional EnterCrossMsg enterCrossMsg = 1; //客户端发上来的信息 航海远征
+	required string guildId = 2; //工会ID.
+	required string playerNmae = 3; //登录流程修改
+	optional int32 guildAuth = 4; //联盟权限
+	optional int32 crossType = 5; //跨服类型.  和下面CrossType
+	optional TiberiumCrossMsg tiberiumCrossMsg = 6; //泰伯利亚.
+	optional StarWarsCrossMsg starWarsCrossMsg = 7; //星球大战.
+	optional CyborgCrossMsg  cyborgCrossMsg  = 8 ; //赛博之战.
+	optional DYZZCrossMsg dyzzCrossMsg = 9;  //达雅之战
+	optional YQZZCrossMsg yqzzCrossMsg = 10;  //月球之战
+	optional XHJZCrossMsg xhjzCrossMsg = 11;  //星海激战
+	optional XQHXCrossMsg xqhxCrossMsg = 12;  //先驱回响
+}
+
+enum CrossType {
+	NONO = 0;  //什么都没有.
+	CROSS = 1; //航海远征
+	TIBERIUM = 2; //泰伯利亚.
+	STAR_WARS = 3; //星球大战.
+	CYBORG	  = 4; //赛博之战
+	DYZZ  = 5; //达雅之战
+	YQZZ = 6; //月球之战
+	XHJZ = 7; //星海激战
+	XQHX = 8; //先驱回响
+}
+
+
+//泰伯利亚, 
+message TiberiumCrossMsg {
+	required string serverId = 1; //需要的跨服.
+}
+
+message StarWarsCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+message CyborgCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+
+message DYZZCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+message YQZZCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+message XHJZCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+message XQHXCrossMsg {
+	required string serverId = 1; //跨往的服.
+}
+
+
+//发一个时间戳给跨服做一个机制.
+message InnerEnterCrossReq {
+	required int32 curTime = 1; //当前的时间戳
+	optional CrossType crossType = 2; //跨服类型.
+}
+
+message InnerEnterCrossResp {
+	required int32 errorCode = 1; //返回的错误码.
+}
+
+//跨服发送，原服接收
+message InnerBackServerReq {
+	required string playerId = 1; //玩家的Id
+}
+
+//gm指令签回。
+message CrossMoveBackReq {
+	required int32 force = 1; //1位强制签回，0位非强制
+	required string playerId = 2; //玩家ID. 
+}
+
+//rpc 通用的一个错误码.
+message RpcCommonResp {
+	required int32 errorCode = 1; //返回的错误码.
+}
+
+// 请求侦查服务器，成功返回通用协议，失败返回错误码。
+message OnSpyReq
+{
+	required string serverId	= 1;
+}
+
+
+// 司令请求释放技能. 返回SUCCESS . 并全服同步 PBCrossSkillSync
+message PBCrossSkillCastReq{
+	optional string skillId = 1;
+	repeated string parames = 2; // 额外参数
+}
+
+// 技能同步. 登录/变更 
+message PBCrossSkillSync{
+	repeated PBCrossSkill crossSkills = 1;
+}
+
+message PBCrossSkill{
+	optional string skillId = 1;
+	optional int64 coolDown = 2; // 冷却时间内 不在持续时间内 灰
+	optional int64 buffendTime = 3; // buff持续时间. 在持续时间内高亮
+}
+
+//一个通用的返回.
+message InnerCommonBackServerReq {	
+	required string playerId = 1;
+	required CrossType crossType = 2;
+}
+
+// 跨服活动消息投递
+message PBCrossPostActivityEvent{
+	optional bytes eventSerialize = 1;
+	optional string className = 2;
+}
+
+// 原服发生物品变更
+message PBLocalPostItemChange{
+	optional int32 opType = 1; // 0 增加 1 减少
+	optional string items = 2;// xx_xx_xx,xx_xx_xx
+	optional int32 action = 3; 
+	optional bytes itemEntityBytes = 4; // ItemEntity 变更 
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pay="6" reward="30000_1150134_6" />
+      <data id="2" pay="30" reward="30000_1150134_24" />
+      <data id="3" pay="68" reward="30000_1150134_38" />
+      <data id="4" pay="128" reward="30000_1150134_60" />
+      <data id="5" pay="328" reward="30000_1150134_200" />
+      <data id="6" pay="648" reward="30000_1150134_320" />
+      <data id="7" pay="1000" reward="30000_1150134_360" />
+      <data id="8" pay="1600" reward="30000_1150134_600" />
+</root>

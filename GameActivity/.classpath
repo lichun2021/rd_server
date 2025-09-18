@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GameLib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GameLog"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/hawk.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-configuration-1.9.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/protobuf-java-2.5.0.jar" sourcepath="/Package/jars/protobuf-2.5.0.zip"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/protobuf-java-format-1.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="/GameServer/lib/commonlib.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/HawkEngine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ServerProto"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/fastjson-1.2.83.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-api-2.17.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-core-2.17.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-iostreams-2.17.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-slf4j-impl-2.17.2.jar"/>
+	<classpathentry kind="lib" path="/HawkEngine/lib/log4j-web-2.17.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

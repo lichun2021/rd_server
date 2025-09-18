@@ -1,0 +1,16 @@
+return {
+	prop =
+	{
+		activityId = 33,
+		warmUpPeriodDes = [[活动期间，世界大陆受到腐朽军团入侵，当日的尤里敌军将加入军团组建强大的敌军精英团队，请各位指挥官即刻动身前去击破。]],
+		icon = [[Activity_Icon_33.png]],
+		title = [[活动详情]],
+		name = [[腐朽军团]],
+		priority = 11450,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动开启期间，每日都会有不同的军团入侵世界大陆，成功击杀腐朽军团的敌人，玩家及盟友可获得丰厚的奖励<br/>星期一：机械步兵团<br/>星期二：磁坦方阵<br/>星期三：兽血精英<br/>星期四：心灵猎捕军<br/>星期五：狂乱制造军<br/>星期六：幽浮机群<br/>星期日：盖特重火连</font>]],
+		openPeriodDes = [[击杀腐朽军团，可以获得联盟成员均可领取的【敌军击杀礼】，指挥官们，快去加入联盟，讨伐腐朽军团吧！]],
+		KillMonsterBoss = [[讨伐腐朽军团]],
+		ActivityTime = [[活动开启倒计时]],
+	},
+
+}

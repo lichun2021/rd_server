@@ -1,0 +1,92 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+import "Dress.proto";
+
+// 聊天内容
+message	ChatMsg
+{
+	//0:普通聊天,1:公会聊天,2:聊天喇叭公告，广播,3:活动或者联盟等公告（可点击），9999：系统公告
+	required int32	type				= 1;	// 类型
+	optional string	 playerId			= 2;	// 玩家ID
+	optional string	name				= 3;	// 玩家name
+	optional string	chatMsg				= 4;	// 聊天内容
+	optional string	allianceName		= 5;	// 联盟名字
+	optional int32 vip					= 6;	// vip等级
+	optional int64 msgTime				= 7;	// 时间
+	optional int32 icon					= 8;	// 头像
+	optional string	guildTag			= 9;	// 联盟简称
+	
+	optional int32 office				= 13;	// 官职
+	optional bool vipActive				= 14;	// vip是否激活
+	//optional string	broadcastContent	= 15;	// 广播参数
+	optional string pfIcon              = 16;   // 平台头像
+	optional string voiceId				= 17;   // 如果有语音,语音id
+	optional int32 voiceLength			= 18; 	// 语音时长/秒
+	optional string allianceId			= 19;	// 联盟id
+	optional int32 noticeId				= 20;	// notice.xml 配置文件id
+	// 以下3个字段都取自noticd.xml 客户端不愿意改
+	//optional string	hrefCfgName			= 10;	// 超链接
+	//optional string	hrefCfgPrams		= 11;	// 超链接参数
+	//optional int32 noticeType			= 12;	// 公告类型（1:系统公告	2：警告）
+	optional PlayerCommon common		= 21; // 玩家通用数据
+	optional string msgId				= 22; // id
+	optional int32 dressTitle	= 23; // 称号
+	optional int32 dressTitleType = 24; // 称号显示类型 0 默认
+	optional string serverId = 25; //玩家服务器ID
+	repeated DressEditData dressEditData = 26; //可编译外显参数列表
+}
+// 推送聊天
+message	HPSendChat
+{
+	required string	chatMsg			= 1;	//聊天内容
+	//0:普通聊天,1:公会聊天，2：聊天公告广播
+	required int32 chatType			= 2;	//聊天类型
+	optional bytes voice			= 3; // 语音消息
+	optional int32 voiceLength		= 4; // 语音时长/秒
+	optional string voiceId 		= 5;
+}
+
+
+message	HPPushChat
+{
+	repeated ChatMsg chatMsg		= 1;	//推送
+	optional int32 msgCount			= 3;    //红点数 
+}
+// 请求联盟聊天记录
+message	HPChatMsgCacheReq
+{
+	required int64 msgMinTime		= 2;	// 最后一条记录的时间
+}
+
+//请求下载语音
+message HPVoiceDownloadReq{
+	required string voiceId = 1;
+}
+
+message HPVoiceDownloadResp{
+	optional string voiceId =1;
+	optional bytes voice 	=2; // 语音文件
+}
+
+enum HPChatState{
+	NOT_CHAT =1;
+	CHAT =2;
+}
+
+/**请求变更聊天状态*/
+message HPChatStateChangeReq{
+	optional HPChatState state = 1;
+}
+
+// 自助答疑系统
+message HPChatOLQuestionReq{
+	optional int32 id = 1;
+}
+
+message HPChatOLQuestionListReq{
+}
+
+message HPChatOLQuestionListResp{
+	repeated int32 ids = 1;
+}

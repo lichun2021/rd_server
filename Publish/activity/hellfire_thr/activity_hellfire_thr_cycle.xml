@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data cycleId="100" name="基地发展" conditionType="1_2" targetId="1001_1002_1003" rankId="100" />
+      <data cycleId="200" name="击败尤里" conditionType="6" targetId="2001_2002_2003" rankId="200" />
+</root>

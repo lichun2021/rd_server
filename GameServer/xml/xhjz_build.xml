@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buildId="1" buildTypeId="1" coordinateX="77" coordinateY="134" linkBuildList="2,13,14" />
+      <data buildId="2" buildTypeId="1" coordinateX="85" coordinateY="134" linkBuildList="1,3,14,15" />
+      <data buildId="3" buildTypeId="1" coordinateX="93" coordinateY="134" linkBuildList="2,4,15,16" />
+      <data buildId="4" buildTypeId="1" coordinateX="101" coordinateY="134" linkBuildList="3,5,16,17" />
+      <data buildId="5" buildTypeId="1" coordinateX="111" coordinateY="134" linkBuildList="4,6,17,18" />
+      <data buildId="6" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="121" coordinateY="134" linkBuildList="5,7,18,19" />
+      <data buildId="7" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="129" coordinateY="134" linkBuildList="6,8,19,20" />
+      <data buildId="8" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="139" coordinateY="134" linkBuildList="7,9,20,21" />
+      <data buildId="9" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="147" coordinateY="134" linkBuildList="8,10,21,22" />
+      <data buildId="10" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="155" coordinateY="134" linkBuildList="9,11,22,23" />
+      <data buildId="11" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="163" coordinateY="134" linkBuildList="10,12,23,24" />
+      <data buildId="12" buildTypeId="8" camp="2" campType="2" fuelDuce="0.4" coordinateX="175" coordinateY="137" linkBuildList="11,24,37" />
+      <data buildId="13" buildTypeId="1" coordinateX="73" coordinateY="146" linkBuildList="1,14,25,26" />
+      <data buildId="14" buildTypeId="2" coordinateX="81" coordinateY="146" linkBuildList="1,2,13,15,26,27" />
+      <data buildId="15" buildTypeId="1" coordinateX="89" coordinateY="146" linkBuildList="2,3,14,16,27,28" />
+      <data buildId="16" buildTypeId="3" coordinateX="97" coordinateY="146" linkBuildList="3,4,15,17,28,29" />
+      <data buildId="17" buildTypeId="1" coordinateX="107" coordinateY="146" linkBuildList="4,5,16,18,29,30" />
+      <data buildId="18" buildTypeId="1" coordinateX="118" coordinateY="147" linkBuildList="5,6,17,19,30,31" />
+      <data buildId="19" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="127" coordinateY="146" linkBuildList="6,7,18,20,31,32" />
+      <data buildId="20" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="135" coordinateY="146" linkBuildList="7,8,19,21,32,33" />
+      <data buildId="21" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="143" coordinateY="146" linkBuildList="8,9,20,22,33,34" />
+      <data buildId="22" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="151" coordinateY="146" linkBuildList="9,10,21,23,34,35" />
+      <data buildId="23" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="159" coordinateY="146" linkBuildList="10,11,22,24,35,36" />
+      <data buildId="24" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="167" coordinateY="146" linkBuildList="11,12,23,36,37" />
+      <data buildId="25" buildTypeId="1" coordinateX="69" coordinateY="158" linkBuildList="13,26,38,39" />
+      <data buildId="26" buildTypeId="1" coordinateX="77" coordinateY="158" linkBuildList="13,14,25,27,39,40" />
+      <data buildId="27" buildTypeId="5" coordinateX="85" coordinateY="158" linkBuildList="14,15,26,28,40,41" />
+      <data buildId="28" buildTypeId="1" coordinateX="93" coordinateY="158" linkBuildList="15,16,27,29,41,42" />
+      <data buildId="29" buildTypeId="1" coordinateX="103" coordinateY="158" linkBuildList="16,17,28,30,42,43" />
+      <data buildId="30" buildTypeId="1" coordinateX="113" coordinateY="158" linkBuildList="17,18,29,31,43,44" />
+      <data buildId="31" buildTypeId="1" coordinateX="123" coordinateY="158" linkBuildList="18,19,30,32,44,45" />
+      <data buildId="32" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="131" coordinateY="158" linkBuildList="19,20,31,33,45,46" />
+      <data buildId="33" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="139" coordinateY="158" linkBuildList="20,21,32,34,46,47" />
+      <data buildId="34" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="147" coordinateY="158" linkBuildList="21,22,33,35,47,48" />
+      <data buildId="35" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="155" coordinateY="158" linkBuildList="22,23,34,36,48,49" />
+      <data buildId="36" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="163" coordinateY="158" linkBuildList="23,24,35,37,49,50" />
+      <data buildId="37" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="171" coordinateY="158" linkBuildList="12,24,36,50" />
+      <data buildId="38" buildTypeId="1" coordinateX="65" coordinateY="170" linkBuildList="25,39,51,52" />
+      <data buildId="39" buildTypeId="3" coordinateX="73" coordinateY="170" linkBuildList="25,26,38,40,52,53" />
+      <data buildId="40" buildTypeId="1" coordinateX="81" coordinateY="170" linkBuildList="26,27,39,41,53,54" />
+      <data buildId="41" buildTypeId="2" coordinateX="89" coordinateY="170" linkBuildList="27,28,40,42,54,55" />
+      <data buildId="42" buildTypeId="1" coordinateX="99" coordinateY="170" linkBuildList="28,29,41,43,55,56" />
+      <data buildId="43" buildTypeId="2" coordinateX="109" coordinateY="170" linkBuildList="29,30,42,44,56,57" />
+      <data buildId="44" buildTypeId="1" coordinateX="119" coordinateY="170" linkBuildList="30,31,43,45,57,58" />
+      <data buildId="45" buildTypeId="1" coordinateX="127" coordinateY="170" linkBuildList="31,32,44,46,58,59" />
+      <data buildId="46" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="135" coordinateY="170" linkBuildList="32,33,45,47,59,60" />
+      <data buildId="47" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="143" coordinateY="170" linkBuildList="33,34,46,48,60,61" />
+      <data buildId="48" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="151" coordinateY="170" linkBuildList="34,35,47,49,61,62" />
+      <data buildId="49" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="159" coordinateY="170" linkBuildList="35,36,48,50,62,63" />
+      <data buildId="50" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="167" coordinateY="170" linkBuildList="36,37,49,63" />
+      <data buildId="51" buildTypeId="1" coordinateX="61" coordinateY="182" linkBuildList="38,52,64,65" />
+      <data buildId="52" buildTypeId="1" coordinateX="69" coordinateY="182" linkBuildList="38,39,51,53,65,66" />
+      <data buildId="53" buildTypeId="1" coordinateX="77" coordinateY="182" linkBuildList="39,40,52,54,66,67" />
+      <data buildId="54" buildTypeId="1" coordinateX="85" coordinateY="182" linkBuildList="40,41,53,55,67,68" />
+      <data buildId="55" buildTypeId="1" coordinateX="93" coordinateY="182" linkBuildList="41,42,54,56,68,69" />
+      <data buildId="56" buildTypeId="1" coordinateX="104" coordinateY="181" linkBuildList="42,43,55,57,69,70" />
+      <data buildId="57" buildTypeId="1" coordinateX="115" coordinateY="182" linkBuildList="43,44,56,58,70,71" />
+      <data buildId="58" buildTypeId="1" coordinateX="123" coordinateY="182" linkBuildList="44,45,57,59,71,72" />
+      <data buildId="59" buildTypeId="6" coordinateX="131" coordinateY="182" linkBuildList="45,46,58,60,72,73" />
+      <data buildId="60" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="139" coordinateY="182" linkBuildList="46,47,59,61,73,74" />
+      <data buildId="61" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="147" coordinateY="182" linkBuildList="47,48,60,62,74,75" />
+      <data buildId="62" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="155" coordinateY="182" linkBuildList="48,49,61,63,75,76" />
+      <data buildId="63" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="163" coordinateY="182" linkBuildList="49,50,62,76" />
+      <data buildId="64" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="57" coordinateY="194" linkBuildList="51,65,77,78" />
+      <data buildId="65" buildTypeId="1" coordinateX="65" coordinateY="194" linkBuildList="51,52,64,66,78,79" />
+      <data buildId="66" buildTypeId="1" coordinateX="73" coordinateY="194" linkBuildList="52,53,65,67,79,80" />
+      <data buildId="67" buildTypeId="2" coordinateX="81" coordinateY="194" linkBuildList="53,54,66,68,80,81" />
+      <data buildId="68" buildTypeId="1" coordinateX="89" coordinateY="194" linkBuildList="54,55,67,69,81,82" />
+      <data buildId="69" buildTypeId="3" coordinateX="99" coordinateY="194" linkBuildList="55,56,68,70,82,83" />
+      <data buildId="70" buildTypeId="1" coordinateX="109" coordinateY="194" linkBuildList="56,57,69,71,83,84" />
+      <data buildId="71" buildTypeId="3" coordinateX="119" coordinateY="194" linkBuildList="57,58,70,72,84,85" />
+      <data buildId="72" buildTypeId="1" coordinateX="127" coordinateY="194" linkBuildList="58,59,71,73,85,86" />
+      <data buildId="73" buildTypeId="1" coordinateX="135" coordinateY="194" linkBuildList="59,60,72,74,86,87" />
+      <data buildId="74" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="143" coordinateY="194" linkBuildList="60,61,73,75,87,88" />
+      <data buildId="75" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="151" coordinateY="194" linkBuildList="61,62,74,76,88,89" />
+      <data buildId="76" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="159" coordinateY="194" linkBuildList="62,63,75,89" />
+      <data buildId="77" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="53" coordinateY="206" linkBuildList="64,78,90,91" />
+      <data buildId="78" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="61" coordinateY="206" linkBuildList="64,65,77,79,91,92" />
+      <data buildId="79" buildTypeId="1" coordinateX="69" coordinateY="206" linkBuildList="65,66,78,80,92,93" />
+      <data buildId="80" buildTypeId="1" coordinateX="77" coordinateY="206" linkBuildList="66,67,79,81,93,94" />
+      <data buildId="81" buildTypeId="1" coordinateX="85" coordinateY="206" linkBuildList="67,68,80,82,94,95" />
+      <data buildId="82" buildTypeId="1" coordinateX="93" coordinateY="206" linkBuildList="68,69,81,83,95,96" />
+      <data buildId="83" buildTypeId="7" coordinateX="104" coordinateY="206" linkBuildList="69,70,82,84,96,97" />
+      <data buildId="84" buildTypeId="1" coordinateX="115" coordinateY="206" linkBuildList="70,71,83,85,97,98" />
+      <data buildId="85" buildTypeId="1" coordinateX="123" coordinateY="206" linkBuildList="71,72,84,86,98,99" />
+      <data buildId="86" buildTypeId="1" coordinateX="131" coordinateY="206" linkBuildList="72,73,85,87,99,100" />
+      <data buildId="87" buildTypeId="1" coordinateX="139" coordinateY="206" linkBuildList="73,74,86,88,100,101" />
+      <data buildId="88" buildTypeId="1" coordinateX="147" coordinateY="206" linkBuildList="74,75,87,89,101,102" />
+      <data buildId="89" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="155" coordinateY="206" linkBuildList="75,76,88,102" />
+      <data buildId="90" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="49" coordinateY="218" linkBuildList="77,91,103,104" />
+      <data buildId="91" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="57" coordinateY="218" linkBuildList="77,78,90,92,104,105" />
+      <data buildId="92" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="65" coordinateY="218" linkBuildList="78,79,91,93,105,106" />
+      <data buildId="93" buildTypeId="1" coordinateX="73" coordinateY="218" linkBuildList="79,80,92,94,106,107" />
+      <data buildId="94" buildTypeId="1" coordinateX="81" coordinateY="218" linkBuildList="80,81,93,95,107,108" />
+      <data buildId="95" buildTypeId="3" coordinateX="89" coordinateY="218" linkBuildList="81,82,94,96,108,109" />
+      <data buildId="96" buildTypeId="1" coordinateX="99" coordinateY="218" linkBuildList="82,83,95,97,109,110" />
+      <data buildId="97" buildTypeId="3" coordinateX="109" coordinateY="218" linkBuildList="83,84,96,98,110,111" />
+      <data buildId="98" buildTypeId="1" coordinateX="119" coordinateY="218" linkBuildList="84,85,97,99,111,112" />
+      <data buildId="99" buildTypeId="2" coordinateX="127" coordinateY="218" linkBuildList="85,86,98,100,112,113" />
+      <data buildId="100" buildTypeId="1" coordinateX="135" coordinateY="218" linkBuildList="86,87,99,101,113,114" />
+      <data buildId="101" buildTypeId="1" coordinateX="143" coordinateY="218" linkBuildList="87,88,100,102,114,115" />
+      <data buildId="102" buildTypeId="1" campType="2" fuelDuce="0.4" coordinateX="151" coordinateY="218" linkBuildList="88,89,101,115" />
+      <data buildId="103" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="45" coordinateY="230" linkBuildList="90,104,116,117" />
+      <data buildId="104" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="53" coordinateY="230" linkBuildList="90,91,103,105,117,118" />
+      <data buildId="105" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="61" coordinateY="230" linkBuildList="91,92,104,106,118,119" />
+      <data buildId="106" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="69" coordinateY="230" linkBuildList="92,93,105,107,119,120" />
+      <data buildId="107" buildTypeId="6" coordinateX="77" coordinateY="230" linkBuildList="93,94,106,108,120,121" />
+      <data buildId="108" buildTypeId="1" coordinateX="85" coordinateY="230" linkBuildList="94,95,107,109,121,122" />
+      <data buildId="109" buildTypeId="1" coordinateX="93" coordinateY="230" linkBuildList="95,96,108,110,122,123" />
+      <data buildId="110" buildTypeId="1" coordinateX="103" coordinateY="230" linkBuildList="96,97,109,111,123,124" />
+      <data buildId="111" buildTypeId="1" coordinateX="113" coordinateY="230" linkBuildList="97,98,110,112,124,125" />
+      <data buildId="112" buildTypeId="1" coordinateX="123" coordinateY="230" linkBuildList="98,99,111,113,125,126" />
+      <data buildId="113" buildTypeId="1" coordinateX="131" coordinateY="230" linkBuildList="99,100,112,114,126,127" />
+      <data buildId="114" buildTypeId="1" coordinateX="139" coordinateY="230" linkBuildList="100,101,113,115,127,128" />
+      <data buildId="115" buildTypeId="1" coordinateX="147" coordinateY="230" linkBuildList="101,102,114,128" />
+      <data buildId="116" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="41" coordinateY="242" linkBuildList="103,117,129,130" />
+      <data buildId="117" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="49" coordinateY="242" linkBuildList="103,104,116,118,130,131" />
+      <data buildId="118" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="57" coordinateY="242" linkBuildList="104,105,117,119,131,132" />
+      <data buildId="119" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="65" coordinateY="242" linkBuildList="105,106,118,120,132,133" />
+      <data buildId="120" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="73" coordinateY="242" linkBuildList="106,107,119,121,133,134" />
+      <data buildId="121" buildTypeId="1" coordinateX="81" coordinateY="242" linkBuildList="107,108,120,122,134,135" />
+      <data buildId="122" buildTypeId="1" coordinateX="89" coordinateY="242" linkBuildList="108,109,121,123,135,136" />
+      <data buildId="123" buildTypeId="2" coordinateX="97" coordinateY="242" linkBuildList="109,110,122,124,136,137" />
+      <data buildId="124" buildTypeId="1" coordinateX="107" coordinateY="242" linkBuildList="110,111,123,125,137,138" />
+      <data buildId="125" buildTypeId="2" coordinateX="117" coordinateY="242" linkBuildList="111,112,124,126,138,139" />
+      <data buildId="126" buildTypeId="1" coordinateX="127" coordinateY="242" linkBuildList="112,113,125,127,139,140" />
+      <data buildId="127" buildTypeId="3" coordinateX="135" coordinateY="242" linkBuildList="113,114,126,128,140,141" />
+      <data buildId="128" buildTypeId="1" coordinateX="143" coordinateY="242" linkBuildList="114,115,127,141" />
+      <data buildId="129" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="37" coordinateY="254" linkBuildList="116,130,142,154" />
+      <data buildId="130" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="45" coordinateY="254" linkBuildList="116,117,129,131,142,143" />
+      <data buildId="131" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="53" coordinateY="254" linkBuildList="117,118,130,132,143,144" />
+      <data buildId="132" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="61" coordinateY="254" linkBuildList="118,119,131,133,144,145" />
+      <data buildId="133" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="69" coordinateY="254" linkBuildList="119,120,132,134,145,146" />
+      <data buildId="134" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="77" coordinateY="254" linkBuildList="120,121,133,135,146,147" />
+      <data buildId="135" buildTypeId="1" coordinateX="85" coordinateY="254" linkBuildList="121,122,134,136,147,148" />
+      <data buildId="136" buildTypeId="1" coordinateX="93" coordinateY="254" linkBuildList="122,123,135,137,148,149" />
+      <data buildId="137" buildTypeId="1" coordinateX="101" coordinateY="254" linkBuildList="123,124,136,138,149,150" />
+      <data buildId="138" buildTypeId="1" coordinateX="111" coordinateY="254" linkBuildList="124,125,137,139,150,151" />
+      <data buildId="139" buildTypeId="9" coordinateX="121" coordinateY="254" linkBuildList="125,126,138,140,151,152" />
+      <data buildId="140" buildTypeId="1" coordinateX="131" coordinateY="254" linkBuildList="126,127,139,141,152,153" />
+      <data buildId="141" buildTypeId="1" coordinateX="139" coordinateY="254" linkBuildList="127,128,140,153" />
+      <data buildId="142" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="41" coordinateY="264" linkBuildList="129,130,143,154,155" />
+      <data buildId="143" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="49" coordinateY="266" linkBuildList="130,131,142,144,155,156" />
+      <data buildId="144" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="57" coordinateY="266" linkBuildList="131,132,143,145,156,157" />
+      <data buildId="145" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="65" coordinateY="266" linkBuildList="132,133,144,146,157,158" />
+      <data buildId="146" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="73" coordinateY="266" linkBuildList="133,134,145,147,158,159" />
+      <data buildId="147" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="81" coordinateY="266" linkBuildList="134,135,146,148,159,160" />
+      <data buildId="148" buildTypeId="1" coordinateX="89" coordinateY="266" linkBuildList="135,136,147,149,160,161" />
+      <data buildId="149" buildTypeId="1" coordinateX="97" coordinateY="266" linkBuildList="136,137,148,150,161,162" />
+      <data buildId="150" buildTypeId="3" coordinateX="105" coordinateY="266" linkBuildList="137,138,149,151,162,163" />
+      <data buildId="151" buildTypeId="1" coordinateX="115" coordinateY="266" linkBuildList="138,139,150,152,163,164" />
+      <data buildId="152" buildTypeId="2" coordinateX="125" coordinateY="266" linkBuildList="139,140,151,153,164,165" />
+      <data buildId="153" buildTypeId="1" coordinateX="135" coordinateY="266" linkBuildList="140,141,152,165" />
+      <data buildId="154" buildTypeId="8" camp="1" campType="1" fuelDuce="0.4" coordinateX="33" coordinateY="275" linkBuildList="129,142,155" />
+      <data buildId="155" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="45" coordinateY="278" linkBuildList="142,143,154,156" />
+      <data buildId="156" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="53" coordinateY="278" linkBuildList="143,144,155,157" />
+      <data buildId="157" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="61" coordinateY="278" linkBuildList="144,145,156,158" />
+      <data buildId="158" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="69" coordinateY="278" linkBuildList="145,146,157,159" />
+      <data buildId="159" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="77" coordinateY="278" linkBuildList="146,147,158,160" />
+      <data buildId="160" buildTypeId="1" campType="1" fuelDuce="0.4" coordinateX="85" coordinateY="278" linkBuildList="147,148,159,161" />
+      <data buildId="161" buildTypeId="1" coordinateX="93" coordinateY="278" linkBuildList="148,149,160,162" />
+      <data buildId="162" buildTypeId="1" coordinateX="101" coordinateY="278" linkBuildList="149,150,161,163" />
+      <data buildId="163" buildTypeId="1" coordinateX="111" coordinateY="278" linkBuildList="150,151,162,164" />
+      <data buildId="164" buildTypeId="1" coordinateX="121" coordinateY="278" linkBuildList="151,152,163,165" />
+      <data buildId="165" buildTypeId="1" coordinateX="129" coordinateY="278" linkBuildList="152,153,164" />
+      <data buildId="1001" buildTypeId="21" coordinateX="102" coordinateY="222" />
+      <data buildId="1002" buildTypeId="22" coordinateX="87" coordinateY="213" />
+      <data buildId="1003" buildTypeId="23" coordinateX="106" coordinateY="193" />
+      <data buildId="1004" buildTypeId="24" coordinateX="92" coordinateY="183" />
+      <data buildId="1005" buildTypeId="25" coordinateX="75" coordinateY="203" />
+      <data buildId="1006" buildTypeId="31" coordinateX="115" coordinateY="173" />
+      <data buildId="1007" buildTypeId="32" coordinateX="132" coordinateY="192" />
+      <data buildId="1008" buildTypeId="33" coordinateX="89" coordinateY="173" />
+      <data buildId="1009" buildTypeId="34" coordinateX="73" coordinateY="183" />
+      <data buildId="1010" buildTypeId="35" coordinateX="102" coordinateY="154" />
+      <data buildId="1011" buildTypeId="21" coordinateX="75" coordinateY="163" />
+      <data buildId="1012" buildTypeId="22" coordinateX="82" coordinateY="232" />
+      <data buildId="1013" buildTypeId="23" coordinateX="97" coordinateY="232" />
+      <data buildId="1014" buildTypeId="24" coordinateX="117" coordinateY="244" />
+      <data buildId="1015" buildTypeId="25" coordinateX="107" coordinateY="263" />
+      <data buildId="1016" buildTypeId="31" coordinateX="131" coordinateY="253" />
+      <data buildId="1017" buildTypeId="32" coordinateX="116" coordinateY="252" />
+      <data buildId="1018" buildTypeId="33" coordinateX="134" coordinateY="232" />
+      <data buildId="1019" buildTypeId="34" coordinateX="133" coordinateY="213" />
+      <data buildId="1020" buildTypeId="35" coordinateX="114" coordinateY="214" />
+      <data buildId="1021" buildTypeId="21" coordinateX="94" coordinateY="202" />
+      <data buildId="1022" buildTypeId="22" coordinateX="134" coordinateY="172" />
+      <data buildId="1023" buildTypeId="23" coordinateX="67" coordinateY="214" />
+      <data buildId="1024" buildTypeId="24" coordinateX="60" coordinateY="245" />
+      <data buildId="1025" buildTypeId="25" coordinateX="163" coordinateY="147" />
+      <data buildId="1026" buildTypeId="31" coordinateX="130" coordinateY="156" />
+      <data buildId="1027" buildTypeId="32" coordinateX="80" coordinateY="246" />
+      <data buildId="1028" buildTypeId="33" coordinateX="56" coordinateY="246" />
+      <data buildId="1029" buildTypeId="34" coordinateX="42" coordinateY="258" />
+      <data buildId="1030" buildTypeId="35" coordinateX="152" coordinateY="182" />
+</root>

@@ -1,0 +1,20 @@
+return {
+	prop =
+	{
+		activityId = 107,
+		name = [[专属军资]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">完成发展冲刺任务可以获得特殊道具“回归勋章”，用于兑换专属军资宝箱。</font>]],
+		priority = 10003,
+		icon = [[Activity_Icon_107_Nor.png]],
+		selecticon = [[Activity_Icon_107_Sel.png]],
+		bigIcon = [[]],
+	},
+	return_activity_107 = [[id	title	itemId	limit	price	rewards	icon	exchangeIcon
+1	2	1	1	2	2	2	2
+1	专属军资-资源套餐	1150055	40	30000_1150048_5	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2	Activity_Icon_107_06.png	Item_Act107.png
+2	专属军资-加速套餐	1150053	40	30000_1150048_5	30000_810001_4,30000_101050_4,30000_104050_4	Activity_Icon_107_02.png	Item_Act107.png
+3	专属军资-英雄套餐	1150052	20	30000_1150048_10	30000_1780080_1,30000_1510003_30,30000_13310003_30	Activity_Icon_107_05.png	Item_Act107.png
+]],
+
+}

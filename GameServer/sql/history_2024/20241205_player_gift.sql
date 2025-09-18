@@ -1,0 +1,1 @@
+alter table `player_gift` add column `weekResetTime` bigint(20) NOT NULL DEFAULT '0';

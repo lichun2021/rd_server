@@ -1,0 +1,21 @@
+# 活动id
+activityId = 327
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 2592000
+
+# 每日免费次数
+freeCount = 1
+
+# 金条阈值
+threshold = 6000
+
+# 单次消耗
+oneCost = 10000_1000_50
+
+# 十次消耗
+tenCost = 10000_1000_450
+
+# 初始金条数量
+startGold = 5000
+

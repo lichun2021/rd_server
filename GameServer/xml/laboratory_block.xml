@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" weight="100" effectList="403_1000|404_2500"/>
+      <data id="2" type="1" weight="100" effectList="403_1000|404_2500"/>
+      <data id="3" type="2" weight="100" effectList="403_1000|404_2500"/>
+      <data id="4" type="2" weight="100" effectList="403_1000|404_2500"/>
+      <data id="5" type="3" weight="100" effectList="403_1000|404_2500"/>
+      <data id="6" type="3" weight="100" effectList="403_1000|404_2500"/>
+</root>

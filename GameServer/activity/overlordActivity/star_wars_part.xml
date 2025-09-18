@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" areaId="2" zone="0" team="0" serverIdList="50001,80036,80048,80050" />
+      <data id="2" areaId="2" zone="1" team="0" serverIdList="50001,80036" />
+      <data id="3" areaId="2" zone="1" team="1" serverIdList="50001,80036" />
+      <data id="4" areaId="2" zone="2" team="0" serverIdList="80048,80050" />
+      <data id="5" areaId="2" zone="2" team="1" serverIdList="80048,80050" />
+</root>

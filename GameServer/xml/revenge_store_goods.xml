@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" lossTroopsNum="100000" itemId="810019" limitNum="10" price="10000_1001_62" />
+      <data id="2" lossTroopsNum="100000" itemId="104050" limitNum="50" price="10000_1001_18" />
+      <data id="3" lossTroopsNum="100000" itemId="1300020" limitNum="1" price="10000_1001_120" />
+      <data id="4" lossTroopsNum="100000" itemId="1300018" limitNum="1" price="10000_1001_56" />
+      <data id="5" lossTroopsNum="100000" itemId="850008" limitNum="6" price="10000_1001_10" />
+      <data id="6" lossTroopsNum="100000" itemId="850038" limitNum="6" price="10000_1001_10" />
+      <data id="7" lossTroopsNum="100000" itemId="850018" limitNum="6" price="10000_1001_10" />
+      <data id="8" lossTroopsNum="100000" itemId="850028" limitNum="6" price="10000_1001_10" />
+      <data id="11" lossTroopsNum="200000" itemId="810019" limitNum="10" price="10000_1001_62" />
+      <data id="12" lossTroopsNum="200000" itemId="104050" limitNum="50" price="10000_1001_18" />
+      <data id="13" lossTroopsNum="200000" itemId="1300020" limitNum="1" price="10000_1001_120" />
+      <data id="14" lossTroopsNum="200000" itemId="1300018" limitNum="1" price="10000_1001_56" />
+      <data id="15" lossTroopsNum="200000" itemId="850009" limitNum="2" price="10000_1001_30" />
+      <data id="16" lossTroopsNum="200000" itemId="850039" limitNum="2" price="10000_1001_30" />
+      <data id="17" lossTroopsNum="200000" itemId="850019" limitNum="2" price="10000_1001_30" />
+      <data id="18" lossTroopsNum="200000" itemId="850029" limitNum="2" price="10000_1001_30" />
+      <data id="21" lossTroopsNum="500000" itemId="810019" limitNum="30" price="10000_1001_62" />
+      <data id="22" lossTroopsNum="500000" itemId="104050" limitNum="100" price="10000_1001_18" />
+      <data id="23" lossTroopsNum="500000" itemId="1300020" limitNum="3" price="10000_1001_120" />
+      <data id="24" lossTroopsNum="500000" itemId="1300018" limitNum="2" price="10000_1001_56" />
+      <data id="25" lossTroopsNum="500000" itemId="850009" limitNum="5" price="10000_1001_30" />
+      <data id="26" lossTroopsNum="500000" itemId="850039" limitNum="5" price="10000_1001_30" />
+      <data id="27" lossTroopsNum="500000" itemId="850019" limitNum="5" price="10000_1001_30" />
+      <data id="28" lossTroopsNum="500000" itemId="850029" limitNum="5" price="10000_1001_30" />
+      <data id="31" lossTroopsNum="1000000" itemId="810019" limitNum="50" price="10000_1001_62" />
+      <data id="32" lossTroopsNum="1000000" itemId="104050" limitNum="200" price="10000_1001_18" />
+      <data id="33" lossTroopsNum="1000000" itemId="1300020" limitNum="5" price="10000_1001_120" />
+      <data id="34" lossTroopsNum="1000000" itemId="1300018" limitNum="5" price="10000_1001_56" />
+      <data id="35" lossTroopsNum="1000000" itemId="850009" limitNum="10" price="10000_1001_30" />
+      <data id="36" lossTroopsNum="1000000" itemId="850039" limitNum="10" price="10000_1001_30" />
+      <data id="37" lossTroopsNum="1000000" itemId="850019" limitNum="10" price="10000_1001_30" />
+      <data id="38" lossTroopsNum="1000000" itemId="850029" limitNum="10" price="10000_1001_30" />
+</root>

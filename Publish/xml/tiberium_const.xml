@@ -1,0 +1,96 @@
+# 开服时长不足的服务器不参与泰伯利亚之战(单位:秒)
+serverDelay = 2592000
+
+# 报名联盟排行条件
+signRankLimit = 10
+
+# 参战人数上限
+warMemberLimit = 50
+
+# 报名时间
+warTimeHour = 13:00_20:00_21:00_22:00
+
+# 参与匹配最低人数限制
+warMemberMinCnt = 5
+
+# 战场开启时间(单位:秒)
+warOpenTime = 3600
+
+# 结束前多长时间内不能进入副本 单位秒
+limitTimeBoforeEnd = 180
+
+# 玩家主动退出副本,或弹出结算界面之后 多长时间强制回签原服 （时间短点比较好）
+forceMoveBackTime = 10
+
+# 创建不足一周的联盟无法进行报名
+guildCreateTimeLimit = 604800
+
+# 控制匹配模式,配1采用灰度匹配模式,不配或者配0采用正常匹配模式
+isTestMatch = 0
+
+# 每个时间段最多报名联盟数量
+maxSignNum = 1000
+
+# 房间服选取是否开启随机模式(默认id小的服为房间服)
+roomServerRandomOpen = 1
+
+# 作战小队人数上限
+teamMemberLimit = 12
+
+# 作战小队任务数量上限
+teamTargetLimit = 2
+
+# 个人策略目标上限
+teamMemberStrategyLimit = 2
+
+# 个人主力兵种数量上限
+mySoldierTypeLimit = 2
+
+# 小队数量上限
+teamNumLimit = 12
+
+# 联赛联盟单场积分上限
+seasonGuildScoreLimit = 18000
+
+# 联赛个人单场积分上限
+seasonPersonScoreLimit = 1800
+
+# 开启elo规则的期数,只在此期泰伯利亚匹配时计算初始化积分(附加战力额外积分),此期前采用战力匹配,此期及以后采取elo匹配
+eloBeginTermId = 35
+
+# 初始化elo积分
+initEloScore = 1200
+
+# 每亿出战战力额外积分(仅在首次开启elo算法时在匹配阶段初始化添加此额外战力)
+extPowerScore = 30
+
+# ELO算法K值
+eloParamK = 120
+
+# ELO算法L值(概率计算参数)
+eloParamL = 400
+
+# ELO积分赛季结算保留系数(万分比)
+eloSeasonCalcPer = 5000
+
+# 连续多期不参与比赛,积分衰减值
+eloAbsentDissScore = 50
+
+# 积分衰减触发轮次
+eloAbsentTerms = 2
+
+# 当前匹配机制开关
+tiberiumMatchSwitch = 1
+
+# 取泰伯利亚常规赛玩法历史排名场次
+tiberiumMatchTimesLimit = 10
+
+# 单场战斗排名折合修正系数
+tiberiumMatchBattleResultCof = 1000_-1000
+
+# 修正系数最高值
+tiberiumMatchCofMaxValue = 3000
+
+# 修正系数最低值
+tiberiumMatchCofMinValue = -3000
+

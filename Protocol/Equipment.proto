@@ -1,0 +1,45 @@
+option java_package	= "com.hawk.game.protocol";
+
+message	EquipmentPB
+{
+	required string	uuid	= 1;
+	required int32 equipId	= 2;  // 装备id
+	required int32 level	= 3;  // 装备强化等级
+	required int32 point	= 4;  // 装备当前累计的进阶点数
+}
+
+message	HPEquipmentInfoSync
+{
+	repeated EquipmentPB equipments	= 1;
+}
+
+// 装备强化升级请求
+message	HPEquipLevelUpReq
+{
+	required string	uuid	= 1;
+}
+
+// 装备进阶请求
+message	HPEquipEnhanceReq
+{
+	required string	uuid = 1;
+}
+
+// 装备进阶响应
+message	HPEquipEnhanceResp
+{
+	required bool result = 1;
+	optional int32 point = 2;
+}
+
+// 获取其他玩家的装备信息
+message	HPPlayerEquipInfoReq
+{
+	required string	playerId = 1;
+}
+
+message	HPPlayerEquipInfoResp
+{
+	repeated EquipmentPB equipments = 1;
+}
+

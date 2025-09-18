@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" pool="1" weight="500" round="4" />
+      <data id="102" pool="1" weight="800" round="5" />
+      <data id="103" pool="1" weight="1200" round="6" />
+      <data id="104" pool="1" weight="1500" round="7" />
+      <data id="105" pool="1" weight="2000" round="8" />
+      <data id="106" pool="1" weight="1500" round="9" />
+      <data id="107" pool="1" weight="1200" round="10" />
+      <data id="108" pool="1" weight="800" round="11" />
+      <data id="109" pool="1" weight="500" round="12" />
+      <data id="110" pool="2" weight="1500" bossBNotRun="2" bossBNotDie="2" />
+      <data id="201" pool="2" weight="2000" bossBNotRun="3" bossBNotDie="2" />
+      <data id="202" pool="2" weight="3000" bossBNotRun="4" bossBNotDie="2" />
+      <data id="203" pool="2" weight="2000" bossBNotRun="5" bossBNotDie="2" />
+      <data id="204" pool="2" weight="1500" bossBNotRun="6" bossBNotDie="2" />
+</root>

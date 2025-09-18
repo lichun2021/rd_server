@@ -1,0 +1,56 @@
+option java_package = "com.hawk.game.protocol";
+
+//单条任务状态结构体
+message MissionData
+{
+	required int32 missionId = 1;//任务Id
+	required int32 num = 2;//进度
+	required int32 state = 3;//状态0=未完成,1=可以领取,2=已领取
+}
+
+//推送任务状态
+message StoryMissionPage
+{	
+	required int32 chapterId = 1;//章节id(都完成发0)
+	required int32 chapterState = 2;//章节完成状态
+	repeated MissionData data = 3;//章节数据
+	optional ParalleledStoryMission ParalleledMission = 4; // 双页签开启时，与主干任务平行的章节任务数据
+	repeated int32 completeChapterId = 5; // 已完成的章节任务的章节ID
+}
+
+// 双页签开启时，与主干任务平行的章节任务数据
+message ParalleledStoryMission
+{
+	required int32 chapterId = 1;//章节id
+	required int32 chapterState = 2;//章节完成状态
+	repeated MissionData data = 3;//章节数据
+}
+
+//领奖
+message StoryMissionRewReq
+{
+	required bool isChapterAward = 1;//是章节奖励
+	optional int32 missionId= 2;//任务id
+	optional int32 chapterId = 3; // 存在双页签的平行任务时，如果是领取章节任务奖励，需要带上章节ID参数，不带参数的话，服务器默认都是取主干对应的章节ID（即StoryMissionPage中的chapterId）
+}
+
+//领奖反馈
+message StoryMissionRewRes
+{
+	required bool getChapterAward = 1;//是否领取全部
+	optional int32 missionId = 2;//任务id
+	optional int32 chapterId = 3;//章节id
+}
+
+//新手击败尤里残部
+message StoryMissionNewlyBattleReq
+{
+	required int32 missionId= 1;//任务击败尤里残部
+}
+
+//剧情野怪击杀.
+message StoryMissionKillMosterReq {
+	required int32 monsterId = 1; //怪物的ID
+	required int32 posX = 2; //x坐标
+	required int32 posY = 3; //y坐标.
+}

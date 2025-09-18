@@ -1,0 +1,180 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+// XQHX_GAME_SYNC			= 483; // 副本信息同步
+message PBXQHXGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBGuildInfo guildInfo = 3; 
+	repeated PBPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; // 野怪剩余个数
+	repeated PBXQHXTechonolgyLabEffect labBuff = 7; // 秘密实验室 随机buff
+	repeated PBXQHXBuff xqhxBuff = 8; // 战场天气
+	repeated PBPlayerInfo playerNotJoin = 9; // 未进入战场
+	optional int64 gameCreateTime = 10; // 结束时间
+	optional int32 winCamp = 11; // 胜利方。 战场结束后才有意义
+	optional int32 pylonCount = 12; // 能量塔剩余
+}
+
+message PBXQHXBuff{
+	optional int32 buffId = 1; // xqhx_buff.xml  id
+	optional int64 startTime = 2;
+}
+
+// 秘密实验室 随机buff
+message PBXQHXTechonolgyLabEffect{
+	repeated PBXQHXEffect effect = 1;
+	optional int32 index = 2;
+	optional int32 camp = 3; // 阵营
+	optional int32 skillId = 4; // build_skill
+	optional int64 startTime = 5; 
+	optional int64 endTime = 6;
+}
+
+//作用号信息
+message PBXQHXEffect{
+	required int32 effId				= 1;  //作用号
+	required int32 effVal				= 2;  //作用值
+}
+
+// 泰博利亚小地图
+message PBXQHXSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;
+	optional int32 monsterCount = 6; // 野怪剩余个数
+	optional int64 nextMonsterRefresh = 7; // 下次刷怪时间, 为0 代表最后一波刷完
+	optional int32 monsterTurn = 8; // 当前刷新过多少波
+	optional int32 pylonCount = 9; // 野怪剩余个数
+	optional int64 nextPylonRefresh = 10; // 下次刷怪时间, 为0 代表最后一波刷完
+	optional int32 pylonTurn = 11; // 当前刷新过多少波
+
+}
+
+message PBGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12; //控制建筑得分
+	optional int32 monsterHonor = 13; //能量塔得分
+	optional int32 pylonHonor = 14; //消灭野怪得分
+	optional int32 guildOrder = 20; // - 消耗战队成长点可升级战场策略 
+}
+
+message PBPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3; // 当前积分
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killhonor = 7; //消灭敌军得分
+	optional int32 hurthonor = 8; // 承受伤害得分
+	optional int32 buildControlHonor = 9; // 控制建筑得分
+	optional int32 monsterHonor = 10; //能量塔得分
+	optional int32 pylonHonor = 11; //消灭野怪得分
+	optional int32 killMonster = 12; // 击杀野怪数
+	optional int32 cityLevel = 13;
+	repeated WorldShowDress dressShow		= 14;	// 装扮显示
+	optional int32 icon = 15;
+	optional string pfIcon = 16;
+	optional int32 pylonCnt = 17;
+}
+
+
+//XQHX_GAME_OVER			= 472; // 游戏结束
+message PBXQHXGameOver{ 
+	optional int64 playerHonor = 1; // 个人积分
+	optional bool win = 2; 
+	optional int32 quitReson = 3; //正常结束 0  主动退出 1
+}
+
+message PBXQHXKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// XQHX_PLAYER_QUIT			= 477; // 有玩家退出
+message PBXQHXPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBXQHXPlayerMoveCitySync{
+	optional int64 xqhxMoveCityCD = 1;  // 免费迁城
+	optional int32 xqhxMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+message PBXQHXNuclearStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 立即占领. 建筑在占领中, 且为盟友占领
+message PBXQHXChronoStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 广播核弹发射
+message PBXQHXNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int64 fromX = 6;
+	optional int64 fromY = 7;
+}
+
+message PBXQHXAnchorJoinReq{
+	optional string battleId = 1;
+}
+
+// 主播请求建筑内邮件. 
+message PBXQHXAnchorListMailReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 type = 3;  // 0 战斗邮件, 1 侦查邮件
+}
+
+message PBXQHXAnchorGetGuildWarInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+}
+
+
+message PBXQHXAnchorGetGuildWarCellInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+	optional string marchId = 2; // 
+}
+
+//号令
+message PBXQHXOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+}
+
+//使用号令
+message PBXQHXOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+	optional int32 x = 2;  // 对建筑使用
+	optional int32 y = 3; 
+}
+
+//号令同步
+message PBXQHXOrderSyncResp{
+	repeated PBXQHXOrder orders = 1;  //号令列表
+}

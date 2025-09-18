@@ -1,0 +1,163 @@
+option java_package = "com.hawk.game.protocol";
+
+//一条天赋数据
+message TalentInfo
+{
+	required string id 			= 1;
+	required int32  talentId 	= 2;
+	required int32  level 		= 3;
+	required int32  type 		= 4;
+}
+
+//一条天赋技能数据
+message TalentSkillInfo
+{
+	required int32 skillId = 1; //技能id
+	required int64 cdEndTime = 2; //下次刷新时间
+	optional int64 castSkillTime = 3; //使用技能时间
+}
+
+//天赋数据同步
+message HPTalentInfoSync
+{
+	repeated TalentInfo talentInfos = 1;
+	required int32 type 		= 2;	//启用方案type，默认0
+}
+
+//天赋升级
+message HPTalentUpgradeReq
+{
+	required int32 talentId 	= 1;
+	required int32 targetLevel 	= 2;	//目标等级
+	required int32 type			= 3;	//方案类型
+}
+
+//天赋升级返回
+message HPTalentUpgradeResp
+{
+	required bool result 		= 1;	//是否成功
+	required int32 level 		= 2;	//升级后等级
+	required int32 talentId 		= 3;	//天赋id
+	required int32 type 		= 4;	//方案类型
+}
+
+//天赋洗点
+message HPTalentClearReq
+{
+	required bool useGold 		= 1;	// 是否使用金币洗点
+	required int32 type 		= 2;	// 洗点方案type
+}
+
+//天赋切换
+message HPTalentChangeReq
+{
+	required bool useGold 		= 1;	// 是否使用金币洗点
+	required int32 type			= 2;	// 切换到哪个type
+}
+
+// 天赋方案类型
+enum TalentType
+{
+	TALENT_TYPE_1 		= 0;	//天赋方案1
+	TALENT_TYPE_2		= 1;	//天赋方案2
+	TALENT_TYPE_3		= 2;	//天赋方案3
+	TALENT_TYPE_4		= 3;	//天赋方案4
+	TALENT_TYPE_5		= 4;	//天赋方案5
+	TALENT_TYPE_6		= 5;	//天赋方案6
+	TALENT_TYPE_7		= 6;	//天赋方案7
+	TALENT_TYPE_8		= 7;	//天赋方案8
+	TALENT_TYPE_DEFAULT	= 99;	//天赋方案默认
+}
+
+
+// 天赋技能信息同步
+message HPTalentSkillSync
+{
+	repeated TalentSkillInfo skillInfo = 1;
+}
+
+// 使用技能
+message HPCastTalentSkillReq
+{
+	required int32 skillId = 1; //技能id
+	repeated int32 skillParams = 2;	// 附带参数
+}
+
+// 使用技能成功
+message HPCastTalentSkillSucc
+{
+	required int32 skillId = 1; //技能id
+}
+
+
+
+/**远征天赋**/
+
+
+//一条天赋数据
+message CrossTalentInfo{	
+	required int32  talentId 	= 2;
+	required int32  level 		= 3;
+}
+
+//天赋数据同步
+message HPCrossTalentInfoReq{
+	required string serverId = 2; // 所属服
+}
+
+
+//天赋数据同步
+message HPCrossTalentInfoResp
+{
+	repeated CrossTalentInfo talentInfos = 1;
+	required string serverId = 2; // 所属服
+	required int64 totalPoint = 3; // 总点数
+}
+
+//天赋升级
+message HPCrossTalentUpgradeReq
+{
+	required int32 talentId 	= 1;
+	required int32 targetLevel 	= 2;	//目标等级
+}
+
+//天赋升级返回
+message HPCrossTalentUpgradeResp
+{
+	required bool result 		= 1;	//是否成功
+	required int32 level 		= 2;	//升级后等级
+	required int32 talentId 		= 3;	//天赋id
+}
+
+//天赋洗点
+message HPCrossTalentClearReq
+{
+	required bool useGold 		= 1;	// 是否使用金币洗点
+}
+
+/**先驱回响天赋**/
+//天赋信息
+message XQHXTalentItem{	
+	required int32  talentId 	= 1;
+	required int32  level 		= 2;
+}
+
+//天赋信息返回 XQHX_TALENT_INFO_RESP = 54118;
+message XQHXTalentInfoResp{
+	repeated XQHXTalentItem talentInfos = 1;
+	optional int32 totalPoint = 2;
+	optional int64 endTime = 3;
+}
+
+//天赋升级请求 XQHX_TALENT_UPGRADE_REQ = 54119
+message XQHXTalentUpgradeReq
+{
+	required int32 talentId 	= 1;
+	required int32 targetLevel 	= 2;	//目标等级
+}
+
+//天赋升级返回 XQHX_TALENT_UPGRADE_RESP = 54120
+message XQHXTalentUpgradeResp
+{
+	required XQHXTalentItem talentInfo = 1;
+}

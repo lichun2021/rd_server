@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data connectId="1" achieveConnect="2651001_2651002_2651003_2651004" />
+      <data connectId="2" achieveConnect="2651005_2651006_2651007_2651008" />
+      <data connectId="3" achieveConnect="2651009_2651010_2651011_2651012" />
+      <data connectId="4" achieveConnect="2651013_2651014_2651015_2651016" />
+      <data connectId="5" achieveConnect="2651001_2651005_2651009_2651013" />
+      <data connectId="6" achieveConnect="2651002_2651006_2651010_2651014" />
+      <data connectId="7" achieveConnect="2651003_2651007_2651011_2651015" />
+      <data connectId="8" achieveConnect="2651004_2651008_2651012_2651016" />
+      <data connectId="9" achieveConnect="2651001_2651006_2651011_2651016" />
+</root>

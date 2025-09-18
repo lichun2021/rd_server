@@ -1,0 +1,12 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# andro直购id
+androidPayId = 550001
+
+# ios直购id
+iosPayId = 560001
+
+# 关联活动
+relationActivityId = 30
+

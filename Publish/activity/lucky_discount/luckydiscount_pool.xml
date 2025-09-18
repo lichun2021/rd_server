@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" weight="30" team="1" discount="3" pool="1" />
+      <data id="2" weight="40" team="1" discount="2" pool="2" />
+      <data id="3" weight="18" team="1" discount="1" pool="3" />
+      <data id="4" weight="9" team="1" discount="0.5" pool="4" />
+      <data id="5" weight="3" team="1" discount="0.3" pool="5" />
+      <data id="6" weight="18" team="2" discount="1" pool="3" />
+      <data id="7" weight="9" team="2" discount="0.5" pool="4" />
+      <data id="8" weight="3" team="2" discount="0.3" pool="5" />
+</root>

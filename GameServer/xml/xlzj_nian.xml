@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" recNum="1" redis="2" refreshTime="180,1560,2940" refreshCount="8" perHPGuildHonor="0" perHPPlayerHonor="0" onceKillGuildHonor="400" onceKillPlayerHonor="40" killPlayerHonor="160" killGuildHonor="1600" hurtRate="10000" massKillLimit="1200" signKillLimit="400" perPowerHurt="5000" hpMutiplePower="300000000" hpMutipleMax="3" />
+      <data id="2" recNum="2" redis="2" refreshTime="1560,2940" refreshCount="4" perHPGuildHonor="0" perHPPlayerHonor="0" onceKillGuildHonor="400" onceKillPlayerHonor="40" killPlayerHonor="160" killGuildHonor="1600" hurtRate="10000" massKillLimit="1200" signKillLimit="400" perPowerHurt="5000" hpMutiplePower="300000000" hpMutipleMax="3" />
+</root>

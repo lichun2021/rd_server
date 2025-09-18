@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1" levelUpExp="200" normalReward="30000_850007_1" advReward="30000_1300017_10,30000_850007_2" advancePlayerNum="50" />
+      <data level="2" levelUpExp="400" normalReward="30000_810001_1" advReward="30000_1300017_10,30000_810001_1" advancePlayerNum="50" />
+      <data level="3" levelUpExp="800" normalReward="30000_1510003_5" advReward="30000_1300017_10,30000_1510003_10" advancePlayerNum="50" />
+      <data level="4" levelUpExp="1400" normalReward="30000_13310003_5" advReward="30000_1300017_10,30000_13310003_10" advancePlayerNum="100" />
+      <data level="5" levelUpExp="2200" normalReward="30000_800100_1" advReward="30000_1300017_80,30000_800101_1" advancePlayerNum="100" />
+      <data level="6" levelUpExp="3200" normalReward="30000_850037_2" advReward="30000_1300017_10,30000_850037_4" advancePlayerNum="100" />
+      <data level="7" levelUpExp="4400" normalReward="30000_810001_2" advReward="30000_1300017_10,30000_810001_2" advancePlayerNum="150" />
+      <data level="8" levelUpExp="5800" normalReward="30000_1510003_10" advReward="30000_1300017_10,30000_1510003_20" advancePlayerNum="150" />
+      <data level="9" levelUpExp="7400" normalReward="30000_13310003_10" advReward="30000_1300017_10,30000_13310003_20" advancePlayerNum="200" />
+      <data level="10" levelUpExp="9200" normalReward="30000_800143_10" advReward="30000_1300017_80,30000_800143_20" advancePlayerNum="250" />
+      <data level="11" levelUpExp="11200" normalReward="30000_850018_1" advReward="30000_1300017_10,30000_850018_2" advancePlayerNum="300" />
+      <data level="12" levelUpExp="13200" normalReward="30000_810001_3" advReward="30000_1300017_10,30000_810001_3" advancePlayerNum="350" />
+      <data level="13" levelUpExp="15200" normalReward="30000_1510003_15" advReward="30000_1300017_10,30000_1510003_30" advancePlayerNum="400" />
+      <data level="14" levelUpExp="17200" normalReward="30000_13310003_15" advReward="30000_1300017_10,30000_13310003_30" advancePlayerNum="450" />
+      <data level="15" levelUpExp="19200" normalReward="30000_800110_10" advReward="30000_1300017_80,30000_800110_20" advancePlayerNum="500" />
+      <data level="16" levelUpExp="21700" normalReward="30000_850028_1" advReward="30000_1300017_10,30000_850028_2" advancePlayerNum="550" />
+      <data level="17" levelUpExp="24200" normalReward="30000_810001_4" advReward="30000_1300017_10,30000_810001_4" advancePlayerNum="600" />
+      <data level="18" levelUpExp="26700" normalReward="30000_1510003_20" advReward="30000_1300017_10,30000_1510003_40" advancePlayerNum="650" />
+      <data level="19" levelUpExp="29200" normalReward="30000_13310003_20" advReward="30000_1300017_10,30000_13310003_40" advancePlayerNum="700" />
+      <data level="20" levelUpExp="31700" normalReward="30000_800000_5" advReward="30000_1300017_80,30000_800001_100" advancePlayerNum="800" />
+      <data level="21" levelUpExp="34700" normalReward="30000_850008_2" advReward="30000_1300017_10,30000_850008_4" advancePlayerNum="800" />
+      <data level="22" levelUpExp="37700" normalReward="30000_810001_5" advReward="30000_1300017_10,30000_810001_5" advancePlayerNum="800" />
+      <data level="23" levelUpExp="40700" normalReward="30000_850078_10" advReward="30000_1300017_10,30000_850078_10" advancePlayerNum="800" />
+      <data level="24" levelUpExp="43700" normalReward="30000_840165_50" advReward="30000_1300017_10,30000_840165_100" advancePlayerNum="900" />
+      <data level="25" levelUpExp="46700" normalReward="30000_1300017_30" advReward="30000_1300017_150,30000_810005_2" advancePlayerNum="900" />
+      <data level="26" levelUpExp="49700" normalReward="30000_850038_2" advReward="30000_1300017_30,30000_850038_4" advancePlayerNum="900" />
+      <data level="27" levelUpExp="52700" normalReward="30000_810002_1" advReward="30000_1300017_30,30000_810019_2" advancePlayerNum="1000" />
+      <data level="28" levelUpExp="55700" normalReward="30000_800100_3" advReward="30000_1300017_30,30000_800101_3" advancePlayerNum="1000" />
+      <data level="29" levelUpExp="58700" normalReward="30000_1480001_100" advReward="30000_1300017_30,30000_1480001_100" advancePlayerNum="1000" />
+      <data level="30" levelUpExp="61700" normalReward="30000_1000003_2" advReward="30000_1300017_200,30000_1000003_8" advancePlayerNum="1000" />
+</root>

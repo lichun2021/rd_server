@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" exchangerequirements="30000_29200001_2" exchangeobtain="30000_21065001_20" limittimes="10" />
+      <data id="2" exchangerequirements="30000_29200001_2" exchangeobtain="30000_9990041_200" limittimes="10" />
+      <data id="3" exchangerequirements="30000_29200001_2" exchangeobtain="30000_9990042_40" limittimes="10" />
+      <data id="4" exchangerequirements="30000_29200001_2" exchangeobtain="30000_9990051_100" limittimes="10" />
+      <data id="5" exchangerequirements="30000_29200001_2" exchangeobtain="30000_9990052_20" limittimes="10" />
+      <data id="6" exchangerequirements="30000_29200001_2" exchangeobtain="30000_802005_100" limittimes="10" />
+      <data id="7" exchangerequirements="30000_29200001_2" exchangeobtain="30000_802004_200" limittimes="10" />
+      <data id="8" exchangerequirements="30000_29200001_2" exchangeobtain="30000_1300027_240" limittimes="10" />
+      <data id="9" exchangerequirements="30000_29200001_2" exchangeobtain="30000_21063005_300" limittimes="10" />
+      <data id="10" exchangerequirements="30000_29200001_2" exchangeobtain="30000_800002_600" limittimes="10" />
+      <data id="11" exchangerequirements="30000_29200001_2" exchangeobtain="30000_1782103_600" limittimes="20" />
+      <data id="12" exchangerequirements="30000_29200001_1" exchangeobtain="30000_1782106_45" limittimes="30" />
+      <data id="13" exchangerequirements="30000_29200001_1" exchangeobtain="30000_1300017_800" limittimes="30" />
+      <data id="14" exchangerequirements="30000_29200001_1" exchangeobtain="30000_810002_6" limittimes="99" />
+</root>

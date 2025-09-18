@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" status="2,8,3" />
+      <data id="2" status="2,7,3" />
+      <data id="3" status="2,6,3" />
+      <data id="4" status="2,4,3" />
+      <data id="5" status="2,8" />
+      <data id="6" status="2,7" />
+      <data id="7" status="2,6" />
+      <data id="8" status="8" />
+      <data id="9" status="7,3" />
+      <data id="10" status="6,3" />
+      <data id="11" status="5,3" />
+      <data id="12" status="4,3" />
+      <data id="13" status="8" />
+      <data id="14" status="7" />
+      <data id="15" status="6" />
+      <data id="16" status="5" />
+</root>

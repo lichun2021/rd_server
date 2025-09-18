@@ -1,0 +1,236 @@
+  option java_package = "com.hawk.game.protocol";
+
+import "Const.proto";
+
+/** 强化4阶段数据*/
+message PBPlantSodlierSync{
+	optional bool showInstrument = 1; // 显示每一阶段入口
+	optional PBPlantInstrument instrument = 2;
+
+	optional bool showCracks = 3; // 显示每2阶段入口
+	repeated PBPlantSoldierCrack cracks = 4;
+
+	optional bool showCrystal = 5; // 显示每3阶段入口
+	optional PBPlantCrystalAnalysis crystal = 6;
+
+	optional bool showStrengths = 7; // 显示每4阶段入口
+	repeated PBPlantSOLdierStrength strengths = 8; 
+	
+	optional bool showMilitary = 9; // 显示每5阶段入口
+	repeated PBPlantMilitary militarys = 10; // 军衔
+	
+	optional SoldierType updateSoldierType = 11; // 本次更新是对哪一个兵变化
+
+	repeated PBPlantMilitary militarysV3 = 12; // 泰能3期
+	repeated PBPlantSwitchItem switchItems = 13;//开关
+}
+
+
+// 泰能破译仪. 主体只有一级不用升级 
+message PBPlantInstrument{ 
+	optional bool unlock = 1; //  是否解锁
+	optional int32 cfgId = 2; // plant_instrument_upgrade.lua  id  当时是哪个就传哪个, 服务器自己会查下一级 id
+	repeated PBPlantInstrumentChip chips = 3; // 组件
+}
+
+// 组件 全部组件最高等级,可解锁泰能战士破译阶段
+message PBPlantInstrumentChip{
+	optional int32 cfgId = 1; // plant_instrument_upgrade_chip id
+	optional bool unlock = 2; //  是否解锁
+}
+
+// 破译仪器组件升级
+message PBPlantInstrumentChipUpgradeReq{
+	optional int32 chipCfgId = 2; // plant_instrument_upgrade_chip id
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+// 泰能战士破译 8个
+message PBPlantSoldierCrack{ 
+	optional SoldierType soldierType = 1;
+	optional bool unlock = 2; //  是否解锁
+	optional int32 cfgId = 3; // plant_soldier_crack.lua  id
+	repeated PBPlantSoldierCrackChip chips = 4; // 组件
+}
+
+// 泰能战士破译组件 
+message PBPlantSoldierCrackChip{
+	optional int32 cfgId = 1; // plant_soldier_crack_chip id
+}
+
+// 升级泰能战士破译主体
+message PBPlantSoldierCrackUpgradeReq{
+	optional SoldierType soldierType = 1;
+}
+
+// 升级泰能战士破译组件升级
+message PBPlantSoldierCrackChipUpgradeReq{
+	optional SoldierType soldierType = 1;
+	optional int32 chipCfgId =2;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+// 晶体分析阶段. 主体只有一级不用升级 
+message PBPlantCrystalAnalysis{ 
+	optional bool unlock = 1; //  是否解锁
+	optional int32 cfgId = 2; // plant_crystal_analysis.lua  id
+	repeated PBPlantCrystalAnalysisChip chips = 3; // 组件
+}
+
+// 组件 全部组件最高等级,可解锁泰能战士强化阶段
+message PBPlantCrystalAnalysisChip{
+	optional int32 cfgId = 1; // plant_crystal_analysis_chip id
+}
+
+// 晶体分析组件升级
+message PBPlantCrystalAnalysisChipUpgradeReq{
+	optional int32 chipCfgId = 2; // plant_crystal_analysis_chip id
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+/** 太能战士强化 共8个 战士*/
+message PBPlantSOLdierStrength{
+	optional bool unlock = 1; //  是否解锁
+	optional int32 cfgId = 2; // plant_soldier_strengthen.lua  id
+	optional int32 level = 3; // 强化等级, 1-5 
+	repeated PBPlantSOLdierStrengthTech techs = 4; // 科技节点, 只包含自己的. 
+	optional SoldierType soldierType = 5;
+
+}
+
+/** 科技节点 */
+message PBPlantSOLdierStrengthTech{
+ 	optional int32 cfgId = 1; // plant_soldier_strengthen_tech
+}
+
+// 第4阶段, 战士强化, 科技升级 
+message PBPlantSOLdierStrengthTechUpgradeReq{
+	optional int32 techCfgId =  1; // plant_soldier_strengthen_tech  id  和前面3个不同,  传将要升级的cfg的id
+}
+
+//**************进化研究所****************************************************************
+
+message PBPlantSoldierAdvanceSync{
+	optional int32 advanceArmyId = 1; // 进化中的
+	optional int32 collectArmyId = 2; // 进化收取的. 当进化中不为0, 不可以进化别的兵种, 但可以补充 
+	optional int32 maxStroe = 3; // 最大收取量
+	optional int32 maxAdvance = 4; // 最大补充, maxStroe+ maxAdvance == 进化上限
+	optional int32 collectOneUseMil = 5; // 生产一个 需要的mil
+	optional int64 zeroStoreTime = 6; // 储量为0时间点.  (当前时间- zeroStoreTime )/collectOneUseMil == 可收取
+	optional int32 advanceTotal = 7; // 进化总量  代收/advanceTotal * resTotal = 取消返回资源.  一律向下取整
+	optional string resTotal	= 8; // 进化总消耗总资源量 
+}
+
+message PBPlantSoldierAdvanceReq{
+	optional int32 advanceArmyId = 1; // 进化的 battle_soldier.lua 表 plantSoldier =1 advanceArmy 才可用于进化
+	optional int32 collectArmyId = 2; // 进化收取的. battle_soldier.lua 表 plantSoldier =1
+	optional int32 soldierCount = 3; // 进化/补充 数量 最大值取 maxAdvance
+	optional int32 useGold = 4; // 金币补充资源
+	optional int32 immediate = 5; // 立即进化完成
+}
+
+/** 进化完成 收集*/
+message PBPlantSoldierCollectResp{
+	optional int32 armyId = 1; 
+	optional int32 count = 2;
+}
+
+/** 使用征召令*/
+message PBPlantSoldierAdvanceAddReq{
+	required int32 armyId = 1; 
+	required int32 itemId = 2;
+	required int32 itemCount = 3;
+
+}
+
+
+//**************进化研究所****************************************************************
+
+
+
+
+//***********************泰能科技树*********************************
+// 泰能科技信息
+message PBPlantScienceSync{
+	repeated int32 techId = 1; // 科技ID
+}
+
+// 泰能科技升级类型
+enum PBPlantScienceLvlUpType{
+	PLANT_SCIENCE_LEVEL_UP_NORMAL	= 1;	//普通升级
+	PLANT_SCIENCE_LEVEL_UP_BUY_RES	= 2;	//买资源升级
+	PLANT_SCIENCE_LEVEL_UP_BUY_RES_AND_TIME = 3; //买资源并且秒时间
+}
+
+// 泰能科技研究
+message PBPlantScienceLvlUpReq
+{
+	required int32 techId                 = 1; //科技ID
+	required PBPlantScienceLvlUpType type = 2; //是否使用水晶
+}
+
+//***********************泰能科技树*********************************
+
+
+//***********************泰能军衔*********************************
+
+// 泰能战士军衔
+message PBPlantMilitary{ 
+	optional SoldierType soldierType = 1; // 兵种类型
+	repeated PBPlantMilitaryChip chips = 2; // 组件
+	optional bool unlock = 3; // 是否已经解锁
+}
+
+// 泰能战士军衔组件 
+message PBPlantMilitaryChip{
+	optional int32 cfgId = 1; // 配置id
+}
+
+// 请求体
+message PBPlantMilitaryReq {
+	optional SoldierType soldierType = 1; // 兵种id
+	optional int32 chipCfgId = 2; // 部件id
+	optional PBPlantMilitaryType type = 3;
+}
+
+// 几期
+enum PBPlantMilitaryType{
+	PLANT_SOLDIER_MILITARY_2	= 1;	//2期
+	PLANT_SOLDIER_MILITARY_3	= 2;	//3期
+}
+
+//***********************泰能军衔*********************************
+
+
+//***********************泰能开关*********************************
+//开关类型
+enum PBPlantSwitchType{
+	PLANT_SOLDIER_MILITARY_IN_SHOW	= 1;	//城内显示
+	PLANT_SOLDIER_MILITARY_OUT_SHOW	= 2;	//城外显示
+}
+
+//开关数据
+message PBPlantSwitchItem {
+	optional PBPlantSwitchType type = 1; // 开关类型
+	optional int32 state = 2; // 状态
+}
+
+// 请求体
+message PBPlantSwitchReq {
+	optional PBPlantSwitchType type = 1; // 开关类型
+	optional int32 state = 2; // 状态
+}
+
+// 返回体
+message PBPlantSwitchResp {
+	optional PBPlantSwitchType type = 1; // 开关类型
+	optional int32 state = 2; // 状态
+}
+//***********************泰能开关*********************************
+

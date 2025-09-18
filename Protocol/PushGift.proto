@@ -1,0 +1,34 @@
+option java_package = "com.hawk.game.protocol";
+
+
+//客户端通知服务器到期
+message PushGiftNotifyDue {
+	repeated int32 giftIds = 1; //到期的配置ID
+}
+
+//购买礼包.
+message PushGiftBuyReq {
+	required int32 giftId = 1 ;//购买的礼包ID
+}
+
+//上线推送
+message PushGiftSynInfo {
+	repeated PushGiftMsg pushGifts = 1; //推送礼包集合
+}
+
+//更新协议
+message PushGiftUpdate {
+	required PushGiftOper oper = 1; //添加还是删除
+	repeated PushGiftMsg pushGifts = 2; //列表
+}
+
+message PushGiftMsg {
+	required int32 giftId = 1;  //push_gift_level id
+	required int64 endTime = 2; //结束时间毫秒
+}
+
+//更新类型
+enum PushGiftOper {
+	ADD = 1;//添加
+	DELETE = 2; //删除
+}

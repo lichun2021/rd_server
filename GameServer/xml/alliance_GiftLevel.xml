@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1" giftLevelExp="1000" bigGiftWeight="2_5" />
+      <data level="2" giftLevelExp="2000" bigGiftWeight="2_6,3_2" />
+      <data level="3" giftLevelExp="3000" bigGiftWeight="2_7,3_3" />
+      <data level="4" giftLevelExp="5000" bigGiftWeight="2_8,3_4" />
+      <data level="5" giftLevelExp="8000" bigGiftWeight="2_10,3_6" />
+      <data level="6" giftLevelExp="13000" bigGiftWeight="2_10,3_8" />
+      <data level="7" giftLevelExp="18000" bigGiftWeight="2_12,3_10,4_2" />
+      <data level="8" giftLevelExp="24000" bigGiftWeight="2_14,3_10,4_4" />
+      <data level="9" giftLevelExp="31000" bigGiftWeight="2_16,3_10,4_6" />
+      <data level="10" giftLevelExp="38000" bigGiftWeight="2_18,3_10,4_8" />
+      <data level="11" giftLevelExp="56000" bigGiftWeight="2_20,3_12,4_10,5_2" />
+      <data level="12" giftLevelExp="95000" bigGiftWeight="2_20,3_14,4_10,5_4" />
+      <data level="13" giftLevelExp="135000" bigGiftWeight="2_20,3_16,4_10,5_6" />
+      <data level="14" giftLevelExp="178000" bigGiftWeight="2_20,3_18,4_10,5_8" />
+      <data level="15" giftLevelExp="223000" bigGiftWeight="2_20,3_20,4_12,5_10" />
+      <data level="16" giftLevelExp="273000" bigGiftWeight="2_20,3_20,4_14,5_10" />
+      <data level="17" giftLevelExp="315000" bigGiftWeight="2_20,3_20,4_16,5_10" />
+      <data level="18" giftLevelExp="358000" bigGiftWeight="2_20,3_20,4_18,5_10" />
+      <data level="19" giftLevelExp="402000" bigGiftWeight="2_20,3_20,4_20,5_12" />
+      <data level="20" giftLevelExp="503000" bigGiftWeight="2_20,3_20,4_20,5_14" />
+      <data level="21" giftLevelExp="604000" bigGiftWeight="2_20,3_20,4_20,5_16" />
+      <data level="22" giftLevelExp="710000" bigGiftWeight="2_20,3_20,4_20,5_18" />
+      <data level="23" giftLevelExp="819000" bigGiftWeight="2_20,3_20,4_20,5_20" />
+      <data level="24" giftLevelExp="931000" bigGiftWeight="2_20,3_20,4_20,5_20" />
+      <data level="25" giftLevelExp="1397000" bigGiftWeight="2_20,3_20,4_20,5_20" />
+      <data level="26" giftLevelExp="2443000" bigGiftWeight="2_20,3_20,4_20,5_20,6_10" />
+      <data level="27" giftLevelExp="3054000" bigGiftWeight="2_20,3_20,4_20,5_20,6_10" />
+      <data level="28" giftLevelExp="3665000" bigGiftWeight="2_20,3_20,4_20,5_20,6_10" />
+      <data level="29" giftLevelExp="6107000" bigGiftWeight="2_20,3_20,4_20,5_20,6_10" />
+      <data level="30" giftLevelExp="12214000" bigGiftWeight="2_20,3_20,4_20,5_20,6_10" />
+</root>

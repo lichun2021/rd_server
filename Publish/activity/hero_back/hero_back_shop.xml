@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100001" awardId="4900020" price="10000_1000_60" limit="999" />
+      <data id="100002" awardId="4930012" price="10000_1001_58" limit="100" />
+      <data id="100003" awardId="4930013" price="10000_1001_58" limit="100" />
+</root>

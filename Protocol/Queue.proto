@@ -1,0 +1,91 @@
+import "Const.proto";
+option java_package	= "com.hawk.game.protocol";
+
+// 队列pb
+message	QueuePB
+{
+	required string	id					= 1;	// 队列唯一id
+	required QueueType	queueType		= 2;	// 队列类型
+	required string	itemId				= 3;	// 建筑的创建和升级就放建筑id;科技升级就放科技的id;材料挖掘放挖掘位id
+	required int64	startTime			= 4;	// 开始时间
+	required int64	endTime				= 5;	// 结束时间
+	optional string	info				= 6;	// 造兵时该字段放建筑类型；其他状态下放其他值
+	optional QueueStatus status			= 7;	// 防御建筑的两种状态，升级或者修理
+	optional int32 helpTimes			= 8;	// 是否申请过帮助，0没有，大于0有
+	required int64 totalQueueTime		= 9;	// 队列初始总时长
+	required int64 totalReduceTime		= 10;	// 队列加速（包括联盟帮助）减去的总时长
+    required bool paidQueue             = 11;   // true表示使用的是付费队列
+	optional int32 multiply             = 12;   // 表示连续升X级
+}
+
+// 登陆时同步玩家建筑信息
+message	HPQueueInfoSync
+{
+	repeated QueuePB queues		 = 1;	//同步玩家队列信息
+}
+
+// 取消队列
+message	QueueCancelReq
+{
+	required string	id			= 1;	// 队列唯一id
+}
+
+// 加速道具
+message SpeedItem
+{
+	optional string	itemUUid	= 1;	// 道具的唯一id
+	optional int32	count		= 2;	// 消耗的道具数量
+}
+
+// 队列加速
+message	QueueSpeedUpReq
+{
+	required string	id			 = 1;	// 队列唯一id
+	required bool isGold		 = 2;	// true钻石，false道具
+	repeated SpeedItem speedItem = 3;   // 道具信息
+	optional bool onceSpeed      = 4;   // 一键加速（true是false否）
+}
+
+// 队列批量付费加速
+message QueueSpeedUpBatchReq
+{
+	repeated string id	= 1;	//队列id
+}
+
+message QueueSpeedUpBatchResp
+{
+	repeated QueuePBSimple queueSimple	= 1;
+}
+
+// 某个建筑免费完成
+message	QueueFinishFreeReq
+{
+	required string	id			= 1;	// 队列唯一id
+}
+
+message	QueuePBSimple
+{
+	required QueueType	queueType	= 1;	// 队列类型
+	required string	id				= 2;	// 队列唯一id
+}
+
+// 第二建造队列信息
+message PaidQueuePB
+{
+	required bool unlockedPermanently = 1; // 永久开放标识，true表示永久开放，此时不发enableEndTime字段
+	optional int64 enableEndTime   = 2;  // 可用状态结束时间
+}
+
+// 购买付费队列请求
+message PaidQueuePayReq
+{
+	required bool consumeGold   = 1;	// true花水晶购买，false使用道具
+	optional string	itemUuid	= 2;	// 道具的唯一id
+	optional int32	count		= 3;	// 消耗的道具数量
+}
+
+
+//第二建筑早点开放信息
+message PBPaidQueueOpenDataResp{
+	required bool freeUse        = 1;  //是否已经免费开启过
+}

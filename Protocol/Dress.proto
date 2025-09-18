@@ -1,0 +1,158 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 装扮类型
+enum DressType
+{
+	NAME_BRAND = 1; //名牌
+	DERMA 	   = 2; //皮肤
+	MARCH_DRESS= 3; //行军
+	SIGNATURE  = 4; //签名
+	PENDANT	   = 5; //挂件
+    CITY_PROTECT = 6; // "基地护卫"全新装扮
+	TITLE = 7; // 称号
+	INNER_CITY = 8; // 内城
+}
+
+
+// 单条装扮信息
+message DressSingleInfo
+{
+	required DressType dressType = 1; //装扮类型
+	required int32 modelType 	 = 2; //详细类型
+	required int64 reaminTime 	 = 3; //剩余时间
+	required bool isDress		 = 4; //是否装扮中
+	optional int32 showType      = 5; //装扮外观展示类型
+	optional int64 showRemainTime = 6; // 装扮外观展示剩余时间
+}
+
+
+// 装扮信息同步
+message HPDressInfoSync
+{
+	repeated DressSingleInfo dressSingleInfo = 1;
+	optional int32 dressTitleType = 2; // 称号显示类型
+	optional bool isGodActive = 3; //是否神话激活
+}
+
+// 请求装扮
+message HPDoDressReq
+{
+	required DressType dressType = 1; //装扮类型
+	required int32 modelType 	 = 2; //详细类型
+}
+
+// 请求卸下装扮
+message HPDoUnloadReq
+{
+	required DressType dressType = 1; //装扮类型
+}
+
+// 请求更换装扮的外观
+message HPChangeShowTypeReq
+{
+	required DressType dressType = 1; //装扮类型
+	required int32 showType 	 = 2; //外观展示类型
+}
+
+// 请求签名
+message HPDoSignatureReq
+{
+	required string signature = 1; //签名
+}
+
+message PlayerDressPlayerInfo{
+	optional string playerId = 1;
+	optional string playerName = 2;
+	optional string pfIcon = 3;
+	optional int32 level = 4;
+	optional int32 cityLevel = 5;
+	optional int64 power = 6;
+	optional string guildName = 7;
+	optional string guildTag = 8;
+	optional string guildId = 9;
+	optional int64 lastOpTime = 10;
+	optional string sendItem = 11;
+	optional int32 askDressId = 12;
+}
+
+message PlayerDressAskInfoRes{
+	repeated PlayerDressPlayerInfo sendLog = 1; // 赠送记录 按时间逆序
+	repeated PlayerDressPlayerInfo askLog = 2;  // 请求记录 按时间逆序
+}
+
+message PlayerDressAskReq{
+	optional int32 type = 1;// 类型 1好友/2盟友
+	optional int32 id = 2; //索要参数 dressId
+	optional string playerId = 3;//索要的玩家对象
+	optional string askMsg = 4; //乞讨口号
+}
+
+message PlayerDressSendReq{
+	optional int32 type = 1;// 类型 1好友/2盟友
+	optional string itemStr = 2; // 赠送什么
+	optional string destPlayerId = 3; //赠送好友或者联盟成员
+	optional string sendMsg = 4; //赠言
+}
+
+// 称号类型
+message DressTitleType {
+	required int32 type = 1; // 称号类型 默认为0
+}
+
+// 装扮赠送道具保护期信息同步
+message DressSendProtectInfoSync{
+	repeated DressSendProtectInfo info = 1; // 装扮赠送道具保护期信息
+}
+
+// 装扮赠送道具保护期信息
+message DressSendProtectInfo {
+	required int32 itemId = 1; // 装扮道具id
+	required int64 receiveTime = 2; // 装扮获取时间
+}
+
+// 装扮赠送礼包购买次数信息同步
+message DressSendGiftTimesInfoPush {
+	repeated DressSendGiftTimesInfo infos = 1; // 装扮赠送礼包购买次数信息
+}
+
+// 装扮赠送礼包购买次数信息
+message DressSendGiftTimesInfo {
+	required int32 gfitId = 1; // 礼包id
+	required int32 buyTimes = 2; // 已经购买次数
+}
+
+
+// 装扮通用成功返回
+message DressSuccessResp
+{
+	required DressType dressType = 1; //装扮类型
+	required int32 modelType 	 = 2; //详细类型
+}
+
+// 装扮购买
+message DressBuyReq
+{
+	required int32 cfgId = 1; // 配置id
+}
+
+
+
+//上线同步可编译外显参数
+message DressEditDataSync{
+	repeated DressEditData datas = 1; //可编译外显参数列表
+}
+//更新外显参数
+message DressEditDataUpdateResp{
+	repeated DressEditData datas = 1; //可编译外显参数列表
+}
+
+//可编译类型
+enum DressEditType{
+	COLLEGE_SHOW = 1;// 军事学院
+}
+
+//装扮
+message DressEditData{
+	required DressEditType type = 1; //类型
+	optional string data = 2; //参数
+}

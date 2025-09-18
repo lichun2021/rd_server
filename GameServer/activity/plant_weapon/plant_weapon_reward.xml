@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" highPool="1" lowPool="21" raffleTimes="1" costItem="30000_21070031_10" discountWeight="10000_7000,7000_3000" />
+      <data id="2" highPool="2" lowPool="22" raffleTimes="2" costItem="30000_21070031_30" discountWeight="10000_7500,7000_2500" />
+      <data id="3" highPool="3" lowPool="23" raffleTimes="3" costItem="30000_21070031_60" discountWeight="10000_8000,7000_2000" />
+      <data id="4" highPool="4" lowPool="24" raffleTimes="4" costItem="30000_21070031_100" discountWeight="10000_8500,7000_1500" />
+      <data id="5" highPool="5" lowPool="25" raffleTimes="5" costItem="30000_21070031_150" discountWeight="10000_9000,7000_1000" />
+      <data id="6" highPool="6" lowPool="26" raffleTimes="6" costItem="30000_21070031_200" discountWeight="10000_9500,7000_500" />
+      <data id="7" highPool="7" lowPool="27" raffleTimes="7" costItem="30000_21070031_250" discountWeight="10000_9500,7000_500" />
+      <data id="8" highPool="8" lowPool="28" raffleTimes="8" costItem="30000_21070031_300" discountWeight="10000_9500,7000_500" />
+      <data id="9" highPool="9" lowPool="29" raffleTimes="9" costItem="30000_21070031_400" discountWeight="10000_9500,7000_500" />
+      <data id="10" highPool="10" lowPool="30" raffleTimes="10" costItem="30000_21070031_500" discountWeight="10000_9500,7000_500" />
+      <data id="11" highPool="11" lowPool="31" raffleTimes="11" costItem="30000_21070031_600" discountWeight="10000_9500,7000_500" />
+      <data id="12" highPool="12" lowPool="32" raffleTimes="12" costItem="30000_21070031_700" discountWeight="10000_9500,7000_500" />
+      <data id="13" highPool="13" lowPool="33" raffleTimes="13" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="14" highPool="14" lowPool="34" raffleTimes="14" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="15" highPool="15" lowPool="35" raffleTimes="15" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="16" highPool="16" lowPool="36" raffleTimes="16" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="17" highPool="17" lowPool="37" raffleTimes="17" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="18" highPool="18" lowPool="38" raffleTimes="18" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="19" highPool="19" lowPool="39" raffleTimes="19" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+      <data id="20" highPool="20" lowPool="40" raffleTimes="20" costItem="30000_21070031_800" discountWeight="10000_9500,7000_500" />
+</root>

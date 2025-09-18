@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" androidPayId="208010" iosPayId="208007" buyAward="30000_800002_88,10000_1005_300,30000_100050_2,30000_800000_18,30000_1780045_1" dailyScore="180_340_500" />
+      <data id="2" androidPayId="208011" iosPayId="208008" buyAward="30000_800002_128,10000_1005_980,30000_810002_1,30000_800000_28,30000_1780045_2" dailyScore="180_340_500" />
+      <data id="3" androidPayId="208012" iosPayId="208009" buyAward="30000_800002_168,10000_1005_1980,30000_810002_2,30000_800000_38,30000_1780050_1" dailyScore="180_340_500" />
+</root>

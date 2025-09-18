@@ -1,0 +1,8 @@
+# 新服开启延迟
+serverDelay = 864000
+
+# 每次持续多少天
+refreshDays = 7
+
+#礼包ID
+recordGiftItems = 1,2

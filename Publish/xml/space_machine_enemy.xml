@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1101" type="9" level="1" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_500" />
+      <data id="1102" type="9" level="1" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_501" />
+      <data id="1103" type="9" level="1" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_502" />
+      <data id="1201" type="9" level="2" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_503" />
+      <data id="1202" type="9" level="2" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_504" />
+      <data id="1301" type="9" level="3" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_505" />
+      <data id="1302" type="9" level="3" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_506" />
+      <data id="1401" type="9" level="4" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_507" />
+      <data id="1501" type="9" level="5" modelLevel="10" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_508" />
+      <data id="2101" type="10" level="1" modelLevel="11" gridCnt="1" attackAim="2" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_509" />
+      <data id="2201" type="10" level="2" modelLevel="11" gridCnt="1" attackAim="2" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_510" />
+      <data id="2301" type="10" level="3" modelLevel="11" gridCnt="1" attackAim="2" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_511" />
+      <data id="2401" type="10" level="4" modelLevel="11" gridCnt="1" attackAim="2" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_512" />
+      <data id="2501" type="10" level="5" modelLevel="11" gridCnt="1" attackAim="2" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_513" />
+      <data id="3101" type="12" level="1" modelLevel="12" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_514" />
+      <data id="3201" type="12" level="2" modelLevel="12" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_515" />
+      <data id="3301" type="12" level="3" modelLevel="12" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_516" />
+      <data id="3401" type="12" level="4" modelLevel="12" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_517" />
+      <data id="3501" type="12" level="5" modelLevel="12" gridCnt="1" attackAim="1" heroList="3000023|3000026" soldierList="100204_300000|100404_120000|100604_1200" power="100000" curbBuff="100_518" />
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data cycleId="100" name="集训动员" conditionType="4" targetId="1001_1002_1003" rankId="100" />
+      <data cycleId="200" name="拔地而起" conditionType="1" targetId="2001_2002_2003" rankId="200" />
+      <data cycleId="300" name="科技跃迁" conditionType="2" targetId="3001_3002_3003" rankId="100" />
+</root>

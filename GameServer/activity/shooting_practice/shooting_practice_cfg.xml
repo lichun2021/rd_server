@@ -1,0 +1,30 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 双杀额外分数
+doubleKillValue = 30
+
+# 三杀额外分数
+tripleKillValue = 60
+
+# 次数上限
+gameCountLimit = 3
+
+# 金条每日购买游戏次数花费
+buyGameCountCost = 10000_1000_30;10000_1000_30;10000_1000_30
+
+# 消耗金条获得游戏次数上限
+buyGameTimes = 3
+
+# 单局初始攻击次数
+atkValue = 10
+
+# 排行榜显示个数
+rankSize = 100
+
+# 积分道具
+scoreItem = 30000_21070034_1
+
+# 弹幕显示排行榜前xx名
+barrageSize = 30
+

@@ -1,0 +1,406 @@
+option java_package = "com.hawk.game.protocol";
+
+// Required	By Hawk
+// 以下为配置文件的定义, 填充字段时需要备注每个字段的含义
+// 以下配置，时间单位为：毫秒，百分比数转为万分比，例如50.5%记为5050
+
+// 战斗常量定义
+enum BFConst
+{
+	option allow_alias = true;
+	MAX_TICK_TIME			= 600000;	// 最大的战斗时长
+	TROOP_UNIT_TYPE_ID		= 1000;		// 不同攻防类型军队战斗单元的id基础值
+
+	MAX_TICK_RATE			= 5;		// 最大快进倍率
+	FRONT_DIR_COUNT			= 8;		// 前进方向的数量
+
+	ATTACK_CRIT_RATE		= 15000;	// 普攻暴击伤害倍数万分比
+
+	BATTLE_TICK_PERIOD		= 50;		// 逻辑运算时间单元
+	BUFF_TICK_PERIOD		= 1000;		// Buff生效周期
+	SKILL_TICK_PERIOD		= 1000;		// Skill光环检测周期
+	DEAD_PERIOD				= 200;		// 默认死亡时间
+	DISAPPEAR_PERIOD		= 5000;		// 默认消失时间（此时间内已发出的技能仍然有效）
+	HERO_ENTER_CD_PER		= 5000;		// 英雄技能入场CD万分比
+	HERO_PUBLIC_CD			= 0;		// 英雄技能公共CD
+	
+	USA_SOLDIER_ID			= 11005;	// 美国大兵特殊ID
+	USA_SOLDIER_ID_2		= 11008;	// 美国大兵特殊ID地面伞兵
+	USA_SOLDIER_ID_3		= 11010;	// 美国大兵特殊ID地面伞兵（被动）
+	SITDOWN_PERIOD			= 500;		// 大兵坐下时间
+	
+	MODEL_COUNT_ONE			= 1; 		// 战斗单元模型包含数量
+	MODEL_COUNT_PVE			= 100;		// 战斗单元模型包含数量
+	MODEL_COUNT_PVP			= 1000;		// 战斗单元模型包含数量
+}
+
+// 配置类型
+enum BFCfgType
+{
+	CFG_MAP	 = 1;						// 地图
+	CFG_MISSION = 2;					// 副本
+	CFG_MONSTER = 3;					// 怪物
+	CFG_UNIT = 4;						// 兵种
+	CFG_SKILL = 5;						// 技能
+	CFG_BUFF = 6;						// Buff
+}
+
+// 关卡类型
+enum MissionType
+{
+	MISSION_ATK = 1;					// 攻击关卡
+	MISSION_DEF = 2;					// 防守关卡
+}
+
+// 数值类型
+enum ValueType
+{
+	VALUE_PERCENT = 1;					// 万分比
+	VALUE_NUMBER = 2;					// 数值
+}
+
+// 战斗单元类型
+enum UnitType
+{
+	UNIT_HERO_FOOT = 1;					// 士兵英雄
+	UNIT_HERO_TANK = 2;					// 坦克英雄
+	UNIT_HERO_PLANE = 3;				// 飞机英雄
+	
+	UNIT_FOOT = 11;						// 士兵
+	UNIT_TANK = 12;						// 坦克
+	UNIT_PLANE = 13;					// 飞机
+	UNIT_AIR_FOOT = 14;					// 空中步兵
+	
+    UNIT_PTROOP = 15;                   // 伞兵, 技能
+    
+	UNIT_MISSILE = 21;					// 导弹
+	UNIT_BOMBER = 22;					// 轰炸机
+	
+	UNIT_BUILDING = 30;					// 建筑
+
+	UNIT_DEFENCE = 40;					// 防御武器
+	
+	UNIT_ORNAMENT = 50;					// 装饰物
+
+	UNIT_VIRTUAL = 60;					// 虚拟的实体，目前用于充当玩家自己
+}
+
+// 技能触发类型
+enum SkillTrigType
+{
+	TRIG_MANUAL = 1;					// 手动触发
+	TRIG_POST = 2;						// 被动连技触发
+	TRIG_DEAD = 3;						// 被动死亡触发
+	TRIG_ENTER = 4;						// 被动入场触发
+	TRIG_ATTACK = 5;					// 被动攻击触发
+}
+
+// 技能阵营定义
+enum SkillCampType
+{
+	SKILL_CAMP_ENEMY = 1;				// 敌方阵营
+	SKILL_CAMP_OWNSIDE = 2;				// 己方阵营（包含自己）
+	SKILL_CAMP_FRIEND = 3;				// 己方阵营（不含自己）
+	SKILL_CAMP_SELF = 4;				// 自身
+}
+
+// 施放非普通攻击技能检查类型（后端自动施放技能时判断是否满足施放条件，明确技能的buff给谁挂）
+enum CastCheckType
+{
+	CHECK_X_UNIT_SELF = 1;				// 无需目标，对单元：自己（如空中伞兵自杀）
+	CHECK_X_POS_SELF = 2;				// 无需目标，中心点：自己点（如空中伞兵、伞兵队长召唤）
+
+	CHECK_Y_UNIT_SELF = 3;				// 需要目标，对单元：自己（如遇敌给自己加保护）
+	CHECK_Y_UNIT_TARGET = 4;			// 需要目标，对单元：目标（对敌挂炸弹）
+
+	CHECK_Y_POS_SELF = 5;				// 需要目标，中心点：自己点（如辐射工兵）
+	CHECK_Y_POS_TARGET = 6;				// 需要目标，中心点：目标点（如鲍里斯）
+}
+
+// 加成单位阵营属性类型
+enum ModifyUnitAttrType{
+    UAT_TROOP = 1;				// 阵营
+    UAT_GROUP = 2;				// 组
+    UAT_UNITLIST = 3;			// 单元列表
+};
+
+// 触发器对应的action类型
+enum TriggerActionType
+{
+	A_SetUnitMove = 1;				//设置单元移动
+    A_SetUnitAttack = 2;			//设置单元攻击
+    A_SetUnitState = 3;		 		//设置单元状态
+    A_SetTriggerState = 4;			//设置触发器状态
+    A_SetGameState = 5; 			//设置游戏状态
+    A_SetUnitRevive = 6; 			// 复活单位
+
+    /* 游戏表现相关控制触发器动作 */
+    A_SetUnitProgress = 7; 			// 显示单位读条
+    A_SendUIEvent = 8; 				// 发送消息给Lua表现, 镜头，剧情，任务状态等
+    A_SetUnitGroupState = 9; 		// 设置单位组状态， 根据battle_unit_conf.lua里的单位配置ID控制单位组的状态
+    A_SetUnitTroop = 10; 			// 设置单位阵营
+    A_CreateUnit = 11; 				// 创建单位
+    A_ModifyUnitGroup = 12; 		// 修改单位分组
+	A_ModifyUnitAttr = 13; 			// 加成单位阵营属性
+	A_SetVariable = 14;				// 定义触发器变量
+	A_ModifyVariable = 15; 			// 修改触发器变量
+}
+
+
+// 技能形状
+message	SkillShape
+{
+	required int32 shapeType = 1;		// 技能形状 @see SkillShapeType
+	optional int32 width = 2;			// 矩形宽
+	optional int32 height = 3;			// 矩形长
+	optional int32 range = 4;			// 半径
+	optional int32 angle = 5;			// 角度
+}
+
+// 技能范围类型（中心点对应的形状）
+enum SkillShapeType
+{
+	SKILL_SHAPE_NULL = 0;				// 点，无形状
+	SKILL_SHAPE_CIRCLE = 1;				// 圆形
+	SKILL_SHAPE_RECT = 2;				// 矩形
+	SKILL_SHAPE_FAN = 3;				// 扇形
+	SKILL_SHAPE_ALL = 9;				// 全地图
+}
+
+// 技能ID类型
+enum SkillType
+{
+	SKILL_TYPE_ATTACK = 0;				// 默认为0表示普通攻击
+	SKILL_TYPE_COMMON = 1;				// 普通技能（英雄持有则为英雄技能）
+}
+
+// Buff类型
+enum BuffType
+{	
+	 BUFF_HURT = 1000;  				// 造成伤害（攻击公式伤害）
+	 BUFF_HP = 1001;  					// 血量变化（加血飞机）减血（辐射工兵）
+	 
+	 BUFF_ATTACK = 1004;   				// 攻击力变化，攻击力增或减
+	 BUFF_DEFANCE = 1005;  				// 防御力变化，防御力增或减
+	 BUFF_CIRT = 1006;    				// 暴击变化，暴击增或减
+	 BUFF_ANTICIRT = 1007;  			// 韧性变化，韧性增或减
+	 BUFF_HIT = 1008;   				// 命中变化，命中增或减
+	 BUFF_MISS = 1009;   				// 闪避变化，闪避增或减
+	 BUFF_ATTACKPERIOD = 1010;   		// 攻击速度变化，攻击时间增或减
+	 BUFF_MOVEPERIOD = 1011;   			// 移动速度变化，移动时间增或减
+
+	 BUFF_INVISIBLE = 1020;				// 隐身，不能被索敌，可被范围伤害
+     BUFF_SHIELD = 1021;				// 护盾，抵扣血
+	 BUFF_TAUNT = 1022;					// 嘲讽，吸引周围火力
+	 
+	 BUFF_CREATE = 1030;   				// 生成子单位，子单位的属性加成 
+	 BUFF_CREATE_EXTEND = 1031;   		// 生成子单位，子单位的属性继承父单位
+}
+
+
+// 伤害类型
+enum DamageType
+{
+	DMG_NORMAL = 1;						// 普通
+	DMG_MISS = 2;						// 闪避
+	DMG_CRIT = 3;						// 暴击
+	DMG_SKILL = 4;						// 技能攻击
+}
+
+// 大小定义
+message	UnitSize
+{
+	required int32 width = 1;
+	required int32 height = 2;
+}
+
+// 位置定义
+message	UnitPos
+{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+// 战场上一个战斗单元的总属性，已包含外部系统对战斗单元的数值加成影响。
+message	UnitAttr
+{
+	optional int32 unitHp = 1;			// 战斗单元总血量
+	optional int32 unitAttack = 2;		// 单元伤害
+	optional int32 unitDefence = 3;		// 单元防御
+	optional int32 unitHit = 4;			// 单元命中
+	optional int32 unitMiss = 5;		// 单元闪避
+	optional int32 unitCrit = 6;		// 单元暴击
+	optional int32 unitAntiCrit = 7;	// 单元韧性
+}
+
+// 战斗单元数据
+message	UnitData
+{
+	required int32 id = 1;				// 战斗单元ID（此处ID为非配置ID）
+	required int32 itemId = 2;			// 战斗单元配置ID
+	required int32 count = 3;			// 战斗单元当前组成的数量
+	optional int32 hp = 4;				// 战斗单元当前血量
+	optional int32 monsterId = 5;		// PVE怪物ID
+	optional UnitAttr unitAttr = 6;		// 战斗单元属性（含外部加成影响），玩家传怪物不传
+	optional int32 level = 7;			// 战斗单元等级
+    optional int32 troopType = 8;       // 阵营数据
+    optional int32 groupId = 9;         // 创建单位的组ID
+    optional int32 extendState = 10;    // 单位扩展属性
+	
+	optional string playerId = 11;		// pvp玩家ID，pve不用传
+	optional UnitPos pos = 12;			// pvp防御武器，pve战斗单元固定位置
+	repeated SkillData skillDatas = 13;	// pvp技能列表（player开启的技能列表）	
+	repeated KillData killDatas = 14;	// pvp击杀列表（战斗结算用）
+}
+
+// 击杀
+message	KillData
+{
+	required int32 id = 1;				// 兵种ID
+	required int32 count = 2;			// 击杀数量
+}
+
+// 开启的技能数据
+message	SkillData
+{
+	required int32 id = 1;				// 技能ID
+	required int32 level = 2;			// 技能等级
+}
+
+// 战场地图配置
+message	BFMapCfg
+{
+	required int32 id = 1;				// 地图ID
+	required int32 width = 2;			// 地图宽
+	required int32 height = 3;			// 地图高
+	required int32 tileWidth = 4;		// 地图格子宽
+	required int32 tileHeight = 5;		// 地图格子高
+
+	required UnitPos atkPos = 10;		// 攻方开始位置
+	required UnitPos defPos = 11;		// 防方开始位置
+	optional UnitPos warPos = 12;		// 地图交战中心位置	
+	optional int32 hoverTime = 13;		// 盘旋时间
+	optional int32 maxFindStep = 14;	// A*寻路最大步数
+    optional int32 crawlFindMode = 15;   // 爬虫寻路模式, 1: RTS, 2: CR
+	
+	repeated int32 datas = 20;			// 地图阻挡信息
+    repeated UnitPos navmeshes = 21;         // 地图导航网格
+}
+
+// 关卡配置
+message	BFMissionCfg
+{
+	required int32 id = 1;				// 关卡ID
+	required int32 type = 2;			// 关卡type @see MissionType
+	required int32 mapId = 3;			// 使用地图ID
+	required int32 timeLimit = 4;		// 最长时间
+    
+	required int32 atkWarningY = 6;		// 攻方警戒线
+	required int32 defWarningY = 7;		// 防方警戒线
+	
+	repeated int32 atkTargetItems = 11;	// 攻方需要保护的目标单元列表
+	repeated int32 defTargetItems = 12;	// 防方需要保护的目标单元列表
+	repeated MissionUnit atkUnits = 13;	// 战斗单元（攻方）
+	repeated MissionUnit defUnits = 14;	// 战斗单元（防方）
+    repeated DeployRange deployRangeList = 15; // 可布阵坐标范围
+}
+
+// 战场可布阵范围
+message DeployRange
+{
+    required int32 reserved = 1; // unused, but must has this field, the protobuf can work fine.
+    required UnitPos rmin = 2; // 最小坐标, 命名rmin避免C++编译冲突
+    required UnitPos rmax = 3; // 最大坐标, 命名rmax避免C++编译冲突
+}
+
+// 关卡怪物数据
+message	MissionUnit
+{
+	required int32 id = 1;				// 怪物配置ID
+    required int32 objId = 2;           // 怪物实例ID
+    required int32 groupId = 3;         // 单位分组ID
+	required UnitPos pos = 4;			// pve战斗单元固定位置
+	required int32 initDir = 5;			// 战斗单元初始化角度0-15
+}
+
+// 战斗单元配置
+message	BFUnitCfg
+{
+	required int32 id = 1;				// 配置ID(普通兵种或者技能兵种的ID)
+	required int32 type = 2;			// 兵种类型, 参考UnitType
+	required UnitSize size = 3;			// 战斗单元的占位大小
+	required int32 posPrior = 4;		// 占位优先级
+	required int32 viewRange = 5;       // 视野范围
+    required int32 trackRange = 6;      // 跟踪方位
+    
+	required int32 idlePeriod = 10;		// 空闲等待
+	required int32 movePeriod = 11;		// 移动时间
+	optional int32 turnPeriod = 12;		// 转向时间
+	optional int32 moveStep = 13;		// 移动步长
+	optional int32 freeFly = 14;		// 自由飞行模式(直线移动模式)
+    
+
+	repeated SkillData skillDatas = 20;	// 兵种技能
+}
+
+// 怪物配置
+message	BFMonsterCfg
+{
+	required int32 id = 1;				// 怪物ID
+	required int32 itemId = 2;			// 战斗单元配置ID
+	required UnitAttr unitAttr = 3;		// 战斗单元属性
+	repeated SkillData skillDatas = 4;	// 英雄技能列表（怪物英雄开启的技能列表）
+}
+
+// 技能配置
+message	BFSkillCfg
+{
+	required int32 id = 1;				// 技能ID
+	optional int32 type = 2;			// 技能type
+	optional int32 triggerType = 3;		// 触发类型 @see SkillTrigType
+	optional int32 castCheckType = 4;	// 技能施放检查类型 @see CastCheckType
+	optional int32 duration = 5;		// 技能动画时间（不能干别的）
+	required int32 skillCd = 6;			// 技能冷却时间
+	optional int32 cdTeam = 7;			// 冷却组
+	
+	required int32 affectCamp = 10;		// 影响的敌我阵营 @see SkillCampType
+	required int32 attackDisMin = 11;	// 最小施放距离
+	required int32 attackDisLow = 12;	// 最大施放距离下限
+	required int32 attackDisUp = 13;	// 最大施放距离上限
+	optional int32 waitTime = 14;		// 施放后等待生效时间
+	optional int32 lastTime = 15;		// 技能效果持续时间（光环类技能）
+	optional int32 bulletSpeed = 16;	// 弹道速度
+
+	required SkillShape shape = 20;		// 技能形状
+	repeated int32 enemyIds = 21;		// 影响的ID列表
+	repeated int32 enemyTypes = 22;		// 影响的type列表
+	repeated int32 buffIds = 23;		// 触发的buff列表
+	required int32 damageCnt = 24;		// Buff生效数
+	optional int32 damagePer = 25;		// Buff效果衰减（次目标伤害万分比）
+	
+	optional int32 postSkill = 30;		// 后置技能
+	optional int32 postTime = 31;		// duration后间隔postTime施放后置技能
+}
+
+// buff配置表
+message	BFBuffCfg
+{
+	required int32 id = 1;				// buff配置ID
+	required int32 type = 2;			// buff类型
+	required int32 valueType = 3;		// buff数值类型 @see ValueType
+	required int32 duration = 4;		// 持续时间
+
+	optional int32 createUnitId = 10;	// 创建战斗单元ID
+	optional int32 createUnitCnt = 11;	// 创建战斗单元数量
+
+	repeated BuffDmgCalc dmgCalc = 20;	// 不同等级计算公式 @see BuffDmgCalc
+}
+
+// buff配置表
+message	BuffDmgCalc
+{
+	required int32 level = 1;			// 等级
+	required float dmgParam1 = 2;		// 伤害类的参数1
+	required float dmgParam2 = 3;		// 伤害类的参数2
+	required float dmgParam3 = 4;		// 伤害类的参数3
+}

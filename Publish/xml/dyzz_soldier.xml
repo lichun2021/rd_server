@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" soldierId="100107" count="1200000" />
+      <data id="2" soldierId="100207" count="1200000" />
+      <data id="3" soldierId="100307" count="1200000" />
+      <data id="4" soldierId="100407" count="1200000" />
+      <data id="5" soldierId="100507" count="1200000" />
+      <data id="6" soldierId="100607" count="1200000" />
+      <data id="7" soldierId="100707" count="1200000" />
+      <data id="8" soldierId="100807" count="1200000" />
+</root>

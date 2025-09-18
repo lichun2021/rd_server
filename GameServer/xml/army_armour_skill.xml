@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data uId="201101" id="20110" level="1" skillList="301111,301121" />
+      <data uId="201102" id="20110" level="2" skillList="301112,301122" costItem="30000_9210001_7" />
+      <data uId="201103" id="20110" level="3" skillList="301113,301123" costItem="30000_9210001_13" />
+      <data uId="201104" id="20110" level="4" skillList="301114,301124" costItem="30000_9210001_20" />
+      <data uId="201105" id="20110" level="5" skillList="301115,301125" costItem="30000_9210001_27" />
+      <data uId="202101" id="20210" level="1" skillList="302111,302121" />
+      <data uId="202102" id="20210" level="2" skillList="302112,302122" costItem="30000_9210002_7" />
+      <data uId="202103" id="20210" level="3" skillList="302113,302123" costItem="30000_9210002_13" />
+      <data uId="202104" id="20210" level="4" skillList="302114,302124" costItem="30000_9210002_20" />
+      <data uId="202105" id="20210" level="5" skillList="302115,302125" costItem="30000_9210002_27" />
+      <data uId="203101" id="20310" level="1" skillList="303111,303121" />
+      <data uId="203102" id="20310" level="2" skillList="303112,303122" costItem="30000_9210003_7" />
+      <data uId="203103" id="20310" level="3" skillList="303113,303123" costItem="30000_9210003_13" />
+      <data uId="203104" id="20310" level="4" skillList="303114,303124" costItem="30000_9210003_20" />
+      <data uId="203105" id="20310" level="5" skillList="303115,303125" costItem="30000_9210003_27" />
+      <data uId="204101" id="20410" level="1" skillList="304111,304121" />
+      <data uId="204102" id="20410" level="2" skillList="304112,304122" costItem="30000_9210004_7" />
+      <data uId="204103" id="20410" level="3" skillList="304113,304123" costItem="30000_9210004_13" />
+      <data uId="204104" id="20410" level="4" skillList="304114,304124" costItem="30000_9210004_20" />
+      <data uId="204105" id="20410" level="5" skillList="304115,304125" costItem="30000_9210004_27" />
+      <data uId="211101" id="21110" level="1" skillList="311111,311121" />
+      <data uId="211102" id="21110" level="2" skillList="311112,311122" costItem="30000_9210011_7" />
+      <data uId="211103" id="21110" level="3" skillList="311113,311123" costItem="30000_9210011_13" />
+      <data uId="211104" id="21110" level="4" skillList="311114,311124" costItem="30000_9210011_20" />
+      <data uId="211105" id="21110" level="5" skillList="311115,311125" costItem="30000_9210011_27" />
+      <data uId="211201" id="21120" level="1" skillList="311211,311221" />
+      <data uId="211202" id="21120" level="2" skillList="311212,311222" costItem="30000_9210011_10" />
+      <data uId="211203" id="21120" level="3" skillList="311213,311223" costItem="30000_9210011_20" />
+      <data uId="211204" id="21120" level="4" skillList="311214,311224" costItem="30000_9210011_30" />
+      <data uId="211205" id="21120" level="5" skillList="311215,311225" costItem="30000_9210011_40" />
+      <data uId="212101" id="21210" level="1" skillList="312111,312121" />
+      <data uId="212102" id="21210" level="2" skillList="312112,312122" costItem="30000_9210012_7" />
+      <data uId="212103" id="21210" level="3" skillList="312113,312123" costItem="30000_9210012_13" />
+      <data uId="212104" id="21210" level="4" skillList="312114,312124" costItem="30000_9210012_20" />
+      <data uId="212105" id="21210" level="5" skillList="312115,312125" costItem="30000_9210012_27" />
+      <data uId="212201" id="21220" level="1" skillList="312211,312221" />
+      <data uId="212202" id="21220" level="2" skillList="312212,312222" costItem="30000_9210012_10" />
+      <data uId="212203" id="21220" level="3" skillList="312213,312223" costItem="30000_9210012_20" />
+      <data uId="212204" id="21220" level="4" skillList="312214,312224" costItem="30000_9210012_30" />
+      <data uId="212205" id="21220" level="5" skillList="312215,312225" costItem="30000_9210012_40" />
+      <data uId="213101" id="21310" level="1" skillList="313111,313121" />
+      <data uId="213102" id="21310" level="2" skillList="313112,313122" costItem="30000_9210013_7" />
+      <data uId="213103" id="21310" level="3" skillList="313113,313123" costItem="30000_9210013_13" />
+      <data uId="213104" id="21310" level="4" skillList="313114,313124" costItem="30000_9210013_20" />
+      <data uId="213105" id="21310" level="5" skillList="313115,313125" costItem="30000_9210013_27" />
+      <data uId="213201" id="21320" level="1" skillList="313211,313221" />
+      <data uId="213202" id="21320" level="2" skillList="313212,313222" costItem="30000_9210013_10" />
+      <data uId="213203" id="21320" level="3" skillList="313213,313223" costItem="30000_9210013_20" />
+      <data uId="213204" id="21320" level="4" skillList="313214,313224" costItem="30000_9210013_30" />
+      <data uId="213205" id="21320" level="5" skillList="313215,313225" costItem="30000_9210013_40" />
+      <data uId="214101" id="21410" level="1" skillList="314111,314121" />
+      <data uId="214102" id="21410" level="2" skillList="314112,314122" costItem="30000_9210014_7" />
+      <data uId="214103" id="21410" level="3" skillList="314113,314123" costItem="30000_9210014_13" />
+      <data uId="214104" id="21410" level="4" skillList="314114,314124" costItem="30000_9210014_20" />
+      <data uId="214105" id="21410" level="5" skillList="314115,314125" costItem="30000_9210014_27" />
+      <data uId="214201" id="21420" level="1" skillList="314211,314221" />
+      <data uId="214202" id="21420" level="2" skillList="314212,314222" costItem="30000_9210014_10" />
+      <data uId="214203" id="21420" level="3" skillList="314213,314223" costItem="30000_9210014_20" />
+      <data uId="214204" id="21420" level="4" skillList="314214,314224" costItem="30000_9210014_30" />
+      <data uId="214205" id="21420" level="5" skillList="314215,314225" costItem="30000_9210014_40" />
+</root>

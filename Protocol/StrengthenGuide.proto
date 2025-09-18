@@ -1,0 +1,53 @@
+option java_package = "com.hawk.game.protocol";
+
+enum StrengthenGuideType
+{
+	Building = 1;		//城建
+	Army = 2;			//士兵
+	Commander = 3;		//指挥官成就和战略点
+	Science = 4;		//科技
+	Hero = 5;			//英雄
+	Total = 25;			//总榜
+}
+
+//配置表 stronger_method_other.xml id 字段枚举
+enum StrengthenGuideOtherIDType{
+	HeroPurpleCount = 1;        //紫色英雄数量
+	HeroOrangeCount = 2;        //橙色英雄数量
+	HeroLevelCount = 3;         //英雄总等级
+	HeroStarCount = 4;          //英雄总星级
+	ScienceArms = 5;            //科技 军事总点数
+	ScienceDevelop = 6;         //科技 发展总点数
+	ScienceRes = 7;             //科技 资源总点数
+	ScienceDefence=8;           //科技 城防总店出
+	TalentPoints = 9;           //战略 获取的总点数
+	TalentClasses = 10;         //战略 解锁的总页签
+	TalentAchieve = 11;         //战略 成就总点数
+}
+
+message StrengthenGuideInfo
+{
+	required StrengthenGuideType sType = 1;
+	required int32 stageVal = 2;	    //全服平均值 0 ~ 10000
+	required int32 myStageVal = 3;		//自己所在分段战胜万分比 0~10000
+}
+
+message StrengthenGuideInfoRes
+{
+	repeated StrengthenGuideInfo infos = 1; 
+}
+
+enum HeroQualityColorType{
+	White = 1;
+	Green = 2;
+	Blue = 3;
+	Purple = 4;
+	Orange = 5;
+}
+
+enum TechClassType{
+	Res = 1;			//资源
+	Develop = 2;		//发展
+	Defence = 3;		//城防
+	Arms = 5;			//军事
+}

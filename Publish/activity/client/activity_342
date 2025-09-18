@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 342,
+		name = [[战场重逢]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">精英战士特训计划，领取免费特权卡、限时装扮套装，专属称号！</font>]],
+		priority = 11260,
+		icon = [[Activity_Icon_342_Nor.png]],
+		selecticon = [[Activity_Icon_342_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a2024322training/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a2024322training/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a2024322training/index.html]],
+		platform = [[]],
+	},
+
+}

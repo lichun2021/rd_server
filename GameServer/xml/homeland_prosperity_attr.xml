@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needProsperity="1000" attr="418_1200,301_1000" />
+      <data id="2" needProsperity="5000" attr="418_1300,301_1100" />
+      <data id="3" needProsperity="10000" attr="418_1200,301_1001" />
+      <data id="4" needProsperity="20000" attr="418_1300,301_1101" />
+      <data id="5" needProsperity="50000" attr="418_1200,301_1002" />
+</root>

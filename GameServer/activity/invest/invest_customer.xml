@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data customerId="1250001" customerProfit="200" customerAmout="10000_1000_700" customerPrice="10000_1000_58" />
+      <data customerId="1250002" customerProfit="500" customerAmout="10000_1000_2000" customerPrice="10000_1000_328" />
+      <data customerId="1250003" customerProfit="1200" customerAmout="10000_1000_4000" customerPrice="10000_1000_1288" />
+</root>

@@ -1,0 +1,77 @@
+  option java_package = "com.hawk.game.protocol";
+
+import "Const.proto";
+
+
+/**五条生产线*/
+enum PBPlantFactoryType{
+	LINE_MEDAL = 1;					// 勋章
+	LINE_CORE = 2; 					// 核心
+	LINE_CRYSTAL = 3;				// 晶体
+	LINE_BRILLIANT_MEDAL = 4;       // 辉煌勋章
+	LINE_TAIKUAGNGMUTI = 5; // 泰矿母体
+	LINE_TAINENG_HUIJIN  = 6; // 辉金
+}
+
+// 解锁生产线
+message PBUnlockFactoryRequest{
+	optional int32 cfgId = 1; // plant_factory.lua id 
+}
+
+// 收资源
+message PBCollectFactoryRequest{
+	repeated PBPlantFactoryType types = 1; // 收哪个类型
+}
+
+// 升级工厂
+message PBUpgradeFactoryReuest{
+	optional PBPlantFactoryType type = 1; // 
+}
+
+// 同步工厂, 没同步的就是没解锁.  每次三个一起同步. 
+message PBPlantFactorySync{
+	repeated PBPlantFactoryInfo factories = 1;
+}
+
+message PBPlantFactoryInfo{
+	optional PBPlantFactoryType type = 1; 
+	optional int32 cfgId = 2;
+	optional int64 lastResStoreTime = 3; // 上次储量(store) 计算时间.  收取的剩余量也会做为储量
+	optional int32	store = 4; // 上次收取, 或做用号改变前生产的储量. 储量+ 新生产量, 不超过maxStroe. 
+	optional int32 maxStore = 5; // 最大储量, 随增产做用号会变化
+	optional int32 effVal = 6; // 增产做用号加成
+	optional int32 collectOneUseMil = 7; // 生产一个 需要的mil
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// 泰能
+message PBPlantTech{
+	optional BuildingType buildType = 1; 
+	optional int32 cfgId = 2; // plant_technology.lua  id
+	repeated PBPlantTechChip chips = 3; // 组件
+}
+
+// 组件 等级小于plant_technology maxchipLevel 就飘着, 全部组件最高等级, 可升阶PlantTech
+message PBPlantTechChip{
+	optional int32 cfgId = 1; // plant_technology_chip id
+}
+
+
+message PBPlantTechSync{
+	repeated PBPlantTech teches = 1; // 没有就是没解锁
+}
+
+// 泰能升级 
+message PBPlantTechUpgradeReq{
+	optional BuildingType buildType = 1; 
+}
+
+// 泰能组件升级 
+message PBPlantTechChipUpgradeReq{
+	optional BuildingType buildType = 1; 
+	optional int32 chipCfgId = 2; // plant_technology_chip id
+}
+
+
+

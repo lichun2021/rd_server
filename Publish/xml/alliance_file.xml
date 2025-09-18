@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" typeCoefficient="1" order="1" />
+      <data id="2" type="1" typeCoefficient="2" order="2" />
+      <data id="3" type="1" typeCoefficient="3" order="3" />
+      <data id="4" type="1" typeCoefficient="4" order="4" />
+      <data id="5" type="1" typeCoefficient="5" order="5" />
+      <data id="6" type="4" typeCoefficient="8" order="6" />
+      <data id="7" type="2" typeCoefficient="5" order="7" />
+      <data id="8" type="3" order="8" />
+      <data id="9" type="4" typeCoefficient="13" order="9" />
+      <data id="10" type="4" typeCoefficient="12" order="10" />
+</root>

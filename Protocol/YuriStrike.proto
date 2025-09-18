@@ -1,0 +1,32 @@
+option java_package	= "com.hawk.game.protocol";
+
+enum YuriState{
+	LOCK = 1; // 尤里行军未达成解锁条件
+	SCANING = 2; // 准备行军. 尤里搜索中
+	MARCH = 3; // 行军中
+	YURI_HOLD = 4; // 占领玩家地块中
+	PRE_CLEAN = 5;  // 城内攻击尤里胜利, 准备开启净化
+	CLEAN = 6;// 净化中
+	CLEAN_OVER = 7;  // 净化完成了,等收取兵, 准备下一条线
+}
+
+
+/**尤里行军详情 根据状态不同变量不一定有值*/
+message YuriStrikeInfo{
+	optional YuriState state =1; // 尤里状态
+	optional int64 scanStar = 2; // 尤里搜索开始 SCANING
+	optional int64 scanEnd = 3; // 尤里搜索end
+	optional int64 cleanStart = 4; // 净化开始 CLEAN
+	optional int64 cleanEnd	=5;  // ....
+	optional int32 lockArea = 6;  // 锁定地块的id  对应 YURI_HOLD
+	optional int32 yuriCfgId = 7;  // 配置文件id
+	optional string yuriMarchId = 8;  // MARCH 状态下, 尤里行军id
+	optional int64 yuriMarchStart = 9; // 城外行军开始
+	optional int64 yuriMarchEnd = 10; // 城外行军到达
+	optional int32 hasReward = 11; // 是不事有奖励
+}
+
+// 城内反击结果
+message PBAtkYuriResp{
+	optional int32 win = 1; // 1 win 0 lose
+}

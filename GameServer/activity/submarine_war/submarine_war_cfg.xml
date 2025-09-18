@@ -1,0 +1,51 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 基地等级
+baseLimit = 35
+
+# 次数上限
+gameCountLimit = 3
+
+# 金条每日购买游戏次数花费
+buyGameCountCost = 10000_1000_30;10000_1000_30
+
+# 消耗金条获得游戏次数上限
+buyGameTimes = 3
+
+# 跨服排行服务器数量
+serverNumber = 3
+
+# 积分道具ID
+scoreItem = 30000_1364001_1
+
+# 排行榜每日奖励结算时间
+dailyRankRewarSortTime = 23:30:00
+
+# 排行榜奖励发送时间
+dailyRankRewarSendTime = 23:35:00
+
+# 排行榜展示人数
+rankSize = 100
+
+# 弹幕个数
+barrageSize = 30
+
+# 回收道具
+recover = 30000_1364001_1,30000_1780025_1
+
+# 金条购买战令等级价格
+goldPrice = 10000_1000_10
+
+# 金条购买战令等级次数
+goldTimeLimit = 20
+
+# 扫荡时从最高关卡-n关开始
+sweepLevel = 2
+
+# 潜艇大战积分折算经验比例 （浮点数 0.01=1%）
+baseTransRate = 1
+
+# 升级战令后折算比例
+highTransRate = 1.5
+

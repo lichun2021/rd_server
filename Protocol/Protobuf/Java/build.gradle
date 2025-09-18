@@ -1,0 +1,13 @@
+allprojects {
+    apply plugin: 'java'
+}
+
+project.archivesBaseName = "gameprotocol";
+
+dependencies {
+	compile fileTree(dir: 'lib', include: '*.jar')
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

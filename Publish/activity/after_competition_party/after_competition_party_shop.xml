@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" homageValue="2" buyGoodsNeedCount="3" giveGoods="3200001" getGoods="3200006" redPackReward="3200011" shopAddValue="0_3600_60_200_300,3600_75600_60_24_36" buyTimesLimit="10" getTimesLimit="20" />
+      <data id="2" homageValue="3" buyGoodsNeedCount="6" giveGoods="3200002" getGoods="3200007" redPackReward="3200012" shopAddValue="0_3600_60_200_300,3600_75600_60_24_36" buyTimesLimit="10" getTimesLimit="20" />
+      <data id="3" homageValue="4" buyGoodsNeedCount="3" giveGoods="3200003" getGoods="3200008" redPackReward="3200013" shopAddValue="0_3600_60_200_300,3600_75600_60_24_36" buyTimesLimit="10" getTimesLimit="20" />
+      <data id="4" homageValue="5" buyGoodsNeedCount="6" giveGoods="3200004" getGoods="3200009" redPackReward="3200014" shopAddValue="0_3600_60_200_300,3600_75600_60_24_36" buyTimesLimit="10" getTimesLimit="20" />
+      <data id="5" homageValue="6" buyGoodsNeedCount="3" giveGoods="3200005" getGoods="3200010" redPackReward="3200015" shopAddValue="0_3600_60_200_300,3600_75600_60_24_36" buyTimesLimit="10" getTimesLimit="20" />
+</root>

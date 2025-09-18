@@ -1,0 +1,21 @@
+return {
+	prop =
+	{
+		activityId = 83,
+		name = [[版本预告]],
+		title = [[预告详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">红警OL征程再起</font>]],
+		priority = 11280,
+		icon = [[Activity_Icon_83_Nor.png]],
+		selecticon = [[Activity_Icon_83_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[]],
+		urlWX = [[]],
+		guestUrl = [[]],
+		urlIpadQQ = [[]],
+		urlIpadWX = [[]],
+		guestIpadUrl = [[]],
+		platform = [[]],
+	},
+
+}

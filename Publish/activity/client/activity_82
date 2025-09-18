@@ -1,0 +1,18 @@
+return {
+	prop =
+	{
+		activityId = 82,
+		name = [[赛博之战S2]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">赛博之战S2赛季即将开启！战场玩法全新改版，敬请期待！</font>]],
+		priority = 11270,
+		icon = [[Activity_Icon_82_Nor.png]],
+		selecticon = [[Activity_Icon_82_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://hongjing.qq.com/act/7604/a20220314hlh/index.html]],
+		urlWX = [[https://hongjing.qq.com/act/7604/a20220314hlh/index.html]],
+		guestUrl = [[https://hongjing.qq.com/act/7604/a20220314hlh/index.html]],
+		platform = [[]],
+	},
+
+}

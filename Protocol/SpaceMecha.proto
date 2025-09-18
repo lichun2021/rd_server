@@ -1,0 +1,194 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Army.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+// 星甲召唤舱体放置请求
+message	PlaceSpaceMachineReq
+{
+	required int32 x = 1;
+	required int32 y = 2;
+	optional int32 level  = 3;  // 难度
+}
+
+// 星甲召唤舱体阶段
+enum SpaceMechaStage
+{
+	SPACE_PREPARE  = 0;  // 预热阶段
+	SPACE_GUARD_1  = 1;  // 防守阶段1
+	SPACE_GUARD_2  = 2;  // 防守阶段2
+	SPACE_GUARD_3  = 3;  // 防守阶段3
+	SPACE_GUARD_4  = 4;  // 防守阶段4
+	SPACE_END      = 5;  // 结束
+}
+
+// 星甲召唤舱体类型
+enum MechaSpaceType
+{
+	MAIN_SPACE  = 1; // 主舱
+	SLAVE_SPACE = 2; // 子舱
+}
+
+// 舱体信息
+message MechaSpacePB
+{
+	required int32 remainBlood = 1;  // 当前剩余血量
+	optional int32 level       = 2;  // 舱体等级
+	optional int64 nearestTime = 3;  // 最近一波敌军攻击达到的时间
+	optional int32 status      = 4;  // 出兵状态：1舱体内有驻军，0无驻军
+}
+
+// 星甲召唤信息
+message SpaceMechaInfoPB
+{
+	required SapceMechaSummary summary   = 1; // 概要信息
+	// 下面的非服务器主动推，需要客户端请求的时候或登录时才有；上面的概要信息，在阶段切换时，服务器会主动推送
+	optional Stage1DetailPB prepareDetail    = 2; // 预热阶段详细信息：预热阶段发防守阶段1第一波敌军的信息
+	optional Stage1DetailPB stage1Detail     = 3; // 防守阶段1详细
+	optional Stage2DetailPB stage2Detail     = 4; // 防守阶段2详细
+	optional Stage3DetailPB stage3Detail     = 5; // 防守阶段3详细
+	optional Stage4DetailPB stage4Detail     = 6; // 防守阶段4详细
+}
+
+// 星甲召唤概要信息
+message SapceMechaSummary
+{
+	required SpaceMechaStage stage       = 1;  // 所处阶段
+	optional int64 endTime               = 2;  // 所处阶段结束时间
+	optional int32 mainSpaceBlood        = 3;  // 主舱耐久度
+	optional int32 space1Blood           = 4;  // 子舱1耐久度
+	optional int32 space2Blood           = 5;  // 子舱2耐久度
+	optional int32 level                 = 6;  // 舱体等级
+	repeated SpaceMechaEffValPB spaceEffVal = 7; // 舱体加成作用号
+	repeated SpaceMechaEffValPB enemyEffVal = 8; // 敌军加成作用号
+	optional int32 strongHoldRewardTimes    = 9; // 当日进攻据点获得奖励次数
+	optional int32 posX   = 10;  // 主舱坐标X
+	optional int32 posY   = 11;  // 主舱坐标Y
+	optional int32 strongHoldAtkTimes    = 12; // 当日进攻据点次数
+}
+
+message SpaceMechaEffValPB
+{
+	required int32 effId  = 1;
+	required int32 effVal = 2;
+}
+
+// 防守阶段1详细
+message Stage1DetailPB
+{
+	optional int32  wave                 = 1;  // 当前波次
+	repeated WaveEnemyAtkInfo waveEnemy  = 2;  // 波次敌军信息
+}
+
+// 防守阶段2详细
+message Stage2DetailPB
+{
+    repeated StrongHoldPB strongHold            = 1;  // 所有据点
+	optional int32  wave                        = 2;  // 当前波次
+}
+
+// 防守阶段3详细
+message Stage3DetailPB
+{
+	optional int64 reachTime             = 1;  // 到达时间
+	optional int32 strongHoldId          = 2;  // 特殊据点ID
+	optional int32 broken                = 3;  // 是否击破：1已被击破，0未被击破
+	repeated EnemyAtkInfo mainSpaceEnemy = 4;  // 进攻主舱的敌军信息
+}
+
+// 防守阶段4详细
+message Stage4DetailPB
+{
+	repeated MechaBoxPB box  = 1;
+}
+
+// 波次敌军信息
+message WaveEnemyAtkInfo
+{
+	optional int32  wave                 = 1;  // 波次
+	optional int64 reachTime             = 2;  // 波次到达时间
+	repeated EnemyAtkInfo mainSpaceEnemy = 3;  // 进攻主舱的敌军信息
+	repeated EnemyAtkInfo space1Enemy    = 4;  // 进攻子舱1的敌军
+	repeated EnemyAtkInfo space2Enemy    = 5;  // 进攻子舱2的敌军
+}
+
+// 进攻的敌军信息
+message EnemyAtkInfo
+{
+	required int32  enemyId         = 1;  // 敌军配置ID
+	required int64  reachTime       = 2;  // 敌军到达时间
+	optional int32  sourceX         = 3;  // 起点x
+	optional int32  sourceY         = 4;  // 起点y
+	repeated PBHeroInfo		heros   = 5;  // 英雄信息
+	repeated ArmySoldierPB 	armyInfo = 6; // 部队信息
+}
+
+// 据点状态
+enum StrongHoldStatus
+{
+	HOLD_NO_ATTACK    = 1;  // 无人进攻
+	HOLD_BE_ATTACKING = 2;  // 进攻中
+	HOLD_BROKEN       = 3;  // 已被击破
+}
+
+// 据点信息
+message StrongHoldPB
+{
+    required int32 id   = 1;   // 据点ID
+	required int32 posX = 2;   // 坐标X
+	required int32 posY = 3;   // 坐标Y
+	required int32 hpNum = 4;     // 当前是第几管血
+	required int32 remainBlood = 5;  // 当前管血剩余血量
+	required StrongHoldStatus status     = 6;  // 状态
+	repeated WaveEnemyAtkInfo waveEnemy  = 7;  // 波次敌军信息
+	repeated ArmySoldierPB army			 = 8;  // 据点防守部队信息
+	optional int32 special      = 9;  // 是否是特殊据点：1是0否
+	repeated PBHeroInfo hero 	= 10; // 英雄信息
+	optional int32 enemyStatus  = 11; // 出兵状态：1已出兵，0未出兵
+	optional int32  wave        = 12; // 当前波次
+	repeated ArmySoldierPB 	armyInfo = 13; // 进攻舱体的部队信息（世界点详情信息里面需要的）
+	optional int32  enemyId          = 14; // 据点对应的出兵野怪ID
+}
+
+// 宝箱信息
+message MechaBoxPB
+{
+    required int32 id   = 1;   // 宝箱ID
+	required int32 posX = 2;   // 坐标X
+	required int32 posY = 3;   // 坐标Y
+	required int32 status      = 4; // 状态：0-可采集，1-采集中
+	optional string playerName = 5; // 采集人名字
+	optional string playerId   = 6; // 采集人ID
+	optional int64 endTime     = 7; // 采集结束时间 
+}
+
+
+// 舱体驻扎部队行军信息
+message MechaSpaceQuarterMarch
+{
+	required string playerId 	= 1;
+	required string name 	 	= 2;
+	optional string pfIcon   	= 3;
+	optional string guildTag 	= 4;
+	optional int32 icon 	 	= 5;
+	repeated ArmySoldierPB army = 6;
+	required string marchId 	= 7;
+	repeated int32 heroId 		= 8;
+	repeated PBHeroInfo hero 	= 9;
+	optional PBSuperSoldierInfo ssoldier 	= 10; 
+}
+
+// 舱体驻扎部队信息请求
+message MechaSpaceQuarterInfoReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+// 舱体驻扎部队信息响应
+message MechaSpaceQuarterInfoResp
+{
+	repeated MechaSpaceQuarterMarch quarterMarch = 1;
+	optional int32 massSoldierNum				 = 2; //队长集结上限
+}

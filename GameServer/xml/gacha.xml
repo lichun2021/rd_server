@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data gachaType="101" freeTime="300" freeTimesLimit="5" ticketExpend="30000_800109_1" ticketPrice="10000_1001_38" buyItem="30000_1510001_1" pseudoDropTimes="100" firstTimeGachaPool="10102" freeGachaPool="10102" normalGachaPoolA="10102" pseudoDropGachaPool="10102" />
+      <data gachaType="110" ticketExpend="30000_800109_10" ticketPrice="10000_1001_38" buyItem="30000_1510001_10" pseudoDropTimes="10" normalGachaPoolA="10102" normalGachaPoolB="10102" pseudoDropGachaPool="10102" />
+      <data gachaType="201" ticketExpend="30000_800110_1" ticketPrice="10000_1000_168" buyItem="30000_1510003_1" pseudoDropTimes="100" firstTimeGachaPool="20101" normalGachaPoolA="20102" pseudoDropGachaPool="20102" />
+      <data gachaType="210" ticketExpend="30000_800110_10" ticketPrice="10000_1000_168" buyItem="30000_1510003_10" pseudoDropTimes="10" normalGachaPoolA="20104" normalGachaPoolB="21004" pseudoDropGachaPool="21004" />
+      <data gachaType="301" freeTime="300" freeTimesLimit="5" ticketExpend="30000_800143_1" ticketPrice="10000_1001_50" buyItem="30000_13310001_1" pseudoDropTimes="100" firstTimeGachaPool="30102" freeGachaPool="30102" normalGachaPoolA="30102" pseudoDropGachaPool="30102" />
+      <data gachaType="310" ticketExpend="30000_800143_10" ticketPrice="10000_1001_50" buyItem="30000_13310001_10" pseudoDropTimes="999" normalGachaPoolA="30104" normalGachaPoolB="31004" pseudoDropGachaPool="31004" />
+      <data gachaType="401" freeTime="300" freeTimesLimit="3" ticketExpend="30000_800000_1" ticketPrice="10000_1000_128" buyItem="30000_800001_1" pseudoDropTimes="100" firstTimeGachaPool="31008" normalGachaPoolA="31005" pseudoDropGachaPool="31005" firstTimeGachaPoolActivity="31008" normalGachaPoolAActivity="31009" pseudoDropGachaPoolActivity="31009" />
+      <data gachaType="410" ticketExpend="30000_800000_10" ticketPrice="10000_1000_128" buyItem="30000_800001_10" pseudoDropTimes="10" normalGachaPoolA="31005" normalGachaPoolB="31005" pseudoDropGachaPool="31005" normalGachaPoolAActivity="31005" normalGachaPoolBActivity="31005" pseudoDropGachaPoolActivity="31005" />
+      <data gachaType="501" buyItem="30000_800001_1" normalGachaPoolA="31007" normalGachaPoolAActivity="31007" />
+      <data gachaType="601" freeTime="300" freeTimesLimit="5" ticketExpend="30000_21070056_1" buyItem="30000_840172_1" pseudoDropTimes="60" firstTimeGachaPool="41001" freeGachaPool="41001" normalGachaPoolA="41001" pseudoDropGachaPool="41002" />
+      <data gachaType="610" ticketExpend="30000_21070056_10" buyItem="30000_840172_10" pseudoDropTimes="60" normalGachaPoolA="41001" normalGachaPoolB="41001" pseudoDropGachaPool="41002" />
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" count="3,3" coordinate="0_1,1_7,2_0,4_8,5_1,6_7" reward="3630001" boxScore="300" />
+      <data id="2" count="12,12" reward="3630002" boxScore="100" />
+      <data id="3" count="12,12" reward="3630003" boxScore="50" />
+</root>

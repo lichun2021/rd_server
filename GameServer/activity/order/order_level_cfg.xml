@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data level="1" levelUpExp="0" normalReward="30000_850007_1,30000_850006_1" advReward="30000_1000003_10,30000_1510005_10" />
+      <data level="2" levelUpExp="500" normalReward="30000_850037_1,30000_850036_1" advReward="30000_850008_1,30000_101050_5" />
+      <data level="3" levelUpExp="1000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_800100_5,30000_13310003_10" />
+      <data level="4" levelUpExp="1500" normalReward="30000_850027_1,30000_850026_1" advReward="30000_850038_1,30000_105050_5" />
+      <data level="5" levelUpExp="2000" normalReward="30000_1000002_2,30000_1510003_3" advReward="30000_1480001_25,30000_1000002_10" />
+      <data level="6" levelUpExp="2500" normalReward="30000_850007_1,30000_850006_1" advReward="30000_800143_5,30000_800100_3" />
+      <data level="7" levelUpExp="3000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_850018_1,30000_104050_5" />
+      <data level="8" levelUpExp="3500" normalReward="30000_850017_1,30000_850016_1" advReward="30000_840166_50,30000_800101_1" />
+      <data level="9" levelUpExp="4000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_850028_1,30000_810001_10" />
+      <data level="10" levelUpExp="4500" normalReward="30000_810001_3,30000_1480001_20" advReward="30000_810002_5,30000_1480001_100" />
+      <data level="11" levelUpExp="5000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850008_1,30000_810001_10" />
+      <data level="12" levelUpExp="6000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_1480001_25,30000_800143_5" />
+      <data level="13" levelUpExp="7000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_840194_30,30000_13310003_10" />
+      <data level="14" levelUpExp="8000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_850038_1,30000_104050_5" />
+      <data level="15" levelUpExp="9000" normalReward="30000_840166_5,30000_800143_2" advReward="30000_800101_3,30000_800100_5" />
+      <data level="16" levelUpExp="10000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850018_1,30000_101050_5" />
+      <data level="17" levelUpExp="12000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_1000002_10,30000_1510003_10" />
+      <data level="18" levelUpExp="14000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_850028_1,30000_105050_5" />
+      <data level="19" levelUpExp="16000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_840166_50,30000_1480001_25" />
+      <data level="20" levelUpExp="18000" normalReward="30000_850007_2,30000_101050_1" advReward="30000_850009_4,30000_850039_2" />
+      <data level="21" levelUpExp="20000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_840194_30,30000_800143_5" />
+      <data level="22" levelUpExp="23000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_850008_1,30000_101050_5" />
+      <data level="23" levelUpExp="26000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_1480001_25,30000_13310003_10" />
+      <data level="24" levelUpExp="29000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_850038_1,30000_810001_10" />
+      <data level="25" levelUpExp="32000" normalReward="30000_800101_1,30000_840166_5" advReward="30000_850018_1,30000_101050_5" />
+      <data level="26" levelUpExp="35000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_1480001_25,30000_840166_50" />
+      <data level="27" levelUpExp="38000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_1000002_10,30000_1510003_10" />
+      <data level="28" levelUpExp="41000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_850028_1,30000_104050_5" />
+      <data level="29" levelUpExp="44000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_800100_5,30000_800100_5" />
+      <data level="30" levelUpExp="47000" normalReward="30000_850037_2,30000_104050_1" advReward="30000_1480001_200,30000_1300017_100" />
+      <data level="31" levelUpExp="50000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850008_1,30000_101050_5" />
+      <data level="32" levelUpExp="54000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_1000002_10,30000_1510003_10" />
+      <data level="33" levelUpExp="58000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_850038_1,30000_104050_5" />
+      <data level="34" levelUpExp="62000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_1480001_50,30000_1300017_50" />
+      <data level="35" levelUpExp="66000" normalReward="30000_840166_10,30000_1480001_20" advReward="30000_840194_30,30000_13310003_10" />
+      <data level="36" levelUpExp="70000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850018_1,30000_810001_10" />
+      <data level="37" levelUpExp="75000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_1300017_50,30000_13310003_10" />
+      <data level="38" levelUpExp="80000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_850028_1,30000_810001_10" />
+      <data level="39" levelUpExp="85000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_800101_2,30000_1300017_50" />
+      <data level="40" levelUpExp="90000" normalReward="30000_850017_2,30000_101050_1" advReward="30000_850019_4,30000_850029_2" />
+      <data level="41" levelUpExp="95000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850038_1,30000_105050_5" />
+      <data level="42" levelUpExp="100000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_840166_100,30000_800143_10" />
+      <data level="43" levelUpExp="105000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_1000002_10,30000_1510003_20" />
+      <data level="44" levelUpExp="110000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_850008_1,30000_810001_10" />
+      <data level="45" levelUpExp="115000" normalReward="30000_850008_1,30000_850007_1" advReward="30000_1480001_50,30000_840194_60" />
+      <data level="46" levelUpExp="120000" normalReward="30000_850007_1,30000_850006_1" advReward="30000_850018_1,30000_101050_5" />
+      <data level="47" levelUpExp="125000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_850028_1,30000_810001_10" />
+      <data level="48" levelUpExp="130000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_800143_10,30000_13310003_10" />
+      <data level="49" levelUpExp="135000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_1000002_10,30000_1480001_50" />
+      <data level="50" levelUpExp="140000" normalReward="30000_810002_1,30000_1001056_5" advReward="30000_1000003_5,30000_1001056_5" />
+      <data level="51" levelUpExp="145000" advReward="30000_1480001_50,30000_1510003_30" />
+      <data level="52" levelUpExp="150000" advReward="30000_850009_1,30000_850008_1" />
+      <data level="53" levelUpExp="155000" advReward="30000_810002_2,30000_101050_5" />
+      <data level="54" levelUpExp="160000" advReward="30000_800100_5,30000_13310003_30" />
+      <data level="55" levelUpExp="165000" normalReward="30000_850018_1,30000_850017_1" advReward="30000_9050807_1,30000_1000002_10" />
+      <data level="56" levelUpExp="170000" advReward="30000_850039_1,30000_850038_1" />
+      <data level="57" levelUpExp="175000" advReward="30000_850029_1,30000_850028_1" />
+      <data level="58" levelUpExp="180000" advReward="30000_850019_1,30000_850018_1" />
+      <data level="59" levelUpExp="186000" advReward="30000_810002_2,30000_104050_5" />
+      <data level="60" levelUpExp="192000" normalReward="30000_800101_1,30000_800100_2" advReward="30000_800143_30,30000_13310005_30" />
+      <data level="61" levelUpExp="198000" advReward="30000_850009_1,30000_850008_1" />
+      <data level="62" levelUpExp="204000" advReward="30000_1000002_10,30000_1510003_30" />
+      <data level="63" levelUpExp="210000" advReward="30000_810002_2,30000_104050_5" />
+      <data level="64" levelUpExp="216000" advReward="30000_1300017_100,30000_1480001_50" />
+      <data level="65" levelUpExp="222000" advReward="30000_850039_1,30000_850038_1" />
+      <data level="66" levelUpExp="228000" advReward="30000_800143_10,30000_13310003_30" />
+      <data level="67" levelUpExp="234000" advReward="30000_850019_1,30000_850018_1" />
+      <data level="68" levelUpExp="240000" advReward="30000_810002_2,30000_101050_5" />
+      <data level="69" levelUpExp="248000" advReward="30000_850029_1,30000_850028_1" />
+      <data level="70" levelUpExp="256000" normalReward="30000_850038_1,30000_850037_1" advReward="30000_1000003_5,30000_1510005_20" />
+      <data level="71" levelUpExp="264000" advReward="30000_800101_3,30000_840166_100" />
+      <data level="72" levelUpExp="272000" advReward="30000_1480001_50,30000_1300017_100" />
+      <data level="73" levelUpExp="280000" advReward="30000_850009_1,30000_850008_1" />
+      <data level="74" levelUpExp="288000" advReward="30000_810002_2,30000_101050_5" />
+      <data level="75" levelUpExp="296000" advReward="30000_850039_1,30000_850038_1" />
+      <data level="76" levelUpExp="304000" advReward="30000_850019_1,30000_850018_1" />
+      <data level="77" levelUpExp="312000" advReward="30000_1510003_30,30000_1000002_10" />
+      <data level="78" levelUpExp="320000" advReward="30000_850029_1,30000_850028_1" />
+      <data level="79" levelUpExp="328000" advReward="30000_810002_2,30000_104050_5" />
+      <data level="80" levelUpExp="336000" normalReward="30000_850028_1,30000_850027_1" advReward="30000_1480001_500,30000_840194_60" />
+      <data level="81" levelUpExp="344000" advReward="30000_1000002_10,30000_1480001_50" />
+      <data level="82" levelUpExp="352000" advReward="30000_850009_1,30000_850008_1" />
+      <data level="83" levelUpExp="360000" advReward="30000_850039_1,30000_850038_1" />
+      <data level="84" levelUpExp="370000" advReward="30000_1480001_100,30000_800101_3" />
+      <data level="85" levelUpExp="380000" advReward="30000_1510003_30,30000_840166_100" />
+      <data level="86" levelUpExp="390000" advReward="30000_810002_2,30000_101050_5" />
+      <data level="87" levelUpExp="400000" advReward="30000_850019_1,30000_850018_1" />
+      <data level="88" levelUpExp="410000" advReward="30000_850029_1,30000_850028_1" />
+      <data level="89" levelUpExp="420000" advReward="30000_810002_2,30000_104050_5" />
+      <data level="90" levelUpExp="430000" normalReward="30000_9050807_1,30000_1300017_5" advReward="30000_9050830_1,30000_1300017_200" />
+      <data level="91" levelUpExp="440000" advReward="30000_13310003_100,30000_1300017_100" />
+      <data level="92" levelUpExp="450000" advReward="30000_1510003_100,30000_810002_3" />
+      <data level="93" levelUpExp="460000" advReward="30000_1480001_100,30000_840166_100" />
+      <data level="94" levelUpExp="470000" advReward="30000_850009_2,30000_850008_1" />
+      <data level="95" levelUpExp="480000" advReward="30000_9022590_1,30000_850039_2" />
+      <data level="96" levelUpExp="490000" advReward="30000_850019_2,30000_850018_1" />
+      <data level="97" levelUpExp="500000" advReward="30000_850029_2,30000_850028_1" />
+      <data level="98" levelUpExp="510000" advReward="30000_1300017_100,30000_840194_100" />
+      <data level="99" levelUpExp="520000" advReward="30000_810002_3,30000_1480001_100" />
+      <data level="100" levelUpExp="530000" normalReward="30000_1000003_5,30000_1510005_10" advReward="30000_1000003_30,30000_1510005_30" />
+</root>

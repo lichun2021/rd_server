@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" exchangerequirements="30000_29200001_3" exchangeobtain="30000_800002_60" limittimes="10" />
+      <data id="2" exchangerequirements="30000_29200001_3" exchangeobtain="30000_802003_15" limittimes="10" />
+      <data id="3" exchangerequirements="30000_29200001_2" exchangeobtain="30000_21063002_25" limittimes="20" />
+      <data id="4" exchangerequirements="30000_29200001_2" exchangeobtain="30000_21063003_25" limittimes="20" />
+      <data id="5" exchangerequirements="30000_29200001_1" exchangeobtain="30000_1800001_8" limittimes="30" />
+      <data id="6" exchangerequirements="30000_29200001_1" exchangeobtain="30000_1800000_80" limittimes="30" />
+      <data id="7" exchangerequirements="30000_29200001_1" exchangeobtain="30000_1300017_80" limittimes="30" />
+      <data id="8" exchangerequirements="30000_29200001_1" exchangeobtain="30000_810002_3" limittimes="99" />
+</root>

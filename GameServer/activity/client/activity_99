@@ -1,0 +1,23 @@
+return {
+	prop =
+	{
+		activityId = 99,
+		name = [[欢购豪礼]],
+		title = [[活动详情]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">每日可购买对应的礼包，礼包每日限量，超低折扣限时购买。<br/><font color="#99a5b6" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">物品列表及概率公式</font><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">普通勋章宝箱（6元）</font><br/>购买必得50万自选资源*8<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*30    概率25%<br/>荣誉勋章*40   概率25%<br/>荣誉勋章*50   概率25%<br/>荣誉勋章*60    概率25%<br/><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">精致勋章宝箱（30元）</font><br/>购买必得50万自选资源*40<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*150    概率25%<br/>荣誉勋章*175    概率25%<br/>荣誉勋章*200   概率25%<br/>荣誉勋章*250   概率25%<br/><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">中级勋章宝箱（68元）</font><br/>购买必得150万自选资源*30<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*330    概率25%<br/>荣誉勋章*396   概率25%<br/>荣誉勋章*488   概率25%<br/>荣誉勋章*568    概率25%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">高级勋章宝箱（128元）</font><br/>购买必得500万自选资源*18<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*660    概率25%<br/>荣誉勋章*760    概率25%<br/>荣誉勋章*900   概率25%<br/>荣誉勋章*1080   概率25%<br/><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">豪华勋章宝箱（328元）</font><br/>购买必得500万自选资源*50<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*1700    概率25%<br/>荣誉勋章*2000    概率25%<br/>荣誉勋章*2300   概率25%<br/>荣誉勋章*2780   概率25%<br/><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">极品勋章宝箱（648元）</font><br/>购买必得500万自选资源*100<br/>额外随机获得以下物品中的一种：<br/>荣誉勋章*3300    概率25%<br/>荣誉勋章*4000    概率25%<br/>荣誉勋章*4600   概率25%<br/>荣誉勋章*5280   概率25%<br/></font>]],
+		priority = 20240,
+		icon = [[Activity_Icon_99_Nor.png]],
+		selecticon = [[Activity_Icon_99_Sel.png]],
+		bigIcon = [[]],
+	},
+	buy_gifts = [[id	itemId	awardId	androidPayId	iosPayId
+1	2	1	1	1
+100001	1864719	4950031	450001	460001
+100002	1864720	4950032	450002	460002
+100003	1864721	4950033	450003	460003
+100004	1864722	4950034	450004	460004
+100005	1864723	4950035	450005	460005
+100006	1864724	4950036	450006	460006
+]],
+
+}

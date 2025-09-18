@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needItem="30000_1150091_10" gainItem="30000_1001044_1" times="300" />
+      <data id="2" needItem="30000_1150091_10" gainItem="30000_1001046_1" times="300" />
+      <data id="3" needItem="30000_1150091_10" gainItem="30000_1001041_1" times="300" />
+      <data id="4" needItem="30000_1150091_10" gainItem="30000_1001045_1" times="300" />
+      <data id="5" needItem="30000_1150091_10" gainItem="30000_1001042_1" times="300" />
+      <data id="6" needItem="30000_1150091_10" gainItem="30000_1001035_1" times="300" />
+      <data id="7" needItem="30000_1150091_10" gainItem="30000_1001036_1" times="300" />
+      <data id="8" needItem="30000_1150091_10" gainItem="30000_1001018_1" times="300" />
+      <data id="9" needItem="30000_1150091_10" gainItem="30000_1001037_1" times="300" />
+      <data id="10" needItem="30000_1150091_10" gainItem="30000_1001020_1" times="300" />
+      <data id="11" needItem="30000_1150091_7" gainItem="30000_850007_1" times="999" />
+      <data id="12" needItem="30000_1150091_7" gainItem="30000_850037_1" times="999" />
+      <data id="13" needItem="30000_1150091_7" gainItem="30000_850017_1" times="999" />
+      <data id="14" needItem="30000_1150091_7" gainItem="30000_850027_1" times="999" />
+      <data id="15" needItem="30000_1150091_3" gainItem="30000_100050_1" times="999" />
+      <data id="16" needItem="30000_1150091_1" gainItem="30000_1510003_3" times="999" />
+      <data id="17" needItem="30000_1150091_1" gainItem="30000_13310003_3" times="999" />
+</root>

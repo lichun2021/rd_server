@@ -1,0 +1,116 @@
+option java_package = "com.hawk.game.protocol";
+
+
+
+//刷新的时候同步，登录的时候同步
+message TravelShopInfoSync{
+	optional int64 nextRefreshTime = 1; //下一次的刷新时间.
+	repeated TravelShopItemMsg items = 2; //物品信息
+	optional int32 refreshCount = 3; //刷新次数 应客户端要求加上.
+	optional int32 isActivity = 4;  //是否在特惠庆典活动中  1是   0否
+	optional int32 activityId = 5; //活动ID
+	optional int64 friendly = 6; //黑市商店友好度
+	optional int64 friendlyCardBuyTime = 7; // 黑市商店友好度特权卡购买时间
+	optional int64 friendlyCommAwardCount = 8; //黑市商店普通奖励次数
+	optional int64 friendlyPrivilegeAwardCount = 9; //黑市商店特权奖励次数
+	optional int64 friendlyPrivilegeGroup = 10; //黑市商店特权奖励组ID
+	repeated RateChangeParam rateParam    = 11; //已购买的各个物品权重值变化参数
+}
+
+//权重值修改变化相关参数
+message RateChangeParam
+{
+	required int32 cfgId     = 1; //配置表ID
+	required int32 buyTimes  = 2; //购买次数
+	required int32 newRate   = 3; //最新权重值（初始权重值根据cfgId从配置中获取）
+}
+
+
+//购买物品
+message TravelShopBuyReq{
+	required int32 cfgId = 1; //购买哪一个物品
+}
+
+message TravelShopBuyResp {
+	optional int32 rlt = 1; //0位成功, 其它为错误码.
+	optional TravelShopItemMsg travelShopItemMsg = 2; //成功之后返回该结构体，失败之后不返回
+}
+
+//刷新
+message TravelShoRefreshReq{
+}
+message TravelShopRefreshResp{
+	optional int32 rlt = 1; //
+}
+
+message TravelShopItemMsg{
+	required int32 cfgId=1; //配置表ID
+	required int32 num=2; //刷新的数量
+	required int32 discount=3; //打折百分比
+	required int32 bought=4; //是否已经购买 1是,0否
+	optional TravelGiftItemMsg giftMsg = 5; //黑市礼包, 可为空
+}
+
+//黑市礼包结构体
+message TravelGiftItemMsg {
+	required int32 travelShopGiftId = 1;//黑市礼包的配置
+	required int32 buyNum = 2; //购买次数
+}
+
+//购买黑市礼包
+message TravelGiftBuyC {
+	required int32 travelShopGiftId = 1;//黑市礼包的配置ID
+}
+
+//购买黑市礼包返回
+message TravelGiftBuyS {
+	optional int32 rlt = 1; //0位成功, 其它为错误码.
+	optional TravelGiftItemMsg giftItemMsg = 2; //成功之后返回该结构体, 失败之后不返回
+}
+
+// 限时商店商品库信息（新上架商品库、登录、购买返回数据推送都用此PB）
+message TimeLimitStoreGroupInfo
+{
+	required int32 groupId  = 1;  // 商品库ID
+	required int64 endTime  = 2;  // 结束时间
+	repeated TimeLimitStoreGoodsBuyInfo goodsBoughtInfo = 3; // 商品已购买信息
+	required bool nofityEnd = 4;  // 是否结束
+}
+
+// 限时商店物品购买信息
+message TimeLimitStoreGoodsBuyInfo
+{
+	required int32 goodsId = 1; // 物品ID
+	required int32 boughtCount = 2; // 已购买数量
+}
+
+// 限时商店购买请求
+message TimeLimitStoreBuyReq
+{
+	required int32 shopCfgId = 1;  // 商品配置ID（对应goods_timelimit_store表中的id字段）
+	required int32 buyCount = 2;   // 购买数量
+}
+
+// 黑市商店友好度增加推送
+message TravelShopFriendlyAddPush
+{
+	required int32 addFriendly = 1; // 增加友好度
+	required int64 afterFriendly = 2; // 增加后友好度
+	required int64 friendlyCommAwardCount = 3; //黑市商店普通奖励次数
+	required int64 friendlyPrivilegeAwardCount = 4; //黑市商店特权奖励次数
+}
+
+//领奖
+message TravelShopFriendlyAwardAchieveReq{
+	required int32 awardType = 1;   // 1普通奖励   2 特权奖励
+}
+
+//设置特权奖励随机组ID
+message TravelShopFriendlyAwardGroupSetReq{
+	required int32 groupId = 1; //组别ID
+}
+
+//设置特权奖励随机组ID 返回
+message TravelShopFriendlyAwardGroupSetResp{
+	required int32 groupId = 1; //组别ID
+}

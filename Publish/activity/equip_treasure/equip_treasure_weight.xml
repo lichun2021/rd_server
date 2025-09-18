@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" specAwardGot="0" drewTimes="0_79" specCardCount="0" cardWeight="1_8000,2_800,3_1200" />
+      <data id="2" specAwardGot="0" drewTimes="0_79" specCardCount="1" cardWeight="1_5000,2_2000,3_3000" />
+      <data id="3" specAwardGot="0" drewTimes="0_79" specCardCount="2" cardWeight="1_600,2_3760,3_5640" />
+      <data id="4" specAwardGot="0" drewTimes="80_9999" specCardCount="0" cardWeight="1_10000,2_0,3_0" />
+      <data id="5" specAwardGot="0" drewTimes="80_9999" specCardCount="1" cardWeight="1_10000,2_0,3_0" />
+      <data id="6" specAwardGot="0" drewTimes="80_9999" specCardCount="2" cardWeight="1_10000,2_0,3_0" />
+      <data id="7" specAwardGot="1" drewTimes="0_9999" specCardCount="0" cardWeight="1_8000,2_800,3_1200" />
+      <data id="8" specAwardGot="1" drewTimes="0_9999" specCardCount="1" cardWeight="1_5000,2_2000,3_3000" />
+      <data id="9" specAwardGot="1" drewTimes="0_9999" specCardCount="2" cardWeight="1_0,2_4000,3_6000" />
+</root>

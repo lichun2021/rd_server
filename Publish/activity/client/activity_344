@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 344,
+		name = [[启程计划]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">限定新服玩家参与，邀请玩家组队共同完成任务，获得对应专属礼包</font>]],
+		priority = 11260,
+		icon = [[Activity_Icon_344_Nor.png]],
+		selecticon = [[Activity_Icon_344_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20231117jijie/index0425.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20231117jijie/index0425.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20231117jijie/index0425.html]],
+		platform = [[]],
+	},
+
+}

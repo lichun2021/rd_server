@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070062_1" slotMark="1" />
+      <data id="2" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070063_1" slotMark="2" />
+      <data id="3" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070064_1" slotMark="3" />
+      <data id="4" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070065_1" slotMark="4" />
+      <data id="5" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070066_1" slotMark="5" />
+      <data id="6" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070067_1" slotMark="6" />
+      <data id="7" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070068_1" slotMark="7" />
+      <data id="8" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070069_1" slotMark="8" />
+      <data id="9" periods="1" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070070_1" slotMark="9" />
+      <data id="10" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070071_1" slotMark="1" />
+      <data id="11" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070072_1" slotMark="2" />
+      <data id="12" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070073_1" slotMark="3" />
+      <data id="13" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070074_1" slotMark="4" />
+      <data id="14" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070075_1" slotMark="5" />
+      <data id="15" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070076_1" slotMark="6" />
+      <data id="16" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070077_1" slotMark="7" />
+      <data id="17" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070078_1" slotMark="8" />
+      <data id="18" periods="2" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070079_1" slotMark="9" />
+      <data id="19" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070080_1" slotMark="1" />
+      <data id="20" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070081_1" slotMark="2" />
+      <data id="21" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070082_1" slotMark="3" />
+      <data id="22" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070083_1" slotMark="4" />
+      <data id="23" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070084_1" slotMark="5" />
+      <data id="24" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070085_1" slotMark="6" />
+      <data id="25" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070086_1" slotMark="7" />
+      <data id="26" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070087_1" slotMark="8" />
+      <data id="27" periods="3" rewards="30000_810001_2" giveRewards="30000_810004_5" item="30000_21070088_1" slotMark="9" />
+</root>

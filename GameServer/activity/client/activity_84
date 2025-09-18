@@ -1,0 +1,35 @@
+return {
+	prop =
+	{
+		activityId = 84,
+		name = [[英雄兑换]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，SS英雄活动限时出售SS英雄宝箱。<br/>2. 开启SS英雄宝箱必定获得英雄兑换券，并额外赠送资源、加速或增益道具。<br/>3. 英雄兑换券可用于兑换 凯恩碎片、希伯特碎片、莉塔碎片、爱莉莎碎片、杰洛特碎片、贾斯汀碎片、艾薇儿碎片、喀秋莎碎片、所罗门碎片、凤凰碎片、资源、加速等道具</font>]],
+		priority = 20238,
+		icon = [[Activity_Icon_84_Nor.png]],
+		selecticon = [[Activity_Icon_84_Sel.png]],
+		bigIcon = [[Activity_u_Banner_Render_01.png]],
+		bottomRes = [[V5Activity_Cmn_u_Exchange_Red.png]],
+	},
+	empty_exchange = [[id	priority	needItem	gainItem	des	times
+1	1	2	2	2	1
+1	1	30000_1150091_10	30000_1001044_1	ActivityExchangeGainItemDes1	300
+2	2	30000_1150091_10	30000_1001046_1	ActivityExchangeGainItemDes1	300
+3	3	30000_1150091_10	30000_1001041_1	ActivityExchangeGainItemDes1	300
+4	4	30000_1150091_10	30000_1001045_1	ActivityExchangeGainItemDes1	300
+5	5	30000_1150091_10	30000_1001042_1	ActivityExchangeGainItemDes1	300
+6	6	30000_1150091_10	30000_1001035_1	ActivityExchangeGainItemDes1	300
+7	7	30000_1150091_10	30000_1001036_1	ActivityExchangeGainItemDes1	300
+8	8	30000_1150091_10	30000_1001018_1	ActivityExchangeGainItemDes1	300
+9	9	30000_1150091_10	30000_1001037_1	ActivityExchangeGainItemDes1	300
+10	10	30000_1150091_10	30000_1001020_1	ActivityExchangeGainItemDes1	300
+11	11	30000_1150091_7	30000_850007_1	ActivityExchangeGainItemDes1	999
+12	12	30000_1150091_7	30000_850037_1	ActivityExchangeGainItemDes1	999
+13	13	30000_1150091_7	30000_850017_1	ActivityExchangeGainItemDes1	999
+14	14	30000_1150091_7	30000_850027_1	ActivityExchangeGainItemDes1	999
+15	15	30000_1150091_3	30000_100050_1	ActivityExchangeGainItemDes1	999
+16	16	30000_1150091_1	30000_1510003_3	ActivityExchangeGainItemDes1	999
+17	17	30000_1150091_1	30000_13310003_3	ActivityExchangeGainItemDes1	999
+]],
+
+}

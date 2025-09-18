@@ -1,0 +1,18 @@
+
+#生效时间 秒
+workTime = 7200
+
+#距离限制
+distanceLimit = 300
+
+#集结时间限制
+massTimeLimit = 15
+
+#行军时间限制
+marchTimeLimit = 600
+
+#随机英雄品质
+heroQualityColor = 3
+
+#错误邮件间隔
+missMailTime = 60

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" repeatVal="60" orderType="1019" conditionVal="1_99_5" exp="1000" />
+      <data id="1002" repeatVal="1" orderType="1019" conditionVal="8_99_1" exp="2000" />
+      <data id="1003" repeatVal="1" orderType="1019" conditionVal="10_99_1" exp="3000" />
+      <data id="1004" repeatVal="1" orderType="1019" conditionVal="12_99_1" exp="5000" />
+      <data id="1005" repeatVal="30" orderType="1028" conditionVal="0_100000" exp="1000" />
+      <data id="1006" repeatVal="20" orderType="1014" conditionVal="2" exp="1000" />
+      <data id="1007" repeatVal="10" orderType="1012" conditionVal="7000_1" exp="1000" />
+      <data id="1008" repeatVal="1" orderType="1022" conditionVal="6_1" exp="5000" />
+      <data id="1009" repeatVal="40" orderType="1038" conditionVal="15" exp="500" />
+      <data id="1010" repeatVal="15" orderType="1035" conditionVal="20" exp="1000" />
+      <data id="1011" repeatVal="30" orderType="1036" conditionVal="1" exp="500" />
+      <data id="1012" repeatVal="100" orderType="1018" conditionVal="3600" exp="200" />
+      <data id="1013" repeatVal="10" orderType="1017" conditionVal="301_310_10" exp="2000" />
+      <data id="1014" repeatVal="10" orderType="1017" conditionVal="201_210_10" exp="2000" />
+      <data id="1015" repeatVal="10" orderType="1017" conditionVal="401_410_10" exp="2000" />
+      <data id="1016" repeatVal="30" orderType="1027" conditionVal="5" exp="500" />
+      <data id="1017" repeatVal="30" orderType="1039" conditionVal="10" exp="500" />
+</root>

@@ -1,0 +1,117 @@
+option java_package = "com.hawk.game.protocol";
+
+import "World.proto";
+
+// 联盟关怀同步
+message PBGuildHospiceSync{
+	optional bool hasReward = 1; // 是否有关怀奖励等领取
+}
+
+// 关怀行军
+message PBGuildHospiceMarch{
+	repeated WorldMarchPB xingjun = 1; //  行军
+	repeated AttackMarchReportPB leida = 4; // 雷达信息
+}
+
+
+// 联盟反击列表. 
+message PBCounterattackListResp{
+	repeated PBCounterattackInfo  attackList = 1; // 反击列表 
+	optional int64 marchStart = 2;
+	optional int64 marchEnd = 3;
+}
+// 单条悬赏摘要
+message PBCounterattackInfo{
+	optional string uuid = 1; // 报告id
+	optional int64 createTime = 2; // 
+	optional string playerId = 3;
+	
+	optional string eplayerId = 11; //敌方id
+	optional string epfIcon = 12; // 敌方平台头像
+	optional int32 eicon = 13; // 敌方头象
+	optional string ename = 14;  // 敌方名字
+	optional string eguildTag = 15; // 敌方联盟简称
+
+	optional string bounty = 21; // 赏金 xxx_xxx_xxx,xxx_xxx_xxx
+	optional int32 goalWipeout = 22; // 目标消灭战力
+	optional int32 wipeout = 23; // 已消灭战力
+	optional int64 battlePoint = 24 ;// 战力.
+	
+}
+
+message PBCounterattackDetailReq{
+	optional string uuid = 1; // 报告id
+}
+
+// 悬赏记录详情
+message PBCounterattackDetailResp{
+	optional string uuid = 1; // 报告id
+	optional string playerId = 2;
+	optional string pfIcon = 3;
+	optional int32 icon = 4;
+	optional string name = 5;
+	optional int64 createTime = 6;
+
+	optional string eplayerId = 11; //敌方id
+	optional string epfIcon = 12; // 敌方平台头像
+	optional int32 eicon = 13; // 敌方头象
+	optional string ename = 14;  // 敌方名字
+	optional string eguildTag = 15; // 敌方联盟简称
+
+	optional string bounty = 21; // 赏金 xxx_xxx_xxx,xxx_xxx_xxx
+	optional int32 goalWipeout = 22; // 目标消灭战力
+	optional int32 wipeout = 23; // 已消灭战力
+	repeated PBDonor donors = 31; // 赏金榜
+	optional int32 reqPlayerUpTimes = 32; // 详细取得者提升赏金次数
+	repeated PBKillPower killPowers = 33; // 击杀详情
+}
+
+
+// 赏金追加
+message PBDonor{
+	optional string name = 1; 
+	optional string bounty = 2;
+	optional string pfIcon = 3;
+	optional int32 icon = 4;
+	optional int32 upTimes = 5; // 提升赏金
+}
+
+// 已消灭战力
+message PBKillPower{
+	optional string name = 1; 
+	optional int32 wipeout = 2; // 已消灭战力
+	optional string pfIcon = 3;
+	optional int32 icon = 4;
+}
+
+// 请求提升赏金
+message PBIncBountyReq{
+	optional string uuid = 1; // 报告id
+	optional int32 count = 2; // 单位赏金策划配置. 这里只需要个数
+}
+
+// 请求跳转世界点反击
+message PBGoAttackReq{
+	optional string uuid = 1; // 报告id
+}
+
+// 请求跳转世界点反击
+message PBGoAttackResp{
+	optional string uuid = 1; // 报告id
+	optional int32 state = 2; // 1 可以跳转 , 2 已跑路 , 3 报告已撤销 .... 
+	optional int32 x = 3; 
+	optional int32 y = 4;
+	optional int32 manorX = 5; // 联盟堡垒X
+	optional int32 manorY = 6;
+	optional int32 todayBounty = 7;
+}
+
+message PBCounterattackRemoveReq{
+	optional string uuid = 1; // 报告id
+}
+
+// 幽灵行军
+message PBGhostStrikeMarch{
+	repeated WorldMarchPB xingjun = 1; //  行军
+	repeated AttackMarchReportPB leida = 4; // 雷达信息
+}

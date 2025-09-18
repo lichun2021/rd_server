@@ -1,0 +1,11 @@
+option java_package = "com.hawk.game.protocol";
+
+import "Reward.proto";
+
+// 玩家码头信息
+message WharfInfoSync
+{
+	repeated RewardItem	reward			= 1;// 当前可领取的奖励列表，大小为空表示奖励不可领取
+	required int64		remainTime		= 2;// 奖励领取倒计时剩余时间（毫秒）
+	optional int64	lastRefreshTime		= 3;// 上一次刷新时间
+}

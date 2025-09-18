@@ -1,0 +1,24 @@
+# 高级充能消耗
+planSenioItem = 30000_9990010_1
+
+# 磁暴充能消耗
+planBlastItem = 30000_9990011_1
+
+# 高级充能道具价格
+senioItemPrice = 10000_1000_68
+
+# 磁暴充能道具价格
+bastItemPrice = 10000_1000_612
+
+# 高级充能获得固定奖励
+extRewardSenio = 30000_840172_1
+
+# 磁暴充能得固定奖励
+extRewardBlast = 30000_840172_10
+
+# 进榜最低奖励
+rankMinScore = 100000
+
+# 榜单最大人数
+rankerMax = 50
+

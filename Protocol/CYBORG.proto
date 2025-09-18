@@ -1,0 +1,164 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+// CYBORG_GAME_SYNC			= 483; // 副本信息同步
+message PBCYBORGGameInfoSync{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBCYBORGGuildInfo guildInfo = 3; 
+	repeated PBCYBORGPlayerInfo playerInfo = 4;
+	optional bool hotBloodMod = 5; // 是否热血模式
+	optional int32 monsterCount = 6; //怪物数量
+}
+
+// 泰博利亚小地图
+message PBCYBORGSecondMapResp{
+	optional int64 gameStartTime = 1; // 游戏开始时间
+	optional int64 gameOverTime = 2; // 结束时间
+	repeated PBCYBORGGuildInfo guildInfo = 3; 
+	repeated WorldPointPB points = 4;
+	optional int32 monsterCount = 6; // 野怪剩余个数
+	optional int64 nextMonsterRefresh = 7; // 下次刷怪时间, 为0 代表最后一波刷完
+	optional int32 monsterTurn = 8; // 当前刷新过多少波
+}
+
+
+message PBCYBORGGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 honor = 4; // 当前积分
+	optional int32 perMin = 5; // 每分增加
+	optional int32 buildCount = 6; // 占领建筑
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string serverId = 9; // 所在报
+	optional string guildId = 10;
+	optional int64 centerControl = 11; // 核心控制时间
+	optional int32 buildControlHonor = 12;
+	optional int32 killHonor = 13;
+	optional int32 collectHonor = 14;
+	optional int32 nuclearCount = 15; // 核弹发射次数
+	optional bool nuclearReady = 16; // 核弹是否可用
+	repeated string nuclearBuildLeaderid = 18; // 控制核弹建筑队长id
+	optional int32 nianKillCnt = 19; // 机甲击杀数
+	optional string teamName = 20; // 队名
+	optional int64 teamPower = 21; // 战力
+	optional PBCYBORGPlayerInfo killPowerMax = 22; // 本队击杀战力最高玩家
+	optional PBCYBORGPlayerInfo lostPowerMax = 23; // 本队损失战力最高玩家
+	optional PBCYBORGPlayerInfo killMonsterMax = 24; // 本队击杀野怪最高玩家
+	optional int32 honorRate = 25; // 积分占权重 万分比
+	optional int32 cyborgItemTotal = 26; // 瓜分赛博药 数量
+	optional int32 buildbuffLevel = 27; // cyborg_build_buff_level 打野经验获得本方建筑buff等级
+	optional int32 buildbuffLevelExtra = 28; // cyborg_build_buff_level_extra  丢失建筑提升等级 二个等级合起来显示加成 cyborg_build_buff
+	optional int32 killMonster = 29; // 击杀野怪数.cyborg_build_buff_level 经验条
+}
+
+message PBCYBORGPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 honor = 3;
+	optional string guildTag = 4;
+	optional string playerId = 5;
+	optional int32 guildHonor = 6; // 个人取得联盟积分
+	optional int32 killPower = 7; // 杀敌战力
+	optional int32 lostPower = 8; // 损失防坦战力
+	optional int32 killMonster = 9; // 杀怪
+	optional sint32	icon			= 10; //玩家头像
+	optional string pfIcon			= 11;//平台头像
+}
+
+
+//CYBORG_GAME_OVER			= 472; // 游戏结束
+message PBCYBORGGameOver{ 
+	optional int64 playerHonor = 1; // 个人积分
+	optional bool win = 2; 
+	optional int32 quitReson = 3; //正常结束 0  主动退出 1
+	optional int32 mingci = 4; // 排名
+}
+
+message PBCYBORGKillInfo{
+	optional string playerId = 1;
+	optional int64 killCount = 2;
+}
+
+
+// CYBORG_PLAYER_QUIT			= 477; // 有玩家退出
+message PBCYBORGPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBCYBORGPlayerMoveCitySync{
+	optional int64 CYBORGMoveCityCD = 1;  // 免费迁城
+	optional int32 CYBORGMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+message PBCYBORGNuclearStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 广播核弹发射
+message PBCYBORGNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int64 fromX = 6;
+	optional int64 fromY = 7;
+}
+
+message PBCYBORGAnchorJoinReq{
+	optional string battleId = 1;
+}
+
+// 主播请求建筑内邮件. 
+message PBCYBORGAnchorListMailReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 type = 3;  // 0 战斗邮件, 1 侦查邮件
+}
+
+message PBCYBORGAnchorGetGuildWarInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+}
+
+
+message PBCYBORGAnchorGetGuildWarCellInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+	optional string marchId = 2; // 
+}
+
+enum PBCYBORGOrderType{
+	CYBORG_MARCH_SPEED 		= 1001; // 朝指定建筑行军时长
+	CYBORG_BUILD_CONTRAL 	= 1002; // 立即占领正在占领中的建筑. 不需要持续时间. 立即生效
+	CYBORG_BUFF				= 1003; //本方加buff 
+}
+
+//号令
+message PBCYBORGOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+	required int32 buildX			= 5; // 技能激活在建筑 当这个xy的建筑被占领, 这个技能才可以用
+	required int32 buildY			= 6; // 显示在建筑
+	required bool active			= 8; // buildX buildY所表示的建筑是否被占领. 如未占领, 冷却也不能用
+	optional int32 tarX				= 9; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 10; 
+}
+
+//使用号令
+message PBCYBORGOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+	optional int32 tarX				= 2; // 技能生效目标建筑.  对于快速援助
+	optional int32 tarY				= 3; 
+}
+
+//号令同步
+message PBCYBORGOrderSyncResp{
+	repeated PBCYBORGOrder orders = 1;  //号令列表
+	optional int32 camp = 2; // 阵营
+}

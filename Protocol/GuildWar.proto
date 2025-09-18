@@ -1,0 +1,202 @@
+option java_package	= "com.hawk.game.protocol";
+import "Army.proto";
+import "World.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+// 推送联盟战争条数
+message HPGuildWarCountPush
+{
+	required int32 count = 1; //联盟战争条数
+	repeated int64 massEndTime = 2; //集结中的行军，集结结束时间点列表
+}
+
+// 请求联盟战争信息
+message HPGetGuildWarInfoReq
+{
+	optional string marchId = 1; // 队长行军id(请求单条的时候用此字段)
+}
+
+// 回复联盟战争信息
+message HPGetGuildWarInfoResp
+{
+	repeated GuildWarShowPB guildWar = 1;
+}
+
+// 请求联盟战争singleInfo
+message HPGetGuildWarSingleInfoReq
+{
+	required string marchId = 1;
+}
+
+// 单条联盟战争信息
+message GuildWarShowPB
+{
+	required string marchId					= 1;	// 行军id
+	required WorldMarchType marchType 		= 2; 	// 行军类型
+	required WorldMarchStatus marchStatus 	= 3;    // 行军状态
+	required int64 endTime					= 4;	// 行军结束时间
+	required GuildWarTeamInfo initiative 	= 5;	// 主动方联盟战争数据
+	required GuildWarTeamInfo passivity 	= 6;	// 被动方联盟战争数据
+	optional bool isatk = 7; //  显示是否为攻击方
+	optional int32 formationIndex = 8; // 联盟编队id
+	optional string formationName = 9; // 联盟编队名字
+	optional bool needJoin = 10; // 是否需要加入该联盟集结
+}
+
+// 联盟战争行军数据
+message	GuildWarTeamInfo
+{
+	required WorldPointType	pointType		= 1;	// 点类型
+	required int32	x						= 2;	// 坐标x
+	required int32	y						= 3;	// 坐标y
+	optional int32 leaderArmyLimit			= 4;	// 集结上限或者可援助上限
+	optional int32 gridCount				= 5;	// 格子数量/可加入行军数量
+	optional string guildTag				= 6;	// 联盟简称
+	optional GuildWarSingleInfo leaderMarch	= 7;	// 队长行军数据
+	repeated GuildWarSingleInfo joinMarchs	= 8;	// 参与者行军数据
+	optional int32 monsterId				= 9;	// 野怪id
+	optional int32 yuriTimes				= 10;	// 尤里波次
+	optional string guildBuildName			= 11;	// 联盟建筑名称
+	optional int32 cityLevel				= 12;	// 玩家大本等级
+	optional int32 reachArmyCount			= 13;	// 已经到达的部队数量
+	optional string guildId 				= 14; //
+	optional bool isCenter				    = 15; // 是否是母旗
+	optional string serverId			    = 16; // 服务器id
+	optional int32 xhjzGasline				= 17; // 集结需要燃油
+}
+
+// 每个条目信息
+message	GuildWarSingleInfo
+{
+	required string	 playerId			= 1;	// 玩家ID
+	required string	playerName			= 2;	// 名字
+	required int32 iconId				= 3;	// 玩家头像
+	optional string pfIcon			    = 4;	// 平台头像
+	repeated ArmySoldierPB armys		= 5;	// 军队详情
+	repeated PBHeroInfo heroInfo		= 6;	// 英雄信息
+	optional WorldMarchStatus marchStatus = 7;	// 行军状态
+	optional string marchId 			= 8;	// 行军ID
+	optional int64 endTime				= 9;	// 行军结束时间
+	optional int64 startTime			= 10;	// 行军开始时间
+	optional int64 journeyTime			= 11;	// 行军时间
+	optional PBSuperSoldierInfo ssoldier 	= 12; 
+	optional bool notJoin = 13; // 未加入(默认false,联盟集结新加改动)
+	optional bool notFormation = 14; // 非集结编队的成员
+	optional bool delFormationNotice = 15; // 忽略集结提醒
+	optional int32 fgylSkill = 16;//
+}
+
+// 联盟战争记录响应
+message	HPGuildWarRecordResp
+{
+	repeated HPGuildWarRecordPB	guildWarRecord = 1;
+}
+
+// 联盟战争记录
+message	HPGuildWarRecordPB
+{
+	required HPWarPlayerInfo attPlayer	= 1;  // 进攻方
+	required HPWarPlayerInfo defPlayer	= 2;  // 防守方
+	required int32 winTimes				= 3;  // 我方胜利次数，2为胜利两次，-2为失败两次
+	required int64 warTime				= 4;  // 战斗时间
+}
+
+// 玩家联盟战争数据
+message	HPWarPlayerInfo
+{
+	required int32 type					=	1;	//是否是队长	1队长2其它
+	optional string	playerId			=	2;	//玩家Id
+	optional string	playerName			=	3;	//玩家名字
+	optional int32 icon					=	4;	//玩家图标
+	optional int32 posX					=	5;	//玩家x
+	optional int32 posY					=	6;	//玩家y
+	optional int32 armyNum				=	7;	//派兵数量
+	repeated ArmySoldierPB armyInfo		=	8;	//具体兵力
+	optional int32 status				=	9;	//出兵状态
+	optional int64	startTime			=	10;	//自己行军的开始时间
+	optional int64	endTime				=	11;	//自己行军的结束时间
+	optional string	guildTag			=	12;	//联盟缩写
+	optional string	marchId				=	13;	//行军Id
+	optional int32 guardId				=	14;	//据点Id
+	optional int32 manorId				=	15;	//领地Id
+	optional string pfIcon				=	16;	//平台头像
+	required GuildWarMarchType warType	= 	17;
+	optional string guildId				=   18; //联盟id
+}
+
+// 联盟战争行军状态
+enum GuildWarMarchType
+{
+	SINGLE_TYPE = 1; //单人
+	MASS_TYPE   = 2; //集结
+}
+
+// 集结行军购买参与者额外行军位置
+message	WorldMassMarchBuyExtraItemsReq
+{
+	required string	cellMarchId		= 1;	// 行军ID
+}
+
+// 集结行军购买参与者额外行军位置
+message	WorldQuarteredMarchBuyExtraItemsReq
+{
+	required string	marchId			= 1;	// 行军ID
+}
+
+// 集结行军购买参与者额外行军位置
+message	PushGuildWarBuyItems
+{
+	required string	cellMarchId		= 1;	// 行军ID
+	required int32 buyItemTimes		= 2;	// 行军购买参与者格子次数
+}
+
+// 驻军信息推送类型
+enum PushQuarteredMarchType
+{
+	PUSH_QUARTERED_MANOR		= 1;	// 领地
+	PUSH_QUARTERED_PRESIDENT	= 2;	// 首都
+	PUSH_QUARTERED_BUILDING		= 3;	// 建筑
+}
+
+// 推送首都或者某个领地的所有驻军信息
+message	PushAllQuarteredMarch
+{
+	required PushQuarteredMarchType	pushType = 1;	// 推送类型
+	optional GuildWarTeamInfo team			 = 2;	// 驻军数据
+	required string	guildId					 = 3;	// 所属联盟
+}
+
+// 删除驻军中的一条行军
+message	PushQuarteredMarchDelItem
+{
+	required PushQuarteredMarchType	pushType = 1;	// 推送类型
+	required string	guildId					 = 2;	// 所属联盟
+	required string	marchId					 = 3;	 //	防守时为敌人的行军id，其他情况为发起者的行军id
+	required string	playerId				 = 4;	 //	防守时为敌人的行军id，其他情况为发起者的行军id
+	optional int32 manorId					 = 5;	// 领地ID
+}
+
+// 新增或者更新一个行军信息
+message	PushQuarteredMarchUpdateItem
+{
+	required PushQuarteredMarchType	pushType = 1;	// 推送类型
+	required string	guildId					 = 2;	// 所属联盟
+	required GuildWarShowPB	showPB			 = 3;	// 显示条目
+	optional int32 manorId					 = 4;	// 领地ID
+}
+
+// 集结行军购买参与者额外行军位置
+message	PushQuarteredMarchBuyItems
+{
+	required PushQuarteredMarchType	pushType = 1;	// 推送类型
+	required string	guildId					 = 2;	// 所属联盟
+	required int32 buyItemTimes				 = 3;	// 行军购买参与者格子次数
+	optional int32 manorId					 = 4;	// 领地ID
+}
+
+// 推送战争记录小红点数量
+message PushNewGuildWarRecord
+{
+	required int32 count		= 1;
+}

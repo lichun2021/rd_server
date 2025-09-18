@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间间隔；单位：秒
+serverDelay = 5184000
+
+# 每天重置翻开雕像的次数
+openSculptureTimes = 1
+
+# 分享获得次数
+shareGetTimes = 1
+
+# 每日是否重置
+times = 1
+
+# 第一阶段持续时间
+firstTime = 518400
+
+# 第二阶段持续时间
+secondTime = 518400
+
+# 第三阶段持续时间
+thirdTime = 172800
+

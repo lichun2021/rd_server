@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" openServiceTimeLowerLimit="0" openServiceTimeUpLimit="1800" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="2" openServiceTimeLowerLimit="1800" openServiceTimeUpLimit="7200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="3" openServiceTimeLowerLimit="7200" openServiceTimeUpLimit="21600" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="4" openServiceTimeLowerLimit="21600" openServiceTimeUpLimit="43200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="5" openServiceTimeLowerLimit="43200" openServiceTimeUpLimit="64800" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="6" openServiceTimeLowerLimit="64800" openServiceTimeUpLimit="115200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="7" openServiceTimeLowerLimit="115200" openServiceTimeUpLimit="172800" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="8" openServiceTimeLowerLimit="172800" openServiceTimeUpLimit="259200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="9" openServiceTimeLowerLimit="259200" openServiceTimeUpLimit="345600" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="10" openServiceTimeLowerLimit="345600" openServiceTimeUpLimit="518400" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="11" openServiceTimeLowerLimit="518400" openServiceTimeUpLimit="777600" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="12" openServiceTimeLowerLimit="777600" openServiceTimeUpLimit="1036800" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="13" openServiceTimeLowerLimit="1036800" openServiceTimeUpLimit="1296000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="14" openServiceTimeLowerLimit="1296000" openServiceTimeUpLimit="1555200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="15" openServiceTimeLowerLimit="1555200" openServiceTimeUpLimit="1814400" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="16" openServiceTimeLowerLimit="1814400" openServiceTimeUpLimit="2160000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="17" openServiceTimeLowerLimit="2160000" openServiceTimeUpLimit="2592000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="18" openServiceTimeLowerLimit="2592000" openServiceTimeUpLimit="3110400" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="19" openServiceTimeLowerLimit="3110400" openServiceTimeUpLimit="3628800" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="20" openServiceTimeLowerLimit="3628800" openServiceTimeUpLimit="4147200" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="21" openServiceTimeLowerLimit="4147200" openServiceTimeUpLimit="4665600" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="22" openServiceTimeLowerLimit="4665600" openServiceTimeUpLimit="5184000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="23" openServiceTimeLowerLimit="5184000" openServiceTimeUpLimit="6048000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="24" openServiceTimeLowerLimit="6048000" openServiceTimeUpLimit="6912000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="25" openServiceTimeLowerLimit="6912000" openServiceTimeUpLimit="7776000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="26" openServiceTimeLowerLimit="7776000" openServiceTimeUpLimit="8640000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="27" openServiceTimeLowerLimit="8640000" openServiceTimeUpLimit="9936000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="28" openServiceTimeLowerLimit="9936000" openServiceTimeUpLimit="11664000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="29" openServiceTimeLowerLimit="11664000" openServiceTimeUpLimit="13824000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="30" openServiceTimeLowerLimit="13824000" openServiceTimeUpLimit="16416000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="31" openServiceTimeLowerLimit="16416000" openServiceTimeUpLimit="19008000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="32" openServiceTimeLowerLimit="19008000" openServiceTimeUpLimit="21600000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="33" openServiceTimeLowerLimit="21600000" openServiceTimeUpLimit="24192000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="34" openServiceTimeLowerLimit="24192000" openServiceTimeUpLimit="26784000" commonNum="30" specialNum="30" capitalNum="10" />
+      <data id="35" openServiceTimeLowerLimit="26784000" openServiceTimeUpLimit="630720000" commonNum="30" specialNum="30" capitalNum="10" />
+</root>

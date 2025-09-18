@@ -1,0 +1,25 @@
+return {
+	prop =
+	{
+		activityId = 39,
+		name = [[战地福利]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，达成指定任务后即可获得奖励，奖励请手动点击领取。<br/>2. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/>3.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日必买、周卡月卡等直购内容</font>不计入充值任务，您可在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">其他充值活动页面</font>查看详情。</font>]],
+		priority = 20240,
+		icon = [[Activity_Icon_41_Nor.png]],
+		selecticon = [[Activity_Icon_41_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		dailyRefresh = 1,
+	},
+	warzone_weal_achieve = [[achieveId	conditionType	conditionValue	warzoneValue	title	gotoType	gotoValue	rewards
+1	1	2	1	2	1	2	2
+390001	140400	1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>天</font>	-1	0	30000_800110_1,30000_1510003_10,30000_13310003_10,30000_1300006_20,30000_1300009_20
+390002	160300	60	6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">单笔充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>元</font>	1001	1	30000_100050_5,30000_101050_1,30000_103050_1,30000_104050_1,30000_105050_1
+390003	500020	2	2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">战胜幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	16_1	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810003_5
+390004	200100	0_10	10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">战胜野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	2_0	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810003_5
+390005	500006	0_1000	1000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练收取士兵<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>	23	2012	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810003_5
+390006	500005	10	10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">野外采集<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	1_1_1007	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810003_5
+390007	500004	1000	1000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">使用加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>分钟</font>	1312	0	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_810001_1
+]],
+
+}

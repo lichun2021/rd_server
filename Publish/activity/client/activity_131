@@ -1,0 +1,106 @@
+return {
+	prop =
+	{
+		activityId = 131,
+		name = [[黑科技]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动开启期间，玩家可以抽取超强力的Buff效果同时还有超低折扣的礼包为您助力。<br/><br/>2.Buff效果包含以下18种：升级建筑消耗全资源减少，升级建筑消耗矿石资源减少，升级建筑消耗石油减少，升级建筑消耗合金减少，升级建筑消耗稀土减少，升级建筑所需时间减少，研究科技消耗全资源减少，研究科技消耗矿石资源减少，研究科技消耗石油减少，研究科技消耗合金减少，研究科技消耗稀土减少，研究科技所需时间减少，训练部队消耗全资源减少，训练部队消耗矿石资源减少，训练部队消耗石油减少，训练部队消耗合金减少，训练部队消耗稀土减少，训练部队所需时间减少<br/><br/>3.Buff持续时间内，效果一直生效，活动结束后，Buff时间未到，效果不会失效。<br/><br/>4.每天0点重置免费刷新次数。<br/><br/>5.处于泰伯利亚战场、跨服时，Buff不生效。<br/><br/>6.训练部队减少资源和时间的Buff对城防工厂不生效。<br/><br/>7.科技加速、科技资源消耗等增益效果对远征科技不生效。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">Buff抽取概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1.升级建筑消耗全资源减少40%、30%、20%、10%概率分别为0.24%、0.72%、1.68%、2.16%<br/>2.升级建筑消耗矿石资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>3.升级建筑消耗石油资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>4.升级建筑消耗合金资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>5.升级建筑消耗稀土资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>6.升级建筑所需时间减少40%、30%、20%、10%概率分别为0.8%、2.4%、5.6%、7.2%<br/>7.研究科技消耗全资源减少40%、30%、20%、10%概率分别为0.24%、0.72%、1.68%、2.16%<br/>8.研究科技消耗矿石资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>9.研究科技消耗石油资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>10.研究科技消耗合金资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>11.研究科技消耗稀土资源减少90%、80%、70%、60%概率分别为0.24%、0.72%、1.68%、2.16%<br/>12.研究科技所需时间减少40%、30%、20%、10%概率分别为0.8%、2.4%、5.6%、7.2%<br/>13.训练部队消耗全资源减少40%、30%、20%、10%概率分别为0.12%、0.36%、0.84%、1.08%<br/>14.训练部队消耗矿石资源减少90%、80%、70%、60%概率分别为0.12%、0.36%、0.84%、1.08%<br/>15.训练部队消耗石油资源减少90%、80%、70%、60%概率分别为0.12%、0.36%、0.84%、1.08%<br/>16.训练部队消耗合金资源减少90%、80%、70%、60%概率分别为0.12%、0.36%、0.84%、1.08%<br/>17.训练部队消耗稀土资源减少90%、80%、70%、60%概率分别为0.12%、0.36%、0.84%、1.08%<br/>18.训练部队所需时间减少40%、30%、20%、10%概率分别为0.4%、1.2%、2.8%、3.6%</font>]],
+		priority = 500,
+		icon = [[Activity_Icon_131_Nor.png]],
+		selecticon = [[Activity_Icon_131_Sel.png]],
+		needItem = [[10000_1001_50,10000_1001_100,10000_1001_200,10000_1001_300,10000_1001_400,10000_1001_600,10000_1001_900,10000_1001_1200,10000_1001_1500,10000_1001_2000]],
+		refresh = 1,
+		activeTimes = 3,
+	},
+	black_tech_buff = [[buffID	packageID	buffTime	typeICON	typeName	subTypeIcon	subTypeName	paramName	param	specialEffectType
+1	2	1	2	2	2	2	2	1	1
+1101	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	40	1
+1102	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	30	1
+1103	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	20	1
+1104	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	10	1
+1201	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	90	1
+1202	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	80	1
+1203	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	70	1
+1204	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	60	1
+1301	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	90	1
+1302	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	80	1
+1303	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	70	1
+1304	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	60	1
+1401	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	90	1
+1402	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	80	1
+1403	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	70	1
+1404	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	60	1
+1501	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	90	1
+1502	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	80	1
+1503	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	70	1
+1504	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	60	1
+1601	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	40	1
+1602	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	30	1
+1603	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	20	1
+1604	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_09.png	升级建筑	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	10	1
+2101	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	40	2
+2102	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	30	2
+2103	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	20	2
+2104	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	10	2
+2201	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	90	2
+2202	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	80	2
+2203	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	70	2
+2204	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	60	2
+2301	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	90	2
+2302	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	80	2
+2303	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	70	2
+2304	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	60	2
+2401	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	90	2
+2402	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	80	2
+2403	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	70	2
+2404	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	60	2
+2501	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	90	2
+2502	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	80	2
+2503	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	70	2
+2504	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	60	2
+2601	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	40	2
+2602	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	30	2
+2603	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	20	2
+2604	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_07.png	研发科技	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	10	2
+3101	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	40	3
+3102	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	30	3
+3103	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	20	3
+3104	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_05.png	消耗所有资源	减少比例	10	3
+3201	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	90	3
+3202	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	80	3
+3203	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	70	3
+3204	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_04.png	消耗矿石	减少比例	60	3
+3301	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	90	3
+3302	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	80	3
+3303	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	70	3
+3304	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_03.png	消耗石油	减少比例	60	3
+3401	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	90	3
+3402	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	80	3
+3403	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	70	3
+3404	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_02.png	消耗合金	减少比例	60	3
+3501	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	90	3
+3502	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	80	3
+3503	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	70	3
+3504	1,2,3,4,5,6	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_01.png	消耗稀土	减少比例	60	3
+3601	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	40	3
+3602	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	30	3
+3603	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	20	3
+3604	7,8,9,10,11,12	3600	V5Activity_131_Icon_Buff_08.png	训练部队	V5Activity_131_Icon_Buff_06.png	所需时间	减少比例	10	3
+]],
+	black_tech_package = [[id	itemID	item	limitNum	oldPrice	newPrice	tag	discount
+1	1	2	1	1	2	2	1
+1	1150102	30000_1780040_5,30000_1780035_5,30000_1780030_5,30000_1780025_5	10	1360	10000_1000_60	V3TravellingShop_u_Num_BG_01	400
+2	1150103	30000_1780040_25,30000_1780035_25,30000_1780030_25,30000_1780025_25	10	6780	10000_1000_300	V3TravellingShop_u_Num_BG_01	400
+3	1150104	30000_1780045_20,30000_1780040_20,30000_1780035_20,30000_1780030_20	10	15348	10000_1000_680	V3TravellingShop_u_Num_BG_01	400
+4	1150105	30000_1780045_40,30000_1780040_40,30000_1780035_40,30000_1780030_40	10	30688	10000_1000_1280	V3TravellingShop_u_Num_BG_01	400
+5	1150106	30000_1780050_30,30000_1780045_40,30000_1780040_40,30000_1780035_40	10	74928	10000_1000_3280	V3TravellingShop_u_Num_BG_01	400
+6	1150107	30000_1780050_60,30000_1780045_80,30000_1780040_80,30000_1780035_80	10	149848	10000_1000_6480	V3TravellingShop_u_Num_BG_01	400
+7	1150108	30000_1780065_2,30000_1780060_27	3	268	10000_1000_60	V3TravellingShop_u_Num_BG_02	2200
+8	1150109	30000_1780065_16,30000_1780060_30	3	1350	10000_1000_300	V3TravellingShop_u_Num_BG_02	2200
+9	1150110	30000_1780065_38,30000_1780060_35	3	3058	10000_1000_680	V3TravellingShop_u_Num_BG_02	2200
+10	1150111	30000_1780065_72,30000_1780060_60	3	5768	10000_1000_1280	V3TravellingShop_u_Num_BG_02	2200
+11	1150112	30000_1780065_188,30000_1780060_90	3	14788	10000_1000_3280	V3TravellingShop_u_Num_BG_02	2200
+12	1150113	30000_1780065_380,30000_1780060_120	3	29628	10000_1000_6480	V3TravellingShop_u_Num_BG_02	2200
+]],
+
+}

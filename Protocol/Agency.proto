@@ -1,0 +1,79 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 情报交易所界面信息
+message AgencyPageInfo
+{
+	required int32 exp = 1; //经验
+	required int32 level = 2; // 等级
+	repeated AgencyEvent events = 3; // 事件信息
+	required bool hasKilledAgency = 4; // 是否击杀过情报怪
+	repeated int32 boxId = 5; // 领取的宝箱id
+	required int64 nextRefreshTime = 6; // 下次刷新时间
+	required int32 killCount = 7; // 击杀野怪数量
+	optional AgencyEvent specialEvent = 8; // 金色打野事件
+	required int32 poolCount = 9; // 库存数量
+	optional int32 controlSuperWeapon = 10; //战区控制数量
+	required int32 boxLevel = 11;  //额外按等级领取box等级
+}
+
+// 情报交易所事件信息
+message AgencyEvent
+{
+	required string uuid = 1; //id
+	required int32 posX = 2; //坐标x
+	required int32 posY = 3; //坐标y
+	optional int32 eventId = 4; //事件id
+	required int64 endTime = 5; //结束时间
+	required AgencyEventState state = 6; // 事件状态
+	required bool doing = 7; // 任务是否正在进行中
+	optional bool isSpecialEvent = 8; // 是否是特殊事件(金色打野事件)
+	optional bool isItemEvent = 9; // 是否是道具事件(客户端发上来，主动生成的)
+}
+
+// 事件的状态
+enum AgencyEventState
+{
+	AGENCY_NOT_FINISH = 1; //未完成
+	AGENCY_FINISHED = 2; //已完成
+}
+
+// 事件类型
+enum AgencyEventType
+{
+	AGENCY_TYPE_RESCUR = 1; // 营救
+	AGENCY_TYPE_COASTER = 2; // 飞车
+	AGENCY_TYPE_MONSTER = 3; // 打野怪
+}
+
+// 事件通用
+message AgencyEventCommon
+{
+	required string uuid = 1; //事件uuid
+}
+
+// 情报中心领取宝箱
+message AgencyBoxReq
+{
+	optional int32 boxId = 1; // 宝箱id
+	optional int32 level = 2; //等级
+}
+
+// 生成情报任务
+message GenAgencyEventReq
+{
+	required int32 eventId = 1; // 情报任务id
+}
+
+// 救援回调
+message AgencyCarbattle {
+	required string bikerBattleId = 1; // 关卡id
+	required string agencyUuid = 2; // 情报中心id
+	repeated int32 heros = 3; // 英雄
+}
+
+// 事件搜索返回
+message AgencySearchResp
+{
+	required int32 posX = 1; //坐标x
+	required int32 posY = 2; //坐标y
+}

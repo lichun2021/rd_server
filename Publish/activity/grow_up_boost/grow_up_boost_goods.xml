@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" configId="1" needItem="10000_1000_0" gainItem="30000_21063005_18" awardId="4900018" buyLimit="3" />
+      <data id="2" configId="1" needItem="10000_1000_188" gainItem="30000_21063005_98,30000_810001_8" awardId="4930012" buyLimit="3" />
+      <data id="3" configId="1" needItem="10000_1000_388" gainItem="30000_21063005_268,30000_810001_28" awardId="4930013" buyLimit="3" />
+      <data id="4" configId="1" needItem="10000_1000_558" gainItem="30000_21063005_368,30000_810001_38" awardId="4900018" buyLimit="3" />
+      <data id="5" configId="1" needItem="10000_1000_1888" gainItem="30000_21063005_1188,30000_810001_118" awardId="4930012" buyLimit="3" />
+      <data id="6" configId="1" needItem="10000_1000_3288" gainItem="30000_21063005_1988,30000_810001_198" awardId="4930013" buyLimit="3" />
+      <data id="7" configId="1" needItem="10000_1000_6688" gainItem="30000_21063005_4088,30000_810001_408" awardId="4900018" buyLimit="3" />
+      <data id="8" configId="1" needItem="10000_1000_8888" gainItem="30000_21063005_5188,30000_810001_518" awardId="4930012" buyLimit="3" />
+      <data id="9" configId="1" needItem="30000_21063005_20" gainItem="30000_850051_20" awardId="4930013" buyLimit="10" />
+      <data id="10" configId="1" needItem="30000_21063005_100" gainItem="30000_850051_100" awardId="4900018" buyLimit="10" />
+      <data id="11" configId="1" needItem="30000_21063005_500" gainItem="30000_850051_500" awardId="4930012" buyLimit="10" />
+      <data id="12" configId="1" needItem="30000_21063005_2500" gainItem="30000_850051_2500" awardId="4930013" buyLimit="10" />
+      <data id="13" configId="1" needItem="30000_21063005_10000" gainItem="30000_850051_10000" awardId="4900018" buyLimit="99" />
+      <data id="14" configId="2" needItem="10000_1000_0" gainItem="30000_21063005_18" awardId="4900018" buyLimit="3" />
+      <data id="15" configId="2" needItem="10000_1000_188" gainItem="30000_21063005_98,30000_810001_8" awardId="4930012" buyLimit="3" />
+      <data id="16" configId="2" needItem="10000_1000_388" gainItem="30000_21063005_268,30000_810001_28" awardId="4930013" buyLimit="3" />
+      <data id="17" configId="2" needItem="10000_1000_558" gainItem="30000_21063005_368,30000_810001_38" awardId="4900018" buyLimit="3" />
+      <data id="18" configId="2" needItem="10000_1000_1888" gainItem="30000_21063005_1188,30000_810001_118" awardId="4930012" buyLimit="3" />
+      <data id="19" configId="2" needItem="10000_1000_3288" gainItem="30000_21063005_1988,30000_810001_198" awardId="4930013" buyLimit="3" />
+      <data id="20" configId="2" needItem="10000_1000_6688" gainItem="30000_21063005_4088,30000_810001_408" awardId="4900018" buyLimit="3" />
+      <data id="21" configId="2" needItem="10000_1000_8888" gainItem="30000_21063005_5188,30000_810001_518" awardId="4930012" buyLimit="3" />
+      <data id="22" configId="2" needItem="30000_21063005_20" gainItem="30000_850051_20" awardId="4930013" buyLimit="10" />
+      <data id="23" configId="2" needItem="30000_21063005_100" gainItem="30000_850051_100" awardId="4900018" buyLimit="10" />
+      <data id="24" configId="2" needItem="30000_21063005_500" gainItem="30000_850051_500" awardId="4930012" buyLimit="10" />
+      <data id="25" configId="2" needItem="30000_21063005_2500" gainItem="30000_850051_2500" awardId="4930013" buyLimit="10" />
+      <data id="26" configId="2" needItem="30000_21063005_10000" gainItem="30000_850051_10000" awardId="4900018" buyLimit="99" />
+      <data id="27" configId="3" needItem="10000_1000_0" gainItem="30000_21063005_18" awardId="4900018" buyLimit="3" />
+      <data id="28" configId="3" needItem="10000_1000_188" gainItem="30000_21063005_98,30000_810001_8" awardId="4930012" buyLimit="3" />
+      <data id="29" configId="3" needItem="10000_1000_388" gainItem="30000_21063005_268,30000_810001_28" awardId="4930013" buyLimit="3" />
+      <data id="30" configId="3" needItem="10000_1000_558" gainItem="30000_21063005_368,30000_810001_38" awardId="4900018" buyLimit="3" />
+      <data id="31" configId="3" needItem="10000_1000_1888" gainItem="30000_21063005_1188,30000_810001_118" awardId="4930012" buyLimit="3" />
+      <data id="32" configId="3" needItem="10000_1000_3288" gainItem="30000_21063005_1988,30000_810001_198" awardId="4930013" buyLimit="3" />
+      <data id="33" configId="3" needItem="10000_1000_6688" gainItem="30000_21063005_4088,30000_810001_408" awardId="4900018" buyLimit="3" />
+      <data id="34" configId="3" needItem="10000_1000_8888" gainItem="30000_21063005_5188,30000_810001_518" awardId="4930012" buyLimit="3" />
+      <data id="35" configId="3" needItem="30000_21063005_20" gainItem="30000_850051_20" awardId="4930013" buyLimit="10" />
+      <data id="36" configId="3" needItem="30000_21063005_100" gainItem="30000_850051_100" awardId="4900018" buyLimit="10" />
+      <data id="37" configId="3" needItem="30000_21063005_500" gainItem="30000_850051_500" awardId="4930012" buyLimit="10" />
+      <data id="38" configId="3" needItem="30000_21063005_2500" gainItem="30000_850051_2500" awardId="4930013" buyLimit="10" />
+      <data id="39" configId="3" needItem="30000_21063005_10000" gainItem="30000_850051_10000" awardId="4900018" buyLimit="99" />
+</root>

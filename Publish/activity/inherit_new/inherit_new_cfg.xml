@@ -1,0 +1,30 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 离线时长 单位:秒
+offlineTime = 604800
+
+# vip等级要求
+vipLimit = 5
+
+# 活动在老服的持续时间
+validTime = 604799
+
+# 活动开启后持续时间 30天
+lastTime = 2591999
+
+# 返还金条数量上限
+maxGift = 500000
+
+# 金条返现比例(万分比)
+goldRate = 5000
+
+# 指挥官等级
+level = 1
+
+# 战斗力达标值
+battlePoint = 1
+
+# 基地等级
+buildlevel = 1
+

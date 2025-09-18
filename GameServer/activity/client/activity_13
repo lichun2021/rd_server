@@ -1,0 +1,22 @@
+return {
+	prop =
+	{
+		activityId = 13,
+		desTitle = [[@RebelActTitle]],
+		actDes = [[yuriKillProgressDes]],
+		name = [[使命战争]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">基地外</font>将随机出现<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幽灵叛军</font>，击杀后可获得奖励，并<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">有几率额外</font>获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">通讯设备</font>道具。<br/>2. 消灭<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">指定数量</font>的幽灵叛军即可获得活动任务奖励。<br/>3. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/>4. 活动期间<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">任务每日重置</font>。<br/>5. 请您返回活动页面查看活动时间与奖励详情。</font>]],
+		priority = 10850,
+		icon = [[Activity_Icon_39_Nor.png]],
+		selecticon = [[Activity_Icon_39_Sel.png]],
+		bigIcon = [[V3Activity_u_Banner_Render_02.png]],
+	},
+	yuri_achieve = [[achieveId	configValue	rewards	title
+1	1	2	2
+1300001	5	30000_850006_1,30000_850036_1,30000_810000_10,30000_800143_2	@achieveTitle1300001
+1300002	10	30000_850006_1,30000_850036_1,30000_850016_1,30000_810000_15,30000_800110_1	@achieveTitle1300002
+1300003	20	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1001025_3	@achieveTitle1300003
+]],
+
+}

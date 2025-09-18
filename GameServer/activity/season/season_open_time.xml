@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2023-3-31 00:00:00" startTime="2023-3-31 00:00:00" endTime="2023-9-4 23:59:59" hiddenTime="2023-9-11 23:59:59" matchSeason="5,7;3,3;7,3;8,1;9,105" />
+      <data termId="2" showTime="2023-9-22 00:00:00" startTime="2023-10-13 00:00:00" endTime="2024-4-10 23:59:59" hiddenTime="2024-4-15 23:59:59" matchSeason="5,8;3,4;7,4;8,2;9,106" seperateTime="预计24年4月" mergerTime="预计24年5月" showServerLevel="16" />
+      <data termId="3" showTime="2024-6-14 00:00:00" startTime="2024-6-14 00:00:00" endTime="2024-11-27 23:59:59" hiddenTime="2024-12-2 23:59:59" matchSeason="5,9;3,5;7,5;8,3;9,107" seperateTime="预计24年12月" mergerTime="预计24年12月" showServerLevel="16" />
+      <data termId="4" showTime="2025-1-9 00:00:00" startTime="2025-1-9 00:00:00" endTime="2025-7-9 23:59:59" hiddenTime="2025-7-14 23:59:59" matchSeason="5,10;3,6;7,6;9,108;10,1" seperateTime="预计25年8月" mergerTime="预计25年8月" showServerLevel="16" />
+      <data termId="5" showTime="2025-8-22 00:00:00" startTime="2025-8-22 00:00:00" endTime="2026-2-9 23:59:59" hiddenTime="2026-2-13 23:59:59" matchSeason="5,11;3,7;11,1;9,110;12,1" seperateTime="预计26年3月" mergerTime="预计26年3月" showServerLevel="16" />
+</root>

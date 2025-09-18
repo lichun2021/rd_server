@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="211000" level="0" power="0" postStage="211001" />
+      <data id="211001" level="1" power="1500" frontStage="211000" postStage="211002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1003_350" atkAttr="1_350" />
+      <data id="211002" level="2" power="3000" frontStage="211001" postStage="211003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1003_700" atkAttr="1_700" />
+      <data id="211003" level="3" power="6000" frontStage="211002" postStage="211004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_1050" atkAttr="1_1050" />
+      <data id="211004" level="4" power="9000" frontStage="211003" postStage="211005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_1400" atkAttr="1_1400" />
+      <data id="211005" level="5" power="12000" frontStage="211004" postStage="211006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_1750" atkAttr="1_1750" />
+      <data id="211006" level="6" power="16500" frontStage="211005" postStage="211007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_2100" atkAttr="1_2100" />
+      <data id="211007" level="7" power="21000" frontStage="211006" postStage="211008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_2450" atkAttr="1_2450" />
+      <data id="211008" level="8" power="25500" frontStage="211007" postStage="211009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_2800" atkAttr="1_2800" />
+      <data id="211009" level="9" power="31500" frontStage="211008" postStage="211010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1003_3150" atkAttr="1_3150" />
+      <data id="211010" level="10" power="37500" frontStage="211009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1003_3500" atkAttr="1_3500" />
+      <data id="212000" level="0" power="0" postStage="212001" />
+      <data id="212001" level="1" power="1500" frontStage="212000" postStage="212002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1011_350" />
+      <data id="212002" level="2" power="3000" frontStage="212001" postStage="212003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1011_700" />
+      <data id="212003" level="3" power="6000" frontStage="212002" postStage="212004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1011_1050" />
+      <data id="212004" level="4" power="9000" frontStage="212003" postStage="212005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1011_1400" />
+      <data id="212005" level="5" power="12000" frontStage="212004" postStage="212006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1011_1750" />
+      <data id="212006" level="6" power="16500" frontStage="212005" postStage="212007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1011_2100" />
+      <data id="212007" level="7" power="21000" frontStage="212006" postStage="212008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1011_2450" />
+      <data id="212008" level="8" power="25500" frontStage="212007" postStage="212009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1011_2800" />
+      <data id="212009" level="9" power="31500" frontStage="212008" postStage="212010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1011_3150" />
+      <data id="212010" level="10" power="37500" frontStage="212009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1011_3500" />
+      <data id="213000" level="0" power="0" postStage="213001" />
+      <data id="213001" level="1" power="1500" frontStage="213000" postStage="213002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1019_350" hpAttr="1_350" />
+      <data id="213002" level="2" power="3000" frontStage="213001" postStage="213003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1019_700" hpAttr="1_700" />
+      <data id="213003" level="3" power="6000" frontStage="213002" postStage="213004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1019_1050" hpAttr="1_1050" />
+      <data id="213004" level="4" power="9000" frontStage="213003" postStage="213005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1019_1400" hpAttr="1_1400" />
+      <data id="213005" level="5" power="12000" frontStage="213004" postStage="213006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1019_1750" hpAttr="1_1750" />
+      <data id="213006" level="6" power="16500" frontStage="213005" postStage="213007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1019_2100" hpAttr="1_2100" />
+      <data id="213007" level="7" power="21000" frontStage="213006" postStage="213008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1019_2450" hpAttr="1_2450" />
+      <data id="213008" level="8" power="25500" frontStage="213007" postStage="213009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1019_2800" hpAttr="1_2800" />
+      <data id="213009" level="9" power="31500" frontStage="213008" postStage="213010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1019_3150" hpAttr="1_3150" />
+      <data id="213010" level="10" power="37500" frontStage="213009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1019_3500" hpAttr="1_3500" />
+      <data id="214000" level="0" power="0" postStage="214001" />
+      <data id="214001" level="1" power="1500" frontStage="214000" postStage="214002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1003_150|1011_150|1019_150" atkAttr="1_150" hpAttr="1_150" />
+      <data id="214002" level="2" power="3000" frontStage="214001" postStage="214003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1003_300|1011_300|1019_300" atkAttr="1_300" hpAttr="1_300" />
+      <data id="214003" level="3" power="6000" frontStage="214002" postStage="214004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_450|1011_450|1019_450" atkAttr="1_450" hpAttr="1_450" />
+      <data id="214004" level="4" power="9000" frontStage="214003" postStage="214005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_600|1011_600|1019_600" atkAttr="1_600" hpAttr="1_600" />
+      <data id="214005" level="5" power="12000" frontStage="214004" postStage="214006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1003_750|1011_750|1019_750" atkAttr="1_750" hpAttr="1_750" />
+      <data id="214006" level="6" power="16500" frontStage="214005" postStage="214007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_900|1011_900|1019_900" atkAttr="1_900" hpAttr="1_900" />
+      <data id="214007" level="7" power="21000" frontStage="214006" postStage="214008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_1050|1011_1050|1019_1050" atkAttr="1_1050" hpAttr="1_1050" />
+      <data id="214008" level="8" power="25500" frontStage="214007" postStage="214009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1003_1200|1011_1200|1019_1200" atkAttr="1_1200" hpAttr="1_1200" />
+      <data id="214009" level="9" power="31500" frontStage="214008" postStage="214010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1003_1350|1011_1350|1019_1350" atkAttr="1_1350" hpAttr="1_1350" />
+      <data id="214010" level="10" power="37500" frontStage="214009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1003_1500|1011_1500|1019_1500" atkAttr="1_1500" hpAttr="1_1500" />
+      <data id="221000" level="0" power="0" postStage="221001" />
+      <data id="221001" level="1" power="1500" frontStage="221000" postStage="221002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1004_350" atkAttr="2_350" />
+      <data id="221002" level="2" power="3000" frontStage="221001" postStage="221003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1004_700" atkAttr="2_700" />
+      <data id="221003" level="3" power="6000" frontStage="221002" postStage="221004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_1050" atkAttr="2_1050" />
+      <data id="221004" level="4" power="9000" frontStage="221003" postStage="221005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_1400" atkAttr="2_1400" />
+      <data id="221005" level="5" power="12000" frontStage="221004" postStage="221006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_1750" atkAttr="2_1750" />
+      <data id="221006" level="6" power="16500" frontStage="221005" postStage="221007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_2100" atkAttr="2_2100" />
+      <data id="221007" level="7" power="21000" frontStage="221006" postStage="221008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_2450" atkAttr="2_2450" />
+      <data id="221008" level="8" power="25500" frontStage="221007" postStage="221009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_2800" atkAttr="2_2800" />
+      <data id="221009" level="9" power="31500" frontStage="221008" postStage="221010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1004_3150" atkAttr="2_3150" />
+      <data id="221010" level="10" power="37500" frontStage="221009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1004_3500" atkAttr="2_3500" />
+      <data id="222000" level="0" power="0" postStage="222001" />
+      <data id="222001" level="1" power="1500" frontStage="222000" postStage="222002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1012_350" />
+      <data id="222002" level="2" power="3000" frontStage="222001" postStage="222003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1012_700" />
+      <data id="222003" level="3" power="6000" frontStage="222002" postStage="222004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1012_1050" />
+      <data id="222004" level="4" power="9000" frontStage="222003" postStage="222005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1012_1400" />
+      <data id="222005" level="5" power="12000" frontStage="222004" postStage="222006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1012_1750" />
+      <data id="222006" level="6" power="16500" frontStage="222005" postStage="222007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1012_2100" />
+      <data id="222007" level="7" power="21000" frontStage="222006" postStage="222008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1012_2450" />
+      <data id="222008" level="8" power="25500" frontStage="222007" postStage="222009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1012_2800" />
+      <data id="222009" level="9" power="31500" frontStage="222008" postStage="222010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1012_3150" />
+      <data id="222010" level="10" power="37500" frontStage="222009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1012_3500" />
+      <data id="223000" level="0" power="0" postStage="223001" />
+      <data id="223001" level="1" power="1500" frontStage="223000" postStage="223002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1020_350" hpAttr="2_350" />
+      <data id="223002" level="2" power="3000" frontStage="223001" postStage="223003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1020_700" hpAttr="2_700" />
+      <data id="223003" level="3" power="6000" frontStage="223002" postStage="223004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1020_1050" hpAttr="2_1050" />
+      <data id="223004" level="4" power="9000" frontStage="223003" postStage="223005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1020_1400" hpAttr="2_1400" />
+      <data id="223005" level="5" power="12000" frontStage="223004" postStage="223006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1020_1750" hpAttr="2_1750" />
+      <data id="223006" level="6" power="16500" frontStage="223005" postStage="223007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1020_2100" hpAttr="2_2100" />
+      <data id="223007" level="7" power="21000" frontStage="223006" postStage="223008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1020_2450" hpAttr="2_2450" />
+      <data id="223008" level="8" power="25500" frontStage="223007" postStage="223009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1020_2800" hpAttr="2_2800" />
+      <data id="223009" level="9" power="31500" frontStage="223008" postStage="223010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1020_3150" hpAttr="2_3150" />
+      <data id="223010" level="10" power="37500" frontStage="223009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1020_3500" hpAttr="2_3500" />
+      <data id="224000" level="0" power="0" postStage="224001" />
+      <data id="224001" level="1" power="1500" frontStage="224000" postStage="224002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1004_150|1012_150|1020_150" atkAttr="2_150" hpAttr="2_150" />
+      <data id="224002" level="2" power="3000" frontStage="224001" postStage="224003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1004_300|1012_300|1020_300" atkAttr="2_300" hpAttr="2_300" />
+      <data id="224003" level="3" power="6000" frontStage="224002" postStage="224004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_450|1012_450|1020_450" atkAttr="2_450" hpAttr="2_450" />
+      <data id="224004" level="4" power="9000" frontStage="224003" postStage="224005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_600|1012_600|1020_600" atkAttr="2_600" hpAttr="2_600" />
+      <data id="224005" level="5" power="12000" frontStage="224004" postStage="224006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1004_750|1012_750|1020_750" atkAttr="2_750" hpAttr="2_750" />
+      <data id="224006" level="6" power="16500" frontStage="224005" postStage="224007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_900|1012_900|1020_900" atkAttr="2_900" hpAttr="2_900" />
+      <data id="224007" level="7" power="21000" frontStage="224006" postStage="224008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_1050|1012_1050|1020_1050" atkAttr="2_1050" hpAttr="2_1050" />
+      <data id="224008" level="8" power="25500" frontStage="224007" postStage="224009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1004_1200|1012_1200|1020_1200" atkAttr="2_1200" hpAttr="2_1200" />
+      <data id="224009" level="9" power="31500" frontStage="224008" postStage="224010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1004_1350|1012_1350|1020_1350" atkAttr="2_1350" hpAttr="2_1350" />
+      <data id="224010" level="10" power="37500" frontStage="224009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1004_1500|1012_1500|1020_1500" atkAttr="2_1500" hpAttr="2_1500" />
+      <data id="231000" level="0" power="0" postStage="231001" />
+      <data id="231001" level="1" power="1500" frontStage="231000" postStage="231002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1005_350" atkAttr="3_350" />
+      <data id="231002" level="2" power="3000" frontStage="231001" postStage="231003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1005_700" atkAttr="3_700" />
+      <data id="231003" level="3" power="6000" frontStage="231002" postStage="231004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_1050" atkAttr="3_1050" />
+      <data id="231004" level="4" power="9000" frontStage="231003" postStage="231005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_1400" atkAttr="3_1400" />
+      <data id="231005" level="5" power="12000" frontStage="231004" postStage="231006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_1750" atkAttr="3_1750" />
+      <data id="231006" level="6" power="16500" frontStage="231005" postStage="231007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_2100" atkAttr="3_2100" />
+      <data id="231007" level="7" power="21000" frontStage="231006" postStage="231008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_2450" atkAttr="3_2450" />
+      <data id="231008" level="8" power="25500" frontStage="231007" postStage="231009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_2800" atkAttr="3_2800" />
+      <data id="231009" level="9" power="31500" frontStage="231008" postStage="231010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1005_3150" atkAttr="3_3150" />
+      <data id="231010" level="10" power="37500" frontStage="231009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1005_3500" atkAttr="3_3500" />
+      <data id="232000" level="0" power="0" postStage="232001" />
+      <data id="232001" level="1" power="1500" frontStage="232000" postStage="232002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1013_350" />
+      <data id="232002" level="2" power="3000" frontStage="232001" postStage="232003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1013_700" />
+      <data id="232003" level="3" power="6000" frontStage="232002" postStage="232004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1013_1050" />
+      <data id="232004" level="4" power="9000" frontStage="232003" postStage="232005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1013_1400" />
+      <data id="232005" level="5" power="12000" frontStage="232004" postStage="232006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1013_1750" />
+      <data id="232006" level="6" power="16500" frontStage="232005" postStage="232007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1013_2100" />
+      <data id="232007" level="7" power="21000" frontStage="232006" postStage="232008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1013_2450" />
+      <data id="232008" level="8" power="25500" frontStage="232007" postStage="232009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1013_2800" />
+      <data id="232009" level="9" power="31500" frontStage="232008" postStage="232010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1013_3150" />
+      <data id="232010" level="10" power="37500" frontStage="232009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1013_3500" />
+      <data id="233000" level="0" power="0" postStage="233001" />
+      <data id="233001" level="1" power="1500" frontStage="233000" postStage="233002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1021_350" hpAttr="3_350" />
+      <data id="233002" level="2" power="3000" frontStage="233001" postStage="233003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1021_700" hpAttr="3_700" />
+      <data id="233003" level="3" power="6000" frontStage="233002" postStage="233004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1021_1050" hpAttr="3_1050" />
+      <data id="233004" level="4" power="9000" frontStage="233003" postStage="233005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1021_1400" hpAttr="3_1400" />
+      <data id="233005" level="5" power="12000" frontStage="233004" postStage="233006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1021_1750" hpAttr="3_1750" />
+      <data id="233006" level="6" power="16500" frontStage="233005" postStage="233007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1021_2100" hpAttr="3_2100" />
+      <data id="233007" level="7" power="21000" frontStage="233006" postStage="233008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1021_2450" hpAttr="3_2450" />
+      <data id="233008" level="8" power="25500" frontStage="233007" postStage="233009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1021_2800" hpAttr="3_2800" />
+      <data id="233009" level="9" power="31500" frontStage="233008" postStage="233010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1021_3150" hpAttr="3_3150" />
+      <data id="233010" level="10" power="37500" frontStage="233009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1021_3500" hpAttr="3_3500" />
+      <data id="234000" level="0" power="0" postStage="234001" />
+      <data id="234001" level="1" power="1500" frontStage="234000" postStage="234002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1005_150|1013_150|1021_150" atkAttr="3_150" hpAttr="3_150" />
+      <data id="234002" level="2" power="3000" frontStage="234001" postStage="234003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1005_300|1013_300|1021_300" atkAttr="3_300" hpAttr="3_300" />
+      <data id="234003" level="3" power="6000" frontStage="234002" postStage="234004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_450|1013_450|1021_450" atkAttr="3_450" hpAttr="3_450" />
+      <data id="234004" level="4" power="9000" frontStage="234003" postStage="234005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_600|1013_600|1021_600" atkAttr="3_600" hpAttr="3_600" />
+      <data id="234005" level="5" power="12000" frontStage="234004" postStage="234006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1005_750|1013_750|1021_750" atkAttr="3_750" hpAttr="3_750" />
+      <data id="234006" level="6" power="16500" frontStage="234005" postStage="234007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_900|1013_900|1021_900" atkAttr="3_900" hpAttr="3_900" />
+      <data id="234007" level="7" power="21000" frontStage="234006" postStage="234008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_1050|1013_1050|1021_1050" atkAttr="3_1050" hpAttr="3_1050" />
+      <data id="234008" level="8" power="25500" frontStage="234007" postStage="234009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1005_1200|1013_1200|1021_1200" atkAttr="3_1200" hpAttr="3_1200" />
+      <data id="234009" level="9" power="31500" frontStage="234008" postStage="234010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1005_1350|1013_1350|1021_1350" atkAttr="3_1350" hpAttr="3_1350" />
+      <data id="234010" level="10" power="37500" frontStage="234009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1005_1500|1013_1500|1021_1500" atkAttr="3_1500" hpAttr="3_1500" />
+      <data id="241000" level="0" power="0" postStage="241001" />
+      <data id="241001" level="1" power="1500" frontStage="241000" postStage="241002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1014_350" />
+      <data id="241002" level="2" power="3000" frontStage="241001" postStage="241003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1014_700" />
+      <data id="241003" level="3" power="6000" frontStage="241002" postStage="241004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1014_1050" />
+      <data id="241004" level="4" power="9000" frontStage="241003" postStage="241005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1014_1400" />
+      <data id="241005" level="5" power="12000" frontStage="241004" postStage="241006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1014_1750" />
+      <data id="241006" level="6" power="16500" frontStage="241005" postStage="241007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1014_2100" />
+      <data id="241007" level="7" power="21000" frontStage="241006" postStage="241008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1014_2450" />
+      <data id="241008" level="8" power="25500" frontStage="241007" postStage="241009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1014_2800" />
+      <data id="241009" level="9" power="31500" frontStage="241008" postStage="241010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1014_3150" />
+      <data id="241010" level="10" power="37500" frontStage="241009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1014_3500" />
+      <data id="242000" level="0" power="0" postStage="242001" />
+      <data id="242001" level="1" power="1500" frontStage="242000" postStage="242002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1006_350" atkAttr="4_350" />
+      <data id="242002" level="2" power="3000" frontStage="242001" postStage="242003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1006_700" atkAttr="4_700" />
+      <data id="242003" level="3" power="6000" frontStage="242002" postStage="242004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_1050" atkAttr="4_1050" />
+      <data id="242004" level="4" power="9000" frontStage="242003" postStage="242005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_1400" atkAttr="4_1400" />
+      <data id="242005" level="5" power="12000" frontStage="242004" postStage="242006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_1750" atkAttr="4_1750" />
+      <data id="242006" level="6" power="16500" frontStage="242005" postStage="242007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_2100" atkAttr="4_2100" />
+      <data id="242007" level="7" power="21000" frontStage="242006" postStage="242008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_2450" atkAttr="4_2450" />
+      <data id="242008" level="8" power="25500" frontStage="242007" postStage="242009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_2800" atkAttr="4_2800" />
+      <data id="242009" level="9" power="31500" frontStage="242008" postStage="242010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1006_3150" atkAttr="4_3150" />
+      <data id="242010" level="10" power="37500" frontStage="242009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1006_3500" atkAttr="4_3500" />
+      <data id="243000" level="0" power="0" postStage="243001" />
+      <data id="243001" level="1" power="1500" frontStage="243000" postStage="243002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1022_350" hpAttr="4_350" />
+      <data id="243002" level="2" power="3000" frontStage="243001" postStage="243003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1022_700" hpAttr="4_700" />
+      <data id="243003" level="3" power="6000" frontStage="243002" postStage="243004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1022_1050" hpAttr="4_1050" />
+      <data id="243004" level="4" power="9000" frontStage="243003" postStage="243005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1022_1400" hpAttr="4_1400" />
+      <data id="243005" level="5" power="12000" frontStage="243004" postStage="243006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1022_1750" hpAttr="4_1750" />
+      <data id="243006" level="6" power="16500" frontStage="243005" postStage="243007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1022_2100" hpAttr="4_2100" />
+      <data id="243007" level="7" power="21000" frontStage="243006" postStage="243008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1022_2450" hpAttr="4_2450" />
+      <data id="243008" level="8" power="25500" frontStage="243007" postStage="243009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1022_2800" hpAttr="4_2800" />
+      <data id="243009" level="9" power="31500" frontStage="243008" postStage="243010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1022_3150" hpAttr="4_3150" />
+      <data id="243010" level="10" power="37500" frontStage="243009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1022_3500" hpAttr="4_3500" />
+      <data id="244000" level="0" power="0" postStage="244001" />
+      <data id="244001" level="1" power="1500" frontStage="244000" postStage="244002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1006_150|1014_150|1022_150" atkAttr="4_150" hpAttr="4_150" />
+      <data id="244002" level="2" power="3000" frontStage="244001" postStage="244003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1006_300|1014_300|1022_300" atkAttr="4_300" hpAttr="4_300" />
+      <data id="244003" level="3" power="6000" frontStage="244002" postStage="244004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_450|1014_450|1022_450" atkAttr="4_450" hpAttr="4_450" />
+      <data id="244004" level="4" power="9000" frontStage="244003" postStage="244005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_600|1014_600|1022_600" atkAttr="4_600" hpAttr="4_600" />
+      <data id="244005" level="5" power="12000" frontStage="244004" postStage="244006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1006_750|1014_750|1022_750" atkAttr="4_750" hpAttr="4_750" />
+      <data id="244006" level="6" power="16500" frontStage="244005" postStage="244007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_900|1014_900|1022_900" atkAttr="4_900" hpAttr="4_900" />
+      <data id="244007" level="7" power="21000" frontStage="244006" postStage="244008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_1050|1014_1050|1022_1050" atkAttr="4_1050" hpAttr="4_1050" />
+      <data id="244008" level="8" power="25500" frontStage="244007" postStage="244009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1006_1200|1014_1200|1022_1200" atkAttr="4_1200" hpAttr="4_1200" />
+      <data id="244009" level="9" power="31500" frontStage="244008" postStage="244010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1006_1350|1014_1350|1022_1350" atkAttr="4_1350" hpAttr="4_1350" />
+      <data id="244010" level="10" power="37500" frontStage="244009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1006_1500|1014_1500|1022_1500" atkAttr="4_1500" hpAttr="4_1500" />
+      <data id="251000" level="0" power="0" postStage="251001" />
+      <data id="251001" level="1" power="1500" frontStage="251000" postStage="251002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1007_350" atkAttr="5_350" />
+      <data id="251002" level="2" power="3000" frontStage="251001" postStage="251003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1007_700" atkAttr="5_700" />
+      <data id="251003" level="3" power="6000" frontStage="251002" postStage="251004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_1050" atkAttr="5_1050" />
+      <data id="251004" level="4" power="9000" frontStage="251003" postStage="251005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_1400" atkAttr="5_1400" />
+      <data id="251005" level="5" power="12000" frontStage="251004" postStage="251006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_1750" atkAttr="5_1750" />
+      <data id="251006" level="6" power="16500" frontStage="251005" postStage="251007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_2100" atkAttr="5_2100" />
+      <data id="251007" level="7" power="21000" frontStage="251006" postStage="251008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_2450" atkAttr="5_2450" />
+      <data id="251008" level="8" power="25500" frontStage="251007" postStage="251009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_2800" atkAttr="5_2800" />
+      <data id="251009" level="9" power="31500" frontStage="251008" postStage="251010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1007_3150" atkAttr="5_3150" />
+      <data id="251010" level="10" power="37500" frontStage="251009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1007_3500" atkAttr="5_3500" />
+      <data id="252000" level="0" power="0" postStage="252001" />
+      <data id="252001" level="1" power="1500" frontStage="252000" postStage="252002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1015_350" />
+      <data id="252002" level="2" power="3000" frontStage="252001" postStage="252003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1015_700" />
+      <data id="252003" level="3" power="6000" frontStage="252002" postStage="252004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1015_1050" />
+      <data id="252004" level="4" power="9000" frontStage="252003" postStage="252005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1015_1400" />
+      <data id="252005" level="5" power="12000" frontStage="252004" postStage="252006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1015_1750" />
+      <data id="252006" level="6" power="16500" frontStage="252005" postStage="252007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1015_2100" />
+      <data id="252007" level="7" power="21000" frontStage="252006" postStage="252008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1015_2450" />
+      <data id="252008" level="8" power="25500" frontStage="252007" postStage="252009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1015_2800" />
+      <data id="252009" level="9" power="31500" frontStage="252008" postStage="252010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1015_3150" />
+      <data id="252010" level="10" power="37500" frontStage="252009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1015_3500" />
+      <data id="253000" level="0" power="0" postStage="253001" />
+      <data id="253001" level="1" power="1500" frontStage="253000" postStage="253002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1023_350" hpAttr="5_350" />
+      <data id="253002" level="2" power="3000" frontStage="253001" postStage="253003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1023_700" hpAttr="5_700" />
+      <data id="253003" level="3" power="6000" frontStage="253002" postStage="253004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1023_1050" hpAttr="5_1050" />
+      <data id="253004" level="4" power="9000" frontStage="253003" postStage="253005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1023_1400" hpAttr="5_1400" />
+      <data id="253005" level="5" power="12000" frontStage="253004" postStage="253006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1023_1750" hpAttr="5_1750" />
+      <data id="253006" level="6" power="16500" frontStage="253005" postStage="253007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1023_2100" hpAttr="5_2100" />
+      <data id="253007" level="7" power="21000" frontStage="253006" postStage="253008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1023_2450" hpAttr="5_2450" />
+      <data id="253008" level="8" power="25500" frontStage="253007" postStage="253009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1023_2800" hpAttr="5_2800" />
+      <data id="253009" level="9" power="31500" frontStage="253008" postStage="253010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1023_3150" hpAttr="5_3150" />
+      <data id="253010" level="10" power="37500" frontStage="253009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1023_3500" hpAttr="5_3500" />
+      <data id="254000" level="0" power="0" postStage="254001" />
+      <data id="254001" level="1" power="1500" frontStage="254000" postStage="254002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1007_150|1015_150|1023_150" atkAttr="5_150" hpAttr="5_150" />
+      <data id="254002" level="2" power="3000" frontStage="254001" postStage="254003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1007_300|1015_300|1023_300" atkAttr="5_300" hpAttr="5_300" />
+      <data id="254003" level="3" power="6000" frontStage="254002" postStage="254004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_450|1015_450|1023_450" atkAttr="5_450" hpAttr="5_450" />
+      <data id="254004" level="4" power="9000" frontStage="254003" postStage="254005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_600|1015_600|1023_600" atkAttr="5_600" hpAttr="5_600" />
+      <data id="254005" level="5" power="12000" frontStage="254004" postStage="254006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1007_750|1015_750|1023_750" atkAttr="5_750" hpAttr="5_750" />
+      <data id="254006" level="6" power="16500" frontStage="254005" postStage="254007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_900|1015_900|1023_900" atkAttr="5_900" hpAttr="5_900" />
+      <data id="254007" level="7" power="21000" frontStage="254006" postStage="254008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_1050|1015_1050|1023_1050" atkAttr="5_1050" hpAttr="5_1050" />
+      <data id="254008" level="8" power="25500" frontStage="254007" postStage="254009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1007_1200|1015_1200|1023_1200" atkAttr="5_1200" hpAttr="5_1200" />
+      <data id="254009" level="9" power="31500" frontStage="254008" postStage="254010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1007_1350|1015_1350|1023_1350" atkAttr="5_1350" hpAttr="5_1350" />
+      <data id="254010" level="10" power="37500" frontStage="254009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1007_1500|1015_1500|1023_1500" atkAttr="5_1500" hpAttr="5_1500" />
+      <data id="261000" level="0" power="0" postStage="261001" />
+      <data id="261001" level="1" power="1500" frontStage="261000" postStage="261002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1016_350" />
+      <data id="261002" level="2" power="3000" frontStage="261001" postStage="261003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1016_700" />
+      <data id="261003" level="3" power="6000" frontStage="261002" postStage="261004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1016_1050" />
+      <data id="261004" level="4" power="9000" frontStage="261003" postStage="261005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1016_1400" />
+      <data id="261005" level="5" power="12000" frontStage="261004" postStage="261006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1016_1750" />
+      <data id="261006" level="6" power="16500" frontStage="261005" postStage="261007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1016_2100" />
+      <data id="261007" level="7" power="21000" frontStage="261006" postStage="261008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1016_2450" />
+      <data id="261008" level="8" power="25500" frontStage="261007" postStage="261009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1016_2800" />
+      <data id="261009" level="9" power="31500" frontStage="261008" postStage="261010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1016_3150" />
+      <data id="261010" level="10" power="37500" frontStage="261009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1016_3500" />
+      <data id="262000" level="0" power="0" postStage="262001" />
+      <data id="262001" level="1" power="1500" frontStage="262000" postStage="262002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1008_350" atkAttr="6_350" />
+      <data id="262002" level="2" power="3000" frontStage="262001" postStage="262003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1008_700" atkAttr="6_700" />
+      <data id="262003" level="3" power="6000" frontStage="262002" postStage="262004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_1050" atkAttr="6_1050" />
+      <data id="262004" level="4" power="9000" frontStage="262003" postStage="262005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_1400" atkAttr="6_1400" />
+      <data id="262005" level="5" power="12000" frontStage="262004" postStage="262006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_1750" atkAttr="6_1750" />
+      <data id="262006" level="6" power="16500" frontStage="262005" postStage="262007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_2100" atkAttr="6_2100" />
+      <data id="262007" level="7" power="21000" frontStage="262006" postStage="262008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_2450" atkAttr="6_2450" />
+      <data id="262008" level="8" power="25500" frontStage="262007" postStage="262009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_2800" atkAttr="6_2800" />
+      <data id="262009" level="9" power="31500" frontStage="262008" postStage="262010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1008_3150" atkAttr="6_3150" />
+      <data id="262010" level="10" power="37500" frontStage="262009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1008_3500" atkAttr="6_3500" />
+      <data id="263000" level="0" power="0" postStage="263001" />
+      <data id="263001" level="1" power="1500" frontStage="263000" postStage="263002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1024_350" hpAttr="6_350" />
+      <data id="263002" level="2" power="3000" frontStage="263001" postStage="263003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1024_700" hpAttr="6_700" />
+      <data id="263003" level="3" power="6000" frontStage="263002" postStage="263004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1024_1050" hpAttr="6_1050" />
+      <data id="263004" level="4" power="9000" frontStage="263003" postStage="263005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1024_1400" hpAttr="6_1400" />
+      <data id="263005" level="5" power="12000" frontStage="263004" postStage="263006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1024_1750" hpAttr="6_1750" />
+      <data id="263006" level="6" power="16500" frontStage="263005" postStage="263007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1024_2100" hpAttr="6_2100" />
+      <data id="263007" level="7" power="21000" frontStage="263006" postStage="263008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1024_2450" hpAttr="6_2450" />
+      <data id="263008" level="8" power="25500" frontStage="263007" postStage="263009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1024_2800" hpAttr="6_2800" />
+      <data id="263009" level="9" power="31500" frontStage="263008" postStage="263010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1024_3150" hpAttr="6_3150" />
+      <data id="263010" level="10" power="37500" frontStage="263009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1024_3500" hpAttr="6_3500" />
+      <data id="264000" level="0" power="0" postStage="264001" />
+      <data id="264001" level="1" power="1500" frontStage="264000" postStage="264002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1008_150|1016_150|1024_150" atkAttr="6_150" hpAttr="6_150" />
+      <data id="264002" level="2" power="3000" frontStage="264001" postStage="264003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1008_300|1016_300|1024_300" atkAttr="6_300" hpAttr="6_300" />
+      <data id="264003" level="3" power="6000" frontStage="264002" postStage="264004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_450|1016_450|1024_450" atkAttr="6_450" hpAttr="6_450" />
+      <data id="264004" level="4" power="9000" frontStage="264003" postStage="264005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_600|1016_600|1024_600" atkAttr="6_600" hpAttr="6_600" />
+      <data id="264005" level="5" power="12000" frontStage="264004" postStage="264006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1008_750|1016_750|1024_750" atkAttr="6_750" hpAttr="6_750" />
+      <data id="264006" level="6" power="16500" frontStage="264005" postStage="264007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_900|1016_900|1024_900" atkAttr="6_900" hpAttr="6_900" />
+      <data id="264007" level="7" power="21000" frontStage="264006" postStage="264008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_1050|1016_1050|1024_1050" atkAttr="6_1050" hpAttr="6_1050" />
+      <data id="264008" level="8" power="25500" frontStage="264007" postStage="264009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1008_1200|1016_1200|1024_1200" atkAttr="6_1200" hpAttr="6_1200" />
+      <data id="264009" level="9" power="31500" frontStage="264008" postStage="264010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1008_1350|1016_1350|1024_1350" atkAttr="6_1350" hpAttr="6_1350" />
+      <data id="264010" level="10" power="37500" frontStage="264009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1008_1500|1016_1500|1024_1500" atkAttr="6_1500" hpAttr="6_1500" />
+      <data id="271000" level="0" power="0" postStage="271001" />
+      <data id="271001" level="1" power="1500" frontStage="271000" postStage="271002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1009_350" atkAttr="7_350" />
+      <data id="271002" level="2" power="3000" frontStage="271001" postStage="271003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1009_700" atkAttr="7_700" />
+      <data id="271003" level="3" power="6000" frontStage="271002" postStage="271004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_1050" atkAttr="7_1050" />
+      <data id="271004" level="4" power="9000" frontStage="271003" postStage="271005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_1400" atkAttr="7_1400" />
+      <data id="271005" level="5" power="12000" frontStage="271004" postStage="271006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_1750" atkAttr="7_1750" />
+      <data id="271006" level="6" power="16500" frontStage="271005" postStage="271007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_2100" atkAttr="7_2100" />
+      <data id="271007" level="7" power="21000" frontStage="271006" postStage="271008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_2450" atkAttr="7_2450" />
+      <data id="271008" level="8" power="25500" frontStage="271007" postStage="271009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_2800" atkAttr="7_2800" />
+      <data id="271009" level="9" power="31500" frontStage="271008" postStage="271010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1009_3150" atkAttr="7_3150" />
+      <data id="271010" level="10" power="37500" frontStage="271009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1009_3500" atkAttr="7_3500" />
+      <data id="272000" level="0" power="0" postStage="272001" />
+      <data id="272001" level="1" power="1500" frontStage="272000" postStage="272002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1017_350" />
+      <data id="272002" level="2" power="3000" frontStage="272001" postStage="272003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1017_700" />
+      <data id="272003" level="3" power="6000" frontStage="272002" postStage="272004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1017_1050" />
+      <data id="272004" level="4" power="9000" frontStage="272003" postStage="272005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1017_1400" />
+      <data id="272005" level="5" power="12000" frontStage="272004" postStage="272006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1017_1750" />
+      <data id="272006" level="6" power="16500" frontStage="272005" postStage="272007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1017_2100" />
+      <data id="272007" level="7" power="21000" frontStage="272006" postStage="272008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1017_2450" />
+      <data id="272008" level="8" power="25500" frontStage="272007" postStage="272009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1017_2800" />
+      <data id="272009" level="9" power="31500" frontStage="272008" postStage="272010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1017_3150" />
+      <data id="272010" level="10" power="37500" frontStage="272009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1017_3500" />
+      <data id="273000" level="0" power="0" postStage="273001" />
+      <data id="273001" level="1" power="1500" frontStage="273000" postStage="273002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1025_350" hpAttr="7_350" />
+      <data id="273002" level="2" power="3000" frontStage="273001" postStage="273003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1025_700" hpAttr="7_700" />
+      <data id="273003" level="3" power="6000" frontStage="273002" postStage="273004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1025_1050" hpAttr="7_1050" />
+      <data id="273004" level="4" power="9000" frontStage="273003" postStage="273005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1025_1400" hpAttr="7_1400" />
+      <data id="273005" level="5" power="12000" frontStage="273004" postStage="273006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1025_1750" hpAttr="7_1750" />
+      <data id="273006" level="6" power="16500" frontStage="273005" postStage="273007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1025_2100" hpAttr="7_2100" />
+      <data id="273007" level="7" power="21000" frontStage="273006" postStage="273008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1025_2450" hpAttr="7_2450" />
+      <data id="273008" level="8" power="25500" frontStage="273007" postStage="273009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1025_2800" hpAttr="7_2800" />
+      <data id="273009" level="9" power="31500" frontStage="273008" postStage="273010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1025_3150" hpAttr="7_3150" />
+      <data id="273010" level="10" power="37500" frontStage="273009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1025_3500" hpAttr="7_3500" />
+      <data id="274000" level="0" power="0" postStage="274001" />
+      <data id="274001" level="1" power="1500" frontStage="274000" postStage="274002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1009_150|1017_150|1025_150" atkAttr="7_150" hpAttr="7_150" />
+      <data id="274002" level="2" power="3000" frontStage="274001" postStage="274003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1009_300|1017_300|1025_300" atkAttr="7_300" hpAttr="7_300" />
+      <data id="274003" level="3" power="6000" frontStage="274002" postStage="274004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_450|1017_450|1025_450" atkAttr="7_450" hpAttr="7_450" />
+      <data id="274004" level="4" power="9000" frontStage="274003" postStage="274005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_600|1017_600|1025_600" atkAttr="7_600" hpAttr="7_600" />
+      <data id="274005" level="5" power="12000" frontStage="274004" postStage="274006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1009_750|1017_750|1025_750" atkAttr="7_750" hpAttr="7_750" />
+      <data id="274006" level="6" power="16500" frontStage="274005" postStage="274007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_900|1017_900|1025_900" atkAttr="7_900" hpAttr="7_900" />
+      <data id="274007" level="7" power="21000" frontStage="274006" postStage="274008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_1050|1017_1050|1025_1050" atkAttr="7_1050" hpAttr="7_1050" />
+      <data id="274008" level="8" power="25500" frontStage="274007" postStage="274009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1009_1200|1017_1200|1025_1200" atkAttr="7_1200" hpAttr="7_1200" />
+      <data id="274009" level="9" power="31500" frontStage="274008" postStage="274010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1009_1350|1017_1350|1025_1350" atkAttr="7_1350" hpAttr="7_1350" />
+      <data id="274010" level="10" power="37500" frontStage="274009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1009_1500|1017_1500|1025_1500" atkAttr="7_1500" hpAttr="7_1500" />
+      <data id="281000" level="0" power="0" postStage="281001" />
+      <data id="281001" level="1" power="1500" frontStage="281000" postStage="281002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1010_350" atkAttr="8_350" />
+      <data id="281002" level="2" power="3000" frontStage="281001" postStage="281003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1010_700" atkAttr="8_700" />
+      <data id="281003" level="3" power="6000" frontStage="281002" postStage="281004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_1050" atkAttr="8_1050" />
+      <data id="281004" level="4" power="9000" frontStage="281003" postStage="281005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_1400" atkAttr="8_1400" />
+      <data id="281005" level="5" power="12000" frontStage="281004" postStage="281006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_1750" atkAttr="8_1750" />
+      <data id="281006" level="6" power="16500" frontStage="281005" postStage="281007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_2100" atkAttr="8_2100" />
+      <data id="281007" level="7" power="21000" frontStage="281006" postStage="281008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_2450" atkAttr="8_2450" />
+      <data id="281008" level="8" power="25500" frontStage="281007" postStage="281009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_2800" atkAttr="8_2800" />
+      <data id="281009" level="9" power="31500" frontStage="281008" postStage="281010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1010_3150" atkAttr="8_3150" />
+      <data id="281010" level="10" power="37500" frontStage="281009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1010_3500" atkAttr="8_3500" />
+      <data id="282000" level="0" power="0" postStage="282001" />
+      <data id="282001" level="1" power="1500" frontStage="282000" postStage="282002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1018_350" />
+      <data id="282002" level="2" power="3000" frontStage="282001" postStage="282003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1018_700" />
+      <data id="282003" level="3" power="6000" frontStage="282002" postStage="282004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1018_1050" />
+      <data id="282004" level="4" power="9000" frontStage="282003" postStage="282005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1018_1400" />
+      <data id="282005" level="5" power="12000" frontStage="282004" postStage="282006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1018_1750" />
+      <data id="282006" level="6" power="16500" frontStage="282005" postStage="282007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1018_2100" />
+      <data id="282007" level="7" power="21000" frontStage="282006" postStage="282008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1018_2450" />
+      <data id="282008" level="8" power="25500" frontStage="282007" postStage="282009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1018_2800" />
+      <data id="282009" level="9" power="31500" frontStage="282008" postStage="282010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1018_3150" />
+      <data id="282010" level="10" power="37500" frontStage="282009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1018_3500" />
+      <data id="283000" level="0" power="0" postStage="283001" />
+      <data id="283001" level="1" power="1500" frontStage="283000" postStage="283002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1026_350" hpAttr="8_350" />
+      <data id="283002" level="2" power="3000" frontStage="283001" postStage="283003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1026_700" hpAttr="8_700" />
+      <data id="283003" level="3" power="6000" frontStage="283002" postStage="283004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1026_1050" hpAttr="8_1050" />
+      <data id="283004" level="4" power="9000" frontStage="283003" postStage="283005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1026_1400" hpAttr="8_1400" />
+      <data id="283005" level="5" power="12000" frontStage="283004" postStage="283006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1026_1750" hpAttr="8_1750" />
+      <data id="283006" level="6" power="16500" frontStage="283005" postStage="283007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1026_2100" hpAttr="8_2100" />
+      <data id="283007" level="7" power="21000" frontStage="283006" postStage="283008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1026_2450" hpAttr="8_2450" />
+      <data id="283008" level="8" power="25500" frontStage="283007" postStage="283009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1026_2800" hpAttr="8_2800" />
+      <data id="283009" level="9" power="31500" frontStage="283008" postStage="283010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1026_3150" hpAttr="8_3150" />
+      <data id="283010" level="10" power="37500" frontStage="283009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1026_3500" hpAttr="8_3500" />
+      <data id="284000" level="0" power="0" postStage="284001" />
+      <data id="284001" level="1" power="1500" frontStage="284000" postStage="284002" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1010_150|1018_150|1026_150" atkAttr="8_150" hpAttr="8_150" />
+      <data id="284002" level="2" power="3000" frontStage="284001" postStage="284003" buildCost="30000_21063005_50,30000_21063003_25,30000_21063002_25" effect="1010_300|1018_300|1026_300" atkAttr="8_300" hpAttr="8_300" />
+      <data id="284003" level="3" power="6000" frontStage="284002" postStage="284004" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_450|1018_450|1026_450" atkAttr="8_450" hpAttr="8_450" />
+      <data id="284004" level="4" power="9000" frontStage="284003" postStage="284005" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_600|1018_600|1026_600" atkAttr="8_600" hpAttr="8_600" />
+      <data id="284005" level="5" power="12000" frontStage="284004" postStage="284006" buildCost="30000_21063005_100,30000_21063003_50,30000_21063002_50" effect="1010_750|1018_750|1026_750" atkAttr="8_750" hpAttr="8_750" />
+      <data id="284006" level="6" power="16500" frontStage="284005" postStage="284007" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_900|1018_900|1026_900" atkAttr="8_900" hpAttr="8_900" />
+      <data id="284007" level="7" power="21000" frontStage="284006" postStage="284008" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_1050|1018_1050|1026_1050" atkAttr="8_1050" hpAttr="8_1050" />
+      <data id="284008" level="8" power="25500" frontStage="284007" postStage="284009" buildCost="30000_21063005_150,30000_21063003_75,30000_21063002_75" effect="1010_1200|1018_1200|1026_1200" atkAttr="8_1200" hpAttr="8_1200" />
+      <data id="284009" level="9" power="31500" frontStage="284008" postStage="284010" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1010_1350|1018_1350|1026_1350" atkAttr="8_1350" hpAttr="8_1350" />
+      <data id="284010" level="10" power="37500" frontStage="284009" buildCost="30000_21063005_200,30000_21063003_100,30000_21063002_100" effect="1010_1500|1018_1500|1026_1500" atkAttr="8_1500" hpAttr="8_1500" />
+</root>

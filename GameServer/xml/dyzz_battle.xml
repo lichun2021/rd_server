@@ -1,0 +1,72 @@
+# 准备时间
+prepairTime = 60
+
+# 采集持续时间
+collectTime = 180
+
+# 战斗持续
+battleTime = 420
+
+# 燃烧加速
+fireSpeed = 45
+
+# 出生点配置A
+bornPointA = 10_121,12_123,14_125,16_127,18_129
+
+# 出生点配置B
+bornPointB = 59_30,57_28,55_26,53_24,51_22
+
+# 在图边界X
+mapX = 80
+
+# 在图边界Y
+mapY = 160
+
+# 行军加速
+playerMarchSpeedUp = 4
+
+# 迁城cd /秒
+moveCityCd = 180
+
+# 治疗加速倍数
+cureSpeedUp = 4
+
+# 玩家城防耐久值
+citydefense = 20000
+
+# 玩家队列数
+queue = 5
+
+# 玩家单次出征基础上限
+singlebattle = 400000
+
+# 玩家单次集结基础上限
+massbattle = 2000000
+
+# 玩家副本基础加成
+baseaddition = 9010_200000,9011_200000,9012_200000
+
+# 进入鏖战阶段触发能源井伤害加成
+damage = 2
+
+# 玩家战斗评分=power(A*玩家副本击杀数+B*玩家副本陨晶矿获取数+C*玩家防御坦克阵亡数（基地攻防不计数），N）
+scoreparameter = 0.01,1,0.01,0.25
+
+# rogue机会随时间刷新（战斗开始后）
+rogueSelectTimes = 60,180,360
+
+# rogue机会基地血量百分比
+rogueSelectBaseHp = 85,60,35
+
+# 专属加速道具-退副本时清空
+speedupItem = 820005
+
+# 每次进入战场可领取的道具次数
+speedupItemFree = 40
+
+# 购买加速消耗金条数量
+speedupItemCost = 10000_1001_3
+
+# 单场战斗可购买加速次数
+speedupItemCnt = 200
+

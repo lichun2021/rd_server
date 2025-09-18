@@ -1,0 +1,1 @@
+ALTER TABLE `player_base` ADD COLUMN `rechargeTotal` int(11) NOT NULL DEFAULT '-1';

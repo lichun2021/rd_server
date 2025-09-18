@@ -1,0 +1,15 @@
+{
+	"id": "201801312140",
+	"scene": 1,
+	"type": 1,
+	"status": 2,
+	"name": "《红警OL》精英测试服关服公告",
+	"title": "《红警OL》精英测试服关服公告",
+	"content": "",	
+    "redirect": "",	
+    "startTime": 1517068800,
+    "endTime": 1518624000,
+	"createTime": 1514736003,
+	"condPlatform": "*",
+	"condChannel": "*",
+}

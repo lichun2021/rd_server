@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" goldRatio="1000" vitRatio="1000" dayDivideStaminaTimesMax="999999" dayDivideStaminaCoinsValueMax="400000" dayDivideStaminaVitValueMax="400000" />
+      <data id="2" type="2" goldRatio="800" vitRatio="800" dayDivideStaminaTimesMax="999999" dayDivideStaminaCoinsValueMax="400000" dayDivideStaminaVitValueMax="400000" />
+</root>

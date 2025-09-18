@@ -1,0 +1,166 @@
+<script	baseSrcDir="${app}/script" baseOutDir="${app}/script/bin" sysUser="">
+	<!-- gm使用的脚本配置 -->
+	<file path="gmscript/gmscript.xml" srcPath="${app}/gmscript"/>
+	<file path="idipscript/idipscript.xml" srcPath="${app}/idipscript"/>
+	
+	<!-- 系统	-->
+	<item id="broadcast"			className="com.hawk.game.script.WorldBroadcastHandler"/>
+	<item id="forbiden"				className="com.hawk.game.script.ForbidenPlayerHandler"/>
+	<item id="silent"				className="com.hawk.game.script.MakePlayerSilentHandler"/>
+	<item id="kickout"				className="com.hawk.game.script.KickoutPlayerHandler"/>
+	<item id="syscontrol"			className="com.hawk.game.script.SystemControlHandler"/>
+	
+	<!-- 问卷	 -->
+	<item id="pushSurvey"	        className="com.hawk.game.script.SurveyPushHandler"/>
+	
+	<!-- 托管	 -->
+	<item id="trustee"	        	className="com.hawk.game.script.PlayerTrusteeHandler"/>
+	
+	<!-- 后台	 -->
+	<item id="reward"				className="com.hawk.game.script.PlayerRewardHandler"/>
+	<item id="itemchange"			className="com.hawk.game.script.ItemChangeHandler" logable="false"/>
+	<item id="gmRecharge"			className="com.hawk.game.script.GmRechargeHandler"/>
+	<item id="consume"				className="com.hawk.game.script.PlayerConsumeHandler"/>
+	<item id="mail"	        		className="com.hawk.game.script.SendPlayerMailHandler"/>
+	<item id="globalMail"	    	className="com.hawk.game.script.SendGlobalMailHandler"/>
+	<item id="exploit"				className="com.hawk.game.script.PlayerExploitHandler"/>
+	<item id="itemDel"				className="com.hawk.game.script.PlayerItemDeleteHandler"/>
+	<item id="customdata"			className="com.hawk.game.script.CustomDataHandler"/>
+	<item id="userDel"  		    className="com.hawk.game.script.PlayerDeleteHandler"/>
+	<item id="fetchplayer"			className="com.hawk.game.script.FetchPlayerDataHandler"/>
+	<item id="marchReturn"	        className="com.hawk.game.script.WorldMarchReturn"/>
+	<item id="fetchPushData"		className="com.hawk.game.script.FetchClientPushData"/>
+		
+	<!-- 操作 -->	
+	<item id="effect"  		        className="com.hawk.game.script.PrintEffectHandler"/>
+	<item id="battlelog" 			className="com.hawk.game.script.FetchBattleLogHandler"/>
+	<item id="mailstatic"			className="com.hawk.game.script.MailStaticHandler"/>
+	<item id="randomStore"			className="com.hawk.game.script.RandomStoreTestHandler"/>
+	<item id="refreshAlarm"			className="com.hawk.game.script.RefreshAlarmHandler"/>
+	<item id="exportLog"			className="com.hawk.game.script.ExportLogHandler"/>
+	<item id="devCammond"           className="com.hawk.game.script.DevCammondHandler"/>
+	<item id="marchreturn"          className="com.hawk.game.script.MarchReturnHanlder"/> 
+	<item id="clearScore"           className="com.hawk.game.script.ClearGroupPurchaseHandler"/>
+	<item id="changeTimeOffset"     className="com.hawk.game.script.ChangeTimeOffsetHandler"/>        
+	<item id="guildHelp"     		className="com.hawk.game.script.TestGuildHelpHandler"/>        
+	<item id="cwmatch"     			className="com.hawk.game.script.CWMatchTestHandler"/>      
+	<item id="cwNewMatchQA"     	className="com.hawk.game.script.CWNewMatchTestQAHandler"/>      
+	<item id="cwNewMatch"	     	className="com.hawk.game.script.CWNewMatchTestHandler"/>
+	<item id="tbNewMatch"	     	className="com.hawk.game.script.TBNewMatchTestHandler"/>
+	
+	
+	<item id="dymatch"     			className="com.hawk.game.script.DYZZMatchTestHandler"/>      
+	<item id="clwtest"     			className="com.hawk.game.script.CyborgSeasonInitTestHandler"/>  
+	<item id="tlwOp"  		    className="com.hawk.game.script.TLWOprationHandler"/> 
+	<item id="yqmatch"     			className="com.hawk.game.script.YQZZMatchTestHandler"/>
+	<item id="yqmatchnew"     			className="com.hawk.game.script.YQZZMatchTestNewHandler"/>
+	<item id="seasongm"     			className="com.hawk.game.script.SeasonActivityTestHandler"/>
+	<item id="yqzzgm"     			className="com.hawk.game.script.YQZZGMHandler"/>
+	<item id="whcgm"     			className="com.hawk.game.script.WHCGMHandler"/>
+
+	
+	<!-- 迁服 -->
+	<item id="immigrate" 		className="com.hawk.game.script.ImmigratePlayerHandler" />
+	
+	<!-- 机器人模拟 -->
+	<item id="robotgen"				className="com.hawk.game.script.RobotGenerateHandler"/>
+	<item id="robotwar"				className="com.hawk.game.script.RobotWorldWarHandler"/>
+	<item id="robotatt"				className="com.hawk.game.script.RobotAttackPlayerHandler"/>
+	
+	<item id="collectRes"			className="com.hawk.game.script.CollectResourceHandler"/>
+	<item id="buildResetStatus"		className="com.hawk.game.script.BuildingStatusResetHandler"/>
+	<item id="openStoryMission"	    className="com.hawk.game.script.OpenStoryMission"/>
+	<item id="buildingUpGradeToMax"	className="com.hawk.game.script.BuildingUpGradeToMax"/>
+	<item id="buildingUpToMaxHonor"	className="com.hawk.game.script.BuildingLvUp2MaxHonor"/>
+	
+	<!-- 招募 -->
+	<item id="gacha"			className="com.hawk.game.script.GachaTestHandler"/>
+	<item id="unlockHero"			className="com.hawk.game.script.UnlockHeroHandler"/>
+	
+	<!-- 区域刷新 -->
+	<item id="refreshMonster"			className="com.hawk.game.script.NotifyRefreshMonsterHandler"/>
+	<item id="refreshResource"			className="com.hawk.game.script.NotifyRefreshResourceHandler"/>
+	<item id="refreshStrongpoint"			className="com.hawk.game.script.NotifyRefreshStrongpointHandler"/>
+	
+	<item id="areaUpdate"			className="com.hawk.game.script.NotifyAreaUpdateHandler"/>
+	<item id="areaStatus"			className="com.hawk.game.script.QueryAreaStatusHandler"/>
+	
+	<item id="addPuidControl"			className="com.hawk.game.script.CreatePuidControlHandler"/>
+	<item id="addPreinstallName"			className="com.hawk.game.script.CreatePreinstallNameHandler"/>
+	<item id="recalledFriendBack"           className="com.hawk.game.script.RecalledFriendBackHandler" />
+	
+	<!-- 铠甲 -->
+	<item id="unlockArmour"			className="com.hawk.game.script.UnlockArmourHandler"/>
+	
+	<!-- idip接口测试  -->
+	
+	<!--  星球大战相关 -->
+	<item id="starWarsSendBroadcast" className="com.hawk.game.script.StarWarsSendBroadcastHandler" />
+	<item id="starWarsBless"         className="com.hawk.game.script.StarWarsBlessHandler" />
+	<item id="starWarsSendGift"      className="com.hawk.game.script.StarWarsSendGiftHandler" />
+	<item id="starWarsSendMail"      className="com.hawk.game.script.StarWarsSendMailHandler" />
+	<item id="addDebugInfo"     className="com.hawk.game.script.AddDebugInfoHandler" />
+
+	
+
+	<item id="copyPlayer"     className="com.hawk.game.script.CopyPlayerHandler" />
+	<!--  保存玩家 -->
+	<item id="savePlayer"     className="com.hawk.game.script.CopyPlayerSaveHandler" />
+	
+
+	<item id="queryTime"    className="com.hawk.game.script.QuerySysTimeHandler" />
+	<!-- 发送idip通知  -->
+	<item id="sendIdipNotice"   className="com.hawk.game.script.SendIdipNoticeHandler" />
+	<!-- 补发月卡 -->
+	<item id="sendCard"  className="com.hawk.game.script.SendMonthCardHandler" />
+	
+	<item id="queryPlayer"  className="com.hawk.game.script.QueryPlayerInfoHandler" />
+	<!-- 自动解锁第一个机甲  -->
+	<item id="unlockFirstSuperSoldier"  className="com.hawk.game.script.FirstSuperSoldierUnlockHandler" />
+	<!-- 升级所有的一代机甲到最高等级 -->
+	<item id="upgradeAllPreSuperSoldier"  className="com.hawk.game.script.UpgradeAllPreSuperSoldierHandler" />
+	<!-- 升级所有的二代机甲到最高等级 -->
+	<item id="unlockAllSuperSoldier"  className="com.hawk.game.script.UnlockAllSuperSoldierHandler" />
+	<!-- 科技一键满级 -->
+	<item id="techLvlUp"		 className="com.hawk.game.script.TechUpHandler"/>
+	<!-- 完成指定章节的任务 -->
+	<item id="storyMissionFinish"  className="com.hawk.game.script.StoryMissionFinishHandler" />
+	<!-- 装备科技一键满级 -->
+	<item id="equipLvlUp"		 className="com.hawk.game.script.ArmourReseaerchLvUpHandler"/>
+	
+	<!-- 一键破罩 -->
+	<item id="breakProtect"  className="com.hawk.game.script.BreakProtectTimeHandler" />
+	<!-- 一键清除所有兵  -->
+	<item id="deleteSoldier"  className="com.hawk.game.script.DeleteSoldierHandler" />
+	<!-- 国家GM  -->
+	<item id="nation"  className="com.hawk.game.script.NationalGmHandler" />
+	
+	
+	<item id="dyzzMatchInfo"  className="com.hawk.game.script.DYZZMatchInfoHandler" />
+	
+	<!-- 跨服宝箱 -->
+	<item id="crossBox"  className="com.hawk.game.script.ResourceSpreeBoxGenHandler" />
+	<!--  -->
+	<item id="testOp"  className="com.hawk.game.script.TestOperationHandler" />
+	<!-- 系统、硬件信息采集 -->
+	<item id="profiler"  className="com.hawk.game.script.ProfilerCollectHandler" />
+	<!-- 机器人打王战 -->
+	<item id="robotPresidentWar"    className="com.hawk.game.script.RobotPresidentWarHandler"/>
+	
+	<item id="queryActivityVersion"  className="com.hawk.game.script.QueryActivityVersionHandler" />
+	<item id="deleteActivityVersion"  className="com.hawk.game.script.DeleteActivityVersionHandler" />
+	
+	<!-- qa用于删除redis key -->
+	<item id="qaredis"  className="com.hawk.game.script.QARedisCommand" />
+	<!-- 联盟装扮科技一件满级 -->
+	<item id="guildScience" className="com.hawk.game.script.GuildScienceLvUpHandler"/>
+	<!-- 查询活动数据 -->
+	<item id="queryActivity"  className="com.hawk.game.script.QueryActivityHandler" />
+	<!-- 泰能兵满级 -->
+	<item id="plantSoldierUp"  className="com.hawk.game.script.PlantSoldierUpHandler" />
+	<item id="addOrderExp" className="com.hawk.game.script.AddOrderActivityExpHandler" />
+	<!-- 呱呱乐活动测试脚本 -->
+	<item id="lotteryOp"  		    className="com.hawk.game.script.LotteryTicketOprationHandler"/> 
+	<item id="collegeOp"  		    className="com.hawk.game.script.CollegeTestHandler"/> 
+	
+</script>

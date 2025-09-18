@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="15900001" uesItem="30000_15900001_1" getExp="1" productTime="60" library="1" />
+      <data id="15900002" uesItem="30000_15900002_1" getExp="2" productTime="120" library="2" />
+      <data id="15900003" uesItem="30000_15900003_1" getExp="3" productTime="1800" library="3" />
+</root>

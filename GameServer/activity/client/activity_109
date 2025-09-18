@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 109,
+		name = [[新版本爆料]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">点击“立即前往”查看新版本爆料，看看都有哪些新内容吧！</font>]],
+		priority = 10006,
+		icon = [[Activity_Icon_109_Nor.png]],
+		selecticon = [[Activity_Icon_109_Sel.png]],
+		bigIcon = [[]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20190306huigu/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20190306huigu/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20190306huigu/index.html]],
+	},
+
+}

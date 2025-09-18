@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 74,
+		name = [[绑定有礼]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">红警OL给你送礼了~快来为角色绑定手机号码，即刻领取壕礼~</font>]],
+		priority = 11250,
+		icon = [[Activity_Icon_74_Nor.png]],
+		selecticon = [[Activity_Icon_74_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20211126bdsjh/index_g.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20211126bdsjh/index_g.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20211126bdsjh/index_g.html]],
+		platform = [[]],
+	},
+
+}

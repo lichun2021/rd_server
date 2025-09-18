@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" poolType="1" reward="30000_21065001_1" weight="400" />
+      <data id="2" poolType="1" reward="30000_21065001_2" weight="400" />
+      <data id="3" poolType="1" reward="30000_21065001_3" weight="400" />
+      <data id="4" poolType="1" reward="30000_21065001_4" weight="400" />
+      <data id="5" poolType="1" reward="30000_21065001_6" weight="400" />
+      <data id="6" poolType="1" reward="30000_21063005_10" weight="400" />
+      <data id="7" poolType="1" reward="30000_21063005_20" weight="400" />
+      <data id="8" poolType="1" reward="30000_21063005_30" weight="400" />
+      <data id="9" poolType="1" reward="30000_21063005_50" weight="400" />
+      <data id="10" poolType="1" reward="30000_21063005_80" weight="400" />
+      <data id="11" poolType="1" reward="30000_1782103_10" weight="400" />
+      <data id="12" poolType="1" reward="30000_1782103_20" weight="400" />
+      <data id="13" poolType="1" reward="30000_1782103_30" weight="400" />
+      <data id="14" poolType="1" reward="30000_1782103_50" weight="400" />
+      <data id="15" poolType="1" reward="30000_1782103_80" weight="400" />
+      <data id="16" poolType="1" reward="10000_1001_10" weight="400" />
+      <data id="17" poolType="1" reward="10000_1001_20" weight="400" />
+      <data id="18" poolType="1" reward="10000_1001_30" weight="400" />
+      <data id="19" poolType="1" reward="10000_1001_50" weight="400" />
+      <data id="20" poolType="1" reward="10000_1001_80" weight="400" />
+      <data id="21" poolType="1" reward="30000_810000_10" weight="400" />
+      <data id="22" poolType="1" reward="30000_810000_20" weight="400" />
+      <data id="23" poolType="1" reward="30000_810000_30" weight="400" />
+      <data id="24" poolType="1" reward="30000_810000_50" weight="400" />
+      <data id="25" poolType="1" reward="30000_810000_80" weight="400" />
+      <data id="26" poolType="2" groupSign="1" reward="30000_21065001_80" weight="2000" />
+      <data id="27" poolType="2" groupSign="1" reward="30000_21065001_100" weight="2000" />
+      <data id="28" poolType="2" groupSign="1" reward="30000_21063005_288" weight="2000" />
+      <data id="29" poolType="2" groupSign="1" reward="30000_21063005_588" weight="2000" />
+      <data id="30" poolType="2" groupSign="1" reward="30000_21063005_888" weight="2000" />
+      <data id="31" poolType="2" groupSign="2" reward="30000_21065001_80" weight="2000" />
+      <data id="32" poolType="2" groupSign="2" reward="30000_21065001_100" weight="2000" />
+      <data id="33" poolType="2" groupSign="2" reward="10000_1001_100" weight="2000" />
+      <data id="34" poolType="2" groupSign="2" reward="10000_1001_200" weight="2000" />
+      <data id="35" poolType="2" groupSign="2" reward="10000_1001_300" weight="2000" />
+      <data id="36" poolType="2" groupSign="3" reward="30000_21065001_368" weight="10000" />
+      <data id="37" poolType="2" groupSign="4" reward="30000_21065001_228" weight="10000" />
+</root>

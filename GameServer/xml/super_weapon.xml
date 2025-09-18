@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" x="444" y="886" type="1" classify="2" buff="301_1000" />
+      <data id="2" x="316" y="634" type="1" classify="2" buff="301_1000" />
+      <data id="3" x="316" y="886" type="2" classify="2" buff="301_1000" />
+      <data id="4" x="444" y="634" type="2" classify="2" buff="301_1000" />
+      <data id="5" x="506" y="760" type="3" classify="1" buff="301_1000" />
+      <data id="6" x="380" y="1012" type="3" classify="1" buff="301_1000" />
+      <data id="7" x="380" y="506" type="3" classify="1" buff="301_1000" />
+      <data id="8" x="254" y="760" type="3" classify="1" buff="301_1000" />
+</root>

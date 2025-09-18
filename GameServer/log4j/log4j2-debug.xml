@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info" monitorInterval="15">
+	<Properties>
+		<Property name="LOG_HOME">logs</Property>
+	</Properties>
+	
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+		</Console>
+		
+		<RollingFile name="Exception" fileName="${LOG_HOME}/Exception.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Exception.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Script" fileName="${LOG_HOME}/Script.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Script.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Protocol" fileName="${LOG_HOME}/Protocol.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Protocol.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		 
+		<RollingFile name="Monitor" fileName="${LOG_HOME}/Monitor.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Monitor.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Server" fileName="${LOG_HOME}/Server.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Server.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Action" fileName="${LOG_HOME}/Action.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Action.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Recharge" fileName="${LOG_HOME}/Recharge.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Recharge.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Tlog" fileName="${LOG_HOME}/Tlog.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Tlog.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Copy" fileName="${LOG_HOME}/Copy.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Copy.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Client" fileName="${LOG_HOME}/Client.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Client.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+		
+		<RollingFile name="Chat" fileName="${LOG_HOME}/Chat.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Chat.log.%d{yyyy-MM-dd_HH}.%i">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>
+	</appenders>
+	
+	<loggers>
+		<root level="info">
+			<appender-ref ref="Console"/>
+			<appender-ref ref="Server"/>
+		</root>
+		
+		<logger name="Exception" level="info">
+			<appender-ref ref="Exception"/>
+		</logger>
+		
+		<logger name="Script" level="info" additivity="false">
+			<appender-ref ref="Script"/>
+		</logger>
+		
+		<logger name="Protocol" level="info" additivity="false">
+			<appender-ref ref="Protocol"/>
+		</logger>
+		
+		<logger name="Monitor" level="info" additivity="false">
+			<appender-ref ref="Monitor"/>
+		</logger>
+
+		<logger name="Action" level="info" additivity="false">
+			<appender-ref ref="Action"/>
+		</logger>
+		
+		<logger name="Recharge" level="info" additivity="false">
+			<appender-ref ref="Recharge"/>
+		</logger>
+		
+		<logger name="Tlog" level="info" additivity="false">
+			<appender-ref ref="Tlog"/>
+		</logger>
+		
+		<logger name="Copy" level="info" additivity="false">
+			<appender-ref ref="Copy"/>
+		</logger>
+		
+		<logger name="Client" level="debug" additivity="false">
+			<appender-ref ref="Client"/>
+		</logger>
+		
+		<logger name="Chat" level="info" additivity="false">
+			<appender-ref ref="Chat"/>
+		</logger>
+		
+		<logger name="org.hibernate" level="warn"/>
+		<logger name="org.hibernate.hql.ast.AST" level="warn"/>
+		<logger name="org.hibernate.SQL" level="warn"/>
+		<logger name="org.hibernate.type" level="info"/>
+		<logger name="org.hibernate.cache" level="warn"/>
+		<logger name="org.hibernate.transaction" level="warn"/>
+		<logger name="org.hibernate.jdbc" level="info"/>
+	</loggers>
+</configuration>

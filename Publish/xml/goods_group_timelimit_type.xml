@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data triggerType="1" num="30000" triggerDuration="7200" priority="8" shopDuration="7200" />
+      <data triggerType="2" num="86400" triggerDuration="7200" priority="7" shopDuration="7200" />
+      <data triggerType="4" num="20" triggerDuration="7200" priority="6" shopDuration="7200" />
+</root>

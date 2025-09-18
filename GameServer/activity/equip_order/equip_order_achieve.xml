@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="261010" cycle="1" orderType="1040" conditionVal="3" exp="3000" repeatVal="5" />
+      <data id="261020" cycle="1" orderType="1020" conditionVal="0_2000" exp="1000" repeatVal="10" />
+      <data id="261030" cycle="1" orderType="1019" conditionVal="1_99_10" exp="500" repeatVal="20" />
+      <data id="261040" cycle="1" orderType="1017" conditionVal="301_310_10" exp="1000" repeatVal="5" />
+      <data id="261050" cycle="1" orderType="1014" conditionVal="3" exp="2000" repeatVal="3" />
+      <data id="261060" cycle="1" orderType="1028" conditionVal="0_100000" exp="500" repeatVal="10" />
+      <data id="261110" cycle="2" orderType="1040" conditionVal="3" exp="3000" repeatVal="5" />
+      <data id="261120" cycle="2" orderType="1020" conditionVal="0_2000" exp="1000" repeatVal="10" />
+      <data id="261130" cycle="2" orderType="1019" conditionVal="1_99_10" exp="500" repeatVal="20" />
+      <data id="261140" cycle="2" orderType="1017" conditionVal="301_310_10" exp="1000" repeatVal="5" />
+      <data id="261150" cycle="2" orderType="1014" conditionVal="3" exp="2000" repeatVal="3" />
+      <data id="261160" cycle="2" orderType="1028" conditionVal="0_100000" exp="500" repeatVal="10" />
+</root>

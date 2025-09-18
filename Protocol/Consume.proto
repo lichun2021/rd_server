@@ -1,0 +1,49 @@
+option java_package	= "com.hawk.game.protocol";
+
+message	SyncAttrInfo 
+{
+	optional int32 gold					= 1;	// 水晶
+	optional int32 coin					= 2;	// 银元
+	optional int64 goldore				= 4;	// 金矿
+	optional int64 oil					= 5;	// 石油
+	optional int64 steel				= 6;	// 铀矿
+	optional int64 tombarthite			= 7;	// 合金
+	optional int32 level				= 8;	// 等级
+	optional int32 exp					= 9;	// 经验
+	optional int32 vipLevel				= 10;	// vip等级
+	optional int64	electric			= 11;	// 电力
+	optional int64	electricMax			= 12;	// 电力上限
+	optional int32 vit					= 13;	// 体力
+	optional int32 guildContribution	= 14;	// 联盟贡献
+	optional int64 recruits             = 15;   // 新兵
+	optional int32 diamond              = 16;   // 钻石
+	optional int32 vipExp               = 17;   // vip经验
+	optional int64 goldoreUnsafe				= 21;	// 金矿(非受保护)
+	optional int64 oilUnsafe					= 22;	// 石油(非受保护)
+	optional int64 tombarthiteUnsafe			= 23;	// 合金(非受保护)
+	optional int64 steelUnsafe					= 24;	// 铀矿(非受保护)
+	optional int64 goldoreNotEnough				= 25;	// 金矿不足数量
+	optional int64 oilNotEnough					= 26;	// 石油不足数量
+	optional int64 tombarthiteNotEnough			= 27;	// 合金不足数量
+	optional int64 steelNotEnough				= 28;	// 铀矿不足数量
+	optional int64 fuelNotEnough				= 29;	// 钢材不足数量
+	optional int64 militaryScore                = 30;   // 军演积分
+	optional int64 cyborgScore                	= 31;   // 赛博积分
+	optional int64 dyzzScore                	= 32;   // 达雅积分
+}
+
+// 推送道具	装备 角色的需要移除的Id的列表
+message	ConsumeItem
+{
+	required int32  type				= 1;	// 类型  @see	ItemType.changeType
+	required string id					= 2;	// 唯一Id
+	required int32  itemId				= 3;	// 物品编号
+	optional int32  count				= 4;	// 实体对象直接移除对象数量
+}
+
+// 经常发生变动的值主动推送给前端
+message	HPConsumeInfo
+{
+	optional SyncAttrInfo attrInfo		= 1;	// 玩家基本信息
+	repeated ConsumeItem  consumeItem	= 2;	// 实体对象移除的推送 
+}

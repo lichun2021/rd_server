@@ -1,0 +1,23 @@
+return {
+	prop =
+	{
+		activityId = 174,
+		name = [[好友问候]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">回归期间，只要完成指定的任务将可领取丰厚的奖励，更可获得“回归勋章”可在“专属军资”活动中兑换超值礼包。</font>]],
+		priority = 10002,
+		icon = [[Activity_Icon_174_Nor.png]],
+		selecticon = [[Activity_Icon_174_Sel.png]],
+		bigIcon = [[]],
+		dailyGainMessageLimit = 25,
+		dailyGainGiftLimit = 10,
+		gainGiftReward = [[30000_1780040_1,30000_810001_2]],
+	},
+	return_send_gift = [[id	playerType	dailySendGiftLimit	dailyGainReceiptLimit	gainReceiptReward	dailyGainMessageLimit	dailyGainGiftLimit	gainGiftReward
+1	1	1	1	2	1	1	2
+1	1	25	10	30000_850051_5	25	10	30000_1780040_1,30000_810001_2
+2	2	25	10	30000_850051_3	25	10	30000_1780040_1,30000_810001_2
+3	3	25	10	30000_850051_2	25	10	30000_1780040_1,30000_810001_2
+]],
+
+}

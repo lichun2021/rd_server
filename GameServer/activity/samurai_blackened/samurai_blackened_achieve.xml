@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data day="1" achieveId="1600001" conditionType="160200" conditionValue="600" score="120" />
+      <data day="1" achieveId="1600002" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="1" achieveId="1600003" conditionType="500005" conditionValue="10" score="15" />
+      <data day="1" achieveId="1600004" conditionType="200100" conditionValue="0_20" score="15" />
+      <data day="2" achieveId="1600005" conditionType="160200" conditionValue="600" score="120" />
+      <data day="2" achieveId="1600006" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="2" achieveId="1600007" conditionType="230100" conditionValue="10" score="15" />
+      <data day="2" achieveId="1600008" conditionType="250100" conditionValue="1" score="15" />
+      <data day="3" achieveId="1600009" conditionType="160200" conditionValue="600" score="120" />
+      <data day="3" achieveId="1600010" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="3" achieveId="1600011" conditionType="500004" conditionValue="180" score="15" />
+      <data day="3" achieveId="1600012" conditionType="500006" conditionValue="0_3000" score="15" />
+      <data day="4" achieveId="1600013" conditionType="160200" conditionValue="600" score="120" />
+      <data day="4" achieveId="1600014" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="4" achieveId="1600015" conditionType="220100" conditionValue="5" score="15" />
+      <data day="4" achieveId="1600016" conditionType="240100" conditionValue="20" score="15" />
+      <data day="5" achieveId="1600017" conditionType="160200" conditionValue="600" score="120" />
+      <data day="5" achieveId="1600018" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="5" achieveId="1600019" conditionType="500020" conditionValue="3" score="15" />
+      <data day="5" achieveId="1600020" conditionType="200100" conditionValue="0_20" score="15" />
+      <data day="6" achieveId="1600021" conditionType="160200" conditionValue="600" score="120" />
+      <data day="6" achieveId="1600022" conditionType="700014" conditionValue="4_1" score="10" />
+      <data day="6" achieveId="1600023" conditionType="350100" conditionValue="5" score="15" />
+      <data day="6" achieveId="1600024" conditionType="500013" conditionValue="101_110_201_210_5" score="15" />
+      <data day="0" achieveId="1600025" conditionType="160200" conditionValue="1280" score="200" rewards="30000_15210005_16,30000_15210006_16,30000_15210007_16,30000_15210008_16" />
+      <data day="0" achieveId="1600026" conditionType="160200" conditionValue="3280" score="300" rewards="30000_15210005_32,30000_15210006_32,30000_15210007_32,30000_15210008_32" />
+      <data day="0" achieveId="1600027" conditionType="160200" conditionValue="6480" score="500" rewards="30000_15210005_48,30000_15210006_48,30000_15210007_48,30000_15210008_48" />
+</root>

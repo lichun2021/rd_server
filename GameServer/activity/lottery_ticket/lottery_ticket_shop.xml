@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="5" iosPayId="3382801" androidPayID="3382901" payQuota="6" />
+      <data id="2" times="3" iosPayId="3382802" androidPayID="3382902" payQuota="18" />
+      <data id="3" times="3" iosPayId="3382804" androidPayID="3382904" payQuota="68" />
+      <data id="4" times="2" iosPayId="3382805" androidPayID="3382905" payQuota="98" />
+      <data id="5" times="2" iosPayId="3382808" androidPayID="3382908" payQuota="328" />
+      <data id="6" times="2" iosPayId="3382809" androidPayID="3382909" payQuota="648" />
+</root>

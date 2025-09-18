@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="201" type="2" giftName="@XzqGiftName101" awardId="30000_840321_1" totalNumber="1" numberLimit="1" />
+      <data id="202" type="3" giftName="@XzqGiftName102" awardId="30000_840322_1" totalNumber="40" numberLimit="2" />
+      <data id="203" type="5" giftName="@XzqGiftName103" awardId="30000_840324_1" totalNumber="40" numberLimit="2" />
+      <data id="301" type="2" giftName="@XzqGiftName201" awardId="30000_840321_1" totalNumber="1" numberLimit="1" />
+      <data id="302" type="3" giftName="@XzqGiftName202" awardId="30000_840322_1" totalNumber="40" numberLimit="2" />
+      <data id="303" type="5" giftName="@XzqGiftName203" awardId="30000_840325_1" totalNumber="40" numberLimit="2" />
+      <data id="401" type="2" giftName="@XzqGiftName301" awardId="30000_840321_1" totalNumber="1" numberLimit="1" />
+      <data id="402" type="3" giftName="@XzqGiftName302" awardId="30000_840322_1" totalNumber="40" numberLimit="2" />
+      <data id="403" type="5" giftName="@XzqGiftName303" awardId="30000_840326_1" totalNumber="40" numberLimit="2" />
+</root>

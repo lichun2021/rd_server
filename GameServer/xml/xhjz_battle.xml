@@ -1,0 +1,45 @@
+# 返回时的行军加速
+playerMarchSpeedUp = 30
+
+# 在图边界
+mapX = 217
+
+# 在图边界
+mapY = 411
+
+# 个人初始燃油值
+fuelBase = 800
+
+# 个人燃油恢复速度，单位秒
+fuelRecoverySpeed = 0.2
+
+# 个人燃油上限
+fuelMax = 2000
+
+# 小队燃油初始值
+fuelBaseTeam = 6400
+
+# 小队燃油恢复速度，单位秒
+fuelRecoverySpeedTeam = 1.6
+
+# 移动1个岛屿消耗的燃油数(多个岛屿就是乘以这个值）
+fuelUseBase = 10
+
+# 2个岛屿之间移动需要的时间
+marchBaseTime = 5
+
+# 出征需要携带的燃油（不带这些油无法出征）
+fuelMarchNeed = 300
+
+# 准备时间
+prepairTime = 180
+
+# 每次战斗，本次战斗产生伤兵的多少转化为正常士兵。万分比
+battleHeal = 500
+
+# 2个功能建筑的开始争夺时间
+buildOpenTwo = 600
+
+# 4个建筑开始争夺的时间
+buildOpenFour = 1200
+

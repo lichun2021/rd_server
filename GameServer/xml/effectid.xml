@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100" type="1" heroEffectImmBool="0" />
+      <data id="101" type="0" heroEffectImmBool="0" />
+      <data id="102" type="1" heroEffectImmBool="0" />
+      <data id="103" type="1" heroEffectImmBool="0" />
+      <data id="105" type="1" heroEffectImmBool="0" />
+      <data id="106" type="0" heroEffectImmBool="0" />
+      <data id="107" type="1" heroEffectImmBool="0" />
+      <data id="110" type="1" heroEffectImmBool="0" />
+      <data id="111" type="0" heroEffectImmBool="0" />
+      <data id="112" type="1" heroEffectImmBool="0" />
+      <data id="115" type="1" heroEffectImmBool="0" />
+      <data id="116" type="0" heroEffectImmBool="0" />
+      <data id="117" type="1" heroEffectImmBool="0" />
+      <data id="120" type="1" heroEffectImmBool="0" />
+      <data id="121" type="0" heroEffectImmBool="0" />
+      <data id="122" type="1" heroEffectImmBool="0" />
+      <data id="125" type="0" heroEffectImmBool="0" />
+      <data id="126" type="0" heroEffectImmBool="0" />
+      <data id="127" type="1" heroEffectImmBool="0" />
+      <data id="128" type="1" heroEffectImmBool="0" />
+      <data id="129" type="1" heroEffectImmBool="0" />
+      <data id="130" type="1" heroEffectImmBool="0" />
+      <data id="131" type="1" heroEffectImmBool="0" />
+      <data id="132" type="1" heroEffectImmBool="0" />
+      <data id="133" type="1" heroEffectImmBool="0" />
+      <data id="134" type="1" heroEffectImmBool="0" />
+      <data id="135" type="1" heroEffectImmBool="0" />
+      <data id="136" type="1" heroEffectImmBool="0" />
+      <data id="137" type="1" heroEffectImmBool="0" />
+      <data id="138" type="1" heroEffectImmBool="0" />
+      <data id="139" type="1" heroEffectImmBool="0" />
+      <data id="140" type="1" heroEffectImmBool="0" />
+      <data id="141" type="1" heroEffectImmBool="0" />
+      <data id="142" type="1" heroEffectImmBool="0" />
+      <data id="143" type="1" heroEffectImmBool="1" />
+      <data id="144" type="1" heroEffectImmBool="1" />
+      <data id="145" type="1" heroEffectImmBool="0" />
+      <data id="146" type="1" heroEffectImmBool="0" />
+      <data id="147" type="1" heroEffectImmBool="0" />
+      <data id="148" type="1" heroEffectImmBool="0" />
+      <data id="149" type="1" heroEffectImmBool="0" />
+      <data id="150" type="1" heroEffectImmBool="1" />
+      <data id="151" type="0" heroEffectImmBool="1" />
+      <data id="152" type="1" heroEffectImmBool="1" />
+      <data id="155" type="1" heroEffectImmBool="1" />
+      <data id="156" type="0" heroEffectImmBool="1" />
+      <data id="157" type="1" heroEffectImmBool="1" />
+      <data id="160" type="1" heroEffectImmBool="1" />
+      <data id="161" type="0" heroEffectImmBool="1" />
+      <data id="162" type="1" heroEffectImmBool="1" />
+      <data id="165" type="1" heroEffectImmBool="1" />
+      <data id="166" type="0" heroEffectImmBool="1" />
+      <data id="167" type="1" heroEffectImmBool="1" />
+      <data id="170" type="0" heroEffectImmBool="1" />
+      <data id="171" type="1" heroEffectImmBool="1" />
+      <data id="172" type="0" heroEffectImmBool="1" />
+      <data id="173" type="1" heroEffectImmBool="1" />
+      <data id="174" type="1" heroEffectImmBool="1" />
+      <data id="175" type="1" heroEffectImmBool="1" />
+      <data id="176" type="1" heroEffectImmBool="1" />
+      <data id="177" type="1" heroEffectImmBool="0" />
+      <data id="178" type="1" heroEffectImmBool="1" />
+      <data id="180" type="1" heroEffectImmBool="1" />
+      <data id="181" type="1" heroEffectImmBool="1" />
+      <data id="182" type="1" heroEffectImmBool="0" />
+      <data id="183" type="1" heroEffectImmBool="0" />
+      <data id="184" type="1" heroEffectImmBool="0" />
+      <data id="185" type="0" heroEffectImmBool="0" />
+      <data id="186" type="1" heroEffectImmBool="0" />
+      <data id="187" type="1" heroEffectImmBool="0" />
+      <data id="188" type="1" heroEffectImmBool="0" />
+      <data id="189" type="1" heroEffectImmBool="0" />
+      <data id="190" type="1" heroEffectImmBool="0" />
+      <data id="191" type="1" heroEffectImmBool="0" />
+      <data id="192" type="1" heroEffectImmBool="0" />
+      <data id="193" type="1" heroEffectImmBool="0" />
+      <data id="194" type="1" heroEffectImmBool="0" />
+      <data id="195" type="1" heroEffectImmBool="0" />
+      <data id="196" type="1" heroEffectImmBool="0" />
+      <data id="197" type="1" heroEffectImmBool="0" />
+      <data id="198" type="1" heroEffectImmBool="0" />
+      <data id="1001" type="1" heroEffectImmBool="0" />
+      <data id="1002" type="1" heroEffectImmBool="0" />
+      <data id="1003" type="1" heroEffectImmBool="0" />
+      <data id="1004" type="1" heroEffectImmBool="0" />
+      <data id="1005" type="1" heroEffectImmBool="0" />
+      <data id="1006" type="1" heroEffectImmBool="0" />
+      <data id="1007" type="1" heroEffectImmBool="0" />
+      <data id="1008" type="1" heroEffectImmBool="0" />
+      <data id="1009" type="1" heroEffectImmBool="0" />
+      <data id="1010" type="1" heroEffectImmBool="0" />
+      <data id="1011" type="1" heroEffectImmBool="0" />
+      <data id="1012" type="1" heroEffectImmBool="0" />
+      <data id="1013" type="1" heroEffectImmBool="0" />
+      <data id="1014" type="1" heroEffectImmBool="0" />
+      <data id="1015" type="1" heroEffectImmBool="0" />
+      <data id="1016" type="1" heroEffectImmBool="0" />
+      <data id="1017" type="1" heroEffectImmBool="0" />
+      <data id="1018" type="1" heroEffectImmBool="0" />
+      <data id="1019" type="1" heroEffectImmBool="0" />
+      <data id="1020" type="1" heroEffectImmBool="0" />
+      <data id="1021" type="1" heroEffectImmBool="0" />
+      <data id="1022" type="1" heroEffectImmBool="0" />
+      <data id="1023" type="1" heroEffectImmBool="0" />
+      <data id="1024" type="1" heroEffectImmBool="0" />
+      <data id="1025" type="1" heroEffectImmBool="0" />
+      <data id="1026" type="1" heroEffectImmBool="0" />
+      <data id="1027" type="1" heroEffectImmBool="0" />
+      <data id="1028" type="1" heroEffectImmBool="0" />
+      <data id="1029" type="1" heroEffectImmBool="0" />
+      <data id="1030" type="1" heroEffectImmBool="0" />
+      <data id="1031" type="1" heroEffectImmBool="0" />
+      <data id="1032" type="1" heroEffectImmBool="0" />
+      <data id="1033" type="1" heroEffectImmBool="0" />
+      <data id="1034" type="1" heroEffectImmBool="0" />
+      <data id="1035" type="1" heroEffectImmBool="0" />
+      <data id="1036" type="1" heroEffectImmBool="0" />
+      <data id="1037" type="1" heroEffectImmBool="0" />
+      <data id="1038" type="1" heroEffectImmBool="0" />
+      <data id="1039" type="1" heroEffectImmBool="0" />
+      <data id="1040" type="1" heroEffectImmBool="0" />
+      <data id="1041" type="1" heroEffectImmBool="0" />
+      <data id="1042" type="1" heroEffectImmBool="0" />
+      <data id="1043" type="1" heroEffectImmBool="0" />
+      <data id="1044" type="1" heroEffectImmBool="0" />
+      <data id="1045" type="1" heroEffectImmBool="0" />
+      <data id="1046" type="1" heroEffectImmBool="0" />
+      <data id="1047" type="1" heroEffectImmBool="0" />
+      <data id="1048" type="1" heroEffectImmBool="0" />
+      <data id="1049" type="1" heroEffectImmBool="0" />
+      <data id="1050" type="1" heroEffectImmBool="0" />
+      <data id="1051" type="1" heroEffectImmBool="0" />
+      <data id="1052" type="1" heroEffectImmBool="0" />
+      <data id="1053" type="1" heroEffectImmBool="0" />
+      <data id="1054" type="1" heroEffectImmBool="0" />
+      <data id="1055" type="1" heroEffectImmBool="0" />
+      <data id="1056" type="1" heroEffectImmBool="0" />
+      <data id="1057" type="1" heroEffectImmBool="0" />
+      <data id="1058" type="1" heroEffectImmBool="0" />
+      <data id="1059" type="1" heroEffectImmBool="0" />
+      <data id="1060" type="1" heroEffectImmBool="0" />
+      <data id="1061" type="1" heroEffectImmBool="0" />
+      <data id="1062" type="1" heroEffectImmBool="0" />
+      <data id="1063" type="1" heroEffectImmBool="0" />
+      <data id="1064" type="1" heroEffectImmBool="0" />
+      <data id="1065" type="1" heroEffectImmBool="0" />
+      <data id="1066" type="1" heroEffectImmBool="0" />
+      <data id="1067" type="1" heroEffectImmBool="0" />
+      <data id="1068" type="1" heroEffectImmBool="0" />
+      <data id="1069" type="1" heroEffectImmBool="0" />
+      <data id="1070" type="1" heroEffectImmBool="0" />
+      <data id="1071" type="1" heroEffectImmBool="0" />
+      <data id="1073" type="1" heroEffectImmBool="0" />
+      <data id="1074" type="1" heroEffectImmBool="0" />
+      <data id="1075" type="1" heroEffectImmBool="0" />
+      <data id="1076" type="1" heroEffectImmBool="0" />
+      <data id="1077" type="1" heroEffectImmBool="0" />
+      <data id="1078" type="1" heroEffectImmBool="0" />
+      <data id="1079" type="1" heroEffectImmBool="0" />
+      <data id="1080" type="1" heroEffectImmBool="0" />
+      <data id="1081" type="1" heroEffectImmBool="0" />
+      <data id="1082" type="1" heroEffectImmBool="0" />
+      <data id="1083" type="1" heroEffectImmBool="0" />
+      <data id="1084" type="1" heroEffectImmBool="0" />
+      <data id="1085" type="1" heroEffectImmBool="0" />
+      <data id="1086" type="1" heroEffectImmBool="0" />
+      <data id="1087" type="1" heroEffectImmBool="0" />
+      <data id="1088" type="1" heroEffectImmBool="0" />
+      <data id="1089" type="1" heroEffectImmBool="0" />
+      <data id="1090" type="1" heroEffectImmBool="0" />
+      <data id="1092" type="1" heroEffectImmBool="0" />
+      <data id="1093" type="1" heroEffectImmBool="0" />
+      <data id="1094" type="1" heroEffectImmBool="0" />
+      <data id="1095" type="1" heroEffectImmBool="0" />
+      <data id="1100" type="1" heroEffectImmBool="0" />
+      <data id="1101" type="1" heroEffectImmBool="0" />
+      <data id="1102" type="1" heroEffectImmBool="0" />
+      <data id="1103" type="1" heroEffectImmBool="0" />
+      <data id="1104" type="1" heroEffectImmBool="0" />
+      <data id="1105" type="1" heroEffectImmBool="0" />
+      <data id="1106" type="1" heroEffectImmBool="0" />
+      <data id="1107" type="1" heroEffectImmBool="0" />
+      <data id="1108" type="1" heroEffectImmBool="0" />
+      <data id="1109" type="1" heroEffectImmBool="0" />
+      <data id="1110" type="1" heroEffectImmBool="0" />
+      <data id="1111" type="1" heroEffectImmBool="0" />
+      <data id="1112" type="1" heroEffectImmBool="0" />
+      <data id="1113" type="1" heroEffectImmBool="0" />
+      <data id="1114" type="1" heroEffectImmBool="0" />
+      <data id="1115" type="1" heroEffectImmBool="0" />
+      <data id="1116" type="1" heroEffectImmBool="0" />
+      <data id="1117" type="1" heroEffectImmBool="0" />
+      <data id="1118" type="1" heroEffectImmBool="0" />
+      <data id="1119" type="1" heroEffectImmBool="0" />
+      <data id="1120" type="1" heroEffectImmBool="0" />
+      <data id="1121" type="1" heroEffectImmBool="0" />
+      <data id="1122" type="1" heroEffectImmBool="0" />
+      <data id="1123" type="1" heroEffectImmBool="0" />
+      <data id="1124" type="1" heroEffectImmBool="0" />
+      <data id="1125" type="1" heroEffectImmBool="0" />
+      <data id="1126" type="1" heroEffectImmBool="0" />
+      <data id="1127" type="1" heroEffectImmBool="0" />
+      <data id="1128" type="1" heroEffectImmBool="0" />
+      <data id="1129" type="1" heroEffectImmBool="0" />
+      <data id="1130" type="0" heroEffectImmBool="0" />
+      <data id="1131" type="0" heroEffectImmBool="0" />
+      <data id="1132" type="0" heroEffectImmBool="0" />
+      <data id="1133" type="0" heroEffectImmBool="0" />
+      <data id="1134" type="1" heroEffectImmBool="0" />
+      <data id="1135" type="1" heroEffectImmBool="0" />
+      <data id="1136" type="1" heroEffectImmBool="0" />
+      <data id="1137" type="1" heroEffectImmBool="0" />
+      <data id="1138" type="1" heroEffectImmBool="0" />
+      <data id="1139" type="1" heroEffectImmBool="0" />
+      <data id="1140" type="1" heroEffectImmBool="0" />
+      <data id="1141" type="1" heroEffectImmBool="0" />
+      <data id="1142" type="1" heroEffectImmBool="0" />
+      <data id="1143" type="1" heroEffectImmBool="0" />
+      <data id="1144" type="1" heroEffectImmBool="0" />
+      <data id="1145" type="1" heroEffectImmBool="0" />
+      <data id="1146" type="1" heroEffectImmBool="0" />
+      <data id="1147" type="1" heroEffectImmBool="0" />
+      <data id="1148" type="1" heroEffectImmBool="0" />
+      <data id="1149" type="1" heroEffectImmBool="0" />
+      <data id="1162" type="1" heroEffectImmBool="0" />
+      <data id="1163" type="1" heroEffectImmBool="0" />
+      <data id="1164" type="1" heroEffectImmBool="0" />
+      <data id="1165" type="1" heroEffectImmBool="0" />
+      <data id="1176" type="1" heroEffectImmBool="0" />
+      <data id="1177" type="1" heroEffectImmBool="0" />
+      <data id="1178" type="1" heroEffectImmBool="0" />
+      <data id="1179" type="1" heroEffectImmBool="0" />
+      <data id="1180" type="1" heroEffectImmBool="0" />
+      <data id="1181" type="1" heroEffectImmBool="0" />
+      <data id="1182" type="1" heroEffectImmBool="0" />
+      <data id="1183" type="1" heroEffectImmBool="0" />
+      <data id="1184" type="1" heroEffectImmBool="0" />
+      <data id="1185" type="1" heroEffectImmBool="0" />
+      <data id="1186" type="1" heroEffectImmBool="0" />
+      <data id="1187" type="1" heroEffectImmBool="0" />
+      <data id="1188" type="1" heroEffectImmBool="0" />
+      <data id="1189" type="1" heroEffectImmBool="0" />
+      <data id="1190" type="1" heroEffectImmBool="0" />
+      <data id="1191" type="1" heroEffectImmBool="0" />
+      <data id="1192" type="1" heroEffectImmBool="0" />
+      <data id="1193" type="1" heroEffectImmBool="0" />
+      <data id="1194" type="1" heroEffectImmBool="0" />
+      <data id="1195" type="1" heroEffectImmBool="0" />
+      <data id="1196" type="1" heroEffectImmBool="0" />
+      <data id="1197" type="1" heroEffectImmBool="0" />
+      <data id="1198" type="1" heroEffectImmBool="0" />
+      <data id="1199" type="1" heroEffectImmBool="0" />
+      <data id="1200" type="1" heroEffectImmBool="0" />
+      <data id="1251" type="1" heroEffectImmBool="0" />
+      <data id="1252" type="1" heroEffectImmBool="0" />
+      <data id="1253" type="1" heroEffectImmBool="0" />
+      <data id="1254" type="1" heroEffectImmBool="0" />
+      <data id="1166" type="1" heroEffectImmBool="0" />
+      <data id="1167" type="1" heroEffectImmBool="0" />
+      <data id="1168" type="1" heroEffectImmBool="0" />
+      <data id="1169" type="1" heroEffectImmBool="0" />
+      <data id="1170" type="1" heroEffectImmBool="0" />
+      <data id="1171" type="1" heroEffectImmBool="0" />
+      <data id="1172" type="1" heroEffectImmBool="0" />
+      <data id="1173" type="1" heroEffectImmBool="0" />
+      <data id="1174" type="1" heroEffectImmBool="0" />
+      <data id="1175" type="1" heroEffectImmBool="0" />
+      <data id="1201" type="1" heroEffectImmBool="0" />
+      <data id="1202" type="1" heroEffectImmBool="0" />
+      <data id="1203" type="1" heroEffectImmBool="0" />
+      <data id="1204" type="1" heroEffectImmBool="0" />
+      <data id="1205" type="1" heroEffectImmBool="0" />
+      <data id="1206" type="1" heroEffectImmBool="0" />
+      <data id="1207" type="1" heroEffectImmBool="0" />
+      <data id="1300" type="1" heroEffectImmBool="0" />
+      <data id="1301" type="1" heroEffectImmBool="0" />
+      <data id="1302" type="1" heroEffectImmBool="0" />
+      <data id="1303" type="1" heroEffectImmBool="0" />
+      <data id="1304" type="1" heroEffectImmBool="0" />
+      <data id="1305" type="1" heroEffectImmBool="0" />
+      <data id="1306" type="1" heroEffectImmBool="0" />
+      <data id="1307" type="1" heroEffectImmBool="0" />
+      <data id="1308" type="1" heroEffectImmBool="0" />
+      <data id="1309" type="1" heroEffectImmBool="0" />
+      <data id="1310" type="1" heroEffectImmBool="0" />
+      <data id="1311" type="1" heroEffectImmBool="0" />
+      <data id="1312" type="1" heroEffectImmBool="0" />
+      <data id="1313" type="1" heroEffectImmBool="0" />
+      <data id="1314" type="1" heroEffectImmBool="0" />
+      <data id="1315" type="1" heroEffectImmBool="0" />
+      <data id="1316" type="1" heroEffectImmBool="0" />
+      <data id="1317" type="1" heroEffectImmBool="0" />
+      <data id="1318" type="1" heroEffectImmBool="0" />
+      <data id="1319" type="1" heroEffectImmBool="0" />
+      <data id="1320" type="1" heroEffectImmBool="0" />
+      <data id="1321" type="1" heroEffectImmBool="0" />
+      <data id="1322" type="1" heroEffectImmBool="0" />
+      <data id="1323" type="1" heroEffectImmBool="0" />
+      <data id="1324" type="1" heroEffectImmBool="0" />
+      <data id="1325" type="1" heroEffectImmBool="0" />
+      <data id="1326" type="0" heroEffectImmBool="0" />
+      <data id="1327" type="1" heroEffectImmBool="0" />
+      <data id="1328" type="1" heroEffectImmBool="0" />
+      <data id="1329" type="1" heroEffectImmBool="0" />
+      <data id="1330" type="1" heroEffectImmBool="0" />
+      <data id="1331" type="1" heroEffectImmBool="0" />
+      <data id="1332" type="1" heroEffectImmBool="0" />
+      <data id="1333" type="1" heroEffectImmBool="0" />
+      <data id="1334" type="1" heroEffectImmBool="0" />
+      <data id="1335" type="1" heroEffectImmBool="0" />
+      <data id="1400" type="1" heroEffectImmBool="0" />
+      <data id="1401" type="0" heroEffectImmBool="0" />
+      <data id="1402" type="0" heroEffectImmBool="0" />
+      <data id="1403" type="0" heroEffectImmBool="0" />
+      <data id="1404" type="1" heroEffectImmBool="0" />
+      <data id="1405" type="0" heroEffectImmBool="0" />
+      <data id="1406" type="0" heroEffectImmBool="0" />
+      <data id="1407" type="0" heroEffectImmBool="0" />
+      <data id="1408" type="1" heroEffectImmBool="0" />
+      <data id="1409" type="1" heroEffectImmBool="0" />
+      <data id="1410" type="1" heroEffectImmBool="0" />
+      <data id="1411" type="1" heroEffectImmBool="0" />
+      <data id="1412" type="1" heroEffectImmBool="0" />
+      <data id="1413" type="1" heroEffectImmBool="0" />
+      <data id="1414" type="1" heroEffectImmBool="0" />
+      <data id="1415" type="1" heroEffectImmBool="0" />
+      <data id="1416" type="1" heroEffectImmBool="0" />
+      <data id="1417" type="1" heroEffectImmBool="0" />
+      <data id="1418" type="1" heroEffectImmBool="0" />
+      <data id="1419" type="1" heroEffectImmBool="0" />
+      <data id="1420" type="1" heroEffectImmBool="0" />
+      <data id="1421" type="1" heroEffectImmBool="0" />
+      <data id="1422" type="1" heroEffectImmBool="0" />
+      <data id="1423" type="1" heroEffectImmBool="0" />
+      <data id="1424" type="1" heroEffectImmBool="0" />
+      <data id="1425" type="1" heroEffectImmBool="0" />
+      <data id="1426" type="1" heroEffectImmBool="0" />
+      <data id="1427" type="1" heroEffectImmBool="0" />
+      <data id="1428" type="1" heroEffectImmBool="0" />
+      <data id="1429" type="1" heroEffectImmBool="0" />
+      <data id="1430" type="1" heroEffectImmBool="0" />
+      <data id="1431" type="1" heroEffectImmBool="0" />
+      <data id="1432" type="1" heroEffectImmBool="0" />
+      <data id="1440" type="0" heroEffectImmBool="0" />
+      <data id="1441" type="1" heroEffectImmBool="0" />
+      <data id="1451" type="1" heroEffectImmBool="0" />
+      <data id="1452" type="1" heroEffectImmBool="0" />
+      <data id="1453" type="1" heroEffectImmBool="0" />
+      <data id="1454" type="1" heroEffectImmBool="0" />
+      <data id="1455" type="1" heroEffectImmBool="0" />
+      <data id="1456" type="1" heroEffectImmBool="0" />
+      <data id="1457" type="1" heroEffectImmBool="0" />
+      <data id="1458" type="1" heroEffectImmBool="0" />
+      <data id="1481" type="1" heroEffectImmBool="0" />
+      <data id="1482" type="1" heroEffectImmBool="0" />
+      <data id="1483" type="1" heroEffectImmBool="0" />
+      <data id="1484" type="1" heroEffectImmBool="0" />
+      <data id="1485" type="1" heroEffectImmBool="0" />
+      <data id="1486" type="1" heroEffectImmBool="0" />
+      <data id="1487" type="1" heroEffectImmBool="0" />
+      <data id="1488" type="1" heroEffectImmBool="0" />
+      <data id="1489" type="1" heroEffectImmBool="0" />
+      <data id="1490" type="1" heroEffectImmBool="0" />
+      <data id="1491" type="1" heroEffectImmBool="0" />
+      <data id="1492" type="1" heroEffectImmBool="0" />
+      <data id="1493" type="1" heroEffectImmBool="0" />
+      <data id="1494" type="1" heroEffectImmBool="0" />
+      <data id="1495" type="1" heroEffectImmBool="0" />
+      <data id="1496" type="1" heroEffectImmBool="0" />
+      <data id="1497" type="0" heroEffectImmBool="0" />
+      <data id="1498" type="1" heroEffectImmBool="0" />
+      <data id="1499" type="1" heroEffectImmBool="0" />
+      <data id="1500" type="1" heroEffectImmBool="0" />
+      <data id="1501" type="1" heroEffectImmBool="0" />
+      <data id="1502" type="1" heroEffectImmBool="0" />
+      <data id="1503" type="1" heroEffectImmBool="0" />
+      <data id="1504" type="1" heroEffectImmBool="0" />
+      <data id="1505" type="1" heroEffectImmBool="0" />
+      <data id="1506" type="1" heroEffectImmBool="0" />
+      <data id="1507" type="1" heroEffectImmBool="0" />
+      <data id="1508" type="1" heroEffectImmBool="0" />
+      <data id="1509" type="1" heroEffectImmBool="0" />
+      <data id="1510" type="1" heroEffectImmBool="0" />
+      <data id="1511" type="1" heroEffectImmBool="0" />
+      <data id="1512" type="1" heroEffectImmBool="0" />
+      <data id="1513" type="1" heroEffectImmBool="0" />
+      <data id="1514" type="1" heroEffectImmBool="0" />
+      <data id="1515" type="1" heroEffectImmBool="0" />
+      <data id="1516" type="1" heroEffectImmBool="0" />
+      <data id="1517" type="1" heroEffectImmBool="0" />
+      <data id="1518" type="1" heroEffectImmBool="0" />
+      <data id="1519" type="1" heroEffectImmBool="0" />
+      <data id="1520" type="1" heroEffectImmBool="0" />
+      <data id="1521" type="1" heroEffectImmBool="0" />
+      <data id="1522" type="1" heroEffectImmBool="0" />
+      <data id="1523" type="1" heroEffectImmBool="0" />
+      <data id="1524" type="1" heroEffectImmBool="1" />
+      <data id="1525" type="1" heroEffectImmBool="1" />
+      <data id="1526" type="1" heroEffectImmBool="1" />
+      <data id="1527" type="1" heroEffectImmBool="1" />
+      <data id="1528" type="1" heroEffectImmBool="1" />
+      <data id="1529" type="1" heroEffectImmBool="1" />
+      <data id="1530" type="1" heroEffectImmBool="1" />
+      <data id="1531" type="1" heroEffectImmBool="1" />
+      <data id="1532" type="1" heroEffectImmBool="1" />
+      <data id="1533" type="1" heroEffectImmBool="1" />
+      <data id="1534" type="1" heroEffectImmBool="1" />
+      <data id="1535" type="1" heroEffectImmBool="1" />
+      <data id="1536" type="1" heroEffectImmBool="1" />
+      <data id="1537" type="1" heroEffectImmBool="1" />
+      <data id="1538" type="1" heroEffectImmBool="1" />
+      <data id="1539" type="1" heroEffectImmBool="1" />
+      <data id="1540" type="1" heroEffectImmBool="1" />
+      <data id="1541" type="1" heroEffectImmBool="1" />
+      <data id="1542" type="1" heroEffectImmBool="1" />
+      <data id="1543" type="1" heroEffectImmBool="1" />
+      <data id="1544" type="1" heroEffectImmBool="1" />
+      <data id="1545" type="1" heroEffectImmBool="1" />
+      <data id="1546" type="0" heroEffectImmBool="1" />
+      <data id="1547" type="1" heroEffectImmBool="1" />
+      <data id="1548" type="1" heroEffectImmBool="1" />
+      <data id="1549" type="1" heroEffectImmBool="1" />
+      <data id="1550" type="1" heroEffectImmBool="1" />
+      <data id="1551" type="1" heroEffectImmBool="1" />
+      <data id="1552" type="1" heroEffectImmBool="1" />
+      <data id="1553" type="1" heroEffectImmBool="1" />
+      <data id="1554" type="1" heroEffectImmBool="1" />
+      <data id="1555" type="1" heroEffectImmBool="1" />
+      <data id="1556" type="1" heroEffectImmBool="1" />
+      <data id="1557" type="1" heroEffectImmBool="1" />
+      <data id="1558" type="1" heroEffectImmBool="1" />
+      <data id="1559" type="1" heroEffectImmBool="1" />
+      <data id="1560" type="1" heroEffectImmBool="1" />
+      <data id="1561" type="1" heroEffectImmBool="1" />
+      <data id="1562" type="1" heroEffectImmBool="1" />
+      <data id="1563" type="1" heroEffectImmBool="1" />
+      <data id="1564" type="1" heroEffectImmBool="1" />
+      <data id="1565" type="1" heroEffectImmBool="1" />
+      <data id="1566" type="1" heroEffectImmBool="1" />
+      <data id="1567" type="1" heroEffectImmBool="1" />
+      <data id="1568" type="1" heroEffectImmBool="1" />
+      <data id="1569" type="1" heroEffectImmBool="1" />
+      <data id="1570" type="1" heroEffectImmBool="1" />
+      <data id="1571" type="1" heroEffectImmBool="1" />
+      <data id="1572" type="1" heroEffectImmBool="1" />
+      <data id="1573" type="1" heroEffectImmBool="1" />
+      <data id="1574" type="1" heroEffectImmBool="1" />
+      <data id="1575" type="1" heroEffectImmBool="1" />
+      <data id="1576" type="1" heroEffectImmBool="1" />
+      <data id="1577" type="1" heroEffectImmBool="1" />
+      <data id="1578" type="1" heroEffectImmBool="1" />
+      <data id="1579" type="1" heroEffectImmBool="1" />
+      <data id="1580" type="1" heroEffectImmBool="1" />
+      <data id="1581" type="1" heroEffectImmBool="1" />
+      <data id="1582" type="1" heroEffectImmBool="1" />
+      <data id="1583" type="1" heroEffectImmBool="1" />
+      <data id="1584" type="1" heroEffectImmBool="1" />
+      <data id="1585" type="1" heroEffectImmBool="1" />
+      <data id="1586" type="1" heroEffectImmBool="1" />
+      <data id="1587" type="1" heroEffectImmBool="1" />
+      <data id="1588" type="1" heroEffectImmBool="1" />
+      <data id="1589" type="0" heroEffectImmBool="1" />
+      <data id="1590" type="0" heroEffectImmBool="1" />
+      <data id="1591" type="0" heroEffectImmBool="1" />
+      <data id="1592" type="0" heroEffectImmBool="1" />
+      <data id="1593" type="1" heroEffectImmBool="1" />
+      <data id="1594" type="1" heroEffectImmBool="1" />
+      <data id="1595" type="1" heroEffectImmBool="1" />
+      <data id="1596" type="1" heroEffectImmBool="1" />
+      <data id="1597" type="1" heroEffectImmBool="1" />
+      <data id="1598" type="1" heroEffectImmBool="1" />
+      <data id="1599" type="1" heroEffectImmBool="1" />
+      <data id="1600" type="0" heroEffectImmBool="1" />
+      <data id="1601" type="0" heroEffectImmBool="1" />
+      <data id="1602" type="1" heroEffectImmBool="1" />
+      <data id="1603" type="0" heroEffectImmBool="1" />
+      <data id="1604" type="1" heroEffectImmBool="1" />
+      <data id="1605" type="1" heroEffectImmBool="1" />
+      <data id="1606" type="1" heroEffectImmBool="1" />
+      <data id="1607" type="1" heroEffectImmBool="1" />
+      <data id="1608" type="1" heroEffectImmBool="1" />
+      <data id="1609" type="1" heroEffectImmBool="1" />
+      <data id="1610" type="1" heroEffectImmBool="1" />
+      <data id="1611" type="1" heroEffectImmBool="1" />
+      <data id="1612" type="1" heroEffectImmBool="1" />
+      <data id="1613" type="1" heroEffectImmBool="1" />
+      <data id="1614" type="1" heroEffectImmBool="1" />
+      <data id="1615" type="1" heroEffectImmBool="1" />
+      <data id="1616" type="1" heroEffectImmBool="0" />
+      <data id="1617" type="1" heroEffectImmBool="0" />
+      <data id="1618" type="1" heroEffectImmBool="0" />
+      <data id="1619" type="1" heroEffectImmBool="0" />
+      <data id="1620" type="1" heroEffectImmBool="0" />
+      <data id="1621" type="1" heroEffectImmBool="0" />
+      <data id="1622" type="1" heroEffectImmBool="0" />
+      <data id="1623" type="1" heroEffectImmBool="0" />
+      <data id="1624" type="1" heroEffectImmBool="0" />
+      <data id="1625" type="1" heroEffectImmBool="0" />
+      <data id="1626" type="1" heroEffectImmBool="0" />
+      <data id="1627" type="1" heroEffectImmBool="0" />
+      <data id="1628" type="1" heroEffectImmBool="0" />
+      <data id="1629" type="1" heroEffectImmBool="0" />
+      <data id="1630" type="1" heroEffectImmBool="0" />
+      <data id="1631" type="1" heroEffectImmBool="0" />
+      <data id="1632" type="1" heroEffectImmBool="0" />
+      <data id="1633" type="1" heroEffectImmBool="0" />
+      <data id="1634" type="1" heroEffectImmBool="0" />
+      <data id="1635" type="1" heroEffectImmBool="0" />
+      <data id="1637" type="1" heroEffectImmBool="0" />
+      <data id="1638" type="1" heroEffectImmBool="0" />
+      <data id="1639" type="1" heroEffectImmBool="0" />
+      <data id="1640" type="1" heroEffectImmBool="0" />
+      <data id="1641" type="1" heroEffectImmBool="0" />
+      <data id="1642" type="1" heroEffectImmBool="0" />
+      <data id="1643" type="1" heroEffectImmBool="0" />
+      <data id="1644" type="1" heroEffectImmBool="0" />
+      <data id="1645" type="1" heroEffectImmBool="0" />
+      <data id="1646" type="1" heroEffectImmBool="0" />
+      <data id="1647" type="1" heroEffectImmBool="0" />
+      <data id="1648" type="1" heroEffectImmBool="0" />
+      <data id="1649" type="1" heroEffectImmBool="0" />
+      <data id="1650" type="1" heroEffectImmBool="0" />
+      <data id="1651" type="1" heroEffectImmBool="0" />
+      <data id="1652" type="1" heroEffectImmBool="0" />
+      <data id="1653" type="1" heroEffectImmBool="0" />
+      <data id="1654" type="1" heroEffectImmBool="0" />
+      <data id="1655" type="1" heroEffectImmBool="0" />
+      <data id="1656" type="1" heroEffectImmBool="0" />
+      <data id="1657" type="1" heroEffectImmBool="0" />
+      <data id="1658" type="1" heroEffectImmBool="0" />
+      <data id="1659" type="1" heroEffectImmBool="0" />
+      <data id="1660" type="1" heroEffectImmBool="0" />
+      <data id="1661" type="1" heroEffectImmBool="0" />
+      <data id="1662" type="1" heroEffectImmBool="0" />
+      <data id="1663" type="1" heroEffectImmBool="0" />
+      <data id="1664" type="1" heroEffectImmBool="0" />
+      <data id="1665" type="1" heroEffectImmBool="0" />
+      <data id="1666" type="1" heroEffectImmBool="0" />
+      <data id="1667" type="1" heroEffectImmBool="0" />
+      <data id="1668" type="1" heroEffectImmBool="0" />
+      <data id="1669" type="1" heroEffectImmBool="0" />
+      <data id="1670" type="1" heroEffectImmBool="0" />
+      <data id="1671" type="1" heroEffectImmBool="0" />
+      <data id="1672" type="1" heroEffectImmBool="0" />
+      <data id="1673" type="1" heroEffectImmBool="0" />
+      <data id="1674" type="1" heroEffectImmBool="0" />
+      <data id="1675" type="1" heroEffectImmBool="0" />
+      <data id="1676" type="1" heroEffectImmBool="0" />
+      <data id="1677" type="1" heroEffectImmBool="0" />
+      <data id="1678" type="1" heroEffectImmBool="0" />
+      <data id="1679" type="1" heroEffectImmBool="0" />
+      <data id="1680" type="1" heroEffectImmBool="0" />
+      <data id="1681" type="1" heroEffectImmBool="0" />
+      <data id="1682" type="1" heroEffectImmBool="0" />
+      <data id="1683" type="1" heroEffectImmBool="0" />
+      <data id="1684" type="1" heroEffectImmBool="0" />
+      <data id="1685" type="1" heroEffectImmBool="0" />
+      <data id="12001" type="1" heroEffectImmBool="0" />
+      <data id="12002" type="1" heroEffectImmBool="0" />
+      <data id="12003" type="1" heroEffectImmBool="0" />
+      <data id="12004" type="1" heroEffectImmBool="0" />
+      <data id="12005" type="1" heroEffectImmBool="0" />
+      <data id="12006" type="1" heroEffectImmBool="0" />
+      <data id="12007" type="1" heroEffectImmBool="0" />
+      <data id="12008" type="1" heroEffectImmBool="0" />
+      <data id="12011" type="1" heroEffectImmBool="0" />
+      <data id="12012" type="1" heroEffectImmBool="0" />
+      <data id="12013" type="1" heroEffectImmBool="0" />
+      <data id="12014" type="1" heroEffectImmBool="0" />
+      <data id="12015" type="1" heroEffectImmBool="0" />
+      <data id="12016" type="1" heroEffectImmBool="0" />
+      <data id="12021" type="1" heroEffectImmBool="0" />
+      <data id="12022" type="1" heroEffectImmBool="0" />
+      <data id="12023" type="1" heroEffectImmBool="0" />
+      <data id="12031" type="1" heroEffectImmBool="0" />
+      <data id="12032" type="1" heroEffectImmBool="0" />
+      <data id="12033" type="1" heroEffectImmBool="0" />
+      <data id="12034" type="1" heroEffectImmBool="0" />
+      <data id="12035" type="1" heroEffectImmBool="0" />
+      <data id="12036" type="1" heroEffectImmBool="0" />
+      <data id="12037" type="1" heroEffectImmBool="0" />
+      <data id="12038" type="1" heroEffectImmBool="0" />
+      <data id="12039" type="1" heroEffectImmBool="0" />
+      <data id="12040" type="1" heroEffectImmBool="0" />
+      <data id="12041" type="1" heroEffectImmBool="0" />
+      <data id="12042" type="1" heroEffectImmBool="0" />
+      <data id="12043" type="1" heroEffectImmBool="0" />
+      <data id="12044" type="1" heroEffectImmBool="0" />
+      <data id="12045" type="1" heroEffectImmBool="0" />
+      <data id="12046" type="1" heroEffectImmBool="0" />
+      <data id="12047" type="1" heroEffectImmBool="0" />
+      <data id="12048" type="1" heroEffectImmBool="0" />
+      <data id="12049" type="1" heroEffectImmBool="0" />
+      <data id="12051" type="1" heroEffectImmBool="0" />
+      <data id="12052" type="1" heroEffectImmBool="0" />
+      <data id="12053" type="1" heroEffectImmBool="0" />
+      <data id="12054" type="1" heroEffectImmBool="0" />
+      <data id="12061" type="1" heroEffectImmBool="0" />
+      <data id="12062" type="1" heroEffectImmBool="0" />
+      <data id="12063" type="1" heroEffectImmBool="0" />
+      <data id="12064" type="1" heroEffectImmBool="0" />
+      <data id="12065" type="1" heroEffectImmBool="0" />
+      <data id="12066" type="1" heroEffectImmBool="0" />
+      <data id="12071" type="1" heroEffectImmBool="0" />
+      <data id="12072" type="1" heroEffectImmBool="0" />
+      <data id="12073" type="1" heroEffectImmBool="0" />
+      <data id="12074" type="1" heroEffectImmBool="0" />
+      <data id="12075" type="1" heroEffectImmBool="0" />
+      <data id="12081" type="1" heroEffectImmBool="0" />
+      <data id="12082" type="1" heroEffectImmBool="0" />
+      <data id="12083" type="1" heroEffectImmBool="0" />
+      <data id="12084" type="1" heroEffectImmBool="0" />
+      <data id="12085" type="1" heroEffectImmBool="0" />
+      <data id="12086" type="1" heroEffectImmBool="0" />
+      <data id="12091" type="1" heroEffectImmBool="0" />
+      <data id="12092" type="1" heroEffectImmBool="0" />
+      <data id="12101" type="1" heroEffectImmBool="0" />
+      <data id="12102" type="1" heroEffectImmBool="0" />
+      <data id="12103" type="1" heroEffectImmBool="0" />
+      <data id="12104" type="1" heroEffectImmBool="0" />
+      <data id="12111" type="1" heroEffectImmBool="0" />
+      <data id="12112" type="1" heroEffectImmBool="0" />
+      <data id="12113" type="1" heroEffectImmBool="0" />
+      <data id="12114" type="1" heroEffectImmBool="0" />
+      <data id="12115" type="0" heroEffectImmBool="0" />
+      <data id="12116" type="1" heroEffectImmBool="0" />
+      <data id="12121" type="1" heroEffectImmBool="0" />
+      <data id="12122" type="1" heroEffectImmBool="0" />
+      <data id="12123" type="1" heroEffectImmBool="0" />
+      <data id="12131" type="1" heroEffectImmBool="0" />
+      <data id="12132" type="1" heroEffectImmBool="0" />
+      <data id="12133" type="1" heroEffectImmBool="0" />
+      <data id="12134" type="1" heroEffectImmBool="0" />
+      <data id="12141" type="1" heroEffectImmBool="0" />
+      <data id="12142" type="1" heroEffectImmBool="0" />
+      <data id="12143" type="1" heroEffectImmBool="0" />
+      <data id="12151" type="1" heroEffectImmBool="0" />
+      <data id="12152" type="1" heroEffectImmBool="0" />
+      <data id="12153" type="1" heroEffectImmBool="0" />
+      <data id="12154" type="1" heroEffectImmBool="0" />
+      <data id="12161" type="1" heroEffectImmBool="0" />
+      <data id="12162" type="1" heroEffectImmBool="0" />
+      <data id="12163" type="1" heroEffectImmBool="0" />
+      <data id="12164" type="1" heroEffectImmBool="0" />
+      <data id="12165" type="1" heroEffectImmBool="0" />
+      <data id="12166" type="1" heroEffectImmBool="0" />
+      <data id="12167" type="1" heroEffectImmBool="0" />
+      <data id="12168" type="1" heroEffectImmBool="0" />
+      <data id="12169" type="1" heroEffectImmBool="0" />
+      <data id="12170" type="1" heroEffectImmBool="0" />
+      <data id="12171" type="1" heroEffectImmBool="0" />
+      <data id="12172" type="1" heroEffectImmBool="0" />
+      <data id="12173" type="1" heroEffectImmBool="0" />
+      <data id="12181" type="1" heroEffectImmBool="0" />
+      <data id="12191" type="1" heroEffectImmBool="0" />
+      <data id="12192" type="1" heroEffectImmBool="0" />
+      <data id="12193" type="1" heroEffectImmBool="0" />
+      <data id="12194" type="1" heroEffectImmBool="0" />
+      <data id="12201" type="1" heroEffectImmBool="0" />
+      <data id="12202" type="1" heroEffectImmBool="0" />
+      <data id="12203" type="1" heroEffectImmBool="0" />
+      <data id="12204" type="1" heroEffectImmBool="0" />
+      <data id="12205" type="1" heroEffectImmBool="0" />
+      <data id="12206" type="1" heroEffectImmBool="0" />
+      <data id="12207" type="1" heroEffectImmBool="0" />
+      <data id="12208" type="1" heroEffectImmBool="0" />
+      <data id="12211" type="1" heroEffectImmBool="0" />
+      <data id="12221" type="1" heroEffectImmBool="0" />
+      <data id="12222" type="1" heroEffectImmBool="0" />
+      <data id="12223" type="1" heroEffectImmBool="0" />
+      <data id="12224" type="1" heroEffectImmBool="0" />
+      <data id="12231" type="1" heroEffectImmBool="0" />
+      <data id="12232" type="1" heroEffectImmBool="0" />
+      <data id="12241" type="1" heroEffectImmBool="0" />
+      <data id="12242" type="1" heroEffectImmBool="0" />
+      <data id="12251" type="1" heroEffectImmBool="0" />
+      <data id="12252" type="1" heroEffectImmBool="0" />
+      <data id="12253" type="1" heroEffectImmBool="0" />
+      <data id="12254" type="1" heroEffectImmBool="0" />
+      <data id="12261" type="1" heroEffectImmBool="0" />
+      <data id="12262" type="1" heroEffectImmBool="0" />
+      <data id="12263" type="1" heroEffectImmBool="0" />
+      <data id="12264" type="1" heroEffectImmBool="0" />
+      <data id="12271" type="1" heroEffectImmBool="0" />
+      <data id="12272" type="1" heroEffectImmBool="0" />
+      <data id="12273" type="1" heroEffectImmBool="0" />
+      <data id="12281" type="1" heroEffectImmBool="0" />
+      <data id="12282" type="1" heroEffectImmBool="0" />
+      <data id="12291" type="1" heroEffectImmBool="0" />
+      <data id="12292" type="1" heroEffectImmBool="0" />
+      <data id="12293" type="1" heroEffectImmBool="0" />
+      <data id="12301" type="1" heroEffectImmBool="0" />
+      <data id="12302" type="1" heroEffectImmBool="0" />
+      <data id="12311" type="1" heroEffectImmBool="0" />
+      <data id="12312" type="1" heroEffectImmBool="0" />
+      <data id="12321" type="0" heroEffectImmBool="0" />
+      <data id="12322" type="0" heroEffectImmBool="0" />
+      <data id="12323" type="0" heroEffectImmBool="0" />
+      <data id="12324" type="0" heroEffectImmBool="0" />
+      <data id="12325" type="0" heroEffectImmBool="0" />
+      <data id="12326" type="0" heroEffectImmBool="0" />
+      <data id="12327" type="0" heroEffectImmBool="0" />
+      <data id="12328" type="0" heroEffectImmBool="0" />
+      <data id="12329" type="0" heroEffectImmBool="0" />
+      <data id="12331" type="1" heroEffectImmBool="0" />
+      <data id="12332" type="1" heroEffectImmBool="0" />
+      <data id="12333" type="1" heroEffectImmBool="0" />
+      <data id="12334" type="1" heroEffectImmBool="0" />
+      <data id="12335" type="1" heroEffectImmBool="0" />
+      <data id="12336" type="1" heroEffectImmBool="0" />
+      <data id="12337" type="1" heroEffectImmBool="0" />
+      <data id="12338" type="1" heroEffectImmBool="0" />
+      <data id="12339" type="1" heroEffectImmBool="0" />
+      <data id="12341" type="1" heroEffectImmBool="0" />
+      <data id="12351" type="0" heroEffectImmBool="0" />
+      <data id="12352" type="1" heroEffectImmBool="0" />
+      <data id="12353" type="0" heroEffectImmBool="0" />
+      <data id="12354" type="1" heroEffectImmBool="0" />
+      <data id="12355" type="1" heroEffectImmBool="0" />
+      <data id="12356" type="1" heroEffectImmBool="0" />
+      <data id="12357" type="0" heroEffectImmBool="0" />
+      <data id="12361" type="1" heroEffectImmBool="0" />
+      <data id="12362" type="1" heroEffectImmBool="0" />
+      <data id="12363" type="1" heroEffectImmBool="0" />
+      <data id="12364" type="1" heroEffectImmBool="0" />
+      <data id="12365" type="1" heroEffectImmBool="0" />
+      <data id="12371" type="1" heroEffectImmBool="0" />
+      <data id="12381" type="1" heroEffectImmBool="0" />
+      <data id="12382" type="1" heroEffectImmBool="0" />
+      <data id="12383" type="1" heroEffectImmBool="0" />
+      <data id="12384" type="1" heroEffectImmBool="0" />
+      <data id="12385" type="0" heroEffectImmBool="0" />
+      <data id="12391" type="1" heroEffectImmBool="0" />
+      <data id="12392" type="1" heroEffectImmBool="0" />
+      <data id="12393" type="1" heroEffectImmBool="0" />
+      <data id="12394" type="1" heroEffectImmBool="0" />
+      <data id="12401" type="1" heroEffectImmBool="0" />
+      <data id="12402" type="1" heroEffectImmBool="0" />
+      <data id="12403" type="1" heroEffectImmBool="0" />
+      <data id="12404" type="1" heroEffectImmBool="0" />
+      <data id="12451" type="1" heroEffectImmBool="0" />
+      <data id="12411" type="1" heroEffectImmBool="0" />
+      <data id="12412" type="1" heroEffectImmBool="0" />
+      <data id="12413" type="1" heroEffectImmBool="0" />
+      <data id="12414" type="1" heroEffectImmBool="0" />
+      <data id="12421" type="1" heroEffectImmBool="0" />
+      <data id="12431" type="1" heroEffectImmBool="0" />
+      <data id="12432" type="1" heroEffectImmBool="0" />
+      <data id="12433" type="1" heroEffectImmBool="0" />
+      <data id="12434" type="1" heroEffectImmBool="0" />
+      <data id="12435" type="0" heroEffectImmBool="0" />
+      <data id="12441" type="1" heroEffectImmBool="0" />
+      <data id="12442" type="1" heroEffectImmBool="0" />
+      <data id="12443" type="1" heroEffectImmBool="0" />
+      <data id="12491" type="1" heroEffectImmBool="0" />
+      <data id="12461" type="1" heroEffectImmBool="0" />
+      <data id="12462" type="1" heroEffectImmBool="0" />
+      <data id="12463" type="1" heroEffectImmBool="0" />
+      <data id="12464" type="1" heroEffectImmBool="0" />
+      <data id="12465" type="1" heroEffectImmBool="0" />
+      <data id="12466" type="1" heroEffectImmBool="0" />
+      <data id="12467" type="1" heroEffectImmBool="0" />
+      <data id="12468" type="1" heroEffectImmBool="0" />
+      <data id="12469" type="1" heroEffectImmBool="0" />
+      <data id="12471" type="1" heroEffectImmBool="0" />
+      <data id="12481" type="1" heroEffectImmBool="0" />
+      <data id="12482" type="1" heroEffectImmBool="0" />
+      <data id="12483" type="1" heroEffectImmBool="0" />
+      <data id="12484" type="1" heroEffectImmBool="0" />
+      <data id="12485" type="0" heroEffectImmBool="0" />
+      <data id="12501" type="1" heroEffectImmBool="0" />
+      <data id="12502" type="1" heroEffectImmBool="0" />
+      <data id="12503" type="1" heroEffectImmBool="0" />
+      <data id="12504" type="1" heroEffectImmBool="0" />
+      <data id="12511" type="1" heroEffectImmBool="0" />
+      <data id="12512" type="1" heroEffectImmBool="0" />
+      <data id="12513" type="1" heroEffectImmBool="0" />
+      <data id="12514" type="1" heroEffectImmBool="0" />
+      <data id="12515" type="1" heroEffectImmBool="0" />
+      <data id="12516" type="1" heroEffectImmBool="0" />
+      <data id="12517" type="1" heroEffectImmBool="0" />
+      <data id="12518" type="1" heroEffectImmBool="0" />
+      <data id="12521" type="1" heroEffectImmBool="0" />
+      <data id="12531" type="1" heroEffectImmBool="0" />
+      <data id="12532" type="1" heroEffectImmBool="0" />
+      <data id="12533" type="1" heroEffectImmBool="0" />
+      <data id="12534" type="0" heroEffectImmBool="0" />
+      <data id="12541" type="1" heroEffectImmBool="0" />
+      <data id="12551" type="1" heroEffectImmBool="0" />
+      <data id="12552" type="1" heroEffectImmBool="0" />
+      <data id="12553" type="1" heroEffectImmBool="0" />
+      <data id="12554" type="1" heroEffectImmBool="0" />
+      <data id="12555" type="1" heroEffectImmBool="0" />
+      <data id="12556" type="1" heroEffectImmBool="0" />
+      <data id="12561" type="1" heroEffectImmBool="0" />
+      <data id="12571" type="1" heroEffectImmBool="0" />
+      <data id="12572" type="1" heroEffectImmBool="0" />
+      <data id="12573" type="1" heroEffectImmBool="0" />
+      <data id="12574" type="1" heroEffectImmBool="0" />
+      <data id="12575" type="1" heroEffectImmBool="0" />
+      <data id="12576" type="1" heroEffectImmBool="0" />
+      <data id="12577" type="1" heroEffectImmBool="0" />
+      <data id="12578" type="1" heroEffectImmBool="0" />
+      <data id="12581" type="1" heroEffectImmBool="0" />
+      <data id="12591" type="1" heroEffectImmBool="0" />
+      <data id="12592" type="1" heroEffectImmBool="0" />
+      <data id="12593" type="1" heroEffectImmBool="0" />
+      <data id="12594" type="0" heroEffectImmBool="0" />
+      <data id="12601" type="1" heroEffectImmBool="0" />
+      <data id="12602" type="1" heroEffectImmBool="0" />
+      <data id="12603" type="1" heroEffectImmBool="0" />
+      <data id="12604" type="1" heroEffectImmBool="0" />
+      <data id="12611" type="1" heroEffectImmBool="0" />
+      <data id="12612" type="1" heroEffectImmBool="0" />
+      <data id="12613" type="1" heroEffectImmBool="0" />
+      <data id="12614" type="1" heroEffectImmBool="0" />
+      <data id="12615" type="1" heroEffectImmBool="0" />
+      <data id="12616" type="1" heroEffectImmBool="0" />
+      <data id="12617" type="1" heroEffectImmBool="0" />
+      <data id="12621" type="1" heroEffectImmBool="0" />
+      <data id="12631" type="1" heroEffectImmBool="0" />
+      <data id="12632" type="1" heroEffectImmBool="0" />
+      <data id="12633" type="1" heroEffectImmBool="0" />
+      <data id="12634" type="0" heroEffectImmBool="0" />
+      <data id="12641" type="1" heroEffectImmBool="0" />
+      <data id="12642" type="1" heroEffectImmBool="0" />
+      <data id="12651" type="1" heroEffectImmBool="0" />
+      <data id="12661" type="1" heroEffectImmBool="0" />
+      <data id="12662" type="1" heroEffectImmBool="0" />
+      <data id="12663" type="1" heroEffectImmBool="0" />
+      <data id="12664" type="1" heroEffectImmBool="0" />
+      <data id="12671" type="1" heroEffectImmBool="0" />
+      <data id="12672" type="1" heroEffectImmBool="0" />
+      <data id="12673" type="1" heroEffectImmBool="0" />
+      <data id="12674" type="1" heroEffectImmBool="0" />
+      <data id="12675" type="1" heroEffectImmBool="0" />
+      <data id="12676" type="1" heroEffectImmBool="0" />
+      <data id="12681" type="1" heroEffectImmBool="0" />
+      <data id="12691" type="1" heroEffectImmBool="0" />
+      <data id="12692" type="1" heroEffectImmBool="0" />
+      <data id="12693" type="1" heroEffectImmBool="0" />
+      <data id="12694" type="1" heroEffectImmBool="0" />
+      <data id="12695" type="0" heroEffectImmBool="0" />
+      <data id="12701" type="1" heroEffectImmBool="0" />
+      <data id="1701" type="1" heroEffectImmBool="0" />
+      <data id="1702" type="1" heroEffectImmBool="0" />
+      <data id="1703" type="1" heroEffectImmBool="0" />
+      <data id="1704" type="1" heroEffectImmBool="0" />
+      <data id="1705" type="1" heroEffectImmBool="0" />
+      <data id="1706" type="1" heroEffectImmBool="0" />
+      <data id="1707" type="1" heroEffectImmBool="0" />
+      <data id="1708" type="1" heroEffectImmBool="0" />
+      <data id="1709" type="1" heroEffectImmBool="0" />
+      <data id="1710" type="1" heroEffectImmBool="0" />
+      <data id="1711" type="1" heroEffectImmBool="0" />
+      <data id="1712" type="1" heroEffectImmBool="0" />
+      <data id="1713" type="1" heroEffectImmBool="0" />
+      <data id="1714" type="1" heroEffectImmBool="0" />
+      <data id="1715" type="1" heroEffectImmBool="0" />
+      <data id="1716" type="1" heroEffectImmBool="0" />
+      <data id="1717" type="1" heroEffectImmBool="0" />
+      <data id="1718" type="1" heroEffectImmBool="0" />
+      <data id="1719" type="1" heroEffectImmBool="0" />
+      <data id="1720" type="1" heroEffectImmBool="0" />
+      <data id="1721" type="1" heroEffectImmBool="0" />
+      <data id="1801" type="1" heroEffectImmBool="0" />
+      <data id="1802" type="1" heroEffectImmBool="0" />
+      <data id="1803" type="1" heroEffectImmBool="0" />
+      <data id="1804" type="1" heroEffectImmBool="0" />
+      <data id="1805" type="1" heroEffectImmBool="0" />
+      <data id="1806" type="1" heroEffectImmBool="0" />
+      <data id="1807" type="1" heroEffectImmBool="0" />
+      <data id="1808" type="1" heroEffectImmBool="0" />
+      <data id="1809" type="1" heroEffectImmBool="0" />
+      <data id="1810" type="1" heroEffectImmBool="0" />
+      <data id="1811" type="1" heroEffectImmBool="0" />
+      <data id="1812" type="1" heroEffectImmBool="0" />
+      <data id="1813" type="1" heroEffectImmBool="0" />
+      <data id="1814" type="1" heroEffectImmBool="0" />
+      <data id="1815" type="1" heroEffectImmBool="0" />
+      <data id="1816" type="1" heroEffectImmBool="0" />
+      <data id="1901" type="1" heroEffectImmBool="0" />
+      <data id="1902" type="1" heroEffectImmBool="0" />
+      <data id="1903" type="1" heroEffectImmBool="0" />
+      <data id="1904" type="1" heroEffectImmBool="0" />
+      <data id="1905" type="1" heroEffectImmBool="0" />
+      <data id="1906" type="1" heroEffectImmBool="0" />
+      <data id="1907" type="1" heroEffectImmBool="0" />
+      <data id="1908" type="1" heroEffectImmBool="0" />
+      <data id="1909" type="1" heroEffectImmBool="0" />
+      <data id="1910" type="1" heroEffectImmBool="0" />
+      <data id="1911" type="1" heroEffectImmBool="0" />
+      <data id="1912" type="1" heroEffectImmBool="0" />
+      <data id="1913" type="1" heroEffectImmBool="0" />
+      <data id="1914" type="1" heroEffectImmBool="0" />
+      <data id="1915" type="1" heroEffectImmBool="0" />
+      <data id="1916" type="1" heroEffectImmBool="0" />
+      <data id="1917" type="1" heroEffectImmBool="0" />
+      <data id="1918" type="1" heroEffectImmBool="0" />
+      <data id="1919" type="1" heroEffectImmBool="0" />
+      <data id="1920" type="1" heroEffectImmBool="0" />
+      <data id="1921" type="1" heroEffectImmBool="0" />
+      <data id="1922" type="1" heroEffectImmBool="0" />
+      <data id="1923" type="1" heroEffectImmBool="0" />
+      <data id="1924" type="1" heroEffectImmBool="0" />
+      <data id="1925" type="3" heroEffectImmBool="0" />
+      <data id="1926" type="3" heroEffectImmBool="0" />
+      <data id="1927" type="3" heroEffectImmBool="0" />
+      <data id="1928" type="3" heroEffectImmBool="0" />
+      <data id="1929" type="3" heroEffectImmBool="0" />
+      <data id="1930" type="3" heroEffectImmBool="0" />
+      <data id="1931" type="3" heroEffectImmBool="0" />
+      <data id="1932" type="3" heroEffectImmBool="0" />
+      <data id="1933" type="3" heroEffectImmBool="0" />
+      <data id="1934" type="3" heroEffectImmBool="0" />
+      <data id="1935" type="3" heroEffectImmBool="0" />
+      <data id="1936" type="3" heroEffectImmBool="0" />
+      <data id="1937" type="3" heroEffectImmBool="0" />
+      <data id="1938" type="3" heroEffectImmBool="0" />
+      <data id="1939" type="3" heroEffectImmBool="0" />
+      <data id="1940" type="3" heroEffectImmBool="0" />
+      <data id="1941" type="3" heroEffectImmBool="0" />
+      <data id="1942" type="3" heroEffectImmBool="0" />
+      <data id="1943" type="3" heroEffectImmBool="0" />
+      <data id="1944" type="3" heroEffectImmBool="0" />
+      <data id="1945" type="3" heroEffectImmBool="0" />
+      <data id="1946" type="3" heroEffectImmBool="0" />
+      <data id="1947" type="3" heroEffectImmBool="0" />
+      <data id="1948" type="3" heroEffectImmBool="0" />
+      <data id="10001" type="0" heroEffectImmBool="0" />
+      <data id="10002" type="0" heroEffectImmBool="0" />
+      <data id="10003" type="1" heroEffectImmBool="0" />
+      <data id="10004" type="1" heroEffectImmBool="0" />
+      <data id="10005" type="1" heroEffectImmBool="0" />
+      <data id="10006" type="1" heroEffectImmBool="0" />
+      <data id="10007" type="1" heroEffectImmBool="0" />
+      <data id="10008" type="1" heroEffectImmBool="0" />
+      <data id="10009" type="1" heroEffectImmBool="0" />
+      <data id="10010" type="1" heroEffectImmBool="0" />
+      <data id="10011" type="1" heroEffectImmBool="0" />
+      <data id="10012" type="1" heroEffectImmBool="0" />
+      <data id="10013" type="1" heroEffectImmBool="0" />
+      <data id="10014" type="1" heroEffectImmBool="0" />
+      <data id="10015" type="1" heroEffectImmBool="0" />
+      <data id="10016" type="1" heroEffectImmBool="0" />
+      <data id="10017" type="1" heroEffectImmBool="0" />
+      <data id="10018" type="1" heroEffectImmBool="0" />
+      <data id="10019" type="1" heroEffectImmBool="0" />
+      <data id="10020" type="1" heroEffectImmBool="0" />
+      <data id="10021" type="1" heroEffectImmBool="0" />
+      <data id="10022" type="1" heroEffectImmBool="0" />
+      <data id="10023" type="1" heroEffectImmBool="0" />
+      <data id="10024" type="1" heroEffectImmBool="0" />
+      <data id="10025" type="1" heroEffectImmBool="0" />
+      <data id="10026" type="1" heroEffectImmBool="0" />
+      <data id="10027" type="1" heroEffectImmBool="0" />
+      <data id="10028" type="1" heroEffectImmBool="0" />
+      <data id="10029" type="1" heroEffectImmBool="0" />
+      <data id="10030" type="1" heroEffectImmBool="0" />
+      <data id="10031" type="1" heroEffectImmBool="0" />
+      <data id="10032" type="1" heroEffectImmBool="0" />
+      <data id="10033" type="1" heroEffectImmBool="0" />
+      <data id="10034" type="1" heroEffectImmBool="0" />
+      <data id="10035" type="1" heroEffectImmBool="0" />
+      <data id="10036" type="1" heroEffectImmBool="0" />
+      <data id="10037" type="1" heroEffectImmBool="0" />
+      <data id="10038" type="1" heroEffectImmBool="0" />
+      <data id="10039" type="1" heroEffectImmBool="0" />
+      <data id="10040" type="1" heroEffectImmBool="0" />
+      <data id="10041" type="1" heroEffectImmBool="0" />
+      <data id="10042" type="1" heroEffectImmBool="0" />
+      <data id="10043" type="1" heroEffectImmBool="0" />
+      <data id="10044" type="1" heroEffectImmBool="0" />
+      <data id="10045" type="1" heroEffectImmBool="0" />
+      <data id="10046" type="1" heroEffectImmBool="0" />
+      <data id="10047" type="1" heroEffectImmBool="0" />
+      <data id="10048" type="1" heroEffectImmBool="0" />
+      <data id="10049" type="1" heroEffectImmBool="0" />
+      <data id="10050" type="1" heroEffectImmBool="0" />
+      <data id="10051" type="1" heroEffectImmBool="0" />
+      <data id="10052" type="0" heroEffectImmBool="0" />
+      <data id="10053" type="0" heroEffectImmBool="0" />
+      <data id="10054" type="0" heroEffectImmBool="0" />
+      <data id="10055" type="1" heroEffectImmBool="0" />
+      <data id="10056" type="1" heroEffectImmBool="0" />
+      <data id="10057" type="1" heroEffectImmBool="0" />
+      <data id="10058" type="1" heroEffectImmBool="0" />
+      <data id="10059" type="1" heroEffectImmBool="0" />
+      <data id="10060" type="1" heroEffectImmBool="0" />
+      <data id="10061" type="1" heroEffectImmBool="0" />
+      <data id="10062" type="1" heroEffectImmBool="0" />
+      <data id="10063" type="1" heroEffectImmBool="0" />
+      <data id="10064" type="1" heroEffectImmBool="0" />
+      <data id="10065" type="1" heroEffectImmBool="0" />
+      <data id="10066" type="1" heroEffectImmBool="0" />
+      <data id="10067" type="1" heroEffectImmBool="0" />
+      <data id="10068" type="1" heroEffectImmBool="0" />
+      <data id="10069" type="1" heroEffectImmBool="0" />
+      <data id="10070" type="1" heroEffectImmBool="0" />
+      <data id="10071" type="1" heroEffectImmBool="0" />
+      <data id="10072" type="1" heroEffectImmBool="0" />
+      <data id="10073" type="0" heroEffectImmBool="0" />
+      <data id="10074" type="0" heroEffectImmBool="0" />
+      <data id="10075" type="0" heroEffectImmBool="0" />
+      <data id="10076" type="1" heroEffectImmBool="0" />
+      <data id="10077" type="1" heroEffectImmBool="0" />
+      <data id="11001" type="1" heroEffectImmBool="0" />
+      <data id="11002" type="1" heroEffectImmBool="0" />
+      <data id="11003" type="1" heroEffectImmBool="0" />
+      <data id="11004" type="1" heroEffectImmBool="0" />
+      <data id="11005" type="1" heroEffectImmBool="0" />
+      <data id="11006" type="1" heroEffectImmBool="0" />
+      <data id="11007" type="1" heroEffectImmBool="0" />
+      <data id="11008" type="1" heroEffectImmBool="0" />
+      <data id="11009" type="1" heroEffectImmBool="0" />
+      <data id="11010" type="1" heroEffectImmBool="0" />
+      <data id="11011" type="1" heroEffectImmBool="0" />
+      <data id="11012" type="1" heroEffectImmBool="0" />
+      <data id="11013" type="1" heroEffectImmBool="0" />
+      <data id="11014" type="1" heroEffectImmBool="0" />
+      <data id="11015" type="1" heroEffectImmBool="0" />
+      <data id="11016" type="1" heroEffectImmBool="0" />
+      <data id="11017" type="1" heroEffectImmBool="0" />
+      <data id="11018" type="1" heroEffectImmBool="0" />
+      <data id="11019" type="1" heroEffectImmBool="0" />
+      <data id="11020" type="1" heroEffectImmBool="0" />
+      <data id="11021" type="1" heroEffectImmBool="0" />
+      <data id="11022" type="1" heroEffectImmBool="0" />
+      <data id="11023" type="1" heroEffectImmBool="0" />
+      <data id="11024" type="1" heroEffectImmBool="0" />
+      <data id="11025" type="1" heroEffectImmBool="0" />
+      <data id="11026" type="1" heroEffectImmBool="0" />
+      <data id="11027" type="1" heroEffectImmBool="0" />
+      <data id="11028" type="1" heroEffectImmBool="0" />
+      <data id="11029" type="1" heroEffectImmBool="0" />
+      <data id="11031" type="1" heroEffectImmBool="0" />
+      <data id="11032" type="1" heroEffectImmBool="0" />
+      <data id="11034" type="1" heroEffectImmBool="0" />
+      <data id="11035" type="1" heroEffectImmBool="0" />
+      <data id="11041" type="1" heroEffectImmBool="0" />
+      <data id="11042" type="1" heroEffectImmBool="0" />
+      <data id="11043" type="1" heroEffectImmBool="0" />
+      <data id="11044" type="1" heroEffectImmBool="0" />
+      <data id="11045" type="1" heroEffectImmBool="0" />
+      <data id="11051" type="0" heroEffectImmBool="0" />
+      <data id="11052" type="0" heroEffectImmBool="0" />
+      <data id="11053" type="0" heroEffectImmBool="0" />
+      <data id="11054" type="0" heroEffectImmBool="0" />
+      <data id="11055" type="0" heroEffectImmBool="0" />
+      <data id="11056" type="0" heroEffectImmBool="0" />
+      <data id="11057" type="0" heroEffectImmBool="0" />
+      <data id="11058" type="0" heroEffectImmBool="0" />
+      <data id="11059" type="0" heroEffectImmBool="0" />
+      <data id="11061" type="0" heroEffectImmBool="0" />
+      <data id="11062" type="0" heroEffectImmBool="0" />
+      <data id="11063" type="0" heroEffectImmBool="0" />
+      <data id="11064" type="0" heroEffectImmBool="0" />
+      <data id="11065" type="0" heroEffectImmBool="0" />
+      <data id="11066" type="0" heroEffectImmBool="0" />
+      <data id="11067" type="0" heroEffectImmBool="0" />
+      <data id="11068" type="0" heroEffectImmBool="0" />
+      <data id="11069" type="0" heroEffectImmBool="0" />
+      <data id="11070" type="0" heroEffectImmBool="1" />
+      <data id="11071" type="0" heroEffectImmBool="1" />
+      <data id="11072" type="0" heroEffectImmBool="1" />
+      <data id="11073" type="0" heroEffectImmBool="1" />
+      <data id="11074" type="0" heroEffectImmBool="1" />
+      <data id="11075" type="0" heroEffectImmBool="1" />
+      <data id="11076" type="0" heroEffectImmBool="1" />
+      <data id="11077" type="0" heroEffectImmBool="1" />
+      <data id="11078" type="0" heroEffectImmBool="1" />
+      <data id="11079" type="0" heroEffectImmBool="1" />
+      <data id="200" type="1" heroEffectImmBool="0" />
+      <data id="201" type="0" heroEffectImmBool="0" />
+      <data id="202" type="0" heroEffectImmBool="1" />
+      <data id="203" type="1" heroEffectImmBool="1" />
+      <data id="204" type="1" heroEffectImmBool="0" />
+      <data id="205" type="1" heroEffectImmBool="0" />
+      <data id="206" type="1" heroEffectImmBool="0" />
+      <data id="207" type="1" heroEffectImmBool="0" />
+      <data id="208" type="1" heroEffectImmBool="1" />
+      <data id="209" type="1" heroEffectImmBool="0" />
+      <data id="210" type="1" heroEffectImmBool="0" />
+      <data id="211" type="1" heroEffectImmBool="0" />
+      <data id="212" type="1" heroEffectImmBool="0" />
+      <data id="213" type="1" heroEffectImmBool="0" />
+      <data id="214" type="1" heroEffectImmBool="0" />
+      <data id="215" type="1" heroEffectImmBool="0" />
+      <data id="216" type="1" heroEffectImmBool="0" />
+      <data id="217" type="1" heroEffectImmBool="0" />
+      <data id="218" type="1" heroEffectImmBool="0" />
+      <data id="219" type="1" heroEffectImmBool="0" />
+      <data id="220" type="1" heroEffectImmBool="0" />
+      <data id="221" type="1" heroEffectImmBool="0" />
+      <data id="222" type="1" heroEffectImmBool="0" />
+      <data id="300" type="1" heroEffectImmBool="1" />
+      <data id="301" type="1" heroEffectImmBool="1" />
+      <data id="302" type="1" heroEffectImmBool="1" />
+      <data id="303" type="1" heroEffectImmBool="1" />
+      <data id="304" type="1" heroEffectImmBool="1" />
+      <data id="305" type="1" heroEffectImmBool="1" />
+      <data id="306" type="1" heroEffectImmBool="1" />
+      <data id="307" type="1" heroEffectImmBool="1" />
+      <data id="308" type="1" heroEffectImmBool="1" />
+      <data id="309" type="1" heroEffectImmBool="1" />
+      <data id="310" type="1" heroEffectImmBool="1" />
+      <data id="320" type="1" heroEffectImmBool="1" />
+      <data id="321" type="1" heroEffectImmBool="1" />
+      <data id="322" type="1" heroEffectImmBool="1" />
+      <data id="323" type="1" heroEffectImmBool="1" />
+      <data id="324" type="1" heroEffectImmBool="1" />
+      <data id="325" type="1" heroEffectImmBool="1" />
+      <data id="326" type="1" heroEffectImmBool="1" />
+      <data id="327" type="1" heroEffectImmBool="1" />
+      <data id="328" type="1" heroEffectImmBool="1" />
+      <data id="329" type="1" heroEffectImmBool="1" />
+      <data id="330" type="1" heroEffectImmBool="1" />
+      <data id="331" type="1" heroEffectImmBool="1" />
+      <data id="332" type="1" heroEffectImmBool="1" />
+      <data id="333" type="1" heroEffectImmBool="1" />
+      <data id="335" type="1" heroEffectImmBool="1" />
+      <data id="336" type="1" heroEffectImmBool="1" />
+      <data id="337" type="1" heroEffectImmBool="1" />
+      <data id="338" type="1" heroEffectImmBool="1" />
+      <data id="339" type="1" heroEffectImmBool="1" />
+      <data id="340" type="1" heroEffectImmBool="1" />
+      <data id="341" type="1" heroEffectImmBool="1" />
+      <data id="342" type="1" heroEffectImmBool="1" />
+      <data id="343" type="1" heroEffectImmBool="1" />
+      <data id="344" type="1" heroEffectImmBool="1" />
+      <data id="345" type="1" heroEffectImmBool="1" />
+      <data id="346" type="1" heroEffectImmBool="1" />
+      <data id="347" type="1" heroEffectImmBool="1" />
+      <data id="350" type="1" heroEffectImmBool="1" />
+      <data id="351" type="0" heroEffectImmBool="1" />
+      <data id="352" type="1" heroEffectImmBool="1" />
+      <data id="360" type="0" heroEffectImmBool="1" />
+      <data id="361" type="0" heroEffectImmBool="1" />
+      <data id="362" type="0" heroEffectImmBool="1" />
+      <data id="363" type="0" heroEffectImmBool="1" />
+      <data id="365" type="0" heroEffectImmBool="1" />
+      <data id="366" type="0" heroEffectImmBool="1" />
+      <data id="367" type="1" heroEffectImmBool="0" />
+      <data id="368" type="1" heroEffectImmBool="0" />
+      <data id="369" type="1" heroEffectImmBool="1" />
+      <data id="370" type="1" heroEffectImmBool="1" />
+      <data id="371" type="1" heroEffectImmBool="1" />
+      <data id="372" type="1" heroEffectImmBool="1" />
+      <data id="373" type="1" heroEffectImmBool="1" />
+      <data id="374" type="1" heroEffectImmBool="1" />
+      <data id="375" type="1" heroEffectImmBool="1" />
+      <data id="376" type="1" heroEffectImmBool="1" />
+      <data id="377" type="1" heroEffectImmBool="1" />
+      <data id="378" type="1" heroEffectImmBool="1" />
+      <data id="379" type="1" heroEffectImmBool="1" />
+      <data id="380" type="1" heroEffectImmBool="1" />
+      <data id="3001" type="0" heroEffectImmBool="1" />
+      <data id="3002" type="1" heroEffectImmBool="1" />
+      <data id="3003" type="1" heroEffectImmBool="1" />
+      <data id="3004" type="1" heroEffectImmBool="1" />
+      <data id="3005" type="1" heroEffectImmBool="1" />
+      <data id="3006" type="0" heroEffectImmBool="1" />
+      <data id="3007" type="1" heroEffectImmBool="1" />
+      <data id="3008" type="0" heroEffectImmBool="1" />
+      <data id="3009" type="0" heroEffectImmBool="1" />
+      <data id="3010" type="0" heroEffectImmBool="1" />
+      <data id="3012" type="1" heroEffectImmBool="1" />
+      <data id="3013" type="0" heroEffectImmBool="1" />
+      <data id="3014" type="0" heroEffectImmBool="1" />
+      <data id="3015" type="0" heroEffectImmBool="1" />
+      <data id="3016" type="1" heroEffectImmBool="1" />
+      <data id="400" type="1" heroEffectImmBool="1" />
+      <data id="401" type="1" heroEffectImmBool="1" />
+      <data id="402" type="1" heroEffectImmBool="1" />
+      <data id="403" type="1" heroEffectImmBool="1" />
+      <data id="404" type="1" heroEffectImmBool="1" />
+      <data id="405" type="1" heroEffectImmBool="1" />
+      <data id="406" type="1" heroEffectImmBool="1" />
+      <data id="407" type="0" heroEffectImmBool="1" />
+      <data id="408" type="1" heroEffectImmBool="1" />
+      <data id="409" heroEffectImmBool="1" />
+      <data id="410" heroEffectImmBool="1" />
+      <data id="411" type="1" heroEffectImmBool="1" />
+      <data id="412" type="0" heroEffectImmBool="1" />
+      <data id="413" type="1" heroEffectImmBool="1" />
+      <data id="414" type="1" heroEffectImmBool="1" />
+      <data id="415" type="1" heroEffectImmBool="1" />
+      <data id="416" type="1" heroEffectImmBool="1" />
+      <data id="417" type="0" heroEffectImmBool="1" />
+      <data id="418" type="0" heroEffectImmBool="1" />
+      <data id="419" type="1" heroEffectImmBool="0" />
+      <data id="420" type="1" heroEffectImmBool="1" />
+      <data id="421" type="1" heroEffectImmBool="0" />
+      <data id="430" type="1" heroEffectImmBool="1" />
+      <data id="431" type="1" heroEffectImmBool="1" />
+      <data id="432" type="1" heroEffectImmBool="1" />
+      <data id="433" type="1" heroEffectImmBool="1" />
+      <data id="434" type="1" heroEffectImmBool="1" />
+      <data id="435" type="1" heroEffectImmBool="1" />
+      <data id="436" type="1" heroEffectImmBool="1" />
+      <data id="437" type="1" heroEffectImmBool="1" />
+      <data id="440" type="0" heroEffectImmBool="1" />
+      <data id="441" type="0" heroEffectImmBool="1" />
+      <data id="442" type="0" heroEffectImmBool="1" />
+      <data id="443" type="1" heroEffectImmBool="1" />
+      <data id="444" type="0" heroEffectImmBool="1" />
+      <data id="445" type="1" heroEffectImmBool="1" />
+      <data id="446" type="1" heroEffectImmBool="1" />
+      <data id="447" type="0" heroEffectImmBool="1" />
+      <data id="448" type="0" heroEffectImmBool="1" />
+      <data id="449" type="1" heroEffectImmBool="1" />
+      <data id="450" type="1" heroEffectImmBool="1" />
+      <data id="451" type="1" heroEffectImmBool="1" />
+      <data id="452" type="1" heroEffectImmBool="1" />
+      <data id="453" type="1" heroEffectImmBool="1" />
+      <data id="454" type="1" heroEffectImmBool="1" />
+      <data id="455" type="0" heroEffectImmBool="1" />
+      <data id="456" type="0" heroEffectImmBool="1" />
+      <data id="457" type="0" heroEffectImmBool="1" />
+      <data id="458" type="0" heroEffectImmBool="1" />
+      <data id="459" type="0" heroEffectImmBool="1" />
+      <data id="460" type="1" heroEffectImmBool="1" />
+      <data id="461" type="1" heroEffectImmBool="1" />
+      <data id="462" type="1" heroEffectImmBool="1" />
+      <data id="463" type="1" condition="1_19" heroEffectImmBool="1" />
+      <data id="464" type="1" condition="20_26" heroEffectImmBool="1" />
+      <data id="465" type="1" condition="27_30" heroEffectImmBool="1" />
+      <data id="466" type="1" condition="1_19" heroEffectImmBool="1" />
+      <data id="467" type="1" condition="20_26" heroEffectImmBool="1" />
+      <data id="468" type="1" condition="27_30" heroEffectImmBool="1" />
+      <data id="469" type="1" heroEffectImmBool="1" />
+      <data id="470" type="1" heroEffectImmBool="1" />
+      <data id="471" type="1" heroEffectImmBool="1" />
+      <data id="472" type="1" heroEffectImmBool="1" />
+      <data id="473" type="1" heroEffectImmBool="1" />
+      <data id="474" type="1" heroEffectImmBool="1" />
+      <data id="475" type="1" heroEffectImmBool="1" />
+      <data id="476" type="1" heroEffectImmBool="1" />
+      <data id="477" type="1" heroEffectImmBool="1" />
+      <data id="478" type="1" heroEffectImmBool="1" />
+      <data id="479" type="1" heroEffectImmBool="1" />
+      <data id="480" type="1" heroEffectImmBool="1" />
+      <data id="481" type="1" heroEffectImmBool="1" />
+      <data id="482" type="1" heroEffectImmBool="1" />
+      <data id="483" type="1" heroEffectImmBool="1" />
+      <data id="484" type="1" heroEffectImmBool="1" />
+      <data id="485" type="1" heroEffectImmBool="1" />
+      <data id="486" type="0" heroEffectImmBool="1" />
+      <data id="487" type="1" heroEffectImmBool="1" />
+      <data id="488" type="1" heroEffectImmBool="1" />
+      <data id="489" type="1" heroEffectImmBool="1" />
+      <data id="490" type="1" heroEffectImmBool="1" />
+      <data id="491" type="1" heroEffectImmBool="1" />
+      <data id="492" type="1" heroEffectImmBool="1" />
+      <data id="493" type="1" heroEffectImmBool="1" />
+      <data id="494" type="1" heroEffectImmBool="1" />
+      <data id="495" type="1" heroEffectImmBool="1" />
+      <data id="496" type="1" heroEffectImmBool="1" />
+      <data id="497" type="1" heroEffectImmBool="1" />
+      <data id="498" type="1" heroEffectImmBool="1" />
+      <data id="499" type="0" heroEffectImmBool="1" />
+      <data id="4001" type="0" heroEffectImmBool="1" />
+      <data id="4002" type="0" heroEffectImmBool="1" />
+      <data id="4003" type="0" heroEffectImmBool="1" />
+      <data id="4004" type="0" heroEffectImmBool="1" />
+      <data id="4005" type="0" heroEffectImmBool="1" />
+      <data id="4006" type="0" heroEffectImmBool="1" />
+      <data id="4007" type="0" heroEffectImmBool="1" />
+      <data id="4008" type="0" heroEffectImmBool="1" />
+      <data id="4009" type="0" heroEffectImmBool="1" />
+      <data id="4010" type="0" heroEffectImmBool="1" />
+      <data id="4011" type="0" heroEffectImmBool="1" />
+      <data id="4012" type="1" heroEffectImmBool="1" />
+      <data id="4013" type="0" heroEffectImmBool="1" />
+      <data id="4014" type="1" heroEffectImmBool="1" />
+      <data id="4015" type="1" heroEffectImmBool="0" />
+      <data id="4016" type="1" heroEffectImmBool="0" />
+      <data id="4017" type="1" heroEffectImmBool="0" />
+      <data id="4018" type="1" heroEffectImmBool="0" />
+      <data id="4019" type="1" heroEffectImmBool="0" />
+      <data id="4020" type="1" heroEffectImmBool="0" />
+      <data id="4021" type="1" heroEffectImmBool="0" />
+      <data id="4022" type="1" heroEffectImmBool="0" />
+      <data id="4023" type="0" heroEffectImmBool="0" />
+      <data id="4024" type="1" heroEffectImmBool="0" />
+      <data id="4025" type="1" heroEffectImmBool="0" />
+      <data id="4026" type="1" heroEffectImmBool="0" />
+      <data id="4027" type="1" heroEffectImmBool="0" />
+      <data id="4028" type="1" heroEffectImmBool="0" />
+      <data id="4029" type="1" heroEffectImmBool="0" />
+      <data id="4030" type="1" heroEffectImmBool="0" />
+      <data id="4031" type="1" heroEffectImmBool="0" />
+      <data id="4032" type="1" heroEffectImmBool="0" />
+      <data id="4033" type="1" heroEffectImmBool="0" />
+      <data id="4034" type="1" heroEffectImmBool="0" />
+      <data id="4035" type="1" heroEffectImmBool="0" />
+      <data id="4036" type="1" heroEffectImmBool="0" />
+      <data id="4037" type="1" heroEffectImmBool="0" />
+      <data id="4038" type="1" heroEffectImmBool="0" />
+      <data id="4039" type="1" heroEffectImmBool="0" />
+      <data id="4101" type="0" heroEffectImmBool="0" />
+      <data id="4102" type="1" heroEffectImmBool="0" />
+      <data id="4103" type="1" heroEffectImmBool="0" />
+      <data id="4104" type="1" heroEffectImmBool="0" />
+      <data id="4105" type="1" heroEffectImmBool="0" />
+      <data id="4106" type="1" heroEffectImmBool="0" />
+      <data id="4107" type="1" heroEffectImmBool="0" />
+      <data id="4108" type="1" heroEffectImmBool="0" />
+      <data id="4109" type="1" heroEffectImmBool="0" />
+      <data id="4110" type="0" heroEffectImmBool="0" />
+      <data id="4111" type="0" heroEffectImmBool="0" />
+      <data id="4112" type="0" heroEffectImmBool="0" />
+      <data id="4113" type="0" heroEffectImmBool="0" />
+      <data id="4114" type="0" heroEffectImmBool="0" />
+      <data id="4115" type="0" heroEffectImmBool="0" />
+      <data id="4116" type="0" heroEffectImmBool="0" />
+      <data id="4117" type="0" heroEffectImmBool="0" />
+      <data id="4118" type="1" heroEffectImmBool="0" />
+      <data id="4119" type="1" heroEffectImmBool="0" />
+      <data id="4120" type="1" heroEffectImmBool="0" />
+      <data id="4121" type="1" heroEffectImmBool="0" />
+      <data id="4122" type="1" heroEffectImmBool="0" />
+      <data id="4123" type="1" heroEffectImmBool="0" />
+      <data id="4124" type="1" heroEffectImmBool="0" />
+      <data id="4125" type="1" heroEffectImmBool="0" />
+      <data id="4126" type="1" heroEffectImmBool="0" />
+      <data id="4127" type="1" heroEffectImmBool="0" />
+      <data id="4128" type="1" heroEffectImmBool="0" />
+      <data id="4129" type="1" heroEffectImmBool="0" />
+      <data id="4130" type="1" heroEffectImmBool="0" />
+      <data id="500" type="1" heroEffectImmBool="1" />
+      <data id="501" type="0" heroEffectImmBool="1" />
+      <data id="502" type="1" heroEffectImmBool="1" />
+      <data id="503" type="0" heroEffectImmBool="1" />
+      <data id="504" type="0" heroEffectImmBool="1" />
+      <data id="505" type="1" heroEffectImmBool="1" />
+      <data id="506" type="0" heroEffectImmBool="1" />
+      <data id="510" type="0" heroEffectImmBool="1" />
+      <data id="511" type="0" heroEffectImmBool="1" />
+      <data id="512" type="1" heroEffectImmBool="1" />
+      <data id="513" type="1" heroEffectImmBool="1" />
+      <data id="514" type="0" heroEffectImmBool="1" />
+      <data id="515" type="1" heroEffectImmBool="1" />
+      <data id="516" type="0" heroEffectImmBool="1" />
+      <data id="517" type="1" heroEffectImmBool="1" />
+      <data id="518" type="0" heroEffectImmBool="1" />
+      <data id="519" type="1" />
+      <data id="520" type="1" />
+      <data id="521" type="1" />
+      <data id="522" type="1" />
+      <data id="523" type="1" />
+      <data id="600" type="0" heroEffectImmBool="1" />
+      <data id="601" type="0" heroEffectImmBool="1" />
+      <data id="602" type="1" heroEffectImmBool="1" />
+      <data id="603" type="0" heroEffectImmBool="1" />
+      <data id="604" type="0" heroEffectImmBool="1" />
+      <data id="605" type="0" heroEffectImmBool="1" />
+      <data id="606" type="1" heroEffectImmBool="0" />
+      <data id="607" type="0" heroEffectImmBool="0" />
+      <data id="608" type="0" heroEffectImmBool="1" />
+      <data id="609" type="1" heroEffectImmBool="1" />
+      <data id="610" type="1" heroEffectImmBool="1" />
+      <data id="611" type="1" heroEffectImmBool="1" />
+      <data id="612" type="1" heroEffectImmBool="0" />
+      <data id="613" type="1" heroEffectImmBool="1" />
+      <data id="614" type="1" heroEffectImmBool="1" />
+      <data id="615" type="1" heroEffectImmBool="1" />
+      <data id="616" type="1" heroEffectImmBool="1" />
+      <data id="617" type="1" heroEffectImmBool="1" />
+      <data id="618" type="1" heroEffectImmBool="1" />
+      <data id="619" type="0" heroEffectImmBool="1" />
+      <data id="620" type="0" heroEffectImmBool="1" />
+      <data id="621" type="1" heroEffectImmBool="1" />
+      <data id="622" type="1" heroEffectImmBool="1" />
+      <data id="623" type="1" heroEffectImmBool="1" />
+      <data id="624" type="1" heroEffectImmBool="1" />
+      <data id="625" type="1" heroEffectImmBool="1" />
+      <data id="626" type="1" heroEffectImmBool="1" />
+      <data id="627" type="1" heroEffectImmBool="1" />
+      <data id="628" type="0" heroEffectImmBool="1" />
+      <data id="629" type="1" heroEffectImmBool="1" />
+      <data id="630" type="1" heroEffectImmBool="1" />
+      <data id="631" type="1" heroEffectImmBool="1" />
+      <data id="632" type="1" heroEffectImmBool="1" />
+      <data id="633" type="1" heroEffectImmBool="1" />
+      <data id="634" type="0" heroEffectImmBool="1" />
+      <data id="635" type="1" heroEffectImmBool="1" />
+      <data id="636" type="1" heroEffectImmBool="1" />
+      <data id="637" type="1" heroEffectImmBool="1" />
+      <data id="638" type="1" heroEffectImmBool="1" />
+      <data id="651" type="1" heroEffectImmBool="1" />
+      <data id="652" type="1" heroEffectImmBool="1" />
+      <data id="639" type="1" heroEffectImmBool="1" />
+      <data id="640" type="0" heroEffectImmBool="1" />
+      <data id="641" type="1" heroEffectImmBool="1" />
+      <data id="642" type="0" heroEffectImmBool="1" />
+      <data id="643" type="1" heroEffectImmBool="1" />
+      <data id="644" type="1" heroEffectImmBool="1" />
+      <data id="645" type="1" heroEffectImmBool="1" />
+      <data id="646" type="1" heroEffectImmBool="1" />
+      <data id="647" type="0" heroEffectImmBool="1" />
+      <data id="648" type="1" heroEffectImmBool="1" />
+      <data id="649" type="0" heroEffectImmBool="1" />
+      <data id="650" type="1" heroEffectImmBool="1" />
+      <data id="653" type="1" heroEffectImmBool="1" />
+      <data id="654" type="1" heroEffectImmBool="1" />
+      <data id="655" type="0" heroEffectImmBool="1" />
+      <data id="656" type="1" heroEffectImmBool="1" />
+      <data id="657" type="1" heroEffectImmBool="1" />
+      <data id="658" type="1" heroEffectImmBool="1" />
+      <data id="659" type="1" heroEffectImmBool="1" />
+      <data id="800" type="1" heroEffectImmBool="1" />
+      <data id="801" type="1" heroEffectImmBool="1" />
+      <data id="802" type="1" heroEffectImmBool="1" />
+      <data id="803" type="1" heroEffectImmBool="1" />
+      <data id="804" type="1" heroEffectImmBool="1" />
+      <data id="805" type="1" heroEffectImmBool="1" />
+      <data id="806" type="1" heroEffectImmBool="1" />
+      <data id="807" type="1" heroEffectImmBool="1" />
+      <data id="808" type="1" heroEffectImmBool="1" />
+      <data id="809" type="1" heroEffectImmBool="1" />
+      <data id="810" type="1" heroEffectImmBool="1" />
+      <data id="811" type="1" heroEffectImmBool="1" />
+      <data id="812" type="1" heroEffectImmBool="1" />
+      <data id="813" type="1" heroEffectImmBool="1" />
+      <data id="814" type="1" heroEffectImmBool="1" />
+      <data id="901" type="0" heroEffectImmBool="0" />
+      <data id="902" type="0" heroEffectImmBool="0" />
+      <data id="910" type="0" heroEffectImmBool="0" />
+      <data id="911" type="0" heroEffectImmBool="0" />
+      <data id="31000" type="100" heroEffectImmBool="1" />
+      <data id="31001" type="100" heroEffectImmBool="1" />
+      <data id="31002" type="100" heroEffectImmBool="1" />
+      <data id="31003" type="100" heroEffectImmBool="1" />
+      <data id="31004" type="100" heroEffectImmBool="1" />
+      <data id="31005" type="100" heroEffectImmBool="1" />
+      <data id="31006" type="100" heroEffectImmBool="1" />
+      <data id="32000" type="100" heroEffectImmBool="1" />
+      <data id="32001" type="100" heroEffectImmBool="1" />
+      <data id="40001" type="200" heroEffectImmBool="1" />
+      <data id="40002" type="200" heroEffectImmBool="1" />
+      <data id="40003" type="200" heroEffectImmBool="1" />
+      <data id="40004" type="200" heroEffectImmBool="1" />
+      <data id="40005" type="200" heroEffectImmBool="1" />
+      <data id="50001" type="0" heroEffectImmBool="1" />
+      <data id="50002" type="0" heroEffectImmBool="1" />
+      <data id="73000" type="100" />
+      <data id="74000" type="100" />
+      <data id="750001" type="100" heroEffectImmBool="1" />
+      <data id="750003" type="100" heroEffectImmBool="1" />
+      <data id="750007" type="100" heroEffectImmBool="1" />
+      <data id="750014" type="100" heroEffectImmBool="1" />
+      <data id="750030" type="100" heroEffectImmBool="1" />
+      <data id="76000" type="100" />
+      <data id="77000" type="100" />
+      <data id="78000" type="100" />
+      <data id="60001" type="1" />
+      <data id="60002" type="0" />
+      <data id="60003" type="1" />
+      <data id="60004" type="0" />
+      <data id="60005" type="0" />
+      <data id="60006" type="0" />
+      <data id="80001" type="0" />
+      <data id="790000" type="100" />
+      <data id="790001" type="100" />
+      <data id="790003" type="100" />
+      <data id="790007" type="100" />
+      <data id="790014" type="100" />
+      <data id="790030" type="100" />
+      <data id="711000" type="100" />
+      <data id="711001" type="100" />
+      <data id="711003" type="100" />
+      <data id="711007" type="100" />
+      <data id="711014" type="100" />
+      <data id="711030" type="100" />
+      <data id="712000" type="100" />
+      <data id="712001" type="100" />
+      <data id="712003" type="100" />
+      <data id="712007" type="100" />
+      <data id="712014" type="100" />
+      <data id="712030" type="100" />
+      <data id="713000" type="100" />
+      <data id="714000" type="100" />
+      <data id="715000" type="100" />
+      <data id="716000" type="100" />
+      <data id="717000" type="100" />
+      <data id="718000" type="100" />
+      <data id="719000" type="100" />
+      <data id="8200000" type="100" />
+      <data id="8100000" type="100" />
+      <data id="8100007" type="100" />
+      <data id="8100014" type="100" />
+      <data id="8100030" type="100" />
+      <data id="8100060" type="100" />
+      <data id="8100090" type="100" />
+      <data id="8100180" type="100" />
+      <data id="8300000" type="100" />
+      <data id="8400000" type="100" />
+      <data id="8500000" type="100" />
+      <data id="8600000" type="100" />
+      <data id="8700000" type="100" />
+      <data id="8800000" type="100" />
+      <data id="8900000" type="100" />
+      <data id="9000000" type="100" />
+      <data id="9100000" type="100" />
+      <data id="9200000" type="100" />
+      <data id="9200007" type="100" />
+      <data id="9200014" type="100" />
+      <data id="9200030" type="100" />
+      <data id="9200060" type="100" />
+      <data id="9200090" type="100" />
+      <data id="9200180" type="100" />
+      <data id="10000000" type="100" />
+      <data id="10000001" type="100" />
+      <data id="10000002" type="100" />
+      <data id="10000003" type="100" />
+      <data id="10000004" type="100" />
+      <data id="10000005" type="100" />
+      <data id="10000006" type="100" />
+      <data id="10000007" type="100" />
+      <data id="10000008" type="100" />
+      <data id="10000009" type="100" />
+      <data id="10000010" type="100" />
+      <data id="10000011" type="100" />
+      <data id="10000012" type="100" />
+      <data id="10000013" type="100" />
+      <data id="10000014" type="100" />
+      <data id="10000015" type="100" />
+      <data id="10000016" type="100" />
+      <data id="10000017" type="100" />
+      <data id="10000018" type="100" />
+      <data id="10000019" type="100" />
+      <data id="10000020" type="100" />
+      <data id="10000021" type="100" />
+      <data id="10000022" type="100" />
+      <data id="10000023" type="100" />
+      <data id="10000024" type="100" />
+      <data id="10000025" type="100" />
+      <data id="10000026" type="100" />
+      <data id="10000027" type="100" />
+      <data id="10000028" type="100" />
+      <data id="10000029" type="100" />
+      <data id="10000030" type="100" />
+      <data id="10000031" type="100" />
+      <data id="10000032" type="100" />
+      <data id="10000033" type="100" />
+      <data id="10000034" type="100" />
+      <data id="10000035" type="100" />
+      <data id="10000036" type="100" />
+      <data id="10000037" type="100" />
+      <data id="10000038" type="100" />
+      <data id="10000039" type="100" />
+      <data id="10000040" type="100" />
+      <data id="10000041" type="100" />
+      <data id="10000042" type="100" />
+      <data id="10000043" type="100" />
+      <data id="10000044" type="100" />
+      <data id="10000045" type="100" />
+      <data id="10000046" type="100" />
+      <data id="10000047" type="100" />
+      <data id="10000048" type="100" />
+      <data id="10000049" type="100" />
+      <data id="10000050" type="100" />
+      <data id="10000051" type="100" />
+      <data id="10000052" type="100" />
+      <data id="10000053" type="100" />
+      <data id="10000054" type="100" />
+      <data id="10000055" type="100" />
+      <data id="10000056" type="100" />
+      <data id="10000057" type="100" />
+      <data id="10000058" type="100" />
+      <data id="10000059" type="100" />
+      <data id="10000060" type="100" />
+      <data id="10000061" type="100" />
+      <data id="10000062" type="100" />
+      <data id="10000063" type="100" />
+      <data id="10000064" type="100" />
+      <data id="10000065" type="100" />
+      <data id="10000066" type="100" />
+      <data id="10000067" type="100" />
+      <data id="10000068" type="100" />
+      <data id="10000069" type="100" />
+      <data id="10000070" type="100" />
+      <data id="10000072" type="100" />
+      <data id="10000073" type="100" />
+      <data id="10000074" type="100" />
+      <data id="10000075" type="100" />
+      <data id="10000076" type="100" />
+      <data id="10000077" type="100" />
+      <data id="10000078" type="100" />
+      <data id="10000079" type="100" />
+      <data id="10000080" type="100" />
+      <data id="10000081" type="100" />
+      <data id="10000082" type="100" />
+      <data id="10000083" type="100" />
+      <data id="10000084" type="100" />
+      <data id="10000085" type="100" />
+      <data id="10000086" type="100" />
+      <data id="10000087" type="100" />
+      <data id="13001000" type="100" />
+      <data id="13001003" type="100" />
+      <data id="13001007" type="100" />
+      <data id="13001014" type="100" />
+      <data id="13001030" type="100" />
+      <data id="13001060" type="100" />
+      <data id="13001090" type="100" />
+      <data id="13001180" type="100" />
+      <data id="13002000" type="100" />
+      <data id="13002007" type="100" />
+      <data id="13002014" type="100" />
+      <data id="13002030" type="100" />
+      <data id="13003000" type="100" />
+      <data id="13003001" type="100" />
+      <data id="13003002" type="100" />
+      <data id="13003003" type="100" />
+      <data id="13003004" type="100" />
+      <data id="13003005" type="100" />
+      <data id="13003006" type="100" />
+      <data id="13003007" type="100" />
+      <data id="13003008" type="100" />
+      <data id="13003009" type="100" />
+      <data id="13003010" type="100" />
+      <data id="13003011" type="100" />
+      <data id="13003012" type="100" />
+      <data id="13003013" type="100" />
+      <data id="13003014" type="100" />
+      <data id="13003015" type="100" />
+      <data id="13003016" type="100" />
+      <data id="10000088" type="100" />
+      <data id="10000089" type="100" />
+      <data id="10000090" type="100" />
+      <data id="9300000" type="100" />
+      <data id="9400000" type="100" />
+      <data id="9500000" type="100" />
+      <data id="9600001" type="100" />
+      <data id="9600003" type="100" />
+      <data id="9600007" type="100" />
+      <data id="9600014" type="100" />
+      <data id="9600030" type="100" />
+      <data id="9600060" type="100" />
+      <data id="9600090" type="100" />
+      <data id="9700001" type="100" />
+      <data id="9700003" type="100" />
+      <data id="9700007" type="100" />
+      <data id="9700014" type="100" />
+      <data id="9700030" type="100" />
+      <data id="9700060" type="100" />
+      <data id="9700090" type="100" />
+      <data id="9800001" type="100" />
+      <data id="9800003" type="100" />
+      <data id="9800007" type="100" />
+      <data id="9800014" type="100" />
+      <data id="9800030" type="100" />
+      <data id="9800060" type="100" />
+      <data id="9800090" type="100" />
+      <data id="9900000" type="100" />
+      <data id="9910000" type="100" />
+      <data id="9920000" type="100" />
+      <data id="9930000" type="100" />
+      <data id="9940000" type="100" />
+      <data id="9950000" type="100" />
+      <data id="9960000" type="100" />
+      <data id="9970000" type="100" />
+      <data id="9970900" type="100" />
+      <data id="9971000" type="100" />
+      <data id="9971007" type="100" />
+      <data id="9971014" type="100" />
+      <data id="9971030" type="100" />
+      <data id="9971060" type="100" />
+      <data id="9971090" type="100" />
+      <data id="9971180" type="100" />
+      <data id="9972000" type="100" />
+      <data id="9972007" type="100" />
+      <data id="9972014" type="100" />
+      <data id="9972030" type="100" />
+      <data id="9972060" type="100" />
+      <data id="9972090" type="100" />
+      <data id="9972180" type="100" />
+      <data id="9973000" type="100" />
+      <data id="9974000" type="100" />
+      <data id="9975000" type="100" />
+      <data id="9976000" type="100" />
+      <data id="9976007" type="100" />
+      <data id="9976014" type="100" />
+      <data id="9976030" type="100" />
+      <data id="9976060" type="100" />
+      <data id="9976090" type="100" />
+      <data id="9976180" type="100" />
+      <data id="9977000" type="100" />
+      <data id="9978000" type="100" />
+      <data id="9979000" type="100" />
+      <data id="9980000" type="100" />
+      <data id="9981000" type="100" />
+      <data id="9982000" type="100" />
+      <data id="9983000" type="100" />
+      <data id="9984000" type="100" />
+      <data id="9985000" type="100" />
+      <data id="9986000" type="100" />
+      <data id="9987000" type="100" />
+      <data id="9988000" type="100" />
+      <data id="9989000" type="100" />
+      <data id="9990000" type="100" />
+      <data id="9991000" type="100" />
+      <data id="9992000" type="100" />
+      <data id="9992001" type="100" />
+      <data id="9992003" type="100" />
+      <data id="9992007" type="100" />
+      <data id="9992014" type="100" />
+      <data id="9992030" type="100" />
+      <data id="9993000" type="100" />
+      <data id="9994000" type="100" />
+      <data id="9995000" type="100" />
+      <data id="9996000" type="100" />
+      <data id="9997000" type="100" />
+      <data id="9998000" type="100" />
+      <data id="9999000" type="100" />
+      <data id="11000000" type="100" />
+      <data id="12001180" type="100" />
+      <data id="12002180" type="100" />
+      <data id="10001000" type="100" />
+      <data id="10001007" type="100" />
+      <data id="10001030" type="100" />
+      <data id="10001060" type="100" />
+      <data id="10001090" type="100" />
+      <data id="10002000" type="100" />
+      <data id="10002007" type="100" />
+      <data id="10002030" type="100" />
+      <data id="10002060" type="100" />
+      <data id="10002090" type="100" />
+      <data id="10003000" type="100" />
+      <data id="10003007" type="100" />
+      <data id="10003030" type="100" />
+      <data id="10003060" type="100" />
+      <data id="10003090" type="100" />
+      <data id="10004000" type="100" />
+      <data id="10004007" type="100" />
+      <data id="10004030" type="100" />
+      <data id="10004060" type="100" />
+      <data id="10004090" type="100" />
+      <data id="10005000" type="100" />
+      <data id="10005007" type="100" />
+      <data id="10005030" type="100" />
+      <data id="10005060" type="100" />
+      <data id="10005090" type="100" />
+      <data id="10076000" type="100" />
+      <data id="10076007" type="100" />
+      <data id="10076014" type="100" />
+      <data id="10076030" type="100" />
+      <data id="10076060" type="100" />
+      <data id="10076090" type="100" />
+      <data id="10076180" type="100" />
+      <data id="10077000" type="100" />
+      <data id="10079180" type="100" />
+      <data id="11001000" type="100" />
+      <data id="10080000" type="100" />
+      <data id="10080007" type="100" />
+      <data id="10080014" type="100" />
+      <data id="10080030" type="100" />
+      <data id="10080060" type="100" />
+      <data id="10080090" type="100" />
+      <data id="10080180" type="100" />
+      <data id="11002000" type="100" />
+      <data id="11003000" type="100" />
+      <data id="11004000" type="100" />
+      <data id="10090000" type="100" />
+      <data id="10090007" type="100" />
+      <data id="10090014" type="100" />
+      <data id="10090030" type="100" />
+      <data id="10090060" type="100" />
+      <data id="10090090" type="100" />
+      <data id="10090180" type="100" />
+      <data id="11005000" type="100" />
+      <data id="11006000" type="100" />
+      <data id="11007000" type="100" />
+      <data id="11008000" type="100" />
+      <data id="11009000" type="100" />
+      <data id="11010000" type="100" />
+      <data id="11010007" type="100" />
+      <data id="11010014" type="100" />
+      <data id="11010030" type="100" />
+      <data id="11010060" type="100" />
+      <data id="11010090" type="100" />
+      <data id="11010180" type="100" />
+      <data id="11020000" type="100" />
+      <data id="11020007" type="100" />
+      <data id="11020014" type="100" />
+      <data id="11020030" type="100" />
+      <data id="11020060" type="100" />
+      <data id="11020090" type="100" />
+      <data id="11020180" type="100" />
+      <data id="11011000" type="100" />
+      <data id="11012000" type="100" />
+      <data id="11012007" type="100" />
+      <data id="11012014" type="100" />
+      <data id="11012030" type="100" />
+      <data id="11013000" type="100" />
+      <data id="11014000" type="100" />
+      <data id="11015000" type="100" />
+      <data id="11016000" type="100" />
+      <data id="11017000" type="100" />
+      <data id="11018000" type="100" />
+      <data id="11018007" type="100" />
+      <data id="11018014" type="100" />
+      <data id="11018030" type="100" />
+      <data id="11018060" type="100" />
+      <data id="11018090" type="100" />
+      <data id="11018180" type="100" />
+      <data id="11019000" type="100" />
+      <data id="11021000" type="100" />
+      <data id="11022000" type="100" />
+      <data id="11022007" type="100" />
+      <data id="11022014" type="100" />
+      <data id="11022030" type="100" />
+      <data id="11022060" type="100" />
+      <data id="11022090" type="100" />
+      <data id="11022180" type="100" />
+      <data id="11021200" type="100" />
+      <data id="11023000" type="100" />
+      <data id="11024000" type="100" />
+      <data id="11025000" type="100" />
+      <data id="12000000" type="100" />
+      <data id="11999000" type="100" />
+      <data id="11999007" type="100" />
+      <data id="11999014" type="100" />
+      <data id="11999030" type="100" />
+      <data id="11999060" type="100" />
+      <data id="11999090" type="100" />
+      <data id="11999180" type="100" />
+      <data id="11026000" type="100" />
+      <data id="11026007" type="100" />
+      <data id="11026014" type="100" />
+      <data id="11026030" type="100" />
+      <data id="11026060" type="100" />
+      <data id="11026090" type="100" />
+      <data id="11026180" type="100" />
+      <data id="11027180" type="100" />
+      <data id="11028180" type="100" />
+      <data id="11029000" type="100" />
+      <data id="11030000" type="100" />
+      <data id="11030007" type="100" />
+      <data id="11030014" type="100" />
+      <data id="11030030" type="100" />
+      <data id="11030060" type="100" />
+      <data id="11030090" type="100" />
+      <data id="11030180" type="100" />
+      <data id="11031180" type="100" />
+      <data id="11032180" type="100" />
+      <data id="11033000" type="100" />
+      <data id="11033007" type="100" />
+      <data id="11033014" type="100" />
+      <data id="11033030" type="100" />
+      <data id="11033060" type="100" />
+      <data id="11033090" type="100" />
+      <data id="11033180" type="100" />
+      <data id="11040000" type="100" />
+      <data id="11040003" type="100" />
+      <data id="11040007" type="100" />
+      <data id="11040014" type="100" />
+      <data id="11040030" type="100" />
+      <data id="11040060" type="100" />
+      <data id="11040090" type="100" />
+      <data id="11040180" type="100" />
+      <data id="11050000" type="100" />
+      <data id="11050007" type="100" />
+      <data id="11050014" type="100" />
+      <data id="11050030" type="100" />
+      <data id="11050060" type="100" />
+      <data id="11050090" type="100" />
+      <data id="11050180" type="100" />
+      <data id="11060000" type="100" />
+      <data id="11060007" type="100" />
+      <data id="11060014" type="100" />
+      <data id="11060030" type="100" />
+      <data id="11070000" type="100" />
+      <data id="11070007" type="100" />
+      <data id="11070014" type="100" />
+      <data id="11070030" type="100" />
+      <data id="11070060" type="100" />
+      <data id="11070090" type="100" />
+      <data id="11070180" type="100" />
+      <data id="11080000" type="100" />
+      <data id="11080007" type="100" />
+      <data id="11080014" type="100" />
+      <data id="11080030" type="100" />
+      <data id="11080060" type="100" />
+      <data id="11080090" type="100" />
+      <data id="11080180" type="100" />
+      <data id="11081000" type="100" />
+      <data id="11081007" type="100" />
+      <data id="11081014" type="100" />
+      <data id="11081030" type="100" />
+      <data id="11081060" type="100" />
+      <data id="11081090" type="100" />
+      <data id="11081180" type="100" />
+      <data id="11082000" type="100" />
+      <data id="11082007" type="100" />
+      <data id="11082014" type="100" />
+      <data id="11082030" type="100" />
+      <data id="11082060" type="100" />
+      <data id="11082090" type="100" />
+      <data id="11082180" type="100" />
+      <data id="11083000" type="100" />
+      <data id="11083007" type="100" />
+      <data id="11083014" type="100" />
+      <data id="11083030" type="100" />
+      <data id="11083060" type="100" />
+      <data id="11083090" type="100" />
+      <data id="11083180" type="100" />
+      <data id="1461" type="1" />
+      <data id="1462" type="1" />
+      <data id="1463" type="1" />
+      <data id="1464" type="1" />
+      <data id="1465" type="1" />
+      <data id="1466" type="1" />
+      <data id="1467" type="1" />
+      <data id="1468" type="1" />
+      <data id="1469" type="1" />
+      <data id="1470" type="1" />
+      <data id="1471" type="1" />
+      <data id="1472" type="1" />
+      <data id="1473" type="1" />
+      <data id="1474" type="1" />
+      <data id="1475" type="1" />
+      <data id="1476" type="1" />
+      <data id="1477" type="1" />
+      <data id="1478" type="1" />
+      <data id="1479" type="1" />
+      <data id="28101" type="1" />
+      <data id="28102" type="0" />
+      <data id="28103" type="1" />
+      <data id="28104" type="1" />
+      <data id="28105" type="1" />
+      <data id="28106" type="1" />
+      <data id="28107" type="1" />
+      <data id="28108" type="1" />
+      <data id="9010" type="1" />
+      <data id="9011" type="1" />
+      <data id="9012" type="1" />
+      <data id="9013" type="1" />
+      <data id="9014" type="1" />
+      <data id="9004" type="1" />
+      <data id="9005" type="1" />
+      <data id="9006" type="1" />
+      <data id="9007" type="1" />
+      <data id="9008" type="1" />
+      <data id="9001" type="1" />
+      <data id="9002" type="1" />
+      <data id="28109" type="1" />
+      <data id="28110" type="1" />
+      <data id="9015" type="1" />
+      <data id="9016" type="1" />
+      <data id="9017" type="1" />
+      <data id="9018" type="1" />
+      <data id="9019" type="1" />
+      <data id="9020" type="1" />
+      <data id="9021" type="1" />
+      <data id="9022" type="1" />
+      <data id="9023" type="1" />
+      <data id="9024" type="1" />
+      <data id="9025" type="1" />
+      <data id="9026" type="1" />
+      <data id="9027" type="1" />
+      <data id="9028" type="1" />
+      <data id="9029" type="1" />
+      <data id="9030" type="1" />
+      <data id="9031" type="1" />
+      <data id="9032" type="1" />
+      <data id="9033" type="1" />
+      <data id="9035" type="1" />
+      <data id="9036" type="1" />
+      <data id="9037" type="1" />
+      <data id="9038" type="1" />
+      <data id="9039" type="1" />
+      <data id="9040" type="1" />
+      <data id="9041" type="1" />
+      <data id="500001" type="0" />
+      <data id="9045" type="1" />
+      <data id="9046" type="1" />
+      <data id="9047" type="1" />
+      <data id="9048" type="1" />
+      <data id="9049" type="1" />
+      <data id="9050" type="1" />
+      <data id="367811" type="2" />
+      <data id="367812" type="2" />
+      <data id="367813" type="2" />
+      <data id="367814" type="1" />
+      <data id="367815" type="1" />
+      <data id="367816" type="1" />
+      <data id="367817" type="1" />
+      <data id="367818" type="1" />
+      <data id="367819" type="1" />
+      <data id="367820" type="2" />
+      <data id="367821" type="2" />
+      <data id="400000" />
+      <data id="1980" type="1" />
+      <data id="1981" type="1" />
+      <data id="1982" type="1" />
+      <data id="1983" type="1" />
+      <data id="1984" type="1" />
+      <data id="1990" type="1" />
+      <data id="1991" type="1" />
+      <data id="1992" type="1" />
+      <data id="1993" type="1" />
+      <data id="1994" type="1" />
+      <data id="2001" type="1" />
+      <data id="2002" type="1" />
+      <data id="2003" type="1" />
+      <data id="2004" type="1" />
+      <data id="2005" type="1" />
+      <data id="2006" type="1" />
+      <data id="2007" type="1" />
+      <data id="2008" type="1" />
+      <data id="2011" type="1" />
+      <data id="2012" type="1" />
+      <data id="2013" type="1" />
+      <data id="2014" type="1" />
+      <data id="2015" type="1" />
+      <data id="2016" type="1" />
+      <data id="2017" type="1" />
+      <data id="2018" type="1" />
+      <data id="5001" type="1" />
+      <data id="5002" type="1" />
+      <data id="5003" type="1" />
+      <data id="5004" type="1" />
+      <data id="5005" type="1" />
+      <data id="5006" type="1" />
+      <data id="5007" type="1" />
+      <data id="5008" type="1" />
+      <data id="5011" type="1" />
+      <data id="5012" type="1" />
+      <data id="5013" type="1" />
+      <data id="5014" type="1" />
+      <data id="5015" type="1" />
+      <data id="5016" type="1" />
+      <data id="5017" type="1" />
+      <data id="5018" type="1" />
+      <data id="5021" type="1" />
+      <data id="5022" type="1" />
+      <data id="5023" type="1" />
+      <data id="5024" type="1" />
+      <data id="5025" type="1" />
+      <data id="5026" type="1" />
+      <data id="5027" type="1" />
+      <data id="5028" type="1" />
+      <data id="5031" type="1" />
+      <data id="5032" type="1" />
+      <data id="5033" type="1" />
+      <data id="5034" type="1" />
+      <data id="5035" type="1" />
+      <data id="5036" type="1" />
+      <data id="5037" type="1" />
+      <data id="5038" type="1" />
+      <data id="5041" type="1" />
+      <data id="5042" type="1" />
+      <data id="5043" type="1" />
+      <data id="5044" type="1" />
+      <data id="5045" type="1" />
+      <data id="5046" type="1" />
+      <data id="5047" type="1" />
+      <data id="5048" type="1" />
+</root>

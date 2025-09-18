@@ -1,0 +1,26 @@
+option java_package = "com.hawk.game.protocol";
+
+enum script
+{
+	// 请求
+	REQUEST = 8281008;
+	
+	// 响应
+	RESPONSE = 8281009;
+}
+
+// 脚本请求
+message ScriptRequest
+{
+	required string script = 1;
+	optional string query = 2;
+	optional string token = 3;
+	optional string targetHost = 4;
+}
+ 
+// 脚本响应
+message ScriptResponse
+{
+	required int32 code = 1;
+	optional string response = 2;
+}

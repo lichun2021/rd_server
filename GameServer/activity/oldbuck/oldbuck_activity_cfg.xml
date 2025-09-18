@@ -1,0 +1,15 @@
+# 送礼上限（次）
+sendLimit = 10
+
+# 回礼上限（次）
+backLimit = 10
+
+# 收礼上限（次）
+receiveLimt = 10
+
+# 赠送礼品
+sendGift = 
+
+# 回赠礼品
+backGift = 
+

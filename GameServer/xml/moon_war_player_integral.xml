@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" integralType="1" integralP1="39" integralPoints="1_5" integralAddition="0.5" />
+      <data id="2" integralType="1" integralP1="40" integralPoints="1_6" integralAddition="0.5" />
+      <data id="3" integralType="1" integralP1="41" integralPoints="1_7" integralAddition="0.5" />
+      <data id="4" integralType="1" integralP1="42" integralPoints="1_8" integralAddition="0.5" />
+      <data id="5" integralType="1" integralP1="43" integralPoints="1_9" integralAddition="0.5" />
+      <data id="6" integralType="1" integralP1="44" integralPoints="1_10" integralAddition="0.5" />
+      <data id="7" integralType="1" integralP1="45" integralPoints="1_12" integralAddition="0.5" />
+      <data id="8" integralType="2" integralP1="39" integralPoints="1_20" integralAddition="0.5" />
+      <data id="9" integralType="2" integralP1="40" integralPoints="1_24" integralAddition="0.5" />
+      <data id="10" integralType="2" integralP1="41" integralPoints="1_28" integralAddition="0.5" />
+      <data id="11" integralType="2" integralP1="42" integralPoints="1_32" integralAddition="0.5" />
+      <data id="12" integralType="2" integralP1="43" integralPoints="1_36" integralAddition="0.5" />
+      <data id="13" integralType="2" integralP1="44" integralPoints="1_40" integralAddition="0.5" />
+      <data id="14" integralType="2" integralP1="45" integralPoints="1_50" integralAddition="0.5" />
+      <data id="15" integralType="3" integralP1="1107" integralPoints="24000_1" />
+      <data id="16" integralType="3" integralP1="1108" integralPoints="24000_1" />
+      <data id="17" integralType="3" integralP1="1110" integralPoints="6000_1" />
+      <data id="18" integralType="3" integralP1="1109" integralPoints="1000_1" />
+      <data id="19" integralType="4" integralP1="1" integralPoints="1_1" />
+      <data id="20" integralType="4" integralP1="2" integralPoints="1_3" />
+      <data id="21" integralType="4" integralP1="3" integralPoints="1_15" />
+      <data id="22" integralType="4" integralP1="4" integralPoints="1_30" />
+      <data id="23" integralType="4" integralP1="5" integralPoints="1_100" />
+      <data id="24" integralType="5" integralP1="100105" integralPoints="1_4" />
+      <data id="25" integralType="5" integralP1="100205" integralPoints="1_6" />
+      <data id="26" integralType="5" integralP1="100305" integralPoints="1_4" />
+      <data id="27" integralType="5" integralP1="100405" integralPoints="1_6" />
+      <data id="28" integralType="5" integralP1="100505" integralPoints="1_4" />
+      <data id="29" integralType="5" integralP1="100605" integralPoints="1_6" />
+      <data id="30" integralType="5" integralP1="100705" integralPoints="1_4" />
+      <data id="31" integralType="5" integralP1="100805" integralPoints="1_6" />
+      <data id="32" integralType="5" integralP1="100106" integralPoints="1_12" />
+      <data id="33" integralType="5" integralP1="100206" integralPoints="1_20" />
+      <data id="34" integralType="5" integralP1="100306" integralPoints="1_12" />
+      <data id="35" integralType="5" integralP1="100406" integralPoints="1_20" />
+      <data id="36" integralType="5" integralP1="100506" integralPoints="1_12" />
+      <data id="37" integralType="5" integralP1="100606" integralPoints="1_20" />
+      <data id="38" integralType="5" integralP1="100706" integralPoints="1_12" />
+      <data id="39" integralType="5" integralP1="100806" integralPoints="1_20" />
+      <data id="40" integralType="5" integralP1="100107" integralPoints="1_100" />
+      <data id="41" integralType="5" integralP1="100207" integralPoints="1_100" />
+      <data id="42" integralType="5" integralP1="100307" integralPoints="1_100" />
+      <data id="43" integralType="5" integralP1="100407" integralPoints="1_100" />
+      <data id="44" integralType="5" integralP1="100507" integralPoints="1_100" />
+      <data id="45" integralType="5" integralP1="100607" integralPoints="1_100" />
+      <data id="46" integralType="5" integralP1="100707" integralPoints="1_100" />
+      <data id="47" integralType="5" integralP1="100807" integralPoints="1_100" />
+      <data id="48" integralType="6" integralP1="100105" integralPoints="1_2" />
+      <data id="49" integralType="6" integralP1="100205" integralPoints="1_3" />
+      <data id="50" integralType="6" integralP1="100305" integralPoints="1_2" />
+      <data id="51" integralType="6" integralP1="100405" integralPoints="1_3" />
+      <data id="52" integralType="6" integralP1="100505" integralPoints="1_2" />
+      <data id="53" integralType="6" integralP1="100605" integralPoints="1_3" />
+      <data id="54" integralType="6" integralP1="100705" integralPoints="1_2" />
+      <data id="55" integralType="6" integralP1="100805" integralPoints="1_3" />
+      <data id="56" integralType="6" integralP1="100106" integralPoints="1_6" />
+      <data id="57" integralType="6" integralP1="100206" integralPoints="1_10" />
+      <data id="58" integralType="6" integralP1="100306" integralPoints="1_6" />
+      <data id="59" integralType="6" integralP1="100406" integralPoints="1_10" />
+      <data id="60" integralType="6" integralP1="100506" integralPoints="1_6" />
+      <data id="61" integralType="6" integralP1="100606" integralPoints="1_10" />
+      <data id="62" integralType="6" integralP1="100706" integralPoints="1_6" />
+      <data id="63" integralType="6" integralP1="100806" integralPoints="1_10" />
+      <data id="64" integralType="6" integralP1="100107" integralPoints="1_50" />
+      <data id="65" integralType="6" integralP1="100207" integralPoints="1_50" />
+      <data id="66" integralType="6" integralP1="100307" integralPoints="1_50" />
+      <data id="67" integralType="6" integralP1="100407" integralPoints="1_50" />
+      <data id="68" integralType="6" integralP1="100507" integralPoints="1_50" />
+      <data id="69" integralType="6" integralP1="100607" integralPoints="1_50" />
+      <data id="70" integralType="6" integralP1="100707" integralPoints="1_50" />
+      <data id="71" integralType="6" integralP1="100807" integralPoints="1_50" />
+</root>

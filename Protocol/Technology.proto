@@ -1,0 +1,41 @@
+option java_package = "com.hawk.game.protocol";
+
+// 科技信息
+message HPTechnologySync
+{
+	repeated int32 techId = 1; // 科技ID
+}
+
+// 科技升级类型
+enum LvlUpType{
+	NORMAL	= 1;	//普通升级
+	BUY_RES	= 2;	//买资源升级
+	BUY_RES_AND_TIME = 3; //买资源并且秒时间
+}
+
+// 科技研究
+message LevelUpTechnologyReq
+{
+	required int32 techId = 1; //科技ID
+	required LvlUpType type = 2; //是否使用水晶
+}
+
+// 技能信息
+message TechSkillInfo
+{
+	required int32 skillId = 1; //技能id
+	required int64 cdEndTime = 2; // CD结束时间
+}
+
+// 科技信息同步
+message HPTechSkillSync
+{
+	repeated TechSkillInfo skillInfo = 1;
+}
+
+// 释放技能信息
+message PBCastTechSkillReq
+{
+	required int32 skillId = 1;
+}
+

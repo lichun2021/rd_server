@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="210000" channelType="android" saleId="com.tencent.tmgp.hjol.gift_000" payOrNot="1" payRMB="0" gainDia="0" show="V3Box_6.png" serverAwardId="210000" payCount="1" nameData="0元礼包" desData="每日免费礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="1" giftType="2" />
+      <data id="210001" channelType="android" saleId="com.tencent.tmgp.hjol.gift_100" payOrNot="1" payRMB="100" gainDia="10" show="Chest_DailyDeals_01.png" serverAwardId="210001" payCount="1" nameData="1元礼包" desData="直充1元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="210003" channelType="android" saleId="com.tencent.tmgp.hjol.gift_300" payOrNot="1" payRMB="300" gainDia="30" show="Chest_DailyDeals_02.png" serverAwardId="210003" payCount="1" nameData="3元礼包" desData="直充3元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="210006" channelType="android" saleId="com.tencent.tmgp.hjol.gift_600" payOrNot="1" payRMB="600" gainDia="60" show="Chest_DailyDeals_03.png" serverAwardId="210006" payCount="1" nameData="6元礼包" desData="直充6元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="210012" channelType="android" saleId="com.tencent.tmgp.hjol.gift_1200" payOrNot="1" payRMB="1200" gainDia="120" show="Chest_DailyDeals_03.png" serverAwardId="210012" payCount="1" nameData="12元礼包" desData="直充12元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="210030" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_3000" payOrNot="1" payRMB="3000" gainDia="300" show="Chest_DailyDeals_03.png" serverAwardId="210030" payCount="1" nameData="30元礼包" desData="直充30元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="210045" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_4500" payOrNot="1" payRMB="4500" gainDia="520" show="Chest_DailyDeals_03.png" serverAwardId="210045" payCount="1" nameData="45元礼包" desData="直充45元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220000" channelType="ios" saleId="com.tencent.tmgp.hjol.gift_000" payOrNot="1" payRMB="0" gainDia="0" show="V3Box_6.png" serverAwardId="220000" payCount="1" nameData="0元礼包" desData="每日免费礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="1" giftType="2" />
+      <data id="220001" channelType="ios" saleId="com.tencent.tmgp.hjol.gift_100" payOrNot="1" payRMB="100" gainDia="10" show="Chest_DailyDeals_01.png" serverAwardId="220001" payCount="1" nameData="1元礼包" desData="直充1元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220003" channelType="ios" saleId="com.tencent.tmgp.hjol.gift_300" payOrNot="1" payRMB="300" gainDia="30" show="Chest_DailyDeals_02.png" serverAwardId="220003" payCount="1" nameData="3元礼包" desData="直充3元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220006" channelType="ios" saleId="com.tencent.tmgp.hjol.gift_600" payOrNot="1" payRMB="600" gainDia="60" show="Chest_DailyDeals_03.png" serverAwardId="220006" payCount="1" nameData="6元礼包" desData="直充6元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220012" channelType="ios" saleId="com.tencent.tmgp.hjol.gift_1200" payOrNot="1" payRMB="1200" gainDia="120" show="Chest_DailyDeals_03.png" serverAwardId="220012" payCount="1" nameData="12元礼包" desData="直充12元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220030" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_3000" payOrNot="1" payRMB="3000" gainDia="300" show="Chest_DailyDeals_03.png" serverAwardId="220030" payCount="1" nameData="30元礼包" desData="直充30元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="220045" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_4500" payOrNot="1" payRMB="4500" gainDia="520" show="Chest_DailyDeals_03.png" serverAwardId="220045" payCount="1" nameData="45元礼包" desData="直充45元，附赠超值礼包" showPicUrl="Res\Resource\V3UI\V3Box" isFree="0" giftType="2" />
+      <data id="230001" channelType="android" saleId="com.tencent.tmgp.hjol.card_1_6800" payOrNot="1" payRMB="6800" nameData="至尊30日金币补给" desData="特权+返黄金月卡" monthCardType="1" giftType="3" />
+      <data id="230002" channelType="android" saleId="com.tencent.tmgp.hjol.card_2_3000" payOrNot="1" payRMB="3000" nameData="豪华7日经验补给" desData="返指挥官经验周卡" monthCardType="2" giftType="3" />
+      <data id="230003" channelType="android" saleId="com.tencent.tmgp.hjol.card_3_1200" payOrNot="1" payRMB="1200" nameData="豪华7日加速补给" desData="返加速道具周卡" monthCardType="3" giftType="3" />
+      <data id="240001" channelType="ios" saleId="com.tencent.tmgp.hjol.card_1_6800" payOrNot="1" payRMB="6800" nameData="至尊30日金币补给" desData="特权+返黄金月卡" monthCardType="1" giftType="3" />
+      <data id="240002" channelType="ios" saleId="com.tencent.tmgp.hjol.card_2_3000" payOrNot="1" payRMB="3000" nameData="豪华7日经验补给" desData="返指挥官经验周卡" monthCardType="2" giftType="3" />
+      <data id="240003" channelType="ios" saleId="com.tencent.tmgp.hjol.card_3_1200" payOrNot="1" payRMB="1200" nameData="豪华7日加速补给" desData="返加速道具周卡" monthCardType="3" giftType="3" />
+      <data id="250001" channelType="android" saleId="com.tencent.tmgp.hjol.box_600" payOrNot="1" payRMB="600" show="Chest_DailyDeals_01.png" serverAwardId="250001" payCount="1" nameData="幸运星6元" desData="幸运星6元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="250002" channelType="android" saleId="com.tencent.tmgp.hjol.box_1200" payOrNot="1" payRMB="1200" show="Chest_DailyDeals_02.png" serverAwardId="250002" payCount="1" nameData="幸运星12元" desData="幸运星12元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="250003" channelType="android" saleId="com.tencent.tmgp.hjol.box_1800" payOrNot="1" payRMB="1800" show="Chest_DailyDeals_03.png" serverAwardId="250003" payCount="1" nameData="幸运星18元" desData="幸运星18元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="250004" channelType="android" saleId="com.tencent.tmgp.hjol.box_3000" payOrNot="1" payRMB="3000" show="Chest_DailyDeals_03.png" serverAwardId="250004" payCount="1" nameData="幸运星30元" desData="幸运星30元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="250005" channelType="android" saleId="com.tencent.tmgp.hjol.box_6800" payOrNot="1" payRMB="6800" show="Chest_DailyDeals_03.png" serverAwardId="250005" payCount="1" nameData="幸运星68元" desData="幸运星68元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="260001" channelType="ios" saleId="com.tencent.tmgp.hjol.box_600" payOrNot="1" payRMB="600" show="Chest_DailyDeals_01.png" serverAwardId="260001" payCount="1" nameData="幸运星6元" desData="幸运星6元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="260002" channelType="ios" saleId="com.tencent.tmgp.hjol.box_1200" payOrNot="1" payRMB="1200" show="Chest_DailyDeals_02.png" serverAwardId="260002" payCount="1" nameData="幸运星12元" desData="幸运星12元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="260003" channelType="ios" saleId="com.tencent.tmgp.hjol.box_1800" payOrNot="1" payRMB="1800" show="Chest_DailyDeals_03.png" serverAwardId="260003" payCount="1" nameData="幸运星18元" desData="幸运星18元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="260004" channelType="ios" saleId="com.tencent.tmgp.hjol.box_3000" payOrNot="1" payRMB="3000" show="Chest_DailyDeals_03.png" serverAwardId="260004" payCount="1" nameData="幸运星30元" desData="幸运星30元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="260005" channelType="ios" saleId="com.tencent.tmgp.hjol.box_6800" payOrNot="1" payRMB="6800" show="Chest_DailyDeals_03.png" serverAwardId="260005" payCount="1" nameData="幸运星68元" desData="幸运星68元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="4" />
+      <data id="270001" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_600" payOrNot="1" payRMB="600" show="Chest_DailyDeals_01.png" serverAwardId="270001" payCount="1" nameData="超值好礼6元" desData="超值好礼6元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="270002" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_3000" payOrNot="1" payRMB="3000" show="Chest_DailyDeals_02.png" serverAwardId="270002" payCount="1" nameData="超值好礼30元" desData="超值好礼30元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="270003" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_6800" payOrNot="1" payRMB="6800" show="Chest_DailyDeals_03.png" serverAwardId="270003" payCount="1" nameData="超值好礼68元" desData="超值好礼68元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="270004" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_12800" payOrNot="1" payRMB="12800" show="Chest_DailyDeals_03.png" serverAwardId="270004" payCount="1" nameData="超值好礼128元" desData="超值好礼128元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="270005" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_32800" payOrNot="1" payRMB="32800" show="Chest_DailyDeals_03.png" serverAwardId="270005" payCount="1" nameData="超值好礼328元" desData="超值好礼328元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="270006" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_64800" payOrNot="1" payRMB="64800" show="Chest_DailyDeals_03.png" serverAwardId="270006" payCount="1" nameData="超值好礼648元" desData="超值好礼648元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280001" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_600" payOrNot="1" payRMB="600" show="Chest_DailyDeals_01.png" serverAwardId="280001" payCount="1" nameData="超值好礼6元" desData="超值好礼6元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280002" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_3000" payOrNot="1" payRMB="3000" show="Chest_DailyDeals_02.png" serverAwardId="280002" payCount="1" nameData="超值好礼30元" desData="超值好礼30元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280003" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_6800" payOrNot="1" payRMB="6800" show="Chest_DailyDeals_03.png" serverAwardId="280003" payCount="1" nameData="超值好礼68元" desData="超值好礼68元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280004" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_12800" payOrNot="1" payRMB="12800" show="Chest_DailyDeals_03.png" serverAwardId="280004" payCount="1" nameData="超值好礼128元" desData="超值好礼128元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280005" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_32800" payOrNot="1" payRMB="32800" show="Chest_DailyDeals_01.png" serverAwardId="280005" payCount="1" nameData="超值好礼328元" desData="超值好礼328元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="280006" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_64800" payOrNot="1" payRMB="64800" show="Chest_DailyDeals_02.png" serverAwardId="280006" payCount="1" nameData="超值好礼648元" desData="超值好礼648元" showPicUrl="Res\Resource\V3UI\V3Box" giftType="5" />
+      <data id="290001" channelType="android" saleId="com.tencent.tmgp.hjol.chest_100" payOrNot="1" payRMB="100" show="Chest_DailyDeals_01.png" payCount="1" nameData="1元购礼包" desData="1元购礼包" showPicUrl="Res\Resource\V3UI\V3Box" giftType="6" />
+      <data id="300001" channelType="ios" saleId="com.tencent.tmgp.hjol.chest_100" payOrNot="1" payRMB="100" show="Chest_DailyDeals_01.png" payCount="1" nameData="1元购礼包" desData="1元购礼包" showPicUrl="Res\Resource\V3UI\V3Box" giftType="6" />
+      <data id="209101" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="空投补给6元升级" desData="空投补给6元升级" giftType="25" />
+      <data id="209201" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="空投补给6元升级" desData="空投补给6元升级" giftType="25" />
+      <data id="310001" channelType="android" saleId="com.tencent.tmgp.hjol.box_5000" payOrNot="1" payRMB="5000" nameData="7日能量源补给" desData="返能量源道具" monthCardType="4" giftType="3" />
+      <data id="320001" channelType="ios" saleId="com.tencent.tmgp.hjol.box_5000" payOrNot="1" payRMB="5000" nameData="7日能量源补给" desData="返能量源道具" monthCardType="4" giftType="3" />
+      <data id="630001" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_3000" payOrNot="1" payRMB="3000" nameData="7日能量源补给" desData="返能量源道具" monthCardType="7" giftType="3" />
+      <data id="640001" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_3000" payOrNot="1" payRMB="3000" nameData="7日能量源补给" desData="返能量源道具" monthCardType="7" giftType="3" />
+      <data id="720001" channelType="android" saleId="com.tencent.tmgp.hjol.taineng_9800" payOrNot="1" payRMB="9800" nameData="泰能计划特权" desData="复制晶体及聚能核心返还" monthCardType="8" giftType="3" />
+      <data id="730001" channelType="ios" saleId="com.tencent.tmgp.hjol.taineng_9800" payOrNot="1" payRMB="9800" nameData="泰能计划特权" desData="复制晶体及聚能核心返还" monthCardType="8" giftType="3" />
+      <data id="740001" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_6800" payOrNot="1" payRMB="6800" nameData="7日泰晶补给" desData="泰晶返还" monthCardType="9" giftType="3" />
+      <data id="750001" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_6800" payOrNot="1" payRMB="6800" nameData="7日泰晶补给" desData="泰晶返还" monthCardType="9" giftType="3" />
+      <data id="330001" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_9800" payOrNot="1" payRMB="9800" nameData="荣誉勋章补给" desData="荣誉勋章返还" monthCardType="5" giftType="3" />
+      <data id="340001" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_9800" payOrNot="1" payRMB="9800" nameData="荣誉勋章补给" desData="荣誉勋章返还" monthCardType="5" giftType="3" />
+      <data id="570001" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_3000" payOrNot="1" payRMB="3000" nameData="自选晶体补给" desData="晶体返还" monthCardType="6" giftType="3" />
+      <data id="580001" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_3000" payOrNot="1" payRMB="3000" nameData="自选晶体补给" desData="晶体返还" monthCardType="6" giftType="3" />
+      <data id="760001" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_9800" payOrNot="1" payRMB="9800" nameData="泰能战士补给" desData="泰矿母体返还" monthCardType="11" giftType="3" />
+      <data id="770001" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_9800" payOrNot="1" payRMB="9800" nameData="泰能战士补给" desData="泰矿母体返还" monthCardType="11" giftType="3" />
+      <data id="860001" channelType="android" saleId="com.tencent.tmgp.hjol.mechmaterialpack_6800" payOrNot="1" payRMB="6800" nameData="赋能结晶补给" desData="赋能结晶返还" monthCardType="12" giftType="3" />
+      <data id="870001" channelType="ios" saleId="com.tencent.tmgp.hjol.mechmaterialpack_6800" payOrNot="1" payRMB="6800" nameData="赋能结晶补给" desData="赋能结晶返还" monthCardType="12" giftType="3" />
+      <data id="880001" channelType="android" saleId="com.tencent.tmgp.hjol.medalweeklycard_6800" payOrNot="1" payRMB="6800" nameData="荣誉勋章补给" desData="荣誉勋章返还" monthCardType="13" giftType="3" />
+      <data id="890001" channelType="ios" saleId="com.tencent.tmgp.hjol.medalweeklycard_6800" payOrNot="1" payRMB="6800" nameData="荣誉勋章补给" desData="荣誉勋章返还" monthCardType="13" giftType="3" />
+      <data id="900001" channelType="android" saleId="com.tencent.tmgp.hjol.worldmedalweeklycard_9800" payOrNot="1" payRMB="9800" nameData="星耀勋章补给" desData="星耀勋章返还" monthCardType="14" giftType="3" />
+      <data id="910001" channelType="ios" saleId="com.tencent.tmgp.hjol.worldmedalweeklycard_9800" payOrNot="1" payRMB="9800" nameData="星耀勋章补给" desData="星耀勋章返还" monthCardType="14" giftType="3" />
+      <data id="920001" channelType="android" saleId="com.tencent.tmgp.hjol.equipnewitempack_6800" payOrNot="1" payRMB="6800" nameData="量子扩充补给" desData="量子扩充返还" monthCardType="15" giftType="3" />
+      <data id="930001" channelType="ios" saleId="com.tencent.tmgp.hjol.equipnewitempack_6800" payOrNot="1" payRMB="6800" nameData="量子扩充补给" desData="量子扩充返还" monthCardType="15" giftType="3" />
+      <data id="940001" channelType="android" saleId="com.tencent.tmgp.hjol.shopprivilege_6800" payOrNot="1" payRMB="6800" nameData="发展自选补给补给" desData="发展自选补给返还" monthCardType="16" giftType="3" />
+      <data id="950001" channelType="ios" saleId="com.tencent.tmgp.hjol.shopprivilege_6800" payOrNot="1" payRMB="6800" nameData="发展自选补给补给" desData="发展自选补给返还" monthCardType="16" giftType="3" />
+      <data id="960001" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_5000" payOrNot="1" payRMB="5000" nameData="泰能材料补给" desData="泰能材料返还" monthCardType="17" giftType="3" />
+      <data id="970001" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_5000" payOrNot="1" payRMB="5000" nameData="泰能材料补给" desData="泰能材料返还" monthCardType="17" giftType="3" />
+      <data id="980001" channelType="android" saleId="com.tencent.tmgp.hjol.MedalMonthlyCard_6800" payOrNot="1" payRMB="6800" nameData="星耀特权月卡" desData="星耀特权月卡" monthCardType="18" giftType="3" />
+      <data id="990001" channelType="ios" saleId="com.tencent.tmgp.hjol.MedalMonthlyCard_6800" payOrNot="1" payRMB="6800" nameData="星耀特权月卡" desData="星耀特权月卡" monthCardType="18" giftType="3" />
+      <data id="1000001" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack5_6800" payOrNot="1" payRMB="6800" nameData="星能补给" desData="星能返还" monthCardType="19" giftType="3" />
+      <data id="1010001" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack5_6800" payOrNot="1" payRMB="6800" nameData="星能补给" desData="星能返还" monthCardType="19" giftType="3" />
+      <data id="1100001" channelType="android" saleId="com.tencent.tmgp.hjol.greatdealpack_6800" payOrNot="1" payRMB="6800" nameData="高级自选周卡补给" desData="高级自选周卡返还" monthCardType="21" giftType="3" />
+      <data id="1110001" channelType="ios" saleId="com.tencent.tmgp.hjol.greatdealpack_6800" payOrNot="1" payRMB="6800" nameData="高级自选周卡补给" desData="高级自选周卡返还" monthCardType="21" giftType="3" />
+      <data id="1120001" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_9800" payOrNot="1" payRMB="9800" nameData="泰矿+泰能特权" desData="泰矿+泰能特权" monthCardType="22" giftType="3" />
+      <data id="1130001" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_9800" payOrNot="1" payRMB="9800" nameData="泰矿+泰能特权" desData="泰矿+泰能特权" monthCardType="22" giftType="3" />
+      <data id="1140001" channelType="android" saleId="com.tencent.tmgp.hjol.superweaponperk_6800" payOrNot="1" payRMB="6800" nameData="泰能超武特权" desData="泰能超武特权" monthCardType="24" giftType="3" />
+      <data id="1150001" channelType="ios" saleId="com.tencent.tmgp.hjol.superweaponperk_6800" payOrNot="1" payRMB="6800" nameData="泰能超武特权" desData="泰能超武特权" monthCardType="24" giftType="3" />
+      <data id="1160001" channelType="android" saleId="com.tencent.tmgp.hjol.TaiNengWarriorWeeklyCard_9800" payOrNot="1" payRMB="9800" nameData="泰能辉金特权" desData="泰能辉金特权" monthCardType="25" giftType="3" />
+      <data id="1170001" channelType="ios" saleId="com.tencent.tmgp.hjol.TaiNengWarriorWeeklyCard_9800" payOrNot="1" payRMB="9800" nameData="泰能辉金特权" desData="泰能辉金特权" monthCardType="25" giftType="3" />
+      <data id="1180001" channelType="android" saleId="com.tencent.tmgp.hjol.jijiazhuangbeitequan_6800" payOrNot="1" payRMB="6800" nameData="核心推演特权" desData="核心推演特权" monthCardType="26" giftType="3" />
+      <data id="1190001" channelType="ios" saleId="com.tencent.tmgp.hjol.jijiazhuangbeitequan_6800" payOrNot="1" payRMB="6800" nameData="核心推演特权" desData="核心推演特权" monthCardType="26" giftType="3" />
+      <data id="1200001" channelType="android" saleId="com.tencent.tmgp.hjol.chiyaoprivilege_9800" payOrNot="1" payRMB="9800" nameData="炽耀特权" desData="炽耀特权" monthCardType="27" giftType="3" />
+      <data id="1210001" channelType="ios" saleId="com.tencent.tmgp.hjol.chiyaoprivilege_9800" payOrNot="1" payRMB="9800" nameData="炽耀特权" desData="炽耀特权" monthCardType="27" giftType="3" />
+      <data id="590001" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_600" payOrNot="1" payRMB="600" payCount="1" nameData="小额英雄招募6元" desData="小额英雄招募6元" giftType="16" />
+      <data id="590002" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="中额英雄招募18元" desData="中额英雄招募18元" giftType="16" />
+      <data id="600001" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_600" payOrNot="1" payRMB="600" payCount="1" nameData="小额英雄招募6元" desData="小额英雄招募6元" giftType="16" />
+      <data id="600002" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="中额英雄招募18元" desData="中额英雄招募18元" giftType="16" />
+      <data id="201001" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额勋章投资18元" desData="小额勋章投资18元" giftType="21" />
+      <data id="201002" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额勋章投资18元" desData="小额勋章投资18元" giftType="21" />
+      <data id="201003" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="小额母矿投资68元" desData="小额母矿投资68元" giftType="21" />
+      <data id="201004" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="小额母矿投资68元" desData="小额母矿投资68元" giftType="21" />
+      <data id="201005" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="中等母矿投资128元" desData="中等母矿投资128元" giftType="21" />
+      <data id="201006" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="中等母矿投资128元" desData="中等母矿投资128元" giftType="21" />
+      <data id="201007" channelType="ios" saleId="com.tencent.tmgp.hjol.specialoffergift_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额母矿投资198元" desData="大额母矿投资198元" giftType="21" />
+      <data id="201008" channelType="android" saleId="com.tencent.tmgp.hjol.specialoffergift_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额母矿投资198元" desData="大额母矿投资198元" giftType="21" />
+      <data id="207001" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="小额能量源投资12元" desData="小额能量源投资12元" giftType="23" />
+      <data id="207002" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="小额能量源投资12元" desData="小额能量源投资12元" giftType="23" />
+      <data id="207003" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="中等能量源投资50元" desData="中等能量源投资50元" giftType="23" />
+      <data id="207004" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="中等能量源投资50元" desData="中等能量源投资50元" giftType="23" />
+      <data id="207005" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="大额能量源投资98元" desData="大额能量源投资98元" giftType="23" />
+      <data id="207006" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="大额能量源投资98元" desData="大额能量源投资98元" giftType="23" />
+      <data id="207007" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="小额泰能投资50元" desData="小额泰能投资50元" giftType="23" />
+      <data id="207008" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="中等泰能投资128元" desData="中等泰能投资128元" giftType="23" />
+      <data id="207009" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额泰能投资198元" desData="大额泰能投资198元" giftType="23" />
+      <data id="207010" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="小额泰能投资50元" desData="小额泰能投资50元" giftType="23" />
+      <data id="207011" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="中等泰能投资128元" desData="中等泰能投资128元" giftType="23" />
+      <data id="207012" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额泰能投资198元" desData="大额泰能投资198元" giftType="23" />
+      <data id="208001" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额机甲投资18元" desData="小额机甲投资18元" giftType="24" />
+      <data id="208002" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额机甲投资18元" desData="小额机甲投资18元" giftType="24" />
+      <data id="208003" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="中等机甲投资68元" desData="中等机甲投资68元" giftType="24" />
+      <data id="208004" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="中等机甲投资68元" desData="中等机甲投资68元" giftType="24" />
+      <data id="208005" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额机甲投资128元" desData="大额机甲投资128元" giftType="24" />
+      <data id="208006" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额机甲投资128元" desData="大额机甲投资128元" giftType="24" />
+      <data id="208007" channelType="ios" saleId="com.tencent.tmgp.hjol.packageprivilege_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="小额泰晶投资30元" desData="小额泰晶投资30元" giftType="24" />
+      <data id="208008" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="中等泰晶投资98元" desData="中等泰晶投资98元" giftType="24" />
+      <data id="208009" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额泰晶投资198元" desData="大额泰晶投资198元" giftType="24" />
+      <data id="208010" channelType="android" saleId="com.tencent.tmgp.hjol.packageprivilege_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="小额泰晶投资30元" desData="小额泰晶投资30元" giftType="24" />
+      <data id="208011" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="中等泰晶投资98元" desData="中等泰晶投资98元" giftType="24" />
+      <data id="208012" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="大额泰晶投资198元" desData="大额泰晶投资198元" giftType="24" />
+      <data id="350001" channelType="android" saleId="com.tencent.tmgp.hjol.package_600" payOrNot="1" payRMB="600" payCount="1" nameData="私人订制6元" desData="私人订制6元" giftType="7" />
+      <data id="350002" channelType="android" saleId="com.tencent.tmgp.hjol.package_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="私人订制30元" desData="私人订制30元" giftType="7" />
+      <data id="350003" channelType="android" saleId="com.tencent.tmgp.hjol.package_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="私人订制68元" desData="私人订制68元" giftType="7" />
+      <data id="350004" channelType="android" saleId="com.tencent.tmgp.hjol.package_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="私人订制98元" desData="私人订制98元" giftType="7" />
+      <data id="350005" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="私人订制128元" desData="私人订制128元" giftType="7" />
+      <data id="360001" channelType="ios" saleId="com.tencent.tmgp.hjol.package_600" payOrNot="1" payRMB="600" payCount="1" nameData="私人订制6元" desData="私人订制6元" giftType="7" />
+      <data id="360002" channelType="ios" saleId="com.tencent.tmgp.hjol.package_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="私人订制30元" desData="私人订制30元" giftType="7" />
+      <data id="360003" channelType="ios" saleId="com.tencent.tmgp.hjol.package_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="私人订制68元" desData="私人订制68元" giftType="7" />
+      <data id="360004" channelType="ios" saleId="com.tencent.tmgp.hjol.package_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="私人订制98元" desData="私人订制98元" giftType="7" />
+      <data id="360005" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="私人订制128元" desData="私人订制128元" giftType="7" />
+      <data id="610001" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="双享好礼6元" desData="双享好礼6元" giftType="27" />
+      <data id="610002" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="双享好礼30元" desData="双享好礼30元" giftType="27" />
+      <data id="610003" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="双享好礼68元" desData="双享好礼68元" giftType="27" />
+      <data id="610004" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="双享好礼98元" desData="双享好礼98元" giftType="27" />
+      <data id="610005" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="双享好礼128元" desData="双享好礼128元" giftType="27" />
+      <data id="620001" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="双享好礼6元" desData="双享好礼6元" giftType="27" />
+      <data id="620002" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="双享好礼30元" desData="双享好礼30元" giftType="27" />
+      <data id="620003" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="双享好礼68元" desData="双享好礼68元" giftType="27" />
+      <data id="620004" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="双享好礼98元" desData="双享好礼98元" giftType="27" />
+      <data id="620005" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="双享好礼128元" desData="双享好礼128元" giftType="27" />
+      <data id="530001" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_600" payOrNot="1" payRMB="600" payCount="1" nameData="时空豪礼6元" desData="时空豪礼6元" giftType="19" />
+      <data id="530002" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="时空豪礼30元" desData="时空豪礼30元" giftType="19" />
+      <data id="530003" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="时空豪礼98元" desData="时空豪礼98元" giftType="19" />
+      <data id="530004" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="时空豪礼328元" desData="时空豪礼328元" giftType="19" />
+      <data id="530005" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="时空豪礼648元" desData="时空豪礼648元" giftType="19" />
+      <data id="540001" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_600" payOrNot="1" payRMB="600" payCount="1" nameData="时空豪礼6元" desData="时空豪礼6元" giftType="19" />
+      <data id="540002" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="时空豪礼30元" desData="时空豪礼30元" giftType="19" />
+      <data id="540003" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="时空豪礼98元" desData="时空豪礼98元" giftType="19" />
+      <data id="540004" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="时空豪礼328元" desData="时空豪礼328元" giftType="19" />
+      <data id="540005" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="时空豪礼648元" desData="时空豪礼648元" giftType="19" />
+      <data id="550001" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="发展冲刺12元" desData="发展冲刺12元" giftType="20" />
+      <data id="560001" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="发展冲刺12元" desData="发展冲刺12元" giftType="20" />
+      <data id="370001" channelType="android" saleId="com.tencent.tmgp.hjol.package_2500" payOrNot="1" payRMB="2500" serverAwardId="370001" payCount="1" nameData="进阶令" desData="进阶令" giftType="8" />
+      <data id="370002" channelType="android" saleId="com.tencent.tmgp.hjol.package_5000" payOrNot="1" payRMB="5000" serverAwardId="370002" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="8" />
+      <data id="370013" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_2500" payOrNot="1" payRMB="2500" serverAwardId="370013" payCount="1" nameData="补充进阶令" desData="补充进阶令" giftType="8" />
+      <data id="380001" channelType="ios" saleId="com.tencent.tmgp.hjol.package_2500" payOrNot="1" payRMB="2500" serverAwardId="380001" payCount="1" nameData="进阶令" desData="进阶令" giftType="8" />
+      <data id="380002" channelType="ios" saleId="com.tencent.tmgp.hjol.package_5000" payOrNot="1" payRMB="5000" serverAwardId="380002" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="8" />
+      <data id="380013" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_2500" payOrNot="1" payRMB="2500" serverAwardId="380013" payCount="1" nameData="补充进阶令" desData="补充进阶令" giftType="8" />
+      <data id="370003" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_2500" payOrNot="1" payRMB="2500" serverAwardId="370003" payCount="1" nameData="进阶令" desData="进阶令" giftType="26" />
+      <data id="370004" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_5000" payOrNot="1" payRMB="5000" serverAwardId="370004" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="26" />
+      <data id="380003" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_2500" payOrNot="1" payRMB="2500" serverAwardId="380003" payCount="1" nameData="进阶令" desData="进阶令" giftType="26" />
+      <data id="380004" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_5000" payOrNot="1" payRMB="5000" serverAwardId="380004" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="26" />
+      <data id="370005" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack1_6800" payOrNot="1" payRMB="6800" serverAwardId="3700031" payCount="1" nameData="进阶令" desData="进阶令" giftType="26" />
+      <data id="370006" channelType="android" saleId="com.tencent.tmgp.hjol.newserverbattle_9800" payOrNot="1" payRMB="9800" serverAwardId="3700041" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="26" />
+      <data id="380005" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack1_6800" payOrNot="1" payRMB="6800" serverAwardId="3800031" payCount="1" nameData="进阶令" desData="进阶令" giftType="26" />
+      <data id="380006" channelType="ios" saleId="com.tencent.tmgp.hjol.newserverbattle_9800" payOrNot="1" payRMB="9800" serverAwardId="3800041" payCount="1" nameData="典藏进阶令" desData="典藏进阶令" giftType="26" />
+      <data id="390001" channelType="android" saleId="com.tencent.tmgp.hjol.package_1200" payOrNot="1" payRMB="1200" payCount="999" nameData="勋章礼包12元" desData="勋章礼包12元" giftType="10" />
+      <data id="390002" channelType="android" saleId="com.tencent.tmgp.hjol.package_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="勋章礼包128元" desData="勋章礼包128元" giftType="10" />
+      <data id="390003" channelType="android" saleId="com.tencent.tmgp.hjol.package_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="勋章礼包328元" desData="勋章礼包328元" giftType="10" />
+      <data id="390004" channelType="android" saleId="com.tencent.tmgp.hjol.package_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="勋章礼包648元" desData="勋章礼包648元" giftType="10" />
+      <data id="400001" channelType="ios" saleId="com.tencent.tmgp.hjol.package_1200" payOrNot="1" payRMB="1200" payCount="999" nameData="勋章礼包12元" desData="勋章礼包12元" giftType="10" />
+      <data id="400002" channelType="ios" saleId="com.tencent.tmgp.hjol.package_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="勋章礼包128元" desData="勋章礼包128元" giftType="10" />
+      <data id="400003" channelType="ios" saleId="com.tencent.tmgp.hjol.package_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="勋章礼包328元" desData="勋章礼包328元" giftType="10" />
+      <data id="400004" channelType="ios" saleId="com.tencent.tmgp.hjol.package_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="勋章礼包648元" desData="勋章礼包648元" giftType="10" />
+      <data id="470001" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_1200" payOrNot="1" payRMB="1200" payCount="999" nameData="赏金猎人礼包12元" desData="赏金猎人礼包12元" giftType="10" />
+      <data id="470002" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_2500" payOrNot="1" payRMB="2500" payCount="999" nameData="赏金猎人礼包25元" desData="赏金猎人礼包25元" giftType="10" />
+      <data id="470003" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_5000" payOrNot="1" payRMB="5000" payCount="999" nameData="赏金猎人礼包50元" desData="赏金猎人礼包50元" giftType="10" />
+      <data id="470004" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="赏金猎人礼包98元" desData="赏金猎人礼包98元" giftType="10" />
+      <data id="470005" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="赏金猎人礼包128元" desData="赏金猎人礼包128元" giftType="10" />
+      <data id="470006" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="赏金猎人礼包328元" desData="赏金猎人礼包328元" giftType="10" />
+      <data id="480001" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_1200" payOrNot="1" payRMB="1200" payCount="999" nameData="赏金猎人礼包12元" desData="赏金猎人礼包12元" giftType="10" />
+      <data id="480002" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_2500" payOrNot="1" payRMB="2500" payCount="999" nameData="赏金猎人礼包25元" desData="赏金猎人礼包25元" giftType="10" />
+      <data id="480003" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_5000" payOrNot="1" payRMB="5000" payCount="999" nameData="赏金猎人礼包50元" desData="赏金猎人礼包50元" giftType="10" />
+      <data id="480004" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="赏金猎人礼包98元" desData="赏金猎人礼包98元" giftType="10" />
+      <data id="480005" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="赏金猎人礼包128元" desData="赏金猎人礼包128元" giftType="10" />
+      <data id="480006" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="赏金猎人礼包328元" desData="赏金猎人礼包328元" giftType="10" />
+      <data id="471004" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="红包礼包98元" desData="红包礼包98元" giftType="10" />
+      <data id="471006" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="红包礼包328元" desData="红包礼包328元" giftType="10" />
+      <data id="481004" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="红包礼包98元" desData="红包礼包98元" giftType="10" />
+      <data id="481006" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="红包礼包328元" desData="红包礼包328元" giftType="10" />
+      <data id="472004" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="花之物语礼包98元" desData="花之物语礼包98元" giftType="10" />
+      <data id="472006" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="花之物语礼包328元" desData="花之物语礼包328元" giftType="10" />
+      <data id="482004" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="花之物语礼包98元" desData="花之物语礼包98元" giftType="10" />
+      <data id="482006" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="花之物语礼包328元" desData="花之物语礼包328元" giftType="10" />
+      <data id="650001" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="装备研究礼包98元" desData="装备研究礼包98元" giftType="10" />
+      <data id="650002" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="装备研究礼包328元" desData="装备研究礼包328元" giftType="10" />
+      <data id="650003" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="装备研究礼包648元" desData="装备研究礼包648元" giftType="10" />
+      <data id="650004" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="远征科技礼包648元" desData="远征科技礼包648元" giftType="10" />
+      <data id="650005" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="高级装备研究礼包648元" desData="高级装备研究礼包648元" giftType="10" />
+      <data id="650006" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="特供委任英雄礼包30元" desData="特供委任英雄礼包30元" giftType="10" />
+      <data id="650007" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="特供委任英雄礼包68元" desData="特供委任英雄礼包68元" giftType="10" />
+      <data id="650008" channelType="android" saleId="com.tencent.tmgp.hjol.happyshoppingpack_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="荣耀英雄礼包68元" desData="荣耀英雄礼包68元" giftType="10" />
+      <data id="650009" channelType="android" saleId="com.tencent.tmgp.hjol.fragmentshero_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="荣耀英雄礼包98元" desData="荣耀英雄礼包98元" giftType="10" />
+      <data id="650010" channelType="android" saleId="com.tencent.tmgp.hjol.greatdealpack_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="年终感恩回馈礼包30元" desData="年终感恩回馈礼包30元" giftType="10" />
+      <data id="650011" channelType="android" saleId="com.tencent.tmgp.hjol.packageprivilege_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="年终感恩回馈礼包98元" desData="年终感恩回馈礼包98元" giftType="10" />
+      <data id="660001" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="装备研究礼包98元" desData="装备研究礼包98元" giftType="10" />
+      <data id="660002" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="装备研究礼包328元" desData="装备研究礼包328元" giftType="10" />
+      <data id="660003" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="装备研究礼包648元" desData="装备研究礼包648元" giftType="10" />
+      <data id="660004" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="远征科技礼包648元" desData="远征科技礼包648元" giftType="10" />
+      <data id="660005" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="高级装备研究礼包648元" desData="高级装备研究礼包648元" giftType="10" />
+      <data id="660006" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="特供委任英雄礼包30元" desData="特供委任英雄礼包30元" giftType="10" />
+      <data id="660007" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="特供委任英雄礼包68元" desData="特供委任英雄礼包68元" giftType="10" />
+      <data id="660008" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshoppingpack_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="荣耀英雄礼包68元" desData="荣耀英雄礼包68元" giftType="10" />
+      <data id="660009" channelType="ios" saleId="com.tencent.tmgp.hjol.fragmentshero_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="荣耀英雄礼包98元" desData="荣耀英雄礼包98元" giftType="10" />
+      <data id="660010" channelType="ios" saleId="com.tencent.tmgp.hjol.greatdealpack_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="年终感恩回馈礼包30元" desData="年终感恩回馈礼包30元" giftType="10" />
+      <data id="660011" channelType="ios" saleId="com.tencent.tmgp.hjol.packageprivilege_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="年终感恩回馈礼包98元" desData="年终感恩回馈礼包98元" giftType="10" />
+      <data id="670001" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="移民礼包128元" desData="移民礼包128元" giftType="10" />
+      <data id="670002" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="移民礼包328元" desData="移民礼包328元" giftType="10" />
+      <data id="670003" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="移民礼包648元" desData="移民礼包648元" giftType="10" />
+      <data id="680001" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="移民礼包128元" desData="移民礼包128元" giftType="10" />
+      <data id="680002" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="移民礼包328元" desData="移民礼包328元" giftType="10" />
+      <data id="680003" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="移民礼包648元" desData="移民礼包648元" giftType="10" />
+      <data id="681001" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_600" payOrNot="1" payRMB="600" payCount="1" nameData="巨星礼包6元" desData="巨星礼包6元" giftType="10" />
+      <data id="681002" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="巨星礼包30元" desData="巨星礼包30元" giftType="10" />
+      <data id="681003" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="巨星礼包68元" desData="巨星礼包68元" giftType="10" />
+      <data id="681004" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="巨星礼包98元" desData="巨星礼包98元" giftType="10" />
+      <data id="681005" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="巨星礼包128元" desData="巨星礼包128元" giftType="10" />
+      <data id="681006" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="巨星礼包328元" desData="巨星礼包328元" giftType="10" />
+      <data id="681007" channelType="android" saleId="com.tencent.tmgp.hjol.starpack_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="巨星礼包648元" desData="巨星礼包648元" giftType="10" />
+      <data id="682001" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_600" payOrNot="1" payRMB="600" payCount="1" nameData="巨星礼包6元" desData="巨星礼包6元" giftType="10" />
+      <data id="682002" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="巨星礼包30元" desData="巨星礼包30元" giftType="10" />
+      <data id="682003" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="巨星礼包68元" desData="巨星礼包68元" giftType="10" />
+      <data id="682004" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="巨星礼包98元" desData="巨星礼包98元" giftType="10" />
+      <data id="682005" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="巨星礼包128元" desData="巨星礼包128元" giftType="10" />
+      <data id="682006" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="巨星礼包328元" desData="巨星礼包328元" giftType="10" />
+      <data id="682007" channelType="ios" saleId="com.tencent.tmgp.hjol.starpack_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="巨星礼包648元" desData="巨星礼包648元" giftType="10" />
+      <data id="683001" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_600" payOrNot="1" payRMB="600" payCount="1" nameData="选美礼包6元" desData="选美礼包6元" giftType="10" />
+      <data id="683002" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="选美礼包30元" desData="选美礼包30元" giftType="10" />
+      <data id="683003" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="选美礼包68元" desData="选美礼包68元" giftType="10" />
+      <data id="683004" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="选美礼包128元" desData="选美礼包128元" giftType="10" />
+      <data id="683005" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="选美礼包328元" desData="选美礼包328元" giftType="10" />
+      <data id="683006" channelType="android" saleId="com.tencent.tmgp.hjol.beautypack_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="选美礼包648元" desData="选美礼包648元" giftType="10" />
+      <data id="684001" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_600" payOrNot="1" payRMB="600" payCount="1" nameData="选美礼包6元" desData="选美礼包6元" giftType="10" />
+      <data id="684002" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="选美礼包30元" desData="选美礼包30元" giftType="10" />
+      <data id="684003" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="选美礼包68元" desData="选美礼包68元" giftType="10" />
+      <data id="684004" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="选美礼包128元" desData="选美礼包128元" giftType="10" />
+      <data id="684005" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="选美礼包328元" desData="选美礼包328元" giftType="10" />
+      <data id="684006" channelType="ios" saleId="com.tencent.tmgp.hjol.beautypack_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="选美礼包648元" desData="选美礼包648元" giftType="10" />
+      <data id="690001" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="军备升级50元" desData="军备升级50元" giftType="32" />
+      <data id="690002" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="军备升级50元" desData="军备升级50元" giftType="32" />
+      <data id="410001" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="先锋豪礼12元" desData="先锋豪礼12元" giftType="9" pioneerGiftType="13401" />
+      <data id="410002" channelType="android" saleId="com.tencent.tmgp.hjol.purchase_2500" payOrNot="1" payRMB="2500" payCount="1" nameData="先锋豪礼25元" desData="先锋豪礼25元" giftType="9" pioneerGiftType="13402" />
+      <data id="410003" channelType="android" saleId="com.tencent.tmgp.hjol.box_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="先锋豪礼128元" desData="先锋豪礼128元" giftType="9" pioneerGiftType="13403" />
+      <data id="410004" channelType="android" saleId="com.tencent.tmgp.hjol.box_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="先锋豪礼328元" desData="先锋豪礼328元" giftType="9" pioneerGiftType="13404" />
+      <data id="410005" channelType="android" saleId="com.tencent.tmgp.hjol.box_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="先锋豪礼648元" desData="先锋豪礼648元" giftType="9" pioneerGiftType="13405" />
+      <data id="420001" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_1200" payOrNot="1" payRMB="1200" payCount="1" nameData="先锋豪礼12元" desData="先锋豪礼12元" giftType="9" pioneerGiftType="13401" />
+      <data id="420002" channelType="ios" saleId="com.tencent.tmgp.hjol.purchase_2500" payOrNot="1" payRMB="2500" payCount="1" nameData="先锋豪礼25元" desData="先锋豪礼25元" giftType="9" pioneerGiftType="13402" />
+      <data id="420003" channelType="ios" saleId="com.tencent.tmgp.hjol.box_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="先锋豪礼128元" desData="先锋豪礼128元" giftType="9" pioneerGiftType="13403" />
+      <data id="420004" channelType="ios" saleId="com.tencent.tmgp.hjol.box_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="先锋豪礼328元" desData="先锋豪礼328元" giftType="9" pioneerGiftType="13404" />
+      <data id="420005" channelType="ios" saleId="com.tencent.tmgp.hjol.box_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="先锋豪礼648元" desData="先锋豪礼648元" giftType="9" pioneerGiftType="13405" />
+      <data id="430001" channelType="android" saleId="com.tencent.tmgp.hjol.box_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="直购基金98元" desData="直购基金98元" giftType="11" />
+      <data id="440001" channelType="ios" saleId="com.tencent.tmgp.hjol.box_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="直购基金98元" desData="直购基金98元" giftType="11" />
+      <data id="450001" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="欢购豪礼6元" desData="欢购豪礼6元" giftType="12" />
+      <data id="450002" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="欢购豪礼30元" desData="欢购豪礼30元" giftType="12" />
+      <data id="450003" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="欢购豪礼68元" desData="欢购豪礼68元" giftType="12" />
+      <data id="450004" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="欢购豪礼128元" desData="欢购豪礼128元" giftType="12" />
+      <data id="450005" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="欢购豪礼328元" desData="欢购豪礼328元" giftType="12" />
+      <data id="450006" channelType="android" saleId="com.tencent.tmgp.hjol.personalgift_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="欢购豪礼648元" desData="欢购豪礼648元" giftType="12" />
+      <data id="460001" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_600" payOrNot="1" payRMB="600" payCount="1" nameData="欢购豪礼6元" desData="欢购豪礼6元" giftType="12" />
+      <data id="460002" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="欢购豪礼30元" desData="欢购豪礼30元" giftType="12" />
+      <data id="460003" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="欢购豪礼68元" desData="欢购豪礼68元" giftType="12" />
+      <data id="460004" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="欢购豪礼128元" desData="欢购豪礼128元" giftType="12" />
+      <data id="460005" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="欢购豪礼328元" desData="欢购豪礼328元" giftType="12" />
+      <data id="460006" channelType="ios" saleId="com.tencent.tmgp.hjol.personalgift_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="欢购豪礼648元" desData="欢购豪礼648元" giftType="12" />
+      <data id="490001" channelType="android" saleId="com.tencent.tmgp.hjol.emoticon_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="行军表情18元" desData="行军表情18元" giftType="13" />
+      <data id="490002" channelType="android" saleId="com.tencent.tmgp.hjol.emoticon_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="行军表情30元" desData="行军表情30元" giftType="13" />
+      <data id="490003" channelType="android" saleId="com.tencent.tmgp.hjol.emoticon_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="行军表情68元" desData="行军表情68元" giftType="13" />
+      <data id="490004" channelType="android" saleId="com.tencent.tmgp.hjol.emoticon_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="行军表情98元" desData="行军表情98元" giftType="13" />
+      <data id="490005" channelType="android" saleId="com.tencent.tmgp.hjol.emoticon_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="行军表情128元" desData="行军表情128元" giftType="13" />
+      <data id="490006" channelType="ios" saleId="com.tencent.tmgp.hjol.emoticon_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="行军表情18元" desData="行军表情18元" giftType="13" />
+      <data id="490007" channelType="ios" saleId="com.tencent.tmgp.hjol.emoticon_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="行军表情30元" desData="行军表情30元" giftType="13" />
+      <data id="490008" channelType="ios" saleId="com.tencent.tmgp.hjol.emoticon_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="行军表情68元" desData="行军表情68元" giftType="13" />
+      <data id="490009" channelType="ios" saleId="com.tencent.tmgp.hjol.emoticon_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="行军表情98元" desData="行军表情98元" giftType="13" />
+      <data id="490010" channelType="ios" saleId="com.tencent.tmgp.hjol.emoticon_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="行军表情128元" desData="行军表情128元" giftType="13" />
+      <data id="500001" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="基地飞升98元" desData="基地飞升98元" giftType="14" />
+      <data id="500002" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="基地飞升98元" desData="基地飞升98元" giftType="14" />
+      <data id="510001" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_600" payOrNot="1" payRMB="600" serverAwardId="510001" payCount="1" nameData="装备黑市礼包6元" desData="装备黑市礼包6元" giftType="15" />
+      <data id="510002" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_3000" payOrNot="1" payRMB="3000" serverAwardId="510002" payCount="1" nameData="装备黑市礼包30元" desData="装备黑市礼包30元" giftType="15" />
+      <data id="510003" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_6800" payOrNot="1" payRMB="6800" serverAwardId="510003" payCount="1" nameData="装备黑市礼包68元" desData="装备黑市礼包68元" giftType="15" />
+      <data id="510004" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_12800" payOrNot="1" payRMB="12800" serverAwardId="510004" payCount="1" nameData="装备黑市礼包128元" desData="装备黑市礼包128元" giftType="15" />
+      <data id="510005" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_32800" payOrNot="1" payRMB="32800" serverAwardId="510005" payCount="1" nameData="装备黑市礼包328元" desData="装备黑市礼包328元" giftType="15" />
+      <data id="510006" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_64800" payOrNot="1" payRMB="64800" serverAwardId="510006" payCount="1" nameData="装备黑市礼包648元" desData="装备黑市礼包648元" giftType="15" />
+      <data id="510007" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_64800" payOrNot="1" payRMB="64800" serverAwardId="510007" payCount="1" nameData="装备黑市礼包648元" desData="装备黑市礼包648元" giftType="15" />
+      <data id="520001" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_600" payOrNot="1" payRMB="600" serverAwardId="520001" payCount="1" nameData="装备黑市礼包6元" desData="装备黑市礼包6元" giftType="15" />
+      <data id="520002" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_3000" payOrNot="1" payRMB="3000" serverAwardId="520002" payCount="1" nameData="装备黑市礼包30元" desData="装备黑市礼包30元" giftType="15" />
+      <data id="520003" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_6800" payOrNot="1" payRMB="6800" serverAwardId="520003" payCount="1" nameData="装备黑市礼包68元" desData="装备黑市礼包68元" giftType="15" />
+      <data id="520004" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_12800" payOrNot="1" payRMB="12800" serverAwardId="520004" payCount="1" nameData="装备黑市礼包128元" desData="装备黑市礼包128元" giftType="15" />
+      <data id="520005" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_32800" payOrNot="1" payRMB="32800" serverAwardId="520005" payCount="1" nameData="装备黑市礼包328元" desData="装备黑市礼包328元" giftType="15" />
+      <data id="520006" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_64800" payOrNot="1" payRMB="64800" serverAwardId="520006" payCount="1" nameData="装备黑市礼包648元" desData="装备黑市礼包648元" giftType="15" />
+      <data id="520007" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_64800" payOrNot="1" payRMB="64800" serverAwardId="520007" payCount="1" nameData="装备黑市礼包648元" desData="装备黑市礼包648元" giftType="15" />
+      <data id="167001" channelType="ios" saleId="com.tencent.tmgp.hjol.preferred_1800" payOrNot="1" payRMB="1800" serverAwardId="1670001" payCount="1" nameData="资源站高级礼包" desData="资源站高级礼包" giftType="18" />
+      <data id="167002" channelType="android" saleId="com.tencent.tmgp.hjol.preferred_1800" payOrNot="1" payRMB="1800" serverAwardId="1670001" payCount="1" nameData="资源站高级礼包" desData="资源站高级礼包" giftType="18" />
+      <data id="205001" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="霸主之争礼包128" desData="霸主之争礼包128" giftType="22" />
+      <data id="205002" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="霸主之争礼包328" desData="霸主之争礼包328" giftType="22" />
+      <data id="205003" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="霸主之争礼包648" desData="霸主之争礼包648" giftType="22" />
+      <data id="205004" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="霸主之争礼包128" desData="霸主之争礼包128" giftType="22" />
+      <data id="205005" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_32800" payOrNot="1" payRMB="32800" payCount="1" nameData="霸主之争礼包328" desData="霸主之争礼包328" giftType="22" />
+      <data id="205006" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_64800" payOrNot="1" payRMB="64800" payCount="1" nameData="霸主之争礼包648" desData="霸主之争礼包648" giftType="22" />
+      <data id="700007" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="战场寻宝通行证98" desData="战场寻宝通行证98" giftType="30" />
+      <data id="710007" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="战场寻宝通行证98" desData="战场寻宝通行证98" giftType="30" />
+      <data id="238001" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_2500" payOrNot="1" payRMB="2500" payCount="1" nameData="重装待发高级礼包" desData="重装待发高级礼包" giftType="28" />
+      <data id="238002" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_2500" payOrNot="1" payRMB="2500" payCount="1" nameData="重装待发高级礼包" desData="重装待发高级礼包" giftType="28" />
+      <data id="238003" channelType="ios" saleId="com.tencent.tmgp.hjol.featuredprivilege_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="重装待发超级礼包" desData="重装待发超级礼包" giftType="28" />
+      <data id="238004" channelType="android" saleId="com.tencent.tmgp.hjol.featuredprivilege_5000" payOrNot="1" payRMB="5000" payCount="1" nameData="重装待发超级礼包" desData="重装待发超级礼包" giftType="28" />
+      <data id="239001" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_6800" payOrNot="1" payRMB="6800" serverAwardId="239001" payCount="1" nameData="装备战令进阶" desData="装备战令进阶" giftType="31" />
+      <data id="239002" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_6800" payOrNot="1" payRMB="6800" serverAwardId="239002" payCount="1" nameData="装备战令进阶" desData="装备战令进阶" giftType="31" />
+      <data id="236001" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_3000" payOrNot="1" payRMB="3000" nameData="至尊30日金币补给" desData="特权+返黄金月卡" monthCardType="1" giftType="3" />
+      <data id="236002" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_3000" payOrNot="1" payRMB="3000" nameData="至尊30日金币补给" desData="特权+返黄金月卡" monthCardType="1" giftType="3" />
+      <data id="142001" channelType="ios" saleId="com.tencent.tmgp.hjol.militarypreparation_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="军事备战进阶奖励" desData="军事备战进阶奖励" giftType="33" />
+      <data id="142002" channelType="android" saleId="com.tencent.tmgp.hjol.militarypreparation_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="军事备战进阶奖励" desData="军事备战进阶奖励" giftType="33" />
+      <data id="285001" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_6800" payOrNot="1" payRMB="6800" serverAwardId="285001" payCount="1" nameData="豪华登录基金-68元加速基金" desData="豪华登录基金-68元加速基金" giftType="34" />
+      <data id="285002" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_6800" payOrNot="1" payRMB="6800" serverAwardId="285002" payCount="1" nameData="豪华登录基金-68元加速基金" desData="豪华登录基金-68元加速基金" giftType="34" />
+      <data id="285003" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_12800" payOrNot="1" payRMB="12800" serverAwardId="285003" payCount="1" nameData="豪华登录基金-128元英雄基金" desData="豪华登录基金-128元英雄基金" giftType="34" />
+      <data id="285004" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_12800" payOrNot="1" payRMB="12800" serverAwardId="285004" payCount="1" nameData="豪华登录基金-128元英雄基金" desData="豪华登录基金-128元英雄基金" giftType="34" />
+      <data id="285005" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_19800" payOrNot="1" payRMB="19800" serverAwardId="285005" payCount="1" nameData="豪华登录基金-198元装备基金" desData="豪华登录基金-198元装备基金" giftType="34" />
+      <data id="285006" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_19800" payOrNot="1" payRMB="19800" serverAwardId="285006" payCount="1" nameData="豪华登录基金-198元装备基金" desData="豪华登录基金-198元装备基金" giftType="34" />
+      <data id="285007" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_600" payOrNot="1" payRMB="600" serverAwardId="285007" payCount="1" nameData="豪华登录基金-6元加速基金" desData="豪华登录基金-6元加速基金" giftType="34" />
+      <data id="285008" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_600" payOrNot="1" payRMB="600" serverAwardId="285008" payCount="1" nameData="豪华登录基金-6元加速基金" desData="豪华登录基金-6元加速基金" giftType="34" />
+      <data id="285009" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_9800" payOrNot="1" payRMB="9800" serverAwardId="285009" payCount="1" nameData="豪华登录基金-98元英雄基金" desData="豪华登录基金-98元英雄基金" giftType="34" />
+      <data id="285010" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_9800" payOrNot="1" payRMB="9800" serverAwardId="285010" payCount="1" nameData="豪华登录基金-98元英雄基金" desData="豪华登录基金-98元英雄基金" giftType="34" />
+      <data id="285011" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_19800" payOrNot="1" payRMB="19800" serverAwardId="285011" payCount="1" nameData="豪华登录基金-198元装备基金" desData="豪华登录基金-198元装备基金" giftType="34" />
+      <data id="285012" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuyingnew1_19800" payOrNot="1" payRMB="19800" serverAwardId="285012" payCount="1" nameData="豪华登录基金-198元装备基金" desData="豪华登录基金-198元装备基金" giftType="34" />
+      <data id="286001" channelType="ios" saleId="com.tencent.tmgp.hjol.luckygift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元洪福礼盒" desData="30元洪福礼盒" giftType="35" />
+      <data id="286002" channelType="android" saleId="com.tencent.tmgp.hjol.luckygift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元洪福礼盒" desData="30元洪福礼盒" giftType="35" />
+      <data id="286003" channelType="ios" saleId="com.tencent.tmgp.hjol.luckygift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元洪福礼盒" desData="68元洪福礼盒" giftType="35" />
+      <data id="286004" channelType="android" saleId="com.tencent.tmgp.hjol.luckygift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元洪福礼盒" desData="68元洪福礼盒" giftType="35" />
+      <data id="286005" channelType="ios" saleId="com.tencent.tmgp.hjol.luckygift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元洪福礼盒" desData="98元洪福礼盒" giftType="35" />
+      <data id="286006" channelType="android" saleId="com.tencent.tmgp.hjol.luckygift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元洪福礼盒" desData="98元洪福礼盒" giftType="35" />
+      <data id="286007" channelType="ios" saleId="com.tencent.tmgp.hjol.luckygift_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="198元洪福礼盒" desData="198元洪福礼盒" giftType="35" />
+      <data id="286008" channelType="android" saleId="com.tencent.tmgp.hjol.luckygift_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="198元洪福礼盒" desData="198元洪福礼盒" giftType="35" />
+      <data id="288001" channelType="ios" saleId="com.tencent.tmgp.hjol.supergift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额装备研究投资18元" desData="小额装备研究投资18元" giftType="36" />
+      <data id="288002" channelType="android" saleId="com.tencent.tmgp.hjol.supergift_1800" payOrNot="1" payRMB="1800" payCount="1" nameData="小额装备研究投资18元" desData="小额装备研究投资18元" giftType="36" />
+      <data id="288003" channelType="ios" saleId="com.tencent.tmgp.hjol.supergift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="中等装备研究投资68元" desData="中等装备研究投资68元" giftType="36" />
+      <data id="288004" channelType="android" saleId="com.tencent.tmgp.hjol.supergift_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="中等装备研究投资68元" desData="中等装备研究投资68元" giftType="36" />
+      <data id="288005" channelType="ios" saleId="com.tencent.tmgp.hjol.supergift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额装备研究投资128元" desData="大额装备研究投资128元" giftType="36" />
+      <data id="288006" channelType="android" saleId="com.tencent.tmgp.hjol.supergift_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额装备研究投资128元" desData="大额装备研究投资128元" giftType="36" />
+      <data id="288007" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalueadvancedpack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="小额量子研究投资30元" desData="小额量子研究投资30元" giftType="36" />
+      <data id="288008" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="中额量子研究投资98元" desData="中额量子研究投资98元" giftType="36" />
+      <data id="288009" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额量子研究投资128元" desData="大额量子研究投资128元" giftType="36" />
+      <data id="288010" channelType="android" saleId="com.tencent.tmgp.hjol.supervalueadvancedpack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="小额量子研究投资30元" desData="小额量子研究投资30元" giftType="36" />
+      <data id="288011" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="中额量子研究投资98元" desData="中额量子研究投资98元" giftType="36" />
+      <data id="288012" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="大额量子研究投资128元" desData="大额量子研究投资128元" giftType="36" />
+      <data id="1000201" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_3000" payOrNot="1" payRMB="3000" serverAwardId="1000201" payCount="1" nameData="特惠商人回馈特权卡" desData="特惠商人回馈特权卡" giftType="37" />
+      <data id="1000202" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_3000" payOrNot="1" payRMB="3000" serverAwardId="1000202" payCount="1" nameData="特惠商人回馈特权卡" desData="特惠商人回馈特权卡" giftType="37" />
+      <data id="2242501" channelType="android" saleId="com.tencent.tmgp.hjol.featuredprivilege_3000" payOrNot="1" payRMB="3000" nameData="超时空特权卡" desData="超时空特权卡" monthCardType="10" giftType="3" />
+      <data id="2242502" channelType="ios" saleId="com.tencent.tmgp.hjol.featuredprivilege_3000" payOrNot="1" payRMB="3000" nameData="超时空特权卡" desData="超时空特权卡" monthCardType="10" giftType="3" />
+      <data id="279011" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_600" payOrNot="1" payRMB="600" payCount="0" nameData="欢乐限购6元" desData="欢乐限购6元" giftType="38" />
+      <data id="279012" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_3000" payOrNot="1" payRMB="3000" payCount="0" nameData="欢乐限购30元" desData="欢乐限购30元" giftType="38" />
+      <data id="279013" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_6800" payOrNot="1" payRMB="6800" payCount="0" nameData="欢乐限购68元" desData="欢乐限购68元" giftType="38" />
+      <data id="279017" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_9800" payOrNot="1" payRMB="9800" payCount="0" nameData="欢乐限购98元" desData="欢乐限购98元" giftType="38" />
+      <data id="279014" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_12800" payOrNot="1" payRMB="12800" payCount="0" nameData="欢乐限购128元" desData="欢乐限购128元" giftType="38" />
+      <data id="279015" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_32800" payOrNot="1" payRMB="32800" payCount="0" nameData="欢乐限购328元" desData="欢乐限购328元" giftType="38" />
+      <data id="279016" channelType="android" saleId="com.tencent.tmgp.hjol.valuegift_64800" payOrNot="1" payRMB="64800" payCount="0" nameData="欢乐限购648元" desData="欢乐限购648元" giftType="38" />
+      <data id="279021" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_600" payOrNot="1" payRMB="600" payCount="0" nameData="欢乐限购6元" desData="欢乐限购6元" giftType="38" />
+      <data id="279022" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_3000" payOrNot="1" payRMB="3000" payCount="0" nameData="欢乐限购30元" desData="欢乐限购30元" giftType="38" />
+      <data id="279023" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_6800" payOrNot="1" payRMB="6800" payCount="0" nameData="欢乐限购68元" desData="欢乐限购68元" giftType="38" />
+      <data id="279027" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_9800" payOrNot="1" payRMB="9800" payCount="0" nameData="欢乐限购98元" desData="欢乐限购98元" giftType="38" />
+      <data id="279024" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_12800" payOrNot="1" payRMB="12800" payCount="0" nameData="欢乐限购128元" desData="欢乐限购128元" giftType="38" />
+      <data id="279025" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_32800" payOrNot="1" payRMB="32800" payCount="0" nameData="欢乐限购328元" desData="欢乐限购328元" giftType="38" />
+      <data id="279026" channelType="ios" saleId="com.tencent.tmgp.hjol.valuegift_64800" payOrNot="1" payRMB="64800" payCount="0" nameData="欢乐限购648元" desData="欢乐限购648元" giftType="38" />
+      <data id="298001" channelType="android" saleId="com.tencent.tmgp.hjol.brightprivilege_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="璀璨祝福" desData="璀璨祝福" giftType="39" />
+      <data id="298002" channelType="ios" saleId="com.tencent.tmgp.hjol.brightprivilege_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="璀璨祝福" desData="璀璨祝福" giftType="39" />
+      <data id="302001" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_600" payOrNot="1" payRMB="600" payCount="999" nameData="天降鸿福6元" desData="天降鸿福6元" giftType="40" />
+      <data id="302002" channelType="android" saleId="com.tencent.tmgp.hjol.specialoffergift_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="天降鸿福30元" desData="天降鸿福30元" giftType="40" />
+      <data id="302003" channelType="android" saleId="com.tencent.tmgp.hjol.packageprivilege_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="天降鸿福68元" desData="天降鸿福68元" giftType="40" />
+      <data id="302004" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="天降鸿福98元" desData="天降鸿福98元" giftType="40" />
+      <data id="302005" channelType="android" saleId="com.tencent.tmgp.hjol.specialoffergift_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="天降鸿福128元" desData="天降鸿福128元" giftType="40" />
+      <data id="302006" channelType="android" saleId="com.tencent.tmgp.hjol.specialoffergift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="天降鸿福328元" desData="天降鸿福328元" giftType="40" />
+      <data id="302007" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="天降鸿福648元" desData="天降鸿福648元" giftType="40" />
+      <data id="302011" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_600" payOrNot="1" payRMB="600" payCount="999" nameData="天降鸿福6元" desData="天降鸿福6元" giftType="40" />
+      <data id="302012" channelType="ios" saleId="com.tencent.tmgp.hjol.specialoffergift_3000" payOrNot="1" payRMB="3000" payCount="999" nameData="天降鸿福30元" desData="天降鸿福30元" giftType="40" />
+      <data id="302013" channelType="ios" saleId="com.tencent.tmgp.hjol.packageprivilege_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="天降鸿福68元" desData="天降鸿福68元" giftType="40" />
+      <data id="302014" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_9800" payOrNot="1" payRMB="9800" payCount="999" nameData="天降鸿福98元" desData="天降鸿福98元" giftType="40" />
+      <data id="302015" channelType="ios" saleId="com.tencent.tmgp.hjol.specialoffergift_12800" payOrNot="1" payRMB="12800" payCount="999" nameData="天降鸿福128元" desData="天降鸿福128元" giftType="40" />
+      <data id="302016" channelType="ios" saleId="com.tencent.tmgp.hjol.specialoffergift_32800" payOrNot="1" payRMB="32800" payCount="999" nameData="天降鸿福328元" desData="天降鸿福328元" giftType="40" />
+      <data id="302017" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_64800" payOrNot="1" payRMB="64800" payCount="999" nameData="天降鸿福648元" desData="天降鸿福648元" giftType="40" />
+      <data id="3000001" channelType="android" saleId="com.tencent.tmgp.hjol.5v5battlepass_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="陨晶战场高级战场奖励98元" desData="陨晶战场高级战场奖励98元" giftType="42" />
+      <data id="3000002" channelType="ios" saleId="com.tencent.tmgp.hjol.5v5battlepass_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="陨晶战场高级战场奖励98元" desData="陨晶战场高级战场奖励98元" giftType="42" />
+      <data id="143001" channelType="android" saleId="com.tencent.tmgp.hjol.mobilizationprivilege_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="联盟总动员68元" desData="联盟总动员68元" giftType="41" />
+      <data id="143011" channelType="ios" saleId="com.tencent.tmgp.hjol.mobilizationprivilege_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="联盟总动员68元" desData="联盟总动员68元" giftType="41" />
+      <data id="3100001" channelType="android" saleId="com.tencent.tmgp.hjol.sssheropack_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="荣耀再临68元" desData="荣耀再临68元" giftType="16" />
+      <data id="3100002" channelType="ios" saleId="com.tencent.tmgp.hjol.sssheropack_6800" payOrNot="1" payRMB="6800" payCount="999" nameData="荣耀再临68元" desData="荣耀再临68元" giftType="16" />
+      <data id="710001" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_600" payOrNot="1" payRMB="600" serverAwardId="710001" nameData="25迎新钜惠6元" desData="25迎新钜惠6元" giftType="29" />
+      <data id="710002" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_3000" payOrNot="1" payRMB="3000" serverAwardId="710002" nameData="25迎新钜惠30元" desData="25迎新钜惠30元" giftType="29" />
+      <data id="710003" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_6800" payOrNot="1" payRMB="6800" serverAwardId="710003" nameData="25迎新钜惠68元" desData="25迎新钜惠68元" giftType="29" />
+      <data id="710004" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_12800" payOrNot="1" payRMB="12800" serverAwardId="710004" nameData="25迎新钜惠128元" desData="25迎新钜惠128元" giftType="29" />
+      <data id="710005" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_32800" payOrNot="1" payRMB="32800" serverAwardId="710005" nameData="25迎新钜惠328元" desData="25迎新钜惠328元" giftType="29" />
+      <data id="710006" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_64800" payOrNot="1" payRMB="64800" serverAwardId="710006" nameData="25迎新钜惠648元" desData="25迎新钜惠648元" giftType="29" />
+      <data id="700001" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_600" payOrNot="1" payRMB="600" serverAwardId="700001" nameData="25迎新钜惠6元" desData="25迎新钜惠6元" giftType="29" />
+      <data id="700002" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_3000" payOrNot="1" payRMB="3000" serverAwardId="700002" nameData="25迎新钜惠30元" desData="25迎新钜惠30元" giftType="29" />
+      <data id="700003" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_6800" payOrNot="1" payRMB="6800" serverAwardId="700003" nameData="25迎新钜惠68元" desData="25迎新钜惠68元" giftType="29" />
+      <data id="700004" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_12800" payOrNot="1" payRMB="12800" serverAwardId="700004" nameData="25迎新钜惠128元" desData="25迎新钜惠128元" giftType="29" />
+      <data id="700005" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_32800" payOrNot="1" payRMB="32800" serverAwardId="700005" nameData="25迎新钜惠328元" desData="25迎新钜惠328元" giftType="29" />
+      <data id="700006" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_64800" payOrNot="1" payRMB="64800" serverAwardId="700006" nameData="25迎新钜惠648元" desData="25迎新钜惠648元" giftType="29" />
+      <data id="111001" channelType="ios" saleId="com.tencent.tmgp.hjol.buildprivilege_600" payOrNot="1" payRMB="600" nameData="第二城建队列礼包6元" desData="第二城建队列礼包6元" giftType="43" />
+      <data id="111002" channelType="android" saleId="com.tencent.tmgp.hjol.buildprivilege_600" payOrNot="1" payRMB="600" nameData="第二城建队列礼包6元" desData="第二城建队列礼包6元" giftType="43" />
+      <data id="790001" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_6800" payOrNot="1" payRMB="6800" nameData="登陆豪礼68元" desData="登陆豪礼68元" giftType="44" />
+      <data id="780001" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_6800" payOrNot="1" payRMB="6800" nameData="登陆豪礼68元" desData="登陆豪礼68元" giftType="44" />
+      <data id="790002" channelType="android" saleId="com.tencent.tmgp.hjol.loginvaluepack_3000" payOrNot="1" payRMB="3000" nameData="登陆豪礼30元" desData="登陆豪礼30元" giftType="44" />
+      <data id="780002" channelType="ios" saleId="com.tencent.tmgp.hjol.loginvaluepack_3000" payOrNot="1" payRMB="3000" nameData="登陆豪礼30元" desData="登陆豪礼30元" giftType="44" />
+      <data id="810001" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_1800" payOrNot="1" payRMB="1800" show="ItemSourceIcon_028.png" serverAwardId="810001" payCount="3" nameData="信使礼包18元" desData="信使礼包18元" giftType="45" />
+      <data id="810002" channelType="android" saleId="com.tencent.tmgp.hjol.happyshoppingpack_64800" payOrNot="1" payRMB="64800" show="ItemSourceIcon_028.png" serverAwardId="810002" payCount="3" nameData="信使礼包648元" desData="信使礼包648元" giftType="45" />
+      <data id="820001" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_1800" payOrNot="1" payRMB="1800" show="ItemSourceIcon_028.png" serverAwardId="820001" payCount="3" nameData="信使礼包18元" desData="信使礼包18元" giftType="45" />
+      <data id="820002" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshoppingpack_64800" payOrNot="1" payRMB="64800" show="ItemSourceIcon_028.png" serverAwardId="820002" payCount="3" nameData="信使礼包648元" desData="信使礼包648元" giftType="45" />
+      <data id="830001" channelType="android" saleId="com.tencent.tmgp.hjol.filepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="830002" channelType="android" saleId="com.tencent.tmgp.hjol.filevaluepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="830003" channelType="android" saleId="com.tencent.tmgp.hjol.filepack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="830004" channelType="android" saleId="com.tencent.tmgp.hjol.filevaluepack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="840001" channelType="ios" saleId="com.tencent.tmgp.hjol.filepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="840002" channelType="ios" saleId="com.tencent.tmgp.hjol.filevaluepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="840003" channelType="ios" saleId="com.tencent.tmgp.hjol.filepack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="840004" channelType="ios" saleId="com.tencent.tmgp.hjol.filevaluepack_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="315001" channelType="android" saleId="com.tencent.tmgp.hjol.luckypack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="鸿运头彩礼包30元" desData="鸿运头彩礼包30元" giftType="47" />
+      <data id="315002" channelType="android" saleId="com.tencent.tmgp.hjol.luckypack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="鸿运头彩礼包98元" desData="鸿运头彩礼包98元" giftType="47" />
+      <data id="315003" channelType="ios" saleId="com.tencent.tmgp.hjol.luckypack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="鸿运头彩礼包30元" desData="鸿运头彩礼包30元" giftType="47" />
+      <data id="315004" channelType="ios" saleId="com.tencent.tmgp.hjol.luckypack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="鸿运头彩礼包98元" desData="鸿运头彩礼包98元" giftType="47" />
+      <data id="830005" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="830006" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="档案密钥98元礼包" desData="档案密钥98元礼包" giftType="10" />
+      <data id="830007" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="档案密钥198元礼包" desData="档案密钥198元礼包" giftType="10" />
+      <data id="830011" channelType="android" saleId="com.tencent.tmgp.hjol.recoredkey_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="830012" channelType="android" saleId="com.tencent.tmgp.hjol.recordkey_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="档案密钥128元礼包" desData="档案密钥128元礼包" giftType="10" />
+      <data id="830013" channelType="android" saleId="com.tencent.tmgp.hjol.recoredtraining_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案资料68元礼包" desData="档案资料68元礼包" giftType="10" />
+      <data id="830014" channelType="android" saleId="com.tencent.tmgp.hjol.recordtraining_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="档案资料128元礼包" desData="档案资料128元礼包" giftType="10" />
+      <data id="840005" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="840006" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="档案密钥98元礼包" desData="档案密钥98元礼包" giftType="10" />
+      <data id="840007" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="档案密钥198元礼包" desData="档案密钥198元礼包" giftType="10" />
+      <data id="830008" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="830009" channelType="android" saleId="com.tencent.tmgp.hjol.specialoffergift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="档案密钥98元礼包" desData="档案密钥98元礼包" giftType="10" />
+      <data id="830010" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationpack_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="档案密钥198元礼包" desData="档案密钥198元礼包" giftType="10" />
+      <data id="840008" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluepack_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="档案密钥30元礼包" desData="档案密钥30元礼包" giftType="10" />
+      <data id="840009" channelType="ios" saleId="com.tencent.tmgp.hjol.specialoffergift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="档案密钥98元礼包" desData="档案密钥98元礼包" giftType="10" />
+      <data id="840010" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationpack_19800" payOrNot="1" payRMB="19800" payCount="1" nameData="档案密钥198元礼包" desData="档案密钥198元礼包" giftType="10" />
+      <data id="840011" channelType="ios" saleId="com.tencent.tmgp.hjol.recoredkey_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案密钥68元礼包" desData="档案密钥68元礼包" giftType="10" />
+      <data id="840012" channelType="ios" saleId="com.tencent.tmgp.hjol.recordkey_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="档案密钥128元礼包" desData="档案密钥128元礼包" giftType="10" />
+      <data id="840013" channelType="ios" saleId="com.tencent.tmgp.hjol.recoredtraining_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="档案资料68元礼包" desData="档案资料68元礼包" giftType="10" />
+      <data id="840014" channelType="ios" saleId="com.tencent.tmgp.hjol.recordtraining_12800" payOrNot="1" payRMB="12800" payCount="1" nameData="档案资料128元礼包" desData="档案资料128元礼包" giftType="10" />
+      <data id="316001" channelType="android" saleId="com.tencent.tmgp.hjol.valueadvancedgift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="攻坚进阶奖励98元" desData="攻坚进阶奖励98元" giftType="48" />
+      <data id="316002" channelType="ios" saleId="com.tencent.tmgp.hjol.valueadvancedgift_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="攻坚进阶奖励98元" desData="攻坚进阶奖励98元" giftType="48" />
+      <data id="850001" channelType="android" saleId="com.tencent.tmgp.hjol.newseason_2500" payOrNot="1" payRMB="2500" serverAwardId="850001" payCount="1" nameData="星海进阶令" desData="星海进阶令" giftType="49" />
+      <data id="850002" channelType="android" saleId="com.tencent.tmgp.hjol.newseason_5000" payOrNot="1" payRMB="5000" serverAwardId="850002" payCount="1" nameData="星海典藏进阶令" desData="星海典藏进阶令" giftType="49" />
+      <data id="850003" channelType="android" saleId="com.tencent.tmgp.hjol.newseasonvaluepack_2500" payOrNot="1" payRMB="2500" serverAwardId="850003" payCount="1" nameData="星海补充进阶令" desData="星海补充进阶令" giftType="49" />
+      <data id="850011" channelType="ios" saleId="com.tencent.tmgp.hjol.newseason_2500" payOrNot="1" payRMB="2500" serverAwardId="850011" payCount="1" nameData="星海进阶令" desData="星海进阶令" giftType="49" />
+      <data id="850012" channelType="ios" saleId="com.tencent.tmgp.hjol.newseason_5000" payOrNot="1" payRMB="5000" serverAwardId="850012" payCount="1" nameData="星海典藏进阶令" desData="星海典藏进阶令" giftType="49" />
+      <data id="850013" channelType="ios" saleId="com.tencent.tmgp.hjol.newseasonvaluepack_2500" payOrNot="1" payRMB="2500" serverAwardId="850013" payCount="1" nameData="星海补充进阶令" desData="星海补充进阶令" giftType="49" />
+      <data id="2304230" channelType="ios" saleId="com.tencent.tmgp.hjol.silversigngift_6800" payOrNot="1" payRMB="6800" nameData="星耀通信月球调频【长波电台】68元" desData="星耀通信月球调频【长波电台】68元" giftType="50" />
+      <data id="2304231" channelType="ios" saleId="com.tencent.tmgp.hjol.silversigngift_9800" payOrNot="1" payRMB="9800" nameData="星耀通信月球调频【超声电台】98元" desData="星耀通信月球调频【超声电台】98元" giftType="50" />
+      <data id="2304232" channelType="ios" saleId="com.tencent.tmgp.hjol.silversigngift_12800" payOrNot="1" payRMB="12800" nameData="星耀通信月球调频【光子电台】128元" desData="星耀通信月球调频【光子电台】128元" giftType="50" />
+      <data id="2304233" channelType="ios" saleId="com.tencent.tmgp.hjol.silversignsupergift_3000" payOrNot="1" payRMB="3000" nameData="星耀通信月球调频补购【超声电台】30元" desData="星耀通信月球调频补购【超声电台】30元" giftType="50" />
+      <data id="2304234" channelType="ios" saleId="com.tencent.tmgp.hjol.silversignsupergift_6000" payOrNot="1" payRMB="6000" nameData="星耀通信月球调频补购【超声电台】+【光子电台】60元" desData="星耀通信月球调频补购【超声电台】+【光子电台】60元" giftType="50" />
+      <data id="2304235" channelType="ios" saleId="com.tencent.tmgp.hjol.silversignsuperadvancegift_3000" payOrNot="1" payRMB="3000" nameData="星耀通信月球调频补购【光子电台】30元" desData="星耀通信月球调频【光子电台】30元" giftType="50" />
+      <data id="2304236" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsigngift_9800" payOrNot="1" payRMB="9800" nameData="星耀通信太空调频【长波电台】98元" desData="星耀通信太空调频【长波电台】98元" giftType="50" />
+      <data id="2304237" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsigngift_15800" payOrNot="1" payRMB="15800" nameData="星耀通信太空调频【超声电台】158元" desData="星耀通信太空调频【超声电台】158元" giftType="50" />
+      <data id="2304238" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsigngift_19800" payOrNot="1" payRMB="19800" nameData="星耀通信太空调频【光子电台】198元" desData="星耀通信太空调频【光子电台】198元" giftType="50" />
+      <data id="2304239" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsignsupergift_6000" payOrNot="1" payRMB="6000" nameData="星耀通信太空调频补购【超声电台】60元" desData="星耀通信太空调频补购【超声电台】60元" giftType="50" />
+      <data id="2304240" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsignsupergift_10000" payOrNot="1" payRMB="10000" nameData="星耀通信太空调频补购【超声电台】+【光子电台】100元" desData="星耀通信太空调频补购【超声电台】+【光子电台】100元" giftType="50" />
+      <data id="2304241" channelType="ios" saleId="com.tencent.tmgp.hjol.goldsignsupergift_4000" payOrNot="1" payRMB="4000" nameData="星耀通信太空调频【光子电台】40元" desData="星耀通信太空调频【光子电台】40元" giftType="50" />
+      <data id="2304242" channelType="android" saleId="com.tencent.tmgp.hjol.silversigngift_6800" payOrNot="1" payRMB="6800" nameData="星耀通信月球调频【长波电台】68元" desData="星耀通信月球调频【长波电台】68元" giftType="50" />
+      <data id="2304243" channelType="android" saleId="com.tencent.tmgp.hjol.silversigngift_9800" payOrNot="1" payRMB="9800" nameData="星耀通信月球调频【超声电台】98元" desData="星耀通信月球调频【超声电台】98元" giftType="50" />
+      <data id="2304244" channelType="android" saleId="com.tencent.tmgp.hjol.silversigngift_12800" payOrNot="1" payRMB="12800" nameData="星耀通信月球调频【光子电台】128元" desData="星耀通信月球调频【光子电台】128元" giftType="50" />
+      <data id="2304245" channelType="android" saleId="com.tencent.tmgp.hjol.silversignsupergift_3000" payOrNot="1" payRMB="3000" nameData="星耀通信月球调频补购【超声电台】30元" desData="星耀通信月球调频补购【超声电台】30元" giftType="50" />
+      <data id="2304246" channelType="android" saleId="com.tencent.tmgp.hjol.silversignsupergift_6000" payOrNot="1" payRMB="6000" nameData="星耀通信月球调频补购【超声电台】+【光子电台】60元" desData="星耀通信月球调频补购【超声电台】+【光子电台】60元" giftType="50" />
+      <data id="2304247" channelType="android" saleId="com.tencent.tmgp.hjol.silversignsuperadvancegift_3000" payOrNot="1" payRMB="3000" nameData="星耀通信月球调频补购【光子电台】30元" desData="星耀通信月球调频【光子电台】30元" giftType="50" />
+      <data id="2304248" channelType="android" saleId="com.tencent.tmgp.hjol.goldsigngift_9800" payOrNot="1" payRMB="9800" nameData="星耀通信太空调频【长波电台】98元" desData="星耀通信太空调频【长波电台】98元" giftType="50" />
+      <data id="2304249" channelType="android" saleId="com.tencent.tmgp.hjol.goldsigngift_15800" payOrNot="1" payRMB="15800" nameData="星耀通信太空调频【超声电台】158元" desData="星耀通信太空调频【超声电台】158元" giftType="50" />
+      <data id="2304250" channelType="android" saleId="com.tencent.tmgp.hjol.goldsigngift_19800" payOrNot="1" payRMB="19800" nameData="星耀通信太空调频【光子电台】198元" desData="星耀通信太空调频【光子电台】198元" giftType="50" />
+      <data id="2304251" channelType="android" saleId="com.tencent.tmgp.hjol.goldsignsupergift_6000" payOrNot="1" payRMB="6000" nameData="星耀通信太空调频补购【超声电台】60元" desData="星耀通信太空调频补购【超声电台】60元" giftType="50" />
+      <data id="2304252" channelType="android" saleId="com.tencent.tmgp.hjol.goldsignsupergift_10000" payOrNot="1" payRMB="10000" nameData="星耀通信太空调频补购【超声电台】+【光子电台】100元" desData="星耀通信太空调频补购【超声电台】+【光子电台】100元" giftType="50" />
+      <data id="2304253" channelType="android" saleId="com.tencent.tmgp.hjol.goldsignsupergift_4000" payOrNot="1" payRMB="4000" nameData="星耀通信太空调频【光子电台】40元" desData="星耀通信太空调频【光子电台】40元" giftType="50" />
+      <data id="3220001" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_600" payOrNot="1" payRMB="600" nameData="ios6元情报基金" desData="ios6元情报基金" giftType="51" />
+      <data id="3220002" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_1800" payOrNot="1" payRMB="1800" nameData="ios18元情报基金" desData="ios18元情报基金" giftType="51" />
+      <data id="3220003" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_3000" payOrNot="1" payRMB="3000" nameData="ios30元情报基金" desData="ios30元情报基金" giftType="51" />
+      <data id="3220004" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_5000" payOrNot="1" payRMB="5000" nameData="ios50元情报基金" desData="ios50元情报基金" giftType="51" />
+      <data id="3220005" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_6800" payOrNot="1" payRMB="6800" nameData="ios68元情报基金" desData="ios68元情报基金" giftType="51" />
+      <data id="3220006" channelType="ios" saleId="com.tencent.tmgp.hjol.bountygift_9800" payOrNot="1" payRMB="9800" nameData="ios98元情报基金" desData="ios98元情报基金" giftType="51" />
+      <data id="3220007" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_600" payOrNot="1" payRMB="600" nameData="6元情报基金" desData="6元情报基金" giftType="51" />
+      <data id="3220008" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_1800" payOrNot="1" payRMB="1800" nameData="18元情报基金" desData="18元情报基金" giftType="51" />
+      <data id="3220009" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_3000" payOrNot="1" payRMB="3000" nameData="30元情报基金" desData="30元情报基金" giftType="51" />
+      <data id="3220010" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_5000" payOrNot="1" payRMB="5000" nameData="50元情报基金" desData="50元情报基金" giftType="51" />
+      <data id="3220011" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_6800" payOrNot="1" payRMB="6800" nameData="68元情报基金" desData="68元情报基金" giftType="51" />
+      <data id="3220012" channelType="android" saleId="com.tencent.tmgp.hjol.bountygift_9800" payOrNot="1" payRMB="9800" nameData="98元情报基金" desData="98元情报基金" giftType="51" />
+      <data id="3220013" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_600" payOrNot="1" payRMB="600" nameData="ios6元庆典基金" desData="ios6元庆典基金" giftType="52" />
+      <data id="3220014" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_1800" payOrNot="1" payRMB="1800" nameData="ios18元庆典基金" desData="ios18元庆典基金" giftType="52" />
+      <data id="3220015" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_3000" payOrNot="1" payRMB="3000" nameData="ios30元庆典基金" desData="ios30元庆典基金" giftType="52" />
+      <data id="3220016" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_5000" payOrNot="1" payRMB="5000" nameData="ios50元庆典基金" desData="ios50元庆典基金" giftType="52" />
+      <data id="3220017" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_6800" payOrNot="1" payRMB="6800" nameData="ios68元庆典基金" desData="ios68元庆典基金" giftType="52" />
+      <data id="3220018" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_9800" payOrNot="1" payRMB="9800" nameData="ios98元庆典基金" desData="ios98元庆典基金" giftType="52" />
+      <data id="3220019" channelType="ios" saleId="com.tencent.tmgp.hjol.celebrationfund_12800" payOrNot="1" payRMB="12800" nameData="ios128元庆典基金" desData="ios128元庆典基金" giftType="52" />
+      <data id="3220020" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_600" payOrNot="1" payRMB="600" nameData="6元庆典基金" desData="6元庆典基金" giftType="52" />
+      <data id="3220021" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_1800" payOrNot="1" payRMB="1800" nameData="18元庆典基金" desData="18元庆典基金" giftType="52" />
+      <data id="3220022" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_3000" payOrNot="1" payRMB="3000" nameData="30元庆典基金" desData="30元庆典基金" giftType="52" />
+      <data id="3220023" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_5000" payOrNot="1" payRMB="5000" nameData="50元庆典基金" desData="50元庆典基金" giftType="52" />
+      <data id="3220024" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_6800" payOrNot="1" payRMB="6800" nameData="68元庆典基金" desData="68元庆典基金" giftType="52" />
+      <data id="3220025" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_9800" payOrNot="1" payRMB="9800" nameData="98元庆典基金" desData="98元庆典基金" giftType="52" />
+      <data id="3220026" channelType="android" saleId="com.tencent.tmgp.hjol.celebrationfund_12800" payOrNot="1" payRMB="12800" nameData="128元庆典基金" desData="128元庆典基金" giftType="52" />
+      <data id="3330001" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluepermanent_19800" payOrNot="1" payRMB="19800" serverAwardId="860001" nameData="198元永久特权" desData="198元永久特权" giftType="53" />
+      <data id="3330002" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluecard_9800" payOrNot="1" payRMB="9800" gainDia="980" serverAwardId="860003" nameData="98元月度特权" desData="98元月度特权" giftType="54" />
+      <data id="3330003" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluepermanent_19800" payOrNot="1" payRMB="19800" serverAwardId="860002" nameData="198元永久特权" desData="198元永久特权" giftType="53" />
+      <data id="3330004" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluecard_9800" payOrNot="1" payRMB="9800" gainDia="980" serverAwardId="860004" nameData="98元月度特权" desData="98元月度特权" giftType="54" />
+      <data id="3331001" channelType="ios" saleId="com.tencent.tmgp.hjol.buildprivilege_9800" payOrNot="1" payRMB="9800" nameData="98元城建特权" desData="98元城建特权" giftType="55" />
+      <data id="3331002" channelType="ios" saleId="com.tencent.tmgp.hjol.technologyprivilege_19800" payOrNot="1" payRMB="19800" nameData="198元科技特权" desData="198元科技特权" giftType="55" />
+      <data id="3331003" channelType="ios" saleId="com.tencent.tmgp.hjol.supercoreprivilege_29800" payOrNot="1" payRMB="29800" nameData="298元超能核心" desData="298元超能核心" giftType="55" />
+      <data id="3331004" channelType="android" saleId="com.tencent.tmgp.hjol.buildprivilege_9800" payOrNot="1" payRMB="9800" nameData="98元城建特权" desData="98元城建特权" giftType="55" />
+      <data id="3331005" channelType="android" saleId="com.tencent.tmgp.hjol.technologyprivilege_19800" payOrNot="1" payRMB="19800" nameData="198元科技特权" desData="198元科技特权" giftType="55" />
+      <data id="3331006" channelType="android" saleId="com.tencent.tmgp.hjol.supercoreprivilege_29800" payOrNot="1" payRMB="29800" nameData="298元超能核心" desData="298元超能核心" giftType="55" />
+      <data id="3331007" channelType="ios" saleId="com.tencent.tmgp.hjol.valuebuildprivilege_9800" payOrNot="1" payRMB="9800" nameData="98元城建特权" desData="98元城建特权" giftType="56" />
+      <data id="3331008" channelType="ios" saleId="com.tencent.tmgp.hjol.valuetechnologyprivilege_19800" payOrNot="1" payRMB="19800" nameData="198元科技特权" desData="198元科技特权" giftType="56" />
+      <data id="3331009" channelType="ios" saleId="com.tencent.tmgp.hjol.valuesupercoreprivilege_29800" payOrNot="1" payRMB="29800" nameData="298元超能核心" desData="298元超能核心" giftType="56" />
+      <data id="3331010" channelType="android" saleId="com.tencent.tmgp.hjol.valuebuildprivilege_9800" payOrNot="1" payRMB="9800" nameData="98元城建特权" desData="98元城建特权" giftType="56" />
+      <data id="3331011" channelType="android" saleId="com.tencent.tmgp.hjol.valuetechnologyprivilege_19800" payOrNot="1" payRMB="19800" nameData="198元科技特权" desData="198元科技特权" giftType="56" />
+      <data id="3331012" channelType="android" saleId="com.tencent.tmgp.hjol.valuesupercoreprivilege_29800" payOrNot="1" payRMB="29800" nameData="298元超能核心" desData="298元超能核心" giftType="56" />
+      <data id="337101" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluegift_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337102" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluegift_6800" payOrNot="1" payRMB="6800" nameData="68元礼包" desData="68元礼包" giftType="57" />
+      <data id="337103" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluegift_12800" payOrNot="1" payRMB="12800" nameData="128元礼包" desData="128元礼包" giftType="57" />
+      <data id="337104" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluegift_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337105" channelType="ios" saleId="com.tencent.tmgp.hjol.supervaluegift_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="337201" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluegift_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337202" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluegift_6800" payOrNot="1" payRMB="6800" nameData="68元礼包" desData="68元礼包" giftType="57" />
+      <data id="337203" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluegift_12800" payOrNot="1" payRMB="12800" nameData="128元礼包" desData="128元礼包" giftType="57" />
+      <data id="337204" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluegift_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337205" channelType="android" saleId="com.tencent.tmgp.hjol.supervaluegift_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="337111" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuyingnew2_19800" payOrNot="1" payRMB="19800" nameData="198元礼包" desData="198元礼包" giftType="57" />
+      <data id="337112" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_19800" payOrNot="1" payRMB="19800" nameData="198元礼包" desData="198元礼包" giftType="57" />
+      <data id="337113" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack1_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337114" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack2_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337115" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack3_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337116" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack1_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337117" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack2_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337118" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack3_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337119" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack4_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337120" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack5_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337121" channelType="ios" saleId="com.tencent.tmgp.hjol.greatgiftpack6_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337211" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuyingnew2_19800" payOrNot="1" payRMB="19800" nameData="198元礼包" desData="198元礼包" giftType="57" />
+      <data id="337212" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_19800" payOrNot="1" payRMB="19800" nameData="198元礼包" desData="198元礼包" giftType="57" />
+      <data id="337213" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack1_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337214" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack2_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337215" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack3_4800" payOrNot="1" payRMB="4800" nameData="48元礼包" desData="48元礼包" giftType="57" />
+      <data id="337216" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack1_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337217" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack2_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337218" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack3_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337219" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack4_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337220" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack5_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="337221" channelType="android" saleId="com.tencent.tmgp.hjol.greatgiftpack6_1800" payOrNot="1" payRMB="1800" nameData="18元礼包" desData="18元礼包" giftType="57" />
+      <data id="390101" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390102" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390103" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390104" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390105" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390106" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390107" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli4_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390108" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390109" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390110" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390111" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli4_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390112" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli5_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390113" channelType="ios" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli6_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390114" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390115" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390116" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_18800" payOrNot="1" payRMB="18800" nameData="188元礼包" desData="188元礼包" giftType="57" />
+      <data id="390117" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390118" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390119" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390120" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli4_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="390121" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli1_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390122" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli2_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390123" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli3_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390124" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli4_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390125" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli5_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390126" channelType="android" saleId="com.tencent.tmgp.hjol.saijibeizhanhaoli6_1600" payOrNot="1" payRMB="1600" nameData="16元礼包" desData="16元礼包" giftType="57" />
+      <data id="390127" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="390128" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="390129" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="390130" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="390131" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="390132" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_64800" payOrNot="1" payRMB="64800" nameData="648元礼包" desData="648元礼包" giftType="57" />
+      <data id="337301" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_4500" payOrNot="1" payRMB="4500" nameData="45元礼包" desData="45元礼包" giftType="57" />
+      <data id="337302" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_4500" payOrNot="1" payRMB="4500" nameData="45元礼包" desData="45元礼包" giftType="57" />
+      <data id="337303" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_6800" payOrNot="1" payRMB="6800" nameData="68元礼包" desData="68元礼包" giftType="57" />
+      <data id="337304" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_8800" payOrNot="1" payRMB="8800" nameData="88元礼包" desData="88元礼包" giftType="57" />
+      <data id="337305" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337306" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337307" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337401" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_4500" payOrNot="1" payRMB="4500" nameData="45元礼包" desData="45元礼包" giftType="57" />
+      <data id="337402" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_4500" payOrNot="1" payRMB="4500" nameData="45元礼包" desData="45元礼包" giftType="57" />
+      <data id="337403" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_6800" payOrNot="1" payRMB="6800" nameData="68元礼包" desData="68元礼包" giftType="57" />
+      <data id="337404" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_8800" payOrNot="1" payRMB="8800" nameData="88元礼包" desData="88元礼包" giftType="57" />
+      <data id="337405" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337406" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337407" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_32800" payOrNot="1" payRMB="32800" nameData="328元礼包" desData="328元礼包" giftType="57" />
+      <data id="337501" channelType="ios" saleId="com.tencent.tmgp.hjol.exgratia_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337502" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337503" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337504" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337505" channelType="ios" saleId="com.tencent.tmgp.hjol.selectionprivilege_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337506" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337507" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337508" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337601" channelType="android" saleId="com.tencent.tmgp.hjol.exgratia_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337602" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337603" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337604" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337605" channelType="android" saleId="com.tencent.tmgp.hjol.selectionprivilege_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337606" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337607" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337608" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_1200" payOrNot="1" payRMB="1200" nameData="12元礼包" desData="12元礼包" giftType="57" />
+      <data id="337701" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="337702" channelType="ios" saleId="com.tencent.tmgp.hjol.prominentgift_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="337703" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337704" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337705" channelType="ios" saleId="com.tencent.tmgp.hjol.fortressgift_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337706" channelType="ios" saleId="com.tencent.tmgp.hjol.groupbuying_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337707" channelType="ios" saleId="com.tencent.tmgp.hjol.happyshopping_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337708" channelType="ios" saleId="com.tencent.tmgp.hjol.supervalue_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337801" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="337802" channelType="android" saleId="com.tencent.tmgp.hjol.prominentgift_5000" payOrNot="1" payRMB="5000" nameData="50元礼包" desData="50元礼包" giftType="57" />
+      <data id="337803" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337804" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337805" channelType="android" saleId="com.tencent.tmgp.hjol.fortressgift_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337806" channelType="android" saleId="com.tencent.tmgp.hjol.groupbuying_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337807" channelType="android" saleId="com.tencent.tmgp.hjol.happyshopping_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="337808" channelType="android" saleId="com.tencent.tmgp.hjol.supervalue_2500" payOrNot="1" payRMB="2500" nameData="25元礼包" desData="25元礼包" giftType="57" />
+      <data id="3381101" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼1" desData="6元试炼好礼1" giftType="58" />
+      <data id="3381102" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼1" desData="30元试炼好礼1" giftType="58" />
+      <data id="3381103" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼1" desData="68元试炼好礼1" giftType="58" />
+      <data id="3381104" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼1" desData="128元试炼好礼1" giftType="58" />
+      <data id="3381201" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼2" desData="6元试炼好礼2" giftType="58" />
+      <data id="3381202" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼2" desData="30元试炼好礼2" giftType="58" />
+      <data id="3381203" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼2" desData="68元试炼好礼2" giftType="58" />
+      <data id="3381204" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack2_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼2" desData="128元试炼好礼2" giftType="58" />
+      <data id="3381301" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼3" desData="6元试炼好礼3" giftType="58" />
+      <data id="3381302" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼3" desData="30元试炼好礼3" giftType="58" />
+      <data id="3381303" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼3" desData="98元试炼好礼3" giftType="58" />
+      <data id="3381304" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack3_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼3" desData="198元试炼好礼3" giftType="58" />
+      <data id="3381401" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼4" desData="6元试炼好礼4" giftType="58" />
+      <data id="3381402" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼4" desData="30元试炼好礼4" giftType="58" />
+      <data id="3381403" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼4" desData="98元试炼好礼4" giftType="58" />
+      <data id="3381404" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼4" desData="198元试炼好礼4" giftType="58" />
+      <data id="3381501" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack5_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼5" desData="6元试炼好礼5" giftType="58" />
+      <data id="3381502" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack5_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼5" desData="30元试炼好礼5" giftType="58" />
+      <data id="3381503" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack5_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼5" desData="98元试炼好礼5" giftType="58" />
+      <data id="3381504" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack5_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼5" desData="198元试炼好礼5" giftType="58" />
+      <data id="3382101" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼1" desData="6元试炼好礼1" giftType="58" />
+      <data id="3382102" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼1" desData="30元试炼好礼1" giftType="58" />
+      <data id="3382103" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼1" desData="68元试炼好礼1" giftType="58" />
+      <data id="3382104" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼1" desData="128元试炼好礼1" giftType="58" />
+      <data id="3382201" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼2" desData="6元试炼好礼2" giftType="58" />
+      <data id="3382202" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼2" desData="30元试炼好礼2" giftType="58" />
+      <data id="3382203" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼2" desData="68元试炼好礼2" giftType="58" />
+      <data id="3382204" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack2_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼2" desData="128元试炼好礼2" giftType="58" />
+      <data id="3382301" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼3" desData="6元试炼好礼3" giftType="58" />
+      <data id="3382302" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼3" desData="30元试炼好礼3" giftType="58" />
+      <data id="3382303" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼3" desData="98元试炼好礼3" giftType="58" />
+      <data id="3382304" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack3_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼3" desData="198元试炼好礼3" giftType="58" />
+      <data id="3382401" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼4" desData="6元试炼好礼4" giftType="58" />
+      <data id="3382402" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼4" desData="30元试炼好礼4" giftType="58" />
+      <data id="3382403" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼4" desData="98元试炼好礼4" giftType="58" />
+      <data id="3382404" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼4" desData="198元试炼好礼4" giftType="58" />
+      <data id="3382501" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack5_600" payOrNot="1" payRMB="600" nameData="6元试炼好礼5" desData="6元试炼好礼5" giftType="58" />
+      <data id="3382502" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack5_3000" payOrNot="1" payRMB="3000" nameData="30元试炼好礼5" desData="30元试炼好礼5" giftType="58" />
+      <data id="3382503" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack5_9800" payOrNot="1" payRMB="9800" nameData="98元试炼好礼5" desData="98元试炼好礼5" giftType="58" />
+      <data id="3382504" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack5_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼5" desData="198元试炼好礼5" giftType="58" />
+      <data id="3382601" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼4" desData="68元试炼好礼4" giftType="23" />
+      <data id="3382602" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack4_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼4" desData="128元试炼好礼4" giftType="23" />
+      <data id="3382603" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼1" desData="198元试炼好礼1" giftType="23" />
+      <data id="3382701" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_6800" payOrNot="1" payRMB="6800" nameData="68元试炼好礼4" desData="68元试炼好礼4" giftType="23" />
+      <data id="3382702" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack4_12800" payOrNot="1" payRMB="12800" nameData="128元试炼好礼4" desData="128元试炼好礼4" giftType="23" />
+      <data id="3382703" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_19800" payOrNot="1" payRMB="19800" nameData="198元试炼好礼1" desData="198元试炼好礼1" giftType="23" />
+      <data id="3382801" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_600" payOrNot="1" payRMB="600" serverAwardId="3382801" nameData="6元福运好礼" desData="6元福运好礼" giftType="59" />
+      <data id="3382802" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_1800" payOrNot="1" payRMB="1800" serverAwardId="3382802" nameData="18元福运好礼" desData="18元福运好礼" giftType="59" />
+      <data id="3382803" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_3000" payOrNot="1" payRMB="3000" serverAwardId="3382803" nameData="30元福运好礼" desData="30元福运好礼" giftType="59" />
+      <data id="3382804" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_6800" payOrNot="1" payRMB="6800" serverAwardId="3382804" nameData="68元福运好礼" desData="68元福运好礼" giftType="59" />
+      <data id="3382805" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_9800" payOrNot="1" payRMB="9800" serverAwardId="3382805" nameData="98元福运好礼" desData="98元福运好礼" giftType="59" />
+      <data id="3382806" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_12800" payOrNot="1" payRMB="12800" serverAwardId="3382806" nameData="128元福运好礼" desData="128元福运好礼" giftType="59" />
+      <data id="3382807" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_19800" payOrNot="1" payRMB="19800" serverAwardId="3382807" nameData="198元福运好礼" desData="198元福运好礼" giftType="59" />
+      <data id="3382808" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_32800" payOrNot="1" payRMB="32800" serverAwardId="3382808" nameData="328元福运好礼" desData="328元福运好礼" giftType="59" />
+      <data id="3382809" channelType="ios" saleId="com.tencent.tmgp.hjol.goodluckygifts_64800" payOrNot="1" payRMB="64800" serverAwardId="3382809" nameData="648元福运好礼" desData="648元福运好礼" giftType="59" />
+      <data id="3382901" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_600" payOrNot="1" payRMB="600" serverAwardId="3382901" nameData="6元福运好礼" desData="6元福运好礼" giftType="59" />
+      <data id="3382902" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_1800" payOrNot="1" payRMB="1800" serverAwardId="3382902" nameData="18元福运好礼" desData="18元福运好礼" giftType="59" />
+      <data id="3382903" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_3000" payOrNot="1" payRMB="3000" serverAwardId="3382903" nameData="30元福运好礼" desData="30元福运好礼" giftType="59" />
+      <data id="3382904" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_6800" payOrNot="1" payRMB="6800" serverAwardId="3382904" nameData="68元福运好礼" desData="68元福运好礼" giftType="59" />
+      <data id="3382905" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_9800" payOrNot="1" payRMB="9800" serverAwardId="3382905" nameData="98元福运好礼" desData="98元福运好礼" giftType="59" />
+      <data id="3382906" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_12800" payOrNot="1" payRMB="12800" serverAwardId="3382906" nameData="128元福运好礼" desData="128元福运好礼" giftType="59" />
+      <data id="3382907" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_19800" payOrNot="1" payRMB="19800" serverAwardId="3382907" nameData="198元福运好礼" desData="198元福运好礼" giftType="59" />
+      <data id="3382908" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_32800" payOrNot="1" payRMB="32800" serverAwardId="3382908" nameData="328元福运好礼" desData="328元福运好礼" giftType="59" />
+      <data id="3382909" channelType="android" saleId="com.tencent.tmgp.hjol.goodluckygifts_64800" payOrNot="1" payRMB="64800" serverAwardId="3382909" nameData="648元福运好礼" desData="648元福运好礼" giftType="59" />
+      <data id="3383001" channelType="android" saleId="com.tencent.tmgp.hjol.tainengevent_6800" payOrNot="1" payRMB="6800" nameData="68元泰能超武礼包" desData="68元泰能超武礼包" giftType="60" />
+      <data id="3383002" channelType="android" saleId="com.tencent.tmgp.hjol.tainengevent_9800" payOrNot="1" payRMB="9800" nameData="98元泰能超武礼包" desData="98元泰能超武礼包" giftType="60" />
+      <data id="3383003" channelType="android" saleId="com.tencent.tmgp.hjol.tainengevent_12800" payOrNot="1" payRMB="12800" nameData="128元泰能超武礼包" desData="128元泰能超武礼包" giftType="60" />
+      <data id="3383004" channelType="android" saleId="com.tencent.tmgp.hjol.tainengevent_32800" payOrNot="1" payRMB="32800" nameData="328元泰能超武礼包" desData="328元泰能超武礼包" giftType="60" />
+      <data id="3383101" channelType="ios" saleId="com.tencent.tmgp.hjol.tainengevent_6800" payOrNot="1" payRMB="6800" nameData="68元泰能超武礼包" desData="68元泰能超武礼包" giftType="60" />
+      <data id="3383102" channelType="ios" saleId="com.tencent.tmgp.hjol.tainengevent_9800" payOrNot="1" payRMB="9800" nameData="98元泰能超武礼包" desData="98元泰能超武礼包" giftType="60" />
+      <data id="3383103" channelType="ios" saleId="com.tencent.tmgp.hjol.tainengevent_12800" payOrNot="1" payRMB="12800" nameData="128元泰能超武礼包" desData="128元泰能超武礼包" giftType="60" />
+      <data id="3383104" channelType="ios" saleId="com.tencent.tmgp.hjol.tainengevent_32800" payOrNot="1" payRMB="32800" nameData="328元泰能超武礼包" desData="328元泰能超武礼包" giftType="60" />
+      <data id="358001" channelType="ios" saleId="com.tencent.tmgp.hjol.starshineinvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元星耀投资" desData="30元星耀投资" giftType="61" />
+      <data id="358002" channelType="android" saleId="com.tencent.tmgp.hjol.starshineinvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元星耀投资" desData="30元星耀投资" giftType="61" />
+      <data id="358003" channelType="ios" saleId="com.tencent.tmgp.hjol.starshineinvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元星耀投资" desData="68元星耀投资" giftType="61" />
+      <data id="358004" channelType="android" saleId="com.tencent.tmgp.hjol.starshineinvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元星耀投资" desData="68元星耀投资" giftType="61" />
+      <data id="358005" channelType="ios" saleId="com.tencent.tmgp.hjol.starshineinvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元星耀投资" desData="98元星耀投资" giftType="61" />
+      <data id="358006" channelType="android" saleId="com.tencent.tmgp.hjol.starshineinvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元星耀投资" desData="98元星耀投资" giftType="61" />
+      <data id="358007" channelType="ios" saleId="com.tencent.tmgp.hjol.quantuminvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元星能投资" desData="30元星能投资" giftType="61" />
+      <data id="358008" channelType="android" saleId="com.tencent.tmgp.hjol.quantuminvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元星能投资" desData="30元星能投资" giftType="61" />
+      <data id="358009" channelType="ios" saleId="com.tencent.tmgp.hjol.quantuminvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元星能投资" desData="68元星能投资" giftType="61" />
+      <data id="358010" channelType="android" saleId="com.tencent.tmgp.hjol.quantuminvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元星能投资" desData="68元星能投资" giftType="61" />
+      <data id="358011" channelType="ios" saleId="com.tencent.tmgp.hjol.quantuminvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元星能投资" desData="98元星能投资" giftType="61" />
+      <data id="358012" channelType="android" saleId="com.tencent.tmgp.hjol.quantuminvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元星能投资" desData="98元星能投资" giftType="61" />
+      <data id="358013" channelType="ios" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元母矿投资" desData="30元母矿投资" giftType="61" />
+      <data id="358014" channelType="android" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="30元母矿投资" desData="30元母矿投资" giftType="61" />
+      <data id="358015" channelType="ios" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元母矿投资" desData="68元母矿投资" giftType="61" />
+      <data id="358016" channelType="android" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_6800" payOrNot="1" payRMB="6800" payCount="1" nameData="68元母矿投资" desData="68元母矿投资" giftType="61" />
+      <data id="358017" channelType="ios" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元母矿投资" desData="98元母矿投资" giftType="61" />
+      <data id="358018" channelType="android" saleId="com.tencent.tmgp.hjol.tiberiummatrixinvest_9800" payOrNot="1" payRMB="9800" payCount="1" nameData="98元母矿投资" desData="98元母矿投资" giftType="61" />
+      <data id="3610001" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_600" payOrNot="1" payRMB="600" nameData="新春专柜头彩礼包6元" desData="新春专柜头彩礼包6元" giftType="63" />
+      <data id="3610002" channelType="android" saleId="com.tencent.tmgp.hjol.preferential_box_1800" payOrNot="1" payRMB="1800" nameData="新春专柜头彩礼包18元" desData="新春专柜头彩礼包18元" giftType="63" />
+      <data id="3610003" channelType="android" saleId="com.tencent.tmgp.hjol.greatdealgift_3000" payOrNot="1" payRMB="3000" nameData="新春专柜头彩礼包30元" desData="新春专柜头彩礼包30元" giftType="63" />
+      <data id="3610004" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_32800" payOrNot="1" payRMB="32800" nameData="新春专柜头彩礼包328元" desData="新春专柜头彩礼包328元" giftType="63" />
+      <data id="3610005" channelType="android" saleId="com.tencent.tmgp.hjol.valuepack_64800" payOrNot="1" payRMB="64800" nameData="新春专柜头彩礼包648元" desData="新春专柜头彩礼包648元" giftType="63" />
+      <data id="3610101" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_600" payOrNot="1" payRMB="600" nameData="新春专柜头彩礼包6元" desData="新春专柜头彩礼包6元" giftType="63" />
+      <data id="3610102" channelType="ios" saleId="com.tencent.tmgp.hjol.preferential_box_1800" payOrNot="1" payRMB="1800" nameData="新春专柜头彩礼包18元" desData="新春专柜头彩礼包18元" giftType="63" />
+      <data id="3610103" channelType="ios" saleId="com.tencent.tmgp.hjol.greatdealgift_3000" payOrNot="1" payRMB="3000" nameData="新春专柜头彩礼包30元" desData="新春专柜头彩礼包30元" giftType="63" />
+      <data id="3610104" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_32800" payOrNot="1" payRMB="32800" nameData="新春专柜头彩礼包328元" desData="新春专柜头彩礼包328元" giftType="63" />
+      <data id="3610105" channelType="ios" saleId="com.tencent.tmgp.hjol.valuepack_64800" payOrNot="1" payRMB="64800" nameData="新春专柜头彩礼包648元" desData="新春专柜头彩礼包648元" giftType="63" />
+      <data id="3620001" channelType="android" saleId="com.tencent.tmgp.hjol.TaiNengWarriorGift_600" payOrNot="1" payRMB="600" payCount="1" nameData="泰矿提炼所6元礼包" desData="泰矿提炼所6元礼包" giftType="64" />
+      <data id="3620002" channelType="android" saleId="com.tencent.tmgp.hjol.TaiNengWarriorGift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="泰矿提炼所30元礼包" desData="泰矿提炼所30元礼包" giftType="64" />
+      <data id="3620101" channelType="ios" saleId="com.tencent.tmgp.hjol.TaiNengWarriorGift_600" payOrNot="1" payRMB="600" payCount="1" nameData="泰矿提炼所6元礼包" desData="泰矿提炼所6元礼包" giftType="64" />
+      <data id="3620102" channelType="ios" saleId="com.tencent.tmgp.hjol.TaiNengWarriorGift_3000" payOrNot="1" payRMB="3000" payCount="1" nameData="泰矿提炼所30元礼包" desData="泰矿提炼所30元礼包" giftType="64" />
+      <data id="3640001" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_5000" payOrNot="1" payRMB="5000" nameData="深海追击升级版战令" desData="深海追击升级版战令" giftType="65" />
+      <data id="3640101" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_5000" payOrNot="1" payRMB="5000" nameData="深海追击升级版战令" desData="深海追击升级版战令" giftType="65" />
+      <data id="3710001" channelType="android" saleId="com.tencent.tmgp.hjol.directgift_100" payOrNot="1" payRMB="100" nameData="1元荣耀致敬礼包" desData="1元荣耀致敬礼包" giftType="66" />
+      <data id="3710002" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli_600" payOrNot="1" payRMB="600" nameData="6元荣耀致敬礼包" desData="6元荣耀致敬礼包" giftType="66" />
+      <data id="3710003" channelType="android" saleId="com.tencent.tmgp.hjol.oddsgift_1800" payOrNot="1" payRMB="1800" nameData="18元荣耀致敬礼包" desData="18元荣耀致敬礼包" giftType="66" />
+      <data id="3710004" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710005" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli1_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710006" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli1_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710007" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli2_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710008" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli2_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710009" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli3_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710010" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli3_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710011" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli4_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710012" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli4_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710013" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli5_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710014" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli_19800" payOrNot="1" payRMB="19800" nameData="198元荣耀致敬礼包" desData="198元荣耀致敬礼包" giftType="66" />
+      <data id="3710015" channelType="android" saleId="com.tencent.tmgp.hjol.saihouzengli6_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710101" channelType="ios" saleId="com.tencent.tmgp.hjol.directgift_100" payOrNot="1" payRMB="100" nameData="1元荣耀致敬礼包" desData="1元荣耀致敬礼包" giftType="66" />
+      <data id="3710102" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli_600" payOrNot="1" payRMB="600" nameData="6元荣耀致敬礼包" desData="6元荣耀致敬礼包" giftType="66" />
+      <data id="3710103" channelType="ios" saleId="com.tencent.tmgp.hjol.oddsgift_1800" payOrNot="1" payRMB="1800" nameData="18元荣耀致敬礼包" desData="18元荣耀致敬礼包" giftType="66" />
+      <data id="3710104" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710105" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli1_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710106" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli1_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710107" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli2_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710108" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli2_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710109" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli3_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710110" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli3_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710111" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli4_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710112" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli4_6800" payOrNot="1" payRMB="6800" nameData="68元荣耀致敬礼包" desData="68元荣耀致敬礼包" giftType="66" />
+      <data id="3710113" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli5_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3710114" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli_19800" payOrNot="1" payRMB="19800" nameData="198元荣耀致敬礼包" desData="198元荣耀致敬礼包" giftType="66" />
+      <data id="3710115" channelType="ios" saleId="com.tencent.tmgp.hjol.saihouzengli6_3000" payOrNot="1" payRMB="3000" nameData="30元荣耀致敬礼包" desData="30元荣耀致敬礼包" giftType="66" />
+      <data id="3750001" channelType="android" saleId="com.tencent.tmgp.hjol.trialpack1_64800" payOrNot="1" payRMB="64800" serverAwardId="375001" payCount="1" nameData="豪华列车礼包648元" desData="豪华列车礼包648元" giftType="67" />
+      <data id="3750101" channelType="ios" saleId="com.tencent.tmgp.hjol.trialpack1_64800" payOrNot="1" payRMB="64800" serverAwardId="375001" payCount="1" nameData="豪华列车礼包648元" desData="豪华列车礼包648元" giftType="67" />
+</root>

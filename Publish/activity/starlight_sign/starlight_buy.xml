@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="2304230" type="1" buy="1" />
+      <data id="2304231" type="1" buy="1,2" />
+      <data id="2304232" type="1" buy="1,2,3" />
+      <data id="2304233" type="1" buy="2" />
+      <data id="2304234" type="1" buy="2,3" />
+      <data id="2304235" type="1" buy="3" />
+      <data id="2304236" type="1" buy="1" />
+      <data id="2304237" type="1" buy="1,2" />
+      <data id="2304238" type="1" buy="1,2,3" />
+      <data id="2304239" type="1" buy="2" />
+      <data id="2304240" type="1" buy="2,3" />
+      <data id="2304241" type="1" buy="3" />
+      <data id="2304242" type="2" buy="1" />
+      <data id="2304243" type="2" buy="1,2" />
+      <data id="2304244" type="2" buy="1,2,3" />
+      <data id="2304245" type="2" buy="2" />
+      <data id="2304246" type="2" buy="2,3" />
+      <data id="2304247" type="2" buy="3" />
+      <data id="2304248" type="2" buy="1" />
+      <data id="2304249" type="2" buy="1,2" />
+      <data id="2304250" type="2" buy="1,2,3" />
+      <data id="2304251" type="2" buy="2" />
+      <data id="2304252" type="2" buy="2,3" />
+      <data id="2304253" type="2" buy="3" />
+</root>

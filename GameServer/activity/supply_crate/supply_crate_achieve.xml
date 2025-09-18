@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="3481001" conditionType="170210" conditionValue="3" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481002" conditionType="170210" conditionValue="10" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481003" conditionType="170210" conditionValue="20" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481004" conditionType="170211" conditionValue="5" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481005" conditionType="170211" conditionValue="10" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481006" conditionType="170211" conditionValue="20" isDaily="1" rewards="30000_21063065_2" />
+      <data achieveId="3481007" conditionType="160200" conditionValue="60" isDaily="1" rewards="30000_21063065_1" />
+      <data achieveId="3481008" conditionType="160200" conditionValue="300" isDaily="1" rewards="30000_21063065_2" />
+      <data achieveId="3481009" conditionType="160200" conditionValue="680" isDaily="1" rewards="30000_21063065_4" />
+      <data achieveId="3481010" conditionType="160200" conditionValue="1000" rewards="30000_21063065_10" />
+      <data achieveId="3481011" conditionType="160200" conditionValue="3000" rewards="30000_21063065_13" />
+      <data achieveId="3481012" conditionType="160200" conditionValue="6000" rewards="30000_21063065_16" />
+      <data achieveId="3481013" conditionType="160200" conditionValue="10000" rewards="30000_21063065_20" />
+      <data achieveId="3481014" conditionType="160200" conditionValue="15000" rewards="30000_21063065_25" />
+      <data achieveId="3481015" conditionType="160200" conditionValue="20000" rewards="30000_21063065_30" />
+      <data achieveId="3481016" conditionType="170212" conditionValue="300" rewards="30000_21063065_1" />
+      <data achieveId="3481017" conditionType="170212" conditionValue="1000" rewards="30000_21063065_1" />
+      <data achieveId="3481018" conditionType="170212" conditionValue="2000" rewards="30000_21063065_1" />
+      <data achieveId="3481019" conditionType="170212" conditionValue="3000" rewards="30000_21063065_1" />
+      <data achieveId="3481020" conditionType="170212" conditionValue="4000" rewards="30000_21063065_1" />
+      <data achieveId="3481021" conditionType="170212" conditionValue="6000" rewards="30000_21063065_1" />
+</root>

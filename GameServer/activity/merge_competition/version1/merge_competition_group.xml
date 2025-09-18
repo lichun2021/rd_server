@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" serverA="10001" serverB="10002" mergeTime="2025-4-17 23:59:59" />
+      <data id="2" serverA="10003" serverB="10004" mergeTime="2025-4-17 23:59:59" />
+</root>

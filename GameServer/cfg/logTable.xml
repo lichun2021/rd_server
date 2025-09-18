@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data logType="heart"           tableName="GameSvrState"   attribute="dtEventTime, vGameIp, gameSvrId"/>
+	<data logType="onlineInfo"      tableName="GameSvrState"   attribute="gameappid, timekey, gsid, zoneareaid, onlinecntios, onlinecntandroid, registernum, queuesize"/>
+	
+	<!-- 角色信息  -->
+	<data logType="createuser"      tableName="PlayerRegister" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, gversion, systemSoftware, phoneInfo, telecomOper, network, screenWidth, screenHeight, density, channelId, cpuHardware, memory, glRender, glVersion, deviceId, playerId, inviteComing, gamematrix"/>
+	<data logType="account_register" tableName="AccountRegister" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, gversion, systemSoftware, phoneInfo, telecomOper, network, screenWidth, screenHeight, density, channelId, cpuHardware, memory, glRender, glVersion, deviceId, playerId, inviteComing, gamematrix"/>
+	<data logType="userlogin"       tableName="PlayerLogin"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, friendCount, gversion, systemSoftware, phoneInfo, telecomOper, network, screenWidth, screenHeight, density, channelId, playerId, playerName, cpuHardware, memory, glRender, glVersion, deviceId, vipLevel, cityLevel, clientIp, guildId, militaryLevel, battlePoint, commanderPower, armyPower, buildingPower, techPower, heroPower, equipPower, gold, diamond, saveAmt, goldore, oil, steel, tombarthite, heroSSChipCount, crossServer, collegeId, collegeAuth, inviteComing, directName, dungeon, guildName, platformusertag, clientIpv6, oaid, caid, useragent, numGuildId, regContinueLogin, totalLogin, gamematrix, heroSSSChipCount, skinPoint, leaderId, leaderOpenId, guildPower, crossTechPower, trapPower, superSoldierPower, armourPower, plantSchoolPower, plantSciencePower, plantTechPower, starExplorePower, manhattanBasePower, manhattanSWPower, mechacoreTechPower, mechacoreModulePower, nationMilitaryLv"/>
+	<data logType="userlogout"      tableName="PlayerLogout"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, onlineTime, playerLevel, friendCount, gversion, systemSoftware, phoneInfo, telecomOper, network, screenWidth, screenHeight, density, channelId, cpuHardware, memory, glRender, glVersion, deviceId, vipLevel, cityLevel, militaryLevel, playerId, battlePoint, commanderPower, armyPower, buildingPower, techPower, heroPower, equipPower, gold, diamond, goldore, oil, steel, tombarthite, heroSSChipCount, crossServer, collegeId, collegeAuth, inviteComing, directName, dungeon, guildName, platformusertag, guildId, numGuildId, gamematrix, heroSSSChipCount, skinPoint, nationMilitaryLv"/>
+	<data logType="asa_info"        tableName="ASAIadInfo"    attribute="dtEventTime, gameAppId, platId, puid, deviceId, clientIp, clientIpv6, caid, useragent, attribution, orgName, orgId, campaignID, campaignName, clickDate, purchaseDate, conversionDate, conversionType, adgroupID, adgroupName, countryOrRegion, keyword, keywordID, keywordMatchtype, creativesetID, creativesetName, attributionError, claimType, impressionDate"/>
+	<data logType="guide_flow"      tableName="GuideFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, step, playerLevel, playerId, preStep"/>
+	<data logType="video_flow"      tableName="GameVideoFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, step, state"/>
+	<data logType="player_exp_flow" tableName="PlayerExpFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, expChange, beforeLevel, afterLevel, costTime, reason, subReason, playerId, vipLevel, cityLevel"/>
+	<data logType="vip_level_flow"  tableName="VipLevelFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, oldLevel, vipLevel, playerId, changeExp, beforeExp, afterExp, reason, superVipLevel"/>
+
+	<data logType="rts_flow"                 tableName="RtsFlow"                   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, actionType, levelsId, playerId "/>
+	<data logType="power_flow"               tableName="PowerFlow"                 attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, amount, reason, add, battlePoint, commanderPower, armyPower, buildingPower, techPower, heroPower, equipPower, crossTechPower, trapPower, superSoldierPower, armourPower, plantSchoolPower, plantSciencePower, plantTechPower, starExplorePower, manhattanBasePower, manhattanSWPower, guildId, guildPower, mechacoreTechPower, mechacoreModulePower"/>"/>
+	<data logType="city_wall_data_flow"      tableName="CityWallDataFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, buildLevel, capacity, curCityDef, maxCityDef, onFire, source"/>
+	
+	<data logType="wishing_cost_flow"	     tableName="WishingCostFlow"	       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, resourceType, resourceCount, costMoney"/>
+	<data logType="lottery_draw_flow"        tableName="LotteryDrawFlow"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, type, lucky, multi, causeMulti, results, multis"/>
+	<data logType="commander_score_refresh"	 tableName="CommanderScoreRefreshFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, scoreType, stageId, score"/>
+	
+	<data logType="equip_change"	         tableName="EquipmentFlow"	           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, equipId, typeId, remove, equipPos, equipPower, equipQuality, equipLevel"/>
+	<data logType="foggy_box_flow"	         tableName="FoggyBoxFlow"	           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, type, boxId, itemId, boxLevel"/>
+
+	<!-- 资源、物品流水 dungeon: 玩家所在区域 -->
+	<data logType="money_add"       tableName="MoneyFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, sequence, playerLevel, money, afterMoney, reason, subReason, addOrReduce, moneyType, playerId, vipLevel, cityLevel, mailUUID, dungeon"/>
+	<data logType="money_consume"   tableName="MoneyFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, sequence, playerLevel, money, afterMoney, reason, subReason, addOrReduce, moneyType, playerId, vipLevel, cityLevel, mailUUID, dungeon"/>
+	<data logType="goods_add"       tableName="ItemFlow"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, sequence, goodsType, goodsId, count, afterCount, reason, subReason, money, moneyType, addOrReduce, playerId, vipLevel, cityLevel, mailUUID, dungeon"/>
+	<data logType="goods_sub"       tableName="ItemFlow"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, sequence, goodsType, goodsId, count, afterCount, reason, subReason, money, moneyType, addOrReduce, playerId, vipLevel, cityLevel, mailUUID, dungeon"/>
+	<data logType="resource_add"	tableName="ResourceFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, resourceType, count, after, reason, addOrReduce, playerId, subReason, mailUUID, dungeon"/>
+	<data logType="resource_sub"	tableName="ResourceFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, resourceType, count, after, reason, addOrReduce, playerId, subReason, mailUUID, dungeon"/>
+	<data logType="send_reward_mail"	tableName="RewardMailFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, mailId, reward, mailUUID, playerId"/>
+	
+	<!-- 任务数据  -->
+	<data logType="task_flow"                tableName="TaskFlow"                attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, taskType, taskId, state, playerId, cityLevel, type, chapterId"/>
+	<data logType="chapter_mission_flow"     tableName="ChapterMissionFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, missionType, chapterId"/>
+
+	<!-- 建筑功能  -->	
+	<data logType="build_flow"               tableName="BuildFlow"               attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, buildId, buildType, beforeLevel, afterLevel, playerId, cfgId, honor, progress"/>
+	<data logType="build_lv_up_flow"         tableName="BuildLvUpClickFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, buildId, buildType, beforeLevel, operType, playerId, cfgId"/>
+	<data logType="train_flow"               tableName="TrainClickFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, buildType, soldierId, soldierLv, trainCount, operType, playerId, dungeon"/>
+	<data logType="tech_research_flow"       tableName="TechResearchClickFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, techId, techLv, operType, playerId"/>
+	
+	<!-- 购买行为  -->
+	<data logType="recharge_flow"	         tableName="RechargeFlow"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, type, goodsId, power, heroPower, equipPower, techPower, commanderPower, armyPower, buildingPower, costMoney, collegeId, collegeAuth, inviteComing"/>
+	<data logType="buy_month_card"	         tableName="MonthCardFlow"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, monthCardId, renewBuy, validEndTime, playerId, cardType, exchangeCoinAdd, exchangeCoinCount, renewCardItem"/>
+	<data logType="gift_bag_flow"            tableName="GiftBagFlow"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, giftType, giftId, costMoney, playerId, battlePoint, moneyType, itemType, buyCount"/>
+	<data logType="fund_active"	             tableName="FundActiveFlow"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, fundType"/>
+	<data logType="external_purchase"         tableName="ExternalPurchase"	     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, type, diamonds"/>
+	
+	<!-- 礼包刷新  -->
+	<data logType="push_gift_refresh"	      tableName="PushGiftRefreshFlow"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, conditionType, groupId, giftLevelId"/>
+	<data logType="gift_refresh_flow"         tableName="GiftRefreshFlow"                attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId"/>
+	<data logType="travel_shop_gift_refresh"  tableName="TravelShopGiftRefreshFlow"	     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, giftId"/>
+
+	<!-- 点击事件  -->
+	<data logType="activity_click"            tableName="ActivityClickFlow"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, clickType, btnType, activityId, btnId, playerId"/>
+	<data logType="boundary_recharge_click"   tableName="BoundaryRechargeClickFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, clickType, playerId"/>
+	<data logType="enter_gift"                tableName="GiftEntranceClickFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel"/>
+	<data logType="eva_hotline"               tableName="EvaHotline"                     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, eventType, eventObjId"/>
+	<data logType="warrior_king"          	  tableName="WarriorKing"                    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, eventType, enterType, passTime, passRet"/>
+	<data logType="mecha_scenario"            tableName="MechaScenarioFlow"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, power, type"/>
+	
+	<!-- 联盟  -->
+	<data logType="guild_flow"                tableName="GuildFlow"                   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, guildOperType, guildId, guildLevel, guildMemNum, playerId, numGuildId, guildName, leaderId, leaderOpenId"/>
+	<data logType="guild_action"              tableName="GuildActionFlow"             attribute="dtEventTime, gameSvrId, guildAction, guildId"/>
+	<data logType="store_house_flow"          tableName="StoreHouseFlow"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, uuid, cfgId, operType, cost"/>
+	<data logType="guild_tech_flow"           tableName="GuildTechFlow"               attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, techId, operType, costType, cost"/>
+	<data logType="voice_room"    			  tableName="VoiceRoomFlow" 			  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, type" />
+	
+    <!-- 英雄  -->
+	<data logType="hero_change"	              tableName="HeroFlow"	                      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, heroId, heroStar, heroLevel, heroPower, heroPoint, action, heroType, heroStep, heroOffice, buildType, talent,dungeon,archiveLevel,soul"/>
+	<data logType="gacha_flow"                tableName="HeroGacha"                       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, gachaType, consumeType, consumeNum"/>
+	<data logType="gacha_item_flow"           tableName="GachaItemFlow"                   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, gachaType, itemType, itemId, amount"/>
+	<data logType="gacha_equip"               tableName="EquipGachaFlow"                  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, gachaType, consumeType, consumeNum"/>
+	<data logType="gacha_equip_cost"          tableName="EquipGachaItemFlow"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, gachaType, itemType, itemId, amount"/>
+	<data logType="hero_skill_change"         tableName="HeroSkillChangeFlow"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, act, type, skillId, levelBefore, levelAfter, heroId, index"/>
+	<data logType="hero_skill_equip"          tableName="HeroSkillEquipFlow"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, act, type, skillId, skillLevel, heroId, heroStar, heroLevel"/>
+	
+	<!-- 世界、军队 -->
+	<data logType="army_change"                   tableName="SoldierCountFlow"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, armyId, count, free, march, wounded, cure, cureFinish, taralabs, train, trainFinish, advance, advanceFinish, section, reason, dungeon, deadCount1, recoveredCount1, deadCount2, recoveredCount2, cureEffPer"/>
+	<data logType="tibetan_army_hole"             tableName="TibetanArmyHoleFlow"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, hideArmyPower, totalArmyPower, hideTime, callback"/>
+	<data logType="detect_flow"                   tableName="DetectFlow"                  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, battlePoint, armyPower, type, targetPuid, targetPlayerId, targetPlayerLevel, targetVipLevel, targetCityLevel, targetBattlePoint, targetArmyPower, targetPointArmyPower"/>
+	<data logType="round_flow"                    tableName="RoundFlow"                   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, battleId, battleType, roundScore, roundTime, result, rank, gold, playerId, subType, atkBeforePower, defBeforePower"/>
+	<data logType="battle_flow"                   tableName="BattleFlow"                  attribute="gameSvrId, dtEventTime, gameAppId, platId, pvp, battleType, atkWin, battleflowId, captain, atkZoneAreaID, atkOpenid, atkLevel, atkVipLevel, atkCityLevel, atkPower, atkId, atkName, atkArmyInfo, atkTotalCnt, atkKillCnt, atkLoseCnt, defZoneAreaID, defOpenid, defLevel, defVipLevel, defCityLevel, defPower, defId, defName, defArmyInfo, defTotalCnt, defKillCnt, defLoseCnt, atkGuildId, defGuildId, atkCross, defCross, atkWoundedCnt, atkDeadCnt, defWoundedCnt, defDeadCnt, atkHero, defHero, atkSupSoldier, defSupSoldier, battlePoint, dungeon, dungeonId, isLeaguaWar, season, atkPowerRank, atkNoarmyPowerRank, atkGuildRank, defPowerRank, defNoarmyPowerRank, defGuildRank, atkManhattan, defManhattan, atkforceFieldMax,atkforceField,defforceFieldMax,defforceField"/>
+    <data logType="mass_battle_flow"              tableName="BattleRallyFlow"             attribute="gameSvrId, dtEventTime, pvp, battleType, atkWin, battleflowId, atkLeaderServerId, atkLeaderOpenid, atkLeaderPower, atkLeaderId, atkLeaderName, atkArmyInfo, atkTotalCnt, atkKillCnt, atkLoseCnt, atkWoundedCnt, atkDeadCnt, atkGuildId, atkCross, atkPlayerCnt, atkArmyTotalPower, defLeaderServerId, defLeaderOpenid, defLeaderPower, defLeaderId, defLeaderName, defArmyInfo, defTotalCnt, defKillCnt, defLoseCnt, defWoundedCnt, defDeadCnt, defGuildId, defCross, defPlayerCnt, defArmyTotalPower, atkGuildRank, defGuildRank, atkHighRank, atkHighRankPlayer, defHighRank, defHighRankPlayer, worldPoint, dungeon, dungeonId, isLeaguaWar, season"/>
+	
+	<data logType="grab_res_limit"                tableName="GrabResLimitFlow"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, grabResLimit, grabRes"/>
+	<data logType="world_attack_foggy"            tableName="WorldAttackFoggyFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId,  playerLevel, vipLevel, cityLevel, posX, posY, foggyId, foggyLvl, isLeader, isWin, playerNum, battlePoint, commanderPower, armyPower, buildingPower, techPower, heroPower, equipPower, dungeon" />
+	<data logType="world_resource_refresh_flow"   tableName="WorldResourceRefreshFlow"    attribute="dtEventTime, gameSvrId, resCfgId, resType, resLevel, x, y, areaId"/>
+	<data logType="world_resource_collect_flow"   tableName="WorldResourceCollectFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, resCfgId, resType, resLevel, collectNum, collectTime, playerId, playerLevel, vipLevel, cityLevel"/>
+	<data logType="world_attack_monster_flow"     tableName="WorldAttackMonsterFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, monsterId, monsterLvl, isWin, isFirstKill, playerId, playerLevel, vipLevel, cityLevel, posX, posY, monsterType, atkTimes, pracAtkTimes, beforeBlood, afterBlood, isKill, isLeader, dungeon" />
+	<data logType="president_war"                 tableName="PresidentWarFlow"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, power, turnCount, battleId, allianceId, identity, warType, pointType, result, armyIDList, armyCount, loseArmyIDList, loseArmyCount"/>
+	<data logType="office_appoint"                tableName="OfficeAppointFlow"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, power, officerId, appointerOpenid, appointerRoleID"/>
+	
+	
+	
+	<!-- 安全日志  -->
+	<data logType="idip_flow"             tableName="IDIPHandselItemFlow"    attribute="dtEventTime, iZoneAreaId, puid, goodsId, count, serial, source, cmd"/>
+	<data logType="sec_reporting"	      tableName="SecReportFlow"	         attribute="gameSvrId, dtEventTime, gameAppId, puid, platId, areaId, iZoneAreaId, gversion, reportId, playerName, playerId, roleType, playerLevel, playerPower, targetOpenid, targetPlayerId, targetPlayerName, targetUserIp, targetGuildId, targetPicUrl, targetPlatId, targetAreaId, targetZoneId, reportScene, reportType, reportDesc, reportContent, reportPicUrls"/>
+	<data logType="sec_operation_flow"    tableName="SecOperationFlow"       attribute="gameSvrId, dtEventTime, gameAppId, puid, platId, areaId, iZoneAreaId, time, operCount, clientTime, gversion, userName, userMoney, useDiamonds, operId, operDesc, operType, operResult, operCosttime"/>
+	<data logType="sec_battle_flow"       tableName="SecPlayerBattleFlow"    attribute="gameSvrId, dtEventTime, gameAppId, puid, platId, areaId, iZoneAreaId, time, battleId, result, castTime, distance, attPlayerBattlePoint, attPlayerLevel, attPlayerClientTime, gversion, attPlayerName, attPlayerDeviceId, attPlayerIp, attPlayerDiamonds, attPlayerGold, attPlayerGoldore, attPlayerOil, attPlayerTombar, attPlayerAttr, attPlayerArmyIds, attPlayerArmyCount, attPlayerRemainArmyIds, attPlayerRemainArmyCount, attPlayerGetDiamonds, attPlayerGetGold, attPlayerGetGoldore, attPlayerGetOil, attPlayerGetTombar, attPlayerGetAttr, attPlayerGetItemIds, attPlayerGetItemCounts, defPlayerIdentity, defPlayerPuid, defPlayerPlatId, defPlayerAreaId, defPlayerZoneId, defPlayerBattlePoint, defPlayerLevel, defPlayerClientTime, defPlayerClientVersion, defPlayerName, defPlayerDeviceId, defPlayerIp, defPlayerDiamonds, defPlayerGold, defPlayerGoldore, defPlayerOil, defPlayerTombar, defPlayerAttr, defPlayerArmyIds, defPlayerArmyCount, defPlayerRemainArmyIds, defPlayerRemainArmyCount, defPlayerLoseDiamonds, defPlayerLoseGold, defPlayerLoseGoldore, defPlayerLoseOil, defPlayerLoseTombar, defPlayerLoseAttr, defPlayerLoseItemIds, defPlayerLoseItemCounts, attPlayerTotalAttackTimes, attPlayerTotalWinTimes, attPlayerTotalDefTimes, attPlayerTotalDefWinTimes, defPlayerTotalAttackTimes, defPlayerTotalWinTimes, defPlayerTotalDefTimes, defPlayerTotalDefWinTimes, isMassMarch, atkGuildId, defGuildId" />
+	<!-- 聊天信息  -->
+	<data logType="sec_talk_flow"         tableName="SecTalkFlow"            attribute="gameSvrId, dtEventTime, gameAppId, puid, platId, areaId, iZoneAreaId, senderName, senderId, senderLevel, senderBattlePoint, senderIp, senderGuildId, recPuid, recPlayerId, recPlayerLevel, chatType, title, content, picUrl, vipLevel, saveAmt"/>
+	<data logType="sns_flow"              tableName="SnsFlow"                attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, recNum, count, snsType, subType, playerId, vipLevel, saveAmt"/>
+	
+	<data logType="anchor_gift"           tableName="AnchorGiftFlow"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, anchorId, giftId"/>
+	<data logType="pandora_lottery"       tableName="PandoraLottery"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,num" />
+	<data logType="pandora_exchange"      tableName="PandoraExchange"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,cfgId,num" />
+	<data logType="luckystar_lotter"      tableName="LuckStarLottery"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,lotCnt" />
+	
+	<!-- 机甲日志 -->
+	<data logType="mecha_change"	      tableName="MechaChange"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, mechaId, mechaStar, mechaLevel, mechaPower, action, mechaType, slot1lv, slot2lv, slot3lv, slot4lv, skin"/>
+	<data logType="mecha_march"	      	  tableName="MechaMarch"	         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, mechaId, battleType"/>
+	
+	<data logType="daily_mission"         tableName="DailyMission"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	
+	<data logType="war_college_team"     tableName="WarCollegeTeamFlow"     attribute="gameSvrId, dtEventTime, teamId, leaderId, guildId, instanceId, op"/>
+	<data logType="war_college_high"     tableName="WarCollegeBattleFlow"   attribute="gameSvrId, dtEventTime, battleId, guildId, cfgId, playerCount, op, win"/>
+	<data logType="super_lab_item_op"    tableName="SuperLabItemOper"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, opType, consume, award, totalCnt" />
+	<data logType="super_lab_oper"       tableName="SuperLabOper"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, opType, cfgId" />
+	<data logType="cross_server"         tableName="CrossServer"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetServer, state, crossType" />
+	
+	<data logType="cross_player_score"    tableName="CrossPlayerScoreFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, crossTargetType, addScore" />
+	<data logType="cross_guild_score"     tableName="CrossGuildScoreFlow"       attribute="gameSvrId, dtEventTime, originServer, guildId, crossTargetType, addScore"/>
+	<data logType="cross_server_score"    tableName="CrossServerScoreFlow"      attribute="gameSvrId, dtEventTime, originServer, crossTargetType, addScore"/>
+	
+	<data logType="come_back_reward"      tableName="ComeBackReward"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	<data logType="come_back_achieve"     tableName="ComeBackAchieve"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId" />
+	<data logType="come_back_exchange"    tableName="ComeBackExchange"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, num" />
+	<data logType="come_back_buy"         tableName="ComeBackBuy"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, num" />
+	
+	<!-- 新年寻宝 -->
+	<data logType="treasure_hunt_tool_use"    tableName="TreasureHuntToolUse"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	<data logType="treasure_hunt_touch_reward"    tableName="TreasureHuntTouchReward"      attribute="gameSvrId, dtEventTime" />
+	<data logType="treasure_hunt_touch_monster"    tableName="TreasureHuntTouceMonster"      attribute="gameSvrId, dtEventTime, addCount, currentCount" />
+	<data logType="treasure_hunt_touch_resource"    tableName="TreasureHuntTouceResource"      attribute="gameSvrId, dtEventTime, addCount, currentCount" />
+	<data logType="treasure_hunt_attack_monster"    tableName="TreasureHuntAttackMonster"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, isKill, guildId" />
+	<data logType="treasure_hunt_collect_resource"    tableName="TreasureHuntCollectResource"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	<data logType="treasure_hunt_resource_battle"    tableName="TreasureHuntResourceBattle"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, atkerBattlePoint, defPlayerId, deferBattlePoint" />
+	
+	<data logType="friend_recall" tableName="FriendRecall" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetOpenId" />
+	<data logType="friend_back"   tableName="FriendBack"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, fromServer, fromPlayerId" />
+	<data logType="war_flag"      tableName="WarFlagFlow"  attribute="gameSvrId, dtEventTime, placeGuildId, beforeGuildId, ownerGuildId, ownerGuildPower, zoneId, ownType" />
+	<data logType="skill_cast"    tableName="SkillCastFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, skillId, param1, param2, param3, param4, param5" />
+	<data logType="custom_gift"    tableName="CustomGiftFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, rewardIds,giftIdInt,moreTime,freeCnt" />
+	<data logType="auto_monster"   tableName="AutoMonsterSwitchFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, switchVal, minLevel, maxLevel, troops, marchCount, troopDetail" />
+	
+	<data logType="college_create"    tableName="CollegeOperFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collegeId, memberCnt, operType" />
+	<data logType="college_dismiss"   tableName="CollegeOperFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collegeId, memberCnt, operType" />
+	<data logType="college_reward"    tableName="CollegeRewardFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collegeId, targetPlayerId, rewardIds" />
+	<data logType="click_event"    tableName="ClickEventFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, clickType" />
+	<data logType="invite_task"    tableName="InviteTaskFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, taskId" />
+	<data logType="order_exp_buy"    tableName="OrderExpBuyFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, expId, exp" />
+	<data logType="order_auth_buy"   tableName="OrderAuthBuyFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, authId" />
+	<data logType="order_exp_flow"   tableName="OrderExpFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, expAdd, exp, level, reason, reasonId" />
+	<data logType="order_flow"       tableName="OrderFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, orderId, addTimes, finishTimes" />
+	<data logType="proctect_soldier"      tableName="ProtectSoldierFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, flag" />
+	<data logType="receive_soldier"       tableName="ReceiveSoldierFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, soldierId, count, type" />
+	<data logType="bounty_hunter_hit"     tableName="BountyHunterFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, boss, bossHp, costStr, rewStr, free, rewardMutil, lefState, bigGift" />
+	<data logType="hero_talent_change"    tableName="HeroTalentChangeFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, heroId, index, talentId, cost, expAdd, exp, power" />
+	<data logType="hero_talent_random"    tableName="HeroTalentRandomFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, heroId, index, poolId, talentId,costType, cost" />
+	<data logType="hero_talent_select"    tableName="HeroTalentSelectFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, heroId, index, talentId, toTalentId, exp, power" />
+
+	<data logType="plan_activity_lottery" tableName="PlanLotteryFlow"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, lotteryType, score" />
+	<data logType="daily_sign_sign"       tableName="DailySignFlow"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, type, day,cost" />
+	<data logType="time_limit_store"      tableName="TimeLimitStore"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, conditionType" />
+	
+	<data logType="tiberium_cross"         tableName="TiberiumCross"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetServer, state" />
+	<data logType="tiberium_sign_up"       tableName="TiberiumSignUp"         attribute="gameSvrId, dtEventTime, guildId, guildName, memberCnt, totalPowar, serverId, termId, timeIndex, playerId" />
+	<data logType="tiberium_match"         tableName="TiberiumMatch"          attribute="gameSvrId, dtEventTime, roomId, roomServer, termId, timeIndex, guildA, serverA, guildB, serverB,guildStrengthA, guildStrengthB" />
+	<data logType="tiberium_match_guild"   tableName="TiberiumMatchGuild"     attribute="gameSvrId, dtEventTime, guildId, guildName, serverId, memberCnt, totalPowar, termId, timeIndex,guildStrength" />
+	<data logType="tiberium_enter_room"    tableName="TiberiumEnterRoom"      attribute="gameSvrId, dtEventTime, playerId, termId, roomId, roomServer, guildId, serverId, power, guildStrength" />
+	<data logType="tiberium_quit_room"     tableName="TiberiumQuitRoom"       attribute="gameSvrId, dtEventTime, playerId, termId, guildId, isMidaway" />
+	<data logType="tiberium_player_score"  tableName="TiberiumPlayerScore"    attribute="gameSvrId, dtEventTime, playerId, termId, guildId, score" />
+	<data logType="tiberium_guild_score"   tableName="TiberiumGuildScore"     attribute="gameSvrId, dtEventTime, guildId, guildName, termId, serverId, roomId, roomServer, score, memberCnt, totalPower, isWin" />
+	<data logType="tiberium_player_war_info"   tableName="TiberiumPlayerWarInfo"     attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, selfPowar,termId" />
+	
+	<data logType="tbly_player_honor"   tableName="TiberiumPlayerHonor"    	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, honor" />
+	<data logType="tbly_guild_honor"    tableName="TiberiumGuildHonor"     	  attribute="gameSvrId, dtEventTime, roomId, guildId, guildName, honor" />
+	<data logType="sw_guild_honor"    tableName="StarWarsGuildHonor"     	  attribute="gameSvrId, dtEventTime, roomId, guildId, guildName, honor" />
+	
+	<data logType="tbly_player_kill_monster"   tableName="TiberiumPlayerKillMonster"    	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, roomId, guildId, guildName, monsterId, orderPowerAdd" />
+	<data logType="tbly_guild_use_order"       tableName="TiberiumGuildUseOrder"     	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, roomId, guildId, guildName, orderId, orderPowerCost" />
+	
+	
+	<data logType="tiberium_leagua_match"	tableName="TiberiumLeaguaMatch"		attribute="gameSvrId, dtEventTime, roomId, roomServer, season, termId, guildA, serverA, guildB, serverB, warStartTime,  group, serverType, battleType" />
+	<data logType="tiberium_leagua_join"	tableName="TiberiumLeaguaJoin"		attribute="gameSvrId, dtEventTime, zoneId, season, guildId, guildName, serverId, initPower" />
+	<data logType="tiberium_leagua_degrade"	tableName="TiberiumLeaguaDegrade"		attribute="gameSvrId, dtEventTime, zoneId, season, termId, guildId, guildName, serverId, groupBef, groupAft" />
+	<data logType="tiberium_leagua_guild_war_info"   tableName="TiberiumLeaguaGuildWarInfo"     attribute="gameSvrId, dtEventTime, guildId, guildName, serverId, memberCnt, totalPowar, season, termId, serverType" />
+	<data logType="tiberium_leagua_guild_manage_end"   tableName="TiberiumLeaguaGuildManageEnd"     attribute="gameSvrId, dtEventTime, roomId, roomServer, season, termId, guildA, serverA, guildAname, guildApower, guildB, serverB, guildBname, guildBpower" />
+	<data logType="tiberium_leagua_player_war_info"   tableName="TiberiumLeaguaPlayerWarInfo"     attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, selfPowar, season, termId, group" />
+	<data logType="tiberium_leagua_player_season_reward"   tableName="TiberiumLeaguaPlayerReward"     attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, selfScore, season, termId, rewardId, isLeagua" />
+	<data logType="tiberium_leagua_guild_season_reward"   tableName="TiberiumLeaguaGuildReward"     attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, guildScore, selfScore, season, termId, rewardId, isLeagua" />
+	<data logType="tiberium_leagua_enter_room"    tableName="TiberiumLeaguaEnterRoom"      attribute="gameSvrId, dtEventTime, playerId, season, termId, roomId, roomServer, guildId, serverId, power" />
+	<data logType="tiberium_leagua_quit_room"     tableName="TiberiumLeaguaQuitRoom"       attribute="gameSvrId, dtEventTime, playerId, season, termId, guildId, isMidaway" />
+	<data logType="tiberium_leagua_player_score"  tableName="TiberiumLeaguaPlayerScore"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, roleName, money, registDay, registTime, power, roomId, roomServer, guildId, guildName, score, result" />
+	<data logType="tiberium_elo_score"   tableName="TiberiumEloScore"     attribute="gameSvrId, dtEventTime, guildId, termId, scoreBef, scoreAft, changeNum, reason" />
+	<data logType="tiberium_build_score"   tableName="TiberiumBuildScore"     attribute="gameSvrId, dtEventTime, gameId,isLeaguaWar,season,campAGuild,campBGuild,campAScore,campBScore,campAControl,campBControl,buildPos" />
+	<data logType="tiberium_battle_score"   tableName="TiberiumBattleScore"     attribute="gameSvrId, dtEventTime, gameId,isLeaguaWar,season,winGuild,campAGuild,campBGuild,campAPlayerCnt,campBPlayerCnt,campAScore,campBScore, campABomShot, campBBomShot, campABuildScore, campBBuildScore, campACollectScore, campBCollectScore,extryHonorA,extryHonorB,firstControlHonorA,firstControlHonorB" />
+	<data logType="tiberium_nian_kill"   tableName="TiberiumNianKill"     attribute="gameSvrId, dtEventTime, gameId,isLeaguaWar,season,guildId" />
+	<data logType="tiberium_nuclear_shot"   tableName="TiberiumNuclearShot"     attribute="gameSvrId, dtEventTime, gameId,isLeaguaWar,season,guildId" />
+	
+	<data logType="tiberium_leagua_guild_info"	tableName="TiberiumLeaguaGuildInfo"		attribute="gameSvrId, dtEventTime, season, termId, guildId, guildName, guildServer, guildFlag, teamId, groupType, isSeed, leaderId, leaderName, leaderOpenid, memberCnt, winCnt, loseCnt, totalScore, kickOutTerm, serverType" />
+	<data logType="tiberium_leagua_war_result"	tableName="TiberiumLeaguaWarResult"		attribute="gameSvrId, dtEventTime, roomId, season, termId, guildA, scoreA, guildB, scoreB, winner, firstKill, first5000, firstOccupa, group, serverType" />
+	<data logType="tiberium_leagua_new_signup_old"	tableName="TiberiumLeaguaNewSignupOld"		attribute="gameSvrId, dtEventTime, playerId, guildId" />
+
+	<data logType="star_light_sign_award"    tableName="StarLightSignAward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, award, reason" />
+	<data logType="star_light_sign_score"    tableName="StarLightSignScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, before, after, add" />
+	<data logType="star_light_sign_choose"    tableName="StarLightSignChoose"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, rechargeType, choose" />
+	
+	<data logType="sw_join_guild"	tableName="StarWarsMatch"		attribute="gameSvrId, dtEventTime, roomId, roomServer, termId, warType, guildId, guildServer" />
+	<data logType="sw_enter_room"    tableName="StarWarsEnterRoom"      attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, termId, roomId, roomServer, warType" />
+	<data logType="sw_quit_room"     tableName="StarWarsQuitRoom"       attribute="gameSvrId, dtEventTime, playerId, guildId, serverId, termId, warType, isMidaway" />
+	
+	<data logType="dress_send"       tableName="DressSendFlow"                attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, dressId, tPlayer, item" />
+	<data logType="spread_log"       tableName="SpreadActivityFlow"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, openid, code, charge, exchange, count" />
+	<data logType="invest"           tableName="InvestFlow"                   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, productId, investCancel, customer, investAmount" />
+	
+	<data logType="lucky_discount_draw"      tableName="LuckyDiscountDraw"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, refreshType, poolId, discount" />
+	<data logType="lucky_discount_buy"       tableName="LuckyDiscountBuy"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, goods, price, num, discount, goodsId" />
+	<data logType="cross_fortress_war"       tableName="CrossFortressWarFlow"         attribute="gameSvrId, dtEventTime, originServer, fightResult"/>
+	<data logType="cross_fortress_occupy"    tableName="CrossFortressOccupyFlow"      attribute="gameSvrId, dtEventTime, originServer, occupyTime"/>
+	
+	<!-- 英雄试炼 领取任务 刷新任务 任务完成 金币刷新 金币完成 -->
+	<data logType="hero_trial_receive"          tableName="HeroTrialReceive"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, missionId"/>
+	<data logType="hero_trial_refresh_mission"  tableName="HeroTrialMission"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, missionId"/>
+	<data logType="hero_trial_complete"         tableName="HeroTrialComplete"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, missionId"/>
+	<data logType="hero_trial_cost_refresh"     tableName="HeroTrialCostRefresh"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cost"/>
+	<data logType="hero_trial_cost_complete"    tableName="HeroTrialCostComplete"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cost"/>
+	
+	<data logType="revenge_shop"                tableName="RevengeShopTriggerFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, soldierCount, startTime, login" />
+	<data logType="hero_back_exchange"          tableName="HeroBackExchangeFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, activityId, exchangeId, cost, gain, exchangeCount" />
+	<data logType="hero_back_buy"               tableName="HeroBackBuyFlow"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, activityId, chestId, cost, gain, count" />
+	<data logType="black_tech_draw"             tableName="BlackTechDraw"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cost, buffId" />
+	<data logType="black_tech_buy"              tableName="BlackTechBuy"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, packageId" />
+	<data logType="black_tech_active"           tableName="BlackTechActive"         attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, buffId" />
+	<data logType="city_shield"                 tableName="CityShieldFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, openShield, endTime, auto, dungeon" />
+	
+	<data logType="hero_collect"    tableName="HeroCollect"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collectActNum"/>
+	
+	<!-- 铠甲 -->
+	<data logType="armour_add"				tableName="ArmourAdd"  			attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, uuid, armourId, quality" />
+	<data logType="armour_unlock_suit"      tableName="ArmourUnlockSuit"  	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, suitId" />
+	<data logType="armour_resolve"          tableName="ArmourResolve"  		attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, count" />
+	<data logType="armour_intensify"        tableName="ArmourIntensify"  	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, uuid, armourId, afterLevel" />
+	<data logType="armour_inherit"          tableName="ArmourInherit"  		attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, uuid, beUuid" />
+	<data logType="armour_breakthrough"     tableName="ArmourBreakthrough"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, uuid, armourId, afterQuality" />
+	<data logType="fully_armed_search"      tableName="FullyArmedSearch"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, searchId" />
+	<data logType="fully_armed_buy"         tableName="FullyArmedBuy"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, count" />
+	<data logType="pioneer_gift_buy"        tableName="PioneerGiftBuy"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, type, giftId" />
+	<data logType="roulette_lottery"     tableName="RouletteLottery"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, count, buyCount, itemSet" />
+	<data logType="roulette_box"         tableName="RouletteBox"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId " />
+	
+	<data logType="championship_guild"   tableName="ChampionshipGuild"     attribute="gameSvrId, dtEventTime, guildId, guildName, termId, guildGrade, signCnt, joinCnt" />
+	<data logType="championship_player"  tableName="ChampionshipPlayer"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, talentType, superLab, buffATK, buffDEF, buffSTR" />
+	<data logType="vit_change"           tableName="StrengthFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, beforeValue, afterValue, amount, addOrReduce, reason" />
+	<data logType="daily_active_change"  tableName="LivenessFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, beforeValue, afterValue, amount, reason" />
+	<data logType="hero_skin_change"     tableName="HeroSkinFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, reason, skinId, step, luck, itemIds, itemCounts" />	
+	<data logType="skin_plan"  			 tableName="SkinPlan"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, rollScore, beforeScore, afterScore" />
+	<data logType="daily_recharge"  	 tableName="DailyRechargeFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, buyGift, giftId" />
+	<data logType="daily_recharge_new"   tableName="DailyRechargeNewFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, rewardIds" />
+		
+	<data logType="guard_relation"         tableName="GuardRelation"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetPlayerId,type"/>
+	<data logType="guard_player_level"         tableName="GuardPlayerLevel"  attribute="gameSvrId, dtEventTime, level,num"/>
+	<data logType="strongest_guild_person_score"  tableName="StrongestGuildPersonScore" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, scoreType, termId, stageId, score, guildId"/>
+	<data logType="machine_awake_person_damage"	  tableName="MachineAwakePersonDamage" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, activityId, termId, addScore, totalScore"/>
+	<data logType="mid_autumn_gift"  			  tableName="MidAutumnGift"              attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, items" />
+	<data logType="gift_buy_voucher"              tableName="GiftBuyVoucher"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, battlePoint, giftType, giftId, itemType, buyCount, costMoney, voucherId, voucherValue"/>
+	<data logType="medal_treasure_lottery"       tableName="MedalTreasureLottery"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, num" />
+	<data logType="ac_receive_mission"  	 tableName="ACReceiveMission"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId, guildMemberCount" />	
+	<data logType="ac_finish_mission"  	     tableName="ACFinishMission"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, addExp, guildMemberCount" />	
+	<data logType="ac_abandon_mission"  	 tableName="ACAbandonMission"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId, outData" />	
+	<data logType="ac_buy_times"  	   tableName="ACBuyTimes"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />	
+	<data logType="guard_value"        tableName="GuardValueRecord"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,guardValue" />
+	<data logType="time_limit_drop"    tableName="TimeLimitDropFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,dropNum" />
+	<data logType="hell_fire"          tableName="HellFireFlow"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,type,score" />
+	<data logType="kill_gundam"  	 tableName="KillGundamFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, posX, posY" />
+	<!-- 特惠庆典 -->
+	<data logType="ac_travel_shop_assist_achieve_finish"     tableName="ACTravelShopAssistAchieveFinish"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId" />
+	<data logType="ac_travel_shop_refresh_cost"     tableName="ACTravelShopAssistCost"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, times,costType, cost" />
+	<!-- 红警锦鲤 -->
+	<data logType="ac_redkoi_player_wish_cost"     tableName="ACRedkoiPlayerCostPoint"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,awardId,costType,cost,wishPoint,termId,turnId" />
+	<data logType="ac_redkoi_award"                 tableName="ACRedkoiAward"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,awardId,temId,turnId" />
+	<data logType="divide_gold_open_red_envelope"    tableName="DivideGoldOpenEnvelope"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,goldNum" />
+	<data logType="player_share"   tableName="PlayerShare"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,shareType" />
+	<data logType="player_share_fame_hall"   tableName="PlayerShareFameHall"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,shareType,season" />
+	<data logType="pylon_march_reach"    tableName="PylonMarchReach"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,dungeon" />
+	<data logType="pylon_march_battle"    tableName="PylonMarchBattle"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, atkerBattlePoint, defPlayerId, deferBattlePoint,dungeon" />
+	<!-- 英雄进化之路 -->
+	<data logType="evolution_exchange"      tableName="EvolutionExchange"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, level, exchangeId" />
+	<data logType="evolution_exp_change"    tableName="EvolutionScoreChange"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, score, resourceId, add" />
+	<data logType="evolution_task"          tableName="EvolutionTask"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, taskId, times" />
+	<!-- 威龙商城兑换  -->
+	<data logType="flight_plan_exchange"    tableName="J20ShopExchange"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, exchangeId, exchangeCount, itemId, costNum, exchangeTimes" />
+	<!--  攻防模拟战 -->
+	<data logType="simulate_war_sign"          tableName="SimulateWarSign"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, wayType, optType" />
+	<data logType="simulate_war_encourage"     tableName="SimulateWarEncourage"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId" />
+	<data logType="simulate_war_adjust"        tableName="SimulateWarAdjust"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId" />
+	<!-- 场景入口点击事件 -->
+	<data logType="scenario_entrance_click"    tableName="ScenarioEntranceClickFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, scenarioEntrance" />
+	<!-- 指挥官学院礼包购买 -->
+	<data logType="command_academy_gift_buy"    tableName="CommandAcademyGiftBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,stageId, giftId" />
+	<data logType="command_academy_rank"    tableName="CommandAcademyRank"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,stageId, rankIndex" />
+	<data logType="command_academy_buy_count"    tableName="CommandAcademyBuyCount"  attribute="dtEventTime, gameSvrId, termId,stageId,buyCount, assistCount" />
+	<!-- 指挥官学院简化礼包购买 -->
+	<data logType="command_academy_simplify_gift_buy"    tableName="CommandAcademySimplifyGiftBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,stageId, giftId" />
+	<data logType="command_academy_simplify_rank"    tableName="CommandAcademySimplifyRank"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,stageId, rankIndex" />
+	<data logType="command_academy_simplify_buy_count"    tableName="CommandAcademySimplifyBuyCount"  attribute="dtEventTime, gameSvrId, termId,stageId,buyCount, assistCount" />	
+	<!-- 装备黑市 精炼-->
+	<data logType="equip_black_market_refine"    tableName="EquipBlackMarketRefine"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,refineId, count" />
+	
+    <data logType="christmas_task"               tableName="ChristmasTask" attribute="gameSvrId,dtEventTime,termId,taskId,num" />
+    <data logType="christmas_task_receive"        tableName="ChristmasTaskReceive" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,taskId" />    
+    <data logType="christmas_box"                 tableName="ChristmasBox"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,boxId,optType" />
+    
+    <!-- 使用行军表情 -->
+    <data logType="march_emotion"                 tableName="MarchEmotionFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, marchId, emotionId" />
+	
+    <!-- 雪球大战进球-->
+    <data logType="snowball_goal"	tableName="SnowballGoalFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, posX, posY" />   
+	<!-- 赛伯 -->
+	<data logType="cyborg_build_control"    tableName="CyborgBuildControl"  attribute="gameSvrId, dtEventTime, roomId, guildId, guildName, begin, control, over" />
+	<data logType="cyborg_nuclear_hit"    tableName="CyborgNuclearHit"  attribute="gameSvrId, dtEventTime, roomId, ptype, pointx, pointy,  guildId, guildName, tguildId, tguildName, killStr" />
+
+	<data logType="cyborg_sign_up"       tableName="CyborgSignUp"         attribute="gameSvrId, dtEventTime, teamId, teamName, guildId, guildName, memberCnt, totalPowar, serverId, termId, timeIndex, playerId" />
+	<data logType="cyborg_match_room"         tableName="CyborgMatchRoom"          attribute="gameSvrId, dtEventTime, roomId, roomServer, termId, timeIndex, teamA, guildA, serverA, teamB, guildB, serverB, teamC, guildC, serverC, teamD, guildD, serverD, teamPowerA, teamPowerB, teamPowerC, teamPowerD" />
+	<data logType="cyborg_match_team"   tableName="CyborgMatchTeam"     attribute="gameSvrId, dtEventTime, teamId, teamName, guildId, guildName, serverId, memberCnt, totalPowar, termId, timeIndex, matchPower" />
+	<data logType="cyborg_match_player"   tableName="CyborgMatchPlayer"     attribute="gameSvrId, dtEventTime, playerId, termId, teamId, guildId, serverId, power" />
+	<data logType="cyborg_enter_room"    tableName="CyborgEnterRoom"      attribute="gameSvrId, dtEventTime, playerId, termId, roomId, roomServer, teamId, guildId, serverId, power,matchPower" />
+	<data logType="cyborg_quit_room"     tableName="CyborgQuitRoom"       attribute="gameSvrId, dtEventTime, playerId, termId, teamId, guildId, isMidaway" />
+	<data logType="cyborg_player_score"  tableName="CyborgPlayerScore"    attribute="gameSvrId, dtEventTime, playerId, termId, teamId, guildId, score, teamRank" />
+	<data logType="cyborg_team_score"   tableName="CyborgTeamScore"     attribute="gameSvrId, dtEventTime, teamId, teamName, guildId, termId, serverId, roomId, roomServer, score, teamRank" />
+	
+	<data logType="cyborg_nian_kill"    tableName="CyborgNianKill"  attribute="gameSvrId, dtEventTime, roomId, guildId, guildName" />
+
+	<data logType="resource_defense_build"	tableName="ResourceDefenseBuild"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, resType" />   
+	<data logType="resource_defense_steal"	tableName="ResourceDefenseSteal"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetId" />   
+	<data logType="resource_defense_exp"	tableName="ResourceDefenseExp"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, addExp, afterExp, afterLevel" />   
+
+	<!-- 时空豪礼 -->
+	<data logType="chrono_gift_task_finish"    tableName="ChronoGiftTaskFinish"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, taskId" />
+	<data logType="chrono_gift_achieve_free_award"    tableName="ChronoGiftAchieveFreeAward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, giftId" />
+	<data logType="chrono_gift_unlock"    tableName="ChronoGiftUnlock"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, giftId" />
+	<!-- 装扮外观打点记录 -->
+	<data logType="dress_show_change"     tableName="DressShowFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, dressType, modelType, showType, showEndTime" />
+	<data logType="dress_god_change"     tableName="DressGodFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, dressId, dressType, modelType, showStartTime, showEndTime" />
+	<data logType="recharge_fund_invest"    tableName="RechargeFundInvest"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId" />
+	<data logType="recharge_fund_recharge"    tableName="RechargeFundRecharge"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rechargeGold, rechargeBef, rechargeAft, unlockCnt" />
+	<data logType="recharge_fund_reward"    tableName="RechargeFundReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId, rewardId" />
+	<data logType="guild_shop_add"           tableName="GuildShopAdd"               attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, itemId, itemCnt, costScore, scoreBef, scoreAft"/>
+	
+	<!-- SS品质装备属性变化 -->
+	<data logType="ss_armour_attr_change"    tableName="SSArmourAttrChange"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, armourCfgId, level, quality, power, suit, extraAttr, skillAttr, reason" />
+	
+	<!-- 回顾有礼 -->
+	<data logType="back_gift_lottery"    tableName="BackGiftLottery"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, backCount,isFree,lotteryCount" />
+	<!-- 体力赠送 -->
+	<data logType="power_send_message_send"    tableName="PowerSendMessageSend"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, backCount,messageCount,messageTotalCount" />
+	<!-- 赛博赛季联盟积分流水 -->
+	<data logType="cyborg_season_guild_score"   tableName="CyborgSeasonGuildScore"     attribute="gameSvrId, dtEventTime, guildId, teamId, season, termId, serverId, scoreChange, score" />
+	<!-- 赛博赛季段位流水 -->
+	<data logType="cyborg_season_star"   tableName="CyborgSeasonStar"     attribute="gameSvrId, dtEventTime, guildId, teamId, season, termId, serverId, starChange, star, reason, param" />
+	<!-- 赛博赛季段位流水 -->
+	<data logType="cyborg_season_team_rank_award"   tableName="CyborgSeasonTeamRankAward"     attribute="gameSvrId, dtEventTime, guildId, teamId, season,serverId, star, rank, playerId" />
+	<!-- 赛博赛季段位流水 -->
+	<data logType="cyborg_season_team_star_award"   tableName="CyborgSeasonTeamStarAward"     attribute="gameSvrId, dtEventTime, guildId, teamId, season,serverId, star, division, playerId" />
+	
+	
+	<!-- 免费兑换装扮等级经验信息 -->
+	<data logType="exchange_decorate_level"    tableName="ExchangeDecorateLevel"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, addExp,afterLevel,afterExp" />		
+	<!-- 免费兑换装扮任务完成信息 -->
+	<data logType="exchange_decorate_mission"    tableName="ExchangeDecorateMission"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, missionId" />	
+	<!-- 能源滚滚活动个人积分 -->
+	<data logType="energies_self_score"    tableName="EnergiesSelfScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, addScore, addType, afterScore" />	
+	<!-- 能源滚滚活动联盟积分 -->
+	<data logType="energies_guild_score"   tableName="EnergiesGuildScore"     attribute="gameSvrId, dtEventTime, guildId, termId, addScore, addType, afterScore" />
+	<!-- 能源滚滚活动排行 -->
+	<data logType="energies_rank"   tableName="EnergiesRank"     attribute="gameSvrId, dtEventTime, termId, rankType, rankerId, rank, score" />
+	
+	<!-- 幽灵秘宝翻牌结果 -->
+	<data logType="ghost_secret_drew_result"    tableName="GhostSecretDrewResult"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, drewValue " />
+	<!-- 幽灵秘宝重置数据 -->
+	<data logType="ghost_secret_reset_info"    tableName="GhostSecretResetInfo"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, drewedTimes " />
+	<!-- 幽灵秘宝奖励触发数据 -->
+	<data logType="ghost_secret_reward_info"    tableName="GhostSecretRewardInfo"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rewardId" />
+	<!-- 虚拟实验室开牌结果 -->
+	<data logType="virtual_laboratory_open"    tableName="VirtualLaboratoryOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cardIndex, cardIndexTwo, cardValue" />
+	<!-- 装备科技等级 -->
+	<data logType="equip_research_level_up"    tableName="EquipResearchLevelUp"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, researchId, level" />
+
+	<!-- 端午-联盟庆典升级发奖 -->
+	<data logType="dragon_boat_celebration_level_reward"   tableName="DragonBoatCelebrationLevelReward"     attribute="gameSvrId, dtEventTime, termId, guildId, guildLevel, players" />
+	<!-- 端午-联盟经验贡献 -->
+	<data logType="dragon_boat_celebration_donate"    tableName="DragonBoatCelebrationDonate"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, donateType, donateExp, totalExp" />		
+	<!-- 端午-兑换道具 -->
+	<data logType="dragon_boat_exchange"    tableName="DragonBoatExchange"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, exchangeId, exchangeCount" />		
+	<!-- 端午-龙船领奖 -->
+	<data logType="dragon_boat_gift_achieve"    tableName="DragonBoatGiftAchieve"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, type, boatId" />		
+	<!-- 端午-福袋购买 -->
+	<data logType="dragon_boat_lucky_bag_open"    tableName="DragonBoatLuckyBogOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, openCount" />		
+	<!-- 端午-充值天数 -->
+	<data logType="dragon_boat_recharge_days"    tableName="DragonBoatRechargeDays"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, days" />		
+	
+	<!-- 勋章基金领取奖励积分详情 -->
+	<data logType="medal_fund_reward_score"    tableName="MedalFundRewardScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyId,scoreInfo" />
+	<!-- 超能核心操作 -->
+	<data logType="laboratory_op"    tableName="LaboratoryOp"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, opration, randomBlock, powerCore, powerBlock" />
+	
+	<!-- 沙场点兵-翻开雕像 -->
+	<data logType="armies_mass_open_sculpture"    tableName="ArmiesMassOpenSculpture"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, stage, quality" />
+	
+	<!-- 能量源基金领取奖励积分详情 -->
+	<data logType="energy_invest_reward_score"    tableName="EnergyInvestRewardScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyId,scoreInfo" />
+	
+	<!-- 机甲基金领取奖励积分详情 -->
+	<data logType="supersoldier_invest_reward_score"    tableName="SupersoldierInvestRewardScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyId,scoreInfo" />
+	
+	<!-- 霸主膜拜信息详情 -->
+	<data logType="overlord_blessing_info"   tableName="OverlordBlessingInfo"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, blessRealNum, blessWaterNum" />
+	
+	<!-- 新服战令 金条购买战令经验-->
+	<data logType="new_order_exp_buy"    tableName="NewOrderExpBuyFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, expId, exp" />
+	<!-- 新服战令 升级直购-->
+	<data logType="new_order_auth_buy"   tableName="NewOrderAuthBuyFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, authId" />
+	<!-- 新服战令 经验流水-->
+	<data logType="new_order_exp_flow"   tableName="NewOrderExpFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, expAdd,totalExp, exp, level, reason, reasonId" />
+	<!-- 新服战令 任务完成流水-->
+	<data logType="new_order_flow"       tableName="NewOrderFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, orderId, addTimes, finishTimes" />
+
+	<!-- 赛季战令 升级直购-->
+	<data logType="season_order_auth_buy"   tableName="SeasonOrderAuthBuyFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, authId" />
+	<!-- 赛季战令 经验流水-->
+	<data logType="season_order_exp_flow"   tableName="SeasonOrderExpFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, expAdd, exp, oldLevel, level, reason, reasonId" />
+	<!-- 赛季战令 任务完成流水-->
+	<data logType="season_order_flow"       tableName="SeasonOrderFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, orderId, addTimes, finishTimes" />
+	<!-- 中控飞堡记录  -->
+	<data logType="zk_remove_city"      tableName="ZKRemoveCityRecord"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	
+	<!-- 购买双享豪礼礼包-->
+	<data logType="double_gift_buy"      tableName="DoubleGiftBuy"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId, rewardId " />
+	<!-- 购买团购-->
+	<data logType="group_buy"      tableName="GroupBuy"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId, rewardId, realTimes, waterTimes " />
+	<!-- 幽灵工厂行军记录-->
+	<data logType="ghost_tower_attack"    tableName="GhostTowerAttack"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, ghostId, rlt" />
+	<data logType="ghost_tower_reward_email"    tableName="GhostTowerRewardEmail"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, ghostId, reward" />
+	
+	<!-- 军械要塞 -->
+	<data logType="ordnance_fortress_open"    tableName="OrdnanceFortressOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, stage, openId, count, cost, rewardType, rewardId" />
+	<data logType="ordnance_fortress_advance"    tableName="OrdnanceFortressAdvance"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, fromStage, toStage" />
+	<!-- 周年庆- 庆典美食制作-->
+	<data logType="armament_exchange_first"    tableName="ArmamentExchangeFirst"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId" />
+	<!-- 周年庆- 蛋糕分享领奖励 -->
+	<data logType="cake_share_reward_achieve"    tableName="CakeShareRewardAchieve"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, type, cakeId" />		
+	<!-- 周年庆- 烟花盛典点燃激活buff -->
+	<data logType="fire_works_for_buff_active"    tableName="FireWorksForBuffActive"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buffId" />
+	
+	<!-- 周年庆- 庆典美食制作-->
+	<data logType="celebration_food_make"    tableName="CelebrationFoodMake"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, level" />
+	<!-- 装备工匠词条属性变动-->
+	<data logType="equip_carftsman_attr"    tableName="EquipCarftsmanAttr"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, armourAddCfgId, effectType, effectValue, reason, inheritArmourCfgId" />
+	<!-- 周年抢红包 -->
+	<data logType="red_package_open"    tableName="RedPackageOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, stage, score" />
+	<!-- 战地寻宝活动 -->
+	<data logType="battle_field_dice"         tableName="BattleFieldDiceFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, addOrReduce, diceType, count, afterCount" />
+	<data logType="battle_field_dice_reward"  tableName="BattleFieldDiceRewardFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, awardType, awardId, cellId" />
+	<data logType="battle_field_buy_gift"     tableName="BattleFieldBuyGiftFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId" />
+	<data logType="activity_achieve"          tableName="ActivityAchieveFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, activityId, termId, achieveId, achieveState, achieveData" />
+	
+	<!-- 装备战令 -->
+	<data logType="order_equip_exp_buy"    tableName="OrderEquipExpBuyFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, expId, exp" />
+	<data logType="order_equip_auth_buy"   tableName="OrderEquipAuthBuyFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, authId" />
+	<data logType="order_equip_exp_flow"   tableName="OrderEquipExpFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, expAdd, exp, level, reason, reasonId" />
+	<data logType="order_equip_flow"       tableName="OrderEquipFlow"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cycle, orderId, addTimes, finishTimes" />
+	<!-- 周年祝福语 -->
+	<data logType="greet_activity_item_index"       tableName="GreetActivityItemIndex"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, imageIndex" />
+	<!-- 双十一联盟欢庆活动积分流水记录 -->
+	<data logType="alliance_celebrate_score"   tableName="AllianceCelebrateScore"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, addScore, afterPlayerScore, afterGuildScore" />
+	<!-- 双十一联盟欢庆活动领取奖励记录 -->
+	<data logType="alliance_celebrate_reward"   tableName="AllianceCelebrateReward"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, level, index" />
+	<!-- 超级折扣 -->
+	<data logType="super_discount_draw"      tableName="SuperDiscountDraw"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, refreshType,cfgId, poolId, discount" />
+	<data logType="super_discount_buy"       tableName="SuperDiscountBuy"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,goods, price, num, discount, goodsId, voucherId" />
+	<!-- 全服签到 -->
+	<data logType="global_sign"       tableName="GlobalSign"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId" />
+	<!-- 回流拼图 -->
+	<data logType="return_puzzle_flow"    tableName="ReturnPuzzleFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, score" />
+
+	<!-- 资源保卫战 技能相关-->
+	<data logType="resource_defense_skill_refresh"   tableName="ResourceDefenseSkillRefresh"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, type, skillInfo" />
+	<data logType="resource_defense_skill_effect"   tableName="ResourceDefenseSkillEffect"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, skillId" />
+	<!-- 泰能工厂 资源收取去查itemflow-->
+	<data logType="plant_factory_flow"    tableName="PlantFactoryFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, action, befId, afterId, msg" />
+	<!-- 泰能科技-->
+	<data logType="plant_tech_flow"    tableName="PlantTechFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, action, befId, afterId, msg" />
+	<!-- 装扮投放系列活动三:重燃战火 领取宝箱每次一个-->
+	<data logType="fire_reignite_receive_box"   tableName="FireReigniteReceiveBox"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId" />
+
+	<!-- 平台信息授权变更 -->
+	<data logType="player_usertag_change"   tableName="PlayerUsertagChange"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, eventTag" />
+	<!-- 传承记录  -->
+	<data logType="account_inherit_flow"   tableName="AccountInheritFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oldPlayerId, oldServerId, sumGold, rebetGold, sumVipExp, rebetExp, termId" />
+	<data logType="inherit_cond_result"   tableName="InheritCondResult"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, condType, condParam, inheritedRoles, uninheritedRoles" />
+
+	<!-- 军事备战 -->
+	<data logType="military_prepare_advanced_reward"       tableName="MilitaryPrepareAdvancedReward"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,rewardId" />
+	<!-- 巅峰荣耀获取积分 -->
+	<data logType="peak_honour_score"   tableName="PeakHonourScore"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, getType, addScore, afterScore, matchId" />
+	<!-- 限时抢购 -->
+	<data logType="time_limit_buy"   tableName="TimeLimitBuy"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, goodsId, success" />
+	<!-- 限时抢购注水 -->
+	<data logType="time_limit_buy_water"   tableName="TimeLimitBuyWater"     attribute="gameSvrId, dtEventTime, goodsId, addCount" />
+	<!-- 泰能宝库 -->
+	<data logType="plant_fortress_open"    tableName="PlantFortressOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, stage, openId, count, cost, rewardType, rewardId" />
+	<data logType="plant_fortress_advance"    tableName="PlantFortressAdvance"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, fromStage, toStage" />
+	<!-- 圣诞-累计充值 -->
+	<data logType="christmas_recharge"    tableName="ChristmasRecharge"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rechargeDiamond, totalRechargeDiamond" />
+	<!-- 雄心壮志 -->
+	<data logType="coreplate_score_box"    tableName="CoreplateScoreBox"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, boxCount" />
+	<!-- 装扮投放系列活动三:重燃战火 领取宝箱每次一个-->
+	<data logType="fire_reignite_receive_box_two"   tableName="FireReigniteReceiveBoxTwo"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, boxId" />
+
+	<data logType="login_fund_two_buy"	    tableName="LoginFundTwoBuy"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, termId, type"/>
+	<!--洪福礼包-->
+	<data logType="hong_fu_gift_unlock"	    tableName="HongFuGiftUnlock"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, termId, giftId"/>
+	<data logType="hong_fu_gift_reward"	    tableName="HongFuGiftReward"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, termId, giftId, dayCount, chooseRewardId"/>
+	<!-- 装备属性变化 只记录SS级 或者 S级并且等级大于1级的-->
+	<data logType="armour_change"    tableName="ArmourChange"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, armourCfgId, level, quality, star, power, suit, extraAttr, skillAttr, starAttr, reason, quantum, armourUuid" />
+	<!-- 服务器统计数据-->
+	<data logType="server_statistic"   tableName="ServerStatistic"     attribute="gameSvrId, dtEventTime, serverId, mergeServerIds, serverOpenTime, playerPowerOne, playerPowerTen, playerCityOne, playerCityTen, playerLevelOne, playerLevelTen, guildPowerOne, guildPowerTen" />
+	<!-- 红蓝对决翻牌记录 -->
+	<data logType="redblue_ticket_flow"   tableName="RedblueTicketFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, operType, pool, ticketId, rewardId, refreshTimes" />
+	<!--  情报中心升级 -->
+	<data logType="agency_levelup"       tableName="AgencyLevelup"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, afterLevel" />
+	<!--  情报中心领奖 -->
+	<data logType="agency_award"       tableName="AgencyAward"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId,playerLevel, vipLevel, cityLevel, eventUUID, eventCfgId, specialEvent, levelUpEvent, itemEvent, difficulity" />
+	<!--  情报中心刷新事件 -->
+	<data logType="agency_refresh"       tableName="AgencyRefresh"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId,playerLevel, vipLevel, cityLevel, eventUUID, eventCfgId, specialEvent, levelUpEvent, itemEvent, difficulity" />
+	<!--  情报中心箱子奖励 -->
+	<data logType="agency_box"       tableName="AgencyBox"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId,playerLevel, vipLevel, cityLevel,boxId, boxExtLevel, agencyLevel" />
+	<!--  情报中心完成事件 -->
+	<data logType="agency_complete"       tableName="AgencyComplete"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId,playerLevel, vipLevel, cityLevel, eventUUID, eventCfgId, specialEvent, levelUpEvent, itemEvent, difficulity" />
+
+	<!-- 小战区 -->
+	<data logType="xzq_guild_participate"   tableName="XzqGuildParticipate"   attribute="gameSvrId, dtEventTime, termId, guildId, memberCount, type" />
+	<data logType="xzq_guild_signup"        tableName="XzqGuildSignup"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_npc_attacked"        tableName="XzqNpcAttacked"        attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_control"             tableName="Xzqcontrol"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId,type,count" />
+	<data logType="xzq_record_damage"       tableName="XzqRecordDamage"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId,damage,damageIndex" />
+	<data logType="xzq_record_fist_occupy"  tableName="XzqRecordFistOccupy"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_record_occupy"       tableName="XzqRecordOccupy"       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_player_participate"  tableName="XzqPlayerParticipate"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_guild_signup_cancel" tableName="XzqGuildSignupCancel"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, buildId" />
+	<data logType="xzq_control_time"        tableName="XzqControlTime"        attribute="gameSvrId, dtEventTime, termId, guildId, controlTime, buildId" />
+	<data logType="xzq_init_remove"         tableName="XzqInitRemove"         attribute="gameSvrId, dtEventTime, pointId, pointType, playerId, guildId, buildId" />
+	<data logType="xzq_gift_send"           tableName="XzqGiftSend"           attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId,buildId, sender,awardId,count" />
+	
+	<!-- 限时抢购客户端打点-->
+	<data logType="time_limit_client"    tableName="TimeLimitClientLog"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type, activityId, goodsId, diamonds, rechargeId" />
+		<!-- 战力-->
+	<data logType="login_power"    tableName="LoginPower"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, playerBattle, army, build, tech, trap, hero, superSoldier, armour, armourTech, plantScool" />
+	<!-- 泰能兵强化-->
+	<data logType="plant_soldier_flow"    tableName="PlantSoldierFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, action, befId, afterId, msg" />
+	
+	<!-- 精装夺宝 -->
+	<data logType="dress_treasure_random"      tableName="DressTreasureRandom"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, randomFirst, randomSecond, awardNumStart, awardNumEnd,randomId, awardId, cost" />
+	<data logType="dress_treasure_reset"       tableName="DressTreasureReset"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, randomId, awardNumStart, awardNumEnd" />
+
+	<!-- 坊间杯 -->
+	<data logType="obelisk_award"    tableName="ObeliskAward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, award, num , guildNum, contribution" />
+	<data logType="obelisk_mission"  tableName="ObeliskMission"   attribute="gameSvrId, dtEventTime, cfgId, serverOpen, num, guildNum, state"/>
+	<!-- 泰能机密 -->
+	<data logType="plant_secret"   tableName="PlantSecretFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, operType, buyItemCount, openBoxCount, openCardTime, openBoxTimes, boxResult, serverNum, clientNum" />
+	<!-- 预流失活动激活打点  -->
+	<data logType="prestressing_loss"   tableName="PrestressingLossFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId" />
+
+	<!-- 幸运转盘 -->
+	<data logType="lucky_box_random"      tableName="LuckyBoxRandom"          attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId,group,randomCount, cellId, rewardId, canSelect, finish" />	
+	
+	<!-- 大雅之战结束打点  -->
+	<data logType="dyzz_battle_result"   tableName="DYZZBattleResult"   attribute="gameSvrId, dtEventTime,playerId, termId, gameId, battleTime, killCount, deathCount, resoureCount, camp, baseHp, winCount, lossCount" />
+	<data logType="dyzz_match_time"      tableName="DYZZMatchTime"      attribute="gameSvrId, dtEventTime, termId, teamId, gameId, matchTime" />
+
+	<!-- 达雅号令 -->
+	<data logType="dyzz_guild_use_order"       tableName="DYZZGuildUseOrder"     	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, roomId, guildId, guildName, orderId, orderPowerCost" />
+	<!-- 达雅结束 -->
+	<data logType="dyzz_battle_score"   tableName="DYZZBattleScore"     attribute="gameSvrId, dtEventTime, gameId,winGuild, baseHPA, baseHPB" />
+	
+	<!--大雅之战赛季段位分流水  -->
+	<data logType="dyzz_season_score_change"   tableName="DYZZSeasonScoreChange"   attribute="gameSvrId, dtEventTime,playerId, termId, gameId, seasonId, scoreChange, socreBefore, socreAfter" />
+	
+	
+	<!-- 国家医院 -->
+	<data logType="nation_hospital_del"   tableName="NationHospitalDelete"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, operType, soldierType, soldierLevel, armyId, oldCount, count, type" />
+	<data logType="nation_recover_queue"   tableName="NationHospitalRecoverTimeRefresh"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, changeFrom, startTime, oldEndTime, endTime, remainCount, remainCapacity, type" />
+	<data logType="nation_accept_count"   tableName="NationHospitalAccept"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, armyId, oldCount, comeinCount, acceptCount, type, buildLevel, hospitalAccelerate" />
+	<data logType="nation_speed_recover"   tableName="NationHospitalRecoverSpeed"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, armyId, recoveredCount, totalRecovered, remainCount, type" />
+
+    <!-- 国家仓库 -->
+	<data logType="nation_shop_exchange"   tableName="NationShopExchange"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, militaryLevel, goodsId, itemId, count" />
+	<data logType="nation_warehouse_donate"   tableName="NationDonateFlow"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, donateType, buildId, donateId, donateCount, totalCount" />
+	<data logType="nation_shippart_consume"   tableName="NationShipPartConsume"   attribute="gameSvrId, dtEventTime, componentId, level, itemId, count, remainCount" />
+	
+	<!-- 国家基础 -->
+	<data logType="nation_status_change"   tableName="NationStatusChange"     attribute="gameSvrId, dtEventTime, status" />
+	<data logType="nation_rebuild"   tableName="NationRebuild"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, beforeValue, afterValue" />
+	<data logType="nation_building_upgrade_start"   tableName="NationBuildingUpgradeStart"     attribute="gameSvrId, dtEventTime, buildingType, buildingLevel, leftValue" />
+	<data logType="nation_building_upgrade_end"   tableName="NationBuildingUpgradeEnd"     attribute="gameSvrId, dtEventTime, buildingType, buildingLevel" />
+	<data logType="nation_build_support"   tableName="NationBuildSupport"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, buildingType, afterBuildVal, goldNum" />
+	<!-- 国家建设处 -->
+	<data logType="nation_build_quest_start"   tableName="NationbuildQuestStart"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, questId, buildingType, heros, armys, isAdv, buildingLevel" />
+	<data logType="nation_build_quest_cancel"   tableName="NationbuildQuestCancel"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, questId, alreadyTime" />
+	<data logType="nation_build_quest_over"   tableName="NationbuildQuestOver"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, questId, leftTimes, buildingType, questType, beforbuildVal, afterbuildVal, dayVal, buildingLevel" />
+	<data logType="nation_build_quest_refresh"   tableName="NationbuildQuestRefresh"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, costCoins" />
+	<data logType="nation_build_item_use"   tableName="NationbuildItemUse"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, buildingType, beforbuildVal, afterbuildVal, dayVal" />
+	<!-- 国家飞船制造厂 -->
+	<data logType="nation_ship_upgrade_start"   tableName="NationShipUpgradeStart"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, componentId, componentLevel, consumeRes, leftRes, shipFactoryLevel" />
+	<data logType="nation_ship_upgrade_cancel"   tableName="NationShipUpgradeCancel"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, componentId, componentLevel, returnRes, leftRes" />
+	<data logType="nation_ship_upgrade_over"   tableName="NationShipUpgradeOver"     attribute="gameSvrId, dtEventTime, componentId, componentLevel, shipFactoryLevel" />
+	<data logType="nation_ship_upgrade_assist"   tableName="NationShipUpgradeAssist"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, componentId, componentLevel, beforTime, afterTime" />
+	
+	<!-- 国家任务 -->
+	<data logType="nation_misison_receive"	tableName="NationMissionReceive"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, missionId, remainTimes, buildLevel"/>
+	<data logType="nation_misison_giveup"	tableName="NationMissionGiveup"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, missionId, value"/>
+	<data logType="nation_misison_failed"	tableName="NationMissionFailed"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, missionId, value"/>
+	<data logType="nation_misison_finish"	tableName="NationMissionFinish"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, missionId, limitTimes, city, dailyTech, tech, buildLevel"/>
+	<data logType="nation_misison_delete"	tableName="NationMissionDelete"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, missionId, limitTimes"/>
+	<data logType="nation_misison_buy"	tableName="NationMissionBuy"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, limitTimes"/>
+	<data logType="nation_misison_disapper"	tableName="NationMissionDisaper"	attribute="gameSvrId, dtEventTime, missionId, limitTimes"/>
+	
+	<!-- 国家科技 -->
+	<data logType="nation_tech_tool"	tableName="NationTechTool"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, tech, dailyTech"/>
+	<data logType="nation_tech_research"	tableName="NationTechResearch"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, techId, techLevel, comsumeTech, remainTech, buildLevel"/>
+	<data logType="nation_tech_giveup"	tableName="NationTechGiveup"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, techId, techLevel, rewardTech, remainTech"/>
+	<data logType="nation_tech_finish"	tableName="NationTechFinish"	attribute="gameSvrId, dtEventTime, techId, techLevel, buildLevel"/>
+	<data logType="nation_tech_help"	tableName="NationTechHelp"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, techId, techLevel, remainTime"/>
+	<data logType="nation_tech_skill"	tableName="NationTechSkill"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, playerId, vipLevel, cityLevel, techId, techLevel, comsumeTech, remainTech"/>
+	
+	<!-- 盟军祝福  -->
+	<data logType="alliance_wish_sign"      tableName="AllianceWishSign"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, signType,openPos, openNum" />
+	<data logType="alliance_wish_help"       tableName="AllianceWishHelp"             attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildMember" />
+	<!-- 至尊vip激活打点 -->
+	<data logType="super_vip_active"  tableName="SuperVipActive"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, cityLevel, vipLevel, superVipLevel, score, source, cfgId, endTime"/>
+	<!-- 远征科技 action 1 开始升级 2 升级完成-->
+	<data logType="cross_tech_research_flow"       tableName="CrossTechResearchFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, techId, techLv, action, playerId"/>
+	
+	
+	<!-- 泰能科技树 action 1 开始升级 2 升级完成-->
+	<data logType="plant_science_research_flow"       tableName="PlantScienceResearchFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerLevel, vipLevel, cityLevel, techId, techLv, action, playerId, power"/>
+	
+
+	<!-- 七夕相遇  -->
+	<data logType="lover_meet_ending"      tableName="LoverMeetEnding"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, endingId" />
+	
+
+
+	<!-- 跨服活动新战力匹配数据 -->
+	<data logType="cross_activity_player_strength"     tableName="CrossActivityPlayerStrength"     attribute="gameSvrId, dtEventTime, termId, playerId, rank, playerStrength, powerWeight, addPower" />
+	<data logType="cross_activity_team_param"          tableName="CrossActivityTeamParam"          attribute="gameSvrId, dtEventTime, termId, historyTerm, rank, addParam" />
+	<data logType="cross_activity_match_power"         tableName="CrossActivityMatchPower"         attribute="gameSvrId, dtEventTime, termId, matchPower, battleVal" />
+	<data logType="cross_activity_match"               tableName="CrossActivityMatch"              attribute="gameSvrId, dtEventTime, termId, crossId,servers" />
+	<data logType="cross_activity_start"               tableName="CrossActivityStart"              attribute="gameSvrId, dtEventTime, termId, matchPower" />
+
+	<!-- 跨服活动-积分增加 -->
+	<data logType="cross_activity_score_add" tableName="CrossActivtyScoreAdd" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, before, add, after, sourceType, scoreType" />
+	<!-- 跨服活动-领取积分宝箱 -->
+	<data logType="cross_activity_score_box" tableName="CrossActivtyScoreBox" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, boxId, type" />
+	<!-- 跨服活动-个人积分排名 -->
+	<data logType="cross_activity_self_score_rank" tableName="CrossActivtySelfScoreRank" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, score, rank, rewardId" />
+	<!-- 跨服活动-领取成就任务奖励 -->
+	<data logType="cross_activity_mission" tableName="CrossActivtyMission" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, missionId" />
+	<!-- 跨服活动-获取国家战略点 -->
+	<data logType="cross_activity_talent" tableName="CrossActivtyTalent" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, before, add, after, sourceType" />
+	<!-- 跨服活动-向能量塔发起行军 -->
+	<data logType="cross_activity_pylon_march" tableName="CrossActivtyPylonMarch" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, armyCount, marchType, type" />
+	<!-- 跨服活动-个人战略排名 -->
+	<data logType="cross_activity_self_talent_rank" tableName="CrossActivtySelfTalentRank" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, talent, rank, rewardId" />
+	<!-- 跨服活动-攻占盟总建筑 -->
+	<data logType="cross_activity_occupy_president" tableName="CrossActivtyOccupyPresident" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId" />
+	<!-- 跨服活动-控制盟总建筑 -->
+	<data logType="cross_activity_control_president" tableName="CrossActivtyControlPresident" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, armyCount" />
+	<!-- 跨服活动-分配礼包 -->
+	<data logType="cross_activity_send_gift" tableName="CrossActivtySendGift" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, targetId, giftType, giftId, count" />
+	<!-- 跨服活动-领取宝箱 -->
+	<data logType="cross_activity_receive_box" tableName="CrossActivtyReceiveBox" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, boxId" />
+	
+	<!-- 跨服活动-联盟积分排名 -->
+	<data logType="cross_activity_guild_score_rank" tableName="CrossActivityGuildScoreRank" attribute="gameSvrId, dtEventTime, guildId, score, rank, rewardId" />
+	<!-- 跨服活动-联盟战略排名 -->
+	<data logType="cross_activity_guild_talent_rank" tableName="CrossActivityGuildTalentRank" attribute="gameSvrId, dtEventTime, guildId, score, rank, rewardId" />
+	
+	<!-- 跨服活动-国家积分排名 -->
+	<data logType="cross_activity_server_score_rank" tableName="CrossActivityServerScoreRank" attribute="gameSvrId, dtEventTime, score, rank, rewardId" />
+	<!-- 跨服活动-爆仓 -->
+	<data logType="cross_activity_gen_box" tableName="CrossActivityGenBox" attribute="gameSvrId, dtEventTime, resourceType, before, after, tarServerId" />
+	<!-- 跨服活动-能量塔刷新 -->
+	<data logType="cross_activity_pylon_refresh" tableName="CrossActivityPylonRefresh" attribute="gameSvrId, dtEventTime, before, after" />
+
+	<data logType="heaven_blessing_pay" tableName="HeavenBlessingPay" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, groupId, level, payCount, choose" />
+	<data logType="heaven_blessing_active" tableName="HeavenBlessingActive" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, groupId" />
+	<data logType="heaven_blessing_award" tableName="HeavenBlessingAward" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, groupId, level, payCount, choose" />
+	<data logType="heaven_blessing_random_award" tableName="HeavenBlessingRandomAward" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, gain" />
+	<data logType="heaven_blessing_open" tableName="HeavenBlessingOpen" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel" />
+	<data logType="grateful_benefits_award" tableName="GratefulBenefitsAward" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, punchCount, createDays, help, gold" />
+	<!-- 荣耀返利 购买 -->
+	<data logType="honor_repay_buy_reward"      tableName="HonorRepayBuyReward"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, num " />
+	<!-- 荣耀返利 领取返利奖励-->
+	<data logType="honor_repay_receive_reward"      tableName="HonorRepayReceiveReward"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyTimes, type " />
+	<!-- 陨晶战场占领-->
+	<data logType="dyzz_occupy"      tableName="DYZZOccupy"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, type" />
+	<!-- 陨晶战场成就-->
+	<data logType="dyzz_achieve_reach"      tableName="DYZZAchieveReach"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId" />
+	<data logType="dyzz_achieve_take"      tableName="DYZZAchieveTake"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, score, count, achieveId" />
+	<!-- 拼多多-->
+	<data logType="pdd_order_create"      tableName="PDDOrderCreate"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId" />
+	<data logType="pdd_order_done"      tableName="PDDOrderDone"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, reason, cost" />
+	<data logType="pdd_order_fail"      tableName="PDDOrderFail"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId" />
+	<data logType="pdd_buy_alone"      tableName="PDDBuyAlone"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cfgId, cost" />
+
+	<data logType="change_svr_apply"      tableName="ChangeSvrApply"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, target" />
+	<data logType="change_svr_cancel"      tableName="ChangeSvrCancel"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, target" />
+	<data logType="change_svr_real"      tableName="ChangeSvrReal"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cost" />
+
+	<data logType="luck_get_gold_num"      tableName="LuckGetGoldNum"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, num" />
+	<data logType="luck_get_gold_win"      tableName="LuckGetGoldWin"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, num, gold, before, after" />
+
+
+	<data logType="back_to_new_fly_old"      tableName="BackToNewFlyOld"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, openId, baseLevel" />
+	<data logType="back_to_new_fly"      tableName="BackToNewFly"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, openId, baseLevel" />
+	<data logType="star_explore_up"      tableName="StarExploreUp"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, starId, before, after" />
+	<data logType="star_explore_jump"      tableName="StarExploreJump"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collectId, beforeFix, afterFix, beforeRandom, afterRandom" />
+	<data logType="star_explore_up_log"      tableName="StarExploreUpLog"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, starId, level" />
+	<data logType="star_explore_jump_log"      tableName="StarExploreJumpLog"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, collectId, fix, random" />
+	<data logType="supply_crate_score_self"      tableName="SupplyCrateScoreSelf"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, score" />
+	<data logType="supply_crate_score_guild"      tableName="SupplyCrateScoreGuild"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, before, after" />
+
+	<data logType="xhjz_join"      tableName="XHJZJoin"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, teamId" />
+	<data logType="xhjz_quit"      tableName="XHJZQuit"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, teamId" />
+	<data logType="xhjz_finish"	    tableName="XHJZFinish"	  attribute="gameSvrId,dtEventTime, time, teamA, powerA, countA, numA, scoreA, teamB, powerB, countB, numB, scoreB" />
+	<data logType="xhjz_team"      tableName="XHJZTeam"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, teamId, power, count, rank, opt" />
+	<data logType="xhjz_member"      tableName="XHJZMember"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetId, oldTeamId, newTeamId, auth" />
+
+	<data logType="xhjz_season_match"	    tableName="XHJZSeasonMatch"	  attribute="gameSvrId,dtEventTime, teamA, teamB, serverType, groupType" />
+	<data logType="xhjz_season_result"	    tableName="XHJZSeasonResult"	  attribute="gameSvrId,dtEventTime, teamA, scoreA, teamB, scoreB, winnerId, serverType, groupType" />
+	<data logType="xhjz_season_qualifier"	tableName="XHJZSeasonQualifier"	  attribute="gameSvrId,dtEventTime, teamId, score, rank, serverType, groupType" />
+	<data logType="xhjz_season_final"	    tableName="XHJZSeasonFinal"	  attribute="gameSvrId,dtEventTime, teamId, winCount, loseCount, rank, serverType, groupType" />
+
+	<!-- 联盟回流 增益激活 -->
+	<data logType="guild_back_buff"	    tableName="GuildBackBuff"	  attribute="gameSvrId,dtEventTime, guildId, count" />
+	<!-- 破晓启程激活 -->
+	<data logType="new_start_active"      tableName="NewStartActive"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oldPlayerId, oldServerId, oldPlayerLevel, oldVipLevel, oldCityLevel, oldHeroCount, oldTechLevel, oldJijiaLevel" />
+	<!-- 积分狂欢专属称号-使用行军加速道具 -->
+	<data logType="march_speed_item_use" tableName="MarchSpeedItemFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, itemId, afterCount, dungeon" />
+	
+	<!-- 盟军祝福 -购买礼包 -->
+	<data logType="alliance_wish_gift_buy"      tableName="AllianceWishGiftBuy"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, giftId, count, signCount" />
+	<!-- 盟军祝福 -获取幸运星 -->
+	<data logType="alliance_wish_achieve"      tableName="AllianceWishAchieve"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, count, giftId" />
+
+	
+	<!-- 英雄祈福  -->
+	<data logType="hero_wish_choose"      tableName="HeroWishChoose"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, chooseId" />
+
+	<!-- 联盟操作详细日志 -->
+	<data logType="guild_detail"	tableName="GuildDetailFlow"		attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, changeInfo, reason"/>
+	<!-- 客户端打点日志 -->
+	<data logType="client_tlog"	tableName="ClientTlog"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, clientTlogType, logInfo" />
+	
+	<!-- 玩家个人实力打点 -->
+	<data logType="strength"	tableName="Strength"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, soldierStrength, strength" />	
+	<!-- 荣耀同享玩家捐献 -->
+	<data logType="share_glory_donate"      tableName="ShareGloryDonate"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, itemId, count, guildId, beforeEnergy, afterEnergy, curEnergyLevel" />
+
+	<!-- 荣耀同享联盟能量柱升级 -->
+	<data logType="share_glory_energy_levelup"      tableName="ShareGloryEnergyLevelup"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, curLevel, itemId" />
+
+	<!-- 荣耀英雄降临 -->
+	<data logType="honour_hero_befell_lottery"      tableName="HonourHeroBefellLottery"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, lotteryTpye, lotteryRlt" />
+	
+	<!-- 跨服出战联盟打点 -->
+	<data logType="cross_activity_fight_guild" tableName="CrossActivtyFightGuild" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, actionType, tarGuildId" />	
+	<!-- 双旦活动打点数据 -->
+	<data logType="newyear_lottery_paygift" tableName="LotteryPayGiftFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, lotteryType, selectId, randomReward, guildId" />
+	<data logType="newyear_lottery_achieve" tableName="LotteryGuildAchieveFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, lotteryType, achieveId, guildId" />
+	<data logType="newyear_lottery_result" tableName="LotteryResultFlow" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, lotteryType, reward, guildId" />
+	
+	<data logType="super_soldier_energy" tableName="SuperSoldierEnergy" attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, soldierId, energyLevel, energy" />
+
+	<!-- 月球之战宣战 -->
+	<data logType="yqzz_declare_war"  tableName="YqzzDeclareWar"    attribute="gameSvrId, dtEventTime, playerId, playerName, guildId,guildName,playerServer,buildId,gameId" />
+	<!-- 月球之战建筑控制变化 -->
+	<data logType="yqzz_build_control_change"  tableName="YqzzBuildControlChange"    attribute="gameSvrId, dtEventTime, guildIdBef,guildNameBef,serverBef,guildIdAft,guildNameAft,serverAft,buildId,gameId" />
+	<!-- 月球之战联盟控制建筑数量 -->
+	<data logType="yqzz_build_guild_control_count"  tableName="YqzzBuildGuildControlCount"    attribute="gameSvrId,dtEventTime, guildId,guildName,buildType,count,stage,gameId" />
+	<!-- 月球之战玩家最终奖励 -->
+	<data logType="yqzz_player_rank_reward"  tableName="YqzzPlayerRankReward"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,playerScore,rank,awardId" />
+	<!-- 月球之战联盟最终奖励 -->
+	<data logType="yqzz_guild_rank_reward"  tableName="YqzzGuildRankReward"   attribute="gameSvrId,dtEventTime, termId,guildId,guildName,guildScore,rank,awardId" />
+	<!-- 月球之战国家最终奖励 -->
+	<data logType="yqzz_country_rank_reward"  tableName="YqzzCountryRankReward"    attribute="gameSvrId,dtEventTime, termId,serverId,serverScore,rank,awardId" />
+	<!-- 月球之战国家最终奖励 -->
+	<data logType="yqzz_achieve_reward"  tableName="YqzzAchieveReward"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,achieveId" />
+	<!-- 进入副本 -->
+	<data logType="yqzz_enter_room"    tableName="YqzzEnterRoom"      attribute="gameSvrId, dtEventTime, playerId, termId, roomId, roomServer, guildId, serverId, power" />
+	<!-- 退出副本 -->
+	<data logType="yqzz_quit_room"     tableName="YqzzQuitRoom"       attribute="gameSvrId, dtEventTime, playerId, termId, guildId, isMidaway, roomId" />
+	<data logType="yqzz_room_info"     tableName="YqzzRoomInfo"       attribute="gameSvrId, dtEventTime, playerAll, playerCnt, guildCnt, roomId" />
+
+	<data logType="yqzz_match"     tableName="YqzzMatch"       attribute="gameSvrId, dtEventTime, termId, serverId, serverPower, joinServer, roomServer" />
+	<data logType="yqzz_match_power"     tableName="YqzzMatchPower"       attribute="gameSvrId, dtEventTime, termId, serverId, guildId, guildName, rank, guildPower" />
+	<data logType="yqzz_battle_start_power"     tableName="YqzzBattleStartPower"       attribute="gameSvrId, dtEventTime, termId, serverId, serverPower" />
+	
+	<!-- 机甲研究所 -攻坚芯片掉落 -->
+	<data logType="machine_lab_drop"      tableName="MachineLabDrop"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, dropType, dropCount" />
+	<!-- 机甲研究所 -捐献 -->
+	<data logType="machine_lab_contribute"      tableName="MachineLabContribute"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, count, giftMult, donatMult, serverExpAdd, playerExpAdd, stormingPointAdd, stormingPointTotal" />
+	<!-- 机甲研究所 -领取战令奖励 -->
+	<data logType="machine_lab_order_reward"      tableName="MachineLabOrderReward"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, orderType, levels" />
+	<!-- 机甲研究所 -兑换 -->
+	<data logType="machine_lab_exchange"      tableName="MachineLabExchange"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, exchangeId, exchangeCount" />
+	
+	<!-- 星甲召唤星币增加 -->
+	<data logType="space_mecha_point"      tableName="SpaceMechaPointAdd"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, taskId, pointCount, guildPointCount, taskLimitGap" />
+	<!-- 星甲召唤放置舱体 -->
+	<data logType="space_mecha_place"      tableName="SpaceMechaPlace"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, memberCount, consumeCnt, posX, posY, spaceLevel, setTimes, remainTimes" />
+	<!-- 星甲召唤舱体防守记录 -->
+	<data logType="space_mecha_def_war"     tableName="SpaceMechaDefWarResult"       attribute="gameSvrId, dtEventTime, termId, guildId, spaceLevel, maxLevel, spaceIndex, stage, wave, buildId, remainBlood, reduceBlood, defMemberCnt" />
+	<!-- 星甲召唤进攻据点 -->
+	<data logType="space_mecha_atk_stronghold"      tableName="SpaceMechaAtkStrongHold"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, spaceLevel, strongHoldId, hpNum, remainBlood, special, buffId, remainRewardTimes" />
+	<!-- 星甲召唤采集宝箱 -->
+	<data logType="space_mecha_collect"      tableName="SpaceMechaCollect"            attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, spaceLevel, boxId" />
+	<!-- 星甲召唤各阶段结束 -->
+	<data logType="space_mecha_stage_end"     tableName="SpaceMechaStageEnd"       attribute="gameSvrId, dtEventTime, termId, guildId, spaceLevel, stage, mainSpaceBlood, space1Blood, space2Blood, continueTime" />
+	<!-- 星甲召唤玩家进入或离开舱体 -->
+	<data logType="space_mecha_def_change"      tableName="SpaceMechaJoinOrLeave"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, spaceLevel, spaceIndex, buildId, stage, remainBlood, joinSpace" />
+	
+	<!-- 联盟编队 -->
+	<data logType="guild_formation"	tableName="GuildFormation"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, guildName, formIndex, formName, leaderId, fightIds, formOper, param" />
+	
+	<!-- 周年庆庆典基金礼包购买 -->
+	<data logType="celebration_fund_gift_buy"      tableName="CelebrationFundGiftBuy"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, fundLevel" />
+	
+	<!-- 周年庆庆典积分购买 -->
+	<data logType="celebration_fund_score_buy"	tableName="CelebrationFundScoreBuy"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, buyScoreNum, goldCost" />
+	
+	<!-- 金币觅宝搜寻奖池 -->
+	<data logType="gold_baby_find_reward"	tableName="GoldBabyFindReward"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, poolId, activityId, isLockTopGrade, costCount, rewardCount, magnification" />
+	<!-- 新兵作训  -->
+	<data logType="newbie_train"	tableName="NewbieTrainFlow"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, trainType, times, remainTimes, gachaTimes, gachaTimesTotal" />
+
+	<!-- 泰能兵军衔等级提升 -->
+	<data logType="plant_soldier_military_upgrade"	tableName="PlantSoldierMilitaryUpgrade"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, chipId, afterLevel" />
+	<!-- 发起攻击性行军记录 -->
+	<data logType="offensive_march"	tableName="PlayerOffensiveMarch"	attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, marchType, pointType, dungeon" />
+	
+	<data logType="planet_explore_refresh"	    tableName="PlanetExploreRefresh"	  attribute="gameSvrId,dtEventTime, termId, scoreNow, lastScore, refreshCount, refreshTotal" />
+	<data logType="planet_explore_point_remove"	tableName="PlanetExplorePointRemove"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, posX, posY" />
+	<data logType="planet_explore_draw"	        tableName="PlanetExploreDraw"	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, timesNum, scoreAdd, playerScore, serverScore" />
+	<data logType="planet_explore_collect"	    tableName="PlanetExploreCollect"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, posX, posY, collectNum, collectTotal" />
+	
+	<!-- 中部培养计划  任务完成获得积分 -->
+	<data logType="grow_up_boost_achieve_score"    tableName="GrowUpBoostAchieveScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, achieveId, scoreAdd, scoreBef, scoreAft" />
+	<!-- 中部培养计划  道具消耗获得积分 -->
+	<data logType="grow_up_boost_item_score"    tableName="GrowUpBoostItemScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, itemId, itemNum,scoreAdd, scoreBef, scoreAft" />
+	<!-- 中部培养计划  道具消耗获得积分 -->
+	<data logType="grow_up_boost_score_achieve_reward_take"    tableName="GrowUpBoostScoreAchieveRewardTake"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, achieveId, score" />
+	<!-- 中部培养计划  任务刷新记录 -->
+	<data logType="grow_up_boost_score_achieve_page_change"    tableName="GrowUpBoostScoreAchievePageChange"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, refreshCount, curPage" />
+	<!-- 中部培养计划  兑换道具解锁层数 -->
+	<data logType="grow_up_boost_exchange_group"    tableName="GrowUpBoostExchangeGroup"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, exchangeId, exchangeGroup, unlockGroupMaxBef,unlockGroupMaxAft" />
+	<!-- 中部培养计划  兑换道具解锁层数 -->
+	<data logType="grow_up_boost_buy_gift"    tableName="GrowUpBoostBuyGift"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyId" />
+	<!-- 中部培养计划  道具回收-->
+	<data logType="grow_up_boost_item_recover"    tableName="GrowUpBoostItemRecover"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, itemId, itemCount" />
+	<!-- 中部培养计划  道具记录-->
+	<data logType="grow_up_boost_item_record"    tableName="GrowUpBoostItemRecord"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, recordType, itemId, itemCount, befCount, aftCount" />
+	
+	
+	<!-- 新服触发军魂传承活动 -->
+	<data logType="inherit_new_start"	        tableName="InheritNewStart"	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, startTime" />
+	<!-- 作用号生效变更记录 -->
+	<data logType="buff_change"	            tableName="BuffChangeFlow"	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, effectId, effectVal, endTime, targetId" />
+	<!-- 特权商店兑换记录 -->
+	<data logType="month_card_exchange"	    tableName="MonthCardExchange"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, exchangeId, exchangeCount, cost, itemId, itemCount" />
+	<!-- 定制特权卡奖励选择记录 -->
+	<data logType="month_card_custom"	    tableName="MonthCardCustom"	      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, cardId, cardType, cardStatus, selectCount, selectRewards" />
+	
+	<!-- 超武品阶提升记录 -->
+	<data logType="manhattan_stage_up"	    tableName="ManhattanStageUpFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, base, swId, preStage, afterStage, baseStage" />
+	<!-- 超武部件升级记录 -->
+	<data logType="manhattan_level_up"	    tableName="ManhattanLevelUpFlow"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, base, swId, posId, preLevel, afterLevel, stage, baseStage" />
+	<!-- 超武解锁记录 -->
+	<data logType="manhattan_create"	    tableName="ManhattanCreateFlow"	   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, swId" />
+	<!-- 超武部署记录 -->
+	<data logType="manhattan_deploy"	    tableName="ManhattanDeployFlow"	   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, swType, preswId, afterswId, stage" />
+
+	<!-- 刮刮乐活动-刮奖 -->
+	<data logType="lottery_ticket_use"    tableName="LotteryTicketUse"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, assist, serId, rewardId, mult" />
+	<!-- 刮刮乐活动-邀请代刮 -->
+	<data logType="lottery_ticket_assist_send"    tableName="LotteryTicketAssistSend"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, serId, assister, ticketCount" />
+	<!-- 刮刮乐活动-邀请退回 -->
+	<data logType="lottery_ticket_assist_back"    tableName="LotteryTicketAssistBack"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, serId, assister, ticketCount, useCount, backReason" />
+	<!-- 刮刮乐活动-道具回收 -->
+	<data logType="lottery_ticket_item_recover"    tableName="LotteryTicketItemRecover"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, itemId, itemCount" />
+
+	<!-- 回流转服-触发 -->
+	<data logType="back_immgration_start"    tableName="BackImmgrationStart"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, backCount, power" />
+	<!-- 回流转兵种-触发 -->
+	<data logType="back_soldier_exchange_start"    tableName="BackSoldierExchangeStart"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, backCount" />
+	
+	<!-- 泰能超武投放活动商店购买记录 -->
+	<data logType="plant_weapon_shop_buy"	tableName="PlantWeaponShopBuy"	  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, shopId, buyCount, itemId, itemCount" />
+
+
+	<!-- 星海投资-投资充值奖励领取-->
+	<data logType="star_invest_recharge_reward"    tableName="StarInvestRechargeReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId, score" />
+	<!-- 星海投资-投资免费奖励领取 -->
+	<data logType="star_invest_free_reward"    tableName="StarInvestFreeReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, giftId" />
+	<!-- 星海投资-探索开始 -->
+	<data logType="star_invest_explore_start"    tableName="StarInvestExploreStart"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cellId,cellLevel" />
+	<!-- 星海投资-探索加速 -->
+	<data logType="star_invest_explore_speed"    tableName="StarInvestExploreSpeed"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cellId, cellLevel, action" />
+	<!-- 星海投资-探索领奖 -->
+	<data logType="star_invest_explore_reward"    tableName="StarInvestExploreReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, cellId, cellLevel, rewardId" />
+	
+	<!-- 打靶活动-游戏完成-->
+	<data logType="shooting_practice_game"    tableName="ShootingPracticeGame"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, score, totalScore, maxScore" />
+	<!-- 星海分配燃油 -->
+	<data logType="xhjz_fuel_distribute"    tableName="XhjzFuelDistribute"  attribute="gameSvrId, dtEventTime, battleId, playerId, guildId, guildOil, tarId, add, after" />
+	
+	<!-- 合服邀请操作  -->
+	<data logType="merge_invite_oper"	     tableName="MergeInviteFlow"	       attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, targetServerId, inviteOper" />
+	<!-- 合服邀请投票  -->
+	<data logType="merge_invite_vote"	     tableName="MergeInviteVoteFlow"	   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, targetServerId, voteCode" />
+	<!-- 合服邀请投票结果  -->
+	<data logType="merge_vote_result"        tableName="MergeVoteResult"	       attribute="gameSvrId, dtEventTime, termId, voteStage, serverA, approveCntA, opposeCntA, serverB, approveCntB, opposeCntB, voteResult" />
+	
+	<!-- 新春头奖专柜活动抽奖 -->
+	<data logType="best_prize_draw"	      tableName="BestPrizeDraw"	     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, groupId, bigPool, smallPool, lastReward, bigPrize, drawRewards, changeList" />
+	<!-- 新春头奖专柜活动动态添加小奖池 -->
+	<data logType="best_prize_pool_add"	  tableName="BestPrizeAddPool"	 attribute="gameSvrId,dtEventTime, termId, groupId, bigPool, remainCount, addCount, addCountToday, oldPoolNumMax, newPoolNumMax" />
+	
+	<!-- 反攻 幽灵-报名 -->
+	<data logType="fgyl_sign_up"    tableName="FGYLSignUp"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, signLevel, timeIndex, passLevel, signCount" />
+	<!-- 反攻 幽灵-创建房间 -->
+	<data logType="fgyl_create_room" tableName="FGYLCreateRoom" attribute="gameSvrId, dtEventTime,termId, guildId, roomLevel, roomId" />
+	<!-- 反攻 幽灵-进入房间 -->
+	<data logType="fgyl_join_room"    tableName="FGYLJoinRoom"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, roomId" />
+	<!-- 反攻 幽灵-退出房间 -->
+	<data logType="fgyl_exit_room"    tableName="FGYLExitRoom"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, roomId, exitReason" />
+	<!-- 反攻 幽灵-结束 -->
+	<data logType="fgyl_over_room" tableName="FGYLOverRoom" attribute="gameSvrId, dtEventTime, termId, guildId, roomId, roomLevel, rlt, timeUse, joinCounts, signCount" />
+	<!-- 反攻 幽灵-发奖 -->
+	<data logType="fgyl_fight_reward"    tableName="FGYLFightReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, roomId, roomLevel" />
+	<!-- 反攻 幽灵-排行榜奖励 -->
+	<data logType="fgyl_rank_reward" tableName="FGYLRankReward" attribute="gameSvrId, dtEventTime, termId, guildId, rank, rewardId, roomLevel, timeUse" />
+	
+	<!--秘境寻宝游戏刷新  -->
+	<data logType="quest_treasure_game_refersh"    tableName="QuestTreasureGameRefersh"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rolePos, boxPos" />
+	<!--秘境寻宝游戏路径选择  -->
+	<data logType="quest_treasure_game_point_choose"    tableName="QuestTreasureGamePointChoose"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rolePos, boxPos, choosePos" />
+	<!--秘境寻宝游戏随机前进  -->
+	<data logType="quest_treasure_game_random_walk"    tableName="QuestTreasureGameRandomWalk"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, rolePos, boxPos, choosePos, randomNum, walkPos, achieveBox, scoreAdd, scoreTotal" />
+	<!--秘境寻宝随机道具购买  -->
+	<data logType="quest_treasure_game_random_item_buy"    tableName="QuestTreasureGameRandomItemBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, count" />
+	<!-- 秘境寻宝商店购买 -->
+	<data logType="quest_treasure_shop_buy"    tableName="QuestTreasureShopBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, shopId, count" />
+	
+	<!-- 每日0点上报排行榜信息 -->
+	<data logType="daily_rank_log"   tableName="RankInfoDaily"     attribute="gameSvrId, dtEventTime, rankType, rankStart, rankEnd, logInfo" />
+	
+	<!-- 潜艇大战游戏开始 -->
+	<data logType="submarine_war_game_start"    tableName="SubmarineWarGameStart"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, gameCount, startType, startLevel, skillItem" />
+	<!-- 潜艇大战游戏过关 -->
+	<data logType="submarine_war_game_pass"    tableName="SubmarineWarGamePass"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, stageId, stageScore, skillCount" />
+	<!-- 潜艇大战游戏过关 -->
+	<data logType="submarine_war_game_over"    tableName="SubmarineWarGameOver"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, gameScore, overStage, rankIndex, totalScore, winRlt" />
+	<!-- 潜艇大战商品购买 -->
+	<data logType="submarine_war_shop_buy"    tableName="SubmarineWarShopBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId,shopType,shopId, count" />
+	<!-- 潜艇大战游戏次数购买 -->
+	<data logType="submarine_war_game_count_buy"    tableName="SubmarineWarGameCountBuy"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, buyCount, aftCount" />
+	<!-- 潜艇大战排行榜奖励 -->
+	<data logType="submarine_war_rank_reward"    tableName="SubmarineWarRankReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, groupId, rankType, rankIndex" />
+	<!-- 潜艇大战战令经验获取 -->
+	<data logType="submarine_war_order_exp_add"    tableName="SubmarineWarOrderExpAdd"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, addExp, expBef, expAft, lvBef, lvexpBef, lvAft, lvexpAft, reason" />
+	<!-- 潜艇大战战令奖励 -->
+	<data logType="submarine_war_order_reward"    tableName="SubmarineWarOrderExpReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, level, advance" />
+	
+	<!-- 荣耀动员选定英雄 -->
+	<data logType="honor_mobilize_choose"    tableName="HonorMobilizeChoose"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, chooseId" />
+	<!-- 荣耀动员抽取英雄 -->
+	<data logType="honor_mobilize_lottery"    tableName="HonorMobilizeLottery"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, chooseId, lotteryType" />
+	
+	<!-- 机甲核心科技升级、升阶 -->
+	<data logType="mecha_core_tech_flow"    tableName="MechacoreTechFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oper, techId, beforeLevel, afterLevel" />
+	<!-- 机甲核心槽位解锁、升级 -->
+	<data logType="mecha_core_slot_flow"    tableName="MechacoreSlotOper"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, slotId, beforeLevel, afterLevel" />
+	<!-- 机甲核心模块添加、分解 -->
+	<data logType="mecha_core_module_flow"    tableName="MechacoreModuleFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oper, moduleCfgId, moduleUuid, quality" />
+	<!-- 机甲核心模块装载、卸载 -->
+	<data logType="mecha_core_module_oper"    tableName="MechacoreModuleOper"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oper, moduleId, moduleUuid, oldModuleId, oldModuleUuid, slotType, suitType" />
+	<!-- 机甲核心模块词条属性传承 -->
+	<data logType="mecha_core_module_attr_replace" tableName="MechacoreModuleAttrReplace"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, fromModuleId, fromModuleUuid, toModuleId, toModuleUuid, fromAttrId, toAttrId" />
+	<!-- 机甲核心套装解锁、切换 -->
+	<data logType="mecha_core_suit_flow"    tableName="MechacoreSuitOper"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, oper, oldSuit, newSuit" />
+	
+	<!-- 合服比拼活动368打点 -->
+	<data logType="merge_compete_target_reward"   tableName="MergeCompeteTargetComplete"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, achieveId, achieveType, guildId" />
+	<data logType="merge_compete_gift_reward"     tableName="MergeCompeteGiftReward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, awardLevel, awardCount, guildId" />
+	<data logType="merge_compete_rank_calc"       tableName="MergeCompeteRankCalc"  attribute="gameSvrId, dtEventTime, playerId, guildId, rankType, rankIndex, addScore" />
+	<data logType="merge_compete_gift_score"      tableName="MergeCompeteGiftScore"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, rank, score, guildId" />
+	<data logType="merge_compete_server_score"    tableName="MergeCompeteServerScore"  attribute="gameSvrId, dtEventTime, serverId, serverScore, oppServerId, oppServerScore" />
+	
+	<!-- 核心勘探369活动打点 -->
+	<data logType="core_explore_new_mine" tableName="CoreExploreNewMine"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, lineNum, colNum, mineType, clickTimes" />
+	<data logType="core_explore_mining"   tableName="CoreExploreMiningFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, lineNum, colNum, mineType, toolType, maxLineBefore, maxLineAfter, removeLines1, removeLines2" />
+	<data logType="core_explore_tech"     tableName="CoreExploreTechFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, techId, techType" />
+	
+	
+	<!-- 先驱回响-加入战斗 -->
+	<data logType="xqhx_join_battle" tableName="XqhxJoinBattle"     attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, teamId, roomId" />
+	<!-- 先驱回响-退出战斗 -->
+	<data logType="xqhx_exit_battle" tableName="XqhxExitBattle"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel,termId, guildId, teamId, roomId" />
+	<!-- 先驱回响-管理小队成员 -->
+	<data logType="guild_team_mamage_member"     tableName="GuildTeamMamageMember"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, manageType, targetId, befTeam, curTeam" />
+	<!-- 先驱回响-报名 -->
+	<data logType="xqhx_sign_up"     tableName="XqhxSignUp"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, teamId, teamPower, memberCnt, signTimeIndex" />
+	<!-- 先驱回响-战斗结束 -->
+	<data logType="xqhx_battle_over"     tableName="XqhxBattleOver"    attribute="gameSvrId, dtEventTime, termId, timeIndex, guildA, teamA, teamPowerA, teamMemberCntA, teamJoinCntA, teamScoreA, teamDataChipA, guildB, teamB, teamPowerB, teamMemberCntB, teamJoinCntB, teamScoreB, teamDataChipB," />
+	<!-- 先驱回响-发奖 -->
+	<data logType="xqhx_send_award"     tableName="XqhxSendAward"    attribute="gameSvrId, dtEventTime,termId, timeIndex, guildId, teamId, playerId,roomId, battleRlt, playerScore, awardId" />
+	
+	<!-- 赛后庆典371活动打点 -->
+	<data logType="after_comp_send_gift"       tableName="AfterCompSendGift"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, selfSendTotal, targetPlayerId, targetRecTotal, globalSendCache, globalSendTotal" />
+	<data logType="after_comp_dist_bigaward"   tableName="AfterCompDistBigAward"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, channel, guildId, globalBuyCache, globalBuy, systemDist, awardUuid" />
+	<data logType="after_comp_rec_bigaward"    tableName="AfterCompRecBigAward"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, giftId, channel, awardUuid" />
+	
+	<!-- 赛季拼图活动打点 -->
+	<data logType="season_puzzle_send"       tableName="SeasonPuzzleSendFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, toPlayerId, sendItemId, callHelpId, sendTimes" />
+	<data logType="season_puzzle_set"       tableName="SeasonPuzzleSetFlow"      attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, setIndex, realSet, complete" />
+
+	
+	
+	<!-- 巨龙来袭-预约 -->
+	<data logType="guild_dragon_attack_appoint"     tableName="GuildDragonAttackAppoint"    attribute="gameSvrId, dtEventTime, guildId, appointmentTime, openTime" />
+	<!-- 巨龙来袭-开启 -->
+	<data logType="guild_dragon_attack_open"        tableName="GuildDragonAttackOpen"    attribute="gameSvrId, dtEventTime, guildId, appointmentTime, openTime" />
+	<!-- 巨龙来袭-结束 -->
+	<data logType="guild_dragon_attack_end"        tableName="GuildDragonAttackEnd"    attribute="gameSvrId, dtEventTime, guildId, guildDamage, guildReward" />
+	<!-- 巨龙来袭-攻击 -->
+	<data logType="guild_dragon_attack_fight"    tableName="GuildDragonAttackFight"   attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, guildId, battleId, playerDamage, playerCreateTime" />
+	<!-- 巨龙来袭-发奖 -->
+	<data logType="guild_dragon_attack_reward"    tableName="GuildDragonAttackReward"   attribute="gameSvrId, dtEventTime, guildId, playerId, playerDamage, guildDamage, rewardCd, playerReward, guildReward" />
+	
+
+	<!-- 自动集结-开启 -->
+	<data logType="auto_mass_jion_open"    tableName="AutoMassJionOpen"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, settingInfo" />
+	<!-- 自动集结-行军出发 -->
+	<data logType="auto_mass_jion_start"    tableName="AutoMassJionStart"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, marchId, marchType, autoMarchCnt, autoMarchFreeCnt, curOrder, leaderMarchId, leaderMarchType, leaderMarchTarget, marchDis" />
+	<!-- 自动集结-行军成功加入 -->
+	<data logType="auto_mass_jion_suc"    tableName="AutoMassJionSuc"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, marchId, marchType, leaderMarchId, leaderMarchType" />
+	
+	<!-- 热血畅战-士兵处理 -->
+	<data logType="hot_blood_war_army_flow"    tableName="HotBloodWarArmyFlow"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, termId, actionType, armyData" />
+	
+	
+	<!-- 航海赛季-积分计算 -->
+	<data logType="cross_season_score"     tableName="CrossSeasonScore"    attribute="gameSvrId, dtEventTime, serverId, targetServer, battleRlt, scoreAdd, scoreBef, scoreAft, seasonId, crossTerm, crossId, actionType" />
+	<!-- 航海赛季-每期航海奖励 -->
+	<data logType="cross_season_battle_reward"     tableName="CrossSeasonBattleReward"    attribute="gameSvrId, dtEventTime, serverId, scoreCnt, seasonId, crossTerm, crossId" />
+	<!-- 航海赛季-最终排名 -->
+	<data logType="cross_season_final_rank"     tableName="CrossSeasonFinalRank"    attribute="gameSvrId, dtEventTime, serverId, scoreCnt, rankIndex, seasonId" />
+	<!-- 航海赛季-最终发奖 -->
+	<data logType="cross_season_final_reward"     tableName="CrossSeasonFinalReward"    attribute="gameSvrId, dtEventTime, serverId, scoreCnt, rankIndex, rewardId, seasonId" />
+	
+	<!-- 系统待办事项 -->
+	<data logType="schedule_system"     tableName="SystemScheduleFlow"    attribute="gameSvrId, dtEventTime, serverId, guildId, teamId, scheduleId, scheduleType, startTime, continuesTime, posX, posY" />
+	<!-- 联盟定制待办事项 -->
+	<data logType="schedule_guild"     tableName="GuildScheduleFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, guildId, operType, scheduleId, scheduleType, title, startTime, continuesTime, posX, posY" />
+	<!-- 押镖玩法 -->
+	<data logType="material_transport"     tableName="MaterialTransport"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, truckId, truckType, operType, leaderId, robCnt, trainReward, group1, group2, group3, group4, guildId" />
+	<!-- 家园系统 激活繁荣度-->
+	<data logType="home_land_active_attr"     tableName="HomeLandActiveAttrFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, prosperity, attrs" />
+	<!-- 家园系统 升级建筑-->
+	<data logType="home_land_upgrade"     tableName="HomeLandUpGradeFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, operType, buildId, nextBuildId" />
+	<!-- 家园系统 点赞-->
+	<data logType="home_land_like"     tableName="HomeLandLikeFlow"    attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, targetPlayerId, likes, liked" />
+
+	
+	<!-- 第二建筑队列-免费试用 -->
+	<data logType="secondary_build_queue_free_use"    tableName="SecondaryBuildQueueFreeUse"  attribute="gameSvrId, dtEventTime, gameAppId, platId, iZoneAreaId, puid, playerId, playerLevel, vipLevel, cityLevel, freeTime" />
+	
+</root>

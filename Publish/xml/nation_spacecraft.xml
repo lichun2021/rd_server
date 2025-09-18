@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data partId="100" partType="1" partLevel="0" factoryLevel="0" effectParam="141_0" />
+      <data partId="101" partType="1" partLevel="1" factoryLevel="1" cond="100" consumeRes="90000_1207_250,90000_1208_250,90000_1209_250,90000_1210_250" continueTime="86400" effectParam="141_100" />
+      <data partId="102" partType="1" partLevel="2" factoryLevel="2" cond="101" consumeRes="90000_1207_500,90000_1208_500,90000_1209_500,90000_1210_500" continueTime="172800" effectParam="141_200" />
+      <data partId="103" partType="1" partLevel="3" factoryLevel="3" cond="102" consumeRes="90000_1207_1000,90000_1208_1000,90000_1209_1000,90000_1210_1000" continueTime="259200" effectParam="141_300" />
+      <data partId="104" partType="1" partLevel="4" factoryLevel="4" cond="103" consumeRes="90000_1207_2000,90000_1208_2000,90000_1209_2000,90000_1210_2000" continueTime="345600" effectParam="141_400" />
+      <data partId="105" partType="1" partLevel="5" factoryLevel="5" cond="104" consumeRes="90000_1207_4000,90000_1208_4000,90000_1209_4000,90000_1210_4000" continueTime="432000" effectParam="141_500" />
+      <data partId="106" partType="1" partLevel="6" factoryLevel="6" cond="105" consumeRes="90000_1207_8000,90000_1208_8000,90000_1209_8000,90000_1210_8000" continueTime="518400" effectParam="141_600" />
+      <data partId="107" partType="1" partLevel="7" factoryLevel="7" cond="106" consumeRes="90000_1207_16000,90000_1208_16000,90000_1209_16000,90000_1210_16000" continueTime="604800" effectParam="141_700" />
+      <data partId="108" partType="1" partLevel="8" factoryLevel="8" cond="107" consumeRes="90000_1207_32000,90000_1208_32000,90000_1209_32000,90000_1210_32000" continueTime="691200" effectParam="141_800" />
+      <data partId="109" partType="1" partLevel="9" factoryLevel="9" cond="108" consumeRes="90000_1207_64000,90000_1208_64000,90000_1209_64000,90000_1210_64000" continueTime="777600" effectParam="141_900" />
+      <data partId="110" partType="1" partLevel="10" factoryLevel="10" cond="109" consumeRes="90000_1207_128000,90000_1208_128000,90000_1209_128000,90000_1210_128000" continueTime="864000" effectParam="141_1000" />
+      <data partId="200" partType="2" partLevel="0" factoryLevel="0" effectParam="137_0" />
+      <data partId="201" partType="2" partLevel="1" factoryLevel="1" cond="200" consumeRes="90000_1207_250,90000_1208_250,90000_1209_300,90000_1210_200" continueTime="86400" effectParam="137_120" />
+      <data partId="202" partType="2" partLevel="2" factoryLevel="2" cond="201" consumeRes="90000_1207_500,90000_1208_500,90000_1209_600,90000_1210_400" continueTime="172800" effectParam="137_240" />
+      <data partId="203" partType="2" partLevel="3" factoryLevel="3" cond="202" consumeRes="90000_1207_1000,90000_1208_1000,90000_1209_1200,90000_1210_800" continueTime="259200" effectParam="137_360" />
+      <data partId="204" partType="2" partLevel="4" factoryLevel="4" cond="203" consumeRes="90000_1207_2000,90000_1208_2000,90000_1209_2400,90000_1210_1600" continueTime="345600" effectParam="137_480" />
+      <data partId="205" partType="2" partLevel="5" factoryLevel="5" cond="204" consumeRes="90000_1207_4000,90000_1208_4000,90000_1209_4800,90000_1210_3200" continueTime="432000" effectParam="137_600" />
+      <data partId="206" partType="2" partLevel="6" factoryLevel="6" cond="205" consumeRes="90000_1207_8000,90000_1208_8000,90000_1209_9600,90000_1210_6400" continueTime="518400" effectParam="137_720" />
+      <data partId="207" partType="2" partLevel="7" factoryLevel="7" cond="206" consumeRes="90000_1207_16000,90000_1208_16000,90000_1209_19200,90000_1210_12800" continueTime="604800" effectParam="137_840" />
+      <data partId="208" partType="2" partLevel="8" factoryLevel="8" cond="207" consumeRes="90000_1207_32000,90000_1208_32000,90000_1209_38400,90000_1210_25600" continueTime="691200" effectParam="137_960" />
+      <data partId="209" partType="2" partLevel="9" factoryLevel="9" cond="208" consumeRes="90000_1207_64000,90000_1208_64000,90000_1209_76800,90000_1210_51200" continueTime="777600" effectParam="137_1080" />
+      <data partId="210" partType="2" partLevel="10" factoryLevel="10" cond="209" consumeRes="90000_1207_128000,90000_1208_128000,90000_1209_153600,90000_1210_102400" continueTime="864000" effectParam="137_1200" />
+      <data partId="300" partType="3" partLevel="0" factoryLevel="0" effectParam="138_0" />
+      <data partId="301" partType="3" partLevel="1" factoryLevel="1" cond="300" consumeRes="90000_1207_325,90000_1208_325,90000_1209_175,90000_1210_175" continueTime="86400" effectParam="138_120" />
+      <data partId="302" partType="3" partLevel="2" factoryLevel="2" cond="301" consumeRes="90000_1207_650,90000_1208_650,90000_1209_350,90000_1210_350" continueTime="172800" effectParam="138_240" />
+      <data partId="303" partType="3" partLevel="3" factoryLevel="3" cond="302" consumeRes="90000_1207_1300,90000_1208_1300,90000_1209_700,90000_1210_700" continueTime="259200" effectParam="138_360" />
+      <data partId="304" partType="3" partLevel="4" factoryLevel="4" cond="303" consumeRes="90000_1207_2600,90000_1208_2600,90000_1209_1400,90000_1210_1400" continueTime="345600" effectParam="138_480" />
+      <data partId="305" partType="3" partLevel="5" factoryLevel="5" cond="304" consumeRes="90000_1207_5200,90000_1208_5200,90000_1209_2800,90000_1210_2800" continueTime="432000" effectParam="138_600" />
+      <data partId="306" partType="3" partLevel="6" factoryLevel="6" cond="305" consumeRes="90000_1207_10400,90000_1208_10400,90000_1209_5600,90000_1210_5600" continueTime="518400" effectParam="138_720" />
+      <data partId="307" partType="3" partLevel="7" factoryLevel="7" cond="306" consumeRes="90000_1207_20800,90000_1208_20800,90000_1209_11200,90000_1210_11200" continueTime="604800" effectParam="138_840" />
+      <data partId="308" partType="3" partLevel="8" factoryLevel="8" cond="307" consumeRes="90000_1207_41600,90000_1208_41600,90000_1209_22400,90000_1210_22400" continueTime="691200" effectParam="138_960" />
+      <data partId="309" partType="3" partLevel="9" factoryLevel="9" cond="308" consumeRes="90000_1207_83200,90000_1208_83200,90000_1209_44800,90000_1210_44800" continueTime="777600" effectParam="138_1080" />
+      <data partId="310" partType="3" partLevel="10" factoryLevel="10" cond="309" consumeRes="90000_1207_166400,90000_1208_166400,90000_1209_89600,90000_1210_89600" continueTime="864000" effectParam="138_1200" />
+      <data partId="400" partType="4" partLevel="0" factoryLevel="0" effectParam="139_0" />
+      <data partId="401" partType="4" partLevel="1" factoryLevel="1" cond="400" consumeRes="90000_1207_175,90000_1208_175,90000_1209_325,90000_1210_325" continueTime="86400" effectParam="139_120" />
+      <data partId="402" partType="4" partLevel="2" factoryLevel="2" cond="401" consumeRes="90000_1207_350,90000_1208_350,90000_1209_650,90000_1210_650" continueTime="172800" effectParam="139_240" />
+      <data partId="403" partType="4" partLevel="3" factoryLevel="3" cond="402" consumeRes="90000_1207_700,90000_1208_700,90000_1209_1300,90000_1210_1300" continueTime="259200" effectParam="139_360" />
+      <data partId="404" partType="4" partLevel="4" factoryLevel="4" cond="403" consumeRes="90000_1207_1400,90000_1208_1400,90000_1209_2600,90000_1210_2600" continueTime="345600" effectParam="139_480" />
+      <data partId="405" partType="4" partLevel="5" factoryLevel="5" cond="404" consumeRes="90000_1207_2800,90000_1208_2800,90000_1209_5200,90000_1210_5200" continueTime="432000" effectParam="139_600" />
+      <data partId="406" partType="4" partLevel="6" factoryLevel="6" cond="405" consumeRes="90000_1207_5600,90000_1208_5600,90000_1209_10400,90000_1210_10400" continueTime="518400" effectParam="139_720" />
+      <data partId="407" partType="4" partLevel="7" factoryLevel="7" cond="406" consumeRes="90000_1207_11200,90000_1208_11200,90000_1209_20800,90000_1210_20800" continueTime="604800" effectParam="139_840" />
+      <data partId="408" partType="4" partLevel="8" factoryLevel="8" cond="407" consumeRes="90000_1207_22400,90000_1208_22400,90000_1209_41600,90000_1210_41600" continueTime="691200" effectParam="139_960" />
+      <data partId="409" partType="4" partLevel="9" factoryLevel="9" cond="408" consumeRes="90000_1207_44800,90000_1208_44800,90000_1209_83200,90000_1210_83200" continueTime="777600" effectParam="139_1080" />
+      <data partId="410" partType="4" partLevel="10" factoryLevel="10" cond="409" consumeRes="90000_1207_89600,90000_1208_89600,90000_1209_166400,90000_1210_166400" continueTime="864000" effectParam="139_1200" />
+      <data partId="500" partType="5" partLevel="0" factoryLevel="0" effectParam="140_0" />
+      <data partId="501" partType="5" partLevel="1" factoryLevel="1" cond="500" consumeRes="90000_1207_250,90000_1208_250,90000_1209_200,90000_1210_300" continueTime="86400" effectParam="140_120" />
+      <data partId="502" partType="5" partLevel="2" factoryLevel="2" cond="501" consumeRes="90000_1207_500,90000_1208_500,90000_1209_400,90000_1210_600" continueTime="172800" effectParam="140_240" />
+      <data partId="503" partType="5" partLevel="3" factoryLevel="3" cond="502" consumeRes="90000_1207_1000,90000_1208_1000,90000_1209_800,90000_1210_1200" continueTime="259200" effectParam="140_360" />
+      <data partId="504" partType="5" partLevel="4" factoryLevel="4" cond="503" consumeRes="90000_1207_2000,90000_1208_2000,90000_1209_1600,90000_1210_2400" continueTime="345600" effectParam="140_480" />
+      <data partId="505" partType="5" partLevel="5" factoryLevel="5" cond="504" consumeRes="90000_1207_4000,90000_1208_4000,90000_1209_3200,90000_1210_4800" continueTime="432000" effectParam="140_600" />
+      <data partId="506" partType="5" partLevel="6" factoryLevel="6" cond="505" consumeRes="90000_1207_8000,90000_1208_8000,90000_1209_6400,90000_1210_9600" continueTime="518400" effectParam="140_720" />
+      <data partId="507" partType="5" partLevel="7" factoryLevel="7" cond="506" consumeRes="90000_1207_16000,90000_1208_16000,90000_1209_12800,90000_1210_19200" continueTime="604800" effectParam="140_840" />
+      <data partId="508" partType="5" partLevel="8" factoryLevel="8" cond="507" consumeRes="90000_1207_32000,90000_1208_32000,90000_1209_25600,90000_1210_38400" continueTime="691200" effectParam="140_960" />
+      <data partId="509" partType="5" partLevel="9" factoryLevel="9" cond="508" consumeRes="90000_1207_64000,90000_1208_64000,90000_1209_51200,90000_1210_76800" continueTime="777600" effectParam="140_1080" />
+      <data partId="510" partType="5" partLevel="10" factoryLevel="10" cond="509" consumeRes="90000_1207_128000,90000_1208_128000,90000_1209_102400,90000_1210_153600" continueTime="864000" effectParam="140_1200" />
+      <data partId="600" partType="6" partLevel="0" factoryLevel="0" effectParam="177_0" />
+      <data partId="601" partType="6" partLevel="1" factoryLevel="1" cond="600" consumeRes="90000_1207_250,90000_1208_250,90000_1209_250,90000_1210_250" continueTime="86400" effectParam="177_100" />
+      <data partId="602" partType="6" partLevel="2" factoryLevel="2" cond="601" consumeRes="90000_1207_500,90000_1208_500,90000_1209_500,90000_1210_500" continueTime="172800" effectParam="177_200" />
+      <data partId="603" partType="6" partLevel="3" factoryLevel="3" cond="602" consumeRes="90000_1207_1000,90000_1208_1000,90000_1209_1000,90000_1210_1000" continueTime="259200" effectParam="177_300" />
+      <data partId="604" partType="6" partLevel="4" factoryLevel="4" cond="603" consumeRes="90000_1207_2000,90000_1208_2000,90000_1209_2000,90000_1210_2000" continueTime="345600" effectParam="177_400" />
+      <data partId="605" partType="6" partLevel="5" factoryLevel="5" cond="604" consumeRes="90000_1207_4000,90000_1208_4000,90000_1209_4000,90000_1210_4000" continueTime="432000" effectParam="177_500" />
+      <data partId="606" partType="6" partLevel="6" factoryLevel="6" cond="605" consumeRes="90000_1207_8000,90000_1208_8000,90000_1209_8000,90000_1210_8000" continueTime="518400" effectParam="177_600" />
+      <data partId="607" partType="6" partLevel="7" factoryLevel="7" cond="606" consumeRes="90000_1207_16000,90000_1208_16000,90000_1209_16000,90000_1210_16000" continueTime="604800" effectParam="177_700" />
+      <data partId="608" partType="6" partLevel="8" factoryLevel="8" cond="607" consumeRes="90000_1207_32000,90000_1208_32000,90000_1209_32000,90000_1210_32000" continueTime="691200" effectParam="177_800" />
+      <data partId="609" partType="6" partLevel="9" factoryLevel="9" cond="608" consumeRes="90000_1207_64000,90000_1208_64000,90000_1209_64000,90000_1210_64000" continueTime="777600" effectParam="177_900" />
+      <data partId="610" partType="6" partLevel="10" factoryLevel="10" cond="609" consumeRes="90000_1207_128000,90000_1208_128000,90000_1209_128000,90000_1210_128000" continueTime="864000" effectParam="177_1000" />
+</root>

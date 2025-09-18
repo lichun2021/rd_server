@@ -1,0 +1,49 @@
+option java_package = "com.hawk.game.protocol";
+
+import "World.proto";
+
+enum error
+{
+	// 服务器不存在
+	SERVER_NOT_FOUND = 100000;
+	// 服务器连接失败
+	SERVER_CONNECT_FAILED = 100001;
+	// 请求超时
+	SERVER_REQUEST_TIMEOUT = 100002;
+}
+
+enum code
+{
+	// 跨服数据请求
+	SERVER_PROXY_BASE_CMD = 100000;	
+	// 获取跨服地图数据
+	SERVER_PROXY_FETCH_WORLD = 100001;
+}
+
+
+// 测试请求
+message HPProxyTestRequest
+{
+	required string reqMsg = 1;
+}
+
+// 测试相应
+message HPProxyTestResponse
+{
+	required string rspMsg = 1;
+}
+
+// 跨服获取地图数据请求
+message ProxyFetchWorldRequest
+{
+	required int32 x 				= 1;
+	required int32 y 				= 2;
+	optional float speed			= 3;
+	required string fromServerId	= 4;
+}
+
+// 跨服获取地图数据响应
+message ProxyFetchWorldResponse
+{
+	repeated WorldPointPB points 	= 1;
+}

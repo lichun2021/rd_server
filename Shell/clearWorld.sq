@@ -1,0 +1,9 @@
+DELETE FROM world_point;
+DELETE FROM world_march;
+DELETE FROM world_area;
+UPDATE army SET free=free+march;
+UPDATE army SET march=0;
+DELETE FROM guild_info;
+DELETE FROM guild_manor;
+DELETE FROM guild_member;
+DELETE FROM guild_science;

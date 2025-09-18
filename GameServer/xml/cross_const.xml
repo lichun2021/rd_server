@@ -1,0 +1,264 @@
+# 截止活动的end状态前多少时间禁止跨服(单位:秒)
+deadTime = 300
+
+# 跨服活动数据在redis中生命周期(单位:秒)
+cActivityRedisExpire = 432000
+
+# 活动开始后奖励
+cross_statReward = 30000_800101_3
+
+# 个人排名上限
+cross_personalLimit = 100
+
+# 联盟排名奖励上限
+cross_unionLimit = 100
+
+# 跨服操作冷却时间
+crossCd = 300
+
+# 跨服迁城保护时间
+crossProtect = 300
+
+# 相对于凌晨的前后多长时间不可操作进入跨服，退出跨服.
+unoperatorTime = 900
+
+# 投票服务器排行数量限制
+voteServerRankLimit = 1000
+
+# 单次充能消耗
+chargeCost = 30000_15800001_1
+
+# 单次充能值
+chargeValue = 1
+
+# 充能上限(有区分先到到这个值，就开始投票)
+chargeMax = 20000
+
+# 胜利区服总统票数
+presidentVoteCount = 100
+
+# 交税时间间隔(s)
+taxPeroid = 7200
+
+# 税率(万分比)
+taxRate = 1000
+
+# 税收记录条数限制
+taxRecordLimit = 50
+
+# 税收奖励接收次数限制
+taxReceiveTimesLimit = 10
+
+# 税收奖励接收数量限制
+taxReceiveCountLimit = 5000000
+
+# 跨服检测移除道具
+crossCheckRemoveItem = 30000_15800001_1,30000_15800002_1
+
+# 王战战斗时间(s)
+presidentWarFareTime = 7200
+
+# 跨服盟总胜利累积战令时间，秒
+crossWinAccumulateOccupyTime = 3600
+
+# 王战占领时间(s)
+presidentOccupyTime = 1800
+
+# 刷新特殊矿的等级
+specialResourceLevel = 9
+
+# 刷新特殊矿的数量
+specialResourceCount = 20
+
+# 刷新特殊矿tick周期(21600s/6h)
+specialResourceTickPeriod = 21600
+
+# 刷新特殊矿周期(s) 2天
+specialResourcePeriod = 172800
+
+# 仓库存量上限
+taxMax = 10000000000
+
+# 攻占奖励-队伍
+firstOccupyAward = 10000_1001_200,30000_802005_60,30000_15800003_30,30000_104050_15,30000_105050_15,30000_850037_10
+
+# 攻占奖励-联盟全员
+occupyAward = 10000_1001_200,30000_802005_60,30000_15800003_30,30000_104050_15,30000_105050_15,30000_850037_10
+
+# 控制奖励-队伍
+controlAward = 10000_1001_300,30000_802005_600,30000_15800003_100,30000_810001_20,30000_104050_20,30000_820002_10
+
+# 控制奖励-联盟全员
+controlGuildAward = 10000_1001_300,30000_802005_600,30000_15800003_100,30000_810001_20,30000_104050_20,30000_820002_10
+
+# 联盟战力刷新时间（毫秒）showtime前8小时
+flushGuildBattleTime = 28800000
+
+# 匹配时间（毫秒）showtime前6小时
+matchTime = 21600000
+
+# 距离开服多少天（毫秒） 45天
+serverDelayTime = 3888000000
+
+# 分组数量
+groupServerNumber = 2
+
+# 限定匹配预发布服、审核服、战斗服
+limitServers = 19990_19991_19992_19993_19994_19995_19996_19997_19998_19999_29990_29991_29992_29993_29994_29995_29996_29997_29998_29999
+
+# 该服联盟数小于多少后不参与匹配
+minGuildNumberJoinMatch = 11
+
+# 根据开服时间划分不同匹配池
+serverMatchOpenDays = 1_365,366_999999
+
+# 本服税收比例（万分比）
+taxRateOwnServer = 1000
+
+# 服务器匹配池子大小
+matchSize = 15
+
+# 杀死敌人积分士兵星级计算比例
+killSoldierStarScoreAdd = 0_0,1_1000,2_2000,3_4000,4_6000,5_10000,6_15000,7_20000,8_25000,9_30000,10_35000,11_40000,12_45000,13_50000,14_55000,15_60000,16_65000,17_70000,18_75000,19_80000,20_85000
+
+# 杀伤敌人积分士兵星级计算比例
+damageSoldierStarScoreAdd = 0_0,1_1000,2_2000,3_4000,4_6000,5_10000,6_15000,7_20000,8_25000,9_30000,10_35000,11_40000,12_45000,13_50000,14_55000,15_60000,16_65000,17_70000,18_75000,19_80000,20_85000
+
+# 跨服活动开启阶段全服buff
+serverBuff = 1092_2000
+
+# 占领远征要塞，国家积分额外加成
+fortressPointBuff = 590000
+
+# 废弃
+fortressMeritBuff = 5000
+
+# 资源宝箱数量
+resBoxInfo = 1207_100_1001,1208_100_1002,1209_100_1003,1210_100_1004
+
+# 资源狂欢，每种资源的最少刷新数量
+resNumMin = 100
+
+# 资源狂欢，每种资源的最大刷新数量
+resNumMax = 500
+
+# 资源宝箱  生成范围
+resBoxGenScope = 317_635_445_887
+
+# 是否是debug模式
+debugMode = false
+
+# debug模式活动阶段 1SHOW 2OPEN 3END 4HIDDEN
+debugActivityState = 2
+
+# debug模式战斗阶段
+debugFightState = 7
+
+# debug模式期数
+debugTermId = 20220701
+
+# 远征要塞开始时间(秒)
+fightFortressStartTime = 86400
+
+# 远征要塞结束时间(秒)
+fightFortressEndTime = 108000
+
+# 备战阶段开始时间(秒)
+fightPrepareTime = 108000
+
+# 王战开始时间(秒)
+fightPresidentTime = 115200
+
+# 结果展示阶段开始时间(秒)
+fightShowEndTime = 126000
+
+# 战略点排行上限
+talentRankLimit = 100
+
+# 战略点联盟排行上限
+talentGuildRankLimit = 100
+
+# 出战联盟数量
+fightGuildCount = 20
+
+# 远征要塞军功奖励tick周期(s)
+fortressPointMailPeroid = 1799
+
+# 单个玩家一期远征活动，最多可以领取多少个物资宝箱
+resBoxSoloMax = 20
+
+# 能量塔出征最低数量
+crossPylonArmyCountLimit = 30000
+
+# 远征要塞最大积分部队数量
+crossFortressArmyNum = 100000
+
+# 国家远征战略点初始数量
+talentInit = 5000
+
+# 物资宝箱爆出比例，万分比
+resBoxProportion = 5000
+
+# 取单服个人实力前X名的玩家参与队伍实力换算
+crossMatchNumLimit = 100
+
+# 取航海远征玩法历史排名场次
+crossMatchTimesLimit = 10
+
+# 单场战斗排名折合修正系数
+crossMatchBattleResultCof = 1000_-500_-500
+
+# 修正系数最高值
+crossMatchCofMaxValue = 3000
+
+# 修正系数最低值
+crossMatchCofMinValue = -3000
+
+# 国家集结、盟主申请CD，单位：秒
+crossRallyApplicationCd = 1800
+
+# 国家集结、司令邀请CD，单位：秒
+crossRallyInviteCd = 1800
+
+# 自由军修改电塔归属CD，单位：秒
+changeBelongCd = 300
+
+# 在远征要塞战斗额外积分加成
+fortressBattlePointBuff = 20000
+
+# 跨服盟总胜利后，国家军成员奖励
+crossRallyWinReward = 30000_1800001_28,30000_1300017_288,30000_800002_288,30000_810001_18,30000_850006_8,30000_850036_8,30000_850016_8,30000_850026_8
+
+# 跨服盟总争夺进度条总长度
+crossProgressTotal = 36000000
+
+# 跨服盟总争夺征服方初始长度
+crossAttackInit = 18000000
+
+# 跨服盟总争夺征服方推条速度，单位秒
+crossAttackSpeed = 10000
+
+# 跨服盟总争夺防守方推条速度，单位秒
+crossDefenseSpeed = 10000
+
+# 根据开服时间划分不同匹配池
+serverMatchOpenDays = 1_90,91_365,366_2190,2191_999999
+
+# 赛季匹配偏移名次
+seasonMatchOffset = 5
+
+# 赛季初始积分
+seasonInitScore = 1000
+
+# 赛季航海战败损失积分百分比
+seasonScoreLosePer = 10
+
+# 赛季航海之星道具ID
+seasonStarItem = 21063075
+
+# 新服加入赛季，每错过一期的初始积分衰减量
+seasonInitScoreDecay = 50
+
+# 能量塔排行榜最多展示多少
+fortressRankMax = 100
+

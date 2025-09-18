@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" upgradeNum="2" randomPond="1_18|2_80|3_2" />
+      <data id="2" upgradeNum="4" randomPond="2_930|3_68|4_2" />
+      <data id="3" upgradeNum="12" randomPond="3_190|4_9|5_1" />
+      <data id="4" upgradeNum="33" randomPond="4_30|5_1" />
+      <data id="5" upgradeNum="99" randomPond="5_1" />
+</root>

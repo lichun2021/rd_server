@@ -1,0 +1,437 @@
+option java_package = "com.hawk.game.protocol";
+
+// 国家整体状态
+enum NationStatus
+{
+	UNOPEN	 	= 1; // 未开启国家系统
+	OPEN		= 2; // 开启国家系统，等待条件满足
+	INITING	 	= 3; // 条件以满足，进入捐献的状态
+	REBUILDING	= 4; // 重建状态
+	COMPLETE	= 5; // 国家系统重建完成
+}
+
+// 国家建筑状态
+enum NationBuildingState
+{
+	INCOMPLETE 	= 1; // 废墟可建设
+	IDLE	 	= 2; // 常态
+	BUILDING 	= 3; // 建设中
+	RUNNING		= 4; // 运行中（研究中，改造中）
+}
+
+// 国家建筑类型
+enum NationbuildingType
+{
+	// 国家建设处
+	NATION_BUILDING_CENTER = 1;
+	// 国家任务中心
+	NATION_QUEST_CENTER = 2;
+	// 国家科技中心
+	NATION_TECH_CENTER = 3;
+	// 飞船制造厂
+	NATION_SHIP_FACTORY = 4;
+	// 国家仓库
+	NATION_WEARHOUSE = 5;
+	// 国家医院
+	NATION_HOSPITAL = 6;
+	// 外交使馆
+	NATION_RELATIONS = 7;
+	// 国家航天中心
+	NATION_SPACE_FLIGHT = 8;
+}
+
+// 国家建设任务类型
+enum NationBuildQuestType
+{
+	NATIONAL 		= 1; // 国家任务
+	PERSONAL	 	= 2; // 个人任务
+}
+
+// 捐献请求
+message NationDonatePB
+{
+	required int32 resType = 1; // 自选资源类型
+}
+
+// 国家状态信息
+message NationBaseInfoPB
+{
+	required NationStatus nationStatus = 1; // 当前状态
+	optional int32 cond1 = 2; // 本国家 连续三次盟军总部归属同一个联
+	optional int32 cond2 = 3; // 本国家 航海远征活动，攻占他国盟总
+	optional int32 cond3 = 4; // 本国家（物理主服）开启时间120+
+	optional bool warehouseOver = 5; //国家仓库是否建成
+	optional bool crossNation = 6; // 是否是跨服国家（仅用于世界点）
+}
+
+// 捐献信息
+message NationDonateInfoPB
+{
+	optional int32 currentDonatVal = 2; // 当前捐献值
+	optional int32 donatCount = 3; // 剩余捐献次数
+	optional int64 nextResumeTime = 4; // 下次恢复时间
+}
+
+// 建筑列表信息
+message NationBuildingInfoPB
+{
+	repeated NationBuildingDetail buildings = 1; // 所有建筑状态列表
+}
+
+// 点击国家建筑相信信息
+message NationOpenBuilding
+{
+	required NationbuildingType btype = 1; // 国家建筑类型
+}
+
+// 选择当前任务类型
+message NationSelectQuestType
+{
+	required NationBuildQuestType questType = 1; // 建设处任务类型
+}
+
+// 国家建设处详细信息
+message NationConstructDetailInfoPB
+{
+	repeated NationBuildQuestInfo 	quests = 1; // 任务列表
+	repeated NationBuildingDetail 	buildings = 2; // 所有建筑状态列表
+	optional NationBuildQuestType 	questType = 3; //当前的任务类型
+	optional int32 					questLeftCount = 4; //当日任务剩余次数
+	optional int32 					refreshCount = 5; //当日刷新次数
+}
+
+// 当前建设任务信息
+message NationBuildQuestInfo
+{
+	required NationbuildingType btype 	= 1; // 任务所属建筑
+	required string questId 			= 2; // 任务ID
+	required int32 	questCfgId 			= 3; // 任务配置表ID
+	optional string	marchId				= 4; // 对应任务行军id
+	optional int32	processor			= 5; // 任务对应进度百分比（默认是0）
+}
+
+// 单个建筑相信信息
+message NationBuildingDetail
+{
+	required NationbuildingType 	btype 			= 1; // 建筑类型
+	required NationBuildingState 	bstate		 	= 2; // 建筑当前状态
+	required int32					level 			= 3; // 当前等级
+	required int32 					dayBuildVal 	= 4; // 当日建设值
+	required int32 					totalBuildVal 	= 5; // 总建设值
+	optional int64 					buildEndTime 	= 6; // 建设结束时间
+	optional int64 					runningEndTime 	= 7; // 运行结束时间
+	optional int64 					runningTotalTime = 8; // 国家建筑运行总时间
+}
+
+//////////////////////////// 国家医院 ///////////////////////////////
+
+// 国家医院信息
+message NationalHospitalPB 
+{
+    repeated NationalHospitalArmyPB army      = 1; // 接纳部队信息
+	repeated DeleteSoldierSetPB presetDelete  = 2; // 预设的要自动删除的兵种
+	required int32 acceptDeadLimit            = 3; // 接纳死兵上限 
+	required int64 recoverEndTime             = 4; // 所有死兵恢复完成的时间
+	optional int32 armyId                     = 5; // 服务器已经结算到哪个兵了，下一次结算从下一个兵开始
+	optional int64 calcTime                   = 6; // 最近一次的结算时间
+	optional int64 recoverStartTime           = 7; // 死兵恢复开始时间
+	optional int64 totalSpeedTime             = 8; // 加速走过的时长
+	optional int32 buildLevel                 = 9; // 国家医院建筑的等级
+	repeated int32 firstRecoverArmy           = 10;// 优先复活的兵种类型
+}
+
+// 国家医院接纳部队信息
+message NationalHospitalArmyPB
+{
+	required int32 armyId           = 1;  // 兵种ID
+	optional int32 deadSoldierCount = 2;  // 待复活的数量
+	optional int32 recoveredCount   = 3;  // 已复活未取走的数量
+}
+
+// 清除死兵请求
+message NationDeleteDeadSoldierReq
+{
+	repeated DeleteSoldierPB deleteDead         = 1;  // 要删除现有死兵的数量
+	repeated DeleteSoldierSetPB presetDelete    = 2;  // 预设要自动删除的死兵信息
+}
+
+// 删除死兵信息
+message DeleteSoldierPB
+{
+	required int32 armyId      = 1;  // 兵种ID
+	optional int32 deleteCount = 2;  // 删除数量
+}
+
+// 预设删除死兵信息
+message DeleteSoldierSetPB
+{
+	required int32 soldierType   = 1;  // 兵种类型，为0时表示针对所有兵种
+	required int32 level         = 2;  // 等级
+}
+
+// 优先复活设置
+message FirstRecoverSetPB
+{
+	repeated int32 armyType      = 1;  // 优先复活的兵种类型（有多个按前后顺序决定优先复活的顺序，注意：不支持传增量，要传就把要设置的所有兵种类型都传过来）
+}
+
+
+// 加速复活请求
+message RecoverSpeedReq
+{
+	repeated RecoverSpeedItemPB speedItem = 1;
+}
+
+message RecoverSpeedItemPB
+{
+	required string itemUuid  = 1;
+	required int32 itemCount  = 2;
+}
+
+//////////////////////////// 国家医院 end ////////////////////////////////
+
+//////////////////////////// 国家仓库 ////////////////////////////////////
+
+// 国家仓库资源信息
+message NationalWarehouseResourcePB
+{
+	repeated NationalWarehouseResItemPB resource = 1; // 基础资源
+	required int64 nationalGold                  = 2; // 国家金条库存
+}
+
+// 具体的资源项
+message NationalWarehouseResItemPB
+{
+	required int32 resourceId  = 1;
+	required int64 count       = 2;
+}
+
+// 国家建筑资助信息
+message NationalBuildSupportInfo
+{
+	repeated NationalBuildSupportPB supportInfo = 1;
+}
+
+// 单个建筑的资助次数
+message NationalBuildSupportPB
+{
+	required int32 build   = 1;  // 建筑类型
+	required int32 times   = 2;  // 资助次数
+}
+
+// 国家仓库捐献请求
+message NationalStorehouseDonateReq
+{
+	required int32  itemId = 1;  // 捐献的材料物品ID
+	required int64  count  = 2;  // 捐献的数量
+}
+
+// 给国家建筑资助金条请求
+message NationalSupportDiamondReq
+{
+	required int32  build  = 1;  // 给哪个建筑(类型)捐献
+}
+
+// 国家商店购买（兑换）道具
+message NationalShopBuyGoodsReq
+{
+	required int32  shopId = 1;  // 商品ID
+	required int32  count  = 2;  // 购买数量
+}
+
+// 国家库存金条变动记录数据
+message NationalDiamondRecordData
+{
+	repeated NationalDiamondRecordPB record  = 1;
+}
+
+// 单条记录数据
+message NationalDiamondRecordPB
+{
+	required int64 time          = 1;  // 资助或支出的时间
+	required int32 type          = 2;  // 操作类型：0资助，1支出 
+	required string playerId     = 3;
+	required string playerName   = 4;
+	optional int32  itemId       = 5;
+	required int64  count        = 6;
+	optional int32  build        = 7;  // 给哪个建筑资助，或是在哪个建筑上的消耗
+}
+
+// 国家商店购买信息
+message NationalWareHouseShopPB
+{
+	repeated NationalWareHouseShopItemPB shopItem = 1;
+	optional int64 refreshTime = 2;  // 商店下一次的刷新时间
+}
+
+message NationalWareHouseShopItemPB
+{
+	required int32  shopId = 1;  // 商品ID
+	required int32  count  = 2;  // 本周已购买次数
+}
+//////////////////////////// 国家仓库 end //////////////////////////////
+
+
+//----------------------------国家任务-------------------
+
+// 国家任务界面信息
+message NationMissionPageInfo
+{          
+	required NationBuildQuestType type = 1; // 类型 个人版/国家版
+	required int32 remainMissionTimes = 2; // 剩余可完成次数
+	required int32 canFinishMissionTimes = 3;// 可完成任务次数上限
+	required int64 nextMissionAddTime = 4; // 下次增加可完成任务次数的时间(倒计时结束客户端请求界面信息)
+	required int32 nextMissionAddCount = 5; // 下次增加可完成任务次数的数量
+	optional int64 nextRefreshTime = 6; // 下次增加任务时间(不发这个字段，代表今天不会再增加任务了,倒计时结束客户端请求界面信息)
+	optional MyNationMissionInfo myMission = 7; // 我的任务
+	repeated NationMissionInfo missions = 8; // 任务列表
+	required int32 currentTech = 9; // 当前增加的科技值
+	required int32 buyTimes = 10; // 已经购买的次数
+	optional int64 giveupTime = 11; // 上次放弃任务的时间
+}
+
+// 自己的任务信息
+message MyNationMissionInfo
+{
+	required string uuid = 1; // 任务uuid
+	required int32 cfgId = 2; // 任务配置id
+	required int32 currentValue = 3; // 当前进度
+	required int32 conditionValue = 4; // 目标进度
+	required int64 disappearTime = 5; // 任务消失时间
+	required int32 state = 6;// 0未完成,1已完成
+}
+
+// 任务信息
+message NationMissionInfo
+{
+	required string uuid = 1; // 任务uuid
+	required int32 cfgId = 2; // 任务配置id
+	required int32 remainTimes = 3; // 剩余可领取次数
+	optional int64 disappearTime = 4; // 有这个字段代表是限时任务
+}
+
+// 接受任务/删除任务
+message NationMissionOperReq
+{
+	required string uuid = 1; // 任务id
+	optional NationBuildQuestType type = 2; // 类型 个人版/国家版
+}
+
+//----------------------------国家任务--------------------------------
+
+//-------------------------国家飞船制造厂START------------------------
+
+// 飞船部件
+enum ShipComponents
+{
+	DEFENSE_PART 			= 1 ; // 1. 飞船防御外壳。主要提升部队防御相关属性
+	LIFE_PART 			= 2 ; // 2. 飞船生命舱。主要提升部队生命相关属性
+	ATTACK_PART 			= 3 ; // 3. 飞船武器系统。主要提升部队攻击相关属性
+	SPEED_PART 			= 4 ; // 4. 飞船推进器。主要提升部队出征上限、打野行军速度等属性。
+	MASS_PART 			= 5 ; // 5. 飞船指挥中枢。主要提升集结相关属性。
+	COLLECTION_PART 		= 6 ; // 6. 飞船探测器。主要提升采集速度等。
+}
+
+// 飞船制造厂详细信息
+message NationShipFactoryInfo
+{
+	repeated ShipComponentInfo parts = 1; // 所有部件信息
+	required int32 buildLvl  = 2; //飞船制造厂等级
+	repeated NationalWarehouseResItemPB resource = 3; // 国家仓库资源
+	optional ShipComponents upPart = 4; //正在强化中得部件 （没有为空）
+	optional int64 upEndTime = 5; // 强化截止时间，0表示没有强化的
+	optional int32 assistCount = 6; // 剩余助力次数
+	optional int32 assistLimit = 7; // 当日助力总值
+}
+
+// 单个组件信息
+message ShipComponentInfo
+{
+	required ShipComponents type = 1; //组件类型
+	required int32	lvl	= 2; // 强化等级
+}
+
+// 强化请求
+message UpgradeShipComponent
+{
+	required ShipComponents type = 1; //组件类型
+}
+
+//-------------------------国家飞船制造厂END------------------------
+
+//----------------------------国家科技--------------------------------
+
+// 国家科技界面信息
+message NationTechPageInfo
+{
+	required int64 techValue = 1; // 研究值
+	repeated NationTechInfo tech = 2; // 科技信息(只发等级大于0级的)
+	optional NationTechResearchInfo techResearch = 3; // 科技研究信息
+	repeated NationTechSkillInfo techSkill = 4; //科技技能信息
+	required int32 buildLevel = 5; // 建筑等级
+}
+
+// 国家科技信息
+message NationTechInfo
+{
+	required int32 techCfgId = 1; // 科技配置id
+	required int32 level = 2; // 等级
+}
+
+// 国家科技研究信息
+message NationTechResearchInfo
+{
+	required int32 techCfgId = 1; // 科技配置id
+	required int32 tarLevel = 2; // 研究目标等级
+	required int64 finishTime = 3; // 研究完成时间
+	required bool helped = 4; // 是否已经助力过
+	required int64 helpTime = 5; // 当日已经助力的总值
+}
+
+// 国家科技技能信息
+message NationTechSkillInfo
+{
+	required int32 techCfgId = 1; // 科技配置id
+	required int64 refreshTime = 2; // 技能cd结束时间点
+}
+
+// 科技通用请求
+message NationTechCommonReq
+{
+	required int32 techCfgId = 1; // 科技配置id
+}
+//----------------------------国家科技--------------------------------
+
+
+//------------------ 红点 -------------
+// 红点类型
+enum NationRedDot
+{
+	// 建设处有可接任务
+	CONSTRUCTION_IDLE = 1;
+	// 任务中心有奖励
+	MISSION_AWARD = 2;
+	// 任务中心有可领取任务
+	MISSION_IDLE = 3;
+	// 实验室可助力
+	TECH_IDLE = 4;
+	// 飞船可助力
+	SHIP_IDLE = 5;
+	// 仓库空闲（目前无）
+	WEARHOUSE_IDLE = 6;
+	// 医院治疗完成
+	HOSPITAL_IDLE = 7;
+}
+
+// 红点
+message NationRDInfo
+{
+	required NationRedDot rdkey = 1; // 红点类型
+	required int32 val = 2; // 对应数值
+}
+
+// 红点对应列表
+message NationRDInfoList
+{
+	repeated NationRDInfo rdlist = 1; // 红点列表
+}

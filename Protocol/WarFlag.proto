@@ -1,0 +1,168 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "World.proto";
+
+// 请求放置旗帜
+message	PlaceWarFlagReq
+{
+	required int32 x = 1;
+	required int32 y = 2;
+	optional string flagId  = 3;
+}
+
+// 旗帜状态
+enum FlageState
+{
+	FLAG_LOCKED 	  = 1; //锁定中
+	FLAG_UNLOCKED     = 2; //已解锁
+	FLAG_BUILDING 	  = 3; //建造中
+	FLAG_PLACED 	  = 4; //已放置
+	FLAG_DEFEND 	  = 5; //已完成
+	FLAG_BEINVADED 	  = 6; //占领中
+	FLAG_DAMAGED	  = 7; //损毁
+	FLAG_FIX	 	  = 8; //修复中
+	FLAG_REMOVE	 	  = 9; //拆除中
+}
+
+// 旗帜世界显示状态
+enum FlagViewState
+{
+	FLAG_VIEW_NONE      = 1; //没有状态
+	FLAG_VIEW_CAN_ATK   = 2; //可交战
+	FLAG_VIEW_BE_OCCUPY = 3; //已被占领
+	FLAG_VIEW_OCCUPY 	= 4; //已占领
+	FLAG_VIEW_QUARTER	= 5; //已驻防
+	FLAG_VIEW_CAN_DEF	= 6; //可驻防
+}
+
+// 旗帜
+message Flag
+{
+	required string flagId 	     = 1;//旗帜id
+	required FlageState state 	 = 2;//旗帜状态
+	optional int32 x 		     = 3;//坐标x
+	optional int32 y 		     = 4;//坐标y
+	optional int32 life 	     = 5;//旗帜生命值
+	optional bool canMarch       = 6;//是否可行军(驻扎/攻打)
+	optional string ownerId	     = 7;//所属联盟id
+	optional string occupyId     = 8;//占领者联盟id
+	optional string ownerTag	 = 9;//所属联盟简称
+	optional int32 ownerIndex	 = 10;//所属联盟第x个旗子
+	optional int32 occupyLife	 = 11;//占领值
+	optional bool isCenter		 = 12;//是否是母旗
+}
+
+// 同步旗帜列表
+message SyncWarFlagList
+{
+	repeated Flag warFlag = 1;
+}
+
+// 收回旗帜
+message TakeBackFlagReq
+{
+	required string flagId = 1;//旗帜id
+}
+
+// 战旗资源
+message FlagResource
+{
+	required int32 id    = 1;
+	required int32 count = 2;
+}
+
+// 获取当前旗帜资源数量
+message FlagResourceCountResp
+{
+	repeated FlagResource resource = 1;
+}
+
+// 大世界格局(二级地图)
+message FlagPatternResp
+{
+	repeated int64 flagInfo = 1;
+}
+
+// 战旗驻军信息
+message FlagQuarterInfoReq
+{
+	required string flagId = 1;
+}
+
+message FlagQuarterInfoResp
+{
+	repeated MarchArmyDetailInfo march = 1;
+	optional int32 massNum  	  	   = 2; //队长集结上限
+}
+
+// 战旗小红点儿
+message FlagRedPointPush
+{
+	optional bool hasReward = 1; // 是否有奖励
+	optional int32 flagCount = 2; // 战旗数量
+}
+
+// 战旗地图联盟信息
+message FlagMapGuildInfoReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message FlagMapGuildInfoResp
+{
+	required int32 rank 	  = 1;
+	required string guildTag  = 2;
+	required string guildName = 3;
+	required int32 flagCount  = 4;
+	required int32 posX		  = 5;
+	required int32 posY		  = 6;
+	optional int32 compCount  = 7;//建造完毕的
+	optional int32 compCenterCount  = 8;//建造完毕的母旗数量
+}
+
+
+// 母旗信息
+message CenterFlagInfoReq
+{
+	required string flagId = 1; // 母旗id
+}
+
+// 母旗信息
+message CenterFlagInfoResp
+{
+	repeated CenterFlagSingUpInfo signUpInfo = 1; // 报名信息
+	optional int64 marchTime = 2; // 发车时间
+}
+
+// 母旗报名信息
+message CenterFlagSingUpInfo
+{
+	optional int32 icon = 1; // 头像
+	optional string pficon = 2; // 头像
+	optional string guildTag= 3; // 联盟简称
+	optional string name = 4; // 玩家名字
+	repeated string box = 5; // 宝箱 三段式
+	optional int32 specialBoxCount = 6; // 特殊宝箱数量
+	optional string playerId = 7; // 玩家id
+	optional int64 proRemainTime = 8; // 产出剩余时间
+}
+
+// 官员移除报名
+message CenterFlagRmoveSignUp
+{
+	required string playerId = 1;
+	required string flagId = 2;
+}
+
+// 母旗报名
+message CenterFlagSignUp
+{
+	required string flagId = 1; // 母旗id
+}
+
+// 母旗取消报名
+message CenterFlagUnSignUp
+{
+	required string flagId = 1; // 母旗id
+}

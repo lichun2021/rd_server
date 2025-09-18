@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" androidPayId="530001" iosPayId="540001" purchaseVipExp="10000_1005_60" unlockItem="30000_1150118_1" freeRewards="30000_840194_1,30000_1780040_1,30000_850051_1" chooseItems="3" />
+      <data giftId="2" androidPayId="530002" iosPayId="540002" purchaseVipExp="10000_1005_300" unlockItem="30000_1150118_4" freeRewards="30000_840194_4,30000_1780040_3,30000_850051_2" chooseItems="3" />
+      <data giftId="3" androidPayId="530003" iosPayId="540003" purchaseVipExp="10000_1005_980" unlockItem="30000_1150118_20" freeRewards="30000_840194_20,30000_1780040_12,30000_850052_1" chooseItems="3" />
+      <data giftId="4" androidPayId="530004" iosPayId="540004" purchaseVipExp="10000_1005_3280" unlockItem="30000_1150118_40" freeRewards="30000_840194_40,30000_1780040_20,30000_850052_2" chooseItems="3" />
+      <data giftId="5" androidPayId="530005" iosPayId="540005" purchaseVipExp="10000_1005_6480" unlockItem="30000_1150118_60" freeRewards="30000_840194_60,30000_1780040_30,30000_850052_3" chooseItems="3" />
+</root>

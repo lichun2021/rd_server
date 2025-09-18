@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1000101" skillId="10001" skillLevel="1" skillType="4" staffPoint="3000" effectList="12111_600" />
+      <data id="1000102" skillId="10001" skillLevel="2" skillType="4" staffPoint="12000" effectList="12111_800" />
+      <data id="1000103" skillId="10001" skillLevel="3" skillType="4" staffPoint="21000" effectList="12111_1000" />
+      <data id="1000104" skillId="10001" skillLevel="4" skillType="4" staffPoint="36000" effectList="12111_1250" />
+      <data id="1000105" skillId="10001" skillLevel="5" skillType="4" staffPoint="54000" effectList="12111_1500" />
+      <data id="1000106" skillId="10001" skillLevel="6" skillType="4" staffPoint="76500" effectList="12111_1600" />
+      <data id="1000107" skillId="10001" skillLevel="7" skillType="4" staffPoint="99000" effectList="12111_1700" />
+      <data id="1000108" skillId="10001" skillLevel="8" skillType="4" staffPoint="126000" effectList="12111_1800" />
+      <data id="1000201" skillId="10002" skillLevel="1" skillType="3" staffPoint="4500" effectList="12112_4000" />
+      <data id="1000202" skillId="10002" skillLevel="2" skillType="3" staffPoint="13500" effectList="12112_5500" />
+      <data id="1000203" skillId="10002" skillLevel="3" skillType="3" staffPoint="24000" effectList="12112_7000" />
+      <data id="1000204" skillId="10002" skillLevel="4" skillType="3" staffPoint="39000" effectList="12112_8500" />
+      <data id="1000205" skillId="10002" skillLevel="5" skillType="3" staffPoint="58500" effectList="12112_10000" />
+      <data id="1000301" skillId="10003" skillLevel="1" skillType="2" staffPoint="6000" effectList="12113_6000" />
+      <data id="1000302" skillId="10003" skillLevel="2" skillType="2" staffPoint="15000" effectList="12113_8250" />
+      <data id="1000303" skillId="10003" skillLevel="3" skillType="2" staffPoint="27000" effectList="12113_10500" />
+      <data id="1000304" skillId="10003" skillLevel="4" skillType="2" staffPoint="42000" effectList="12113_12750" />
+      <data id="1000305" skillId="10003" skillLevel="5" skillType="2" staffPoint="63000" effectList="12113_15000" />
+      <data id="1000306" skillId="10003" skillLevel="6" skillType="2" staffPoint="81000" effectList="12113_16500" />
+      <data id="1000307" skillId="10003" skillLevel="7" skillType="2" staffPoint="103500" effectList="12113_18000" />
+      <data id="1000308" skillId="10003" skillLevel="8" skillType="2" staffPoint="135000" effectList="12113_19500" />
+      <data id="1000401" skillId="10004" skillLevel="1" skillType="2" staffPoint="7500" effectList="12114_40" />
+      <data id="1000402" skillId="10004" skillLevel="2" skillType="2" staffPoint="16500" effectList="12114_80" />
+      <data id="1000403" skillId="10004" skillLevel="3" skillType="2" staffPoint="30000" effectList="12114_120" />
+      <data id="1000404" skillId="10004" skillLevel="4" skillType="2" staffPoint="45000" effectList="12114_160" />
+      <data id="1000405" skillId="10004" skillLevel="5" skillType="2" staffPoint="67500" effectList="12114_200" />
+      <data id="1000406" skillId="10004" skillLevel="6" skillType="2" staffPoint="85500" effectList="12114_220" />
+      <data id="1000407" skillId="10004" skillLevel="7" skillType="2" staffPoint="108000" effectList="12114_240" />
+      <data id="1000408" skillId="10004" skillLevel="8" skillType="2" staffPoint="144000" effectList="12114_260" />
+      <data id="1000501" skillId="10005" skillLevel="1" skillType="1" staffPoint="9000" effectList="12115_120" />
+      <data id="1000502" skillId="10005" skillLevel="2" skillType="1" staffPoint="18000" effectList="12115_240" />
+      <data id="1000503" skillId="10005" skillLevel="3" skillType="1" staffPoint="33000" effectList="12115_360" />
+      <data id="1000504" skillId="10005" skillLevel="4" skillType="1" staffPoint="49500" effectList="12115_420" />
+      <data id="1000505" skillId="10005" skillLevel="5" skillType="1" staffPoint="72000" effectList="12115_480" />
+      <data id="1000506" skillId="10005" skillLevel="6" skillType="1" staffPoint="90000" effectList="12115_540" />
+      <data id="1000507" skillId="10005" skillLevel="7" skillType="1" staffPoint="112500" effectList="12115_570" />
+      <data id="1000508" skillId="10005" skillLevel="8" skillType="1" staffPoint="153000" effectList="12115_600" />
+      <data id="1000601" skillId="10006" skillLevel="1" skillType="2" staffPoint="94500" effectList="12116_150" />
+      <data id="1000602" skillId="10006" skillLevel="2" skillType="2" staffPoint="117000" effectList="12116_250" />
+      <data id="1000603" skillId="10006" skillLevel="3" skillType="2" staffPoint="162000" effectList="12116_300" />
+</root>

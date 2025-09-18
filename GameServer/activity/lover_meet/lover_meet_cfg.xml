@@ -1,0 +1,12 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 首个问题ID
+startQuestions = 1
+
+# 可以完成多少局答题
+maxCount = 10000
+
+# 进度到多少出结局
+endingScore = 100
+

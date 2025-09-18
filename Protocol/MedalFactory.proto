@@ -1,0 +1,131 @@
+
+option java_package	= "com.hawk.game.protocol";
+
+import "World.proto";
+
+// 玩家生产线同步
+message HPMedalFactoryInfo
+{
+	optional string onwerId = 1;
+	repeated HPMedalFactory factory = 2; 
+	optional string name = 3;
+	optional string pficon = 4;
+	optional int32 levelCfg = 5; //medal_factory_level.xml
+	optional int32 exp = 6; // 经验总
+	optional bool dayRaward = 7; // 1 可领取  != 1 已领取
+	optional string daySteal = 8; // 已成功偷取
+	optional int32 icon = 9; 
+	optional bool leyuzhuren = 10; // 乐于助人开启
+}
+
+
+// 玩家生产线
+message HPMedalFactory{
+	optional int32 index = 1;
+	optional int64 startTime = 3;
+	optional int64 endTime = 4; // 生产结束
+	optional bool unlock = 5;
+	optional int32 productCfgId = 6; // medal_factory_product.xml 生产时消耗物品
+	optional int32 rewardCfgId = 7; // medal_factory_reward.xml
+	repeated HPMedalFactorySteal steals = 8; // 正在偷你哥
+	optional int32 icon = 12; 
+}
+
+// 小偷
+message HPMedalFactorySteal{
+	optional int32 rewardCfgId = 1; // medal_factory_reward.xml
+	optional int64  startTime = 3;
+	optional int64  endTime = 4; // end之后就成功了,不能驱赶 
+	optional string playerId = 5; // 小偷id
+	optional string name = 6;
+	optional string pficon = 7;
+	optional int32 icon = 12; 
+	optional int32 qcnt = 13; // 驱赶次数 
+}
+
+// 探寻列表
+message HPMedalFactoryTanXunList{
+	repeated HPMedalFactoryInfo rand = 1; // 随机探寻
+	repeated HPMedalFactoryInfo enemy = 2; // 敌人探寻
+	repeated HPMedalFactoryInfo friend = 3; // 好友探寻
+	optional int32 refresh = 4; // 剩刷新数
+	optional int64 refreshCool = 5; // 刷新冷却
+}
+
+// 开始采集
+message HPMedalFactoryCollectReq{
+	optional int32 index = 1; // 生产线
+	optional int32 productCfgId = 2; // medal_factory_product.xml
+}
+
+// 收集采集
+message HPMedalFactoryShouReq{
+	optional int32 index = 1; // 生产线
+}
+
+// 偷其他玩家
+message HPMedalFactoryTouReq{
+	optional int32 index = 1; // 生产线
+	optional string tarId = 2; // 目标玩家 
+}
+
+// 驱赶其他玩家
+message HPMedalFactoryQuganReq{
+	optional int32 index = 1; // 生产线
+	optional string tarId = 2; // 目标玩家 
+}
+
+// 驱赶其他玩家
+message HPMedalFactoryQuganResp{
+	optional int32 index = 1; // 生产线
+	optional string tarId = 2; // 目标玩家 
+	optional bool success = 3;
+}
+
+// 目标采集队列
+message HPMedalFactoryCaiJiMarchReq{
+	optional string tarId = 1;
+}
+
+message HPMedalFactoryCaiJiMarchResp{
+	optional string tarId = 1;
+	optional WorldMarchPB caijiMarch = 2; // 对方采集队列
+	optional WorldMarchPB quganMarch = 3; // 对方驱赶队列
+}
+
+// 目标采集队列
+message HPMedalFactoryReq{
+	optional string tarId = 1;
+}
+
+// 历史记录
+message HPMedalFactoryHistoryResp{
+	repeated HPMedalFactoryHistory history = 1; 
+}
+
+// 历史记录
+message HPMedalFactoryHistory{
+	optional int32 type = 1;  // 1 自己收取  2 我发起偷取 3  他人对我发起偷取
+	optional string itemGet = 2; // 涉及物品
+	optional int64 creatTime = 3;
+	optional string playerId = 5; // 小偷id
+	optional string name = 6;
+	optional string pficon = 7;
+	optional int32 icon = 8;
+	optional string id = 9;
+}
+
+/**自身预设*/
+message HPMedalFactoryPreMarchResp{
+	optional PresetMarchInfo caijiMarch = 2; // 采集队列
+	optional PresetMarchInfo quganMarch = 3; // 驱赶队列
+}
+
+message HPMedalHistroyResp{
+	repeated HPMedalFactoryHistory history = 1;
+}
+
+// 请求开始乐于助人
+message HPLeyuzhurenReq{
+	optional bool open = 1; //
+}

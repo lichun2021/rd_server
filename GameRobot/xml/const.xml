@@ -1,0 +1,507 @@
+# 新手保护时间
+newProtectTime = 172800
+
+# 新手默认体力
+newVitPoint = 100
+
+# 新手初始化部队（id_数量,id_数量,id_数量）
+newSoldier = 100101_400,100301_400,100501_400
+
+# 造兵上限初始值
+newTrainQuantity = 10
+
+# 新手造兵的最大人口上限（服务端做安全性处理用）
+newTrainSafeNum = 2000
+
+# 主城等级低于此值，保护罩不会消失(避免强指引过程中被攻击，玩家数据发生意向不到的变化导致卡死)
+protectNotDisLevel = 3
+
+# 玩家名称最短最长（字符数）
+playerNameMinMax = 2_15
+
+# 登录获得vip积分（未激活vip时获得积分_激活vip时倍数）
+loginVipPointAdd = 0_2
+
+# 聊天屏蔽玩家上限
+blockListLimit = 100
+
+# 免费时间（秒）
+freeTime = 420
+
+# 使用道具加速时，决定推荐数量取整方式的时间阈值，单位：秒
+itemSpeedUpTimeThresholdValue = 300
+
+# 玩家主城最大座标
+maxCoordinate = 31_63
+
+# 酒馆每日刷新时间，整点时间
+tavernRefreshTime = 0
+
+# 购买建造队列
+buyBuildQueue = 10000_1001_50_172800
+
+# 兵种头顶可领取奖励的气泡(气泡类型1;资源类型_资源ID_资源数量;每日最大领取次数上限）
+rondaAwardBubble = 1;10000_1008_1000,10000_1007_1000;20
+
+# 建筑头顶气泡(气泡类型2;资源类型_资源ID_资源数量;每日最大领取次数上限）
+buildAwardBubble = 2;10000_1008_1000,10000_1007_1000;10
+
+# 城外区域
+outOfTownArea = 3,4,5,6
+
+# 水晶秒时间通用算式：lower1_k1_b1,lower2_k2_b2……（分段线性公式）
+speedUpCost = 0_10000_1000000,300_10910_727000,3600_9723_4997201,7200_8565_13332000,28800_7987_29974400,43200_7524_49963200,86400_7147_82499200
+
+# 城建时间价值水晶的权重
+buildingTimeWeight = 1
+
+# 造兵时间价值水晶的权重
+trainSoldierTimeWeight = 1
+
+# 部队治疗时间价值水晶的权重
+cureSoldierTimeWeight = 1
+
+# 科技研究时间价值水晶的权重
+techResearchTimeWeight = 1
+
+# 英雄训练时间价值水晶的权重
+trainHeroTimeWeight = 0.1
+
+# 英雄治疗时间价值水晶的权重
+cureHeroTimeWeight = 1
+
+# 宝藏加速时间系数
+speedUpCoefficient = 1
+
+# 装备打造、升品、拆解时间价值水晶的权重
+equipQueueTimeWeight = 1
+
+# 水晶秒资源通用算式：lower1_k1_b1,lower2_k2_b2……（分段线性公式）
+buyResCost = 0_500_1000000,10000_450_1500000,50000_360_6000000,150000_343_8550000,500000_320_20000000,1500000_286_71000000,5000000_272_140000000
+
+# 黄金资源价值水晶的权重
+goldResWeight = 1
+
+# 石油资源价值水晶的权重
+oilResWeight = 1
+
+# 合金资源价值水晶的权重
+soilResWeight = 6
+
+# 铀矿资源价值水晶的权重
+uraniumResWeight = 24
+
+# 首次加入联盟奖励
+firstJoinGuildReward = 10000_1001_50,30000_800134_1
+
+# 搜索输入最短限制
+searchWordMinimum = 4
+
+# 战斗最大回合数（标准为50）
+battleRoundMax = 50
+
+# 掠夺系数（用前除1000）
+grabWeightKey = 1000
+
+# 体力点数恢复时间间隔（秒）
+vitPointAddTime = 360
+
+# 初始装备
+initialEquipments = 751100_752100_753100_754100_755100_756100_757100_758100
+
+# VIP等级提升奖励VIP激活时间（秒）
+vipTimeReward = 86400
+
+# 贵族商城vip等级和可购买物品个数
+vipShopItem = 3_4,4_4,5_4,6_4,7_4,8_4,9_4,10_4,11_4,12_4,13_4,14_4,15_4
+
+# vip0级时的免费编队个数（现版本与vip无关，只读取此值）
+iniTroopTeamNum = 9
+
+# 新手赠送免费VIP时间
+freshPlayerFreeVipTime = 86400
+
+# 新手期普通造兵时间
+guideFirstTrainSoldierTime = 3
+
+# 邮件上限
+mailLimit = 50
+
+# 邮件生存时间(邮件到期后，做删除处理，有附件的不删除)
+mailEffectTime  = 1296000
+
+# 训练取消返还资源比率。万分比
+trainCancelReclaimRate = 5000
+
+# 治疗取消返还资源比率。万分比
+recoverCancelReclaimRate = 5000
+
+# 升级取消返还资源比率。万分比
+buildCancelReclaimRate = 5000
+
+# 改建取消返还资源比率。万分比
+reBuildCancelReclaimRate = 5000
+
+# 研究取消返还资源比率。万分比
+researchCancelReclaimRate = 5000
+
+# 聊天邮件保存条数
+chatMessage = 50
+
+# 是否开启世界资源刷新	 	
+openWorldResourceUpdate = true
+
+# 战斗异常时，是否开启返还玩家钻石道具的功能
+isOpenfightUnusualReturnDia = false
+
+# 王城驻扎人口上限
+presidentOfficeDefencePopulation = 800000
+
+# 主城低于此等级，多日不上线，其城堡会在世界场景内被清除
+rebuildLevel = 7
+
+# 主城低于配置等级，达到配置时间不上线，其城堡会在世界场景内被清除（单位：秒）
+rebuildTime = 259200
+
+# 实际体力上限，卡住所有体力获取渠道
+actualVitLimit = 500
+
+# 购买体力每次获得体力值
+buyEnergyAdd = 50
+
+# 购买体力每次消耗水晶数
+buyEnergyCost = 10000_1001_100
+
+# 初始可购买体力次数
+initBuyEnergyTimes = 5
+
+# 攻击新版野怪返还体力系数（万分比）
+physicalPowerReturnCoe = 5000
+
+# 每日购买体力上限次数
+dailyBuyEnergyTimesLimit = 10
+
+# 充值钻石转换vip经验系数（百分比数据）
+diaExchangeVipExpCof = 100
+
+# 每日活跃任务的刷新时间
+dailyMissionTime = 5
+
+# 双货币固定兑换数量
+exchangeValue = 100
+
+# 商城礼包指定每日刷新时间，上午
+giftRefreshAM = 5
+
+# 商城礼包指定每日刷新时间，下午
+giftRefreshPM  = 17
+
+# 迁移城数据保存最大条数
+cityMoveRecordLimit = 30
+
+# 加入联盟激活v5
+vipActiveLevel = 5
+
+# 单次修复城墙增加城防值
+onceWallRepair = 80
+
+# 修复城墙间隔时间（秒）
+wallRepairCd = 1800
+
+# 着火状态下，普通土地上的燃烧速度（点/千秒）
+wallFireSpeed = 56
+
+# 着火状态下，黑土地上的燃烧速度（点/千秒）
+wallFireSpeedOnBlackLand = 27778
+
+# 城墙着火时间上限值（秒）
+wallFireMaxTime = 259200
+
+# 单次攻击城墙造成的燃烧时间（秒）
+onceAttackWallFireTime = 1800
+
+# 灭火消耗资源（type_id_count）
+outFireCost = 10000_1001_20
+
+# 取消陷阱制造资源返还比例(万分比)
+cancelTrapResourceReturn = 5000
+
+# 制造陷阱单次最大时间上限（秒）
+trapTrainMaxTime = 36000
+
+# 许愿池获取资源数值变化表达式，x1:基础值 x2:今日许愿次数
+wishingAddValueExpr = x1*(1+0.3*(x2-1)/100)
+
+# 许愿池消耗资源数值变化表达式，x1:基础值 x2:今日许愿次数
+wishingCostValueExpr = x1+(x2-1)*1
+
+# 许愿池消耗资源类型id
+wishingCostResType = 1001
+
+# 许愿池暴击概率(千分比)，格式：倍数:概率;倍数:概率
+wishingCritRate = 1:630;2:200;5:120;10:50
+
+# 天赋重置道具在商城（shop）中对应的id数据
+talentResetItemSaleId = 902002
+
+# 天赋切换道具在商城（shop）中对应的id数据
+talentExchangeItemSaleId = 902003
+
+# 解锁天赋路线2所需大本等级
+unlockTalentLine2NeedCityLevel = 0
+
+# 解锁天赋路线3所需大本等级
+unlockTalentLine3NeedCityLevel = 10
+
+# 黑市商店每日系统刷新时间整点
+travelShopRefreshTime = 9_12_18_21
+
+# 系统刷新后，重置的免费刷新次数
+travelShopFreeRefreshTimes = 1
+
+# 系统刷新后，重置的水晶刷新次数和消耗
+travelShopCrystalRefreshCost = 25_50_75_100_125
+
+# 黑市商店普通礼包每日限购次数
+travelGiftBuyTimesLimit = 1
+
+# 激活黑市商店普通礼包的初始概率；万分比
+travelGiftActivateInitProb = 1000
+
+# 激活黑市商店普通礼包的递增概率；万分比
+travelGiftActivateAddProb = 200
+
+# 黑市商店作用号专属礼包每日限购次数
+specialTravelGiftBuyTimesLimit = 1
+
+# 激活黑市商店作用号专属礼包的初始概率；万分比
+specialTravelGiftActivateInitProb = 1000
+
+# 激活黑市商店作用号专属礼包的递增概率；万分比
+specialTravelGiftActivateAddProb = 1000
+
+# 召回推送的累计时间点
+recallPushTimeInterval = 3600_14400_86400_259200
+
+# 账号不上线XX秒后，不再进行任意推送信息
+pushEffectiveTime = 604800
+
+# 研究基础免费时间，单位：秒
+scienceFreeTime = 0
+
+# 好友每日收礼上限（个数）
+friendGift = 100
+
+# 亲密度区间与好友礼包映射(亲密度a,物品ID2;亲密度b,物品ID2)
+friendGiftIntimacy = 0,2500000;100,2500000;500,2500001
+
+# 好友上限（个数）
+friendUpperLimit = 100
+
+# 申请列表容纳上限（个数）
+friendApplyLimit = 99
+
+# 推荐好友出现条件（当好友数量低于这个值时出现推荐好友）
+friendMinimumValue = 10
+
+# 每次推荐好友个数
+friendRecommendCount = 5
+
+# 亲密度上限
+friendIntimacyLimit = 21900
+
+# 赠送一次礼包互相增加多少亲密度
+friendIntimacy = 10
+
+# 查找陌生人好友每次抓取上限
+friendFindLimit = 20
+
+# 联盟传送离盟主的距离
+allianceTransfer = 20
+
+# 小于计算周期时好友活跃度参考系数百分比（对比值=实际登录天数/已开服天数）
+friendActivePer = 0.5
+
+# 好友活跃度计算周期
+friendCycle = 7
+
+# 好友活跃度计算周期对比天数(高于这个天数则为活跃）
+friendCycleCom = 3
+
+# 英雄属性点重置消耗
+heroAttrResetCost = 10000_1001_300
+
+# 作用号366，采集时额外掉落资源宝箱，取的award表中的id
+effect366LinkToAwardId = 3300001
+
+# 用于判定是否使用资源生产道具的作用号序列
+effectQueueForResUp = 302_304_306_308
+
+# 判断是否大胜的条件，战斗力损失的阈值
+battleReportPower = 1.5
+
+# 判断是否险胜的条件，双方交战回合数的阈值
+battleReportBout = 1
+
+# 判断是否险胜的条件，失败方和胜利方战力的比值
+battleReportspecific = 1.05
+
+# 判断兵种是否单一条件，敌方兵种种类的阈值
+battleReportKind = 2
+
+# 判断是否缺盾兵，盾兵的占比的阈值
+battleReportTank = 0.2
+
+# 全服buff
+allSeverBuff = 6_23093;6_23094;8_23097;8_23098;12_23095;12_23096;14_23097;14_23098
+
+# 伤兵补偿每日次数
+injuredSoldierTimes = 1
+
+# 死兵补偿每日次数
+deadSoldierTimes = 1
+
+# 伤兵补偿最低战力
+injuredSoldierPower = 60000
+
+# 死兵补偿最低战力
+deadSoldierPower = 30000
+
+# 伤兵补偿加速道具系数
+injuredSoldierSpeedUpCoefficient = 0.6
+
+# 伤兵补偿资源系数
+injuredSoldierResourceCoefficient = 0.6
+
+# 死兵补偿加速道具系数
+deadSoldierSpeedUpCoefficient = 0.6
+
+# 死兵补偿资源系数
+deadSoldierResourceCoefficient = 0.6
+
+# 5分钟伤兵加速道具id
+injuredSoldierUpSpeedItem = 810012
+
+# 5分钟训练加速道具id
+trainSoldierUpSpeedItem = 810010
+
+# 1000黄金
+compensationGold = 850010
+
+# 1000石油
+compensationOil = 850040
+
+# 150合金
+compensationMetal = 850020
+
+# 40铀矿
+compensationUranium = 850030
+
+# 联盟关怀触发的联盟帮助的可帮助次数
+allianceCareHelpNumber = 10
+
+# 联盟关怀触发的联盟帮助的可持续时间，单位是秒
+allianceCareHelpTime = 600
+
+# 联盟关怀每次帮助的补偿系数
+allianceCareHelpCoefficient = 0.01
+
+# 联盟悬赏可持续时间（单位秒）
+allianceCareHelpSustainTime = 864000
+
+# 联盟悬赏的最多条数
+allianceCareHelpQuantityUpLimit = 5
+
+# 同一封邮件分享到联盟聊天有间隔时间，单位是秒
+shareTime = 600
+
+# 联盟邀请函过期时间
+allianceInvitationOverTime = 1209600
+
+# 装备最高品质
+equipMaxQuality = 5
+
+# 指挥官装备位配置
+equipSlotLimit = 1_1_1,2_2_1,3_3_1,4_4_1,5_5_1,6_6_1,7_7_1,8_7_1
+
+# 一键材料分解上限（最多一次获得材料数）
+quickBreakUpperLimit = 1000
+
+# 兵种晋升资源系数（出售兵种打的折扣z）晋升消耗公式=xb-(Xa×z)
+promotionVariate = 0.5
+
+# 兵种晋升时间系数
+promotionTimeVariate = 0.8
+
+# 迷雾宝箱最大空位
+foggyBoxMaxSpace = 3
+
+# 迷雾要塞每日奖励次数
+foggyAttackMaxTimes = 5
+
+# 进入防空洞时间
+shelterRecall = 3600_7200_14400_28800
+
+# 首充礼包消失后，取代其位置的破冰礼包id
+breakIceHeroPackageId = 0
+
+# 聊天功能屏蔽（大本小于或等于XX等级时，无法发送聊天信息）
+chatBlockByMainCityLevel = 4
+
+# 世界聊天同样内容连续发送次数（大于3次不能发送，并弹出提示条）
+chatSameContentTimes = 3
+
+# 连续发送同样内容时间限制
+chatSameContentCD = 60
+
+# 世界聊天连续发送间隔时间
+chatSendTimeCD = 3
+
+# 超值礼包系统刷新时间间隔；单位：秒
+giftResetTimeInterval = 5400
+
+# 强制修改玩家昵称后赠送道具给玩家
+LoginandRename = 30000_800103_1
+
+# 屠城作用号触发概率
+effect1060 = 2500
+
+# 更改个性签名vip限制
+signatureVipLimit = 1
+
+# 个性签名长度限制
+signatureLengthLimit = 20
+
+# 每日使用道具获取金币的数量上限
+gainCrystalLimitByUseItem = 5000
+
+# QQ关系涟礼物
+giveFriendGift = 10000_1007_1000,10000_1008_1000
+
+# QQ启动加成
+qqStartUp = 301_200
+
+# 微信游戏启动加成
+wxStartUp = 301_200
+
+# 超级会员
+svipStartUp = 301_300
+
+# 超时空急救冷却时间(秒)
+superTimeRescueCd = 600,1800,14400,28800,28800,28800
+
+# 针对所有资源的作用号配置
+resOutputBuffAll = 300,301
+
+# 针对矿石的作用号
+resOutputBuff1007 = 302,303
+
+# 针对石油的作用号
+resOutputBuff1008 = 304,305
+
+# 针对合金的作用号
+resOutputBuff1010 = 306,307
+
+# 针对稀土的作用号
+resOutputBuff1009 = 308,309
+

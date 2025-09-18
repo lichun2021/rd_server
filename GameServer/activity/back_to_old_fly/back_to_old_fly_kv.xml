@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data title="tips" 重返征程="<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您可以选择在新区服创号重启征程，创号之后您将获得一笔丰厚的奖励。<br/>2. 新区服创号之后，鉴于您是老兵重返战场，我们将为您跳过新手教程阶段，并将您的建筑工厂直升至8级。<br/>3.在新的区服，为了助力您更快地提升实力，我们开放了“回归签到礼”与“建筑工厂回馈礼”，您可以完成指定任务领取丰厚的奖励，更有兑换商店让您自选所需道具。</font>" />
+      <data title="priority" 重返征程="1001" />
+      <data title="icon" 重返征程="Activity_Icon_340_Nor.png" />
+      <data title="selecticon" 重返征程="Activity_Icon_340_Sel.png" />
+      <data title="bigIcon" 重返征程="DiamondsIcon_02.png" />
+      <data title="serverDelay" 重返征程="0" />
+      <data title="duration" 重返征程="604799" />
+      <data title="goldGet" 重返征程="25000" />
+      <data title="rewardItemGetOld" 重返征程="30000_1000005_1,30000_1000003_1,30000_802004_1,30000_21063005_1" />
+</root>

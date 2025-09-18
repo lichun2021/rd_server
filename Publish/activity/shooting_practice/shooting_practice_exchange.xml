@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" needItem="30000_21070034_1" gainItem="30000_1300027_1" times="200" />
+      <data id="1002" needItem="30000_21070034_2" gainItem="30000_802004_1" times="200" />
+      <data id="1003" needItem="30000_21070034_3" gainItem="30000_21063005_1" times="200" />
+      <data id="1004" needItem="30000_21070034_4" gainItem="30000_1782103_1" times="600" />
+      <data id="1005" needItem="30000_21070034_5" gainItem="30000_800002_1" times="600" />
+      <data id="1006" needItem="30000_21070034_6" gainItem="30000_9990032_1" times="600" />
+      <data id="1007" needItem="30000_21070034_7" gainItem="30000_1800001_1" times="600" />
+      <data id="1008" needItem="30000_21070034_8" gainItem="30000_820002_1" times="400" />
+      <data id="1009" needItem="30000_21070034_9" gainItem="30000_800000_1" times="300" />
+      <data id="1010" needItem="30000_21070034_10" gainItem="30000_1300017_1" times="500" />
+      <data id="1011" needItem="30000_21070034_11" gainItem="30000_1800000_1" times="500" />
+      <data id="1012" needItem="30000_21070034_12" gainItem="30000_100050_1" times="999" />
+      <data id="1013" needItem="30000_21070034_13" gainItem="30000_1780045_1" times="999" />
+</root>

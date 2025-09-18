@@ -1,0 +1,36 @@
+option java_package = "com.hawk.game.protocol";
+
+// 通知类型
+enum NoticeType
+{
+	SEND_MSG			= 1; // 发送系统消息(弹框,手动关闭)
+	BAN_JOIN_RANK		= 2; // 禁止参加排行榜(提示)
+	ZERO_EARNING		= 3; // 零收益(透明框提示,点击任意位置消失)
+	BAN_MSG				= 4; // 禁言(提示,带解禁时间)
+	CLEAR_CHAT_MSG		= 5; // 清除指定玩家聊天信息
+	WORLD_CHAR_CONTROL  = 6; // 世界聊天控制
+	GUILD_CHAR_CONTROL  = 7; // 联盟聊天控制
+	KICKOUT             = 8; // 强制被踢下线
+	YIWA_RED_POINT      = 9; // 伊娃红点
+}
+
+// 通知方式
+enum NoticeMode{
+	NONE				= 1; // 无提示
+	NOTICE_MSG			= 2; // 提示
+	MSG_BOX				= 3; // 消息弹框
+}
+
+// IDIP提示信息	
+message IDIPNotice
+{	
+	required NoticeType type	= 1; // 通知类型
+	required NoticeMode mode	= 2; // 通知方式
+	optional string msg			= 3; // 消息内容/封禁原因
+	optional int64 relieveTime	= 4; // 解封时间
+	optional string playerId	= 5; // 聊天清除玩家id
+	optional int32  msgCode     = 6; // 消息码
+	optional bool closed        = 7; // true: 聊天系统关闭， false: 聊天系统打开
+}
+
+

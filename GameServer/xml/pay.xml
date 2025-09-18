@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="900000" saleId="com.tencent.tmgp.hjol.diamond_60" payOrNot="1" hot="0" payRMB="600" gainDia="600" present="600" additional="0" show="DiamondsIcon_01.png" />
+      <data id="900002" saleId="com.tencent.tmgp.hjol.diamond_300" payOrNot="1" hot="0" payRMB="3000" gainDia="3000" present="3000" additional="8" show="DiamondsIcon_02.png" />
+      <data id="900004" saleId="com.tencent.tmgp.hjol.diamond_680" payOrNot="1" hot="0" payRMB="6800" gainDia="6800" present="6800" additional="28" show="DiamondsIcon_03.png" />
+      <data id="900006" saleId="com.tencent.tmgp.hjol.diamond_1280" payOrNot="1" hot="0" payRMB="12800" gainDia="12800" present="12800" additional="78" show="DiamondsIcon_04.png" />
+      <data id="900008" saleId="com.tencent.tmgp.hjol.diamond_3280" payOrNot="1" hot="1" payRMB="32800" gainDia="32800" present="32800" additional="268" show="DiamondsIcon_05.png" />
+      <data id="900010" saleId="com.tencent.tmgp.hjol.diamond_6480" payOrNot="1" hot="1" payRMB="64800" gainDia="64800" present="64800" additional="648" show="DiamondsIcon_06.png" />
+</root>

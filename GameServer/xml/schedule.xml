@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" lifeTime="3600" />
+      <data id="2" lifeTime="2400" />
+      <data id="3" lifeTime="2400" />
+      <data id="4" lifeTime="1800" />
+      <data id="5" lifeTime="3600" />
+      <data id="6" lifeTime="1800" />
+      <data id="7" lifeTime="7200" />
+      <data id="8" lifeTime="7200" />
+      <data id="9" lifeTime="300" />
+</root>

@@ -1,0 +1,88 @@
+return {
+	prop =
+	{
+		activityId = 245,
+		name = [[战地寻宝]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间可以通过完成任务获得骰子次数,使用骰子在战地寻宝中获得丰厚奖励，更能获得精装通用碎片。<br/>2.骰子分为普通骰子和遥控骰子，普通骰子可随机掷出1-6点，遥控骰子可指定掷出1-6的任意点。<br/>3.购买通行证后，每天登录即可领取更多骰子。<br/>4.普通骰子还可通过金币购买，每日限购10个；遥控骰子可通过金条购买，每日限购80个。<br/>5.到达起点后，会在起点停止，领取每一圈的最终奖励-通用精装碎片，随后重置界面上的奖励。<br/>6.达到宝箱格子后，可领取宝箱内的奖励。<br/>7.选择【一键完成】时，将消耗10个普通骰子和3个遥控骰子，获得整圈的奖励（每一圈奖励相同，棋子当前所处位置不影响整圈奖励的获得）；活动期间内总计可使用【一键完成】100次。<br/>8.通行证和每日任务的奖励，到期后不会进行补发，建议指挥官们尽快领取。</font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_245_Nor.png]],
+		selecticon = [[Activity_Icon_245_Sel.png]],
+		bigIcon = [[]],
+		finalAward = [[30000_21062499_1]],
+		ordinaryDiceId = 21061001,
+		ordinaryDicePrice = [[10000_1001_50]],
+		ordinaryDiceLimit = 10,
+		controlDiceId = 21061002,
+		controlDicePrice = [[10000_1000_50]],
+		controlDiceLimit = 80,
+		pointLimit = 6,
+		payId = [[710007_700007]],
+		displayOrder = [[1_2_3_4_5_6]],
+		rewardShow = [[30000_21061001_70,30000_21061002_70,30000_802004_480,30000_800002_480,30000_810001_50]],
+		oneConsume = [[30000_21061001_10,30000_21061002_3]],
+		oneTimeLimit = 100,
+	},
+	battlefield_award_pool = [[id	item	type	plot	choice1	choice2	soilder
+1	2	1	2	2	2	2
+101	30000_800002_150	1				
+102	30000_802004_90	1				
+201	30000_802005_22	2	@soldierQuestion1	@soldierAnswer11	@soldierAnswer12	Soldier_Small_100504.png
+202	30000_802005_22	2	@soldierQuestion2	@soldierAnswer21	@soldierAnswer22	Soldier_Small_100504.png
+203	30000_802005_22	2	@soldierQuestion3	@soldierAnswer31	@soldierAnswer32	Soldier_Small_100504.png
+204	30000_802005_22	2	@soldierQuestion4	@soldierAnswer41	@soldierAnswer42	Soldier_Small_100504.png
+301	30000_1480001_70	3				
+302	30000_21061001_1	3				
+303	30000_850008_1	3				
+304	30000_850038_1	3				
+305	30000_1780065_1	3				
+306	30000_1780045_1	3				
+307	30000_850018_1	3				
+308	30000_850028_1	3				
+309	30000_1780065_1	3				
+310	30000_1480001_70	3				
+311	30000_850008_1	3				
+312	30000_850038_1	3				
+313	30000_1480001_70	3				
+314	30000_21061001_1	3				
+315	30000_850018_1	3				
+316	30000_850028_1	3				
+317	30000_1780065_1	3				
+318	30000_1780045_1	3				
+319	30000_850008_1	3				
+320	30000_850038_1	3				
+321	30000_1780065_1	3				
+322	30000_21061001_1	3				
+323	30000_850018_1	3				
+324	30000_850028_1	3				
+325	30000_1780045_1	3				
+]],
+	battlefield_circle_award = [[id	award
+1	2
+1	301,302,303,304,201
+2	305,306,307,308,101
+3	309,310,311,312,202
+4	313,314,315,316,203
+5	317,318,319,320,102
+6	321,322,323,324,325,204
+]],
+	battlefield_passport_award = [[day	rewards
+1	2
+1	30000_21061001_10,30000_21061002_10,30000_810001_50
+2	30000_21061001_10,30000_21061002_10,30000_802005_100
+3	30000_21061001_10,30000_21061002_10,30000_802005_100
+4	30000_21061001_10,30000_21061002_10,30000_802005_100
+5	30000_21061001_10,30000_21061002_10,30000_802005_100
+6	30000_21061001_10,30000_21061002_10,30000_802005_100
+7	30000_21061001_10,30000_21061002_10,30000_802005_100
+]],
+	battlefield_achieve_award = [[achieveId	configValue	gotoType	gotoValue	rewards	title
+1	1	1	2	2	2
+2450101	1	130	1	30000_21061001_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">进行高级招募<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+2450102	1	25		30000_21061001_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">开启联盟宝藏<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+2450103	180	1312		30000_21061001_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">使用任意加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>分钟</font>
+2450104	2000	23	2012	30000_21061001_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练任意部队<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+2450105	10	203		30000_21061001_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">进行补给<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+]],
+
+}

@@ -1,0 +1,48 @@
+return {
+	prop =
+	{
+		activityId = 150,
+		icon = [[Activity_Icon_150_Nor.png]],
+		selecticon = [[Activity_Icon_150_Sel.png]],
+		title = [[活动详情]],
+		name = [[瓜分金币]],
+		priority = 10058,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 集字活动期间，完成活动任务能获得庆典字宝箱<br/>2. 活动任务每天<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">0</font>点 <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">12</font>点 <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">18</font>点刷新，每完成1个任务必得1个庆典字宝箱<br/>3. 开启庆典字宝箱必得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">“红”“警”“二”“周” “年”</font>其中1个庆典字<br/>4. 集齐<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">“红”“警”“二”“周”“年”</font>五个庆典字可以合成<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1</font>次开启二周年庆红包的机会，合成红包只能在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">集字阶段</font>进行<br/>5. 集字期间，每位玩家最多能合成<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">28</font>次二周年庆红包开奖机会<br/>6. 庆典字可以赠送给好友或盟友；玩家还可以向世界或联盟频道索要特定庆典字<br/>7. 每天最多能从其他玩家处获取<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">8</font>个庆典字道具<br/>8. 每位玩家每天只能赠送<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">5</font>个庆典字道具<br/>9. 二周年庆红包只能在开奖阶段开奖倒计时结束后于活动页面使用<br/>10. 开奖时间为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">2020年10月17日21点</font>，全服玩家共同瓜分<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">6</font>亿金币。<br/>11. 二周年庆红包每次可能开出<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">33/66/88/188/288/388/666/8888</font> 金币其中一份<br/>12. 二周年庆红包在开奖活动结束后无法使用<br/>13. 庆典字宝箱庆典字获取概率公示<br/>    红    <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font><br/>    警    <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font><br/>    二    <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font><br/>    周    <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font><br/>    年    <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">20%</font></font>]],
+		freshTime = [[0_12_18]],
+		getCD = 600,
+		chestCost = [[30000_15000016_1]],
+		redEnvelopeCost = [[30000_15000011_1,30000_15000012_1,30000_15000013_1,30000_15000014_1,30000_15000015_1]],
+		redEnvelope = [[30000_15000017_1]],
+		redEnvelopeLimit = 28,
+		dailyAskFor = 8,
+		dailyGive = 5,
+		shareImgQQ = [[V5Activity_150_Share_QQ.jpg]],
+		shareCCBNameQQ = [[RAActivity150NodeShareQQV5.ccbi]],
+		shareImgWeChat = [[V5Activity_150_Share_Wechat.jpg]],
+		shareCCBNameWeChat = [[RAActivity150NodeShareWechatV5.ccbi]],
+	},
+	dividegold_activity_time = [[chestStartTime	chestEndTime	waitRewardTime	rewardTime	rewardEndTime
+2	2	2	2	2
+2019-10-17 00:00:00	2019-10-22 23:59:59	2019-10-23 00:00:00	2019-10-23 21:00:00	2019-10-24 23:59:59
+2020-10-11 00:00:00	2020-10-16 23:59:59	2020-10-17 00:00:00	2020-10-17 21:00:00	2020-10-18 23:59:59
+]],
+	dividegold_achieve = [[achieveId	round	title	conditionType	conditionValue	gotoType	gotoValue	configValue	rewards
+1	2	2	1	2	1	2	1	2
+1501902	1	AchieveName1501902	500011	1_999_20	31	2_0	20	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501903	1	AchieveName1501903	500005	5	31	1_1_1007	5	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501904	1	AchieveName1501904	20100	0_3000	23	2012	3000	30000_850006_1,30000_850036_1,30000_850016_1,30000_104050_1,30000_15000016_1
+1501905	1	AchieveName1501905	500024	1	31	16_1	1	30000_850006_1,30000_850036_1,30000_850016_1,30000_800000_1,30000_15000016_1
+1501906	1	AchieveName1501906	111100	10	111		10	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501907	2	AchieveName1501902	500011	1_999_20	31	2_0	20	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501908	2	AchieveName1501903	500005	5	31	1_1_1007	5	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501909	2	AchieveName1501904	20100	0_3000	23	2012	3000	30000_850006_1,30000_850036_1,30000_850016_1,30000_104050_1,30000_15000016_1
+1501910	2	AchieveName1501905	500024	1	31	16_1	1	30000_850006_1,30000_850036_1,30000_850016_1,30000_800000_1,30000_15000016_1
+1501911	2	AchieveName1501906	111100	10	111		10	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501912	3	AchieveName1501902	500011	1_999_20	31	2_0	20	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501913	3	AchieveName1501903	500005	5	31	1_1_1007	5	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+1501914	3	AchieveName1501904	20100	0_3000	23	2012	3000	30000_850006_1,30000_850036_1,30000_850016_1,30000_104050_1,30000_15000016_1
+1501915	3	AchieveName1501905	500024	1	31	16_1	1	30000_850006_1,30000_850036_1,30000_850016_1,30000_800000_1,30000_15000016_1
+1501916	3	AchieveName1501916	700014	14_1	1343		1	30000_850006_1,30000_850036_1,30000_850016_1,30000_810001_1,30000_15000016_1
+]],
+
+}

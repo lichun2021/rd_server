@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data rewardId="1" boxRank="1" reward="300011" weight="300" extraReward="30000_30000002_20" />
+      <data rewardId="2" boxRank="1" reward="300012" weight="210" extraReward="30000_30000002_20" />
+      <data rewardId="3" boxRank="1" reward="300013" weight="60" extraReward="30000_30000002_20" />
+      <data rewardId="4" boxRank="1" reward="300014" weight="30" extraReward="30000_30000002_20" />
+      <data rewardId="5" boxRank="2" reward="300021" weight="100" extraReward="30000_30000002_20" />
+      <data rewardId="6" boxRank="2" reward="300022" weight="70" extraReward="30000_30000002_20" />
+      <data rewardId="7" boxRank="2" reward="300023" weight="20" extraReward="30000_30000002_20" />
+      <data rewardId="8" boxRank="2" reward="300024" weight="10" extraReward="30000_30000002_20" />
+      <data rewardId="9" boxRank="3" reward="300031" weight="50" extraReward="30000_30000002_20" />
+      <data rewardId="10" boxRank="3" reward="300032" weight="35" extraReward="30000_30000002_20" />
+      <data rewardId="11" boxRank="3" reward="300033" weight="10" extraReward="30000_30000002_20" />
+      <data rewardId="12" boxRank="3" reward="300034" weight="5" extraReward="30000_30000002_20" />
+</root>

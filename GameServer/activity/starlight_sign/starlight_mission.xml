@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="321001" conditionType="700094" conditionValue="1" Points="10" resetType="1" rewards="30000_1300017_30,30000_1780040_2,30000_810004_2" />
+      <data achieveId="321002" conditionType="180101" conditionValue="260" Points="20" resetType="1" rewards="30000_1300017_60,30000_1780040_4,30000_810004_4" />
+      <data achieveId="321003" conditionType="700094" conditionValue="5" Points="100" resetType="0" rewards="30000_1300017_60,30000_1780040_4,30000_810004_4" />
+      <data achieveId="321004" conditionType="160200" conditionValue="1000" Points="200" resetType="0" rewards="30000_1300017_120,30000_1780040_8,30000_810004_8" />
+      <data achieveId="321005" conditionType="170100" conditionValue="3000" Points="300" resetType="0" rewards="30000_1300017_150,30000_1780040_10,30000_810004_10" />
+</root>

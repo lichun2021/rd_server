@@ -1,0 +1,21 @@
+return {
+	prop =
+	{
+		activityId = 272,
+		name = [[战火重燃]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动描述：<br/>1. 锻造图纸用于兑换重燃碎片和宝箱经验（每次1点宝箱经验）。<br/>2. 使用金条可兑换重燃能量和宝箱经验（每次5点宝箱经验）。<br/>3. 宝箱经验达到500时，可获得宝箱奖励。<br/>4. 活动期间，总共可使用金条兑换3000次重燃能量。<br/></font>]],
+		priority = 10270,
+		icon = [[Activity_Icon_272_Nor.png]],
+		selecticon = [[Activity_Icon_272_Sel.png]],
+		title = [[活动详情]],
+		boxExp = 500,
+		boxReward = [[30000_800000_5,30000_840194_30,30000_1800000_10,30000_800110_10,30000_800143_10,30000_810002_2,30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1]],
+		exchangeLimit = 3000,
+	},
+	dress_war_reburning_exchange = [[id	pay	gain	expGain
+1	2	2	1
+1	30000_2700001_1	30000_2700002_1	1
+2	10000_1000_30	30000_2700003_1	5
+]],
+
+}

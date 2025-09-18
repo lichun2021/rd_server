@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" pool="1" reward="30000_1780080_1" weight="20" />
+      <data id="1002" pool="1" reward="30000_1300017_10" weight="20" />
+      <data id="1003" pool="1" reward="30000_1800000_10" weight="20" />
+      <data id="1004" pool="1" reward="30000_810001_10" weight="20" />
+      <data id="1005" pool="1" reward="30000_1780040_10" weight="20" />
+      <data id="1006" pool="2" reward="30000_1780080_2" weight="20" />
+      <data id="1007" pool="2" reward="30000_1300017_20" weight="20" />
+      <data id="1008" pool="2" reward="30000_1800000_20" weight="20" />
+      <data id="1009" pool="2" reward="30000_810001_20" weight="20" />
+      <data id="1010" pool="2" reward="30000_1780040_20" weight="20" />
+</root>

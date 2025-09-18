@@ -1,0 +1,105 @@
+package com.hawk.activity.type.impl.supplyCrate.cfg;
+
+import com.hawk.activity.config.IActivityTimeCfg;
+import org.hawk.config.HawkConfigBase;
+import org.hawk.config.HawkConfigManager;
+import org.hawk.os.HawkTime;
+
+/**
+* 本文件自动生成，会被覆盖，不要手改非自动生成部分
+*/
+@HawkConfigManager.XmlResource(file = "activity/supply_crate/supply_crate_time.xml")
+public class SupplyCrateTimeCfg extends HawkConfigBase implements IActivityTimeCfg{
+    /** 活动期数*/
+    @Id
+    private final int termId;
+
+    /** 预览时间*/
+    private final String showTime;
+
+    /** 开启时间*/
+    private final String startTime;
+
+    /** 结束时间*/
+    private final String endTime;
+
+    /** 消失时间*/
+    private final String hiddenTime;
+
+
+    /** 预览时间戳*/
+    private long showTimeValue;
+
+    /** 开启时间戳*/
+    private long startTimeValue;
+
+    /** 结束时间戳*/
+    private long endTimeValue;
+
+    /** 消失时间戳*/
+    private long hiddenTimeValue;
+
+    public SupplyCrateTimeCfg(){
+        termId = 0;
+        showTime = "";
+        startTime = "";
+        endTime = "";
+        hiddenTime = "";
+    }
+
+    @Override
+    protected boolean assemble() {
+        showTimeValue = HawkTime.parseTime(showTime);
+        startTimeValue = HawkTime.parseTime(startTime);
+        endTimeValue = HawkTime.parseTime(endTime);
+        hiddenTimeValue = HawkTime.parseTime(hiddenTime);
+        return true;
+    }
+
+    @Override
+    public int getTermId() {
+        return termId;
+    }
+
+    @Override
+    public long getShowTimeValue() {
+        return showTimeValue;
+    }
+
+    @Override
+    public long getStartTimeValue() {
+        return startTimeValue;
+    }
+
+    @Override
+    public long getEndTimeValue() {
+        return endTimeValue;
+    }
+
+    @Override
+    public long getHiddenTimeValue() {
+        return hiddenTimeValue;
+    }
+
+    public String getShowTime() {
+        return showTime;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public String getHiddenTime() {
+        return hiddenTime;
+    }
+
+
+    @Override
+    protected boolean checkValid() {
+        return checkTimeCfgValid(this.getClass());
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="105_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="2" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_90" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="3" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_220" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="4" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="45_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="5" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="115_80" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="6" redis="4" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="40_230" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+</root>

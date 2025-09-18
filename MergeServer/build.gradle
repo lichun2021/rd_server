@@ -1,0 +1,23 @@
+project.archivesBaseName = "mergeserver";
+
+configurations { providedCompile }
+
+dependencies {        
+	providedCompile fileTree(dir: 'lib', include: '*.jar')
+	compile fileTree(dir: '../HawkEngine/lib', include: '*.jar');
+}
+
+sourceSets.main.compileClasspath += configurations.providedCompile
+sourceSets.test.compileClasspath += configurations.providedCompile
+sourceSets.test.runtimeClasspath += configurations.providedCompile
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.hawk.ms.MergeServerMain'
+		attributes 'Class-Path': new File('../HawkEngine/lib').list().findAll { it.endsWith('.jar') }.collect { "lib/$it" }.join(' ') + " lib/hawk.jar"
+	}
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

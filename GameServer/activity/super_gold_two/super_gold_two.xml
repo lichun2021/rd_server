@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data itemId="1" rateRange="1.5_1.6_1.7_1.8_1.9" rate="65" />
+      <data itemId="2" rateRange="2.0_2.1_2.2_2.3_2.4_2.5_2.6" rate="34" />
+      <data itemId="3" rateRange="3_3" rate="1" />
+</root>

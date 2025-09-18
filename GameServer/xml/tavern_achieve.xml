@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="105" conditionType="300100" conditionValue="0_1" score="5" count="5" />
+      <data achieveId="130" conditionType="31200" conditionValue="1007_5000" score="3" count="5" />
+      <data achieveId="140" conditionType="31200" conditionValue="1008_5000" score="3" count="5" />
+      <data achieveId="150" conditionType="31200" conditionValue="1010_1500" score="3" count="5" />
+      <data achieveId="160" conditionType="31200" conditionValue="1009_375" score="3" count="5" />
+      <data achieveId="410" conditionType="500020" conditionValue="1" score="8" count="2" />
+      <data achieveId="170" conditionType="110100" conditionValue="0_1" score="10" count="1" />
+      <data achieveId="180" conditionType="280100" conditionValue="0_1" score="10" count="1" />
+      <data achieveId="190" conditionType="111100" conditionValue="1" score="1" count="25" />
+      <data achieveId="200" conditionType="112100" conditionValue="1" score="2" count="20" />
+      <data achieveId="500" conditionType="700000" conditionValue="1" score="10" count="1" />
+      <data achieveId="210" conditionType="210100" conditionValue="1" score="5" count="1" />
+      <data achieveId="220" conditionType="220100" conditionValue="1" score="8" count="5" />
+      <data achieveId="230" conditionType="230100" conditionValue="1" score="1" count="40" />
+      <data achieveId="240" conditionType="240100" conditionValue="1" score="4" count="10" />
+      <data achieveId="250" conditionType="310100" conditionValue="0_1" score="30" count="1" />
+      <data achieveId="260" conditionType="340200" conditionValue="0_0_1" score="20" count="1" />
+      <data achieveId="270" conditionType="350100" conditionValue="1" score="4" count="5" />
+      <data achieveId="300" conditionType="320100" conditionValue="302_1" score="5" count="2" />
+      <data achieveId="310" conditionType="320100" conditionValue="304_1" score="5" count="2" />
+      <data achieveId="320" conditionType="320100" conditionValue="306_1" score="5" count="2" />
+      <data achieveId="330" conditionType="320100" conditionValue="308_1" score="5" count="2" />
+      <data achieveId="340" conditionType="250200" conditionValue="1" score="2" count="5" />
+      <data achieveId="350" conditionType="290200" conditionValue="0_30" score="4" count="5" />
+      <data achieveId="360" conditionType="330200" conditionValue="1_2_50" score="5" count="5" />
+      <data achieveId="370" conditionType="330200" conditionValue="3_4_50" score="5" count="5" />
+      <data achieveId="380" conditionType="330200" conditionValue="5_6_50" score="5" count="5" />
+      <data achieveId="390" conditionType="330200" conditionValue="7_8_50" score="5" count="5" />
+      <data achieveId="400" conditionType="120100" conditionValue="1" score="1" count="25" />
+      <data achieveId="420" conditionType="500013" conditionValue="101_110_201_210_1" score="6" count="5" />
+</root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" targetScore="20" />
+      <data giftId="2" targetScore="40" />
+      <data giftId="3" targetScore="80" />
+      <data giftId="4" targetScore="120" />
+      <data giftId="5" targetScore="160" />
+      <data giftId="6" targetScore="200" />
+      <data giftId="7" targetScore="240" />
+      <data giftId="8" targetScore="280" />
+</root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needItem="30000_1780002_1,30000_1780003_1,30000_1780001_2" gainItem="30000_1780004_1" />
+      <data id="2" needItem="30000_1780002_1" gainItem="30000_840001_1" />
+      <data id="3" needItem="30000_1780003_1" gainItem="30000_13310002_1" />
+      <data id="4" needItem="30000_1780001_1" gainItem="30000_1510002_1" />
+</root>

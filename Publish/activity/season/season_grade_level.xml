@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data gradeLevel="1" levelUpExp="0" normalReward="30000_850007_2,30000_850037_2" />
+      <data gradeLevel="2" levelUpExp="1000" normalReward="30000_100050_2,30000_101050_2" />
+      <data gradeLevel="3" levelUpExp="2000" normalReward="30000_800110_1,30000_1510003_5" />
+      <data gradeLevel="4" levelUpExp="4000" normalReward="30000_800143_1,30000_13310003_5" />
+      <data gradeLevel="5" levelUpExp="6000" normalReward="30000_1000002_2,30000_840198_10" />
+      <data gradeLevel="6" levelUpExp="8000" normalReward="30000_850017_2,30000_850027_2" />
+      <data gradeLevel="7" levelUpExp="10000" normalReward="30000_103050_2,30000_104050_2" />
+</root>

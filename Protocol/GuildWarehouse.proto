@@ -1,0 +1,39 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+
+//仓库信息
+message HPWareHouseSync{
+ 	repeated HPStoreItem items 	=1; //所有联盟成员的存款信息
+ 	optional int32 todayStore 	=2; // 今天已存
+ 	optional int32 dayMax		=3; //每日上限
+ 	optional int32 totalStore	=4; //总上存量
+ 	optional int32 storeMax		=5; // 总上限
+ 	optional HPStoreItem playerStore = 6;// 自己的一份存款
+}
+
+
+//各人信息
+message HPStoreItem{
+	optional string	 playerId			= 1;	// 玩家ID
+	optional string	name				= 2;	// 玩家name
+	optional string	allianceName		= 3;	// 联盟名字
+	optional int32 vip					= 4;	// vip等级
+	optional int32 icon					= 5;	// 头像
+	optional int32 office				= 6;	// 官职
+	optional bool vipActive				= 7;	// vip是否激活
+	optional string pfIcon              = 8;   // 平台头像
+	optional int64 level				= 9;   // 等级
+	optional string items				=10; 	// 个人资源
+	optional PlayerCommon common 		= 11; // 玩家通用数据
+}
+
+/**宝箱领取冷却时间*/
+message HPRandomBoxCooling{
+	optional int64 cooldown = 1;
+}
+
+/***/
+message HPYuriMonsterQueryHelpReq{
+	optional string marhcId = 1;
+} 

@@ -1,0 +1,27 @@
+return {
+	prop =
+	{
+		activityId = 127,
+		name = [[幸运福利]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，达成指定任务后即可领取奖励。<br/>2.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日必买、周卡月卡等直购内容</font>不计入充值任务。<br/>3.幸运福利活动每日重置。</font>]],
+		priority = 20041,
+		icon = [[Activity_Icon_127_Nor.png]],
+		selecticon = [[Activity_Icon_127_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		dailyRefresh = 1,
+	},
+	lucky_welfare_achieve = [[achieveId	conditionType	conditionValue	warzoneValue	title	gotoType	gotoValue	rewards
+1	1	2	1	2	1	2	2
+127001	700010	1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">登录<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>天</font>	-1	0	30000_1780040_2,30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2
+127002	160200	60	60	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1001	1	30000_850048_1,30000_1782113_7,30000_1150093_1
+127003	160200	300	300	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1001	1	30000_850048_2,30000_1782113_25,30000_1150093_2
+127004	160200	680	680	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1001	1	30000_850048_5,30000_1782113_42,30000_1150093_3
+127005	160200	3280	3280	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1001	1	30000_850048_8,30000_1782113_100,30000_1150093_6
+127006	500024	1	1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日集结摧毁幽灵基地<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	16_1	30000_1150093_1,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+127007	200100	0_20	20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日战胜野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	31	2_0	30000_1150093_1,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+127008	31100	0_1500000	1500000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日采集任意资源<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font></font>	31	1_1_1007	30000_810001_2,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+127009	20100	0_3000	3000	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">今日训练任意兵种<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>	23	2012	30000_810001_2,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+]],
+
+}

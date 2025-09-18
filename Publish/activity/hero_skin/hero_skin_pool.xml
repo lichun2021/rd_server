@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pool="1" item="30000_830001_1" weight="1000" />
+      <data id="2" pool="1" item="30000_800100_1" weight="3750" />
+      <data id="3" pool="1" item="30000_800101_1" weight="500" />
+      <data id="4" pool="1" item="30000_1780045_2" weight="3750" />
+      <data id="5" pool="1" item="30000_100050_2" weight="1000" />
+      <data id="6" pool="2" item="30000_1510004_8" weight="4400" />
+      <data id="7" pool="2" item="30000_1001037_10" weight="200" />
+      <data id="8" pool="2" item="30000_800110_5" weight="1000" />
+      <data id="9" pool="2" item="30000_13310004_8" weight="4400" />
+      <data id="10" pool="3" item="30000_1300017_30" weight="4000" />
+      <data id="11" pool="3" item="30000_800000_10" weight="2000" />
+      <data id="12" pool="3" item="30000_840156_15" weight="4000" />
+      <data id="13" pool="4" item="30000_802003_15" weight="3000" />
+      <data id="14" pool="4" item="30000_800001_100" weight="7000" />
+      <data id="15" pool="5" item="30000_10370110_10" weight="10000" />
+</root>

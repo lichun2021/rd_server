@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="100001" awardId="297011" integral="10" androidPayId="279012" iosPayId="279022" />
+      <data id="100002" awardId="297012" integral="15" androidPayId="279013" iosPayId="279023" />
+      <data id="100003" awardId="297013" integral="20" androidPayId="279017" iosPayId="279027" />
+      <data id="100004" awardId="297014" integral="25" androidPayId="279014" iosPayId="279024" />
+      <data id="100005" awardId="297015" integral="30" androidPayId="279015" iosPayId="279025" />
+      <data id="100006" awardId="297016" integral="50" androidPayId="279016" iosPayId="279026" />
+</root>

@@ -1,0 +1,48 @@
+# 首次占领个人 积分
+firstControlHonor = 20
+
+# 首次占领联盟 积分
+firstControlGuildHonor = 200
+
+# 刷新点  x_y,刷几个写几个.  半径为偶数 x,y相加必须为奇数
+refreshPoint = 111_222
+
+# 完全控制个人积分增长/秒 
+honor = 0.066
+
+# 完全控制联盟积分增长/秒 
+guildHonor = 0.666
+
+# 传送时间减少百分比 %
+coolDownReducePercentage = 0
+
+# 控制倒计时
+controlCountDown = 90
+
+# 开场保护时间
+protectTime = 180
+
+# 采集部队最小值
+collectArmyMin = 50000
+
+# 完全控制获得buff  bufId_val
+buffList = 
+
+# 累计控制触发悬赏的时间，单位秒
+pointTime = 90
+
+# 触发悬赏时的基础悬赏分
+pointBase = 0
+
+# 悬赏积分增加速度，单位秒
+pointSpeed = 0.266
+
+# 悬赏积分最大值
+pointMax = 240
+
+# 技能CD时间，单位秒
+missileCoolDownTime = 600
+
+# 双倍积分持续时间
+missileEffectTime = 300
+

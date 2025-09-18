@@ -1,0 +1,46 @@
+package com.hawk.game.battle.effect.impl.hero1100;
+
+import com.hawk.game.battle.effect.BattleTupleType;
+import com.hawk.game.battle.effect.BattleTupleType.Type;
+import com.hawk.game.battle.effect.CheckerKVResult;
+import com.hawk.game.battle.effect.CheckerParames;
+import com.hawk.game.battle.effect.EffectChecker;
+import com.hawk.game.battle.effect.IChecker;
+import com.hawk.game.protocol.Const.EffType;
+
+/**
+- 【万分比】【12356】战技持续期间，开启聚能环护模式时，有 XX% 的概率将目标友军数由 2 个增至 3 个
+  - 战报相关
+    - 于战报中隐藏
+    - 不合并至精简战报中
+  - 此作用号仅在威尔森开启战技后，战技持续期间才生效
+  - 在战斗开始前判定，满足条件后本次战斗全程生效
+  - 此作用号机制为增加【12337】生效时可作用的友军目标数量
+  - 作用号数值即为判定概率
+    - 每次发起攻击时独立判定
+    - 实际概率取值区间为【0,100%】
+  - 增加数量读取const表，字段effect12356AddNum
+    - 配置格式：绝对值
+    - 即【12337】生效时的实际目标数量 = 基础数量 + 【本常量值】
+ */
+
+@BattleTupleType(tuple = Type.SOLDIER_SKILL2)
+@EffectChecker(effType = EffType.HERO_12355)
+public class Checker12356 implements IChecker {
+	@Override
+	public CheckerKVResult value(CheckerParames parames) {
+		if (parames.solider.getEffVal(EffType.HERO_12337) <= 0 || parames.solider.getEffVal(EffType.HERO_12341) <= 0) {
+			return CheckerKVResult.DefaultVal;
+		}
+
+		int effPer = 0;
+		int effNum = 0;
+		effPer = parames.unity.getEffVal(effType());
+		return new CheckerKVResult(effPer, effNum);
+	}
+
+	@Override
+	public boolean tarTypeSensitive() {
+		return false;
+	}
+}

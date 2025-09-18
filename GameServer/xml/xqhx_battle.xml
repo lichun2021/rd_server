@@ -1,0 +1,39 @@
+# 准备时间
+prepairTime = 180
+
+# 燃烧速度
+fireSpeed = 45
+
+# 出生点 配置需要10个以上. 有重合在周边找落点
+bornPointA = 124_40,140_8
+
+# 出生点 配置需要10个以上. 有重合在周边找落点
+bornPointB = 0_286,16_254
+
+# 行军加速
+playerMarchSpeedUp = 1.5
+
+# 在图边界
+mapX = 150
+
+# 在图边界
+mapY = 300
+
+# 迁城cd /秒
+moveCityCd = 600
+
+# 副本建筑内击杀敌方战斗力获取1个人积分
+scoreForKill = 50000
+
+# 副本建筑内辅助兵种损失战斗力获取1个人积分
+scoreForDefense = 1_10000,4_10000,7_10000,8_10000
+
+# 治疗加速倍数
+cureSpeedUp = 4
+
+# 热血模式倒计时秒(游戏结束前)
+hotBloodModel = 300
+
+# 野怪刷新预告时间
+monsterHerald = 60
+

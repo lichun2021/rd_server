@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 15552000
+
+# 消耗道具
+itemUse = 30000_3460001_1
+
+# 道具售价
+itemCost = 10000_1000_1
+
+# 道具购买上限
+itemLimit = 999999
+
+# 拉取玩家建筑等级排名
+playerBuildRanking = 100
+
+# 拉取玩家指挥官等级排名
+playerRanking = 100
+
+# 延迟等级
+rankingDelay = 5
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="9999" needItem="30000_21070048_1" gainItem="30000_1780025_1" collegeLevel="1" refreshType="2" />
+      <data id="2" times="50" needItem="30000_21070048_8" gainItem="30000_810001_1" collegeLevel="1" refreshType="2" />
+      <data id="3" times="10" needItem="30000_21070048_20" gainItem="30000_1000003_1" collegeLevel="1" refreshType="2" />
+      <data id="4" times="66" needItem="30000_21070048_3" gainItem="30000_800000_1" collegeLevel="1" refreshType="2" />
+      <data id="5" times="50" needItem="30000_21070048_4" gainItem="30000_800110_1" collegeLevel="1" refreshType="2" />
+      <data id="6" times="200" needItem="30000_21070048_1" gainItem="30000_800143_1" collegeLevel="1" refreshType="2" />
+      <data id="7" times="100" needItem="30000_21070048_2" gainItem="30000_1300017_3" collegeLevel="2" refreshType="2" />
+      <data id="8" times="100" needItem="30000_21070048_2" gainItem="30000_800002_1" collegeLevel="3" refreshType="2" />
+      <data id="9" times="16" needItem="30000_21070048_12" gainItem="30000_1782106_1" collegeLevel="4" refreshType="2" />
+      <data id="10" times="50" needItem="30000_21070048_4" gainItem="30000_802004_1" collegeLevel="5" refreshType="2" />
+      <data id="11" times="20" needItem="30000_21070048_10" gainItem="30000_1782103_4" collegeLevel="6" refreshType="2" />
+      <data id="12" times="20" needItem="30000_21070048_10" gainItem="30000_21063005_2" collegeLevel="7" refreshType="2" />
+      <data id="13" times="10" needItem="30000_21070048_20" gainItem="30000_802005_3" collegeLevel="8" refreshType="2" />
+</root>

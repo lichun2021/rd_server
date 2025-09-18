@@ -1,0 +1,249 @@
+# 默认行军队列数量
+worldMarchBaseNum = 1
+
+# 世界行军最大距离
+worldMarchMaxDistance = 1340
+
+# 世界行军穿过核心区域行军时间倍数
+worldMarchCoreRangeTime = 10
+
+# 新手pvp行军速度（秒）
+newGuidePvpMarchTime = 5
+
+# 单英雄行军速度（格/秒，用千分比计数）
+heroMarchSpeed = 200
+
+# 行军距离减去固定值
+distanceSubtractionParam = 0.82
+
+# 行军距离修正参数
+distanceAdjustParam = 0.82
+
+# 尤里的复仇，野怪行军时间调整参数
+yuriMarchCoefficient = 35
+
+# 新版野怪行军时间调整参数
+newMonsterAdjustParam = 120
+
+# 部队行军类型行军时间调整参数
+armyTypeAdjustParam = 120
+
+# 野怪行军类型行军时间调整
+monsterTypeAdjustParam = 120
+
+# 侦察行军时间调整参数
+reconnoitreTypeAdjustParam = 3
+
+# 资源援助行军时间调整参数
+resAidTypeAdjustParam = 20
+
+# 领取世界宝箱行军时间调整参数
+boxTypeAdjustParam = 3
+
+# 联盟仓库存取资源行军时间调整参数
+allianceStoreAdjustParam = 20
+
+# 侦查行军速度
+investigationMarchSpeed = 1
+
+# 资源援助行军速度
+resourceAssistMarchSpeed = 1
+
+# 抓将遣返行军速度
+generalBackMarchSpeed = 200
+
+# 需要在世界行军模型显示特效的作用号
+marchShowEff = 1061_1062_1063_1064_1065_1066_1067_1068
+
+# 采集资源1007速度（x点/秒）（用前除以1000000）--黄金
+collectRes1007speed = 15000000
+
+# 采集资源1008速度（x点/秒）（用前除以1000000）--石油
+collectRes1008speed = 15000000
+
+# 采集资源1009速度（x点/秒）（用前除以1000000）--铀矿
+collectRes1009speed = 625000
+
+# 采集资源1010速度（x点/秒）（用前除以1000）--合金
+collectRes1010speed = 2500000
+
+# 采集资源1107速度（x点/秒）（用前除以1000）--黄金
+collectRes1107speed = 15000000
+
+# 采集资源1108速度（x点/秒）（用前除以1000）--石油
+collectRes1108speed = 15000000
+
+# 采集资源1109速度（x点/秒）（用前除以1000）--铀矿
+collectRes1109speed = 625000
+
+# 采集资源1110速度（x点/秒）（用前除以1000）--合金
+collectRes1110speed = 2500000
+
+# 资源1007（黄金）对应负重（1点=x负重）
+res1007Weight = 1
+
+# 资源1008（石油）对应负重（1点=x负重）
+res1008Weight = 1
+
+# 资源1009（铀矿）对应负重（1点=x负重）
+res1009Weight = 24
+
+# 资源1010（合金）对应负重（1点=x负重）
+res1010Weight = 6
+
+# 资源1107（黄金）对应负重（1点=x负重）
+res1107Weight = 1
+
+# 资源1108（石油）对应负重（1点=x负重）
+res1108Weight = 1
+
+# 资源1109（铀矿）对应负重（1点=x负重）
+res1109Weight = 24
+
+# 资源1110（合金）对应负重（1点=x负重）
+res1110Weight = 6
+
+# 攻打野怪不伤兵比例（死兵按比例转化为伤兵，其余自动复活）（用前除以1000）
+atkEnemyHurtRatio = 0
+
+# 连续攻打野怪可选择次数
+atkEnemyContinuityNums = 1,3,5,10
+
+# 侦查兵力浮动范围（用前除1000）
+scoutSoldierRandomRange = 100
+
+# 侦查防御武器浮动范围
+scoutDefWeaponRandomRange = 1
+
+# 侦查相关作用号
+scoutEffectID = 100_199
+
+# 行军报告相关作用号
+attackReportEffectID = 100_149
+
+# 侦查花费基础值(消耗黄金资源)
+investigationMarchCost = 10000_1007_100
+
+# 集结时间数据（秒）
+worldGatherTime = 300_600_1800_3600
+
+# 旗帜集结时间（秒）
+warFlagGatherTime = 60_180_300_600
+
+# 集结参加者上限基础值
+assemblyQueueNum = 4
+
+# 临时队列开启上限
+tempAssemblyQueueUpper = 5
+
+# 临时队列开启消耗钻石
+tempAssemblyQueueCost = 100_200_500_1000_1000
+
+# 集结精英怪时间
+monsterMass = 60_180_300_600
+
+# 被击飞天数计数
+daysOfDefeated = 1
+
+# 被击飞次数计数
+numsOfDefeated = 3
+
+# 采集资源1001速度（x点/秒）（用前除以1000000）--金币
+collectRes1001speed = 278
+
+# 资源1001（金币）对应负重（1点=x负重）
+res1001Weight = 1000
+
+# 资源援助次数
+assistanceResTimes = 10
+
+# 被资源援助次数
+beAssistanceResTimes = 10
+
+# 机甲集结时间
+gundamMassTime = 60_180_300_600
+
+# 高达行军类型行军时间调整
+bossTypeAdjustParam = 120
+
+# 机甲攻击次数限制
+gundamAtkLimit = 20
+
+# 集结攻击机甲伤害上限
+massGundamOnceKillLimit = 288888
+
+# 单人攻击机甲伤害上限
+gundamOnceKillLimit = 288888
+
+# 掉落翻倍道具ID
+energyDetector = 1480001,1480002,1480003,1480004,1480005
+
+# 掉落翻倍道具ID
+honnerDetector = 9300001,9300002,9300003,9300004
+
+# 掉落翻倍道具效果（倍数）
+energyDetectorMultipleEffect = 2
+
+# 机甲集结时间
+nianMassTime = 60_180_300_600
+
+# 高达行军类型行军时间调整
+nianTypeAdjustParam = 120
+
+# 年兽攻击次数限制
+nianAtkLimit = 20
+
+# 单次攻击年兽伤害上限（万分比）
+nianOnceKillLimit = 100
+
+# 集结攻击年兽伤害上限（万分比）
+massNianOnceKillLimit = 300
+
+# 超级矿9级矿等级
+specialResLevel = 9,10
+
+# 超级矿9级采集速度作用号
+specialResBuffVal = 10000
+
+# 集结分享CD时间
+inviteMassCD = 20
+
+# 机甲宝箱行军参数调整
+nianBoxAdjustParam = 3
+
+# 圣诞行军速度
+christmasTypeAdjustParam = 120
+
+# 圣诞攻击次数限制
+christmasAtkLimit = 20
+
+# 单次攻击boss伤害上限（万分比）
+christmasDeadlinessAtkLimit = 100
+
+# 集结攻击boss伤害上限（万分比）
+christmasMassDeadlinessAtkLimit = 300
+
+# 圣诞宝箱的拾取限制（每日重置）
+christmasBoxReceiveLimit = 10
+
+# 单次攻击Boss伤害保底值（万分比）
+christmasDeadlinessAtkMin = 0
+
+# 集结攻击boss伤害保底值（万分比）
+christmasMassDeadlinessAtkMin = 0
+
+# 圣诞集结时间 单位(秒)
+christmasMassTime = 60_180_300_600
+
+# 间谍行军速度
+espionageAdjustParam = 3
+
+# 间谍行军消耗
+espionageCost = 30000_16412002_1
+
+# 雪球炸弹消耗道具
+snowballAtkCost = 30000_16412001_1
+
+# 攻击雪球行军速度
+snowballAdjustParam = 5
+

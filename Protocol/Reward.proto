@@ -1,0 +1,244 @@
+option java_package	= "com.hawk.game.protocol";
+
+message	RewardItem
+{
+	required int32 itemId =	1;
+	required int32 itemType	= 2;
+	required int64 itemCount = 3;
+}
+
+// 奖励信息，数值型为同步数据
+message	RewardInfo
+{
+	optional int32 gold					= 1;	// 水晶
+	optional int32 coin					= 2;	// 金币
+	optional int64 goldore				= 4;	// 金矿
+	optional int64 oil					= 5;	// 石油
+	optional int64 steel				= 6;	// 铀矿
+	optional int64 tombarthite			= 7;	// 合金
+	optional int32 level				= 8;	// 等级
+	optional int32 exp					= 9;	// 经验
+	optional int32 vipLevel				= 10;	// vip等级
+	optional int64 vipPoint				= 11;	// vip点数
+	optional int64 vipEndTime			= 12;	// vip结束时间
+	optional int64 electric				= 13;	// 电力
+	optional int64 electricMax			= 14;	// 电力上限
+	optional int32 vit					= 15;	// 体力
+	optional int64 guildContribution	= 16;	// 联盟贡献
+	optional int64 recruits				= 17; 	// 新兵资源
+	optional int32 diamond              = 18;   // 钻石
+	repeated RewardItem	showItems		= 20;	// 用来显示的物品信息
+	optional int64 militaryScore        = 21;   // 军演积分
+	optional int64 cyborgScore        	= 22;   // 赛博积分
+	optional int64 goldoreUnsafe	    = 31;	// 金矿(非受保护)
+	optional int64 oilUnsafe			= 32;	// 石油(非受保护)
+	optional int64 tombarthiteUnsafe	= 33;	// 合金(非受保护)
+	optional int64 steelUnsafe			= 34;	// 铀矿(非受保护)
+	optional int64 militaryRank			= 40;	// 军衔功勋值
+	optional int64 dyzzScore            = 41;   // 达雅积分
+	optional int64 crossTalentPoint     = 42;   // 跨服战略点
+	optional int64 nationMilitary		= 43;	// 国家军功值
+}
+
+enum RewardOrginType
+{
+	ACTIVITY_REWARD			= 1;	// 活动奖励来源，参数1:activityId
+	ACHIEVE_REWARD			= 2;	// 成就奖励来源，参数1:achieveId
+	KILL_MONSTER			= 3;	// 击杀野怪来源
+	
+	ITEM_RESOURCE           = 4;    // 使用背包中的资源包获得
+	ITEM_BOX                = 5;    // 打开背包中的宝箱获得
+	SHOPPING_GIFT           = 6;    // 商城购买超值礼包
+	SHOPPING_ITEM           = 7;    // 购买热销商品或资源道具
+	TRAVEL_SHOPPING         = 8;    // 军火商购买获得
+	//ACTIVITY_REWARD       = 9;    // 活动中心领奖获得  和ACTIVITY_REWARD的处理方式相同，后端在传数据的时候统一传ACTIVITY_REWARD
+	EXCHANGE_REWARD         = 10;    // 活动中心兑换获得
+	BUILDING_LEVELUP_REWARD = 11;   // 建筑升级获得资源
+	COMMANDER_REWARD        = 12;   // 指挥官升级获得
+	STORY_MISSION_REWARD    = 13;   // 剧情任务剧情节点奖励
+	STORY_CHAPTER_REWARD    = 14;   // 剧情任务章节奖励
+	STORE_HOUSE_REWARD      = 15;   // 联盟宝藏奖励
+	WHARF_REWARD            = 16;   // 码头卸货获得道具
+	//DAILY_MISSION_REWARD  = 17;   // 日常任务奖励   和ACTIVITY_REWARD的处理方式相同，后端在传数据的时候统一传ACTIVITY_REWARD
+	MAIL_REWARD             = 18;   // 邮件奖励
+	DEFAULT_REWARD          = 19;   // 主界面普通任务奖励
+	MISSION_REWARD          = 20;   // 普通任务奖励
+	BATTLE_MISSION_REWARD   = 21;   // 战地任务奖励
+	ITEM_BATCH_RESOURCE     = 22;   // 批量使用背包中的资源包获得
+	FIRST_RECHARGE_REWARD   = 23;   // 首充活动奖励
+	GET_MILITARY_REWARD		= 24;	// 获取每日军衔功勋津贴
+	PANDORA_LOTTERY_REWARD 	= 25;   //潘多拉宝盒抽奖奖励.
+	LUCKY_STAR_GIFT         = 26;   //幸运星直购礼包
+	DOME_EXCHANGE_REWARD           = 27;   //穹顶兑换
+	ALLY_BEAT_BACK_EXCHANGE_REWARD = 28; //盟军反击兑换奖励
+	CR_MISSION_REWARD		= 29;	// CR英雄试练奖励
+	LUCKY_STAR_FREE_BAG     = 30; //幸运星每天免费奖励礼包
+	HERO_BACK_EXCHANGE_REWARD = 31;   //英雄返场 英雄回归	
+	COPY_CENTER_REWARD			= 32;  // 复制中心
+	COME_BACK_PLAYER_EXCHANGE_REWARD   = 33; // 老玩家回归兑换
+	COME_BACK_PLAYER_BUY_REWARD    = 34; //老玩家回归购买
+	QUESTION_SHARE_REWARD = 35;		//在线答题 情报分享
+	TREA_CAVA_REWARD = 36;		//夺宝
+	MACHINE_SELL_LOTTERY = 37;		//机甲破世 抽奖所得
+	BOUNTY_HUNTER_NOMAL_REWARD = 38; // 推金币普通
+	BOUNTY_HUNTER_BIG_REWARD = 39; // 推金币大
+	MONCARD_DAILY_SIGN_ACHIEVE = 40;	//月卡签到成就
+	PLAN_REWARD = 41;					//源计划
+	MONCARD_DAILY_SIGN = 42;			//月卡签到
+	SPREAD_ACTIVITY = 43;				//推广员活动
+	GIFTSHOP_BUY    = 44;
+	GACHA_AMOUR    = 45;	// 铠甲扭蛋
+    FULLY_ARMED_EXPLORE  = 46;    // 全副武装探索奖励
+	ARMOUR_RESOLVE = 47;	// 铠甲分解
+	PIONEER_GIFT = 48;		// 先锋豪礼成就奖励
+	ROULTTE_ACC_BOX = 49;		// 幸运轮盘累计奖励
+	SKIN_PLAN_REWARD 	= 50;   //皮肤计划抽奖奖励.
+	MID_AUTUMN_EXCHANGE_REWARD = 51; //中秋庆典兑换奖励
+	MID_AUTUMN_BUY_GIFT_REWARD = 52; //中秋庆典购买礼包奖励
+	TIME_LIMIT_LOGIN_REWARD = 53; //限时登录奖励
+	MEDAL_ACTION_LOTTERY_REWARD = 54; //勋章宝藏抽奖奖励
+	REDKOI_WISH_REWARD = 55;      //红警锦鲤抽奖奖励
+	HERO_SKIN_REWARD = 56;		//英雄皮肤夺宝
+	HERO_SKIN_RECHARGE_REWARD = 57; //英雄皮肤投放活动充值给券
+	DIVIDE_GOLD_OPEN_ENVELOPE_REWARD = 58; //瓜分金币活动开红包奖励
+	CROSS_MISSION_AWARD = 59; // 跨服任务奖励
+	DESTINY_REVOLVER_NINE_REWARD = 60;		//命运左轮九格奖励
+	DESTINY_REVOLVER_FIVE_REWARD = 61;		//命运左轮九格奖励
+	JOY_BUY_EXCHANGE_REWARD= 62;//欢乐购兑换奖励
+
+	EXCHANGE_DECORATE_LEVEL_REWARD= 63;//兑换装扮 奖励特惠奖励
+	EXCHANGE_DECORATE_REWARD= 64;//兑换装扮 装扮兑换奖励
+	
+	EQUIP_RESEARCH_BOX_REWARD = 65; // 装备科技宝箱奖励
+	DRAGON_BOAT_LUCKY_BAG_OPEN_REWARD = 66; //端午-开福袋奖励
+	
+	RECHARGE_WELFARE_LOTTERY_REWARD = 67; //充值福利抽奖奖励
+	
+	WARFLAG_TWO_EXCHANGE_REWARD           = 68;   //鹊桥会
+
+	ALLIANCE_CARNIVAL_EXCHANGE_REWARD = 69;//联盟总动员兑换奖励
+	Ordnance_Fortress_OPEN_REWARD = 70;   //军械要塞开奖获得
+	PLANT_FORTRESS_OPEN_REWARD = 71;   //泰能宝库开奖获得
+	
+	FIRE_REIGNITE_REWARD           = 72;   //装扮投放系列活动三:重燃战火奖励
+	PLANT_FACTORY_COLLECT			= 73; // 收取泰能工厂
+	GUNPOWDER_RISE_REWARD           = 74;   //装扮投放系列活动四:浴火重生兑换获得
+	
+	OBELISK_MISSION_REWARD           = 75;   //方尖碑任务奖励
+	
+	FIRE_REIGNITE_REWARD_TWO       = 76;   //圣诞节系列活动一:冰雪计划活动 奖励
+	GUNPOWDER_RISE_REWARD_TWO      = 77;   //圣诞节系列活动二:冬日装扮活动兑换获得
+	RED_BLUE_TICKET_OPEN           = 78;   // 红蓝对决翻牌奖励
+	PLANT_SECRET_BOX               = 79;   // 泰能机密活动开箱奖励
+	GRATEFUL_BENEFITS_GET_AWARD    = 80;   // 感恩福利奖励
+	HONOUR_HERO_BEFELL_LOTTERY_REWARD = 81; //荣耀英雄降临抽奖获得
+	HONOUR_HERO_RETURN_LOTTERY_REWARD = 82; //荣耀英雄回归抽奖获得
+	HONOUR_HERO_RETURN_LOTTERY_FIX_REWARD = 83; //荣耀英雄回归抽奖固定奖励获得
+	NEWYEAR_LOTTERY_REWARD = 84;  // 双旦活动抽奖奖励
+	ROSE_GIFT_REWARD = 85;  // 玫瑰赠礼抽奖
+	ITEM_RECYCLE_RECOVERY = 86;  // 道具回收道具精炼
+	SEASON_ACTIVITY_BOX = 87;  // 赛季活动战令宝箱
+	LUCK_GET_GOLD_DRAW = 88; // 鸿运夺金抽奖
+	CUSTOM_REWARD = 89; // 自定义奖励 
+	CUSTOM_REWARD_FREE = 90; // 自定义奖励获得次数
+	HERO_SOUL_RESET = 91; // 军魂功能新增重置功能
+	ACTIVITY_BIG_REWEARD = 92; // 获得大奖
+	JIJIA_SKIN_REWARD = 93;//机甲皮肤
+	JIJIA_SKIN_RECHARGE_REWARD = 94;//机甲皮肤
+	ORDER_ACTIVITY_DOUBLE_REWARD = 95; //红警占领双倍暴击奖励
+	PLANT_SOLDIER_FACTORY_DRAW = 96; //泰能活动抽奖
+	QUEST_TREASURE_RANDOM_WALK_REWARD = 97; //秘境寻宝奖励
+	HONOUR_MOBILIZE_REWARD = 98;  //荣耀动员奖励
+	MT_TRAIN_ROB = 99; // 押镖集结联盟车
+	MT_TRUCK_REACH = 100; // 押镖车辆到达
+	
+}
+
+message	HPPlayerReward
+{
+	optional int32 flag	= 1;
+	optional RewardInfo	rewards	= 2;
+	optional int32 orgin	= 3; // 奖励来源
+	repeated int32 orginArgs = 4; // 来源参数列表
+}
+
+message PlayerLevelUpReward
+{
+	required int32 level = 1;                // 升级后的等级
+	required RewardInfo rewardInfo = 2;      // 升级奖励信息
+	required int32 battlePoint = 3;          // 升级后的战力值
+	optional int32 battlePointBefore = 4;    // 升级前的战力值
+}
+
+message HPPlayerLevelUpInfo
+{
+	repeated PlayerLevelUpReward levelUpInfo = 1;
+}
+
+message PlayerVipLevelUpReward
+{
+	required int32 level = 1;                // 升级后的等级
+	optional RewardInfo rewardInfo = 2;      // 升级奖励信息
+}
+
+message HPPlayerVipLevelUpInfo
+{
+	repeated PlayerVipLevelUpReward levelUpInfo = 1;
+}
+
+// 领取城内冒泡奖励请求 
+message BubbleRewardReq
+{
+	required int32 type = 1;  // 类型：1兵种冒泡，2建筑冒泡
+}  
+
+// 所有冒泡奖励信息：玩家登陆时或领完奖励时推送
+message BubbleRewardInfoPB
+{
+	optional int32 type = 1;  // 领取奖励的类型，登录时为空
+	repeated BubbleRewardDetailPB bubbleReward = 2;
+}
+
+// 冒泡奖励的具体信息
+message BubbleRewardDetailPB
+{
+	required int32 type     = 1; // 类型
+	required int64 lastTime = 2; // 上次领取时间
+    required RewardItem nextRewardItem = 3; // 下次可领取的奖励
+    required int32 gotTimes = 4; // 已领取次数    
+}
+
+message PBNationMilitaryLevelUpReward
+{
+	optional int32 beforeLevel = 1;  
+	optional int32 level = 2;                // 升级后的等级 nation_military.xml
+	optional RewardInfo rewardInfo = 3;      // 升级奖励信息
+ }
+
+message PBNationMilitaryLevelUpInfo
+{
+	repeated PBNationMilitaryLevelUpReward levelUpInfo = 1;
+}
+
+// 军衔重置
+message PBNationMilitaryResetReward
+{
+	optional int32 beforeLevel = 1;  
+	optional int32 level = 2;                // 升级后的等级 nation_military.xml
+	optional RewardInfo rewardInfo = 3;      // 升级奖励信息
+	optional int32 nationMilitary = 4; // 当前军功
+	optional int32 resetTerm = 5; 
+	optional int32 rankTerm = 6; 
+	optional int32 beforeNationMilitary = 7; // 前军功
+ }
+
+// 排行榜刷新
+ message PBNationMilitaryRankResetReward
+{
+	optional int32 beforeLevel = 1;  
+	optional int32 level = 2;                // 升级后的等级 nation_military.xml
+	optional RewardInfo rewardInfo = 3;      // 升级奖励信息
+	optional int32 nationMilitary = 4; // 当前军功	
+	optional int32 resetTerm = 5; 
+	optional int32 rankTerm = 6;
+ }

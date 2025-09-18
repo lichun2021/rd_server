@@ -1,0 +1,64 @@
+option java_package = "com.hawk.game.protocol";
+
+// 联盟大礼包
+message PBGuildBigGift{
+	optional int32 level =1;
+	optional int32 bigGiftLevelExp = 2; // 礼包等级经验显示值
+	optional int32 bigGiftId = 3; //
+	optional int32 bigGiftExp = 4; // 大礼包发放计数用
+	optional int32 bigGiftLevelTotalExp = 5; // 礼包等级经验条长度
+} 
+
+
+// 玩家礼物列表项
+message PBPlayerGuildGift{
+    optional string id = 1;
+	optional int32 itemId = 2; // 礼物item 
+	optional string awardGet = 3; //可领取物品
+	optional int64 overTime = 4; // 过期时间
+	optional int32 state = 5;// 0 未领取, 1已领取 
+}
+
+// 同步大礼包 (上半部分)   上线推, 变化推. 各种推.  不用请求
+message PBSyncGuildBigGift{
+	optional PBGuildBigGift gift =1;
+}
+
+// 请求玩家礼物表 不请求不推. 请求不需要协议体
+message PBPlayerGuildGiftResp{
+	repeated PBPlayerGuildGift giftList = 1;
+}
+
+// 推送变化 已有的更新, 没有的加后面   不接受请求
+message PBPlayerGuildGiftUpdate{
+	repeated PBPlayerGuildGift giftList = 1;
+	optional bool update =2; //true 更新 false 新增
+}
+
+// 推送红点数  上线推, 各种推.  不接受请求
+message PBSyncPlayerGiftSize{
+	optional int32 size = 1;
+}
+
+// 请求领取礼物 回复 PBPlayerGuildGiftUpdate
+message PBGetGiftAwardRequest{
+	repeated string ids = 1;
+}
+
+// 请求清楚列表项. 返回通用成功. 客户端自行处理
+message PBDeleteGiftRequest{
+	repeated string ids =1;
+}
+
+// 玩家礼物列表项
+message PBGuildGiftLog{
+    required string id		= 1;
+	required int32 itemId	= 2; // 礼物item 
+	required string awardGet	= 3; //可领取物品
+	required int64 getTime	= 4; // 领取时间
+}
+
+// 获取玩家领取联盟大礼包日志
+message PBGetGiftLog{
+	repeated PBGuildGiftLog logInfo = 1;
+}

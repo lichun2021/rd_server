@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="0" activity="activity_null" desc="为了与separateIgnore.xml区分开，以防止出patch时出现相同md5"/>
+      <data id="1" activity="activity_honour_mobilize" desc="366"/>
+      <data id="2" activity="activity_merge_competition" desc="368"/>
+      <data id="3" activity="activity_hot_blood_war" desc="378"/>
+</root>

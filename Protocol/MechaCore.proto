@@ -1,0 +1,188 @@
+option java_package = "com.hawk.game.protocol";
+
+
+//套装类型
+enum MechaCoreSuitType
+{
+	MECHA_NONE 	= 0; // 未选择
+	MECHA_ONE 	= 1; // 第一套套装
+	MECHA_TWO 	= 2; // 第二套套装
+	MECHA_THREE = 3; // 第三套套装
+	MECHA_FOUR 	= 4; // 第四套套装
+	MECHA_FIVE 	= 5; // 第五套套装
+	MECHA_SIX 	= 6; // 第六套套装
+	MECHA_SEVEN = 7; // 第七套套装
+	MECHA_EIGHT = 8; // 第八套套装
+}
+
+
+//套装信息
+message MechaCoreSuit
+{
+	required MechaCoreSuitType type    = 1;
+	required int32 unlocked            = 2; //套装是否已解锁：1是0否
+	optional string name 		       = 3; //当前套装的名字
+	repeated MechaCoreSlotPB slotInfo  = 4; //槽位信息（只有在请求套装详细信息时才有值）
+}
+
+//机甲核心功能信息同步
+message MechaCoreInfoSync
+{
+	required int32 funcUnlocked   	        = 1; //功能是否解锁（1是0否）
+	optional int32 breakthroughLv           = 2; //机甲核心突破阶级
+	repeated MechaCoreLevelPB techLvInfo    = 3; //机甲核心科技的等级
+	repeated MechaCoreSuit suitInfo         = 4; //套装信息
+	optional MechaCoreSuitType currSuit     = 5; //当前生效的套装
+	repeated MechaCoreSlotPB slotInfo       = 6; //槽位信息
+	optional int32 moduleLoadUnlock         = 7; //核心装配控制开关（1开启，0关闭）
+	optional int32 moduleGachaUnlock        = 8; //模块抽取控制开关（1开启，0关闭）
+	optional string mechacoreShowInfo       = 9; //机甲核心外显信息（一个或逗号分隔的多个外显id）
+	optional int32 drawFloorTimes           = 10;//保底抽奖次数
+}
+
+//机甲核心相关信息（给邮件引用）
+message PBMechaCoreInfo
+{
+	optional int32 breakthroughLv           = 1; //机甲核心突破阶级
+	repeated MechaCoreLevelPB techLvInfo    = 2; //机甲核心科技的等级
+	repeated MechaCoreSlotPB slotInfo       = 3; //槽位信息
+	optional MechaCoreSuitType currSuit     = 4; //当前生效的套装
+}
+
+//请求套装详细信息返回
+message MechaCoreSuitResp
+{
+	repeated MechaCoreSuit suitInfo    = 1; //套装信息
+}
+
+//机甲核心科技信息
+message MechaCoreLevelPB
+{
+	required int32 type  = 1; //科技类型
+	required int32 level = 2; //科技等级
+}
+
+//机甲核心槽位信息
+message MechaCoreSlotPB
+{
+	required int32 slotType           = 1; //槽位类型
+	required int32 unlocked           = 2; //是否已解锁（1是0否）
+	optional int32 slotId             = 3; //槽位id
+	optional int32 level              = 4; //槽位等级
+	optional MechaCoreModulePB module = 5; //对应当前选中的套装下，槽位装载的模块（如果还未装载模块，此字段为空）
+}
+
+//套装对应的模块信息
+message MechaCoreSuitModulePB
+{
+	required int32 slotType           = 1; //槽位类型
+	optional MechaCoreModulePB module = 2; //装载的模块（如果还未装载模块，此字段为空）
+}
+
+//机甲核心模块信息
+message MechaCoreModulePB
+{
+	required string uuid   = 1; //模块唯一id
+	required int32 cfgId   = 2; //配置id
+	required int32 locked  = 3; //是否已锁定（1是0否）
+	required int32 quality = 4; //品质
+	repeated MechaCoreModuleAttrPB moduleAttr = 5; //词条属性信息
+	repeated MechaCoreSuitType suit = 6; //有哪些套装装配了这个模块
+}
+
+//模块的随机属性
+message MechaCoreModuleAttrPB
+{
+	required int32 attrId    = 1;
+	required int32 attrType  = 2;
+	required int32 attrValue = 3;
+}
+
+//机甲核心模块列表同步
+message MechaCoreModuleSync
+{
+	required int32  all                = 1; //1-同步所有模块；0-增量同步
+	repeated MechaCoreModulePB module  = 2; //模块列表信息 
+}
+
+//机甲核心科技升级
+message MechaCoreTechUpReq
+{
+	required int32 type  = 1; //科技类型
+}
+
+//机甲核心槽位解锁
+message MechaCoreSlotUnlockReq
+{
+	required int32 slotType  = 1; //槽位类型
+}
+
+//机甲核心槽位升级
+message MechaCoreSlotUpReq
+{
+	required int32 slotType  = 1; //槽位类型
+}
+
+//机甲核心模块装载
+message MechaCoreModuleLoadReq
+{
+	required MechaCoreSuitType suit = 1; //套装
+	required int32 slotType         = 2; //槽位id
+	required string moduleId        = 3; //模块唯一id
+}
+
+//机甲核心模块卸载
+message MechaCoreModuleUnloadReq
+{
+	required int32 slotType         = 1; //槽位id
+	required MechaCoreSuitType suit = 2; //套装
+}
+
+//机甲核心模块分解
+message MechaCoreModuleResolveReq
+{
+	repeated string moduleId  = 1;  //所要分解的模块id
+	repeated int32 quality    = 2;  //要分解哪几种品质的模块
+}
+
+//机甲核心模块分解返还
+message MechaCoreModuleResolveResp
+{
+	repeated string moduleId  = 1; //分解的模块id
+}
+
+//机甲核心模块属性词条更换
+message MechaCoreModuleAttrReplaceReq
+{
+	required string fromModuleId      = 1; //模块uuid
+	required string toModuleId        = 2;
+	required int32 fromAttrId         = 3; //属性词条的配置id
+	required int32 toAttrId           = 4;
+}
+
+//套装切换
+message SuitSwitchReq
+{
+	required MechaCoreSuitType suit = 1;
+}
+
+//套装修改名字
+message SuitChangeNameReq
+{
+	required MechaCoreSuitType suit = 1;
+	required string name            = 2;
+}
+
+//锁定模块
+message MechaCoreModuleLockReq
+{
+	repeated string moduleId  = 1;  //所要锁定的模块id
+	optional int32 lockAll    = 2;  //是否锁定所有，1是0否（当lockAll=1时，客户端不需要传moduleId）
+}
+
+//模块解锁
+message MechaCoreModuleUnlockReq
+{
+	repeated string moduleId  = 1;  //所要解锁的模块id
+	optional int32 unlockAll  = 2;  //是否解锁所有，1是0否（unlockAll=1时，客户端不需要传moduleId）
+}

@@ -1,0 +1,22 @@
+option java_package = "com.hawk.game.protocol";
+
+// 远征科技信息
+message HPTechnologySync
+{
+	repeated int32 techId = 1; // 科技ID
+	optional int64 unlockTime = 2;// 远征科技解锁时间
+}
+
+// 远征科技升级类型
+enum LvlUpType{
+	NORMAL	= 1;	//普通升级
+	BUY_RES	= 2;	//买资源升级
+	BUY_RES_AND_TIME = 3; //买资源并且秒时间
+}
+
+// 远征科技研究
+message LevelUpTechnologyReq
+{
+	required int32 techId = 1; //科技ID
+	required LvlUpType type = 2; //是否使用水晶
+}

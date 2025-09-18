@@ -1,0 +1,24 @@
+# 首次占领个人 积分
+firstControlHonor = 100
+
+# 首次占领联盟 积分
+firstControlGuildHonor = 1000
+
+# 刷新点  x_y,刷几个写几个.  半径为偶数 x,y相加必须为奇数
+refreshPoint = 45_210,105_90
+
+# 完全控制个人积分增长/秒 
+honor = 0.333
+
+# 完全控制联盟积分增长/秒 
+guildHonor = 3.333
+
+# 控制倒计时
+controlCountDown = 180
+
+# 开场保护时间
+protectTime = 10
+
+# 采集部队最小值
+collectArmyMin = 50000
+

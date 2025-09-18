@@ -1,0 +1,410 @@
+option java_package = "com.hawk.game.protocol";
+import "Reward.proto";
+
+message ItemInfo
+{
+	required string uuid 	= 1;
+	required int32  itemId 	= 2;
+	required int32  count 	= 3;
+	required bool isNew		= 4;
+}
+
+message HPItemInfoSync
+{
+	repeated ItemInfo itemInfos = 1;
+}
+
+message HPItemUseReq
+{
+	required string uuid 		= 1;	
+	required int32 itemCount 	= 2;
+	optional string targetId	= 3; //作用对象Id（使用自选奖励宝箱道具时，targetId表示选择宝箱内的哪项奖励：1,2,3,4）	
+}
+
+message HPResItemBatchUseReq{
+	repeated HPItemUseReq resItems = 1; // 批量使用资源道具
+}
+
+// 批量使用资源田增产道具
+message HPResOutputItemBatchUseReq {
+    required int32 buildingType  = 1;   // 资源田类型
+	required bool useGold        = 2;   // 道具不够的情况下是否使用货币补充 
+}
+
+message HPResOutputItemBatchUseResp {
+    required int32 buildingType  = 1;   // 资源田类型
+}
+
+message HPItemUseByItemIdReq
+{
+	required int32 itemId 		= 1;	
+	required int32 itemCount 	= 2;
+	optional string targetId	= 3; //作用对象Id	
+}
+
+message HPItemBuyReq
+{
+	required int32 shopId 		= 1;
+	required int32 itemCount	= 2;
+	optional RewardOrginType type = 3; // 购买后物品弹出展示类型
+}
+
+message HPItemBuyAndUseReq
+{
+	required int32 itemId 		= 1;
+	required int32 itemCount	= 2;
+	optional string targetId	= 3; //作用对象Id
+}
+
+// 购买体力返回
+message BuyVitResp
+{
+	required int32 buyCount = 1;  // 一次请求购买的次数
+}
+
+// 玩家登陆时推送的商品热卖信息
+message HotSalesInfo
+{
+	required int32 salesId  = 1;
+	required int64 endTime  = 2;
+	required bool isAlreadyBuy = 3;
+}
+
+message HPBuyHotReq
+{
+	required int32 salesId  = 1;
+}
+// 请求同步扭蛋信息
+message HPSyncGachaInfoReq{
+}
+
+// 同步扭蛋信息
+message HPSyncGachaInfoResp{
+	repeated HPGachaInfo gacha = 1;
+	optional HPGachaModuleInfo gachaModuleInfo = 2; //机甲核心模块相关信息
+}
+
+message HPGachaInfo{
+	required int32 gachaType = 1;
+	optional int32 freeTimesUsed = 2; //已抽免费数
+	optional int64 nextFree = 3; // 下次免费时间
+	optional int32 totalCount = 4; // 已抽取总次数
+	optional int32 dayCount = 5; // 当日已经抽取次数
+}
+
+//机甲核心模块抽取增产信息
+message HPGachaModuleInfo
+{
+	required int32 addProductCount = 1; //剩余增产次数
+	required int32 useCountDaily   = 2; //今日已使用的增产次数
+}
+
+//请求扭蛋
+message HPGachaReq{
+	required int32 gachaType = 1;
+	optional int32 batchGachaCnt = 2; // 如果是批量要填数量 ADVANCE_TEN XXXX_TEN 
+	optional int32 armourResolveQuality = 3; // 如果是批量抽装备, 必选分解等级
+}
+
+message HPGachaResp{
+	required int32 gachaType = 1;
+	repeated string rewards = 2; // [30000_900002_2,...] 
+	optional string armourResolveRewards = 3; // 装备自动分解获得 
+	optional int32 batchGachaCnt         = 4; // 如果是批量要填数量 ADVANCE_TEN XXXX_TEN 
+	optional int32 armourResolveQuality  = 5; // 如果是批量抽装备, 必选分解等级
+	optional int32 armourResolveNum      = 6; // 如果是批量抽装备, 必选分解等级
+	repeated string moduleUuid           = 7; // 模块的uuid列表
+}
+
+//请求购买礼包
+message HPBuyGiftReq{
+	required int32 giftId = 1;
+	optional int32 voucherId = 2; //代金券物品ID
+}
+message HPBuyGiftResp{
+	required int32 giftId = 1;
+	required bool success = 2;
+}
+
+//请求礼包信息
+message HPSyncGiftInfoReq{
+}
+
+message HPSyncGiftInfoResp{
+	repeated int32 giftsOnSell = 1; // 在售礼包id
+	optional int64 countDown = 2; // 刷新倒计时
+}
+
+//奖励转换推送
+message HPToolChangePush{
+	required int32 fromToolId = 1; // 被转换tool
+	required int32 fromToolCount = 2;
+	required int32 toToolId = 3; // 转换至tool
+	required int32 toToolCount = 4;
+}
+
+
+//请求同步商品购买记录
+message HPSyncItemBuyReq{
+}
+
+message HPSyncItemBuyResp{
+	repeated HPShopRecord shopRecord =1;
+	repeated HPShopRecord totalRecord=2; // 总购买数量
+}
+
+message HPShopRecord{
+	required int32 shopId =1;
+	required int32 count = 2;
+}
+
+// vip商城购买条目
+message VipShopItem 
+{
+	required int32 shopId   = 1;  // 配置id，购买时传此id作为参数
+	required string itemId   = 2;  // 物品id
+	required int32 vipLevel = 3;  // vip购买等级
+	required string price   = 4;  // 原始价格
+	required float discount = 5;  // 折扣
+	required int32 remainBuyTimes = 6;  // 剩余购买次数
+}
+
+// vip商城信息同步 
+message VipShopItemInfo
+{
+	repeated VipShopItem vipShopItems = 1;
+	required bool refreshAll          = 2; // 是否刷新所有数据
+}
+
+// vip商城 购买请求
+message VipShopBuyReq
+{
+	required int32 shopId    = 1;
+	required int32 count     = 2;  // 购买数量
+}
+
+// vip商城 购买返回同步
+message VipShopBuyResp
+{
+	required bool isSuccess = 1;
+	required VipShopItem vipShopItems = 2;
+}
+
+// vip专属礼包信息
+message VipExclusiveBox
+{
+	required int32 vipLevel = 1;  // vip等级
+	required bool bought    = 2;  // 是否已购买过
+}
+
+// vip礼包信息
+message VipBoxInfoPB
+{
+	repeated VipExclusiveBox exclusiveBox    = 1;  // 专属礼包
+	optional bool benefitBoxTaken            = 2;  // 福利礼包是否已领取
+	repeated int32 unreceivedBenefitBox      = 3;  // 未领取过的福利礼包
+}
+
+// 购买vip专属礼包请求
+message VipExclusiveBoxBuyReq
+{
+	required int32 vipLevel = 1;  // vip等级
+}
+
+// 领取vip福利礼包
+message TakeBenefitBoxReq
+{
+	required int32 vipLevel = 1;  // vip等级
+}
+
+
+// 至尊vip信息
+message SuperVipInfo
+{
+	required int32 actualLevel        = 1;  // 实际的至尊vip等级
+	required bool activated           = 2;  // 当前周期至尊会员是否激活
+	required int32 monthVipScore      = 3;  // 当月至尊积分
+	required bool dailyActiveScoreGot = 4; // 当日是否已领取活跃任务奖励积分
+    required bool dailyLoginScoreGot  = 5; // 当日是否已领取登录奖励积分
+    required bool monthGiftGot        = 6; // 当月至尊vip礼包是否已领取
+    required bool dailyGiftGot        = 7; // 当日至尊礼包是否已领取
+	optional int32 loginScore         = 8; // 当日可领取的登录奖励积分数
+    optional int32 loginDays          = 9; // 连续登录天数
+    optional int32 nextLoginScore     = 10; // 明日可领取的登录奖励积分数
+    optional int32 activatedSkinLevel = 11; // 已激活的皮肤特效等级
+	optional bool levelup              = 12; // 是否是升级同步
+    optional bool autoActive           = 13; // 是否是自动激活的，false表示手动激活，true表示自动激活
+    optional int64 activeEndTime       = 14; // 手动激活时，激活期结束时间
+}
+
+// 领取奖励积分请求
+message RecieveSueprVipScoreReq
+{
+	required int32 scoreType = 1;  // 0-登录奖励积分，1-活跃任务奖励积分
+}
+
+// 领取月度至尊vip礼包
+message RecieveSueprVipGift
+{
+    required int32 giftType  = 1;  // 0-月度礼包，1-每日礼包
+}
+
+// 至尊等级皮肤特效激活（取消激活）请求
+message SkinEffActivateReq
+{
+	required int32 level   = 1;  // 激活等级，为0时表示取消激活 
+}
+
+// 手动激活至尊vip
+message SuperVipActiveReq
+{
+	required int32 cfgId   = 1; // 激活的档位配置ID（对应vip_temporary_super表中的id字段）
+}
+
+
+// 迷雾要塞宝箱数据结构体
+message FoggyBoxPB
+{
+	required string boxId        = 1;  // 迷雾要塞宝箱uuid
+	required int32 boxItemId     = 2;  // 宝箱的配置ID
+	required int32 foggyBoxState = 3;  // 宝箱状态
+	optional int32 unlockTime    = 4;  // 开启所需时间，单位秒
+}
+
+// 迷雾要塞宝箱状态
+enum FoggyBoxState
+{
+	LOCKED        = 0; // 未开启：放到空位中，还没走开启时间倒计时的
+	UNLOCKING     = 1; // 开启中：正在走起开时间倒计时的
+	UNLOCKED      = 2; // 已开启：走完开启时间倒计时，待领取奖励的
+}
+
+// 迷雾要塞宝箱数据同步
+message FoggyBoxSyncPB
+{
+	repeated FoggyBoxPB foggyBox = 1;
+}
+
+// 开启迷雾要塞宝箱请求
+message OpenFoggyBoxReq
+{
+	required string boxId  = 1; // 迷雾要塞宝箱ID
+}
+
+// 领取迷雾要塞宝箱奖励请求
+message ReceiveFoggyBoxAwardReq
+{
+	required string boxId  = 1; // 迷雾要塞宝箱ID
+}
+
+// 丢弃迷雾要塞宝箱（前端主动请求丢弃时发送此PB到后端，后端要删除一个宝箱时发送此PB通知前端）
+message FoggyBoxThrowAwayPB
+{
+	required string boxId   = 1;  // 迷雾要塞宝箱ID
+	optional bool throwAway = 2;  // 此字段用于服务器同步移除宝箱数据，客户端发送请求时不用，true：因丢弃宝箱而移除，false：因领完宝箱奖励而移除
+}
+
+// 体力购买信息请求响应
+message VitPurchaseInfoRespPB
+{
+	required int32 buyVitTimes = 1;  // 已购买体力的次数
+	optional int64 crossDayTime = 2; // 最近一次的跨天时间点，只有当已购买体力次数大于0时，才会发此字段
+}
+
+//同步礼包信息,里面都是可以购买的信息
+message ResourceGiftSyn {
+	repeated ResourceGiftMsg resGiftMsgs = 1; //资源礼包的信息
+}
+//购买礼包
+message ResourceGiftBuyC {
+	required int32 id = 1; //购买的id
+}
+//购买礼包返回
+message ResourceGiftBuyS {
+	optional int32 rlt = 1; //0位成功, 其它为错误码.
+}
+
+message ResourceGiftMsg {
+	optional int32 id = 1;//id
+	optional int32 endTime = 2; //到期时间.
+}
+
+// 客户端点击新上架商品时通知服务器
+// 玩家登录时服务器通知客户端已点击过哪些新上架商品
+message NewlyShopItemClickedNotify
+{
+	repeated int32 shopItemType  = 1;  // 热销商品新上架商品中已点击过的商品类型
+}
+
+// 物品兑换
+message ItemExchangeReq
+{
+	required int32 exchangeCfgId  = 1; // 物品兑换表的配置ID
+	required int32 exchangeCount  = 2; // 兑换数量
+}
+
+message ExchangeItemPB
+{
+	required int32 exchangeCfgId  = 1; // 物品兑换表的配置ID
+	required int32 exchangeTimes  = 2; // 兑换次数
+}
+
+// 物品兑换次数数据
+message ItemExchangeTimesPB
+{
+	repeated ExchangeItemPB exchangeItem = 1;
+}
+
+// 军演商店商品信息
+message MilitaryShopItem
+{
+	required int32 shopId  = 1;  // 商品Id
+	required int32 buyCount = 2; // 已购买次数
+	required int32 totalCount = 3; //总次数
+}
+
+// 军演商店购买信息
+message MilitaryShopInfo 
+{
+	optional int64 serverOpenTime      = 1; // 服务器开服时间
+	optional int64 militaryScore       = 2; // 军演积分
+	repeated MilitaryShopItem buyItems = 3; // 已购买商品的购买次数
+}
+
+// 军演商店购买请求
+message MilitaryShopBuyReq
+{
+	required int32 shopId   = 1;   // 所购买商品ID
+	required int32 count    = 2;   // 购买数量
+}
+
+// 大R复仇商店购买请求
+message RevengeShopBuyReq
+{
+	required int32 shopId   = 1;   // 所购买商品ID
+	required int32 count    = 2;   // 购买数量
+}
+
+// 大R复仇商店购买
+message RevengeShopBuySuccess
+{
+	required int32 shopId   = 1;   // 所购买商品ID
+	required int32 count    = 2;   // 已经买了的个数
+}
+
+// 推荐礼包列表
+message GiftRecommendInfo {
+	repeated int32 giftGroupId = 1;
+}
+
+// 推荐礼包成功(客户端推荐成功，通知服务器)
+message GiftRecommend {
+	repeated int32 giftGroupId = 1;
+}
+
+// 道具使用提示协议体
+message HPItemTipsResp
+{
+	required int32 itemId 		= 1;
+	required int32 itemCount	= 2;
+}

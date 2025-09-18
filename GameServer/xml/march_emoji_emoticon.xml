@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" defaultUnlock="1" emoticon="0" />
+      <data id="2" defaultUnlock="1" emoticon="0" />
+      <data id="3" defaultUnlock="1" emoticon="0" />
+      <data id="4" defaultUnlock="1" emoticon="0" />
+      <data id="101" defaultUnlock="0" emoticon="1" />
+      <data id="102" defaultUnlock="0" emoticon="1" />
+      <data id="103" defaultUnlock="0" emoticon="1" />
+      <data id="104" defaultUnlock="0" emoticon="1" />
+      <data id="105" defaultUnlock="0" emoticon="1" />
+      <data id="106" defaultUnlock="0" emoticon="1" />
+      <data id="201" defaultUnlock="0" emoticon="2" />
+      <data id="202" defaultUnlock="0" emoticon="2" />
+      <data id="203" defaultUnlock="0" emoticon="2" />
+      <data id="204" defaultUnlock="0" emoticon="2" />
+      <data id="205" defaultUnlock="0" emoticon="2" />
+      <data id="206" defaultUnlock="0" emoticon="2" />
+</root>

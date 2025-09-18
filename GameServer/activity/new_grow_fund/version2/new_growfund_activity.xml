@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="263101" conditionType="100" conditionValue="2010_4" rewards="30000_810003_5" />
+      <data achieveId="263102" conditionType="100" conditionValue="2010_7" rewards="30000_810003_10" />
+      <data achieveId="263103" conditionType="100" conditionValue="2010_10" rewards="30000_810003_15" />
+      <data achieveId="263104" conditionType="100" conditionValue="2010_13" rewards="30000_810003_20" />
+      <data achieveId="263105" conditionType="100" conditionValue="2010_16" rewards="30000_810003_25" />
+      <data achieveId="263106" conditionType="100" conditionValue="2010_18" rewards="30000_810003_30" />
+      <data achieveId="263107" conditionType="100" conditionValue="2010_20" rewards="30000_810003_35" />
+      <data achieveId="263108" conditionType="100" conditionValue="2010_22" rewards="30000_810003_40" />
+      <data achieveId="263109" conditionType="100" conditionValue="2010_24" rewards="30000_810003_45" />
+      <data achieveId="263110" conditionType="100" conditionValue="2010_26" rewards="30000_810003_50" />
+      <data achieveId="263111" conditionType="100" conditionValue="2010_28" rewards="30000_810003_55" />
+      <data achieveId="263112" conditionType="100" conditionValue="2010_30" rewards="30000_810003_60" />
+      <data achieveId="263201" conditionType="200" conditionValue="2010_4" rewards="30000_101050_5,10000_1001_88" />
+      <data achieveId="263202" conditionType="200" conditionValue="2010_7" rewards="30000_101050_10,10000_1001_188" />
+      <data achieveId="263203" conditionType="200" conditionValue="2010_10" rewards="30000_101050_15,10000_1001_288" />
+      <data achieveId="263204" conditionType="200" conditionValue="2010_13" rewards="30000_101050_20,10000_1001_388" />
+      <data achieveId="263205" conditionType="200" conditionValue="2010_16" rewards="30000_101050_25,10000_1001_488" />
+      <data achieveId="263206" conditionType="200" conditionValue="2010_18" rewards="30000_101050_30,10000_1001_688" />
+      <data achieveId="263207" conditionType="200" conditionValue="2010_20" rewards="30000_101050_35,10000_1001_888" />
+      <data achieveId="263208" conditionType="200" conditionValue="2010_22" rewards="30000_101050_40,10000_1001_1088" />
+      <data achieveId="263209" conditionType="200" conditionValue="2010_24" rewards="30000_101050_45,10000_1001_1388" />
+      <data achieveId="263210" conditionType="200" conditionValue="2010_26" rewards="30000_101050_50,10000_1001_1688" />
+      <data achieveId="263211" conditionType="200" conditionValue="2010_28" rewards="30000_101050_55,10000_1001_3888" />
+      <data achieveId="263212" conditionType="200" conditionValue="2010_30" rewards="30000_101050_60,10000_1001_8888" />
+</root>

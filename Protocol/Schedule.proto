@@ -1,0 +1,62 @@
+option java_package = "com.hawk.game.protocol";
+
+//待办事项类型
+enum ScheduleType{
+	SCHEDULE_TYPE_1  = 1; //泰伯利亚
+	SCHEDULE_TYPE_2  = 2; //先驱回响
+	SCHEDULE_TYPE_3  = 3; //星海激战
+	SCHEDULE_TYPE_4  = 4; //幽灵行动
+	SCHEDULE_TYPE_5  = 5; //赛博之战
+	SCHEDULE_TYPE_6  = 6; //巨龙来袭
+	SCHEDULE_TYPE_7  = 7; //战区
+	SCHEDULE_TYPE_8  = 8; //盟军总部
+	SCHEDULE_TYPE_9  = 9; //联盟待办
+}
+
+
+//待办事项信息
+message PBScheduleInfo
+{
+	required string uuid 	 = 1; //唯一id
+	required int32  type 	 = 2; //类型
+	optional string title    = 3; //标题
+	optional int64 startTime = 4; //开启时间（具体的ms为单位的时间戳）
+	optional int32 continues = 5; //持续时长，单位秒
+	optional int32 posX      = 6; //坐标x
+	optional int32 posY      = 7; //坐标y
+}
+
+//同步待办事项信息
+message HPScheduleInfoSync
+{
+	repeated PBScheduleInfo scheduleInfo = 1;
+}
+
+//注册新的待办事项
+message ScheduleCreateReq
+{
+	required int32  type 	 = 1; //类型
+	optional string title    = 2; //标题
+	optional int64 startTime = 3; //开启时间（具体的ms为单位的时间戳）
+	optional int32 continues = 4; //持续时长，单位秒
+	optional int32 posX      = 5; //坐标x
+	optional int32 posY      = 6; //坐标y
+}
+
+//更新待办事项
+message ScheduleUpdateReq
+{
+	required string uuid 	 = 1; //唯一id
+	required int32  type 	 = 2; //类型
+	optional string title    = 3; //标题
+	optional int64 startTime = 4; //开启时间（具体的ms为单位的时间戳）
+	optional int32 continues = 5; //持续时长，单位秒
+	optional int32 posX      = 6; //坐标x
+	optional int32 posY      = 7; //坐标y
+}
+
+//删除待办事项（可批量删除）
+message ScheduleDeleteReq
+{
+	repeated string uuid 	 = 1; //唯一id
+}

@@ -1,0 +1,2183 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "SysProtocol.proto";
+import "Const.proto";
+import "Army.proto";
+import "Reward.proto";
+import "Player.proto";
+import "Hero.proto";
+import "Dress.proto";
+import "SuperSoldier.proto";
+import "Armour.proto";
+import "Talent.proto";
+import "XZQ.proto";
+import "SpaceMecha.proto";
+import "Manhattan.proto";
+import "MechaCore.proto";
+
+// 点类型
+enum WorldPointType
+{
+	EMPTY				= 0;	// 空白点
+	RESOURCE			= 1;	// 资源点
+	MONSTER				= 2;	// 怪物点
+	PLAYER				= 3;	// 玩家城堡
+	OCCUPIED			= 4;	// 被玩家城堡或者其他大建筑占用的四周点
+	QUARTERED			= 5;	// 驻扎的部队的点
+	GUILD_TERRITORY		= 7;	// 联盟建筑
+	KING_PALACE			= 8;	// 国王宫殿
+	ROBOT				= 10;	// 机器人点，和玩家城堡一样，会出现占用四周点，点上会携带进入pve的monsterid
+	YURI_FACTORY		= 11;	// 尤里工厂
+	BOX					= 12;	// 宝箱
+	ANIMAL 				= 13; 	// 小动物，只在前端使用
+	CAPITAL_TOWER		= 14; 	// 国王战箭塔
+	STRONG_POINT		= 15;	// 据点
+	FOGGY_FORTRESS		= 16;	// 迷雾要塞
+	SUPER_WEAPON		= 17;	// 超级武器(名城)
+	YURI_STRIKE			= 18;	// 尤里来犯
+	GUNDAM				= 19;	// 机甲
+	NIAN				= 20;	// 年兽
+	TH_MONSTER			= 21;	// 寻宝野怪点
+	TH_RESOURCE			= 22;	// 寻宝据点
+	WAR_FLAG_POINT		= 23;	// 战地之王
+	RESOURC_TRESURE		= 24;   // 资源宝库 
+	CROSS_FORTRESS		= 25;   // 航海要塞
+
+	TBLY_FUELBANK					= 26;	// tbly燃料库
+	TBLY_IRON_CRUTAIN_DIVICE		= 27;   // 铁幕装置
+	TBLY_NUCLEAR_MISSILE_SILO		= 29;   // 核弹发射井
+	TBLY_WEATHER_CONTROLLER			= 30;   // 天气控制器
+	TBLY_CHRONO_SPHERE				= 31;   // 超时空传送器
+	TBLY_COMMAND_CENTER				= 32;   // 指挥部
+	TBLY_MILITARY_BASE				= 33;   // 军事基地
+	TBLY_HEADQUARTERS				= 34;   // 司令部
+	TBLY_FAME_HALL					= 35; 	// 泰伯利亚名人堂
+	TBLY_TECHNOLOGY_LAB				= 92;   // 秘密科技实验室
+	TBLY_COMMAND_POST				= 98;   // 突袭指挥所
+
+	SW_HEADQUARTERS					= 41; // 中心
+	SW_COMMAND_CENTER				= 42;   // 塔
+	
+	NIAN_BOX	= 43; //年兽宝箱
+	
+	PYLON	= 44; // 能量塔
+	
+	CHRISTMAS_BOSS	= 45; //圣诞怪兽.
+	CHRISTMAS_BOX	= 46; //圣诞宝箱。
+	SNOWBALL = 47; // 雪球
+	COUNTRY_BUILDING	=	48;//国家建筑
+
+	CYBORG_FUELBANK						= 51;	// tbly燃料库
+	CYBORG_IRON_CRUTAIN_DIVICE			= 52;   // 铁幕装置
+	CYBORG_NUCLEAR_MISSILE_SILO			= 53;   // 核弹发射井
+	CYBORG_WEATHER_CONTROLLER			= 54;   // 天气控制器
+	CYBORG_CHRONO_SPHERE				= 55;   // 超时空传送器
+	CYBORG_COMMAND_CENTER				= 56;   // 指挥部
+	CYBORG_MILITARY_BASE				= 57;   // 军事基地
+	CYBORG_HEADQUARTERS					= 58;   // 司令部
+	
+	GHOST_TOWER_MONSTER      = 59;  //幽灵工厂怪
+	
+	DRAGON_BOAT              = 60;  //端午福船
+	STAR_WARS				 = 61; //星球大战.
+	
+	XIAO_ZHAN_QU			 = 62; // 小战区建筑
+	
+	CAKE_SHARE           = 65;  	//蛋糕共享
+
+	XLZJ_FUELBANK					= 66;	// tbly燃料库
+	XLZJ_IRON_CRUTAIN_DIVICE		= 67;   // 铁幕装置
+	XLZJ_NUCLEAR_MISSILE_SILO		= 68;   // 核弹发射井
+	XLZJ_WEATHER_CONTROLLER			= 69;   // 天气控制器
+	XLZJ_CHRONO_SPHERE				= 70;   // 超时空传送器
+	XLZJ_COMMAND_CENTER				= 71;   // 指挥部
+	XLZJ_MILITARY_BASE				= 72;   // 军事基地
+	XLZJ_HEADQUARTERS				= 73;   // 司令部
+	AGEYENCY_POINT                  = 75; // 情报中心
+	
+	DYZZ_BASE	= 77; // 打压之站主基地
+	DYZZ_TOWER = 78;// 打压之站防御内外塔
+	DYZZ_FUELBANK = 79; // 打压之站陨晶矿
+	DYZZ_ENERGY_WELL = 80; // 打压之站能源井（祭坛)
+	
+
+	NATIONAL_BUILDING_POINT = 81; //国家建筑
+
+	AUTO_GATHER_RESOURCE_POINT = 82; //超时空要塞
+	
+	RESOURCE_SPREE_BOX = 83;  //资源狂欢宝箱
+	DYZZ_FAME_HALL = 84; //大雅之战名人堂
+
+	YQZZ_BUILDING = 85; // 月球之战城池
+	
+	DYZZ_HIGH_TOWER = 86; // 打压之站高塔
+	
+	SPACE_MECHA_MAIN          = 87;   // 星甲召唤主舱体
+	SPACE_MECHA_SLAVE         = 88;   // 星甲召唤子舱体
+	SPACE_MECHA_MONSTER       = 89;   // 星甲召唤怪物点
+	SPACE_MECHA_STRONG_HOLD   = 90;   // 星甲召唤据点
+	SPACE_MECHA_BOX           = 91;   // 星甲召唤掉落的宝箱
+
+	MEDAL_FACTORY = 93; // 虚拟勋章工厂
+	XHJZ_BUILDING = 94; // 星海之战城池
+	FGYL_BUILDING = 95; // 反攻幽灵城池
+	XQHX_BUILDING = 96; // 先驱回响城池
+	XQHX_PYLON	= 97; // 能量塔
+
+	MARK 				= 998;  // 联盟标记
+	NEWBIE_CITY			= 999;	// (客户端做显示使用)
+}
+
+// 点区域类型
+enum WorldFieldType
+{
+	COMMON_FIELD		  =	0;	// 普通区域的点
+	CAPITAL_FIELD		  =	2;	// 首都核心区域的点,高级怪的点
+}
+
+// 行军关系
+enum WorldMarchRelation
+{
+	SELF			= 1;	// 自己
+	GUILD_FRIEND	= 2;	// 盟友
+	ENEMY			= 3;	// 敌对
+	TEAM_LEADER		= 4;	// 队长
+	NONE			= 5;	// 无关
+	YURI_STRIKE_RELATION = 6; //尤里来袭
+}
+
+//核弹发射井状态
+enum NuclearState
+{
+	NORMAL_STATE	= 0; //正常
+	VOTING			= 1; //投票中
+	CAN_OPENUP		= 2; //可展开
+	CAN_LAUNCH		= 3; //可发射
+	LAUNCHING		= 4; //发射中
+	CANCEL			= 5; //取消(仅供客户端推送,server实际存储为0)
+}
+
+// 行军类型
+enum WorldMarchType
+{
+	COLLECT_RESOURCE				= 1; //	采集
+	ATTACK_MONSTER					= 2; //	杀怪
+	ATTACK_PLAYER					= 3; //	攻击单人基地
+	ASSISTANCE						= 4; //	援助
+	ARMY_QUARTERED					= 5; //	驻扎
+	SPY								= 6; //	侦察
+	MASS							= 7; //	集结攻打单人基地
+	MASS_JOIN						= 8; //	加入集结攻打单人基地
+	ASSISTANCE_RES					= 9; //	资源援助盟友
+	CAPTIVE_RELEASE					= 10; // 抓将遣返
+	MANOR_SINGLE					= 11; // 单人攻占联盟领地
+	MANOR_MASS						= 12; // 集结攻占联盟领地
+	MANOR_MASS_JOIN					= 13; // 集结攻占联盟领地参与者
+	MANOR_ASSISTANCE_MASS			= 14; // 联盟领地集结援助
+	MANOR_ASSISTANCE_MASS_JOIN		= 15; // 联盟领地集结援助加入者
+	MANOR_COLLECT					= 16; // 联盟超级矿采集行军类型
+	MANOR_ASSISTANCE				= 17; // 联盟领地单人援助
+	PRESIDENT_SINGLE				= 18; // 单人攻占总统府
+	PRESIDENT_MASS					= 19; // 集结攻占总统府
+	PRESIDENT_MASS_JOIN				= 20; // 集结攻占总统府参与者
+	PRESIDENT_ASSISTANCE_MASS		= 21; // 总统府集结援助
+	PRESIDENT_ASSISTANCE_MASS_JOIN	= 22; // 总统府集结援助加入者
+	PRESIDENT_ASSISTANCE			= 23; // 总统府单人援助
+	MONSTER_MASS					= 24; // 集结打精英怪
+	MONSTER_MASS_JOIN				= 25; // 参与集结打精英怪
+	MANOR_BUILD						= 26; // 建造联盟领地（包含建筑）
+	MANOR_REPAIR					= 27; // 修复联盟领地（包含建筑）
+	WAREHOUSE_STORE					= 35; // 去仓库存放
+	WAREHOUSE_GET					= 36; // 去仓库取回
+	YURI_EXPLORE					= 37; // 尤里兵工厂探索
+	YURI_MONSTER					= 38; // 尤里复仇怪物行军
+	RANDOM_BOX						= 40; // 随机宝箱
+	PRESIDENT_TOWER_SINGLE			= 41; // 总统府箭塔单人行军
+	PRESIDENT_TOWER_MASS			= 42; // 总统府箭塔集结
+	PRESIDENT_TOWER_MASS_JOIN		= 43; // 总统府箭塔集结加入
+	STRONGPOINT						= 44; // 据点行军
+	NEWBIE_YURI_ATTACK				= 45; // 新手模拟行军(仅客户端用)
+	FOGGY_FORTRESS_MASS				= 46; // 迷雾要塞集结
+	FOGGY_FORTRESS_MASS_JOIN		= 47; // 迷雾要塞发起集结
+	NEW_MONSTER						= 48; // 新版野怪
+	HIDDEN_MARCH					= 49; // 藏兵行军
+	SUPER_WEAPON_SINGLE				= 50; // 超级武器单人行军
+	SUPER_WEAPON_MASS				= 51; // 超级武器集结行军
+	SUPER_WEAPON_MASS_JOIN			= 52; // 超级武器集结加入行军
+	FOGGY_SINGLE					= 53; // 迷雾要赛单人行军
+	YURI_STRIKE_MARCH				= 54; // 尤里来犯
+	YURI_STRIKE_CITY_MARCH			= 55; // 尤里来犯城内行军(无真实行军)
+	GUILD_HOSPICE					= 56; // 联盟关怀
+	GHOST_STRIKE					= 57; // 幽灵行军
+	
+	GUNDAM_SINGLE					= 58; // 机甲行军
+	GUNDAM_MASS						= 59; // 机甲集结行军
+	GUNDAM_MASS_JOIN				= 60; // 机甲集结加入行军
+	
+	NIAN_SINGLE						= 61; // 年兽行军
+	NIAN_MASS						= 62; // 年兽集结行军
+	NIAN_MASS_JOIN					= 63; // 年兽集结加入行军
+	
+	TREASURE_HUNT					= 64; // 寻宝行军
+	TREASURE_HUNT_RESOURCE			= 65; // 寻宝资源行军
+	TREASURE_HUNT_MONSTER_MASS		= 66; // 寻宝野怪集结行军
+	TREASURE_HUNT_MONSTER_MASS_JOIN	= 67; // 寻宝野怪集结加入行军
+	
+	WAR_FLAG_MARCH					= 68; // 战地旗帜行军
+	COLLECT_RES_TREASURE			= 69; // 采集资源宝库
+	
+	FORTRESS_SINGLE					= 70; // 跨服超级武器单人行军
+	FORTRESS_MASS					= 71; // 跨服超级武器集结行军
+	FORTRESS_JOIN					= 72; // 跨服超级武器集结加入行军
+
+	TBLY_IRON_CRUTAIN_DIVICE_SINGLE 		= 101; // 单人铁幕装置行军
+	TBLY_NUCLEAR_MISSILE_SILO_SINGLE 		= 102; // 单人核弹发射井行军
+	TBLY_WEATHER_CONTROLLER_SINGLE			= 103;   // 天气控制器
+	TBLY_CHRONO_SPHERE_SINGLE				= 104;   // 超时空传送器
+	TBLY_COMMAND_CENTER_SINGLE				= 105;   // 指挥部
+	TBLY_MILITARY_BASE_SINGLE				= 106;   // 军事基地
+	TBLY_HEADQUARTERS_SINGLE				= 107;   // 司令部
+	TBLY_TECHNOLOGY_LAB_SINGLE				= 108;	// 秘密科技实验室
+
+	TBLY_IRON_CRUTAIN_DIVICE_MASS 		= 111; //  集结铁幕装置行军
+	TBLY_NUCLEAR_MISSILE_SILO_MASS 		= 112; //  集结核弹发射井行军
+	TBLY_WEATHER_CONTROLLER_MASS		= 113;   // 天气控制器
+	TBLY_CHRONO_SPHERE_MASS				= 114;   // 超时空传送器
+	TBLY_COMMAND_CENTER_MASS			= 115;   // 指挥部
+	TBLY_MILITARY_BASE_MASS				= 116;   // 军事基地
+	TBLY_HEADQUARTERS_MASS				= 117;   // 司令部
+	TBLY_TECHNOLOGY_LAB_MASS			= 118;	// 秘密科技实验室
+
+	TBLY_IRON_CRUTAIN_DIVICE_MASS_JOIN			= 121; // 加入集结铁幕装置行军
+	TBLY_NUCLEAR_MISSILE_SILO_MASS_JOIN 		= 122; // 加入集结核弹发射井行军
+	TBLY_WEATHER_CONTROLLER_MASS_JOIN			= 123;   // 天气控制器
+	TBLY_CHRONO_SPHERE_MASS_JOIN				= 124;   // 超时空传送器
+	TBLY_COMMAND_CENTER_MASS_JOIN				= 125;   // 指挥部
+	TBLY_MILITARY_BASE_MASS_JOIN				= 126;   // 军事基地
+	TBLY_HEADQUARTERS_MASS_JOIN					= 127;   // 司令部
+	TBLY_TECHNOLOGY_LAB_MASS_JOIN				= 128; 	// 秘密科技实验室
+
+
+	// star wars
+	SW_HEADQUARTERS_SINGLE					= 131; 
+	SW_COMMAND_CENTER_SINGLE				= 132;   // 指挥部
+	SW_HEADQUARTERS_MASS			= 133;
+	SW_COMMAND_CENTER_MASS			= 134;   // 指挥部
+	SW_HEADQUARTERS_MASS_JOIN				= 135;
+	SW_COMMAND_CENTER_MASS_JOIN				= 136;   // 指挥部
+
+	NIAN_BOX_MARCH	= 137; // 机甲宝箱行军
+	
+	PYLON_MARCH = 138; // 能量塔行军
+	CHRISTMAS_SINGLE		= 139; //圣诞单人行军
+	CHRISTMAS_MASS		= 140; //圣诞集结行军
+	CHRISTMAS_MASS_JOIN	= 141; //圣诞集结加入行军.
+	CHRISTMAS_BOX_MARCH			= 142; //圣诞宝箱行军。
+	
+	SNOWBALL_MARCH = 143; // 踢雪球
+	
+	ESPIONAGE_MARCH = 145; // 间谍行军
+	
+	GHOST_TOWER_MARCH = 146; //幽灵工厂挑战行军
+	
+	DRAGON_BOAT_MARCH = 147; //端午福船行军
+
+	CENTER_FLAG_REWARD_MARCH = 148; // 战旗母旗行军
+	
+	CYBORG_IRON_CRUTAIN_DIVICE_SINGLE 		= 161; // 单人铁幕装置行军
+	CYBORG_NUCLEAR_MISSILE_SILO_SINGLE 		= 162; // 单人核弹发射井行军
+	CYBORG_WEATHER_CONTROLLER_SINGLE		= 163;   // 天气控制器
+	CYBORG_CHRONO_SPHERE_SINGLE				= 164;   // 超时空传送器
+	CYBORG_COMMAND_CENTER_SINGLE			= 165;   // 指挥部
+	CYBORG_MILITARY_BASE_SINGLE				= 166;   // 军事基地
+	CYBORG_HEADQUARTERS_SINGLE				= 167;   // 司令部
+
+	CYBORG_IRON_CRUTAIN_DIVICE_MASS 		= 171; //  集结铁幕装置行军
+	CYBORG_NUCLEAR_MISSILE_SILO_MASS 		= 172; //  集结核弹发射井行军
+	CYBORG_WEATHER_CONTROLLER_MASS			= 173;   // 天气控制器
+	CYBORG_CHRONO_SPHERE_MASS				= 174;   // 超时空传送器
+	CYBORG_COMMAND_CENTER_MASS				= 175;   // 指挥部
+	CYBORG_MILITARY_BASE_MASS				= 176;   // 军事基地
+	CYBORG_HEADQUARTERS_MASS				= 177;   // 司令部
+
+	CYBORG_IRON_CRUTAIN_DIVICE_MASS_JOIN		= 181; // 加入集结铁幕装置行军
+	CYBORG_NUCLEAR_MISSILE_SILO_MASS_JOIN 		= 182; // 加入集结核弹发射井行军
+	CYBORG_WEATHER_CONTROLLER_MASS_JOIN			= 183;   // 天气控制器
+	CYBORG_CHRONO_SPHERE_MASS_JOIN				= 184;   // 超时空传送器
+	CYBORG_COMMAND_CENTER_MASS_JOIN				= 185;   // 指挥部
+	CYBORG_MILITARY_BASE_MASS_JOIN				= 186;   // 军事基地
+	CYBORG_HEADQUARTERS_MASS_JOIN				= 187;   // 司令部
+	
+	WAR_FLAG_MASS					= 188; // 战地旗帜集结行军
+	WAR_FLAG_MASS_JOIN				= 189; // 战地旗帜集结加入行军
+
+	CAKE_SHARE_MARCH 				= 190; //周年庆共享蛋糕行军
+	
+	AGENCY_MARCH_RESCUR    = 191; //情报中心行军,救援
+	AGENCY_MARCH_COASTER   = 192; //情报中心行军,飞车
+	AGENCY_MARCH_MONSTER   = 193; //情报中心行军,打怪
+	
+	RESOURCE_SPREE_BOX_MARCH = 196; //资源狂欢宝箱行军
+
+
+	XLZJ_IRON_CRUTAIN_DIVICE_SINGLE 			= 201; // 单人铁幕装置行军
+	XLZJ_NUCLEAR_MISSILE_SILO_SINGLE 			= 202; // 单人核弹发射井行军
+	XLZJ_WEATHER_CONTROLLER_SINGLE				= 203;   // 天气控制器
+	XLZJ_CHRONO_SPHERE_SINGLE					= 204;   // 超时空传送器
+	XLZJ_COMMAND_CENTER_SINGLE					= 205;   // 指挥部
+	XLZJ_MILITARY_BASE_SINGLE					= 206;   // 军事基地
+	XLZJ_HEADQUARTERS_SINGLE					= 207;   // 司令部
+	XLZJ_IRON_CRUTAIN_DIVICE_MASS 				= 208; //  集结铁幕装置行军
+	XLZJ_NUCLEAR_MISSILE_SILO_MASS 				= 209; //  集结核弹发射井行军
+	XLZJ_WEATHER_CONTROLLER_MASS				= 210;   // 天气控制器
+	XLZJ_CHRONO_SPHERE_MASS						= 211;   // 超时空传送器
+	XLZJ_COMMAND_CENTER_MASS					= 212;   // 指挥部
+	XLZJ_MILITARY_BASE_MASS						= 213;   // 军事基地
+	XLZJ_HEADQUARTERS_MASS						= 214;   // 司令部
+	XLZJ_IRON_CRUTAIN_DIVICE_MASS_JOIN			= 215; // 加入集结铁幕装置行军
+	XLZJ_NUCLEAR_MISSILE_SILO_MASS_JOIN 		= 216; // 加入集结核弹发射井行军
+	XLZJ_WEATHER_CONTROLLER_MASS_JOIN			= 217;   // 天气控制器
+	XLZJ_CHRONO_SPHERE_MASS_JOIN				= 218;   // 超时空传送器
+	XLZJ_COMMAND_CENTER_MASS_JOIN				= 219;   // 指挥部
+	XLZJ_MILITARY_BASE_MASS_JOIN				= 220;   // 军事基地
+	XLZJ_HEADQUARTERS_MASS_JOIN					= 221;   // 司令部
+	
+	XZQ_SINGLE				= 231; // 超级武器单人行军
+	XZQ_MASS				= 232; // 超级武器集结行军
+	XZQ_MASS_JOIN			= 233; // 超级武器集结加入行军
+
+	DYZZ_BASE_SINGLE	= 241; // 主基地
+	DYZZ_TOWER_SINGLE = 242;// 防御内外塔
+	DYZZ_FUELBANK_SINGLE = 243; // 陨晶矿
+	DYZZ_ENERGY_WELL_SINGLE = 244; // 能源井（祭坛)
+	DYZZ_HIGH_TOWER_SINGLE = 245; // 高塔
+
+	DYZZ_BASE_MASS	= 251; // 主基地
+	DYZZ_TOWER_MASS = 252;// 防御内外塔
+	DYZZ_FUELBANK_MASS = 253; // 陨晶矿
+	DYZZ_ENERGY_WELL_MASS = 254; // 能源井（祭坛)
+	DYZZ_HIGH_TOWER_MASS = 255; // 高塔
+
+	DYZZ_BASE_MASS_JOIN	= 261; // 主基地
+	DYZZ_TOWER_MASS_JOIN = 262;// 防御内外塔
+	DYZZ_FUELBANK_MASS_JOIN = 263; // 陨晶矿
+	DYZZ_ENERGY_WELL_MASS_JOIN = 264; // 能源井（祭坛)
+	DYZZ_HIGH_TOWER_MASS_JOIN = 265; // 高塔
+
+	NATIONAL_BUILDING_MARCH			= 234; // 国家建设行军
+
+	YQZZ_BUILDING_SINGLE	= 271; // 地标
+	YQZZ_BUILDING_MASS	= 272; // 地标
+	YQZZ_BUILDING_MASS_JOIN	= 273; // 地标
+	
+	SPACE_MECHA_MAIN_MARCH_SINGLE        = 274; // 星甲召唤主舱体守卫单人行军
+	SPACE_MECHA_MAIN_MARCH_MASS          = 275; // 星甲召唤主舱体守卫集结行军
+	SPACE_MECHA_MAIN_MARCH_MASS_JOIN     = 276; // 星甲召唤主舱体守卫集结加入行军
+	SPACE_MECHA_SLAVE_MARCH_SINGLE       = 277; // 星甲召唤子舱体守卫单人行军
+	SPACE_MECHA_MONSTER_ATTACK_MARCH     = 278; // 进攻舱体的野怪行军
+	SPACE_MECHA_BOX_COLLECT              = 279; // 星甲召唤舱体守卫掉落宝箱的采集行军  
+    SPACE_MECHA_ATK_STRONG_HOLD_SINGLE      = 280; // 星甲召唤玩家进攻敌方据点的单人行军
+	SPACE_MECHA_ATK_STRONG_HOLD_MASS        = 281; // 星甲召唤玩家进攻敌方据点的集结行军
+	SPACE_MECHA_ATK_STRONG_HOLD_MASS_JOIN   = 282; // 星甲召唤玩家进攻敌方据点的集结加入行军
+	SPACE_MECHA_EMPTY_MARCH                 = 283; // 假行军
+	OVERLORD_BLESSING_MARCH                 = 284; // 霸主膜拜行军
+
+	XHJZ_BUILDING_SINGLE	= 285; // 地标
+	XHJZ_BUILDING_MASS	= 286; // 地标
+	XHJZ_BUILDING_MASS_JOIN	= 287; // 地标
+
+	FGYL_BUILDING_SINGLE	= 288; // 地标
+	FGYL_BUILDING_MASS	= 289; // 地标
+	FGYL_BUILDING_MASS_JOIN	= 290; // 地标
+
+	XQHX_BUILDING_SINGLE	= 292; // 地标
+	XQHX_BUILDING_MASS	= 293; // 地标
+	XQHX_BUILDING_MASS_JOIN	= 294; // 地标
+	
+	
+	DRAGON_ATTACT_MASS        = 295; //巨龙陷阱集结
+	DRAGON_ATTACT_MASS_JOIN   = 296; //巨龙陷阱集结加入
+
+	MT_SINGLE = 297; //押镖玩法个人
+	MT_GUILD = 298; // 押镖玩法联盟
+	MT_GUILDBIG = 299; // 押镖玩法豪华联盟
+}
+
+// 行军目的意图
+enum WorldMarchIntention
+{
+	MARCH_INTENTION_NONE	= 0;	// 无伴随意图
+	MARCH_INTENTION_ATTACK	= 1;	// 攻击(采集点或者驻扎点已有人的情况)
+}
+
+// 行军状态
+enum WorldMarchStatus
+{
+	MARCH_STATUS_MARCH				= 1;	// 出征
+	MARCH_STATUS_MARCH_REACH		= 2;	// 去程到达目标点
+	MARCH_STATUS_MARCH_COLLECT		= 3;	// 采集过程
+	MARCH_STATUS_MARCH_QUARTERED	= 4;	// 驻扎过程
+	MARCH_STATUS_MARCH_ASSIST		= 5;	// 援助中
+	MARCH_STATUS_RETURN_BACK		= 6;	// 回程
+	MARCH_STATUS_WAITING			= 7;	// 集结等待状态
+	MARCH_STATUS_MANOR_BUILD		= 8;	// 领地建造状态
+	MARCH_STATUS_MANOR_REPAIR		= 9;	// 领地修复状态
+	MARCH_STATUS_MANOR_BREAK		= 10;	// 领地摧毁状态
+	MARCH_STATUS_MANOR_GARRASION	= 11;	// 领地驻防状态
+	MARCH_STATUS_JOIN_MARCH			= 12;	// 集结出征状态（加入集结的队伍跟随的出征）
+	MARCH_STATUS_EXPLORE			= 13;	// 探索中状态
+	MARCH_STATUS_HIDDEN				= 14;	// 藏兵中
+	MARCH_STATUS_OCCUPY				= 15;	// 占领中
+	MARCH_STATUS_NATION_QUEST		= 16;	// 国家任务中
+}
+
+// 迁城类型
+enum CityMoveType
+{
+	RANDOM_MOVE	= 1;
+	SELECT_MOVE	= 2;
+	GUILD_MOVE = 3;
+	GUILD_CREATE_AUTO_MOVE = 4;
+	GUILD_JOIN_AUTO_MOVE  = 5;
+}
+
+// 世界闪红推送
+message	WorldBeatingWarning
+{
+	required bool isWarning	 = 1;	// true闪红，false取消闪红
+}
+
+// 世界地图上点结构
+message	WorldPointPB
+{
+	required int32 pointX					= 1;	// 坐标
+	required int32 pointY					= 2;	// 坐标
+	required WorldPointType	pointType		= 3;	// 点类型
+
+	optional string	playerId				= 4;	// 玩家id
+	optional string	playerName				= 5;	// 玩家名字
+	optional int32 cityLevel				= 6;	// 玩家等级;资源等级;怪物等级
+
+	optional string	guildId					= 8;	// 联盟id
+	optional string	guildTag				= 9;	// 联盟简称
+	optional int32 guildFlag				= 10;	// 联盟旗帜
+
+	optional int32 monsterId				= 11;	// 怪物id
+
+	optional int32 resourceId				= 12;	// 资源id
+
+	optional string	marchId					= 13;	// 驻扎的部队id
+	optional int64 protectedEndTime			= 14;	// 城点保护结束时间
+	optional int64 commonEndTime			= 15;	// 结束时间点(包含伤害，生命周期，具体按点类型分)
+
+	optional int32 terriId					= 16;	// 联盟建筑ID
+	optional int32 terriLevel				= 17;	// 联盟建筑等级
+	optional PlayerAttr	guildMineType		= 18;	// 联盟超级矿的资源类型
+
+	optional string	ownerId					= 19;	// 专属玩家id
+	optional string	ownerName				= 20;	// 专属玩家名
+
+	optional bool hasMarchStop				= 21;	// 我自己是否有停留在此的军队
+
+	optional int32 manorState				= 22;	// 领地的状态
+	
+	optional int32 manorBuildIndex			= 23;	// 领地建筑的序列
+	optional string manorBuildName 			= 24;   // 领地建筑名字
+	optional int64 manorBuildTime			= 25;   // 领地放置时间
+	optional int64 manorComTime				= 26;   // 领地建造完成时间
+	
+	optional int32 showEffect				= 27;	// 显示特效状态的作用号
+	
+	optional int32 strongpointId			= 28;	// 据点id
+	optional StrongpointStatus status		= 29;	// 据点状态
+	optional int64 lastActiveTime			= 30;	// 剩余tick时间
+	
+	repeated WorldShowDress dressShow		= 31;	// 装扮显示
+	optional bool counterAttack				= 32;  // 联盟反击态
+	optional int32 remainBlood				= 33;	// 怪物剩余血量
+	optional int32 monsterMaxBlood			= 34;	// 怪物最大血量
+	optional int32 superWeaponType			= 35;  //超级武器类型
+	optional bool swHasSignUp			    = 36;  //超级是否有人报名
+	optional bool swHasGuildSignUp      	= 37;  //超级本联盟是否有人报名
+	
+	optional SignatureState signatureState  = 38; // 签名状态
+	optional string signature				= 39; // 签名
+	
+	optional SpyMark spyMark				= 40; // 侦查标记
+	optional int32 lmjyState				= 41; // 联盟军演中 0 正常  1 被摧毁
+	optional int32 lmjyNpc				= 42; // 联盟军演npc
+	optional string serverId				= 43; //玩家serverId
+
+	repeated PBTreaCollRec treaCollrec 		= 45; // 资源宝库采集记录
+	
+	optional int32 flagView		= 46; //战旗显示状态
+	optional int64 tblyMoveCityCD = 47;  // 免费迁城
+	optional int32 tblyMoveCityCost = 48; // 非免费时间内迁城消耗倍数
+	optional int32 officerId				= 49; //官职.
+	optional string guardPlayerId			= 50; //守护者ID
+	optional int32  dressId					= 51; //选择的守护特效
+	optional string guardPlyaerServerId			= 52; //该点的所在区服.
+	optional int32 guardPlayerX				= 53; //守护玩家的x
+	optional int32 guardPlayerY				= 54; //守护玩家的Y
+	optional int64 swMoveCityCD = 55;  // 免费迁城
+	optional int32 swMoveCityCost = 56; // 非免费时间内迁城消耗倍数
+	optional int32 emoticonId               = 57;   // 行军表情ID（emoticonId和emoticonEndTime字段只有在世界点是玩家城点的情况下才有效）
+	optional int64 emoticonEndTime          = 58;   // 行军表情有效结束时间
+	optional int64 tblyNuclearReadyTime		= 59; //当前占领联盟 核弹准备完成时间. 
+	
+	optional SnowballKickInfo snowballInfo = 60; // 雪球生成信息
+	optional int32 snowballGoalCount 	= 61; // 雪球进球数量
+	optional int32 snowballTargetCount 	= 62; // 雪球进球目标数量
+	optional bool snowballGuildAtk		= 63; // 盟友之前是否攻击过这个雪球
+	optional int32 snowballOwnGoalCount = 65; // 雪球自己进球数量
+	optional string snowballLastAtk	 	= 66; // 雪球上次踢的玩家
+	optional int64 cyborgMoveCityCD = 70;  // 免费迁城
+	optional int32 cyborgMoveCityCost = 71; // 非免费时间内迁城消耗倍数
+	optional int64 cyborgNuclearReadyTime		= 72; //当前占领联盟 核弹准备完成时间. 
+	repeated int32 cyborgCanMarchCamp		= 73; //可以出兵的阵营 1 2 3 4 -> A B C D
+	optional int32 stayArmycount = 76; // 驻军数量
+	
+	optional int32 showEquipTech = 77; // 是否显示装备科技
+	
+	optional bool isCenter = 78; // 是否是母旗
+	optional bool isCenterActive = 89; // 是否是激活状态(前四个连接到黑土地)
+	optional int32 flagOccupyLife = 90; // 战旗占领值
+
+	optional int64 xlzjNuclearReadyTime		= 91; //当前占领联盟 核弹准备完成时间. 
+	optional int64 xlzjMoveCityCD = 92;  // 免费迁城
+	optional int32 xlzjMoveCityCost = 93; // 非免费时间内迁城消耗倍数
+	optional int32 xlzjRectangle = 94; // 点所在圈子 由外向内 1 2 3
+	
+	optional int32 fireworks = 95; 		//是否释放烟花 1 2 3 4 5 效果不同
+	
+	optional bool hasOffensiveMarch = 96; // 是否有攻击行为行军
+	optional int64 offensiveMarchTime = 97; // 攻击行为行军更新时间
+	optional PBXZQBuild xzqBuildInfo    = 98;   //小站区建筑列表
+	repeated int32 personalProtectSwitch = 99; // playerId那个player对应的个保法开关
+	optional int32 cityPlantLevel = 100; // 泰能等级
+	
+	optional int32 dressTitleType = 101; // 装扮称号显示类型
+	optional int32 equipStarShow = 102; // 泰能装备外显
+	optional int64 dyzzMoveCityCD = 103;  // 免费迁城
+	optional int32 dyzzMoveCityCost = 104; // 非免费时间内迁城消耗倍数
+	
+	optional int32 nationalBuildType = 105; // 国家建筑类型
+	optional int32 nationalBuildState = 106; // 国家建筑状态
+	optional int32 nationalBuildLvl = 107; // 国家建筑等级
+	optional int32 nationalBuildVal = 108; // 国家建筑建设值
+	optional int64 nationalBuildEndTime = 109; // 国家建筑状态结束时间
+	optional int64 nationalRunningEndTime = 110; // 国家建筑运行结束时间
+	optional int64 nationalRunningTotalTime = 111; // 国家建筑运行总时间
+	optional string nationalRunningParams = 112; // 国家建筑运行时带的参数
+	optional int32 resourceSpreeBoxId   = 113;//资源狂欢宝箱配置ID
+	optional SuperVipSkinEffect superVipSkin  = 114;	// 至尊vip皮肤特效
+	repeated EquipTechLevel equipTechLevel = 115;  // 装备科技等级
+	repeated PBDYZZFameHallMember dyzzFameHallMembers= 116;//达牙之战名人堂
+	optional int32 tblyAddHonorCamp = 117; //1,2 泰伯触发悬赏盟. 对方会得到悬赏
+	optional int32 tblyAddHonor = 118; // 太薄悬赏
+	optional bool tblyAddHonorMax = 119; // 达到最大值
+	optional int64 yqzzMoveCityCD = 125;  // 免费迁城
+	optional int32 yqzzMoveCityCost = 126; // 非免费时间内迁城消耗倍数
+	repeated YQZZDeclareWar declareWar = 127; // 对建筑宣战
+	optional YQZZDeclareWar onwerGuild = 128; // 当前建筑拥有者的宣战记录
+	optional StrongHoldPB strongHold   = 129; // 星甲召唤据点信息
+	optional MechaSpacePB mechaSpace   = 130; // 星甲召唤舱体信息
+	optional MechaBoxPB mechaBox       = 131; // 星甲召唤宝箱
+	optional int64 tblyChronoReadyTime		= 132; //当前占领联盟 核弹准备完成时间.
+	optional WorldFormation formation = 133; // 编队信息
+	optional int32 tblyPerMinHonor = 134; // 泰伯建筑每分钟产生积分
+	optional int32 tblyCampAZhanLingPct = 135; // 泰伯1 秘密实验室进度
+	repeated PBTBLYBuildSkill tblyOrderBuff = 136; // 泰伯围困生效
+	optional int32 tblyTotalPointPct = 137; // 泰伯1 秘密实验室总进度
+	optional int32 plantMilitaryLevel = 138; //泰能兵军衔等级
+	optional int32 starExploreShow = 139; // 星能探索外显
+	optional PBDeployedSwInfo deployedSwInfo = 140; //已部署超武信息
+	repeated DressEditData dressEditDatas = 141; //军事学院名称
+	repeated int32 xhjzBianduiNum = 142; // 星海编队号
+	optional int64 fgylMoveCityCD = 143;  // 免费迁城
+	optional int32 fgylMoveCityCost = 144; // 非免费时间内迁城消耗倍数
+	repeated int32 fgylKillEnemy = 145; // 反攻幽灵杀死塔
+	optional int32 plantMilitaryShow = 146; //泰能军衔等级外显开关
+	optional string mechacoreShowInfo = 147; //机甲核心外显信息（一个或逗号分隔的多个外显id）
+	optional int32 guildDragonTrapState = 148; //联盟巨龙陷阱状态 0关闭  1开启
+	optional int64 guildDragonTrapOpenLimit = 149; //联盟巨龙陷阱开启冷却时间
+	optional int64 guildDragonTrapFightEndTime = 150; //联盟巨龙陷阱战斗结束时间
+	optional int64 tblyNextNpcMarch = 155; // 突袭指挥所 下次发兵
+}
+
+// 月球建筑宣战
+message YQZZDeclareWar{
+	optional int64 startTime = 1;
+	optional int64 endTime = 2; // 可进攻
+	optional string guildId = 3;
+	optional string guildName = 4;
+	optional string guildTag = 5;
+	optional string playerName = 6; // 宣战人
+	optional string playerId = 7; //
+	optional int64 battleEnd = 8; // 宣战结束s
+	optional int32 guildFlag = 9;
+	optional string serverId = 10;
+	optional int32 flagView = 11;
+	optional int32 x = 12;
+	optional int32 y = 13;
+}
+
+// 至尊vip皮肤特效信息
+message SuperVipSkinEffect
+{
+	required int32 skinLevel      = 1; // 至尊vip皮肤特效等级
+    required int64 skinEndTime    = 2; // 至尊vip皮肤特效显示结束时间
+}
+
+// 装备科技等级
+message EquipTechLevel
+{
+	required int32 techId     = 1; // 科技ID
+    required int32 level      = 2; // 科技等级
+}
+
+// 雪球生成信息
+message SnowballKickInfo
+{
+	optional int64 createTime = 1; // 雪球生成时间
+	optional int32 fromX = 2; // 雪球起始坐标
+	optional int32 fromY = 3;
+	optional int32 obstaceleX = 4; // 雪球障碍物坐标
+	optional int32 obstaceleY = 5;
+	optional int32 targetX = 6;
+	optional int32 targetY = 7;
+	optional string playerId = 8; // 玩家ids
+}
+
+// 雪球进球信息
+message SnowballGoalInfo
+{
+	optional int32 fromX = 1; // 雪球起始坐标
+	optional int32 fromY = 2;
+	optional int32 targetX = 3; // 雪球目标点坐标
+	optional int32 targetY = 4;
+	optional int32 number = 5; // 雪球编号
+}
+
+//  生成资源宝库成功
+message PBGenResTreasureSuccess{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 cfgId =3;
+}
+
+// 资源宝库采集记录
+message PBTreaCollRec{
+	optional string playerName = 1; 
+	optional string award = 2; // 采集详情
+	optional string guildTag = 3; 
+	optional string playerId = 4; 
+	optional int32 icon = 5;
+	optional string pfIcon = 6;
+}
+
+// 侦查标记
+message SpyMark
+{
+	required int32 spyTime = 1;	//侦查开始时间
+	optional string mailId = 2;	//邮件id
+}
+
+// 装扮显示
+message WorldShowDress
+{
+	required DressType dressType = 1;
+	required int32 modelType = 2;
+	required int64 remainShowTime = 3;
+	optional int32 showType       = 4; //装扮外观展示类型
+	optional int64 showRemainTime = 5; // 装扮外观展示剩余时间
+}
+
+// 世界地图上点结构
+message	ReqWorldPointDetail
+{
+	required int32 pointX					= 1;	//坐标
+	required int32 pointY					= 2;	//坐标
+}
+
+message	RespWorldPointDetail
+{
+	required WorldPointDetailPB point		= 1;	//点信息
+	optional bool hasMarchTowards			= 2;	//是否有向目标点的行军
+	repeated WorldMarchRelation relationType= 3;	//和目标行军的关系类型
+}
+
+// 向自己占领点行军信息推送
+message TowardsMarchPush
+{
+	required string initPlayerName			= 1;	//行军发起方玩家名字
+	required int32 posX						= 2;	//目标点
+	required int32 posY						= 3;	//目标点
+	repeated WorldMarchRelation relationType= 4;	//和目标行军的关系类型
+	optional WorldMarchType marchType		= 5;	//行军类型
+}
+
+// 世界地图上点结构
+message	WorldPointDetailPB
+{
+	required int32 pointX					= 1;	// 坐标
+	required int32 pointY					= 2;	// 坐标
+	required WorldPointType	pointType		= 3;	// 点类型
+
+	optional string	playerId				= 4;	// 玩家id
+	optional string	playerName				= 5;	// 玩家名字
+	optional int32 cityLevel				= 6;	// 玩家等级;资源等级;怪物等级
+	optional int32 playerIcon				= 7;	// 玩家头像
+
+	optional string	guildId					= 8;	// 联盟id
+	optional string	guildTag				= 9;	// 联盟简称
+	optional int32 guildFlag				= 10;	// 联盟旗帜
+
+	optional int32 monsterId				= 11;	// 怪物id
+	optional int32 remainBlood				= 12;	// 怪物剩余血量
+	optional int32 monsterMaxBlood			= 13;	// 怪物最大血量
+
+	optional int32 resourceId				= 14;	// 资源id
+	optional int64 currentRemainResNum		= 15;	// 当前剩余总数量
+	optional int64 totalRemainResNum		= 16;	// 资源总数量
+
+	optional string	marchId					= 17;	// 驻扎的部队id
+	optional int64 protectedEndTime			= 18;	// 城点保护结束时间
+	optional int64 commonEndTime			= 19;	// 结束时间点(包含伤害，生命周期，具体按点类型分)
+
+	optional int32 terriId					= 20;	// 联盟建筑ID
+	optional int32 terriLevel				= 21;	// 联盟建筑等级
+	optional PlayerAttr	guildMineType		= 22;	// 联盟超级矿的资源类型
+
+	optional string	ownerId					= 23;	// 专属玩家id
+	optional string	ownerName				= 24;	// 专属玩家名
+
+	optional bool hasMarchStop				= 25;	// 我自己是否有停留在此的军队
+
+	optional int32 manorState				= 26;	// 领地的状态
+	
+	optional string playerPfIcon			= 27;	// 玩家平台头像
+	
+	optional int32 manorBuildIndex			= 28;	// 领地建筑的序列
+	optional string manorBuildName 			= 29;   // 领地建筑名字
+	optional int32 manorBuildLife 			= 30;	// 建筑值
+	optional int64 manorBuildTime			= 31;   // 领地放置时间
+	optional int64 manorComTime				= 32;   // 领地建造完成时间
+	
+	optional double	collectSpeed			= 33;	// 采集速度
+	
+	optional int32 showEffect				= 34;	// 显示特效状态的作用号
+	
+	optional int32 strongpointId			= 35;	// 据点id
+	optional StrongpointStatus status		= 36;	// 据点状态
+	optional int64 lastActiveTime			= 37;	// 剩余tick时间
+	repeated WorldShowDress dressShow		= 38;	// 装扮显示
+	optional bool counterAttack				= 39;  // 联盟反击态
+	
+	optional int32 addBuffTimes				= 40;	//伤害加成次数
+	optional int64 addBuffLeftTime			= 41;	//伤害加成剩余时间
+	optional int64 power					= 42;   // 战力
+	optional int32 superWeaponType 			= 43;  //超级武器类型
+	optional bool swHasSignUp			    = 44;  //超级是否有人报名
+	optional bool swHasGuildSignUp      	= 45;  //超级本联盟是否有人报名
+	
+	optional SignatureState signatureState  = 46; // 签名状态
+	optional string signature				= 47; // 签名
+	
+	optional SpyMark spyMark				= 48; // 侦查标记
+	optional int32 lmjyState				= 49; // 联盟军演中 0 正常  1 被摧毁
+	optional int32 lmjyNpc					= 50; // 联盟军演npc
+	optional string serverId				= 51; // 玩家注册serverId
+	optional string targetId				= 52; // 目标id，多用(战地旗帜id)
+	
+	optional int32 flagView			= 53; //战旗显示状态
+	repeated PBTreaCollRec treaCollrec 		= 54; // 资源宝库采集记录
+	repeated TBLYHoldRec  tblyHoldRec      = 55;  // 泰博利亚占领记录
+	optional int32 officerId				= 56; //官职.
+	optional string guardPlayerId			= 57; //守护者ID
+	optional int32  dressId					= 58; //选择的守护特效
+	optional string guardPlyaerServerId			= 59; //守护玩家的所在区服.
+	optional int32 guardPlayerX				= 60; //守护玩家的x
+	optional int32 guardPlayerY				= 61; //守护玩家的Y
+	optional int32 duelPower				= 62; // 决斗双方满足战力
+	repeated SWHoldRec  swHoldRec      = 65;  // 星球大战控制记录
+	optional int64 swLastControlTime = 66; // 该建筑当前聪明持续控制时间. 当ManorState = 2 (占领中显示)
+	optional int32 emoticonId               = 67;   // 行军表情ID（emoticonId和emoticonEndTime字段只有在世界点是玩家城点的情况下才有效）
+	optional int64 emoticonEndTime          = 68;   // 行军表情有效结束时间
+	optional int64 tblyNuclearReadyTime		= 69; //当前占领联盟 核弹准备完成时间. 
+	
+	optional int32 snowballGoalCount 	= 70; // 雪球进球数量
+	optional int32 snowballTargetCount 	= 71; // 雪球进球目标数量
+	optional int32 snwballAtkTimesBefore	= 72; // 之前击球次数
+	optional bool snowballGuildAtk		= 73; // 盟友之前是否攻击过这个雪球
+	optional int32 snowballStage		= 74; // 雪球活动当前阶段
+	optional int32 snowballAtkTimes		= 79; // 雪球之前攻击过的次数
+	optional int32 snowballOwnGoalCount 	= 80; // 雪球自己进球数量
+	optional string snowballLastAtk	 	= 77; // 雪球上次踢的玩家
+	repeated int32 cyborgCanMarchCamp		= 78; //可以出兵的阵营 1 2 3 4 -> A B C D
+	optional int64 cyborgNuclearReadyTime		= 82; //当前占领联盟 核弹准备完成时间. 
+	repeated CYBORGHoldRec syborgHoldRec = 83;
+	optional int32 stayArmycount = 87; // 驻军数量
+	optional int32 showEquipTech = 88; // 是否显示装备科技
+	
+	optional bool isCenter = 89; // 是否是母旗
+	optional bool isCenterActive = 90; // 是否是激活状态(前四个连接到黑土地)
+	
+	optional int32 flagOccupyLife = 91; // 战旗占领值
+	repeated XLZJHoldRec xlzjHoldRec = 92; // 心录总结占领记录
+	optional int64 xlzjNuclearReadyTime		= 93; //当前占领联盟 核弹准备完成时间. 
+	optional int32 xlzjRectangle = 94; // 点所在圈子 由外向内 1 2 3
+	
+	optional int32 fireworks = 95; 		//是否释放烟花 1 2 3 4 5 效果不同
+	
+	optional bool hasOffensiveMarch = 96; // 是否有攻击行为行军
+	optional int64 offensiveMarchTime = 97; // 攻击行为行军更新时间
+	optional PBXZQBuildDetail xzqBuildInfo = 98; // 小战区
+	optional int32 cityPlantLevel = 100; // 泰能等级
+	
+	optional int32 dressTitleType = 101; // 装扮称号显示类型
+	
+	optional int32 equipStarShow = 102; // 泰能装备外显
+	
+	optional int32 nationalBuildType = 103; // 国家建筑类型
+	optional int32 nationalBuildState = 104; // 国家建筑状态
+	optional int32 nationalBuildLvl = 105; // 国家建筑等级
+	optional int32 nationalBuildVal = 106; // 国家建筑建设值
+	optional int64 nationalBuildEndTime = 107; // 国家建筑状态结束时间
+	optional int64 nationalRunningEndTime = 108; // 国家建筑状态结束时间
+	optional int64 nationalRunningTotalTime = 109; // 国家建筑运行总时间
+	optional string nationalRunningParams = 110; // 国家建筑运行时带的参数
+
+	repeated DYZZHoldRec  dyzzHoldRec      = 111;  // 达牙之战占领记录
+	repeated DYZZAtkBaseRec   dyzzAtkBaseRec       = 112; // 达牙之战攻击基地记录
+	repeated DYZZBaseDefRec   dyzzBasedefRec       = 113; // 达牙之战基地受击记录
+	
+	optional int32 resourceSpreeBoxId   = 114;//资源狂欢宝箱配置ID
+	optional SuperVipSkinEffect superVipSkin  = 115;	// 至尊vip皮肤特效
+	repeated EquipTechLevel equipTechLevel = 116;  // 装备科技等级
+	repeated PBDYZZFameHallMember dyzzFameHallMembers= 117;//达牙之战名人堂
+	repeated YQZZHoldRec  yqzzHoldRec      = 118;  // 月球之战占领记录
+	optional int32 dyzzHighTowerWinCount	= 119; //高塔占领次数
+	optional int32 dyzzInTowerAtkAdd	= 120; //内塔额外增加的伤害数
+	repeated YQZZDeclareWar declareWar = 127; // 对建筑宣战
+	optional YQZZDeclareWar onwerGuild = 128; // 当前建筑拥有者的宣战记录
+	optional StrongHoldPB strongHold   = 129; // 星甲召唤据点信息
+	optional MechaSpacePB mechaSpace   = 130; // 星甲召唤舱体信息
+	optional MechaBoxPB mechaBox       = 131; // 星甲召唤宝箱
+	optional int64 tblyChronoReadyTime		= 132; //当前占领联盟 核弹准备完成时间. 
+	optional WorldFormation formation = 133; // 编队信息
+	optional int32 tblyPerMinHonor = 134; // 泰伯建筑每分钟产生积分
+	optional int32 tblyCampAZhanLingPct = 135; // 泰伯1 秘密实验室进度
+	repeated PBTBLYBuildSkill tblyOrderBuff = 136; // 泰伯围困生效
+	optional int32 tblyTotalPointPct = 137; // 泰伯1 秘密实验室总进度
+	optional int32 plantMilitaryLevel = 138; //泰能兵军衔等级
+	optional int32 starExploreShow = 139; // 星能探索外显
+	repeated XHJZHoldRec xhjzHoldRec = 140; // 星海占领记录
+	optional PBDeployedSwInfo deployedSwInfo = 141; //已部署超武信息
+	repeated DressEditData dressEditDatas = 142; //军事学院名称
+	optional int32 xhjzBianduiNum = 143; // 星海编队号
+	optional int64 fgylMoveCityCD = 144;  // 免费迁城
+	optional int32 fgylMoveCityCost = 145; // 非免费时间内迁城消耗倍数
+	repeated PBFGYLBuildHurtRank fgylHurtRank = 146; // 建筑详情-伤害排行
+	repeated int32 fgylKillEnemy = 147; // 反攻幽灵杀死塔
+	optional int32 plantMilitaryShow = 148; //泰能军衔等级外显开关
+	optional string mechacoreShowInfo = 149; //机甲核心外显信息（一个或逗号分隔的多个外显id）
+	repeated XQHXHoldRec  xqhxHoldRec      = 150;  // 先驱茴香占领记录
+	optional int32 guildDragonTrapState = 151; //联盟巨龙陷阱状态 0关闭  1开启
+	optional int64 guildDragonTrapOpenLimit = 152; //联盟巨龙陷阱开启冷却时间
+	optional int64 guildDragonTrapFightEndTime = 153; //联盟巨龙陷阱战斗结束时间
+	optional int64 tblyNextNpcMarch = 155; // 突袭指挥所 下次发兵
+}
+
+// 建筑详情-伤害排行
+message PBFGYLBuildHurtRank{
+	optional string name = 1;
+	optional int32 kill = 2;
+}
+
+// 野怪击杀榜
+message PBFGYLMonsterKillRank{
+	optional string name = 1;
+	optional int32 kill = 2;
+}
+
+
+// 建筑生效中buff
+message PBTBLYBuildSkill{
+	optional int32 skillId = 1;
+	optional int32 camp = 2;
+	optional int32 x = 3; 
+	optional int32 y = 4; 
+	optional int64 startTime = 5;
+	optional int64 endTime = 6;
+	optional int32 npcCfgId = 7; 
+}
+
+message YQZZHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildId = 3;
+	optional string serverId = 4;
+	optional string guildTag = 5;
+	optional WorldPointType ptype = 6;
+	optional int32 x =7;
+	optional int32 y = 8;
+	optional int32 flagView = 9; // 1 红 2  蓝 3 4 5 6
+	optional string guildName = 10;
+	optional string pfIcon = 11;
+}
+
+//名人堂成员
+message PBDYZZFameHallMember{
+	required string playerId   = 1;
+	required string playerName = 2;
+	required string serverId   = 3;
+	required int32 icon        = 4;
+	optional string pfIcon     = 5;
+	required int32 rank        = 6;
+	required int32 score       = 7;
+}
+
+message DYZZAtkBaseRec{
+	optional int32 fromX =1;
+	optional int32 fromY =2;
+	optional int32 toX =3;
+	optional int32 toY =4;
+	optional int32 type  =5; //发动类型 1 周期 2 井  3 商人
+	optional int32 hurt = 6; // 伤害值
+	optional int64 hurtTime = 7; // 打中时间
+}
+
+message DYZZBaseDefRec{
+	optional int32 fromX =1;
+	optional int32 fromY =2;
+	optional int32 toX =3; // 就是基地坐标
+	optional int32 toY =4;
+	optional int32 type  =5; //发动类型 1 周期 2 井  3 商人
+	optional int32 hurt = 6; // 伤害值
+	optional int64 hurtTime = 7; // 打中时间
+}
+
+message XLZJHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+}
+
+message TBLYHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+}
+
+message XQHXHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+}
+
+message XHJZHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+	optional string guildName = 8; 
+	optional string guildId = 9;
+}
+
+message DYZZHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+	optional int32 buildState = 8; // 建筑状态 2 占领, 5已摧毁
+}
+
+message CYBORGHoldRec{
+	optional int64 holdTime = 1; // 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional int32 flagView = 7; // 1 红 2  蓝
+}
+
+message SWHoldRec{
+	optional int64 holdTime = 1; // 取得控制时间点 
+	optional string playerName = 2;
+	optional string guildTag = 3;
+	optional WorldPointType ptype = 4;
+	optional int32 x =5;
+	optional int32 y = 6;
+	optional string guildId = 7;
+	optional string serverId = 8;
+	optional int64 totalHold = 9; // 整场比赛本联盟共占领时长. 如有多条记录, 这个时间是相同的. 取第一条显示
+}
+
+
+// 行军信息
+message	WorldMarchPB
+{
+	required string	marchId					= 10;	// 行军唯一id
+	required string	playerId				= 11;	// 行军玩家ID
+	required string	playerName				= 12;	// 行军玩家名字
+	required int32 origionX					= 13;	// 起点坐标
+	required int32 origionY					= 14;	// 起点坐标
+	required int32 terminalX				= 15;	// 目标x
+	required int32 terminalY				= 16;	// 目标y
+	required int64 startTime				= 20;	// 在世界地图上的显示开始时间
+	required int64 endTime					= 21;	// 在世界地图上的显示结束时间
+	required WorldMarchType	marchType		= 22;	// 行军类型
+	required WorldMarchStatus marchStatus	= 23;	// 行军状态
+	optional int64 marchJourneyTime			= 31;	// 行军旅程总时长
+	optional WorldMarchRelation	relation	= 32;	// 观察者与本次行军关系
+	required string	targetId				= 33;	// 怪物id,资源id,玩家id,集结队长的行军id
+	optional string	guildTag				= 34;	// 玩家的联盟简称
+	optional double	itemUseX				= 40;	// 使用道具的前端坐标x
+	optional double	itemUseY				= 41;	// 使用道具的前端坐标y
+	optional int64 itemUseTime				= 42;	// 使用道具的时间点
+	optional int32 speedTimes				= 43;	// 加速倍数
+	optional double	callBackX				= 50;	// 返回的坐标x
+	optional double	callBackY				= 51;	// 返回的坐标y
+	optional int64 callBackTime				= 52;	// 返回的时间点
+	optional int64 resStartTime				= 60;	// 在世界地图上的显示开始时间
+	optional int64 resEndTime				= 61;	// 在世界地图上的显示开始时间
+	optional int64 massReadyTime			= 70;	// 准备集结的时间点
+	repeated ArmySoldierPB army				= 73;	// 出征的军队信息
+	optional int32 modelLvl					= 75;	// 行军模型等级
+	repeated int32 showEff					= 76;   // 行军作用号显示
+	optional double collectBaseSpeed		= 77;	// 采集基础速度
+	optional double collectSpeed			= 78;	// 采集速度
+	repeated PBHeroInfo heroList      		= 79;   // hero
+	optional PBSuperSoldierInfo ssoldier 	= 80; 
+	optional int32 marchShowDress			= 81;   // 行军装扮
+	optional bool extraSpyMarch             = 82;   // 是否是额外侦查行军
+	optional int32 autoMonster              = 83;   // 自动打野行军的优先级标识
+	optional ArmourSuitType armourSuit 		= 84;   // 装备套装
+	optional TalentType talentType 			= 85;   // 天赋
+	optional int32 superLab 				= 86;   // 超能实验室
+	optional bool isOffensive				= 87;	// 是否是攻击性行军
+	optional int32 emoticonId               = 88;   // 行军表情ID
+	optional int64 emoticonEndTime          = 89;   // 行军表情有效结束时间
+	optional ArmourBriefInfo armourBrief	= 90;
+	optional int32 marchDressShowType		= 91;   // 行军装扮幻化效果
+	optional int32 autoResource             = 92;   // 自动拉锅行军的优先级标识
+	optional int32 treasureCount            = 93;   //藏宝图行军标识，同时发出行军个数
+	repeated int32 proficiencyEffect		= 94;	// SSS英雄战技做用号
+	optional WorldFormation formation = 95; // 编队信息
+	repeated Position xhjzPoints = 96; // 星海激战行军路线
+	optional int32 xhjzGasoline = 97; // 星海行军带剩余燃油
+	optional XHJZQuateredState xhjzQuateredState = 98; //星海玩法 停留建筑时状态
+	optional int32 massNum = 99; // 集结队伍行军总数 队长+队员 
+	optional int32 xhjzArmycnt = 100; // 部队总数
+	optional int32 camp = 101; // 副本阵营
+	optional PBDeployedSwInfo deployedSwInfo = 102; //已部署超武信息
+	optional int32 xhjzBianduiNum = 103; // 星海编队号
+	optional int64 fgylMoveCityCD = 104;  // 免费迁城
+	optional int32 fgylMoveCityCost = 105; // 非免费时间内迁城消耗倍数
+	optional int32 fgylSkill = 106; //  反攻幽灵使用技能 技能点不足的时候勾选关闭
+	optional string mechacoreShowInfo = 107; //机甲核心外显信息（一个或逗号分隔的多个外显id）
+}
+
+/**星海玩法 停留建筑时状态*/
+message XHJZQuateredState{
+	optional int32 state = 1; // 1 占领中 ,  2 已占驻守中
+	optional int64 zhanLingJieShu = 2; // 占领结束时间
+	optional int64 zhuShouKaishi = 3; // 驻守开始时间
+}
+/** 星海建筑行军列表 */
+message	XHJZBuildMarchesResp{
+	repeated XHJZBuildMarches marchGroup = 1; //  集结多个, 单人一个
+}
+
+message	XHJZBuildMarches
+{
+	repeated WorldMarchPB marchs		=	1;	// 行军列表
+}
+
+
+// 部队建筑信息
+message ArmyBuildingInfo
+{
+	required BuildingType buildType		= 1;	//建筑type
+	required int32 buildLvl				= 2;	//建筑等级
+}
+// 推送玩家的世界点信息
+message	WorldInfoPush
+{
+	required int32 targetX				= 1;	// 坐标
+	required int32 targetY				= 2;	// 坐标
+	optional bool isRecreate			= 3;	// 是否重建
+	optional int32 guildPosX			= 4;	// 联盟堡垒坐标x
+	optional int32 guildPosY			= 5;	// 联盟堡垒坐标y
+}
+
+message	PlayerEnterWorld
+{
+	required int32 x					= 1;
+	required int32 y					= 2;
+	optional string	serverId			= 3;
+}
+
+message	PlayerWorldMove
+{
+	required int32 x					= 1;
+	required int32 y					= 2;
+	optional string	serverId			= 3;
+	optional float speed				= 4;
+}
+
+message	PlayerLeaveWorld
+{
+	optional string	serverId			= 1;
+}
+
+message	WorldPointSync
+{
+	repeated WorldPointPB points		= 1;
+	optional string	serverId			= 2;
+	optional bool isRemove				= 3;
+}
+
+// 获取视野内的世界点信息
+message	FetchInviewWorldPoint
+{
+	required int32 x					= 1;
+	required int32 y					= 2;
+	optional string	serverId			= 3;
+	optional float speed				= 4;
+}
+
+// 行军事件
+enum MarchEvent
+{
+	MARCH_SYNC	 = 1;
+	MARCH_ADD	 = 2;
+	MARCH_UPDATE = 3;
+	MARCH_DELETE = 4;
+}
+
+message	MarchData
+{
+	// 行军ID
+	required string	marchId	= 1;
+	// 行军数据
+	optional WorldMarchPB marchPB =	2;
+}
+
+message	MarchEventSync
+{
+	// 事件类型, 参照MarchEvent
+	required int32 eventType = 1;
+	// 行军数据
+	repeated MarchData marchData = 2;
+}
+
+message	WorldMoveCityReq
+{
+	required int32 type					= 1;	// 1: 随机, 2: 定点. 具体参考CityMoveType
+	optional int32 x					= 2;	// 迁城的目标x
+	optional int32 y					= 3;	// 迁城的目标y
+	optional string	serverId			= 4;	// 迁往服务器id
+    optional bool force                 = 5;    // 是否是城防值降到0时的强制迁城，是为true，否则为false
+}
+
+message	WorldMoveCityResp
+{
+	required bool result				= 1;	// 结果
+	optional int32 x					= 2;	// 目标x
+	optional int32 y					= 3;	// 目标y
+	optional ServerInfo	serverInfo		= 4;	// 目标服务器信息
+}
+
+message	GuildMoveCityResp
+{
+	required bool result				= 1;	// 结果
+	optional int32 x					= 2;	// 目标x
+	optional int32 y					= 3;	// 目标y
+}
+
+// 地图收藏夹数据
+message	WorldFavoritePB
+{
+	required int32 tag = 1;
+	required string	type = 2;
+	required string	name = 3;
+	required int32 serverId	= 4;
+	required int32 posX	= 5;
+	required int32 posY	= 6;
+	optional string	favoriteId = 7;
+	optional int64 updateTime =	8;
+	optional string pfIcon  = 9;  // 平台头像
+	optional int32 cfgId = 10; //联盟收藏专用的配置id.
+	optional int32 extCfgId = 11; //联盟建筑的时候配置ID,联盟标记为标记ID
+}
+
+// 添加地图收藏夹
+message	WorldFavoriteAddReq
+{
+	required WorldFavoritePB info =	1;
+}
+
+// 更新地图收藏夹
+message	WorldFavoriteUpdateReq
+{
+	required WorldFavoritePB info =	1;
+}
+
+// 删除地图收藏夹数据
+message	WorldFavoriteDelteReq
+{
+	repeated string	favoriteId = 1;
+}
+
+// 地图收藏夹数据同步
+message	HPWorldFavoriteSync
+{
+	repeated WorldFavoritePB favorites = 1;
+	optional int32 synType = 2;  //0为全部， 1为更新.
+}
+
+// 出征请求
+message	WorldMarchReq
+{
+	required int32 posX				= 1;	// 目标x
+	required int32 posY				= 2;	// 目标y
+	repeated ArmySoldierPB armyInfo	= 3;	// 携带军队
+	optional string	marchId			= 4;	// 参加集结的队长marchId
+	optional int32 massTime			= 5;	// 集结准备时间（秒）
+	optional int32 attackModel		= 6;	// 打怪模式，0为普通攻击，非零为全力攻击模式
+	repeated RewardItem	assistant	= 7;	// 资源援助所携带的资源
+	optional WorldMarchType	type	= 8;	// 玩家发起的行军类型
+	repeated int32 heroId			= 9;	// 携带英雄信息
+	repeated int32 useSkillId		= 10;	// 使用技能id
+	optional bool spyUseGold		= 11;	// 侦查是否使用水晶。 默认false
+	optional int32 presidentTower	= 12;	// 总统府箭塔index 1~4
+	optional int32 superSoldierId   = 13;   // 神兽id
+	optional ArmourSuitType armourSuit		  = 14;	// 铠甲套装
+	optional TalentType talentType 			  = 15; // 天赋
+	optional int32 superLab 				  = 16; // 超能实验室
+	optional KickSnowballDirection direction  = 17; // 踢雪球方向
+	optional string agencyUuid                = 18; // 情报中心事件id
+	optional int32 nopType	            	  = 19; // 国家建设或个人建设，1-国家，2-个人
+	optional string nationQuestId	          = 20; // 国家建设任务ID
+	optional int32 guildFormation             = 21; // 联盟编队
+	optional int32 formation                  = 22; // 个人编队
+	repeated int32 marchDress                 = 23; // 出征携带行军装扮
+	optional bool isActivateDressGroup        = 24; // 是否自动激活装扮套装
+	repeated Position xhjzPoints              = 25; // 星海激战行军路线
+	optional int32 xhjzGasoline               = 26; // 星海行军带剩余燃油worldmarchr
+	optional int32 xhjzBianduiNum             = 27; // 星海编队号
+	optional int32 fgylSkill                  = 28; // 反攻幽灵使用技能 技能点不足的时候勾选关闭
+	optional MechaCoreSuitType mechacoreSuit  = 29;	// 机甲核心套装
+	optional PresetMarchManhattan manhattan   = 30;   // 超武
+}
+
+// 踢雪球方向
+enum KickSnowballDirection
+{
+	SNOWBALL_UP	= 1; // 上
+	SNOWBALL_DOWN	= 2; // 下
+	SNOWBALL_LEFT	= 3; // 左
+	SNOWBALL_RIGHT	= 4; // 右
+	SNOWBALL_UPLEFT	= 5; // 左上
+	SNOWBALL_UPRIGHT	= 6; // 右上
+	SNOWBALL_DOWNLEFT	= 7; // 左下
+	SNOWBALL_DOWNRIGHT	= 8; // 右下
+}
+
+
+// 出征返回
+message	WorldMarchResp
+{
+	required bool success =	1;
+	optional WorldMarchType	type = 2;	// 玩家发起的行军类型
+	optional string	targetId	 = 3;	// 目标ID
+}
+
+// 行军报告
+message	MarchReportPB
+{
+	optional AttackMarchReportPB attackReport			   = 1;
+	required int32 targetType							   = 4;	 //	参考MarchTargetPointType
+}
+
+// 进攻类行军报告
+message	AttackMarchReportPB
+{
+	required string	marchUUID				=	1;	//	行军uuid
+	required int32 marchType				=	2;	//	行军类型
+	optional int32 originalX				=	3;	//	进攻发起者出兵位置坐标x  （科技2级）
+	optional int32 originalY				=	4;	//	进攻发起者出兵位置坐标y  （科技2级）
+	optional int64 arrivalTime				=	5;	//	行军到达时间	（科技3级）
+	//optional int32 leaderArmyTotalAbout		=	6;	//	进攻发起者部队大致总数	 （科技4级） 
+	//repeated int32 armyIds					=	7;	//	进攻发起者军队组成  （科技5级）
+	optional GeneralPB leader				=	8;	//	进攻发起者军队组成和各兵种数量	（科技6级）
+	repeated GeneralPB member				=	9;	//	集结行军队伍中的集结成员信息	（科技7、8、9级）
+	optional int64 marchStartTime			=	10;	//	行军的开始时间
+	optional int32 armyTotalAbout			=	11;	//	所有进攻者的总兵力 准确数
+	optional int32 targetX					=	14;	//	进攻发起者终点x 
+	optional int32 targetY					=	15;	//	进攻发起者终点y 
+	optional int64 yuriNextPushTime				=   16; // (尤里复仇活动的怪物行军)下一轮开始时间
+	optional int32 yuriRound 					= 	17; // (尤里复仇活动的怪物行军)波次
+	optional bool  yuriLastRound 				=   18; // (尤里复仇活动的怪物行军)最后一波
+	optional string assistant 					= 	19; // 资源 如果有的话 
+	optional bool sameGuild						= 20; // 盟友
+	optional int64 massReadyTime				= 21; // 集结准备的开始时间
+
+}
+
+
+message TaltentPB{
+	optional int32 talentId = 1;
+	optional int32 level = 2;
+}
+
+// 行军目标类型
+enum MarchTargetPointType
+{
+	PLAYER_CITY_POINT		 = 1;	// 玩家城点
+	RESOURCE_POINT			 = 2;	// 资源点
+	QUARTERED_POINT			 = 3;	// 驻扎点
+	GUILD_BASTION_POINT		 = 4;	// 联盟堡垒
+	LAUNCH_PLATFORM_POINT	 = 5;	// 发射平台
+	CAPITAL_POINT			 = 6;	// 首都
+	ALLY_CITY				 = 7;	// 友军基地
+	GUILD_SUPER_MINE		 = 8;   // 联盟超级狂
+	GUILD_TOWER				 = 9;   // 联盟箭塔
+	GUILD_WARE_HOUSE		 = 10;  // 联盟仓库
+	CAPITAL_TOWER_POINT		 = 11; // 首都箭塔
+	WORLD_STRONGPOINT		 = 12;  // 据点
+	SUPER_WEAPON_POINT       = 13;  // 超级武器点
+	WAR_FLAG_MAP_POIT		 = 14; // 战棋点	
+	TBLY_FUELBANK_POIT					= 15;	// tbly燃料库
+	TBLY_IRON_CRUTAIN_DIVICE_POIT		= 16;   // 铁幕装置
+	TBLY_NUCLEAR_MISSILE_SILO_POIT		= 17;   // 核弹发射井
+	TBLY_WEATHER_CONTROLLER_POIT		= 18;   // 天气控制器
+	TBLY_CHRONO_SPHERE_POIT				= 19;   // 超时空传送器
+	TBLY_COMMAND_CENTER_POIT			= 20;   // 指挥部
+	TBLY_MILITARY_BASE_POIT				= 21;   // 军事基地
+	TBLY_HEADQUARTERS_POIT				= 22;   // 司令部
+	TBLY_TECHNOLOGY_LAB_POINT 			= 82;	// 秘密科技实验室
+	TBLY_COMMAND_POST_POINT				= 88;   // 突袭指挥所
+
+
+	CROSS_FORTRESS_POINT				= 23;   // 要塞
+
+	SW_HEADQUARTERS_POINT = 25; 	// 中心
+	SW_COMMAND_CENTER_POIT			= 26;   // 塔
+
+	CYBORG_FUELBANK_POIT					= 31;	// CYBORG燃料库
+	CYBORG_IRON_CRUTAIN_DIVICE_POIT			= 32;   // 铁幕装置
+	CYBORG_NUCLEAR_MISSILE_SILO_POIT		= 33;   // 核弹发射井
+	CYBORG_WEATHER_CONTROLLER_POIT			= 34;   // 天气控制器
+	CYBORG_CHRONO_SPHERE_POIT				= 35;   // 超时空传送器
+	CYBORG_COMMAND_CENTER_POIT				= 36;   // 指挥部
+	CYBORG_MILITARY_BASE_POIT				= 37;   // 军事基地
+	CYBORG_HEADQUARTERS_POIT				= 38;   // 司令部
+	
+	CENTER_FLAG_POIT	= 39; // 母旗
+
+	XLZJ_FUELBANK_POIT					= 41;	// tbly燃料库
+	XLZJ_IRON_CRUTAIN_DIVICE_POIT		= 42;   // 铁幕装置
+	XLZJ_NUCLEAR_MISSILE_SILO_POIT		= 43;   // 核弹发射井
+	XLZJ_WEATHER_CONTROLLER_POIT		= 44;   // 天气控制器
+	XLZJ_CHRONO_SPHERE_POIT				= 45;   // 超时空传送器
+	XLZJ_COMMAND_CENTER_POIT			= 46;   // 指挥部
+	XLZJ_MILITARY_BASE_POIT				= 47;   // 军事基地
+	XLZJ_HEADQUARTERS_POIT				= 48;   // 司令部
+	
+	XZQ_POINT                           = 49;   //小站区
+
+	DYZZ_BASE_POIT	= 77; // 打压之站主基地
+	DYZZ_TOWER_POIT = 78;// 打压之站防御内外塔
+	DYZZ_FUELBANK_POIT = 79; // 打压之站陨晶矿
+	DYZZ_ENERGY_WELL_POIT = 80; // 打压之站能源井（祭坛)
+	DYZZ_HIGH_TOWER_POIT = 81; // 打压之战高塔
+
+	YQZZ_BUILDING_POIT = 85;
+	XHJZ_BUILDING_POIT = 86;
+	XQHX_BUILDING_POIT = 87;
+}
+
+// 援助类行军报告
+message	AssistantMarchReportPB
+{
+	required string	marchUUID			= 1;	// 行军uuid
+	required int32 originalX			= 2;	// 派遣者的位置
+	required int32 originalY			= 3;	// 派遣者的位置
+	required string	playerId			= 4;	// 派遣者的playerId
+	required string	name				= 5;	// 派遣者的名字
+	required int32 icon					= 6;	// 派遣者的头像
+	required int64 arrivalTime			= 7;	// 行军到达时间
+	repeated ArmySoldierPB armyInfo		= 8;	// 派遣者部队组成
+	repeated RewardItem	resources		= 9;	// 派遣者运送的资源数量
+	optional string	pfIcon		        = 10;	// 平台头像
+}
+
+// 核弹爆炸信息
+message	NuclearExplosionReportPB
+{
+	required int32 centerX			= 1;	// 核爆中心X
+	required int32 centerY			= 2;	// 核爆中心Y
+	required int32 nuclear			= 3;	// 1位核弹，0位雷暴
+	optional int32 guildIcon		= 4;	// 联盟图标
+	optional string	guildName		= 5;	// 联盟名称
+	optional int64	explosionTime	= 6;	// 核爆时间
+	required string	bombId			= 7;
+}
+
+// 行军结束或行军结束时间变更
+message	WorldMarchRefreshPB
+{
+	required string	 marchId	= 1;	// 行军ID
+	optional int64	 endTime	= 2;	// 行军结束时间
+}
+
+// 核弹爆炸取消或到时结束通知
+message	NuclearExplosionEndPB
+{
+	required string	 bombId		=	1;	// 行军ID
+}
+
+message	GeneralPB
+{
+	required string	id				= 1;	// 进攻者的playerId
+	required string	name			= 2;	// 进攻发起者的名字
+	required int32 icon				= 3;	// 进攻发起者的头像
+	optional int32 level			= 4;	// 进攻者的player等级
+	repeated ArmySoldierPB armyInfo	= 5;	// 进攻者进队的组成
+	//optional bool about				= 6;	// true表示兵的大概数量，false表示准确数量
+	repeated PBHeroInfo heroInfo	= 7;	// 进攻者英雄的组成
+	optional string pfIcon		    = 8;	// 平台头像
+	optional string	guildName	= 9;	// 联盟名字
+	optional string guildId 	= 10;  //
+	optional string guildTag    = 11;  // 联盟简称
+	repeated int32 tech						= 	12; //  科技
+	repeated TaltentPB talent 	 			=	13; //  天赋
+	optional PBSuperSoldierInfo ssoldier = 14;
+	optional ArmourSuitType armourSuit = 15;
+	optional ArmourBriefInfo armourBrief = 16;
+}
+
+// 删除行军队列
+message	WorldMarchDeletePush
+{
+	required string	marchId					= 1; //	行军唯一id
+	optional WorldMarchRelation	relation	= 2; //	观察者与本次行军关系
+}
+
+// 登陆时推送玩家全部行军数据
+message	WorldMarchLoginPush
+{
+	repeated WorldMarchPB marchs		=	1;	// 行军列表
+}
+
+// 行军加速请求
+message	WorldMarchSpeedUpReq
+{
+	required string	marchId		= 1;	// 行军唯一id
+	required int32 itemId		= 2;	// 使用道具的配置id
+	optional WorldMarchStatus status = 3; // 加速时的行军状态
+	optional bool isGuide	= 4;	// 是否是引导加速
+}
+
+// 二级地图联盟信息
+message	WorldSecondaryAllianceInfo
+{
+	required int32 pointX		= 1;  // 玩家坐标
+	required int32 pointY		= 2;
+	required GuildPositon guildPositon = 3;	 //	职位
+}
+
+// 二级地图的领地概况
+message	WorldSecondaryManorInfo
+{
+	required int32 manorId = 1;
+	optional string	guildId	= 2;
+}
+
+// 二级地图信息
+message	WorldSecondaryMapInfo
+{
+	// 领地概要信息
+	repeated WorldSecondaryManorInfo manorInfo = 1;
+	// 自己所在联盟信息
+	repeated WorldSecondaryAllianceInfo	allianceInfo = 2;
+	// 国王名称
+	optional string	kingName = 3;
+	// 国旗ID
+	optional string	bannerId = 4;
+	// 国家名称
+	optional string	countryName	= 5;
+	// 国家图标
+	optional int32 countryIcon = 6;
+	// 超级兵营信息
+	repeated SuperBarrackMapInfo superBarrack = 7;
+	// 泰伯利亚名人堂
+	repeated TBLYFameHallInfo tblyFameHall = 8;
+}
+
+message SuperBarrackMapInfo
+{
+	required int32 pointX = 1;
+	required int32 pointY = 2;
+	optional bool hasSignUp = 3;
+	optional string occupyGuildTag = 4;
+	optional bool hasAutoSignUp = 5;
+}
+
+message TBLYFameHallInfo
+{
+	required int32 pointX = 1;
+	required int32 pointY = 2;
+}
+
+// 三级地图
+message	WorldKingDistributeMapInfo
+{
+	required string	serverId	= 1;	//	服务器名称
+	optional string	kingName	= 2;	//	国王名称
+	optional string	bannerId	= 3;	//	国旗
+}
+
+// 三级地图推送
+message	WorldKingDistributeMapRes
+{
+	repeated WorldKingDistributeMapInfo	worldKingDistributeMap = 1;
+}
+
+// 请求二级地图
+message	WorldSecondaryMapReq
+{
+	required string	serverName	= 1;	// 服务器名称
+}
+
+// 行军召回
+message	WorldMarchServerCallBackReq
+{
+	required string	marchId		= 1;	// 行军唯一id
+}
+
+// 返回结果
+message	WorldMarchServerCallBackResp
+{
+	required bool result = 1;	// 返回结果
+}
+
+// 队长遣返某人
+message	WorldMassRepatriateReq
+{
+	required string	marchId		= 1;	// 被遣返玩家的行军id
+}
+
+message	WorldMassRepatriateResp
+{
+	required bool result = 1;	// 返回结果
+}
+
+// 队长解散
+message	WorldMassDissolveReq
+{
+	required string	marchId		= 1;	// 集结的行军id
+}
+
+message	WorldMassDissolveResp
+{
+	required bool result = 1;	// 返回结果
+}
+
+// 采集资源加速
+message	WorldResourceSpeedUpReq
+{
+	required string	marchId		= 1;	// 行军唯一id
+	required int32 itemId		= 2;	// 使用道具的配置id
+}
+
+// 采集资源加速返回
+message	WorldResourceSpeedUpResp
+{
+	required bool result	= 1;	// 返回结果
+}
+
+// 搜索类型
+enum SearchType
+{
+	SEARCH_RESOURCE			= 1; //资源
+	SEARCH_MONSTER			= 2; //普通野怪
+	SEARCH_GUILD_MANOR		= 3; //联盟领地
+	SEARCH_BOX				= 4; //宝箱
+	SEARCH_YURI_FACTORY		= 5; //尤里工厂
+	SEARCH_STRONGPOINT		= 6; //据点
+	SEARCH_FOGGY			= 7; //迷雾要塞
+	SEARCH_NEW_MONSTER		= 8; //新版野怪(带血条的活动活动怪)
+	SEARCH_YURI_MONSTER		= 9; //叛军野怪(不带血条的活动活动怪)
+	SEARCH_EMPTY_POINT 		= 10; //搜索空点
+	SEARCH_GUNDAM	 		= 12; //搜索高达
+	SEARCH_NIAN		 		= 13; //搜索年兽
+	SEARCH_PYLON			= 14; //搜索能量塔
+	SEARCH_CHRISTMAS_BOSS	= 15; //圣诞boss
+	SEARCH_SNOWBALL			= 16; //雪球
+	SEARCH_CAKE				= 17; //蛋糕
+	SEARCH_NEW_ACT_MONSTER  = 18; //185活动野怪(新版叛军)
+}
+
+// 搜索联盟领地的类型
+enum SearchManorType
+{
+	SEARCH_MANOR_OCCUPIED		= 1;
+	SEARCH_MANOR_ENEMY_OCCUPIED	= 2;
+	SEARCH_MANOR_UN_OCCUPIED	= 3;
+}
+
+// 世界查找资源和怪物或者联盟领地
+message	WorldSearchReq
+{
+	required SearchType	type			= 1; //搜索类型
+	optional int32 id					= 2; //具体类型的id
+	optional SearchManorType manorType	= 3; //联盟领地类型
+	optional int32 index 				= 4; //第n次搜索
+	optional int32 level				= 5; //具体类型的等级
+}
+
+// 世界搜索目标点坐标
+message	WorldSearchResp
+{
+	required int32 targetX	= 1;	// 目标x
+	required int32 targetY	= 2;	// 目标y
+	optional SearchType	type= 3;	// 1资源；2怪物；3领地
+	optional bool success = 4;		// 搜索成功
+}
+
+
+// 超级矿显示pb
+message	SuperMineMarchShowPB
+{
+	required string	marchId		= 1;	// 行军ID
+	required string	playerName	= 2;	// 玩家名字
+	required int32	playerIcon	= 3;	// 玩家头像
+	required int32	collectNum	= 4;	// 已采集数目
+}
+
+// 超级矿显示详情
+message	GetSuperMineMarchsReq
+{
+	required int32 x	= 1;	// 坐标x
+	required int32 y	= 2;	// 坐标y
+}
+
+// 获取超级矿显示详情
+message	GetSuperMineMarchsResp
+{
+	repeated SuperMineMarchShowPB showData = 1;	// 超级矿显示详情
+}
+
+// 更换联盟超级矿的类型
+message	ChangeSuperMineTypeReq
+{
+	required int32 x			= 1;	// 坐标x
+	required int32 y			= 2;	// 坐标y
+	required PlayerAttr	resType	= 3;	// 超级矿类型
+}
+
+// 路点行军召回
+message	WorldPointMarchCallBackReq
+{
+	required int32 x			= 1;	// 坐标x
+	required int32 y			= 2;	// 坐标y
+	optional string playerId    = 3;    // 玩家id
+	optional string marchId = 4;
+}
+
+message	HPBattleResultInfoSync
+{
+	repeated int32 myArmyId	 		= 1;	// 我方参战兵种id
+	repeated int32 oppArmyId 		= 2;	// 敌方参战兵种id
+	required int32 isWin			= 3;	// 攻击方结果
+	required string	marchId			= 4;	// 行军ID
+	optional bool isMonsterDead		= 5;	// 怪物剩余血量
+	optional bool isDeadlyStrike	= 6;	// 是否是致命一击
+	optional KickSnowballDirection direction = 7; // 踢雪球的方向
+}
+
+// 击杀野怪推送
+message KillMonsterPush
+{
+	required int32 killMaxLvl		= 1;		// 当前杀死的最高等级怪物
+	optional int32 monsterId		= 2;		// 当前杀死的怪物
+	optional bool isWin          	= 3;        // 是否胜利
+	required int32 newMonsterMaxLvl = 4;        // 当前杀死的最高等级新版怪物
+	optional int32 atkNewMonsterTimes = 5;		// 攻击新版野怪次数
+}
+
+// 野怪点类型(类型不是很好起名字，后面还可能变)
+enum MonsterType
+{
+	TYPE_1	= 1;	// 普通野怪
+	TYPE_2	= 2;	// 活动野怪(剿灭尤里叛军)
+	TYPE_3	= 3;	// 活动野怪首领(剿灭尤里叛军首领)
+	TYPE_4	= 4;	// 活动精英怪(讨伐尤里活动)
+	TYPE_5  = 5;    // 讨伐尤里\暴怒的尤里 活动
+	TYPE_7  = 7;    // 新版野怪
+	TYPE_8  = 8;    // 寻宝野怪
+	TYPE_9  = 9;    // 卫星窃贼
+	TYPE_10 = 10;   // 卫星强贼
+	TYPE_11 = 11;   // 情报中心
+	TYPE_12 = 12;   // 星甲召唤普通怪
+	TYPE_13 = 13;   // 星甲召唤精英怪
+	TYPE_14 = 14;   // 星甲召唤据点
+	TYPE_15 = 15;   // 星甲召唤BOSS
+}
+
+// 尤里探索单次奖励
+message YuriReward
+{
+	required int32 idx					= 1; // 层数
+	optional string rewardContent		= 2; // 奖励内容，类型_ID_数量，同GM命令
+}
+
+// 尤里探索奖励列表
+message YuriRewardList
+{
+	required int64 startTime	= 1;		// 开始时间
+	required int64 endTime 		= 2;		// 结束时间
+	repeated YuriReward reward	= 3;		// 当前的奖励列表
+}
+
+// 生成世界点请求
+message GenWorldPointReq
+{
+	required WorldPointType type 	= 1;	// 请求点类型
+	required int32 posX	 			= 2;	// 请求点x坐标
+	required int32 posY	 			= 3;	// 请求点y坐标
+	required int32 itemId			= 4;	// 使用道具的配置id
+}
+
+// 坐标分享
+message ShareCoordinateReq
+{
+	required int32 posX			= 1;
+	required int32 posY			= 2;
+	required string pointName 	= 3; // 点名字
+	optional int32 level		= 4; // 等级
+}
+
+//世界最大等级野怪
+message MaxMonsterLvlReq
+{
+}
+message MaxMonsterLvlResp
+{
+	required int32 maxLevel = 1;
+	required int32 maxNewMonsterLevel = 2;
+	required int32 maxFoggyLevel = 3;
+}
+
+// 编队名称修改
+message PresetMarchNameChangeReq
+{
+	required string name = 1;   // 名字
+	required int32 idx	 = 2;	// 编队索引
+}
+message PresetMarchManhattan
+{
+	optional int32 manhattanAtkSwId	 = 1;	// 超武进攻ID
+	optional int32 manhattanDefSwId	 = 2;	// 超武防守ID
+}
+//预设编队信息
+message PresetMarchInfo
+{
+	required int32 idx						= 1;	// 所属的索引
+	repeated ArmySoldierPB army				= 2;	// 出征的军队信息
+	repeated int32 heroIds					= 3; 	// 出征的英雄信息
+	optional string name					= 4;	// 预设军队名字
+	optional bool percentArmy				= 5;	// 是否为百分比
+	optional bool commandHero				= 6;	// 是否推荐英雄
+	optional bool sameArmy					= 7;	// 是否通兵种兼容
+	optional int32 itemId					= 8;	// 出兵上限道具ID
+	optional int32 superSoldierId			= 9; 	// 超级兵
+	optional ArmourSuitType armourSuit		= 14;	// 铠甲套装
+	optional TalentType talentType 			= 15;   // 天赋
+	optional int32 superLab 				= 16;   // 超能实验室
+	repeated int32 marchDress				= 17;   // 皮肤信息
+	optional bool isActivateDressGroup 		= 18;   // 是否开启自动套装激活
+	optional MechaCoreSuitType mechacoreSuit = 19;	// 机甲核心套装
+	optional PresetMarchManhattan manhattan = 20;   // 超武
+}
+
+//个人所有出征预设编队信息
+message PlayerPresetMarchInfo
+{
+	repeated PresetMarchInfo marchInfos		= 1; //所有预设信息
+}
+
+
+//遣返建筑中的部队
+message RepatriateManorMarch
+{
+	required int32 x = 1;//坐标
+	required int32 y = 2; //坐标
+	required string playerId = 3; //遣返用户的PlayerId
+}
+
+// 任命队长
+message AppointedCaptain
+{
+	required int32 x = 1;//坐标
+	required int32 y = 2; //坐标
+	required string playerId = 3;
+}
+
+enum StrongpointStatus
+{
+	SP_INIT		= 1;	// 初始状态，（有怪）
+	SP_COLLECT	= 2;	// 占领采集状态，（有人）
+	SP_EMPTY	= 3;	// 空白状态，（无人无怪）
+}
+
+enum SignatureState
+{
+	CAN_NOT_SIGNATURE_NOT  =1;//不可以签名没有签名
+	CAN_SIGNATURE_NOT	   =2;//可以签名没有签名
+	CAN_SIGNATURE_EMPTY	   =3;//可以签名空签名
+	CAN_SIGNATURE		   =4;//可以签名有签名
+}
+
+message GetFoggyDetailInfo
+{
+	required int32 x = 1;//坐标
+	required int32 y = 2; //坐标
+}
+
+message FoggyDetailInfo
+{
+	repeated PBHeroInfo		heros 		= 1;//驻守英雄信息
+	repeated ArmySoldierPB 	armyInfo	= 2;//驻守部队信息
+	repeated RewardItem		rewardItem	= 3;// 资源援助所携带的资源
+}
+
+// 通知士兵援助行军改变
+message NotifyAssistantMarchChange
+{
+	repeated string marchId = 1;
+}
+
+
+
+// 行军详情(暂时只支持集结行军，传集结行军marchId)
+message MarchArmyDetailReq
+{
+	required string marchId = 1;
+}
+
+message MarchArmyDetailResp
+{
+	repeated MarchArmyDetailInfo info = 1;
+}
+
+message MarchArmyDetailInfo
+{
+	required string playerName	 = 1;
+	repeated ArmyHeroPB heros 	 = 2; // 废弃
+	repeated ArmySoldierPB armys = 3;
+	repeated PBHeroInfo heroList = 4;
+	optional PBSuperSoldierInfo ssoldier = 5; // 超级兵
+	optional ArmourSuitType armourSuit = 6; // 装备套装
+	optional TalentType talentType = 7; // 天赋
+	optional int32 superLab = 8; // 超能实验室
+}
+
+// 高达信息
+message GundamPush
+{
+	repeated GundamInfo gundam = 1;
+}
+
+message GundamInfo
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+	required int32 atkTimes = 3;
+}
+
+// 年兽信息
+message NianPush
+{
+	repeated NianInfo nian = 1;
+}
+
+message NianInfo
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+	required int32 atkTimes = 3;
+}
+
+
+message ChristmasInfoReq {
+}
+
+message ChristmasInfoResp{
+	required int32 atkTimes = 1;
+}
+
+// 寻宝事件类型
+enum TreasureHuntType
+{
+	TH_TYPE_REWARD = 1; //奖励
+	TH_TYPE_MONSTER = 2; //野怪
+	TH_TYPE_RESOURCE = 3; //据点
+}
+
+// 推送寻宝事件
+message PushTreasureHuntEvent
+{
+	required TreasureHuntType type = 1;
+}
+
+// 坐标
+message Position
+{
+	required int32 x = 1;
+	required int32 y = 2;
+	optional int64 reachTime = 3;
+	optional int64 startTime = 4; 
+	optional int32 xhjzGasoline = 5; // 星海路段消耗燃油
+}
+
+// 开启或关闭自动打野行军
+message SwitchAtkMonsterAutoMarchReq 
+{
+    required int32  isOpen                = 1;  // 1开启0关闭              
+	repeated SearchType searchType        = 2;  // 搜索野怪的类型
+	optional int32 minLevel               = 3;  // 自动打野最低等级
+	optional int32 maxLevel               = 4;  // 自动打野最高等级
+	repeated AutoMarchPB marchInfo		  = 6; 	// 出征部队信息
+}
+
+// 自动打野部队信息
+message AutoMarchPB
+{
+	repeated ArmySoldierPB army			  = 1;	// 出征的军队信息
+	repeated int32 heroIds				  = 2; 	// 出征的英雄信息
+	optional int32 superSoldierId		  = 3; 	// 超级兵（机甲）
+	optional int32 troops                 = 4;  // 编队信息，0-默认，1-编队1,2-编队2，3-编队3， 4-编队4
+	optional int32 priority               = 5;  // 开启多条自动打野行军时，优先级标识，值越大，优先级越高
+	optional ArmourSuitType armourSuit	  = 6;	// 铠甲套装
+	optional TalentType talentType 		  = 7;  // 天赋
+	optional int32 superLab 			  = 8;  // 超能实验室
+	optional MechaCoreSuitType mechacoreSuit  = 9;	// 机甲核心套装
+	optional PresetMarchManhattan manhattan   = 10;   // 超武
+}
+
+// 自动打野行军开启状态
+message AtkMonsterAutoMarchStatusPB
+{
+    required int32 status = 1;   // 自动打野开启状态，1已开启，0关闭
+}
+
+// 邀请集结
+message InviteMassReq
+{
+	required string marchId = 1;
+}
+
+// 使用行军表情
+message UseMarchEmoticonReq
+{
+	optional string marchId    = 1;   // 行军ID（要对哪个行军使用行军表情, 如果是对城点使用行军表情，此字段不传）
+	required int32 emoticonId  = 2;   // 行军表情ID（要使用哪个行军表情）
+}
+
+// 同步已解锁的行军表情包
+message UnlockedMarchEmoticonSync
+{
+	repeated int32 emoticon = 1;
+}
+
+// 雪球上次攻击推送
+message SnowballLastAtkPush
+{
+	required bool hasLastAtk = 1; // 是否有上次攻击
+	required int32 lastAtkNum = 2; // 上次攻击的雪球的号码
+	optional int32 atkTimes = 3; // 击球次数
+}
+
+// 雪球攻击
+message SnowballAttackReq
+{
+	required int32 x = 1; // 目标点
+	required int32 y = 2;
+}
+
+message SnowballAttackResp
+{
+	required int32 fromX = 1;
+	required int32 fromY = 2;
+	required int32 toX = 3;
+	required int32 toY = 4;
+}
+
+//龙船信息
+message PBDragonBoat{
+	required int64 boatId        = 1;  //龙船ID
+	repeated string awardRecords = 2;  //领奖记录
+} 
+
+//幽灵塔怪物信息
+message PBTowerGhost{
+	repeated PBHeroInfo		heros 		 = 1;//驻守英雄信息
+	repeated ArmySoldierPB 	armyInfo	 = 2;//驻守部队信息
+	optional PBSuperSoldierInfo ssoldier = 3;//机甲信息
+	optional ArmourBriefInfo armourBire	 = 4;//装备信息
+	required int32 stageId               = 5;//阶层ID
+}
+
+//蛋糕信息
+message PBCakeShare{
+	required int32 cakeId        = 1;  //蛋糕ID
+	repeated string awardRecords = 2;  //领奖记录
+	optional int64 startTime     = 3;  //开始时间
+	optional int64 endTime       = 4;  //结束时间
+} 
+
+//搜索用野怪类型
+enum ModelType{
+	MONSTER_1 = 998; //野怪1
+	MONSTER_2 = 999; //野怪2
+}
+
+
+
+//同步BOSS怪击杀数量
+message MonsterKillDataSync{
+	repeated MonsterKillData killData = 1; //当天击杀BOSS数量
+	repeated MonsterDropLimitData dropData = 2; //当天掉落数量
+}
+
+
+message MonsterKillData{
+	required int32 monsterId = 1; //怪物ID
+	required int32 killCnt   = 2; //击杀数量
+}
+
+message MonsterDropLimitData{
+	required int32 itemId    = 1; //道具ID
+	required int32 dropCnt   = 2; //已经掉落数量
+}
+
+
+
+////////////////////超时空要塞开始//////////////////////
+message AutoGatherParaSetupReq
+{
+	required bool super_res_sel  = 1;  //巨型锅选择
+	required bool normal_res_sel = 2;  //普通锅选择
+	required int32 put_x         = 3;  //放锅X坐标
+	required int32 put_y         = 4;  //放锅Y坐标
+	required int32 gather_x      = 5;  //拉锅X坐标
+	required int32 gather_y      = 6;  //拉锅Y坐标
+	repeated AutoMarchPB marchInfo = 7; 	// 出征部队信息
+	required bool huge_res_sel     = 8;  //超大锅选择
+}
+
+message AutoGatherStopReq
+{
+	required bool stop_auto_put  = 1;    //停止自动放锅 true表示停止，false表示不处理
+	required bool stop_auto_gather = 2;  //停止自动拉锅
+}
+
+message AutoGatherStatusNotice
+{
+	required bool auto_put    = 1;   //当前是否处于自动拉锅状态 true表示自动，false表示停止
+	required bool auto_gather = 2;   //当前是否处于自动拉锅状态 true表示自动，false表示停止
+}
+////////////////////超时空要塞结束/////////////////////
+
+// 世界个人编队显示信息
+message WorldFormation
+{
+	optional int32 index = 1; // 编队序号
+}
+
+// 集结卡信息请求
+message MassCardInfoReq
+{
+	repeated string marchId = 1;
+}
+// 集结卡信息请求返回
+message MassCardInfoResp
+{
+	repeated MassCardInfo cardInfo = 1;
+}
+// 集结卡信息
+message MassCardInfo
+{
+	required string marchId = 1; // 行军ID
+	optional bool isLeader = 2; // 是否是队长
+	optional bool hasFormation = 3; // 是否有编队
+	optional bool inFormation = 4; // 是否在编队中
+	optional bool hasJoined = 5; // 是否已加入
+	optional bool massFull = 6; // 集结是否满员
+	optional bool isMarch = 7; // 集结是否已经出发
+	optional bool isEnd = 8; // 集结是否已经结束
+}
+
+
+
+//自动加入集结设置请求
+message AutoMassJoinSettingReq{
+	required int32 marchCnt         = 1; //队伍数量
+	required int32 soldierPer       = 2; //士兵比例
+	repeated AutoMassJoinType types = 3; //自动加入类型
+}
+
+
+
+//自动加入集结设置返回
+message AutoMassJoinSettingResp{
+	required int32 marchCnt         = 1; //队伍数量
+	required int32 soldierPer       = 2; //士兵比例
+	repeated AutoMassJoinType types = 3; //自动加入类型
+	required int64 startTime        = 4; //开启时间
+	required int64 endTime          = 5; //开启时间
+	required int32 memberIndex      = 6; //排名
+}
+
+
+//自动加入集结类型
+enum AutoMassJoinType
+{
+	FOGGY_JOIN		          =	1;	// 幽灵基地
+	OLD_BOSS_MONSTER_JOIN     =	2;	// 首领怪物-老版
+	NEW_BOSS_MONSTER_JOIN	  =	3;	// 首领怪物-新版
+}
+
+// 使用道具召唤返回目标点坐标
+message	WorldSummonItemResp
+{
+	required int32 targetX	= 1;	// 目标x
+	required int32 targetY	= 2;	// 目标y
+	optional SearchType	type= 3;	// 1资源；2怪物；3领地
+	optional bool success = 4;		// 搜索成功
+	optional int32 monsterId = 5;	// 怪物id
+}

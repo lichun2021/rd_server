@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" signupPointNumLimit="1" signupTime="0" signupEndTime="154800" startTime="158400" endTime="169200" hurtRate="2000" includedPointLevel="2" />
+      <data termId="2" signupPointNumLimit="1" signupTime="172800" signupEndTime="327600" startTime="331200" endTime="342000" hurtRate="3500" includedPointLevel="2,3" />
+      <data termId="3" signupPointNumLimit="1" signupTime="345600" signupEndTime="500400" startTime="504000" endTime="514800" hurtRate="5000" includedPointLevel="2,3,4" />
+</root>

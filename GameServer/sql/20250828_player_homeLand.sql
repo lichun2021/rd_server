@@ -1,0 +1,21 @@
+CREATE TABLE `player_homeland`  (
+  `id` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `playerId` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `theme_id` int(11) NOT NULL DEFAULT '0',
+  `prosperity` bigint(20) NOT NULL DEFAULT '0',
+  `createTime` bigint(20) NOT NULL DEFAULT '0',
+  `updateTime` bigint(20) NOT NULL DEFAULT '0',
+  `invalid` tinyint(1) NOT NULL DEFAULT '0',
+  `likes` int(11) NOT NULL DEFAULT '0',
+  `lastDailyLikeTime` bigint(20) NOT NULL DEFAULT '0',
+  `themes` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `activeProsperityAttr` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `shareTime` bigint(20) NOT NULL DEFAULT '0',
+  `buildingData` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `warehouseData` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `buildingCollect` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dailyLike` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `shopInfo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+ PRIMARY KEY (`id`),
+ KEY `playerId_index` (`playerId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

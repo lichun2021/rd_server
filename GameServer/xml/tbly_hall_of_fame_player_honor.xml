@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- topVipId 个人荣耀页首页的 杀神 得分王啥的 按顺序 , vipId 50最佳阵容 可点赞  对应表tbly_hall_of_fame_player.xml 中的id-->
+      <data id="10001" season="1" topVipId="10001,10003,10004" vipId="10001,10002,10003,10004,10005"/>
+</root>

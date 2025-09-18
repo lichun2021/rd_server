@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2022-3-11 00:00:00" startTime="2022-3-11 00:00:00" endTime="2022-3-13 23:59:59" hiddenTime="2022-3-13 23:59:59" />
+      <data termId="2" showTime="2022-3-26 00:00:00" startTime="2022-3-26 00:00:00" endTime="2022-3-28 23:59:59" hiddenTime="2022-3-28 23:59:59" />
+      <data termId="3" showTime="2022-4-11 00:00:00" startTime="2022-4-11 00:00:00" endTime="2022-4-13 23:59:59" hiddenTime="2022-4-13 23:59:59" />
+      <data termId="4" showTime="2022-4-25 00:00:00" startTime="2022-4-25 00:00:00" endTime="2022-4-27 23:59:59" hiddenTime="2022-4-27 23:59:59" />
+      <data termId="5" showTime="2022-5-13 00:00:00" startTime="2022-5-13 00:00:00" endTime="2022-5-15 23:59:59" hiddenTime="2022-5-15 23:59:59" />
+      <data termId="6" showTime="2022-5-26 00:00:00" startTime="2022-5-26 00:00:00" endTime="2022-5-28 23:59:59" hiddenTime="2022-5-28 23:59:59" />
+      <data termId="7" showTime="2022-6-10 00:00:00" startTime="2022-6-10 00:00:00" endTime="2022-6-12 23:59:59" hiddenTime="2022-6-12 23:59:59" />
+      <data termId="8" showTime="2022-6-22 00:00:00" startTime="2022-6-22 00:00:00" endTime="2022-6-24 23:59:59" hiddenTime="2022-6-24 23:59:59" />
+      <data termId="9" showTime="2022-7-8 00:00:00" startTime="2022-7-8 00:00:00" endTime="2022-7-9 23:59:59" hiddenTime="2022-7-9 23:59:59" />
+      <data termId="10" showTime="2022-7-17 00:00:00" startTime="2022-7-17 00:00:00" endTime="2022-7-18 23:59:59" hiddenTime="2022-7-18 23:59:59" />
+</root>

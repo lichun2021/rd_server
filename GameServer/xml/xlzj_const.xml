@@ -1,0 +1,51 @@
+# 开服时长不足的服务器不参与泰伯利亚之战(单位:秒)
+serverDelay = 2592000
+
+# 报名时间
+warTimeHour = 20:00
+
+# 匹配准备时间
+matchPrepareTime = 300
+
+# 初始化elo积分
+initEloScore = 1200
+
+# 每亿出战战力额外积分(仅在首次开启elo算法时在匹配阶段初始化添加此额外战力)
+extPowerScore = 30
+
+# ELO算法K值
+eloParamK = 120
+
+# ELO算法L值(概率计算参数)
+eloParamL = 400
+
+# ELO积分赛季结算保留系数(万分比)
+eloSeasonCalcPer = 5000
+
+# 连续多期不参与比赛,积分衰减值
+eloAbsentDissScore = 50
+
+# 积分衰减触发轮次
+eloAbsentTerms = 2
+
+# 战场开启时间(单位:秒)
+warOpenTime = 4140
+
+# 参与匹配最低人数限制
+warMemberMinCnt = 30
+
+# 报名联盟战力条件
+signRankLimit = 10
+
+# 创建不足一周的联盟无法进行报名
+guildCreateTimeLimit = 604800
+
+# 参战人数上限
+warMemberLimit = 50
+
+# 结束前多长时间内不能进入副本 单位秒
+limitTimeBoforeEnd = 180
+
+# 匹配对象查找范围（万分比）
+matchTopRate = 500
+

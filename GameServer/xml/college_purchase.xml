@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" shopItemType="0" fixed="1" times="1" awardID="1229005" refreshType="2" limitDay="0" limitLevel="5" />
+      <data id="2" shopItemType="0" fixed="1" times="1" awardID="1229006" refreshType="2" limitDay="0" limitLevel="10" />
+      <data id="3" shopItemType="0" fixed="1" times="1" awardID="1229007" refreshType="2" limitDay="0" limitLevel="15" />
+      <data id="4" shopItemType="0" fixed="1" times="1" awardID="1229008" refreshType="2" limitDay="0" limitLevel="20" />
+      <data id="5" shopItemType="0" fixed="1" times="1" awardID="1229009" refreshType="2" limitDay="0" limitLevel="25" />
+      <data id="6" shopItemType="2" fixed="0" times="1" payItem="10000_1000_100" awardID="1229010" refreshType="1" limitDay="0_60" limitLevel="1" weight="400" dispenseReward="30000_810000_6" />
+      <data id="7" shopItemType="2" fixed="0" times="1" payItem="10000_1000_300" awardID="1229011" refreshType="1" limitDay="0_60" limitLevel="5" weight="600" dispenseReward="30000_810000_16" />
+      <data id="8" shopItemType="2" fixed="0" times="1" payItem="10000_1000_100" awardID="1229012" refreshType="1" limitDay="0_30" limitLevel="1" weight="600" dispenseReward="30000_810000_6" />
+      <data id="9" shopItemType="2" fixed="0" times="1" payItem="10000_1000_300" awardID="1229013" refreshType="1" limitDay="0_30" limitLevel="5" weight="400" dispenseReward="30000_810000_16" />
+      <data id="10" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229014" refreshType="1" limitDay="0_60" limitLevel="1" weight="400" dispenseReward="30000_810001_1" />
+      <data id="11" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229015" refreshType="1" limitDay="0_60" limitLevel="5" weight="600" dispenseReward="30000_810001_2" />
+      <data id="12" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229016" refreshType="1" limitDay="0_60" limitLevel="5" weight="400" dispenseReward="30000_810001_1" />
+      <data id="13" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229017" refreshType="1" limitDay="0_60" limitLevel="10" weight="600" dispenseReward="30000_810001_2" />
+      <data id="14" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229018" refreshType="1" limitDay="61" limitLevel="1" weight="400" dispenseReward="30000_810001_1" />
+      <data id="15" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229019" refreshType="1" limitDay="61" limitLevel="5" weight="600" dispenseReward="30000_810001_2" />
+      <data id="16" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229020" refreshType="1" limitDay="2" limitLevel="1" weight="400" dispenseReward="30000_810001_1" />
+      <data id="17" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229021" refreshType="1" limitDay="2" limitLevel="10" weight="600" dispenseReward="30000_810001_2" />
+      <data id="18" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229022" refreshType="1" limitDay="2" limitLevel="1" weight="400" dispenseReward="30000_810001_1" />
+      <data id="19" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229023" refreshType="1" limitDay="2" limitLevel="10" weight="600" dispenseReward="30000_810001_2" />
+      <data id="20" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229024" refreshType="1" limitDay="5" limitLevel="2" weight="400" dispenseReward="30000_810001_1" />
+      <data id="21" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229025" refreshType="1" limitDay="5" limitLevel="15" weight="600" dispenseReward="30000_810001_2" />
+      <data id="22" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229027" refreshType="1" limitDay="30" limitLevel="15" weight="600" dispenseReward="30000_810001_1" />
+      <data id="23" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229028" refreshType="1" limitDay="50" limitLevel="25" weight="400" dispenseReward="30000_810001_2" />
+      <data id="24" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229029" refreshType="1" limitDay="5" limitLevel="5" weight="400" dispenseReward="30000_810001_1" />
+      <data id="25" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229030" refreshType="1" limitDay="5" limitLevel="15" weight="600" dispenseReward="30000_810001_2" />
+      <data id="26" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229031" refreshType="1" limitDay="5" limitLevel="5" weight="400" dispenseReward="30000_810001_1" />
+      <data id="27" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229032" refreshType="1" limitDay="5" limitLevel="15" weight="600" dispenseReward="30000_810001_2" />
+      <data id="28" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229033" refreshType="1" limitDay="5" limitLevel="5" weight="400" dispenseReward="30000_810001_1" />
+      <data id="29" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229034" refreshType="1" limitDay="5" limitLevel="15" weight="600" dispenseReward="30000_810001_2" />
+      <data id="30" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229035" refreshType="1" limitDay="10" limitLevel="10" weight="400" dispenseReward="30000_810001_1" />
+      <data id="31" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229036" refreshType="1" limitDay="15" limitLevel="20" weight="600" dispenseReward="30000_810001_2" />
+      <data id="32" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229037" refreshType="1" limitDay="5" limitLevel="5" weight="400" dispenseReward="30000_810001_1" />
+      <data id="33" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229038" refreshType="1" limitDay="5" limitLevel="15" weight="600" dispenseReward="30000_810001_2" />
+      <data id="34" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229039" refreshType="1" limitDay="15" limitLevel="10" weight="400" dispenseReward="30000_810001_1" />
+      <data id="35" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229040" refreshType="1" limitDay="25" limitLevel="20" weight="600" dispenseReward="30000_810001_2" />
+      <data id="36" shopItemType="2" fixed="0" times="1" payItem="10000_1000_200" awardID="1229041" refreshType="1" limitDay="25" limitLevel="15" weight="500" dispenseReward="30000_810001_1" />
+      <data id="37" shopItemType="2" fixed="0" times="1" payItem="10000_1000_500" awardID="1229042" refreshType="1" limitDay="40" limitLevel="25" weight="500" dispenseReward="30000_810001_2" />
+</root>

@@ -1,0 +1,28 @@
+return {
+	prop =
+	{
+		activityId = 24,
+		name = [[占领敌区]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">本活动开放后，玩家可以在大世界中争夺和占领尤里兵营，获取丰厚奖励！</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间可以完成据点相关的成就任务，获取更加丰厚的奖励，成就任务每日刷新！</font>]],
+		priority = 11600,
+		icon = [[Activity_Icon_17_Nor.png]],
+		selecticon = [[Activity_Icon_17_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		serverDelay = 0,
+	},
+	strongpoint_activity_achieve = [[achieveId	title	conditionType	configValue	goToType	goToValue	rewards
+1	2	2	2	2	2	2
+240001	AchieveName240001	380100	999999	31	15_1	30000_850010_30,30000_850040_30,30000_810000_10
+240002	AchieveName240002	380100	999999	31	15_1	30000_850010_32,30000_850040_32,30000_810000_11
+240003	AchieveName240003	380100	999999	31	15_1	30000_850010_36,30000_850040_36,30000_810000_13
+240004	AchieveName240004	380200	999999	31	15_1	30000_850010_42,30000_850040_42,30000_810000_16
+240005	AchieveName240005	380200	999999	31	15_1	30000_850010_50,30000_850040_50,30000_810000_20
+240006	AchieveName240006	380200	999999	31	15_1	30000_850010_60,30000_850040_60,30000_810000_25
+]],
+	strongpoint_activity_time = [[termId	showTime	startTime	endTime	hiddenTime
+1	1	1	1	1
+1	2018-8-31 00:00:00	2018-9-1 00:00:00	2019-2-26 23:59:59	2019-2-26 23:59:59
+]],
+
+}

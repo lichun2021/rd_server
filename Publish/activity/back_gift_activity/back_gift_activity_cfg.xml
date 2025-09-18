@@ -1,0 +1,18 @@
+# 流失时间；单位：秒
+lostTime = 604800
+
+# 每日刷新次数
+resetLimit = 5
+
+# 每日刷新CD 单位：秒
+resetLimitCd = 20
+
+# 每日免费抽奖次数
+costFree = 1
+
+# 免费抽奖CD：秒
+lotteryLimitCd = 45000
+
+# 转盘消耗道具
+lotteryCostItem = 30000_17199001_1
+

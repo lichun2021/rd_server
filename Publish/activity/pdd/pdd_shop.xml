@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" day="1" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_1000003_1" times="1" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1002" day="1" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_1782103_6" times="5" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1003" day="1" aloneNeedItem="10000_1000_100" needItem="10000_1000_50" gainItem="30000_1300017_20" times="10" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1004" day="1" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_1800001_3" times="20" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1005" day="1" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_1800000_25" times="1" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+      <data id="1006" day="2" aloneNeedItem="10000_1000_100" needItem="10000_1000_50" gainItem="30000_800002_4" times="5" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+      <data id="1007" day="2" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_802003_4" times="10" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+      <data id="1008" day="2" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_800000_4" times="20" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+      <data id="1009" day="2" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_1800001_3" times="20" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1010" day="2" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_1800000_25" times="1" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+      <data id="1011" day="3" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_1000003_1" times="1" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1012" day="3" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_1782103_6" times="5" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1013" day="3" aloneNeedItem="10000_1000_100" needItem="10000_1000_50" gainItem="30000_1300017_20" times="10" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1014" day="3" aloneNeedItem="10000_1000_10" needItem="10000_1000_5" gainItem="30000_1800001_3" times="20" endTime="180" successTime="60_120" waterFlood="0_0_300_20;1_19_300_5;20_23_600_5" />
+      <data id="1015" day="3" aloneNeedItem="10000_1000_50" needItem="10000_1000_25" gainItem="30000_1800000_25" times="1" endTime="180" successTime="60_120" waterFlood="0_0_300_15;1_19_300_5;20_23_600_5" />
+</root>

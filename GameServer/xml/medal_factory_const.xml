@@ -1,0 +1,21 @@
+# 功能开启等级，基地10级
+openLevel = 10
+
+# 每日偷取道具数量上限
+daylyMax = 30000_21063063_400
+
+# 每日刷新次数
+refreshNum = 5
+
+# 刷新CD，单位秒
+refreshTime = 3600
+
+# 每次偷取比例，万分比
+stealRatioOnce = 2000
+
+# 最大偷取比例，万分比
+stealRatioMax = 6000
+
+# 生产线总量
+maxProductionNum = 4
+

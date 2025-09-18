@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="190830" conditionType="160200" conditionValue="60" rewards="30000_15100001_3,30000_850047_1,30000_800110_5,30000_1780045_2,30000_810001_3" />
+      <data achieveId="190831" conditionType="160200" conditionValue="300" rewards="30000_15100001_6,30000_850048_1,30000_800110_10,30000_1780050_2,30000_810001_8" />
+      <data achieveId="190832" conditionType="141001" conditionValue="1" rewards="30000_800143_5,30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2" />
+      <data achieveId="190833" conditionType="500011" conditionValue="0_999_20" rewards="30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1510003_20,30000_13310003_20" />
+      <data achieveId="190834" conditionType="31100" conditionValue="1007_1008_1500000" rewards="30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1780035_3,30000_1780030_3" />
+      <data achieveId="190835" conditionType="20100" conditionValue="0_3000" rewards="30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_104050_2,30000_850036_3" />
+      <data achieveId="190836" conditionType="500024" conditionValue="1" rewards="30000_15100001_1,30000_1300017_30,30000_1780040_3,30000_1300009_20,30000_1300006_20" />
+</root>

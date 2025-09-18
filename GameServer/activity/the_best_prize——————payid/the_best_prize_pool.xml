@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" startPoolValue="3" rewards="1_70,2_80,3_95,4_160,5_160,6_165,7_165" itemNeedValue="6" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_1300037_350" poolLimit="18" maxGetLimit="18" />
+      <data id="2" startPoolValue="3" rewards="8_70,9_80,10_95,11_160,12_160,13_165,14_165" itemNeedValue="3" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_21070056_828" poolLimit="18" maxGetLimit="36" />
+      <data id="3" startPoolValue="4" rewards="15_70,16_80,17_95,18_160,19_160,20_165,21_165" itemNeedValue="5" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_21065001_618" poolLimit="24" />
+      <data id="4" startPoolValue="3" rewards="22_70,23_80,24_95,25_160,26_160,27_165,28_165" itemNeedValue="5" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_1400011_480" poolLimit="18" />
+      <data id="5" startPoolValue="9" rewards="29_70,30_80,31_95,32_160,33_160,34_165,35_165" itemNeedValue="3" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_1000005_48" poolLimit="54" />
+      <data id="6" startPoolValue="6" rewards="36_70,37_80,38_95,39_160,40_160,41_165,42_165" itemNeedValue="2" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_1782123_568" poolLimit="36" />
+      <data id="7" startPoolValue="12" rewards="43_70,44_80,45_95,46_160,47_160,48_165,49_165" itemNeedValue="1" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_1300027_2688" poolLimit="72" />
+      <data id="8" startPoolValue="8" rewards="50_70,51_80,52_95,53_160,54_160,55_165,56_165" itemNeedValue="1" drawConsume="30000_21070060_1" drawReserveConsume="30000_21070059_1" lastRewards="30000_802005_1288" poolLimit="48" />
+</root>

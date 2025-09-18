@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="0" itemId="30000_1150187_1" price="10000_1000_0" timesLimit="5" />
+      <data id="2" type="0" itemId="30000_1150188_1" price="10000_1000_0" timesLimit="5" />
+      <data id="3" type="0" itemId="30000_1150189_1" price="10000_1000_0" timesLimit="5" />
+      <data id="4" type="1" itemId="30000_1150190_1" price="10000_1000_50" timesLimit="5" />
+      <data id="5" type="1" itemId="30000_1150191_1" price="10000_1000_100" timesLimit="5" />
+      <data id="6" type="1" itemId="30000_1150192_1" price="10000_1000_200" timesLimit="5" />
+</root>

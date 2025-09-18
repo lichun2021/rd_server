@@ -1,0 +1,34 @@
+option java_package = "com.hawk.game.protocol";
+
+message LuckyBagShareResp{
+    optional string wxUrl = 1; //分享url
+	optional string qqFrom = 2;
+	optional string qqChest_id = 3;
+	optional string qqInvite_uin = 4;
+	optional int32 errorCode = 5;
+	optional string errorMsg = 6;
+	optional string qqUrl = 7; // qq分享Url
+}
+
+enum BattleReportSharedAwardStatus{
+	SHARE_ENABLE = 1;
+	AWARD_ENABLE = 2;
+	AWARDED = 3;
+}
+
+message BattleReportShareAwardResp{
+	required BattleReportSharedAwardStatus status = 1;
+}
+
+message PlayerDailyShareSaveDataPB{
+	optional BattleReportSharedAwardStatus brStatus = 1;
+}
+
+message TBLYFameHallShareInfo{
+	required int32 season	= 1;//赛季
+	required bool isShared	= 2;//分享状态
+}
+
+message TBLYFameHallInfo{
+	repeated TBLYFameHallShareInfo shareInfos = 1;
+}

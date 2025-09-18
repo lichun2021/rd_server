@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="29310001" number="0" powerMin="25000000" power="40000000" rank="1" />
+      <data id="29310002" number="1" powerMin="20000000" power="40000000" rank="2" />
+      <data id="29310003" number="2" powerMin="15000000" power="40000000" rank="4" />
+      <data id="29310004" number="3" powerMin="12000000" power="35000000" rank="8" />
+      <data id="29310005" number="4" powerMin="10000000" power="30000000" rank="16" />
+      <data id="29310006" number="6" powerMin="8000000" power="25000000" rank="32" />
+      <data id="29310007" number="8" powerMin="4000000" power="25000000" rank="64" />
+      <data id="29310008" number="10" powerMin="2000000" power="25000000" rank="0" />
+</root>

@@ -1,0 +1,50 @@
+project.archivesBaseName = "gameactivity"
+
+ext {
+    aspectjVersion = '1.8.9'
+}
+
+apply plugin: 'aspectj'
+
+repositories {
+	ivy {
+		url "$ivypath";
+		metadataSources {
+			artifact()
+		}
+	}
+}
+	
+buildscript {
+	repositories {
+        ivy {
+			url "$ivypath";
+			metadataSources {
+				artifact()
+			}
+		}
+    }
+    dependencies {
+        classpath "nl.eveoh:gradle-aspectj:1.6"
+    }
+}
+
+compileAspect {
+	additionalAjcArgs = ['encoding':'UTF-8']
+}
+
+dependencies {
+	compile fileTree(dir: '../HawkEngine/lib', include: '*.jar');
+	//compile fileTree(dir: '../GameServer/lib', include: '*.jar');
+	compile fileTree(dir: 'lib', include: '*.jar');	
+	compile project(':Protocol/Protobuf/Java');
+	compile project(':GameLib');
+}
+
+// 明确设置任务依赖，确保顺序（兼容 Gradle 4.10.3）
+afterEvaluate {
+	tasks.getByName('compileAspect') {
+		dependsOn ':Protocol/Protobuf/Java:jar', ':GameLib:jar'
+	}
+}
+

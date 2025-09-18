@@ -1,0 +1,15 @@
+# 解锁活动所需大本等级
+unlockCondition = 10
+
+# 生效期持续时间；单位：秒
+effectiveTime = 86400
+
+# 结算期持续时间；单位：秒
+accountTime = 0
+
+# 积分目标难度等级随机权重
+difficultRndWeight = 1_100,2_100,3_100
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+

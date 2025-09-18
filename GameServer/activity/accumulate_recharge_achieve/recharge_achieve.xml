@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="310000" conditionType="160200" conditionValue="120" rewards="30000_1782124_12,30000_1780050_10,30000_810001_15" />
+      <data achieveId="310001" conditionType="160200" conditionValue="500" rewards="30000_1782124_24,30000_1780050_16,30000_810001_25" />
+      <data achieveId="310002" conditionType="160200" conditionValue="1000" rewards="30000_1782124_36,30000_1000005_3,30000_1780050_24,30000_810001_30" />
+      <data achieveId="310003" conditionType="160200" conditionValue="2000" rewards="30000_1782124_36,30000_1000005_5,30000_1780050_30,30000_810001_40" />
+      <data achieveId="310004" conditionType="160200" conditionValue="3000" rewards="30000_1782124_48,30000_1000005_5,30000_1780050_36,30000_810001_50" />
+      <data achieveId="310005" conditionType="160200" conditionValue="5000" rewards="30000_1782124_60,30000_1000005_5,30000_1780050_42,30000_810001_60" />
+      <data achieveId="310006" conditionType="160200" conditionValue="10000" rewards="30000_1782124_72,30000_1000005_5,30000_1780050_48,30000_810001_80" />
+      <data achieveId="310007" conditionType="160200" conditionValue="20000" rewards="30000_1782124_96,30000_1000005_10,30000_1780050_54,30000_810001_120" />
+      <data achieveId="310008" conditionType="160200" conditionValue="30000" rewards="30000_1782124_120,30000_1000005_10,30000_1780050_60,30000_810001_180" />
+      <data achieveId="310009" conditionType="160200" conditionValue="50000" rewards="30000_1782124_144,30000_1000005_15,30000_1780050_80,30000_810001_400" />
+      <data achieveId="310010" conditionType="160200" conditionValue="80000" rewards="30000_1782124_192,30000_1000005_15,30000_830042_10,30000_830048_10,30000_830053_5" />
+      <data achieveId="310011" conditionType="160200" conditionValue="100000" rewards="30000_1782124_240,30000_1000005_30,30000_830043_5,30000_830049_5,30000_830054_2" />
+      <data achieveId="310012" conditionType="160200" conditionValue="150000" rewards="30000_1782124_360,30000_1000005_50,30000_830044_5,30000_830050_5,30000_830055_2" />
+</root>

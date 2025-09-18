@@ -1,0 +1,330 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "Army.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+//小战区阶段
+enum PBXZQStage{
+	XZQ_CHOOSE    = 1;    //选拔阶段
+	XZQ_CIRCLE    = 2;    //循环阶段
+}
+
+
+//小战区阶段
+enum PBXZQStatus{
+	XZQ_SIGNUP            = 1;    //报名
+	XZQ_WAIT_OPEN         = 2;    //等待开展
+	XZQ_OPEN              = 3;    //争夺阶段
+	XZQ_HIDDEN            = 4;    //活动结束
+}
+
+//小战区地图建筑状态
+enum PBXZQBuildStatus{
+	XZQ_BUILD_INIT              = 1;    //初始
+	XZQ_BUILD_SIGNUP            = 2;    //报名
+	XZQ_BUILD_WAIT_OPEN         = 3;    //等待开战
+	XZQ_BUILD_BATTLE            = 4;    //争夺
+	XZQ_BUILD_CONTROL           = 5;    //控制
+}
+
+
+
+//小战区各个状态时间信息
+message PBXZQTimeInfo{
+	required int32 termId 	       = 1;   //小战区期数
+	required int32 signupType      = 2;   //报名形式 1需要报名  2 不需要报名 3有占领建筑不需要报名，没有则需要报名
+	optional int64 signupStartTime = 3;   //报名开始时间
+	optional int64 signupEndTime   = 4;   //报名结束时间
+	optional int64 openTime        = 5;   //争夺开始时间
+	optional int64 endTime         = 6;   //争夺结束时间 并非战斗结束时间 
+	repeated int32 openBuildLevel  = 7;   //开放的小建筑等级
+	optional int32 hurtRate        = 8;   //伤病比例
+	
+}
+
+
+//小战区当前内容
+message PBXZQInfo{
+	optional PBXZQStage stage                 = 1;   //小战区所处阶段
+	optional PBXZQStatus status               = 2;   //小战区当前状态
+	optional PBXZQTimeInfo time               = 3;   //小战区时间信息
+	repeated PBXZQTimeInfo chooseStageTimes   = 4;   //选拔期时间，时间列表
+	repeated PBXZQForceColor colors           = 5;   //小站区势力颜色
+	repeated PBXZQBuild builds                = 6;   //小站区建筑列表
+}
+
+//小战区控制
+message PBXZQBuildGuild{
+	required string guildId    = 1; //联盟ID
+	required string guildName  = 2; //联盟名称
+	required string guildTag   = 3; //联盟标记
+	required int32 guildFlag   = 4; //联盟标志
+	required int64 guildPower  = 5; //联盟战力
+	required string leaderName = 6; //盟主名字
+}
+
+
+message PBXZQBuildCommander{
+	required string playerId = 1; //玩家ID
+	required string name     = 2; //玩家名称
+	optional int32 icon      = 3; //头像
+	optional string pfIcon   = 4; //平台头像
+}
+
+//小站区刻字
+message PBXZQBuildRecord{
+	optional string serverId                    = 1; //服务器ID
+	optional PBXZQBuildCommander firstOccupy    = 2; //首次占领司令官
+	optional PBXZQBuildGuild firstControl       = 3; //首战联盟
+	repeated PBXZQBuildCommander damages        = 4; //首次攻破，前三伤害列表
+	
+}
+
+
+//小战区小地图建筑
+message PBXZQBuild{
+	required int32 buidingId                       = 1;  //建筑配置ID
+	required int32 posx                            = 2;  //坐标x
+	required int32 posy                            = 3;  //坐标y
+	required PBXZQBuildStatus status               = 4;  //建筑当前状态
+	required PBXZQTimeInfo time                    = 5;  //小战区时间
+	optional PBXZQTimeInfo nextTime                = 6;  //小战区时间
+	optional PBXZQBuildGuild control               = 7;  //小站区控制	
+	optional string controlBefore                  = 8;  //战前控制联盟ID
+	optional PBXZQBuildGuild Occupy                = 9;  //争夺状态,当前攻破联盟
+	optional int64 occupyStartTime                 = 10; //争夺状态,攻占开始时间
+	optional int64 OccupyEndTime                   = 11; //争夺状态,攻占结束时间
+	repeated PBXZQBuildRecord record               = 12; //小战区建筑刻字
+	repeated string signupGuildIds                 = 13; //小站区报名工会ID列表
+	required bool haveNpc                          = 14; //是否有NPC
+	
+	
+}
+
+
+//小战区小地图建筑
+message PBXZQBuildDetail{
+	required int32 buidingId                      = 1;  //建筑配置ID
+	required int32 posx                           = 2;  //坐标x
+	required int32 posy                           = 3;  //坐标y
+	required PBXZQBuildStatus status              = 4;  //建筑当前状态
+	required PBXZQTimeInfo time                   = 5;  //小战区时间
+	optional PBXZQTimeInfo nextTime               = 6;  //小战区时间
+	optional PBXZQBuildGuild control              = 7;  //小站区控制
+	optional string controlBefore                 = 8;  //战前控制联盟ID
+	repeated PBXZQBuildRecord record              = 9;  //刻字
+	optional PBXZQBuildGuild Occupy               = 10;  //争夺状态,当前攻破联盟	
+	optional int64 occupyStartTime                = 11; //争夺状态,攻占开始时间
+	optional int64 OccupyEndTime                  = 12; //争夺状态,攻占结束时间
+	repeated PBXZQBuildGuild signupGuilds         = 13; //报名的工会ID
+	repeated string signupGuildIds                = 14; //小站区报名工会ID列表
+	required bool haveNpc                         = 15; //是否有NPC
+	required bool initOccupy                      = 16; //是否是初始攻占状态
+	required bool initControl                     = 17; //是否是初始控制状态
+	required int32 guildMembers                   = 18; //联盟成员数量
+}
+
+
+
+//小站区势力颜色
+message PBXZQForceColor{
+	required string guildId = 1;   //联盟颜色
+	required int32 color    = 2;   //势力颜色
+	required int64 cdTime   = 3;   //冻结时间
+}
+
+
+
+
+
+//小站区联盟战区信息
+message PBXZQGuildWarInfo{
+	repeated int32 recommends            = 1;   //推荐建筑
+	repeated int32 attacks               = 2;   //可攻击列表
+}
+
+
+// 礼包颁发记录数据
+message PBXZQGiftRecord
+{
+	required int64 sendTime 	= 1;
+	required int32 giftId 		= 2;
+	required string playerName 	= 3;
+	required string playerId 	= 4;
+	optional string guildTag 	= 5;
+	required string sender      = 6;
+	optional int32 posX			= 7; //坐标x
+	optional int32 posY			= 8; //坐标y
+}
+
+
+// 超级武器礼包信息
+message PBXZQGiftInfo
+{
+	required int32 giftId 		 = 1; //礼包id
+	required int32 residueNumber = 2; //剩余数量
+	required int32 totalNumber 	 = 3; //总数量
+	optional int32 posX			 = 4; //坐标x
+	optional int32 posY			 = 5; //坐标y
+}
+
+//小站区提供的作用号
+message PBXZQEffect{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+
+//小战区时间变化同步
+message PBXZQPageShowSyncResp{
+	optional bool open                        = 1;   //小战区是否开放
+	optional string serverId                  = 2;   //玩家注册服ID
+	optional PBXZQInfo xzqInfo                = 3;   //小战区信息
+}
+
+
+//小站区建筑同步
+message PBXZQBuildSyncResp{
+	repeated PBXZQBuild builds = 1;  //建筑列表
+}
+
+
+//小站区作用号同步
+message PBXZQEffectSyncResp{
+	repeated PBXZQEffect effcts = 1;  //小站区作用号列表
+}
+
+//小战区门票个数同步
+message PBXZQTicketsSyncResp{
+	required string guildId    = 1; //联盟ID
+	required int32 ticketCount = 2; //小战区门票个数
+}
+
+
+
+//小站区小地图建筑具体信息
+message PBXZQMapBuildDetailReq{
+	required int32 buidingId = 1;
+}
+
+//小战区报名 (返回通用成功，更新世界点)
+message PBXZQSignupReq{
+	required int32 buidingId = 1;
+}
+
+
+
+//小战区取消报名 (返回通用成功，更新世界点)
+message PBXZQCancelSignupReq{
+	required int32 buidingId = 1;
+}
+
+
+//小站区设置势力颜色
+message PBXZQForceColorSetReq{
+	required int32 color = 1;  //颜色ID
+}
+
+
+//小站区设置势力颜色
+message PBXZQForceColorSetResp{
+	repeated PBXZQForceColor colors = 1;  //小站区势力颜色
+}
+
+//放弃小战区
+message PBXZQGiveUpReq{
+	required int32 buidingId = 1;
+}
+
+// 小战区建筑礼包记录
+message PBXZQGiftRecodReq
+{
+	required int32 buildId = 1;
+}
+
+// 小战区礼包颁发记录
+message PBXZQGiftRecordResp
+{
+	repeated PBXZQGiftRecord giftRecord = 1;
+}
+
+
+
+// 小战区建筑礼包信息获取
+message PBXZQGiftInofReq
+{
+	required int32 buildId = 1;
+}
+// 小战区建筑礼包信息
+message PBXZQGiftInfoResp
+{
+	repeated PBXZQGiftInfo giftInfo = 1;
+}
+
+
+// 小战区建筑颁发礼包请求
+message PBXZQSendGiftReq
+{
+	required int32 buildId = 1; //建筑ID
+	required int32 giftId = 2; // 礼包id
+	repeated PBXZQSendGiftPlayerInfo playerInfo = 3; // 颁发给的玩家信息
+}
+
+message PBXZQSendGiftPlayerInfo
+{
+	required string playerId = 1; // 玩家id
+	required int32 count = 2; // 数量
+}
+
+// 超级武器玩家礼包接收数量
+message XZQGiftReceiveCountReq
+{
+	optional string playerId = 1;
+	required int32 giftId = 2;
+	required int32  buildId = 3;
+}
+
+// 超级武器玩家礼包接收数量
+message XZQAllGiftReceiveCountResp
+{
+	repeated XZQGiftReceiveCountResp sendInfo = 1;
+}
+
+message XZQGiftReceiveCountResp
+{
+	required int32 receiveCount = 1;
+	required int32 limitCount = 2;
+	optional string playerId = 3;
+	optional int32 giftId = 4;
+	optional int32 buildId = 5;
+}
+
+
+// 超级武器驻扎部队信息
+message PBXZQQuarterInfoReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message PBXZQQuarterInfoResp
+{
+	repeated PBXZQQuarterMarch quarterMarch = 1;
+	optional int32 massSoldierNum				  = 2; //队长集结上限
+}
+
+// 超级武器驻扎部队行军信息
+message PBXZQQuarterMarch
+{
+	required string playerId 	= 1;
+	required string name 	 	= 2;
+	optional string pfIcon   	= 3;
+	optional string guildTag 	= 4;
+	optional int32 icon 	 	= 5;
+	repeated ArmySoldierPB army = 6;
+	required string marchId 	= 7;
+	repeated int32 heroId 		= 8;
+	repeated PBHeroInfo hero 	= 9;
+	optional PBSuperSoldierInfo ssoldier 	= 10; 
+}

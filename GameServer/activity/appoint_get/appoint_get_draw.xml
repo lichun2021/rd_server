@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" weight="500" gainItem="30000_1001113_1" />
+      <data id="2" weight="30" gainItem="30000_1001113_3" />
+      <data id="3" weight="10" gainItem="30000_1001113_10" />
+      <data id="4" weight="1500" gainItem="30000_850008_3" />
+      <data id="5" weight="1500" gainItem="30000_850038_3" />
+      <data id="6" weight="1500" gainItem="30000_850018_3" />
+      <data id="7" weight="1500" gainItem="30000_850028_3" />
+      <data id="8" weight="1000" gainItem="30000_100060_1" />
+      <data id="9" weight="1000" gainItem="30000_100050_3" />
+      <data id="10" weight="1460" gainItem="30000_820002_1" />
+</root>

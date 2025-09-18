@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10150100" supersoldierId="1015" enablingPosition="1" enablingLevel="0" />
+      <data id="10150101" supersoldierId="1015" enablingPosition="1" enablingLevel="1" effectList="301_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150102" supersoldierId="1015" enablingPosition="1" enablingLevel="2" effectList="301_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150103" supersoldierId="1015" enablingPosition="1" enablingLevel="3" effectList="301_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150104" supersoldierId="1015" enablingPosition="1" enablingLevel="4" effectList="301_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150105" supersoldierId="1015" enablingPosition="1" enablingLevel="5" effectList="301_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150200" supersoldierId="1015" enablingPosition="2" enablingLevel="0" />
+      <data id="10150201" supersoldierId="1015" enablingPosition="2" enablingLevel="1" effectList="320_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150202" supersoldierId="1015" enablingPosition="2" enablingLevel="2" effectList="320_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150203" supersoldierId="1015" enablingPosition="2" enablingLevel="3" effectList="320_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150204" supersoldierId="1015" enablingPosition="2" enablingLevel="4" effectList="320_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150205" supersoldierId="1015" enablingPosition="2" enablingLevel="5" effectList="320_0_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150300" supersoldierId="1015" enablingPosition="3" enablingLevel="0" />
+      <data id="10150301" supersoldierId="1015" enablingPosition="3" enablingLevel="1" effectList="400_10" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150302" supersoldierId="1015" enablingPosition="3" enablingLevel="2" effectList="400_10" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150303" supersoldierId="1015" enablingPosition="3" enablingLevel="3" effectList="400_10" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150304" supersoldierId="1015" enablingPosition="3" enablingLevel="4" effectList="400_10" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150305" supersoldierId="1015" enablingPosition="3" enablingLevel="5" effectList="400_10" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150400" supersoldierId="1015" enablingPosition="4" enablingLevel="0" />
+      <data id="10150401" supersoldierId="1015" enablingPosition="4" enablingLevel="1" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150402" supersoldierId="1015" enablingPosition="4" enablingLevel="2" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150403" supersoldierId="1015" enablingPosition="4" enablingLevel="3" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150404" supersoldierId="1015" enablingPosition="4" enablingLevel="4" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150405" supersoldierId="1015" enablingPosition="4" enablingLevel="5" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150500" supersoldierId="1015" enablingPosition="5" enablingLevel="0" />
+      <data id="10150501" supersoldierId="1015" enablingPosition="5" enablingLevel="1" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150502" supersoldierId="1015" enablingPosition="5" enablingLevel="2" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150503" supersoldierId="1015" enablingPosition="5" enablingLevel="3" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150504" supersoldierId="1015" enablingPosition="5" enablingLevel="4" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150505" supersoldierId="1015" enablingPosition="5" enablingLevel="5" effectList="1306_50" powerCoeff="40" enablingCost="30000_9990022_100" />
+      <data id="10150601" supersoldierId="1015" enablingPosition="6" enablingLevel="1" effectList="1005_80" powerCoeff="50" enablingCost="30000_9990022_100,10000_1001_1000" />
+      <data id="10150701" supersoldierId="1015" enablingPosition="7" enablingLevel="1" effectList="1322_1" powerCoeff="50" enablingCost="30000_9990022_100,10000_1001_1000" />
+      <data id="10150801" supersoldierId="1015" enablingPosition="8" enablingLevel="1" effectList="1323_30" powerCoeff="50" enablingCost="30000_9990022_100,10000_1001_1000" />
+      <data id="10150901" supersoldierId="1015" enablingPosition="9" enablingLevel="1" effectList="1324_30" powerCoeff="50" enablingCost="30000_9990022_100,10000_1001_1000" />
+      <data id="10151001" supersoldierId="1015" enablingPosition="10" enablingLevel="1" effectList="1324_30" powerCoeff="50" enablingCost="30000_9990022_100,10000_1001_1000" />
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="38310001" type="1" refreshType="1" conditionType="140900" conditionValue="1" rewards="30000_1383001_4,30000_850007_50,30000_850037_50,30000_850017_50,30000_850027_50" />
+      <data achieveId="38310002" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_10" rewards="30000_1383001_6,30000_850007_50,30000_850037_50,30000_850017_50,30000_850027_50" />
+      <data achieveId="38310003" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_25" rewards="30000_1383001_10,30000_850007_100,30000_850037_100,30000_850017_100,30000_850027_100" />
+      <data achieveId="38310004" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_50" rewards="30000_1383001_15,30000_850007_150,30000_850037_150,30000_850017_150,30000_850027_150" />
+      <data achieveId="38310005" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_100" rewards="30000_1383001_25,30000_850007_200,30000_850037_200,30000_850017_200,30000_850027_200" />
+      <data achieveId="38310006" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_200" rewards="30000_1383001_40,30000_850007_250,30000_850037_250,30000_850017_250,30000_850027_250" />
+      <data achieveId="38310007" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_400" rewards="30000_1383001_60,30000_850007_300,30000_850037_300,30000_850017_300,30000_850027_300" />
+      <data achieveId="38310008" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_800" rewards="30000_1383001_90,30000_850007_350,30000_850037_350,30000_850017_350,30000_850027_350" />
+      <data achieveId="38310009" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_1500" rewards="30000_1383001_120,30000_850007_400,30000_850037_400,30000_850017_400,30000_850027_400" />
+      <data achieveId="38310010" type="1" refreshType="2" conditionType="37804" conditionValue="1383001_3000" rewards="30000_1383001_200,30000_850007_500,30000_850037_500,30000_850017_500,30000_850027_500" />
+</root>

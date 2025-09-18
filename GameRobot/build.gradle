@@ -1,0 +1,27 @@
+project.archivesBaseName = "gamerobot";
+
+buildscript {   
+	repositories {
+        ivy {
+        	url "$ivypath"
+    	}
+    }
+}
+
+dependencies {    
+    compile project(':Protocol/Protobuf/Java')
+	compile fileTree(dir: 'lib', include: '*.jar')
+	compile fileTree(dir: '../GameServer/lib', include: '*.jar');
+	compile fileTree(dir: "$ivypath", include: '*.jar')	
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.hawk.robot.GameRobotMain'
+		attributes 'Class-Path': new File("$ivypath").list().findAll { it.endsWith('.jar') }.collect { "lib/$it" }.join(' ') + " " + new File("lib").list().findAll { it.endsWith('.jar') }.collect { "lib/$it" }.join(' ') + " lib/gameprotocol.jar"
+	}
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data giftId="1" item="30000_844001_1" dailyLimit="1" guardianValue="1" />
+      <data giftId="2" item="30000_844002_1" price="10000_1001_77" dailyLimit="1" guardianValue="10" />
+      <data giftId="3" item="30000_844003_1" price="10000_1000_99" dailyLimit="1" guardianValue="20" />
+      <data giftId="4" item="30000_844004_1" price="10000_1000_399" dailyLimit="1" guardianValue="120" />
+</root>

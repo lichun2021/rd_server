@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" extraStar="10" topeRate="500" />
+      <data id="2" extraStar="9" topeRate="1000" />
+      <data id="3" extraStar="8" topeRate="2000" />
+      <data id="4" extraStar="7" topeRate="3200" />
+      <data id="5" extraStar="6" topeRate="4400" />
+      <data id="6" extraStar="5" topeRate="5600" />
+      <data id="7" extraStar="4" topeRate="6800" />
+      <data id="8" extraStar="3" topeRate="8000" />
+      <data id="9" extraStar="2" topeRate="9000" />
+      <data id="10" extraStar="1" topeRate="9500" />
+</root>

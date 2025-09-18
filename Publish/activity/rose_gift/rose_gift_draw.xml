@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" weight="100" gainItem="30000_1780138_1" times="1" notice="1" />
+      <data id="1002" weight="100" gainItem="30000_1780138_2" times="3" />
+      <data id="1003" weight="100" gainItem="30000_1780138_3" times="5" />
+      <data id="1004" weight="500" gainItem="30000_1780138_4" times="10" />
+      <data id="1005" weight="100" gainItem="30000_840194_10" times="1" notice="1" />
+      <data id="2001" weight="100" gainItem="30000_840194_11" times="3" />
+      <data id="2002" weight="100" gainItem="30000_840194_12" times="5" />
+      <data id="2003" weight="500" gainItem="30000_840194_13" times="10" />
+</root>

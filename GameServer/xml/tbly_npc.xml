@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" mirror="3000" playerName="突袭先锋队" guildName="突袭指挥所" guildTag="NPC" icon="1" buildAtkBuff="10003_2000,10004_2000,10005_2000,10006_2000,10007_2000,10008_2000,10009_2000,10010_2000" atkBuffTime="30" />
+      <data id="2" mirror="4000" playerName="突袭先锋队" guildName="突袭指挥所" guildTag="NPC" icon="1" buildAtkBuff="10003_2000,10004_2000,10005_2000,10006_2000,10007_2000,10008_2000,10009_2000,10010_2000" atkBuffTime="30" />
+      <data id="3" mirror="5000" playerName="突袭先锋队" guildName="突袭指挥所" guildTag="NPC" icon="1" buildAtkBuff="10003_2000,10004_2000,10005_2000,10006_2000,10007_2000,10008_2000,10009_2000,10010_2000" atkBuffTime="30" />
+</root>

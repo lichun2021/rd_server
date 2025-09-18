@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 343,
+		name = [[老友回归]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">邀请老友回归，领取老友集结成长专属礼包</font>]],
+		priority = 11260,
+		icon = [[Activity_Icon_343_Nor.png]],
+		selecticon = [[Activity_Icon_343_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20240408hg/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20240408hg/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20240408hg/index.html]],
+		platform = [[]],
+	},
+
+}

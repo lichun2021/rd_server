@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" weight="1000" reward="30000_1150143_1" jackpot="1" />
+      <data id="2" weight="2250" reward="30000_1780045_1" jackpot="0" />
+      <data id="3" weight="2250" reward="30000_100050_2" jackpot="0" />
+      <data id="4" weight="2250" reward="30000_800110_1" jackpot="0" />
+      <data id="5" weight="2250" reward="30000_800000_1" jackpot="0" />
+</root>

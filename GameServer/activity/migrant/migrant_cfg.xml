@@ -1,0 +1,30 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 移民令道具ID
+item = 21070008
+
+# 不能移民去的新服保护时间：单位：秒
+newServerProtect = 0
+
+# 多少天以前注册
+registerDay = 0
+
+# 流失多少天以上
+lostDay = 0
+
+# 可移民的服务器开服时间前后天数
+migrantDay = 1000
+
+# 那些服开启，0全部开，多个服务器直接用,分割。如果想全不开，则关闭活动
+openServer = 0
+
+# 上次最后登出时间，在这个时间之后
+activeTimeStart = 2021-11-1 00:00:00
+
+# 需要的VIP等级
+vipLevel = 0
+
+# 2个排行榜消耗值都为0的时候，消耗的道具数量
+itemNumMin = 1
+

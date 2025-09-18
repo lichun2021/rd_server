@@ -1,0 +1,56 @@
+option java_package	= "com.hawk.game.protocol";
+import "GuildTeam.proto";
+
+
+//活动状态
+enum XQHXState{
+    XQHX_PEACE        = 1;//和平阶段
+    XQHX_SIGNUP       = 2;//报名阶段
+    XQHX_MATCH_WAIT   = 3;//等待阶段
+    XQHX_MATCH        = 4;//匹配阶段
+    XQHX_PREPARE      = 5;//准备阶段
+    XQHX_BATTLE       = 6;//战斗阶段
+    XQHX_FINISH       = 7;//结束阶段
+}
+
+
+//状态信息
+message XQHXStateInfo{
+    required XQHXState state      = 1;//活动状态
+    optional int64 endTime       = 2;//结束时间
+}
+
+//页面信息 XQHX_PAGE_INFO_RESP				= 55022;//页面信息返回
+message XQHXPageInfoResp{
+    required XQHXStateInfo stateInfo      = 1;//状态信息
+    optional int64 cfgBattleTime        = 2;//战斗配置时间
+    repeated GuildTeamInfo teamInfos       = 3;//战队信息
+    optional string selfTeamId          = 4;//自己的队伍id
+}
+
+//小队排行 XQHX_TEAM_RANK_RESP				= 55030;//队伍排行返回
+message XQHXTeamRankResp{
+    repeated GuildTeamInfo teamInfos       = 1;//战队信息
+    optional string selfTeamId          = 2;//自己的队伍id
+}
+
+//历史战绩 XQHX_HISTORY_RESP				= 55032;//历史战绩返回
+message XQHXHistoryResp{
+    repeated GuildTeamInfo teamInfos       = 1;//战队信息
+    optional string selfTeamId          = 2;//自己的队伍id
+}
+
+//请求回到原服的玩家.
+message PBXQHXWarInnerBackServerReq {
+	required string playerId = 1;
+}
+
+//签回玩家.
+message PBXQHXWarMoveBackReq {
+	required string playerId = 1;
+}
+
+//房间状态变更
+message PBXQHXDataUpdateReq{
+	optional string roomId = 1;
+}

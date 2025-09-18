@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" activationCost="10000_1000_998" activationTimes="7" />
+      <data id="2" activationCost="10000_1000_1888" activationTimes="14" />
+</root>

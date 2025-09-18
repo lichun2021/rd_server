@@ -1,0 +1,214 @@
+option java_package = "com.hawk.game.protocol";
+//****************************************************登录|家园入口****************************************************
+enum HomeLandBuildingType
+{
+	MAIN = 1001; //主建筑
+	BUILD_1002 = 1002;
+}
+// 登陆时同步玩家家园
+message HPHomeLandBuildingInfoSync
+{
+    required int32 themeId = 1;                                 // 主题ID
+    repeated HomeLandBuildingPB buildings = 2;                  // 同步玩家建筑列表
+	repeated HomeLandWareHousePB wareHouses = 3;                // 同步玩家建筑列表
+	optional HomeLandProsperityPB prosperityInfo = 4;		    // 繁荣度结构
+	optional HomeLandThemeLikePB likeInfo = 5;		    		// 点赞结构
+	optional HomeLandExchangePB shopInfo = 6;		    		// 商店结构
+	optional string serverId = 7;                               // 服务器ID
+	optional string playerId = 8;                      			// 玩家ID
+	optional string guildTag = 9; 								// 联盟简称
+	optional string playerName = 10; 							// 玩家名称
+	optional bool isLogin = 11; 								// 是否登录
+	optional HomeLandBuildingCollectPB collect = 12;			// 图鉴
+}
+//****************************************************地图相关****************************************************
+//家园地图上建筑
+message HomeLandBuildingPB {
+    required string uuid = 1;                           // 建筑唯一id
+    required int32 buildCfgId = 2;                      // 建筑配置id
+    optional int32 x = 3;                               // x坐标
+    optional int32 y = 4;                               // y坐标
+    optional int32 level = 5;                           // 等级
+    optional int64 lastHarvestTime = 6;                 // 上一次收取时间
+}
+// 已解锁的区块信息
+message UnlockedHomeLandAreaPush
+{
+    repeated int32 unlockedArea = 1;
+}
+// 解锁区块请求
+message HomeLandBuildingAreaUnlockReq
+{
+    required int32 areaId = 1;  // 区块Id号
+    required bool immediate = 2; // 是否立即解锁
+}
+// 建筑建造、升级操作类型
+enum HomeLandBuildingOperation
+{
+    BUILDING_UPGRADE = 1;    // 升级地图中的建筑
+    BUILDING_PLACE = 2;      // 放置
+    BUILDING_RECYCLE = 3;    // 回收
+	BUILDING_MOVE = 4;       // 移动
+	BUILDING_UPGRADE_WARHOUSE = 5;// 升级背包中建筑
+	BUILDING_DISASSEMBLY = 6;// 拆解
+	BUILDING_COLLECT = 7;	 // 收取
+}
+// 地图建筑更新推送
+message HomeLandBuildingUpdatePush
+{
+    required HomeLandBuildingOperation operation = 1;    // 操作类型
+    repeated HomeLandBuildingPB building = 2;            // 建筑PB
+}
+// 请求自己家园信息
+message HomeLandBuildingInfoReq
+{
+    optional string targetPlayerId = 1;    // 目标玩家ID
+    optional string targetServerId = 2;    // 目标服
+	optional string playerId = 3;    // 来源玩家ID
+    optional string serverId = 4;    // 玩家server
+	optional bool liked = 5;    // 服务器用
+}
+//建筑操作
+message HomeLandBuildingUpdateReq {
+    required HomeLandBuildingOperation operation = 1;    // 操作类型
+    required string uuid = 2;                            // 建筑唯一id
+    optional int32 posX = 3;                             // x
+    optional int32 posY = 4;                             // y
+	required int32 buildCfgId = 5;                       // 放置配置id
+	optional int32 disassembly = 6;                      // 分解数量
+}
+//****************************************************背包相关****************************************************
+//背包中建筑
+message HomeLandWareHousePB
+{
+    required int32 buildCfgId = 1;                      // 建筑配置id
+	required int32 itemCount = 2;                       // 數量
+}
+// 背包更新
+message HomeLandWareHousePush
+{
+    repeated HomeLandWareHousePB building = 1;
+	optional int32 updateBuildCfgId = 2; //升级背包中建筑返回的
+}
+//****************************************************建筑图鉴****************************************************
+message HomeLandBuildingCollectPB
+{
+	repeated int32 buildCfgList = 1;
+}
+message HomeLandBuildingCollectPush
+{
+    required HomeLandBuildingCollectPB collect = 1;   // 建筑图鉴
+}
+//****************************************************资源收取****************************************************
+//收取建筑奖励
+message HomeLandCollectRecruitsReq {
+    repeated string uuid = 1;    //建筑唯一Id
+}
+//可收取建筑推送
+message HomeLandCollectRecruitsPush {
+	required int64 nextHarvestTime = 1;                 // 下一次收取时间
+}
+//****************************************************商店****************************************************
+// 家园商店抽奖
+message HomeLandExchangeDrawReq
+{
+    required int32 drawType = 1; //单抽|10抽
+}
+// 家园商店抽奖
+message HomeLandExchangePB
+{
+    optional int64 nextDrawFree = 1;        // 免费抽时间戳
+	optional int32 shopFreeTimes = 2;	    // 商城免费次数
+	repeated HomeLandWareHousePB items = 3; // 获取建筑列表
+	optional int32 dailyLeftTimes = 4;		// 每日剩余次数
+	optional int32 drawTimes = 5;			// 抽取次数
+	optional int32 drawCost = 6;			// 抽取消耗
+}
+// 家园商店推送
+message HomeLandExchangePush
+{
+	required HomeLandExchangePB shopInfo = 1;
+}
+//****************************************************点赞****************************************************
+// 点赞
+message HomeLandThemeLikeReq
+{
+    required string targetPlayerId = 1;    // 玩家ID
+    required string targetServerId = 2;    // 玩家server
+	required string playerId = 3;    // 来源玩家ID
+    required string serverId = 4;    // 玩家server
+	optional bool liked = 5; // 点赞或取消
+}
+//点赞结构
+message HomeLandThemeLikePB
+{
+	required int32 likes = 1; // 点赞数
+	optional bool liked = 2; // 是否点赞
+}
+//点赞推送
+message HomeLandThemeLikePush
+{
+	required HomeLandThemeLikePB likeInfo = 1; // 点赞
+}
+//****************************************************主题****************************************************
+//  更换主题请求
+message ChangeHomeLandThemeReq
+{
+    required int32 themeId = 1;    // 主题ID
+}
+//**************************排行榜**************************
+//获取排行榜
+message HomeLandRankReq
+{
+    required int32 tab = 1;         // 1:荣誉度,2:点赞
+    required int32 rankType = 2;    // 1:本服,2:联盟,3:全服
+}
+// 获取排行榜响应
+message HomeLandRankResp
+{
+    required int32 tab = 1;             		// 1:荣誉度,2:点赞
+    required int32 rankType = 2;        		// 1:本服,2:联盟,3:全服
+    repeated HomeLandRankMsg rankItems = 3;     // 排行榜列表
+	optional HomeLandRankMsg myRank = 4;    //自己的
+}
+message HomeLandRankMsg {
+	required int32 rank = 1; // 名次
+	optional string guildTag = 2; // 联盟简称
+	required string playerName = 3; // 玩家名称
+	required int64 score = 4; // 积分
+	optional string serverId = 5; // 服务器id
+	optional int32 icon = 6; // 头像
+	optional string pfIcon = 7; // 平台头像
+	required string playerId = 8; // 玩家id
+	optional string guildName = 9; // 联盟全称
+}
+//****************************************************繁荣度****************************************************
+// 激活繁荣度属性
+message HomeLandActiveProsperityReq {
+	required int32 cfgId = 1; // 配置id
+}
+// 家园繁荣度结构
+message HomeLandProsperityPB
+{
+    optional int64 prosperity = 1;                              // 总繁荣度
+	optional int64 historyProsperity = 2;                       // 历史最大繁荣度
+	repeated int32 activeProsperities = 3;                      // 已激活的繁荣度属性
+}
+// tongbu 家园繁荣度
+message HomeLandProsperityPush
+{
+    required HomeLandProsperityPB prosperity = 1;               // 总繁荣度
+}
+//****************************************************分享****************************************************
+message HomeLandShareReq {
+	required int32 shareTo = 1; // 联盟|世界
+	required string serverId = 2; // 服务器id
+	required string playerId = 3; // 玩家id
+	required string playerName = 4; // 玩家名字
+}
+//****************************************************服务器自用****************************************************
+// 服务器间通信 
+message PBHomeLandServiceReq{
+	optional int32 protoclType = 1; // 协议id 用来解析pb
+	optional bytes req = 2; // 协议体 
+}

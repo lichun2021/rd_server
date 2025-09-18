@@ -1,0 +1,390 @@
+option java_package = "com.hawk.game.protocol";
+import "Equip.proto";
+
+
+enum PBHeroState{
+	HERO_STATE_FREE 	= 1; // 空闲
+	HERO_STATE_MARCH 	= 2; // 出征
+	//HERO_STATE_QUARTER	= 3; // 驻扎
+}
+
+// 特训英雄
+message PBHeroTrainRequest{
+	optional int32 heroId = 1; 
+}
+
+// 推送英雄信息
+message PBHeroListPush{
+	repeated PBHeroInfo heros		=1; // 英雄列表
+}
+
+// 提升属性
+message PBHeroAttrUpRequest{
+	required int32 heroId = 1;
+	repeated PBAttrAdd attrAdd = 2;
+}
+
+message PBAttrAdd{
+	required int32 attrId = 1;
+	required int32 pointAdd = 2;
+}
+
+// 重置属性
+message PBHeroAttrResetRequest{
+	required int32 heroId = 1;
+}
+
+
+// 请求委任官职
+message PBHeroOfficeAppointRequest{
+	repeated PBHeroOffice office = 1;
+}
+
+// 英雄升星
+message PBHeroStarUpRequest{
+	optional int32 heroId = 1;
+	optional int32 itemId = 2; //万能碎片Id
+	optional int32 itemCount = 3; // 兑换数量
+	optional int32 toItemId = 4; // 兑换英雄碎片
+	optional int32 toStar	=5; // 升至星级
+	optional int32 toStep	=6;
+}
+
+// 使用英雄经验道具
+message PBUseHeroExpItemRequest{
+	required int32 heroId = 1;
+	repeated PBHeroItem itemUse= 2;
+}
+
+//请求安置一个技能
+message PBInstallSkillRequest{
+	required int32 heroId = 1;
+	required int32 index = 2;
+	required int32 itemId =3;
+}
+
+// 拆除一个技能
+message PBRemoveSkillRequest{
+	required int32 heroId = 1;
+	required int32 index = 2;	
+	optional int32 intemId = 3; // 如果使用保留技能道具 则id
+}
+
+message PBExchangeItem{
+	required int32 itemId = 1; //万能碎片Id
+	required int32 itemCount = 2; // 使用数量
+	required int32 toItemId = 3; // 获得物品
+	optional int32 targetHeroId = 4; // 如果兑换英雄碎片, 目标英雄id
+}
+
+
+// 使用英雄技能经验道具
+message PBUseSkillExpItemRequest{
+	required int32 heroId = 1;
+	required int32 index = 2;
+	repeated PBHeroItem itemUse= 3;
+	required int32 type = 4; // 1 自带技能, 2 学习技能
+}
+
+// 碎片合成技能
+message PBMergeSkillRequest{
+	repeated PBMergeSkill mergeSkills = 1;
+}
+
+message PBMergeSkill{
+	required int32 itemId = 1; // 所要消耗的碎片道具的id
+	required int32 skillItemId =2; // 目标技能道具id
+}
+
+message PBResolveSkillRequest{
+	repeated PBHeroItem items = 1; // 分解物品
+}
+
+
+
+message PBHeroItem{
+	required int32 itemId = 1;
+	required int32 count = 2; 
+}
+
+message PBHeroOffice{
+	optional int32 heroId = 1; // 英雄
+	optional int32 office = 2; // 官职
+}
+
+
+
+// 英雄详情
+message PBHeroInfo{
+	optional int32 heroId =1;			// cfg id
+	optional int32 level = 2;			// cfg id
+	optional int32 totalExp =5;			// 总经验
+	optional int32 star =6;				// 星级
+	optional int32 office = 7;			// 官职
+	repeated PBSkillSlot passiveSkillSlot = 8;		// 被动技能
+	repeated PBSkillSlot skillSlot = 9;		// 可学习技能
+	optional PBHeroState state = 10;		// 状态 空闲/出征/驻扎
+	repeated PBHeroAttr attr   =11;  // 四属性
+	optional int32 power	= 15;      // 战力
+	optional int32 cityDefense = 16; // 城防官职  107 /108
+	repeated PBHeroEffect marchEffect = 17; //出征值
+	optional int32 step = 18; // 阶
+	optional int32 shareCount = 19; // 分享平台次数
+	optional int32 skinUse = 20; // 当前皮肤
+	repeated PBHeroSkin skinList = 21; // 皮肤
+	repeated PBTalentSlot talentSlot = 22; // 天赋
+	optional bool talentOpen = 23; // 天赋界面解锁标记
+	optional PBHeroSoul sssSoul = 24; // sss天赋
+	// 内部数据
+	optional string unlockPieces = 28; // 解锁碎片
+	optional int32 qualityColor = 29; // 品质
+}
+
+message PBHeroSkin{
+	optional int32 skinId = 1;
+	optional int64 starTime = 2;
+	optional int64 endTime = 3;
+	optional int32 luckVal = 4; // 幸运值
+	optional int32 step = 5; // 阶
+}
+
+message PBHeroAttr{
+	optional int32 attrId = 1;
+	optional int32 number = 2; 
+}
+
+message PBHeroEffect{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+// 技能槽
+message PBSkillSlot{
+	optional int32 index = 1;
+	optional int32 unlockLevel = 2; // 解锁需要星级
+	optional PBSkillInfo skill = 3;
+}
+
+// 技能信息
+message PBSkillInfo{
+	optional int32 skillId = 1; 
+	optional int32 heroId =3;		// cfg id
+	optional int64 coolDown = 4; 	// 技能冷却时间
+	optional int32 totalExp =5;			// 总经验
+	optional int32 level = 6;
+	repeated PBHeroEffect effect = 7; // 做用号
+	optional bool sssSkill = 8; // 是sss可释放技能
+	optional int64 castTime = 9; // 释放技能时间
+	optional int64 effectTime = 10; // 技能持续时间
+	optional bool castAble = 11; // 是否可释放
+}
+
+message PBTalentSlot{
+	optional int32 index = 1;
+	optional bool unlock = 2; // 是否已解锁
+	optional PBTalentInfo talent = 4;
+}
+
+message PBTalentInfo{
+	optional int32 skillId = 1; 
+	optional int32 heroId =2;		// cfg id
+	optional int32 exp =3;			// 总经验
+	repeated PBHeroEffect effect = 4; // 做用号
+}
+
+
+// 请求释放英雄技能
+message PBCastHeroSkillRequest{
+	optional int32 heroId = 1;			// cfg id
+	optional int32 skillId = 2;			// cfg id
+}
+
+
+// 碎片解锁英雄
+message PBUnlockHeroRequest{
+	optional int32 heroId = 1;	//英雄cfg id
+}
+
+// 查看指定玩家英雄信息
+message PBHeroInfoRequest{
+	required int32 heroId =1;
+	required int32 playerId = 2;
+}
+
+//分享英雄
+message HPHeroShareReq{
+	optional int32 heroId = 1; //英雄分享需要此id
+	optional int32 shareTo = 2; // 0:到联盟  1: 到 QQ  WX 社交平台 
+	optional DailyShareType type = 3; //分享类型
+	optional int32 superSoldierId = 4; //超级兵id
+	optional int32 returnOrderId = 5; //回流拼图id
+	optional int32 tblyFameHallId = 6; //泰伯利亚名人堂id
+}
+
+// 使用皮肤道具
+message HPHeroUseSkinItemReq{
+	optional string skinItem = 1;
+}
+
+// 更换皮肤
+message HPHeroChangeSkinReq{
+	optional int32 heroId = 1;
+	optional int32 skinId = 2;
+}
+
+//每日分享类型
+enum DailyShareType{
+    SHARE_HERO = 1; //英雄分享
+	SHARE_BATTLE_REPORT = 2; //战报分享
+	SHARE_ACHIEVE = 3; //成就分享
+	SHARE_SUPERSOLDIER = 4; //超级兵分享
+	DAILY_MISSION_BAG_SHARE = 7; //每日任务福袋分享
+	SHARE_QUESTION = 8;			//在线答题 经典红警情报分享
+	SHARE_TX_URL_EIGHT = 9;		//腾讯分享活动 url分享活动8
+	SHARE_ONLY_IMG = 10;		//推广员分享
+	SHARE_TX_URL_NINE = 11;		//腾讯分享活动 url分享活动9
+	SHARE_TX_URL_TEN = 12;		//腾讯分享活动 url分享活动10
+	
+	SHARE_DIVIDE_GOLD_ACT = 14; //分享瓜分金币活动
+	SHARE_TANK_FACTORY    = 15; //分享坦克工厂
+	SHARE_SOLDIER_FACTORY = 16; //分享士兵工厂
+	SHARE_PLANE_FACTORY   = 17; //分享飞机工厂
+	SHARE_CHARIOT_FACTORY = 18; //分享战车工厂
+	SHARE_PHYSICAL_POWER  = 19; //分享体力
+	SHARE_EVOLUTION_HERO  = 20; //英雄进化活动分享
+	SHARE_J20_CELEBRATE   = 21; // 威龙庆典分享
+	SHARE_HATE_RANK   = 22; 	// 仇敌榜单分享
+	SHARE_ARMIES_MASS     = 23;  //沙场点兵分享
+	SHARE_OVERLORD_BLESSING   = 24;  //霸主分享
+	SHARE_CELEBRATION_COURSE = 25; //周年历程分享
+	SHARE_RETURN_PUZZLE = 27; //回流拼图分享
+	SHARE_GRATEFUL_BENEFITS = 28; //感恩福利分享
+	EXCLUSIVE_MEMORY = 29; //独家记忆分享
+	SHARE_TBLY_FAME_HALL = 30; //泰伯利亚名人堂分享
+	SHARE_SHOOTING_PRACTICE = 33; //打靶活动分享
+}
+
+// 解锁天赋
+message PBUnlockHeroTalentReq{
+	optional int32 heroId =1;
+	optional int32 index = 2;
+}
+
+// 强化天赋
+message PBStrengTalentReq{
+	optional int32 heroId =1;
+	optional int32 index = 2;
+	optional int32 type = 3; // 0一次 非0  10次
+}
+
+// 随机天赋
+message PBRandomTalentReq{
+	optional int32 heroId =1;
+	optional int32 index = 2;
+	optional int32 selectPool = 3;
+}
+
+// 随即天赋回复
+message PBRandomTalentResp{
+	optional int32 heroId =1;
+	optional int32 index = 2;
+	optional int32 talentId = 3;
+	optional int32 randCount = 4; // 今天随机次数
+	optional string talentRollCost = 5; // 下次刷新属性消耗
+	repeated PBHeroEffect effect = 6; // 做用号
+}
+
+message PBStrengTalentResp{
+	optional int32 heroId =1;
+	optional int32 index = 2;
+	optional int32 talentId = 3;
+	repeated PBHeroEffect effect = 4; // 做用号
+	optional int32 type = 5;
+}
+
+// 选定刚刚随机出来的天赋
+message PBChoseRandTalentReq{
+	optional int32 heroId =1;
+	optional int32 index = 2;		
+}
+
+// 天赋roll价格
+message PBHeroTalentRollPriceResp{
+	optional string price = 1;
+}
+
+// 解锁专有皮肤
+message PBHeroSkinUlockReq{
+	optional int32 heroId = 1;
+	optional int32 skinId = 2;
+}
+
+// 升级皮肤
+message PBHeroSkinStepUpReq{
+	optional int32 heroId = 1;
+	optional int32 skinId = 2;
+	optional int32 itemCount = 3;
+}
+
+message PBHeroSkinStepUpResp{
+	optional bool success = 1;
+}
+
+// 英雄档案请求
+message PBHeroArchiveReq {
+	required int32 chapterId = 1; // 章节id
+	required int32 heroId = 2; // 英雄id
+}
+
+// 英雄档案信息
+message PBHeroArchivePush {
+	repeated PBHeroArchiveInfo info = 1; // 英雄档案信息
+}
+
+// 英雄档案信息
+message PBHeroArchiveInfo {
+	required int32 heroId = 1; // 英雄id
+	required int32 level = 2; // 档案等级
+}
+
+// 英雄档案兑换
+message PBHeroArchiveExchange {
+	required int32 itemId = 1; //碎片Id
+	required int32 itemCount = 2; // 使用数量
+	required int32 toItemId = 3; // 目标碎片id物品
+	optional int32 levelUpHeroId = 4; // 如果直接解密，发英雄档案id
+}
+
+// 参谋同步
+message PBStaffOfficeSync{
+	optional int32 staffOfficePoint = 1; // 参谋点数
+	repeated PBStaffOfficeSkill skills = 2;
+}
+
+// 参谋技能
+message PBStaffOfficeSkill{
+	optional int32 skillId = 1;
+	optional bool unlock = 2;
+}
+
+// SSS天赋
+message PBHeroSoul{
+	repeated int32 soulLevel = 1;
+	repeated int32 stageUnlock = 2;
+	repeated int32 soulSkill = 3;
+}
+
+// 请求升级soul level
+message PBHeroSoulLevelUpReq{
+	optional int32 heroId = 1;
+}
+
+// 请求升级soul stage
+message PBHeroSoulStageUpReq{
+	optional int32 heroId = 1;
+}
+
+// 请求重置soul
+message PBHeroSoulRestReq{
+	optional int32 heroId = 1;
+}

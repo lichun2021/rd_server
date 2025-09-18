@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" funType="31" typeValue1="1007" typeValue2="3000" openLevel="1" count="10" score="5" />
+      <data id="2" funType="31" typeValue1="1008" typeValue2="3000" openLevel="1" count="10" score="5" />
+      <data id="6" funType="140" typeValue2="1" openLevel="1" count="1" score="10" />
+      <data id="9" funType="110" typeValue2="10000" openLevel="1" count="1" score="10" />
+      <data id="10" funType="111" typeValue2="1" openLevel="1" count="40" score="1" />
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data cardId="100" type="1" initialCard="1" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_200" buff="23133,23140" renewTime="7" nextCard="101" />
+      <data cardId="101" type="1" initialCard="0" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_220" buff="23133,23140" renewTime="7" nextCard="102" />
+      <data cardId="102" type="1" initialCard="0" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_240" buff="23133,23140" renewTime="7" nextCard="103" />
+      <data cardId="103" type="1" initialCard="0" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_260" buff="23133,23140" renewTime="7" nextCard="104" />
+      <data cardId="104" type="1" initialCard="0" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_280" buff="23133,23140" renewTime="7" nextCard="105" />
+      <data cardId="105" type="1" initialCard="0" sustain="30" oneOffAward="10000_1000_680,10000_1005_680" dailyAward="10000_1001_300" buff="23133,23140" renewTime="7" nextCard="105" />
+      <data cardId="200" type="2" initialCard="1" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_101050_1,30000_810001_2,30000_810003_25,30000_810000_25" renewTime="3" nextCard="201" />
+      <data cardId="201" type="2" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_101050_1,30000_810001_3,30000_810003_30,30000_810000_30" renewTime="3" nextCard="202" />
+      <data cardId="202" type="2" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_101050_1,30000_810001_4,30000_810003_35,30000_810000_35" renewTime="3" nextCard="202" />
+      <data cardId="300" type="3" initialCard="1" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850078_5,30000_850054_10,30000_850076_25,30000_850057_50" buff="23139" renewTime="3" nextCard="301" />
+      <data cardId="301" type="3" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850078_6,30000_850054_12,30000_850076_30,30000_850057_60" buff="23138" renewTime="3" nextCard="302" />
+      <data cardId="302" type="3" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850078_7,30000_850054_15,30000_850076_35,30000_850057_70" buff="23137" renewTime="3" nextCard="302" />
+      <data cardId="400" type="4" initialCard="1" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850005_4,30000_850035_4,30000_850015_3,30000_850025_3" renewTime="3" nextCard="401" />
+      <data cardId="401" type="4" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850005_5,30000_850035_5,30000_850015_4,30000_850025_4" renewTime="3" nextCard="402" />
+      <data cardId="402" type="4" initialCard="0" sustain="7" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="30000_850005_6,30000_850035_6,30000_850015_5,30000_850025_5" renewTime="3" nextCard="402" />
+      <data cardId="500" type="5" initialCard="1" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_100" buff="23133" renewTime="7" nextCard="501" />
+      <data cardId="501" type="5" initialCard="0" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_110" buff="23133" renewTime="7" nextCard="502" />
+      <data cardId="502" type="5" initialCard="0" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_120" buff="23133" renewTime="7" nextCard="503" />
+      <data cardId="503" type="5" initialCard="0" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_130" buff="23133" renewTime="7" nextCard="504" />
+      <data cardId="504" type="5" initialCard="0" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_140" buff="23133" renewTime="7" nextCard="505" />
+      <data cardId="505" type="5" initialCard="0" sustain="30" oneOffAward="10000_1000_300,10000_1005_300" dailyAward="10000_1001_150" buff="23133" renewTime="7" nextCard="505" />
+</root>

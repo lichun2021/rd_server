@@ -1,0 +1,15 @@
+# 建筑半径
+redis = 5
+
+# 坐标
+refreshPoint = 13_29
+
+# 控制时长
+controlCountDown = 90
+
+# 刷新时间
+coolDown = 90_91
+
+# 对战争大厅伤害提升
+atkAddList = 2,4,7,10,14,18
+

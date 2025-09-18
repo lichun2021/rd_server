@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" startPoolValue="10" rewards="1_5,2_5,3_1,4_1,5_1,6_1,7_1" drawConsume="30000_21070052_1" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="2" startPoolValue="10" rewards="8_5,9_5,10_1,11_1,12_1,13_1,14_1" drawConsume="30000_21070052_1" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="3" startPoolValue="10" rewards="15_5,16_5,17_1,18_1,19_1,20_1,21_1" drawConsume="30000_21070052_1" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="4" startPoolValue="10" rewards="22_5,23_5,24_1,25_1,26_1,27_1,28_1" drawConsume="30000_21070052_1" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="5" startPoolValue="10" rewards="29_5,30_5,31_1,32_1,33_1,34_1,35_1" drawConsume="30000_21070052_2" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="6" startPoolValue="10" rewards="36_5,37_5,38_1,39_1,40_1,41_1,42_1" drawConsume="30000_21070052_2" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="7" startPoolValue="10" rewards="43_5,44_5,45_1,46_1,47_1,48_1,49_1" drawConsume="30000_21070052_2" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="8" startPoolValue="10" rewards="50_5,51_5,52_1,53_1,54_1,55_1,56_1" drawConsume="30000_21070052_2" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="9" startPoolValue="10" rewards="57_5,58_5,59_1,60_1,61_1,62_1,63_1" drawConsume="30000_21070052_3" lastRewards="30000_9990061_100" poolLimit="40" />
+      <data id="10" startPoolValue="10" rewards="64_5,65_5,66_1,67_1,68_1,69_1,70_1" drawConsume="30000_21070052_3" lastRewards="30000_9990061_100" poolLimit="40" />
+</root>

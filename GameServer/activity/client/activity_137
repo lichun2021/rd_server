@@ -1,0 +1,21 @@
+return {
+	prop =
+	{
+		activityId = 137,
+		name = [[赛事竞猜]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">参与荣耀S3泰伯联赛竞猜，领取实物周边和海量道具。</font>]],
+		priority = 11282,
+		icon = [[Activity_Icon_137_Nor.png]],
+		selecticon = [[Activity_Icon_137_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://hongjing.qq.com/cp/a202406match/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a202406match/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a202406match/index.html]],
+		platform = [[]],
+		shareImg = [[V5Activity_137_Share_URL.jpg]],
+		shareCCBName = [[RAActivity137NodeShareV5.ccbi]],
+		urlDailyReward = [[]],
+	},
+
+}

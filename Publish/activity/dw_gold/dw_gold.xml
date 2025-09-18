@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" lowLimit="150" highLimit="190" rate="6500" />
+      <data id="2" lowLimit="200" highLimit="260" rate="3400" />
+      <data id="3" lowLimit="300" highLimit="300" rate="100" />
+</root>

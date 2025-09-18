@@ -1,0 +1,17 @@
+option java_package = "com.hawk.game.protocol";
+
+import "Reward.proto";
+
+// 使用cdk
+message HPUseCdk
+{
+	required string cdkey = 1;
+}
+
+// 使用cdk回复
+message HPUseCdkRet
+{	
+	required string cdkey = 1;
+	required int32  status = 2;
+	optional RewardInfo reward = 3;
+}

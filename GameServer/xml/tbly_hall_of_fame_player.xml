@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<!-- season + guildId 取得全部联盟成员 -->
+      <data id="10001" season="1" playerId="sdfsdf" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildName ="贼牛逼" name ="465645" icon ="4" pfIcon="" announcement ="可贼牛逼" serverId ="60004" power="12368723"/>
+      <data id="10002" season="1" playerId="sdfsdf2" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildName ="贼牛逼" name ="465645" icon ="4" pfIcon="" announcement ="可贼牛逼" serverId ="60004" power="232723"/>
+      <data id="10003" season="1" playerId="sdfsdf3" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildName ="贼牛逼" name ="465645" icon ="4" pfIcon="" announcement ="可贼牛逼" serverId ="60004" power="6452"/>
+      <data id="10004" season="1" playerId="sdfsdf4" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildName ="贼牛逼" name ="465645" icon ="4" pfIcon="" announcement ="可贼牛逼" serverId ="60004" power="4534545"/>
+      <data id="10005" season="1" playerId="sdfsdf5" guildId="abcd"  guildFlag ="3" guildTag="牛逼" guildName ="贼牛逼" name ="465645" icon ="4" pfIcon="" announcement ="可贼牛逼" serverId ="60004" power="741268"/>
+</root>

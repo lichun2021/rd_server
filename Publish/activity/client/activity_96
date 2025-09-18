@@ -1,0 +1,24 @@
+return {
+	prop =
+	{
+		activityId = 96,
+		name = [[猪年大吉]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">新年期间，指定时间段系统将全服派发新年红包，只要抢红包就有机会活动稀有道具！</font>]],
+		priority = 20250,
+		icon = [[Activity_Icon_29_Nor.png]],
+		selecticon = [[Activity_Icon_29_Sel.png]],
+		bigIcon = [[V3Activity_u_Consumption_Rendered.png]],
+		serverDelay = 0,
+		dailyRefresh = 0,
+	},
+	redPacket_achieve = [[achieveId	title	shotTitle	rewardsID	num	broadcastItemID
+1	2	2	2	2	2
+1	redPacketName1	redPacketShotName1	4900005	1	850006
+2	redPacketName2	redPacketShotName2	4900005	2	850006
+3	redPacketName3	redPacketShotName3	4900005	2	850006
+4	redPacketName4	redPacketShotName4	4900005	2	850006
+5	redPacketName5	redPacketShotName5	4900005	2	850006
+]],
+
+}

@@ -1,0 +1,110 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+
+//排行榜类型
+enum RankType
+{
+	PLAYER_FIGHT_RANK				= 0;	// 领主战斗力
+	PLAYER_KILL_ENEMY_RANK			= 1;	// 领主击杀敌军
+	PLAYER_CASTLE_KEY				= 2;	// 领主城堡
+	PLAYER_GRADE_KEY				= 3;	// 领主等级
+	ALLIANCE_FIGHT_KEY				= 4;	// 联盟战力
+	ALLIANCE_KILL_ENEMY_KEY			= 5;	// 联盟击杀敌军
+	PLAYER_NOARMY_POWER_RANK		= 6;	// 玩家去兵战力排行
+}
+
+message	RankInfo
+{
+	required RankType rankType		= 1;	// 排行类型
+	required string playerName		= 2;	// 玩家name or 盟主名字
+	required int32  rank			= 3;	// 排名
+	required string allianceName	= 4;	// 联盟名字
+	required int64 rankInfoValue	= 5;	// 排行积分
+	optional int32 icon				= 6;	// 头像
+	optional int32 allianceIcon		= 7;	// 联盟旗帜
+	required int32 rankGrop			= 8;	// 区分页签
+	required string guildTag		= 9;	// 联盟简称
+	optional string rankKey			= 10;	// 排名key
+	optional string pfIcon			= 11;	// 平台头像
+	required string id				= 12;	// id，排行类型不同id值不同（玩家id/联盟id）
+	optional int32 vipLevel         = 13;   // vip等级
+	optional PlayerCommon common 	= 14; // 玩家通用数据
+	optional int64	rankTime		= 15;	//上榜时间
+}
+
+message	HPSendRank
+{
+	required RankType rankType		= 1;	//请求排行类型
+}
+
+message	HPPushRank
+{
+	repeated RankInfo rankInfo		= 1;	//排行榜列表
+	required int32 myRank			= 2;	//自己的排行
+	required int64 myRankScore		= 3;	//自己的积分
+	optional string	guildName		= 4;	//自己联盟名字
+	optional string	guildTag		= 5;	//联盟简称
+	optional string	guildLeaderName	= 6;	//盟主名字
+	optional int32	guildFlag		= 7;	//联盟旗帜
+	optional int64	updateTime		= 8;	//更新时间
+	required RankType rankType		= 9;	//排行类型
+	optional int64	rankTime		= 10;	//上榜时间
+}
+
+message	HPPushTopRank
+{
+	repeated RankInfo rankInfo		= 1;	//推送各类排行第一名
+	optional int32	  guardRank 			= 2;    //-1没有建立守护 0没有上榜  >0 名次
+}
+
+message GuardRankInfo {
+	required string firstPlayerGuildTag = 1; //第一个玩家的联盟标签
+	required string firstPlayerName		= 2; //第一个玩家的名字
+	required string secondPlayerGuildTag = 3; //第二个玩家的联盟标签
+	required string secondPlayerName	 =4; //第二个玩家的名字.
+	required int32 	rankNo				 =5; //排行	
+	required int32  guardValue			 = 6; //守护值
+	optional string firstPlayerId		= 7; //第一个玩家的ID
+	optional string secondPlayerId		= 8; //第二个玩家的ID
+	optional PlayerCommon firstCommon 	= 9; // 第一个玩家的通用数据
+	optional PlayerCommon secondCommon 	= 10; // 第二个玩家的通用数据
+}
+
+//请求守护排行
+message GuardRankReq {
+}
+
+message GuardRankResp {
+	repeated GuardRankInfo	 rankList	= 1; //排行榜列表
+	optional GuardRankInfo 	  selfRankInfo =2 ; //自己的排行信息 //自己有没有守护伴侣的时候不返回该对象.
+}
+
+/** 军功***/
+
+message NationMilitaryRankResp{
+	repeated NationMilitaryRankInfo	 rankList	= 1; //排行榜列表 军衔
+	optional NationMilitaryRankInfo  selfRankInfo =2 ; //自己的排行信息 / 军衔
+
+	repeated NationMilitaryRankInfo	 rankListTwo	= 3; //排行榜列表 军功
+	optional NationMilitaryRankInfo  selfRankInfoTwo =4 ; //自己的排行信息 /军功
+
+	optional int64 nextResetTime = 5; // 下次分数重置
+	optional int64 nextDingBangTime = 6; // 下次定榜
+}
+
+/** 军功排行 定榜后不变 只分数在变*/
+message	NationMilitaryRankInfo{ 
+	required string playerName		= 2;	// 玩家name or 盟主名字
+	required int32  rank			= 3;	// 排名
+	required string allianceName	= 4;	// 联盟名字
+	required int64 rankInfoValue	= 5;	// 排行军功值
+	optional int32 icon				= 6;	// 头像
+	optional int32 allianceIcon		= 7;	// 联盟旗帜
+	required int32 militaryLevel	= 8;    // nation_military.xml level
+	required string guildTag		= 9;	// 联盟简称
+	optional string pfIcon			= 11;	// 平台头像
+	required string playerId		= 12;	// 玩家id
+	optional int32 vipLevel         = 13;   // vip等级
+	optional PlayerCommon common 	= 14; // 玩家通用数据
+}

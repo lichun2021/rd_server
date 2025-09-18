@@ -1,0 +1,84 @@
+# 开服时长不足的服务器不参与赛博之战(单位:秒)
+serverDelay = 3196800
+
+# 报名战队排行条件
+signRankLimit = 50
+
+# 小队成员上限
+teamMemberLimit = 20
+
+# 小队的数量
+teamNumLimit = 5
+
+# 报名时间
+warTimeHour = 13:00_20:00_21:10_22:00
+
+# 参与匹配最低人数限制
+warMemberMinCnt = 10
+
+# 战场开启时间(单位:秒)
+warOpenTime = 3600
+
+# 创建不足一周的联盟无法进行报名
+teamCreateTimeLimit = 1
+
+# 匹配战力公式参数1 (万分比)
+matchParam1 = 4793
+
+# 匹配战力公式参数2 (万分比)
+matchParam2 = 4173
+
+# 匹配战力公式参数3 (万分比)
+matchParam3 = 897
+
+# 匹配战力公式参数4 (万分比)
+matchParam4 = 137
+
+# 赛博新匹配开关
+cyborgMatchSwitch = 1
+
+# 赛博取战斗场次
+cyborgMatchTimesLimit = 10
+
+# 赛博排名修正
+cyborgMatchBattleResultCof = 1000_500_-500_-1000
+
+# 赛博最大修正
+cyborgMatchCofMaxValue = 3000
+
+# 赛博最小修正
+cyborgMatchCofMinValue = -3000
+
+# 玩家主动退出副本,或弹出结算界面之后 多长时间强制回签原服 （时间短点比较好）
+forceMoveBackTime = 10
+
+# 小队名字的长度
+teamNameNumLimit = 1_8
+
+# 创建小队消耗
+createTeamCost = 10000_1001_200
+
+# x期之前的报名,不受战队创建时间限制
+teamTimeLimitTermId = 1
+
+# 每期新增出战成员上限
+warNewMemberLimit = 5
+
+# 每个时间段最多报名联盟数量
+maxSignNum = 10000
+
+# 匹配范围参数(万分比)
+matchTopRate = 150
+
+# 赛博能量药剂分配的总数
+cyborgItemTotal = 2000
+
+# 杀敌最多重大贡献奖励
+killMaxRewards = 30000_880101_1
+
+# 承伤最高
+damagedMaxRewards = 30000_880102_1
+
+# 打怪最多
+monsterMaxRewards = 30000_880103_1
+

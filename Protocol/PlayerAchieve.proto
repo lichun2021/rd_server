@@ -1,0 +1,31 @@
+option java_package = "com.hawk.game.protocol";
+
+// 成就状态
+enum AchieveState
+{
+	ACHIEVE_NOT_FINISH = 0; //未完成
+	ACHIEVE_NOT_REWARD = 1; //未领奖
+	ACHIEVE_REWARD 	   = 2; //已领奖
+}
+
+//单条成就信息
+message AchieveData
+{
+	required int32 groupId	   	= 1; //成就组id
+	required int32 currentLvl  	= 2; //当前档位
+	required int32 value	   	= 3; //总进度
+	required AchieveState state = 4; //当前状态
+	required int32 completeTime = 5; //完成时间
+}
+
+//玩家成就信息
+message PlayerAchieveInfo
+{	
+	repeated AchieveData data = 1;
+}
+
+//领奖
+message AchieveRewardReq
+{
+	required int32 groupId = 1;//成就领奖
+}

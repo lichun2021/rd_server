@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" repeatVal="1" taskType="2101" conditionVal="1" exp="10" time="1" />
+      <data id="1002" repeatVal="25" taskType="2102" conditionVal="30" exp="10" />
+      <data id="1003" repeatVal="30" taskType="2103" conditionVal="500000" exp="5" />
+      <data id="1004" repeatVal="10" taskType="2104" conditionVal="1" exp="10" />
+      <data id="1005" repeatVal="15" taskType="2105" conditionVal="30" exp="5" />
+      <data id="1006" repeatVal="20" taskType="2106" conditionVal="5000" exp="10" />
+      <data id="1007" repeatVal="1" taskType="2107" conditionVal="300" exp="600" time="1" />
+      <data id="1008" repeatVal="1" taskType="2107" conditionVal="6480" exp="8000" />
+</root>

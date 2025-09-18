@@ -1,0 +1,18 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 加速道具ID
+speedItem = 30000_21070046_1
+
+# 加速时间（秒）
+speedTime = 3600
+
+# 购买消耗
+speedItemBuyCost = 10000_1001_99
+
+# 购买上限
+count = 100
+
+# 升级高级探测器
+upLimit = 198
+

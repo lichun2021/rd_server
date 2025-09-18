@@ -1,0 +1,49 @@
+option java_package = "com.hawk.game.protocol";
+
+// 操作类型
+enum ActionType
+{
+	CHAT				= 1; // 聊天
+	PAGE_OPEN       	= 2; // 打开页面
+	WORLD_FRAME     	= 3; // 世界的帧率
+	TOWN_FRAME      	= 4; // 城内的帧率
+	BATTLE_FRAME    	= 5; // 战斗时的帧率
+	REQUEST         	= 6; // 网络请求
+	LOADSCENE_TIME  	= 7; // 登录场景耗时
+	LOADSCENE_FRAME 	= 8; // 登录场景帧数
+	UPDATEVER_TIME  	= 9; // 版本场景耗时
+	UPDATEVER_FRAME  	= 10; // 版本场景帧数
+	LOGINSDK_TIME   	= 11; // 登录SDK场景耗时
+	LOGINSDK_FRAME   	= 12; // 登录SDK场景帧数
+	SERVERLIST_TIME 	= 13; // 服务器列表场景耗时
+	SERVERLIST_FRAME 	= 14; // 服务器列表场景帧数
+	GRAYUPDATE_TIME  	= 15; // 灰度更新场景耗时
+	GRAYUPDATE_FRAME  	= 16; // 灰度更新场景帧数
+	PRELOAD_TIME     	= 17; // 预加载场景耗时
+	PRELOAD_FRAME     	= 18; // 预加载场景帧数
+	LOGINSERVER_TIME    = 19; // 登录服务器场景耗时
+	LOGINSERVER_FRAME   = 20; // 登录服务器场景帧数
+	GAMENEWBIE_TIME     = 21; // 新手场景耗时
+	GAMENEWBIE_FRAME    = 22; // 新手场景帧数
+	GAMEINTROSTATE_TIME = 23; // 新手耗时
+	GAMEINTROSTATE_FRAME= 24; // 新手帧数
+	PUSH				= 25; // 客户端推送数据
+}
+
+message AnalyzeDataPB
+{
+	required ActionType action = 1;    // 操作类型
+	optional int32 count  = 2;    // 自上次上报之后的操作次数，不填此字段默认为1次
+	required int64 value  = 3;  // 总数据，统计打开页面耗时时为总时间，统计帧率的时候为帧率和
+	optional string extra = 4;    // 附加信息
+	required int64 maxValue = 5; // 单次最大值
+	required int64 minValue = 6; // 单次最小值
+}
+
+message AnalyzeDatas
+{
+	repeated AnalyzeDataPB data = 1;
+	optional string deviceInfo = 2;  // 设备型号
+	optional string version = 3;     // 客户端版本号如1.0_0.1
+	optional int32 deviceLevel = 4;     //设备等级
+}

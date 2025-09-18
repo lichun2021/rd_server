@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" chipNum="1" weight="70" />
+      <data id="2" chipNum="2" weight="20" />
+      <data id="3" chipNum="3" weight="10" />
+</root>

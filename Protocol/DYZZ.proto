@@ -1,0 +1,206 @@
+  option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "World.proto";
+
+/** 建筑状态 */
+enum DYZZBuildState{
+	/**中立 */
+	ZHONG_LI = 0;
+	/**占领中*/
+	ZHAN_LING_ZHONG = 1;
+	/**已占*/
+	ZHAN_LING = 2;
+	/**摧毁中 只有箭塔可摧毁*/
+	CUI_HUI = 3;
+	/**能源井冷却中*/
+	PROTECTED = 4;
+	/**已摧毁*/
+	YI_CUI_HUI = 5;
+}
+
+// DYZZ_GAME_SYNC			= 483; // 副本信息同步
+message PBDYZZGameInfoSync{
+	optional int64 createTime = 1; // 副本创建时间
+	optional int64 collectStartTime = 2; // 采集阶段开始时间
+	optional int64 battleStartTime = 3; // 战斗阶段开始
+	optional int64 hotBattleStartTime = 4; // 鏖战阶段开始
+	repeated PBGuildInfo guildInfo = 5; 
+	repeated PBPlayerInfo playerInfo = 6;
+	optional int32 winCamp = 7;  // 胜利阵营  // 只有战斗结束时最后一次同步有值
+	optional int64 gameOverTime = 8; //战局结束时间
+	repeated DYZZEnegerWellOpen wellOpen = 9; // 能源井开放时间
+	optional int32 season = 10;//赛季数
+}
+
+message DYZZEnegerWellOpen{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int64 protectedEndTime  = 3;
+}
+
+// 达亚之战小地图
+message PBDYZZSecondMapResp{
+	optional int64 createTime = 1; // 副本创建时间
+	optional int64 collectStartTime = 2; // 采集阶段开始时间
+	optional int64 battleStartTime = 3; // 战斗阶段开始
+	optional int64 hotBattleStartTime = 4; // 鏖战阶段开始
+	repeated PBGuildInfo guildInfo = 5; 
+	repeated WorldPointPB points = 6;
+	
+}
+ 
+
+message PBGuildInfo{
+	optional int32 camp = 1; // 阵营
+	optional string guildName = 2;
+	optional int32 guildFlag = 3;
+	optional int32 baseHP = 4; // 主基地血量 
+	optional int32 playerCount = 7; // 战场中人数
+	optional string guildTag = 8;
+	optional string guildId = 10;
+	optional int32 guildOrder = 20; // 号令点数
+}
+
+message PBPlayerInfo{
+	optional int32 camp = 1;
+	optional string name = 2;
+	optional int32 collectOrder= 3; // 云景矿石
+	optional string guildTag   = 4;
+	optional string playerId   = 5;
+	optional int64 killCount   = 6; // 击杀
+	optional int32 mvp		   = 7;  // 本方mvp , 只有战斗结束时那那一次同步才会给到
+	optional int32 kda		   = 8;  // 评分
+	optional int32 icon        = 9;
+	optional string pfIcon     = 10;
+	optional string serverId   = 11;
+	optional int32 rewardCount = 12;  //获取奖励次数
+	optional int64 hurtCount   = 13;  //死亡数量
+	repeated int32 rogueselected = 14; // 已选择的rogue
+	
+	optional int32 seasonScore    = 15; //赛季积分
+	optional int32 seasonScoreAdd = 16; //赛季积分增长
+	optional int32 firstWinReward = 17; //首胜段位奖励
+	
+}
+
+//DYZZ_GAME_OVER			= 472; // 游戏结束
+message PBDYZZGameOver{ 
+	optional bool win = 2; 
+	optional int32 quitReson = 3; //正常结束 0  主动退出 1
+}
+
+
+// DYZZ_PLAYER_QUIT			= 477; // 有玩家退出
+message PBDYZZPlayerQuitRoom{
+	optional PlayerSnapshotPB quiter	= 1; //退出 玩家信息
+}
+
+message PBDYZZPlayerMoveCitySync{
+	optional int64 DYZZMoveCityCD = 1;  // 免费迁城
+	optional int32 DYZZMoveCityCost = 2; // 非免费时间内迁城消耗倍数
+}
+
+message PBDYZZNuclearStartReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 广播核弹发射
+message PBDYZZNuclearSync{
+	optional string guildId = 1; // 发射盟
+	optional int64 sendStart = 2;
+	optional int64 sendOver = 3;
+	optional int32 tarX = 4;
+	optional int32 tarY = 5;
+	optional int32 fromX = 6;
+	optional int32 fromY = 7;
+	optional int32 atkVal = 8; // 命中扣血 
+	optional int32 shotType = 9; //发动类型 1 周期 2 井  3 商人
+	optional string id = 10; //
+}
+
+message PBDYZZAnchorJoinReq{
+	optional string battleId = 1;
+}
+
+// 主播请求建筑内邮件. 
+message PBDYZZAnchorListMailReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 type = 3;  // 0 战斗邮件, 1 侦查邮件
+}
+
+message PBDYZZAnchorGetGuildWarInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+}
+
+
+message PBDYZZAnchorGetGuildWarCellInfoReq{
+	optional int32 camp = 1; // 1红方, 2 蓝方
+	optional string marchId = 2; // 
+}
+
+//号令
+message PBDYZZOrder{
+	required int32 orderId         = 1;   //号令ID 
+	required int64 effectStartTime = 2;   //号令生效开始时间
+	required int64 effectEndTime   = 3;   //号令生效结束时间
+	required int64 coolTime        = 4;   //号令冷却结束时间
+	required int32 cost 		   = 5;   //小号
+	required int32 hasBuy		   = 6;   // 已购买数量
+}
+
+//使用号令
+message PBDYZZOrderUseReq{
+	required int32 orderId = 1;   //号令ID
+}
+
+//号令同步
+message PBDYZZOrderSyncResp{
+	repeated PBDYZZOrder orders = 1;  //号令列表
+	optional int32 order = 2; 
+}
+
+// 从rogueUnSelected 选一个
+message PBDYZZRogueSelectReq{
+	required int32 index = 1;
+	required int32 rogueId = 2; 
+}
+
+// 玩家roge
+message PBDYZZRogueSync{
+	repeated PBdYZZRogue rogues = 1; // 之前选择过的和没选的 dyzz_rogue_base
+}
+
+message PBdYZZRogue{
+	optional int32 index = 1;
+	repeated int32 rogueIds = 2; // 随机出的3个
+	optional int32 rogueselected = 3; // 3个中选中的
+}
+
+// 摧毁一个本方占领中的敌方箭塔
+message PBDYZZCuiHuiTowerReq{
+	optional int32 x = 1;
+	optional int32 y = 2;
+}
+
+// 队内消息
+message PBDYZZCampNotice{
+	required int32 id = 1;
+}
+
+// 队内消息时间
+message PBDYZZCampNoticeTime{
+	required int64 time = 1;
+}
+
+//	DYZZ_ITEM_BUY_REQ					= 2331; // 免费加速购买
+message PBDYZZItemBuyReq{
+	required int32 itemId = 1;
+	required int32 itemCnt = 2;
+}
+
+//	DYZZ_ITEM_GET_REQ					= 2332; // 免费加速领取
+message PBDYZZItemGetReq{
+	required int32 itemId = 1;
+}

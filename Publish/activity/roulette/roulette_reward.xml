@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" canSelected="1" weight="200" reward="30000_1000003_1,30000_1480001_300,30000_100060_1,30000_1780050_3,30000_1510005_8,30000_13310005_8" />
+      <data id="2" canSelected="0" weight="1000" reward="30000_840194_15" />
+      <data id="3" canSelected="0" weight="1000" reward="30000_1800000_15" />
+      <data id="4" canSelected="1" weight="200" reward="30000_1780083_2,30000_1480001_300,30000_100060_1,30000_1780050_3,30000_1510005_8,30000_13310005_8" />
+      <data id="5" canSelected="0" weight="1500" reward="30000_850008_2" />
+      <data id="6" canSelected="0" weight="1500" reward="30000_850038_2" />
+      <data id="7" canSelected="1" weight="200" reward="30000_802003_4,30000_800000_6,30000_1480001_300,30000_100060_1,30000_1780050_3,30000_1510005_8,30000_13310005_8" />
+      <data id="8" canSelected="0" weight="1500" reward="30000_850018_2" />
+      <data id="9" canSelected="0" weight="1500" reward="30000_850028_2" />
+      <data id="10" canSelected="1" weight="200" reward="30000_830042_1,30000_830048_1,30000_830053_1,30000_1140001_1,30000_1480001_300,30000_100060_1,30000_1780050_3,30000_1510005_8,30000_13310005_8" />
+      <data id="11" canSelected="0" weight="600" reward="30000_800000_5" />
+      <data id="12" canSelected="0" weight="600" reward="30000_1800001_3" />
+</root>

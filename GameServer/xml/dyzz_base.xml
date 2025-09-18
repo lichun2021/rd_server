@@ -1,0 +1,24 @@
+# 初始血量
+initBlood = 150
+
+# 建筑半径
+redis = 6
+
+# A坐标
+refreshPointA = 5_140
+
+# B坐标
+refreshPointB = 63_14
+
+# 周期攻击伤害
+atkVal = 0
+
+# 周期攻击间隔
+atkCd = 10000
+
+# 能源井伤害
+wellAtkVal = 5
+
+# 黑心商人导弹伤害
+orderAtkVal = 25
+

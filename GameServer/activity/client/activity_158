@@ -1,0 +1,15 @@
+return {
+	prop =
+	{
+		activityId = 158,
+		name = [[远征充能]],
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Font/HiraginoSansGB-W3.ttf" fontsize = "18">【跨服总部争夺战】<br/><br/>跨服活动开启后，将进行预热阶段、充能阶段、同心协力阶段、战备阶段、总部争夺等 5 个阶段的比拼。<br/><br/>1. 预热阶段: 倒计时结束后进入下一阶段；<br/>2. 充能阶段: <br/> a. 进入该阶段后玩家可通过完成<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">采集、打野</font>任务，获得<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">“充能核心”</font>，使用充能核心可在充能界面进行充能；<br/> b. 完成充能任务可获得<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">“远征恢复令”</font>，远征恢复令可在总部医院修复在跨服期间产生的死兵（盟军总部功能入口 : 总部医院），同样您也可通过完成活动任务获得这些道具（<font color="#e12626" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">注 : 这两种道具将在跨服结束后自动销毁）</font>；<br/> c. 充能时间结束后进入同心协力阶段，充能百分比最高的将不在竞争范围内。<font color="#e12626" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（注: 若在指定时间内3区充能百分比相同，将随机1个区不参与比拼；充能百分比为相对数值，根据充能分数进行变化。）</font>；<br/>3. 同心协力阶段: 世界范围将刷出<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">能量塔</font>占领能量塔将为所在区分增加1积分，阶段结束后分数低的区服将开启盟军总部争夺；<br/>4. 战备阶段: 根据积分结果预告将要开启的区服盟军总部；<br/>5. 总部争夺: 点击前往已开启的盟军总部开始争夺。<br/><br/>【奖励说明】<br/><br/>1. 总部争夺战的盟军总部占领成功方将在本服刷出<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"> 9级矿</font>，每 6 小时刷新 1 次，持续 2 天；<br/>2. 盟军总部失守方所有官职全部罢免，由盟军总部占领成功方盟军司令直接任命，盟军总部占领成功方盟军司令可传送到对方服务器，通过官职入口管理，管理时间为跨服期间；同样可分配该服奖励（<font color="#e12626" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">注: 官职与奖励只可分配给失败服指挥官）</font>；<br/>3. 盟军总部失守方将向盟军总部占领成功方进行交税，税收来自盟军总部失守方指挥官在世界采集的资源（矿石、石油、合金、稀土），可通过<font color="#22ff3c" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">总部仓库</font>进行管理与分配（由本服盟军司令进行管理）；<br/>4. 盟军总部占领成功方将直接担任该盟军总部失守方的盟军司令，跨服盟军总部争夺战结束后防守方所在服务器盟军总部争夺战将停开一期。</font>]],
+		priority = 10001,
+		entranceType = 1,
+		icon = [[Activity_Icon_158_Nor.png]],
+		selecticon = [[Activity_Icon_158_Sel.png]],
+		bigIcon = [[Activity_SuperWeapon_u_Rendered.png]],
+	},
+
+}

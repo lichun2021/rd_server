@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data buildId="100101" buildType="1001" buildLevel="1" postStage="100102" prosperity="1000" attr="418_1200,301_1000" power="100" getCurrencyRate="100" currencyMaxNum="18000" />
+      <data buildId="100102" buildType="1001" buildLevel="2" postStage="100103" buildCost="30000_6000001_100" buildProsperityLimit="100" prosperity="2000" attr="418_1300,301_1100" power="200" getCurrencyRate="110" currencyMaxNum="20000" />
+      <data buildId="100103" buildType="1001" buildLevel="3" postStage="100104" buildCost="30000_6000001_100" buildProsperityLimit="500" prosperity="3000" attr="418_1200,301_1001" power="300" getCurrencyRate="120" currencyMaxNum="22000" />
+      <data buildId="100104" buildType="1001" buildLevel="4" postStage="100105" buildCost="30000_6000001_100" buildProsperityLimit="1000" prosperity="4000" attr="418_1300,301_1101" power="400" getCurrencyRate="130" currencyMaxNum="24000" />
+      <data buildId="100105" buildType="1001" buildLevel="5" postStage="100106" buildCost="30000_6000001_100" buildProsperityLimit="2000" prosperity="5000" attr="418_1200,301_1002" power="500" getCurrencyRate="140" currencyMaxNum="26000" />
+      <data buildId="100106" buildType="1001" buildLevel="6" postStage="100107" buildCost="30000_6000001_100" buildProsperityLimit="5000" prosperity="6000" attr="418_1300,301_1102" power="600" getCurrencyRate="150" currencyMaxNum="28000" />
+      <data buildId="100107" buildType="1001" buildLevel="7" postStage="100108" buildCost="30000_6000001_100" buildProsperityLimit="11000" prosperity="7000" attr="418_1200,301_1003" power="700" getCurrencyRate="160" currencyMaxNum="30000" />
+      <data buildId="100108" buildType="1001" buildLevel="8" postStage="100109" buildCost="30000_6000001_100" buildProsperityLimit="16000" prosperity="8000" attr="418_1300,301_1103" power="800" getCurrencyRate="170" currencyMaxNum="32000" />
+      <data buildId="100109" buildType="1001" buildLevel="9" postStage="100110" buildCost="30000_6000001_100" buildProsperityLimit="20000" prosperity="9000" attr="418_1200,301_1004" power="900" getCurrencyRate="180" currencyMaxNum="34000" />
+      <data buildId="100110" buildType="1001" buildLevel="10" buildCost="30000_6000001_100" buildProsperityLimit="25000" prosperity="10000" attr="418_1300,301_1104" power="1000" getCurrencyRate="190" currencyMaxNum="36000" />
+      <data buildId="100201" buildType="1002" buildLevel="1" postStage="100202" prosperity="2000" attr="201_1,607_1,604_2,4101_2,1605_3" power="100" />
+      <data buildId="100202" buildType="1002" buildLevel="2" postStage="100203" buildCost="30000_6100201_2,30000_6000001_1000" buildSplit="30000_6100201_2" prosperity="3000" attr="201_1,607_1,604_2,4101_2,1605_3" power="200" />
+      <data buildId="100203" buildType="1002" buildLevel="3" postStage="100204" buildCost="30000_6100201_4,30000_6000001_1000" buildSplit="30000_6100201_4" prosperity="4000" attr="201_1,607_1,604_2,4101_2,1605_3" power="300" />
+      <data buildId="100204" buildType="1002" buildLevel="4" postStage="100205" buildCost="30000_6100201_8,30000_6000001_1000" buildSplit="30000_6100201_8" prosperity="5000" attr="201_1,607_1,604_2,4101_2,1605_3" power="400" />
+      <data buildId="100205" buildType="1002" buildLevel="5" postStage="100206" buildCost="30000_6100201_16,30000_6000001_1000" buildSplit="30000_6100201_16" prosperity="6000" attr="201_1,607_1,604_2,4101_2,1605_3" power="500" />
+      <data buildId="100206" buildType="1002" buildLevel="6" postStage="100207" buildCost="30000_6100201_32,30000_6000001_1000" buildSplit="30000_6100201_32" prosperity="7000" attr="201_1,607_1,604_2,4101_2,1605_3" power="600" />
+      <data buildId="100207" buildType="1002" buildLevel="7" postStage="100208" buildCost="30000_6100201_64,30000_6000001_1000" buildSplit="30000_6100201_64" prosperity="8000" attr="201_1,607_1,604_2,4101_2,1605_3" power="700" />
+      <data buildId="100208" buildType="1002" buildLevel="8" postStage="100209" buildCost="30000_6100201_128,30000_6000001_1000" buildSplit="30000_6100201_128" prosperity="9000" attr="201_1,607_1,604_2,4101_2,1605_3" power="800" />
+      <data buildId="100209" buildType="1002" buildLevel="9" postStage="100210" buildCost="30000_6100201_256,30000_6000001_1000" buildSplit="30000_6100201_256" prosperity="10000" attr="201_1,607_1,604_2,4101_2,1605_3" power="900" />
+      <data buildId="100210" buildType="1002" buildLevel="10" buildCost="30000_6100201_512,30000_6000001_1000" buildSplit="30000_6100201_512" prosperity="11000" attr="201_1,607_1,604_2,4101_2,1605_3" power="1000" />
+      <data buildId="100301" buildType="1003" buildLevel="1" postStage="100302" prosperity="1000" attr="201_1,607_1,604_2,4101_2" power="600" />
+      <data buildId="100302" buildType="1003" buildLevel="2" postStage="100303" buildCost="30000_6100301_2" buildSplit="30000_6100301_2" prosperity="2000" attr="201_1,607_1,604_2,4101_2" power="700" />
+      <data buildId="100303" buildType="1003" buildLevel="3" postStage="100304" buildCost="30000_6100301_4" buildSplit="30000_6100301_4" prosperity="3000" attr="201_1,607_1,604_2,4101_2" power="800" />
+      <data buildId="100304" buildType="1003" buildLevel="4" postStage="100305" buildCost="30000_6100301_8" buildSplit="30000_6100301_8" prosperity="4000" attr="201_1,607_1,604_2,4101_2" power="900" />
+      <data buildId="100305" buildType="1003" buildLevel="5" postStage="100306" buildCost="30000_6100301_16" buildSplit="30000_6100301_16" prosperity="5000" attr="201_1,607_1,604_2,4101_2" power="1000" />
+      <data buildId="100306" buildType="1003" buildLevel="6" postStage="100307" buildCost="30000_6100301_32" buildSplit="30000_6100301_32" prosperity="6000" attr="201_1,607_1,604_2,4101_2" power="1100" />
+      <data buildId="100307" buildType="1003" buildLevel="7" postStage="100308" buildCost="30000_6100301_64" buildSplit="30000_6100301_64" prosperity="7000" attr="201_1,607_1,604_2,4101_2" power="1200" />
+      <data buildId="100308" buildType="1003" buildLevel="8" postStage="100309" buildCost="30000_6100301_128" buildSplit="30000_6100301_128" prosperity="8000" attr="201_1,607_1,604_2,4101_2" power="1300" />
+      <data buildId="100309" buildType="1003" buildLevel="9" postStage="100310" buildCost="30000_6100301_256" buildSplit="30000_6100301_256" prosperity="9000" attr="201_1,607_1,604_2,4101_2" power="1400" />
+      <data buildId="100310" buildType="1003" buildLevel="10" buildCost="30000_6100301_512" buildSplit="30000_6100301_512" prosperity="10000" attr="201_1,607_1,604_2,4101_2" power="1500" />
+      <data buildId="100401" buildType="1004" buildLevel="1" postStage="100402" prosperity="1000" attr="100_3300,1110_3900,612_3900" power="600" />
+      <data buildId="100402" buildType="1004" buildLevel="2" postStage="100403" buildCost="30000_6100401_2" prosperity="2000" attr="100_3300,1110_3900,612_3900" power="700" />
+      <data buildId="100403" buildType="1004" buildLevel="3" postStage="100404" buildCost="30000_6100401_4" prosperity="3000" attr="100_3300,1110_3900,612_3900" power="800" />
+      <data buildId="100404" buildType="1004" buildLevel="4" postStage="100405" buildCost="30000_6100401_8" prosperity="4000" attr="100_3300,1110_3900,612_3900" power="900" />
+      <data buildId="100405" buildType="1004" buildLevel="5" postStage="100406" buildCost="30000_6100401_16" prosperity="5000" attr="100_3300,1110_3900,612_3900" power="1000" />
+      <data buildId="100406" buildType="1004" buildLevel="6" postStage="100407" buildCost="30000_6100401_32" prosperity="6000" attr="100_3300,1110_3900,612_3900" power="1100" />
+      <data buildId="100407" buildType="1004" buildLevel="7" postStage="100408" buildCost="30000_6100401_64" prosperity="7000" attr="100_3300,1110_3900,612_3900" power="1200" />
+      <data buildId="100408" buildType="1004" buildLevel="8" postStage="100409" buildCost="30000_6100401_128" prosperity="8000" attr="100_3300,1110_3900,612_3900" power="1300" />
+      <data buildId="100409" buildType="1004" buildLevel="9" postStage="100410" buildCost="30000_6100401_256" prosperity="9000" attr="100_3300,1110_3900,612_3900" power="1400" />
+      <data buildId="100410" buildType="1004" buildLevel="10" buildCost="30000_6100401_512" prosperity="10000" attr="100_3300,1110_3900,612_3900" power="1500" />
+      <data buildId="100601" buildType="1006" buildLevel="1" postStage="100602" prosperity="1000" attr="418_1200" power="600" />
+      <data buildId="100602" buildType="1006" buildLevel="2" postStage="100603" buildCost="30000_6100601_2" prosperity="2000" attr="418_1200" power="700" />
+      <data buildId="100603" buildType="1006" buildLevel="3" postStage="100604" buildCost="30000_6100601_4" prosperity="3000" attr="418_1200" power="800" />
+      <data buildId="100604" buildType="1006" buildLevel="4" postStage="100605" buildCost="30000_6100601_8" prosperity="4000" attr="418_1200" power="900" />
+      <data buildId="100605" buildType="1006" buildLevel="5" postStage="100606" buildCost="30000_6100601_16" prosperity="5000" attr="418_1200" power="1000" />
+      <data buildId="100606" buildType="1006" buildLevel="6" postStage="100607" buildCost="30000_6100601_32" prosperity="6000" attr="418_1200" power="1100" />
+      <data buildId="100607" buildType="1006" buildLevel="7" postStage="100608" buildCost="30000_6100601_64" prosperity="7000" attr="418_1200" power="1200" />
+      <data buildId="100608" buildType="1006" buildLevel="8" postStage="100609" buildCost="30000_6100601_128" prosperity="8000" attr="418_1200" power="1300" />
+      <data buildId="100609" buildType="1006" buildLevel="9" postStage="100610" buildCost="30000_6100601_256" prosperity="9000" attr="418_1200" power="1400" />
+      <data buildId="100610" buildType="1006" buildLevel="10" buildCost="30000_6100601_512" prosperity="10000" attr="418_1200" power="1500" />
+      <data buildId="100901" buildType="1009" buildLevel="1" postStage="100902" prosperity="1000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="600" />
+      <data buildId="100902" buildType="1009" buildLevel="2" postStage="100903" buildCost="30000_6100901_2" prosperity="2000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="700" />
+      <data buildId="100903" buildType="1009" buildLevel="3" postStage="100904" buildCost="30000_6100901_4" prosperity="3000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="800" />
+      <data buildId="100904" buildType="1009" buildLevel="4" postStage="100905" buildCost="30000_6100901_8" prosperity="4000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="900" />
+      <data buildId="100905" buildType="1009" buildLevel="5" postStage="100906" buildCost="30000_6100901_16" prosperity="5000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1000" />
+      <data buildId="100906" buildType="1009" buildLevel="6" postStage="100907" buildCost="30000_6100901_32" prosperity="6000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1100" />
+      <data buildId="100907" buildType="1009" buildLevel="7" postStage="100908" buildCost="30000_6100901_64" prosperity="7000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1200" />
+      <data buildId="100908" buildType="1009" buildLevel="8" postStage="100909" buildCost="30000_6100901_128" prosperity="8000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1300" />
+      <data buildId="100909" buildType="1009" buildLevel="9" postStage="100910" buildCost="30000_6100901_256" prosperity="9000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1400" />
+      <data buildId="100910" buildType="1009" buildLevel="10" buildCost="30000_6100901_512" prosperity="10000" attr="201_1,607_1,604_2,4101_2,1605_3,418_1200" power="1500" />
+      <data buildId="101101" buildType="1011" buildLevel="1" postStage="101102" prosperity="1000" attr="418_1200,301_1003" power="600" />
+      <data buildId="101102" buildType="1011" buildLevel="2" postStage="101103" buildCost="30000_6101101_2" prosperity="2000" attr="418_1300,301_1003" power="700" />
+      <data buildId="101103" buildType="1011" buildLevel="3" postStage="101104" buildCost="30000_6101101_4" prosperity="3000" attr="418_1400,301_1003" power="800" />
+      <data buildId="101104" buildType="1011" buildLevel="4" postStage="101105" buildCost="30000_6101101_8" prosperity="4000" attr="418_1500,301_1003" power="900" />
+      <data buildId="101105" buildType="1011" buildLevel="5" postStage="101106" buildCost="30000_6101101_16" prosperity="5000" attr="418_1600,301_1003" power="1000" />
+      <data buildId="101106" buildType="1011" buildLevel="6" postStage="101107" buildCost="30000_6101101_32" prosperity="6000" attr="418_1200,301_1004" power="1100" />
+      <data buildId="101107" buildType="1011" buildLevel="7" postStage="101108" buildCost="30000_6101101_64" prosperity="7000" attr="418_1300,301_1004" power="1200" />
+      <data buildId="101108" buildType="1011" buildLevel="8" postStage="101109" buildCost="30000_6101101_128" prosperity="8000" attr="418_1400,301_1004" power="1300" />
+      <data buildId="101109" buildType="1011" buildLevel="9" postStage="101110" buildCost="30000_6101101_256" prosperity="9000" attr="418_1500,301_1004" power="1400" />
+      <data buildId="101110" buildType="1011" buildLevel="10" buildCost="30000_6101101_512" prosperity="10000" attr="418_1600,301_1004" power="1500" />
+</root>

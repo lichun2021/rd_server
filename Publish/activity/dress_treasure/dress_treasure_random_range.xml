@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rangeStart="4" rangeEnd="10" randomCost="10000_1000_98" />
+      <data id="2" rangeStart="4" rangeEnd="9" randomCost="10000_1000_298" />
+      <data id="3" rangeStart="5" rangeEnd="9" randomCost="10000_1000_498" />
+      <data id="4" rangeStart="5" rangeEnd="9" randomCost="10000_1000_698" />
+      <data id="5" rangeStart="5" rangeEnd="9" randomCost="10000_1000_998" />
+</root>

@@ -1,0 +1,19 @@
+# 大本等级分布:
+select buildingCfgId, count(*) from building where type=2010 group by buildingCfgId;
+
+# 玩家等级分布:
+select level, count(*) from player_base group by level;
+
+# 日常任务的完成分布
+grep 'TaskFlow' Tlog.log.2017-12-05 | grep -v 'StoryTaskFlow' | awk 'BEGIN {FS="|"} {if($12=="2") print $11}' | sort | uniq -c
+
+# 剧情任务完成分布
+grep 'StoryTaskFlow' Tlog.log.2017-12-05 | awk 'BEGIN {FS="|"} {if($13=="2") print $11}' | sort | uniq -c
+
+# 新手步骤的完成情况
+grep 'GuideFlow' Tlog.log.2017-12-05 | awk 'BEGIN {FS="|"} {if($18=="13100010") print $10}' | sort | uniq -c
+
+zcat 65535_20171205_*.log.gz | grep 'GuideFlow' | awk 'BEGIN {FS="|"} {if($8=="-1") print $10}' | sort | uniq -c | wc -l
+
+zcat 2017-12-15.tar.gz | grep --binary-files=text 'PlayerLogin'
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data nationBuild="100" buildType="1" x="382" y="755" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="200" buildType="2" x="385" y="758" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="300" buildType="3" x="384" y="763" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="400" buildType="4" x="382" y="765" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="500" buildType="5" x="378" y="765" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="600" buildType="6" x="375" y="762" isOpen="1" maxLv="10" daylimit="8500" />
+      <data nationBuild="700" buildType="7" x="375" y="758" isOpen="0" maxLv="10" daylimit="8500" />
+      <data nationBuild="800" buildType="8" x="378" y="755" isOpen="0" maxLv="10" daylimit="8500" />
+</root>

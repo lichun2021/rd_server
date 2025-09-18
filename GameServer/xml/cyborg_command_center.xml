@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" level="1" firstControlHonor="0" firstControlGuildHonor="0" refreshPoint="69_18,81_42,21_18,9_42,9_138,21_162,81_138,69_162" honor="0.083333" guildHonor="0.833333" protectTime="180" collectArmyMin="50000" controlCountDown="30" />
+      <data id="2" level="2" firstControlHonor="0" firstControlGuildHonor="0" refreshPoint="57_18,69_42,81_66,33_18,21_42,9_66,9_114,21_138,33_162,81_114,69_138,57_162" honor="0.166667" guildHonor="1.666667" protectTime="180" collectArmyMin="50000" controlCountDown="60" />
+      <data id="3" level="3" firstControlHonor="0" firstControlGuildHonor="0" refreshPoint="57_42,69_66,33_42,21_66,21_114,33_138,57_138,69_114" honor="0.25" guildHonor="2.5" protectTime="180" collectArmyMin="50000" controlCountDown="90" />
+      <data id="4" level="4" firstControlHonor="100" firstControlGuildHonor="1000" refreshPoint="57_66,33_66,33_114,57_114" honor="0.333333" guildHonor="3.333333" protectTime="180" collectArmyMin="50000" controlCountDown="120" />
+      <data id="5" level="5" firstControlHonor="150" firstControlGuildHonor="1500" refreshPoint="45_90" honor="0.5" guildHonor="5" protectTime="180" collectArmyMin="50000" controlCountDown="180" />
+</root>

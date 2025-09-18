@@ -1,0 +1,63 @@
+# 教官大本等级限制
+coachCityLvlLimit = 10
+
+# 教官等级限制
+coachLevelLimit = 0
+
+# 创建学院消耗
+createCost = 10000_1001_100
+
+# 学院人数限制
+collegeMemberMaxCnt = 9
+
+# 在线时长领取数量限制
+onlineRewardLimit = 36
+
+# 教官列表显示数量
+coachListSize = 10
+
+# 申请列表显示数量限制
+applyListSize = 30
+
+# 学院作用号
+memberEffect = 320_100
+
+# 提醒上线冷却
+remindTimeLimitCD = 1800
+
+# 离线多长时间之后可以提醒上线
+remindTime = 2000
+
+# 加入申请有效期
+applyEffectTime = 86400
+
+# 模块开关
+isSysterOpen = 1
+
+# 学员主动退出学院扣除积分百分比
+collegeDeductRatio = 5000
+
+# 学院可存储体力上限
+maxStrength = 2000
+
+# 每日可分配体力上限
+dayMaxStrength = 200
+
+# 重新命名消耗
+renameExpend = 10000_1001_0,10000_1001_100,10000_1001_500
+
+# 换教官的时间：天
+changeCoach = 7
+
+# 线上已有学院乱码名称
+randomName = SuperGiftHtml2
+
+# 体力补充比例:万分比
+strengthBack = 1000
+
+# 最大名字长度
+nameLenLimitMax = 4
+
+# 最小名字长度
+nameLenLimitMin = 1
+

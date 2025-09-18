@@ -1,0 +1,29 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 可购买登录基金的vip等级限制
+limitVipLevel = 1_0,2_0,3_0
+
+# 购买所需资源
+price = 10000_1000_298
+
+# 开启大本等级限制
+openCtiyLimt = 7
+
+# 各基金可购买大本等级限制
+buyCtiyLimt = 1_7,2_10,3_17
+
+# 活动开启的服务器开服时间
+openTimeBegin = 2010-1-1 00:00:00
+
+# 活动截止的服务器开服时间
+openTimeEnd = 2042-1-06 23:59:59
+
+# #ios礼包ID
+iosAdvance = 1_285007,2_285009,3_285011
+
+# #android礼包ID
+androidAdvance = 1_285008,2_285010,3_285012
+
+# 活动重置时间（秒）
+resetTime = 1728000

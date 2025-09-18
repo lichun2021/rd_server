@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 每日任务积分上限
+maxDailyScoreLimit = 3100
+
+# 总积分上限
+maxScoreLimit = 99999999
+
+# 积分奖励轮次
+scoreRewardPages = 3
+
+# 兑换代币的道具ID
+exchangeItemId = 30000_1400015_1
+
+# 展示用的积分的道具ID
+scoreItemId = 30000_1400016_1
+
+# 纪录分解道具机制生效日期
+decomposeItemDate = 802004_2024-9-28 00:00:00,800002_2025-1-4 00:00:00
+

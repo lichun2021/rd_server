@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="1" needItem="30000_21070051_500" gainItem="30000_9990068_100" notExchange="1" manhattanId="2004" />
+      <data id="2" times="1" needItem="30000_21070051_500" gainItem="30000_9990067_100" notExchange="1" manhattanId="1004" />
+      <data id="3" times="1" needItem="30000_21070051_500" gainItem="30000_9990066_100" notExchange="1" manhattanId="2003" />
+      <data id="4" times="1" needItem="30000_21070051_500" gainItem="30000_9990065_100" notExchange="1" manhattanId="1003" />
+      <data id="5" times="1" needItem="30000_21070051_500" gainItem="30000_9990061_100" notExchange="1" manhattanId="1001" />
+      <data id="6" times="20" needItem="30000_21070051_5" gainItem="30000_9990052_3" />
+      <data id="7" times="20" needItem="30000_21070051_5" gainItem="30000_9990051_15" />
+      <data id="8" times="500" needItem="30000_21070051_1" gainItem="30000_1480001_160" />
+      <data id="9" times="500" needItem="30000_21070051_1" gainItem="30000_840194_120" />
+      <data id="10" times="500" needItem="30000_21070051_1" gainItem="30000_1300017_90" />
+      <data id="11" times="500" needItem="30000_21070051_1" gainItem="30000_810001_3" />
+      <data id="12" times="500" needItem="30000_21070051_1" gainItem="30000_850008_5" />
+      <data id="13" times="500" needItem="30000_21070051_1" gainItem="30000_850038_5" />
+      <data id="14" times="500" needItem="30000_21070051_1" gainItem="30000_850018_5" />
+      <data id="15" times="500" needItem="30000_21070051_1" gainItem="30000_850028_5" />
+</root>

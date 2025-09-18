@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" achieveId="50101" conditionType="700055" conditionValue="600" score="50" />
+      <data id="2" achieveId="50102" conditionType="700040" conditionValue="600" score="50" />
+      <data id="3" achieveId="50103" conditionType="700070" conditionValue="420_5" score="50" />
+      <data id="4" achieveId="50104" conditionType="700044" conditionValue="5" score="50" />
+      <data id="5" achieveId="50105" conditionType="700067" conditionValue="20" score="50" />
+      <data id="6" achieveId="50106" conditionType="700068" conditionValue="3" score="50" />
+</root>

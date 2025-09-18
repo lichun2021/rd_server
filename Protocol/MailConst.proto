@@ -1,0 +1,1266 @@
+option java_package = "com.hawk.game.protocol";
+
+//系统邮件ID
+enum MailId
+{
+	CHAT_MAIL										= 2010001;	//聊天邮件
+	MASS_FAILED_TARGET_DISAPPEAR					= 2011011;	//集结失败：攻击目标不存在
+	MASS_FAILED_TARGET_PROTECTED					= 2011012;	//集结失败：攻击目标开保护
+	MASS_FAILED_TARGET_CHANGED						= 2011013;	//集结失败：攻击目标状态改变
+	MASS_FAILED_MEME_MOVED_CITY						= 2011014;	//集结失败：参与者高迁
+	MASS_FAILED_ORGANIZER_DISSOLVE					= 2011015;	//集结失败：发起者解散
+	MASS_PLAYER_LEAVE								= 2011016;	//集结：发车前有人主动离开
+	MASS_PALYER_NOT_ARRIVE							= 2011017;	//集结：发车前没到达集结点
+	MASS_HAS_NO_JOIN_MARCH						    = 2011018;  //集结时间到达。 没有集结加入的队伍。队伍解散
+	MASS_NOT_REACH									= 2011019;  //集结时间到达。 加入集结的队伍没有到达队长家
+	RES_ASSISTANCE_SUCC_TO_FROM						= 2011021;	//资源援助：成功（援助者）
+	RES_ASSISTANCE_SUCC_TO_TARGET					= 2011022;	//资源援助：成功（被援助者）
+	RES_ASSISTANCE_FAILED_FROMER_CHANGED			= 2011023;	//资源援助：失败（援助者被打飞）
+	RES_ASSISTANCE_FAILED_TARGET_CHANGED			= 2011024;	//资源援助：失败（受助者高迁或被打飞）
+	SOILDER_ASSISTANCE_SUCC_TO_FROM					= 2011031;	//士兵援助：成功（援助者）
+	SOILDER_ASSISTANCE_SUCC_TO_TARGET				= 2011032;	//士兵援助：成功（被援助者）
+	SOILDER_ASSISTANCE_FAILED_FROMER_CHANGED		= 2011033;	//士兵援助：失败（援助者被打飞）
+	SOILDER_ASSISTANCE_FAILED_TARGET_CHANGED		= 2011034;	//士兵援助：失败（受助者高迁或被打飞）
+	GUILD_BASTION_OCCUPY_SUCC_TO_FROM				= 2011041;	//联盟堡垒占领：成功（占领方联盟全体成员）
+	GUILD_BASTION_OCCUPY_SUCC_TO_TARGET				= 2011042;	//联盟堡垒占领：成功（被占领方联盟全体成员）
+	OTHER_GUILD_BASTION_OCCUPY_SUCC					= 2011043;	//联盟堡垒占领：占领他盟领地成功
+	GUILD_BASTION_OCCUPING							= 2011044;	//联盟堡垒占领：占领中
+	GUILD_BASTION_OCCUPIED							= 2011045;	//联盟堡垒占领：被占领中
+	GUILD_BASTION_RETAKE_TO_FROM					= 2011051;	//联盟堡垒夺回：成功（占领方联盟全体成员）
+	GUILD_BASTION_RETAKE_TO_TARGET					= 2011052;	//联盟堡垒夺回：成功（被占领方联盟全体成员）
+	CHANGE_GUILD_BASTION							= 2011061;	//变更生效的联盟堡垒（全联盟）
+	KILLED_YURI										= 2011071;	//消灭尤里基地（全联盟）
+	JOIN_GUILD										= 2011081;	//加入联盟
+	JOIN_GUILD_REWARD								= 2011082;	//首次加入联盟获得奖励
+	GUILD_INVITE									= 2011083;	//联盟邀请函
+	JOIN_GUILD_REWARD_OTHER							= 2011084;	//前N次加入联盟获得奖励(除去首次入盟)
+	GUILD_MANOR_UNLOCK_REWARD						= 2011085;	//前N次联盟堡垒解锁奖励
+	JOIN_GUILD_BE_REJECTED							= 2011091;	//加入联盟被拒绝
+	BE_FIRED_FROM_GUILD								= 2011101;	//被逐出联盟
+	GUILD_MEM_TITLE_CHANGED							= 2011111;	//联盟成员等级变更
+	GUILD_MEM_IMPEACH_LEADER						= 2011112;	//联盟成员取代盟主（联盟全体成员)
+	GUILD_MEM_DEMISE_LEADER							= 2011113;	//联盟转让盟主（联盟全体成员)
+	
+	GUILD_DONATE_RANK_AWARD							= 2011114;	// 联盟捐献周排行奖励
+	GUILD_DONATE_RANK_NOTICE						= 2011115;	// 联盟捐献周排行公告
+	
+	GUILD_SUPERMINE_CHANGED							= 2011121;	//联盟超级矿变更（联盟全体成员）
+
+	INVITE_MOVE_CITY								= 2011181;	//邀请迁城
+	
+	GUILD_MANOR_UNLOCK								= 2011132;	//新联盟领地解锁
+	GUILD_MANOR_BE_ATTACKED							= 2011133;	//联盟领地遭到攻击
+	
+	BE_HIT_FLY										= 2012011;	//被击飞
+	DETECT_BASE_SUCC_TO_FROM						= 2012021;	//侦查玩家基地成功（侦查方）
+	DETECT_BASE_SUCC_TO_TARGET						= 2012022;	//侦查玩家基地成功（被侦查方）
+	DETECT_BASE_FAILED_AGAINST_TO_FROM				= 2012023;	//侦查玩家基地失败，被侦查方开启反侦察（侦查方）
+	DETECT_BASE_FAILED_AGAINST_TO_TARGET			= 2012024;	//侦查玩家基地失败，被侦查方开启反侦察（被侦察方）
+	DETECT_BASE_FAILED_PROTECTION_TO_FROM			= 2012025;	//侦查玩家基地失败，被侦查方开启保护（侦查方）
+	DETECT_BASE_FAILED_PROTECTION_TO_TARGET			= 2012026;	//侦查玩家基地失败，被侦查方开启保护（被侦察方）
+	DETECT_BASE_FAILED_TARGET_MOVED					= 2012027;	//侦查玩家基地失败，被侦查方高迁或被打飞（侦查方）
+	DETECT_BASE_FAILED_TARGET_CHANGED				= 2012028;	//侦查玩家基地失败，被侦查方状态改变（侦察方）
+	DETECT_RES_SUCC_TO_FROM							= 2012031;	//侦查玩家资源点成功（侦察方）
+	DETECT_RES_SUCC_TO_TARGET						= 2012032;	//侦查玩家资源点成功（被侦察方）
+	DETECT_RES_FAILED_TARGET_DISAPPEAR				= 2012033;	//侦查玩家资源点失败，资源点消失（侦察方）
+	DETECT_RES_FAILED_TARGET_CHANGED				= 2012034;	//侦查玩家资源点失败，资源点状态改变（侦察方）
+	DETECT_STRONGPOINT_SUCCESS						= 2012035;  // 侦查据点成功
+	DETECT_STRONGPOINT_DETECTED						= 2012036;  // 据点被侦查
+	DETECT_STRONGPOINT_FAIL							= 2012037;  // 据点行军已撤离
+	DETECT_STRONGPOINT_SAMEG						= 2012038;  // 同盟
+	DETECT_CAMP_SUCC_TO_FROM						= 2012041;	//侦查玩家驻扎点成功（侦察方）
+	DETECT_CAMP_SUCC_TO_TARGET						= 2012042;	//侦查玩家驻扎点成功（被侦察方）
+	DETECT_CAMP_FAILED_TARGET_DISAPPEAR				= 2012043;	//侦查玩家驻扎点失败，驻扎点消失（侦察方）
+	DETECT_CAMP_FAILED_TARGET_CHANGED				= 2012044;	//侦查玩家驻扎点失败，驻扎点状态改变（侦察方）
+	DETECT_CAPITAL_SUCC								= 2012051;	//侦查领首都成功
+	CAPITAL_BEDETECT								= 2012052;	//首都被侦查
+	DETECT_CAPITAL_FAILED							= 2012053;	//侦查首都失败，大总统战结束
+	DETECT_CAPITAL_TARGET_CHANGE					= 2012054;	//侦查首都失败，总统府归属改变
+	DETECT_TOWER_SUCC								= 2012055;  //侦查箭塔成功
+	DETECT_TOWER_DETECTED							= 2012056;  //侦查箭塔成功(被侦查)
+	DETECT_TOWER_FAIL								= 2012057;  //侦查箭塔失败
+	DETECT_YURI_SUCC								= 2012061;	//侦查尤里基地成功
+	DETECT_YURI_FAILED_TARGET_DISAPPEAR				= 2012062;	//侦查尤里基地失败，尤里基地消失
+	DETECT_GUILD_BASTION_SUCC_TO_FROM				= 2012071;	//侦查联盟堡垒成功（侦察方）
+	DETECT_GUILD_BASTION_SUCC_TO_TARGET				= 2012072;	//侦查联盟堡垒被侦查（驻军玩家）
+	DETECT_GUILD_BASTION_FAILED_TARGET_CHANGED		= 2012073;	//侦查联盟堡垒失败，联盟堡垒状态改变
+	ATTACK_BASE_SUCC_TO_FROM						= 2012081;	//攻击玩家基地成功（攻击方）
+	ATTACK_BASE_SUCC_TO_TARGET						= 2012082;	//攻击玩家基地成功（被攻击方）
+	ATTACK_BASE_FAILED_TO_FROM						= 2012083;	//攻击玩家基地失败（攻击方）
+	ATTACK_BASE_FAILED_TO_TARGET					= 2012084;	//攻击玩家基地失败（被攻击方）
+	ATTACK_BASE_FAILED_PROTECTION_TO_FROM			= 2012085;	//攻击玩家基地失败，被攻击方开启保护（攻击方）
+	ATTACK_BASE_FAILED_PROTECTION_TO_TARGET			= 2012086;	//攻击玩家基地失败，被攻击方开启保护（被攻击方）
+	ATTACK_BASE_FAILED_TARGET_MOVED					= 2012087;	//攻击玩家基地失败，被攻击方高迁或被打飞（攻击方）
+	ATTACK_BASE_FAILED_TARGET_CHANGED				= 2012088;	//攻击玩家基地失败，被攻击方状态改变（攻击方）
+	ATTACK_RES_SUCC_TO_FROM							= 2012091;	//攻击玩家资源点成功（攻击方）
+	ATTACK_RES_SUCC_TO_TARGET						= 2012092;	//攻击玩家资源点成功（被攻击方）
+	ATTACK_RES_FAILED_TO_FROM						= 2012093;	//攻击玩家资源点失败（攻击方）
+	ATTACK_RES_FAILED_TO_TARGET						= 2012094;	//攻击玩家资源点失败（被攻击方）
+	ATTACK_RES_FAILED_TARGET_DISAPPEAR				= 2012095;	//攻击玩家资源点失败，资源点消失（攻击方）
+	ATTACK_RES_FAILED_TARGET_CHANGED				= 2012096;	//攻击玩家资源点失败，资源点状态改变（攻击方）
+	ATTACK_CAMP_SUCC_TO_FROM						= 2012101;	//攻击玩家驻扎点成功（攻击方）
+	ATTACK_CAMP_SUCC_TO_TARGET						= 2012102;	//攻击玩家驻扎点成功（被攻击方）
+	ATTACK_CAMP_FAILED_TO_FROM						= 2012103;	//攻击玩家驻扎点失败（攻击方）
+	ATTACK_CAMP_FAILED_TO_TARGET					= 2012104;	//攻击玩家驻扎点失败（被攻击方）
+	ATTACK_CAMP_FAILED_TARGET_CHANGED				= 2012105;	//攻击玩家驻扎点失败，驻扎点状态改变（攻击方）
+	ATTACK_YURI_SUCC								= 2012111;	//攻击尤里基地成功
+	ATTACK_YURI_FAILED								= 2012112;	//攻击尤里基地失败
+	ATTACK_YURI_FAILED_TARGET_DISAPPEAR				= 2012113;	//攻击尤里基地失败，尤里基地消失
+	
+	ATTACK_GUILD_BASTION_SUCC_TO_FROM				= 2012121;	//攻击联盟堡垒成功（攻击方）
+	ATTACK_GUILD_BASTION_SUCC_TO_TARGET				= 2012123;	//防守联盟堡垒失败（被攻击方）
+	ATTACK_GUILD_BASTION_FAILED_TO_FROM				= 2012125;	//攻击联盟堡垒失败（攻击方）
+	ATTACK_GUILD_BASTION_FAILED_TO_TARGET			= 2012126;	//防守联盟堡垒成功（被攻击方）
+	
+	ATTACK_CAPITAL_SUCC_TO_FROM						= 2012131;	//攻击首都成功（攻击方）
+	ATTACK_CAPITAL_SUCC_TO_TARGET					= 2012132;	//攻击首都成功（被攻击方）
+	ATTACK_CAPITAL_FAILED_TO_FROM					= 2012133;	//攻击首都失败（攻击方）
+	ATTACK_CAPITAL_FAILED_TO_TARGET					= 2012134;	//攻击首都失败（被攻击方）
+	ATTACK_CAPITAL_FAILED_TARGET_CHANGED			= 2012135;	//攻击首都失败，驻扎点状态改变（攻击方）
+	ATTACK_CAPITAL_FAILED_CMBAT_FINISHED			= 2012136;	//攻击首都失败，大总统争夺战已结束（攻击方）
+	ATTACK_CAPITAL_TOWER_SUCC_TO_FROM				= 2012137;	//攻击首都箭塔成功（攻击方）
+	ATTACK_CAPITAL_TOWER_SUCC_TO_TARGET				= 2012138;	//攻击首都箭塔成功（被攻击方）
+	ATTACK_CAPITAL_TOWER_FAILED_TO_FROM				= 2012139;	//攻击首都箭塔失败（攻击方）
+	ATTACK_CAPITAL_TOWER_FAILED_TO_TARGET			= 2012140;	//攻击首都箭塔失败（被攻击方）
+	CAMP_SUCC_MAIL									= 2012141;	//驻扎成功
+	CAMP_FAILED_TARGET_CHANGED						= 2012142;	//驻扎失败，驻扎点状态改变
+	WOUND_SOLDIER_DEAD								= 2012151;	//伤兵死亡
+	PLANT_WOUND_SOLDIER_DEAD					    = 2012152;	//泰能伤兵死亡
+	NATION_HOSPITAL_SOLDIER_DEAD                    = 2012153;  //国家医院兵死亡
+	
+	WORLD_NEW_MONSTER_ATK_REPORT					= 2012161;	//新版野怪战斗报告
+	WORLD_NEW_MONSTER_POINT_CHANGED					= 2012162;	//新版野怪目标点改变
+	WORLD_NEW_MONSTER_GUILD_AWARD					= 2012163;	//新版野怪联盟奖励
+	
+	ATTACK_STRONG_POINT_PVP_SUCC_TO_FROM			= 2012201;	//攻击玩家据点成功 (攻击方)
+	ATTACK_STRONG_POINT_PVP_SUCC_TO_TARGET			= 2012202;	//防守据点失败 (被攻击方)
+	ATTACK_STRONG_POINT_PVP_FAILED_TO_FROM			= 2012203;	//攻击玩家据点失败 (攻击方)
+	ATTACK_STRONG_POINT_PVP_FAILED_TO_TARGET		= 2012204;	//防守据点成功 (被攻击方)
+	ATTACK_STRONG_POINT_PVE_SUCC_TO_FROM			= 2012205;	//攻击据点NPC成功
+	ATTACK_STRONG_POINT_PVE_FAILED_TO_FROM			= 2012206;	//攻击据点NPC失败
+	STRONGPOINT_OCCUPY_EMPTY_SUCC 					= 2012207;	//成功占领空据点
+	STRONGPOINT_GUILD_CHANGE 						= 2012208;	//对方所属联盟改变，攻击失败
+	
+
+	PRESTENT_GIFT									= 2013001;	//好友赠送礼包
+	UPDATE_NOTICE									= 2013011;	//更新通告
+	SYSTEM_NOTICE									= 2013021;	//系统通知
+	QUESTIONNAIRE_NOTICE							= 2013022;	// 调查问卷通知
+	QUESTIONNAIRE_REWARD							= 2013023;	// 调查问卷奖励通知
+	
+	VIP_BENEFIT_BOX_TAKEN                           = 2013024;  // 贵族每日礼包领取成功
+	VIP_EXCLUSIVE_BOX_BOUGHT                        = 2013025;  // 贵族专属礼包购买成功
+	VIP_BENEFIT_BOX_REFRESH                         = 2013026;  // 贵族每日礼包补发成功
+	LOGIN_CHANGE_NAME                               = 2013027;  // 登录改名
+	SUPER_VIP_DAILY_GIFT_REWARD                     = 202235068;  // 至尊vip每日礼包补发
+	
+	REWARD_MAIL										= 2013031;	//补偿邮件
+	PAY												= 2013041;	//人民币消费
+	TRAVLE_SHOP_GIFT								= 2013042;  //黑市礼包
+	PUSH_GIFT										= 2013043;  //推送礼包
+	RESOURCE_GIFT									= 2013044;  //资源礼包
+	BASE_BUILD_INFO									= 2013045;	// 基地飞升建筑信息
+	BASE_BUILD_REWARD								= 2013046;	// 基地飞升奖励
+	EQUIP_BLACK_MARKET_PACKAGE                      = 2013047;  //装备黑市礼包直购
+	
+	MOVE_CITY_MAIL									= 2013051;	//迁城
+	ROUND_ACTIVITY_SCORE							= 2013061;	//周期活动积分目标奖励
+	ROUND_ACTIVITY_STAGE							= 2013062;	//周期活动阶段排名奖励
+	ROUND_ACTIVITY_TOTAL							= 2013063;	//周期活动总排名奖励
+	ACTIVITY_END_SEND_NOT_TAKE_REWARD				= 2013064;	//活动结束，邮件发送未领取的奖励
+	OPENID_AWARD									= 2013065;  //上次参加测试的玩家奖励
+	BROKEN_EXCHANGE_RES_COLLECT 					= 2013066;  // 城内收取资源
+	BROKEN_EXCHANGE_WORLD_COLLECT					= 2013067; 	// 世界采集资源
+	BROKEN_EXCHANGE_BEAT_YURI						= 2013068; 	//击败尤里
+	BROKEN_EXCHANGE_WISH							= 2013069; 	//许愿
+	BROKEN_EXCHANGE_PACKAGE_BUY						= 2013070;	// 购买礼包
+	CAPTAIN_BE_BEAT									= 2013071;	//指挥官被拷打
+	CAPTAIN_CAUGHT									= 2013072;	//谁抓了我的将
+	CAPTAIN_CAPTIVE									= 2013073;	//我抓了谁的将
+	CAPTAIN_BE_FREED_TO_HOLDER						= 2013081;	//指挥官被释放（关押者）
+	CAPTAIN_BE_FREED_TO_TARGET						= 2013082;	//指挥官被释放（被关押者）
+	CAPTAIN_BE_SAVED_TO_HOLDER						= 2013091;	//指挥官被解救（关押者）
+	CAPTAIN_BE_SAVED_TO_TARGET						= 2013092;	//指挥官被解救（被关押者）
+	CAPTAIN_BACK_HOME								= 2013101;	//指挥官回到基地
+	CAPTAIN_WILL_BE_KILLED							= 2013111;	//指挥官处决倒数
+	CAPTAIN_WILL_BE_KILLED_TO_HOLDER				= 2013121;	//指挥官被处决（关押着）
+	CAPTAIN_WILL_BE_KILLED_TO_TARGET				= 2013122;	//指挥官被处决（被关押着）
+	PRESIDENT_WAR_START								= 2013131;	//国王战开始
+	PRESIDENT_WAR_END								= 2013132;	//国王战结束
+	PRESIDENT_WAR_SUCC_TO_FROM						= 2013133;	//国王战攻击邮件，攻击方战胜（攻方联盟所有人）
+	PRESIDENT_WAR_FAILED_TO_TARGET					= 2013134;	//国王战防守邮件，攻击方战胜（守方联盟所有人）
+	PRESIDENT_WAR_FAILED_TO_FROM					= 2013135;	//国王战攻击邮件，攻击方战败（攻方联盟所有人）
+	PRESIDENT_WAR_SUCC_TO_TARGET					= 2013136;	//国王战防守邮件，攻击方战败（守方联盟所有人）
+	PRESIDENT_WAR_SUCC_ATTACK						= 2013137;	//国王战攻方邮件，首次占领（攻方联盟所有人）
+	PRESIDENT_WAR_END_NO_WIN						= 2013138;	//国王战结束(无总统)
+	PRESIDENT_GIFT									= 2013141;	//大总统礼包
+	PRESIDENT_FIRST_APPOINT							= 2013151;	//首次任命
+	PRESIDENT_CHANGE_APPOINT						= 2013152;	//更改任命
+	PRESIDENT_REPEAL_APPOINT						= 2013153;	//撤销任命（无人接替）
+	PRESIDENT_REPEAL_APPOINT_TO_OTHER				= 2013154;	//撤销任命（有人接替）
+	PRESIDENT_TAX									= 2013161;	//征税
+	PRESIDENT_BE_TAXED								= 2013162;	//被征税
+	NEW_ACCOUNT										= 2013171;	//新手邮件
+	
+	RANDOM_BOX_SUCC									= 2013201;	//随机宝箱获得
+	RANDOM_BOX_DISMISS								= 2013202;	//随机宝箱消失
+	RANDOM_BOX_CD									= 2013203; 	//随机宝箱CD中
+	
+	STRONGEST_TARGET_AWARD				            = 2013501;  //最强指挥官目标达成奖励邮件
+	STRONGEST_STAGE_RANK_AWARD						= 2013502;  //最强指挥官阶段排名奖励邮件
+	STRONGEST_TOTAL_RANK_AWARD						= 2013503;  //最强指挥官总排名奖励邮件
+	HELL_FIRE_TARGET_AWARD							= 2013504;  //地狱火目标奖励
+	HELL_FIRE_RANK_AWARD							= 2013505;  //地狱火排名奖励
+	
+	COMMAND_ACADEMY_STAGE_REWARD                    = 2013506;   //指挥官学院阶段榜奖励
+	COMMAND_ACADEMY_FINAL_REWARD                    = 2013507;    //指挥官学院最终榜奖励
+
+	COMMAND_ACADEMY_SIMPLIFY_STAGE_REWARD           = 2013508;   //指挥官学院阶段榜奖励香
+	COMMAND_ACADEMY_SIMPLIFY_FINAL_REWARD           = 2013509;    //指挥官学院最终榜奖励
+	
+	YURI_REVENGE_SCORE_REWARD						= 2013511;	//尤里复仇活动积分奖励
+	YURI_REVENGE_SELF_RANK_REWARD					= 2013512;	//尤里复仇活动个人排行奖励
+	YURI_REVENGE_GUILD_RANK_REWARD					= 2013513;	//尤里复仇活动联盟排行奖励
+	YURI_REVENGE_FIGHT_OPEN							= 2013514;	//尤里复仇活动开启战斗通知
+	
+	MONSTER_SUCC									= 2014011;	//战胜：攻击胜利
+	MONSTER_SUCC_KILLED								= 2014012;	//战胜：消灭尤里残部
+	MONSTER_FAILED									= 2014013;	//战败
+	MONSTER_FAILED_TARGET_DISAPPEAR					= 2014014;	//攻击失败：尤里残部消失
+	
+	COLLECT_SUCC									= 2015011;	//采集成功
+	COLLECT_FAILED_TARGET_DISAPPEAR					= 2015012;	//采集失败：资源点消失
+	COLLECT_FAILED_ALLIED_OCCUPY					= 2015013;	//采集失败：已被同盟玩家占领
+	COLLECT_FAILED_ENEMY_OCCUPY						= 2015014;	//采集失败：资源点被占领，与敌方开战
+	COLLECT_SUPERMINE_SUCC							= 2015021;	//采集超级矿成功
+	COLLECT_SUPERMIN_TARGET_CHANGED					= 2015022;	//采集失败：资源点状态变更
+	STRONG_AWARD_REPORT								= 2015023;	//据点收益报告
+	YURI_FACTORY_COLLECT							= 2015031; 	//采集尤里实验室成功
+	
+	
+	YURI_REVENGE_FIGHT_WIN							= 2016001;	//尤里复仇: 战斗胜利
+	YURI_REVENGE_FIGHT_FAILED						= 2016002;	//尤里复仇: 战斗失败
+	
+	MASS_MONSTER_HAS_NO_JOIN_MARCH					= 2017001;  //集结时间到达。 没有集结加入的队伍。队伍解散。 邮件发给队长：集结解散，返还体力
+	MASS_MONSTER_NOT_REACH							= 2017002;  //集结时间到达。 加入集结的队伍没有到达队长家，发送邮件给对应的队员，返还体力
+	MASS_MONSTER_TEAM_DISSOLVE						= 2017003;  //队长主动解散队伍，未能发车，发给队长和队员，返还体力
+	MASS_MONSTER_HAS_BEEN_KICK_OUT					= 2017004;  //队长踢掉某个队员，队员未能上车，发给队员，返还体力
+	MASS_MONSTER_KILL_AWARD							= 2017005;  //击杀奖励邮件，发给队员
+	MASS_MONSTER_KILL_GUILD_AWARD					= 2017006;  //击杀奖励邮件，发给联盟成员
+	MASS_MONSTER_AWARD_WIN					        = 2017007;  //伤害奖励(胜利)
+	MASS_MONSTER_AWARD_FAIL					        = 2017008;  //伤害奖励(失败)
+	MASS_MONSTER_DISAPPERA					        = 2017009;  //怪物消失，行军返回，返还体力
+
+	CITY_SHIELD_REMOVE								= 2017010;  // 玩家主动解除能量立场邮件
+	CITY_SHIELD_10_END								= 2017011;	// 能量立场还有10分钟消失
+	CITY_SHIELD_END 								= 2017012;	// 能量立场消失
+	DEAD_SOLDIER_RESOURCE_BUCHANG					= 2017014;  // 死兵补偿
+	INJURED_SOLDIER_RESOURCE_BUCHANG				= 2017013;  // 伤兵补偿
+	BEATBACK_SUC									= 2017015;  // 反击完成
+
+	DEVELOP_FAST_BASE								= 2017016;  // 335活动-实力飞升-建筑工厂特权购买说明邮件
+	DEVELOP_FAST_SCIENCE							= 2017017;  // 335活动-实力飞升-科技研究特权购买说明邮件
+	DEVELOP_FAST_LAB								= 2017018;  // 335活动-实力飞升-超能核心特权购买说明邮件
+	DEVELOP_FAST_SUPPLEMENT							= 2017019;  // 335活动-实力飞升-补发奖励
+	
+	
+	DETECT_FOGGY_SUCC								= 2018001;  //侦查迷雾要塞
+	ATTACK_FOGGY_SUCC_TO_FROM						= 2018002;	//攻击迷雾要塞成功（攻击方）
+	ATTACK_FOGGY_FAILED_TO_FROM						= 2018003;	//攻击迷雾要塞失败（攻击方）
+	DETECT_FOGGY_FAIL								= 2018004;   // 迷雾反侦查
+	MARCH_TOWER_KILL_INFO							= 2018011;  // 防御塔击杀
+	
+	COUNTERATTACK_REWARD 							= 2018028;  //联盟反击发奖励
+	COUNTERATTACK_REWARD_QUITGUILD_BACK 			= 2018029;  //退盟退还赏金
+	MONTHCARD_BUY                                   = 2018030;  //月卡购买收据
+    MONTHCARD_RENEW_NOTICE                          = 2018031;  //月卡续费通知	
+    COUNTERATTACK_REWARD_CHEXIAO_BACK	 			= 2018032;  //撤销悬赏退回赏金
+	CNY_EXAM_BUY						 			= 2018033;  //新春试炼购买
+
+	MONTHCARD_DAILY_AWARD_REFRESH                   = 2018321;  // 月卡每日奖励补发邮件
+	
+	SUPER_WEAPON_SIGNUP								= 20180505; //超级武器报名确认
+	SUPER_WEAPON_WAR_START							= 20180506; //超级武器争夺战开始
+	SUPER_WEAPON_OCCUPY								= 20180507;	//超级武器被占领通知
+	SUPER_WEAPON_ATTACK_MEMBER_AWARD				= 20180508; //超级武器-攻占奖励-攻占者奖励
+	SUPER_WEAPON_ATTACK_GUILD_AWARD					= 20180509; //超级武器-攻占奖励-联盟全员奖励
+	SUPER_WEAPON_REFRESH							= 20180510; //超级武器争夺战刷新邮件	
+	
+	DETECT_SUPER_WEAPON_SUCC						= 20180511;	//超级武器侦查成功
+	DETECT_SUPER_WEAPON_FAILED						= 20180512;	//超级武器侦查失败
+	
+	
+	
+	SUPER_WEAPON_BEDETECT							= 20180517; //超级武器被侦查
+	SUPER_WEAPON_OCCUPY_GUILD_AWARD					= 20180518;	//超级武器-驻守奖励-联盟全员奖励
+	SUPER_WEAPON_GIFT_SEND_OCCUPY					= 20180519;	//超级武器-颁发礼包-驻守
+	SUPER_WEAPON_CONTROL_GUILD_AWARD				= 20180520;	//超级武器-控制奖励-联盟全员奖励
+	SUPER_WEAPON_GIFT_SEND_CONTROL					= 20180521;	//超级武器-颁发礼包-控制
+	SUPER_WEAPON_GIFT_SEND_ATTACK					= 20180522;	//超级武器-颁发礼包-攻占
+	
+	SUPER_WEAPON_OCCUPY_SUCC						= 20180602;	//超级武器占领成功通知
+	SUPER_WEAPON_HAS_CONTROL						= 20180613;	//超级武器占领成功通知
+	
+	WORLD_FOGGY_IN_ACTIVE							= 20180523; //迷雾要塞正在出兵，不能被攻击
+	MASS_MEMBER_MOVE_CITY							= 20185012;	//集结队伍玩家迁城
+	
+	BLOOD_CORPS_RANK_REWARD							= 20180724; //铁血军团排行奖励
+	
+	GAME_REGULAR_TEACHING							= 20180731; // 玩法教学邮件
+	GUILD_REGULAR_TEACHING							= 20180732;	// 联盟教学邮件
+	
+	PRESENT_PLATFORM_FRIEND_GIFT                    = 20180807; // 平台好友赠送礼物
+	
+	ATTACK_SUPER_WEAPON_SUCC_TO_FROM				= 20180815;	//攻击超级武器成功（攻击方）
+	ATTACK_SUPER_WEAPON_FAILED_TO_FROM				= 20180816;	//攻击超级武器点失败（攻击方）
+	ATTACK_SUPER_WEAPON_FAILED_TO_TARGET			= 20180817;	//攻击超级武器点失败（被攻击方）
+	ATTACK_SUPER_WEAPON_SUCC_TO_TARGET				= 20180818;	//攻击超级武器点成功（被攻击方）
+	ATTACK_SUPER_WEAPON_PVE_SUCC_TO_FROM			= 20180819;	//攻击超级武器NPC成功
+	ATTACK_SUPER_WEAPON_PVE_FAILED_TO_FROM			= 20180820; //攻击超级武器NPC失败
+	
+	ATTACK_YURI_STRIKE_SUCC_TO_FROM					= 20180821;	//尤里来袭-进攻NPC成功
+	ATTACK_YURI_STRIKE_FAILED_TO_FROM				= 20180822; //尤里来袭-进攻NPC失败
+	
+	YURI_REVENGE_ASSIST_FIGHT_WIN					= 20180828;	//尤里复仇: 援助他人战斗胜利
+	YURI_REVENGE_ASSIST_FIGHT_FAILED				= 20180829;	//尤里复仇: 援助他人战斗失败
+	
+	ATK_GUNDAM_WIN									= 20181128; //机甲战斗胜利
+	KILL_GUNDAM										= 20181129; //机甲击杀成功
+	GUNDAM_PLAYER_RANK								= 20181130; //机甲觉醒个人排行
+	GUNDAM_GUILD_RANK								= 20181201; //机甲觉醒联盟排行
+	GUNDAM_START_UP									= 20181214; // 机甲进阶
+	
+	WORLD_FOGGY_MARCH_POINT_DISAPPEAR				= 2019005; 	// 迷雾要塞行军目标点消失
+	
+	DEF_GHOST_MARCH_FIGHT_WIN						= 20180914;	//防守幽灵行军: 战斗胜利
+	DEF_GHOST_MARCH_FIGHT_FAILED					= 20180915;	//防守幽灵行军: 战斗失败
+	
+	BROKEN_EXCHANGE_A_RES_COLLECT 					= 3000001;  // 城内收取资源
+	BROKEN_EXCHANGE_A_X_WORLD_COLLECT				= 3000002; 	// 世界采集资源
+	BROKEN_EXCHANGE_A_BEAT_YURI						= 3000003; 	//击败尤里
+	BROKEN_EXCHANGE_A_WISH							= 3000004; 	//许愿
+	GUILD_RANK_DAILY_PUSH_TOP3						= 20181000; // 联盟排行榜每日推送
+	TIME_LIMIT_DROP_RANK_REWARD						= 20181031; //限时掉落结束排行榜发送奖励
+	TIME_LIMIT_DROP_TASK_REWARD						= 20181032;//限时掉落奖励
+	ALLY_BEAT_BACK_TASK_REWARD						= 20181033; //联盟反击奖励邮件
+	PRESIDENT_PROVISIONAL_APPOINT					= 20181202; //总统临时任命
+	PRESIDENT_OFFICAL_APPOINT_APPOINT				= 20181203; //总统正式任命
+	
+	GUNDAM_DISAPPEAR								= 20181204; //机甲消失
+	ONE_RMB_PURCHASE                                = 20181205; //一元购收据
+	
+	CR_MISSION_CHALLENGE_SUS                        = 20181215; //勇士殿堂挑战成功邮件
+	CR_MISSION_RANK_INFO                            = 20181216; //勇士殿堂排行公告
+	
+	STRONGEST_GUILD_PERSON_STAGE                    = 20181217; //王者联盟个人阶段排行奖励
+	STRONGEST_GUILD_PERSON_TOTAL                    = 20181218; //王者联盟个人总榜奖励
+	STRONGEST_GUILD_GUILD_STAGE                     = 20181219; //王者联盟联盟阶段排行奖励
+	STRONGEST_GUILD_GUILD_TOTAL                     = 20181220; //王者联盟联盟总榜排行奖励
+	WAR_COLLEGE_INSTANCE							= 20181221; //联盟副本胜利奖励
+	LMJY_BACK_SOLDIER								= 20181222; // 军常事演返还兵
+	
+	POWER_LAB_COLLECT_PERSON_RANK                   = 20190101; //能量收集活动个人排行榜奖励邮件
+	POWER_LAB_COLLECT_GUILD_RANK                    = 20190102; //能量收集活动联盟排行榜奖励邮件
+	
+	CROSS_ACTIVITY_OPEN_NOTICE						= 20190107; //跨服活动进入开启阶段全服通知
+	CROSS_ACTIVITY_SERVER_RANK						= 20190108;	//跨服活动全服排行奖励
+	CROSS_ACTIVITY_SELF_RANK						= 20190109;	//跨服活动个人排行奖励
+	CROSS_ACTIVITY_GUILD_RANK						= 20190110;	//跨服活动联盟排行奖励
+	
+	
+	RESOURCE_SPREE_BOX_REWARD                       = 20190111; //资源狂欢宝箱行军奖励
+	RESOURCE_SPREE_BOX_DISAPPEAR	                = 20190112; //资源狂欢宝箱世界点消失
+	RESOURCE_SPREE_BOX_COUNT_LIMIT                  = 20190121; //资源狂欢宝箱领取达到上限
+	
+	SEND_FLOWER_SONG_REWARD							= 20190122; //送花排行奖励
+	SEND_FLOWER_SHOU_REWARD							= 20190123; //收花排行奖励
+	
+	NIAN_DISAPPEAR									= 20190124; //年兽消失
+	ATK_NIAN										= 20190125; //年兽攻击奖励
+	ONCE_KILL_NIAN									= 20190126; //年兽致命一击
+	KILL_NIAN										= 20190127; //年兽最终一击
+	NIAN_PLAYER_RANK								= 20190128; //年兽个人排行
+	NIAN_GUILD_RANK									= 20190129; //年兽联盟排行
+	
+	TH_MONSTER_KILL_MEMBER							= 20190130; //齐天金猴，击杀奖励，发给队员
+	TH_MONSTER_KILL_GUILD_MEMBER					= 20190131; //齐天金猴，击杀奖励，发给联盟成员
+	TH_MONSTER_ATK_WIN								= 20190132; //齐天金猴伤害奖励胜利
+	TH_MONSTER_ATK_FAIL								= 20190133; //齐天金猴伤害奖励失败
+	TH_MONSTER_DISP									= 20190134; //齐天金猴怪物消失
+	TH_RESOURCE_REWARD								= 20190135; //金猪宝藏，收益报告
+	TH_REWARD										= 20190136; //寻宝随机事件, 奖励
+	TH_RESOURCE										= 20190137; //寻宝随机事件，齐天金猴
+	TH_MONSTER										= 20190138; //寻宝随机事件，金猪宝藏
+	
+	ATTACK_TREASURE_HUNT_RES_SUCC_TO_FROM			= 20190139;	//攻击玩家寻宝资源点成功 (攻击方)
+	ATTACK_TREASURE_HUNT_RES_SUCC_TO_TARGET			= 20190140;	//防守玩家寻宝资源点失败 (被攻击方)
+	ATTACK_TREASURE_HUNT_RES_FAILED_TO_FROM			= 20190141;	//攻击玩家寻宝资源点失败 (攻击方)
+	ATTACK_TREASURE_HUNT_RES_FAILED_TO_TARGET		= 20190142;	//防守玩家寻宝资源点成功 (被攻击方)
+
+	
+	DETECT_CITY_FAILED10_TO_FROM 					= 20190227; // 差10级失败
+	DETECT_CITY_FAILED10_TO_TAR						= 20190228; // 差10级失败
+	DETECT_THRES_SUCCESS							= 20190229; // 侦查金猪
+
+	VERSION_UPDATE_REWARD							= 20190230; // 大版本更新奖励邮件
+
+	ACTIVITY_QUESTION_SHARE_ANSWER_RIGHT			= 20190304; //在线答题 情报分享活动 回答问题 答对奖励
+	ACTIVITY_QUESTION_SHARE_ANSWER_WRONG			= 20190305; //在线答题 情报分享活动 回答问题 答错奖励
+
+	DUEL_ATTACK_BASE_SUCC_TO_FROM					= 20190306;	//攻击玩家基地成功（攻击方）
+	DUEL_ATTACK_BASE_SUCC_TO_TARGET					= 20190307;	//攻击玩家基地成功（被攻击方）
+	DUEL_ATTACK_BASE_FAILED_TO_FROM					= 20190308;	//攻击玩家基地失败（攻击方）
+	DUEL_ATTACK_BASE_FAILED_TO_TARGET				= 20190309;	//
+
+	BANNER_KILL_RANK_AWARD                          = 20190233; // 战神降临活动排名奖励
+	GUILD_BANNER_RANK_AWARD                         = 20190234; // 联盟插旗活动排名奖励
+	
+	CASTLE_LEVELUP_AWARD                            = 20190235; // 城堡升级奖励
+	COLL_RES_TREASURE_OK 							= 20190315; // 采集成功
+	COLL_RES_TREASURE_FAIL 							= 20190316; // 采集失败
+	
+	WAR_FLAG_GUILD_RANK_REWARD						= 20190311; // 战旗联盟排行奖励
+	WAR_FLAG_RANK_REWARD							= 20190312; // 战旗个人排行奖励
+	WAR_FLAG_BE_OCCUPY								= 20190313; // 战旗被占领
+	WAR_FLAG_BUILD_COMPLATE							= 20190314; // 战旗建造完成
+	WAR_FLAG_BE_OCCUPY_GUILD						= 2020081701; // 战旗被占领(信标)
+	WAR_FLAG_BUILD_COMPLATE_GUILD					= 2020081702; // 战旗建造完成(信标)
+	
+	ATTACK_WAR_FLAG_SUCC_TO_FROM					= 20190317; // 攻击旗帜胜利 (攻击方)
+	ATTACK_WAR_FLAG_SUCC_TO_TARGET					= 20190318; // 防守旗帜失败 (被攻击方)
+	ATTACK_WAR_FLAG_FAILED_TO_FROM					= 20190319; // 攻击旗帜失败	(攻击方)
+	ATTACK_WAR_FLAG_FAILED_TO_TARGET				= 20190320; // 防守旗帜胜利 (被攻击方)
+	SPY_WAR_FLAG_SUCESS 							= 20190321; //侦察敌方旗帜	
+	SPY_WAR_FLAG_SPYED 								= 20190322; //侦察敌方旗帜	被侦查
+	UPDATE_NXN_NOTICE								= 20190323; // 大版本更新通知全服邮件
+	COLLEGE_INVITE									= 20190324; // 邀请加入学院	
+	GIFT_ZERO_CONSUME_BACK_REWARD                   = 20190325; // 0元礼包购买消耗返还
+	
+	ORDER_ACTIVITY_LVL_REWARD						= 20190326; // 红警战令等级奖励邮件
+	ORDER_ACTIVITY_ADVANCE_REWARD					= 20190327;	// 红警战令进阶版本奖励邮件
+	
+	SUPER_WEAPON_SEASON_AWARD	                    = 20190330; // 战区赛季奖励
+	
+	TH_MONSTER_MASS_NO_JOIN							= 20190401; // 齐天金猴，集结失败，无人加入
+	TH_MONSTER_MASS_LEADER_GO						= 20190402; // 齐天金猴，队长已经出发
+	TH_RES_DISAPPER									= 20190403; // 金猪，宝藏消失
+	TH_RES_BE_SPY									= 20190404; // 金猪，被侦查
+	
+	REVENGE_TROOP_BACK                              = 20190415; // 大R复仇损失兵力返还
+
+	PLAN_ACTIVITY_RANK_AWARD 						= 20190417; //源计划排行榜活动
+
+	FORTRESS_OCCUPY_CHANGE_DEF						= 20190425; // 要塞占领权更换(防守方)
+
+	FORTRESS_SPY_SUCCUS								= 20190427; // 要塞侦查成功
+	FORTRESS_SPY_FAIL								= 20190428; // 要塞侦查失败
+	FORTRESS_SPY_ED									= 20190433; // 要塞被侦查
+	FORTRESS_OCCUPY_CHANGE_ATK						= 20190434; // 要塞占领权更换(攻击方)
+	
+	ATTACK_FORTRESS_SUCC_TO_FROM					= 20190436; // 攻击要塞胜利 (攻击方)
+	ATTACK_FORTRESS_FAILED_TO_FROM					= 20190437; // 攻击要塞失败	(攻击方)
+	ATTACK_FORTRESS_FAILED_TO_TARGET				= 20190438; // 防守要塞胜利 (被攻击方)
+	ATTACK_FORTRESS_SUCC_TO_TARGET					= 20190439; // 防守要塞失败 (被攻击方)
+	ATTACK_FORTRESS_PVE_SUCC_TO_FROM				= 20190440;	// 攻击要塞NPC成功
+	ATTACK_FORTRESS_PVE_FAILED_TO_FROM				= 20190441; // 攻击要塞NPC失败
+
+	YQZZ_LEAGUE_START								= 20190449; // 赛季开始邮件
+	YQZZ_LEAGUE_GROUP_ADVANCE						= 20190450; // 常规赛晋级说明邮件
+	YQZZ_LEAGUE_GROUP_KICKOUT						= 20190451; // 常规赛淘汰说明邮件
+	YQZZ_LEAGUE_SERVER_POINT_REWARD					= 20190452; // 国家总胜利点目标奖励邮件
+	YQZZ_LEAGUE_GUILD_POINT_REWARD					= 20190453; // 联盟总胜利点目标奖励邮件
+	YQZZ_LEAGUE_PLAYER_POINT_REWARD					= 20190454; // 个人总军功目标奖励邮件
+	YQZZ_LEAGUE_SERVER_RANK							= 20190455; // 国家排名奖励邮件
+	YQZZ_LEAGUE_SERVER_LEADER_REWARD				= 20190456; // 国家排名司令分配奖励邮件
+	YQZZ_LEAGUE_GUILD_RANK							= 20190457; // 联盟排名奖励邮件
+	YQZZ_LEAGUE_TOP_SHOW							= 20190458; // 月球之巅前三名公示邮件
+	
+	INVEST_PROFIT                               = 20190513; // 投资理财收益
+	
+	URL_TX_SHARE_EIGHT_MAIL						= 20190515; // 腾讯url活动分享8 分享奖励邮件
+	
+	INVEST_PROFIT_RECEIVE                       = 20190516; // 投资理财收益领取凭证
+	INVEST_CANCEL                               = 20190518; // 投资取消返还本金凭证
+	
+	BLESS_BAG_SHARE_AWARD                       = 20190523; // 福袋分享奖励邮件
+	REVENGE_SHOP_END                            = 20190524; // 复仇商店结束
+	
+	URL_TX_SHARE_NINE_MAIL						= 20190525; // 腾讯url活动分享9 分享奖励邮件
+	URL_TX_SHARE_TEN_MAIL						= 20190526; // 腾讯url活动分享10 分享奖励邮件
+	WORLD_MARCH_SPPED_ITEM_BACK                 = 20190527; // 作用号【628】行军加速返送邮件
+	
+	CHAMPIONSHIP_ATK_WIN						= 20190611; // 锦标赛进攻方胜利
+	CHAMPIONSHIP_ATK_FAILED						= 20190612; // 锦标赛进攻方失败
+	
+	NIAN_MASS_ONCE_KILL_AWARD					= 20190626; // 年兽集结致命一击奖励
+	NIAN_MASS_KILL_AWARD						= 20190627; // 年兽集结最终一击奖励
+	
+	
+	REDKOI_WISH_AWARD                           = 20191001;  //红警锦鲤
+
+	
+	TBLY_SPY_STRONGPOINT_SUCCESS				= 2020001; // 泰伯利亚侦察驻扎点	2020001
+	TBLY_SPY_STRONGPOINT_BE  					= 2020002; //泰伯利亚被侦察驻扎点	2020002
+	TBLY_SPY_STRONGPOINT_FAIL					= 2020003;//泰伯利亚驻扎点侦察失败（撤离）	2020003
+	TBLY_SPY_STRONGPOINT_FAIL_SAME_GUILD		= 2020004;//泰伯利亚驻扎点侦察失败（联盟变更）	2020004
+	TBLY_SPY_RES_SUCCESS						= 2020005;//泰伯利亚侦察资源点	2020005
+	TBLY_SPY_RES_BE								= 2020006;//泰伯利亚被侦察资源点	2020006
+	TBLY_SPY_RES_FAIL							= 2020007;//泰伯利亚资源点侦察失败（撤离）	2020007
+	TBLY_SPY_RES_FAIL_SAME_GUILD				= 2020008;//泰伯利亚资源点侦察失败（联盟变更）	2020008
+	TBLY_SPY_BUILD_SUCCESS						= 2020009;//泰伯利亚建筑侦察成功	2020009
+	TBLY_SPY_BUILD_FAIL							= 2020010;//泰伯利亚建筑侦察失败	2020010
+	TBLY_SPY_BUILD_BE							= 2020011; //泰伯利亚建筑被侦察	2020011
+	ATTACK_TW_BUILD_SUCC_TO_FROM				= 2020012; // 攻击泰伯利亚建筑胜利 (攻击方)
+	ATTACK_TW_BUILD_SUCC_TO_TARGET				= 2020013; // 防守泰伯利亚建筑失败 (被攻击方)
+	ATTACK_TW_BUILD_FAILED_TO_FROM				= 2020014; // 攻击泰伯利亚建筑失败	(攻击方)
+	ATTACK_TW_BUILD_FAILED_TO_TARGET			= 2020015; // 防守泰伯利亚建筑胜利 (被攻击方)
+	ATTACK_TW_RES_SUCC_TO_FROM					= 2020016; // 攻击泰伯利亚资源点胜利 (攻击方)
+	ATTACK_TW_RES_SUCC_TO_TARGET				= 2020017; // 防守泰伯利亚资源点失败 (被攻击方)
+	ATTACK_TW_RES_FAILED_TO_FROM				= 2020018; // 攻击泰伯利亚资源点失败	(攻击方)
+	ATTACK_TW_RES_FAILED_TO_TARGET				= 2020019; // 防守泰伯利亚资源点胜利 (被攻击方)
+	
+	TBLY_GUILD_WIN_MAIL							= 2020022; // 泰伯利亚联盟奖励邮件（胜利）
+	TBLY_GUILD_LOSE_MAIL						= 2020023; // 泰伯利亚联盟奖励邮件（失败）
+	TBLY_SELF_WIN_MAIL							= 2020024; // 泰伯利亚个人奖励邮件（胜利）（邮件正文携带参数：个人积分数值）
+	TBLY_SELF_LOSE_MAIL							= 2020025; // 泰伯利亚个人奖励邮件（失败）（邮件正文携带参数：个人积分数值）
+	
+	TBLY_GUILD_MEMBER_NOT_ENOUGH				= 2020026; // 泰伯利亚联盟出战人数不足,不参与匹配
+	TBLY_GUILD_MATCH_FAILED						= 2020027; // 泰伯利亚联盟匹配失败
+	TBLY_BACK_SOLDIER							= 2020028; // 返兵
+	TBLY_SELF_PAUSE_MAIL						= 2020029; // 泰伯利亚个人奖励邮件 (中断补发最高奖励)
+	TBLY_ATK_MONSTER_SUCCESS				    = 2021112401; //泰伯利亚野怪击杀邮件	2021112401  四个参数，分别是1 坐标  2击杀个人积分  3击杀号令能量  4 联盟总号令能量
+	TBLY_ATK_MONSTER_FAIL						= 2021112402; //泰伯利亚野怪失败邮件	2021112402   1个参数，坐标
+    TBLY_ATK_MONSTER_MISS 						= 2021112403; // 泰伯利亚野怪消失邮件	2021112403   1个参数，坐标
+
+	PLAYER_DRESS_FRIEND_SEND		 					= 30000001; //装扮好友赠送
+	PLAYER_DRESS_FRIEND_ASK								= 30000002; //装扮好友索要
+	PLAYER_DRESS_ALLY_SEND		 						= 30000003; //装扮盟友赠送
+	PLAYER_DRESS_ALLY_ASK								= 30000004; //装扮盟友索要
+	GUARD_CREATE								= 30000005;//好友守护关系建立
+	GUARD_RECEIVE_GIFT							= 30000006; //好友守护接受礼物.
+	GUARD_OPEN_COVER							= 30000007; //帮忙开罩子
+	GUARD_PUT_OUT_FIRE							= 30000008; //帮忙灭火.
+	GUARD_UPGRADE								= 30000009; //关系晋升.
+	GUARD_INVITE_RETURN							= 30000010; //退回邀请.
+	SKIN_PLAN_RECHARGE							= 30000011; //皮肤计划活动期间充值给的物品邮件.
+	GUARD_DELETE								= 30000012; //删除守护.
+	DIVIDE_GOLD_GIVE_FU_ZI						= 30000013; //瓜分金币活动赠送福字
+	TBLY_GUESS_ACT_CORRECT						= 30000014; //泰伯利亚竞猜活动猜对
+	TBLY_GUESS_ACT_WRONG						= 30000015; //泰伯利亚竞猜活动猜错
+
+	PARTITION_KING_APPOINT						= 20190821; //三军统帅首次任命.
+	PARTITION_KING_CHANGE_APPOINT				= 20190822; //三军统帅更改任命.
+	PARTITION_KING_REPEAL_APPOINT				= 20190823; //三军统帅被撤职,无人接替）
+	PARTITION_KING_REPEAL_APPOINT_TO_OTHERN		= 20190824; //三军统帅被撤职,无人接替）
+	
+	WORLD_KING_APPOINT						= 20190825; //大陆霸主首次任命.
+	WORLD_KING_CHANGE_APPOINT				= 20190826; //大陆霸主更改任命.
+	WORLD_KING_REPEAL_APPOINT				= 20190827; //大陆霸主(被撤职,无人接替）
+	WORLD_KING_REPEAL_APPOINT_TO_OTHERN		= 20190828; //大陆霸主(被撤职,无人接替）
+	
+	TIBERIUM_SEASON_PERSON_SCORE_REWARD		= 20190829; // 泰伯利亚联赛个人积分奖励
+	TIBERIUM_SEASON_GUILD_SCORE_REWARD		= 20190830; // 泰伯利亚联赛联盟积分奖励
+	
+	ALLIANCE_CARNIVAL_BASE_AWARD = 20190906; // 联盟总动员基础奖励
+	ALLIANCE_CARNIVAL_ADVA_AWARD = 20190907; // 联盟总动员进阶奖励
+	
+	SW_INVITE								= 20190918; // 报名资格确认前全服通知
+	SW_MATCH_RESULT							= 20190919; // 报名结果确认通知
+	SW_ZONE_KING_NOTICE						= 20190920; // 本区霸主产生
+	SW_WORLD_KING_NOTICE					= 20190921; // 全服霸主产生
+	SW_HONOR_RANK_REWARD					= 2020062327; // 荣誉点排名奖励
+	SW_KILL_RANK_REWARD						= 2020062328; // 消灭战力目标奖励
+
+	NIAN_BOX_NOT_FOUND	= 20190908; // 幽灵机甲宝箱消失
+	NIAN_BOX_AWARD		= 20190909; // 幽灵机甲宝箱奖励
+	GHOST_NIAN_1		= 20190910; // 幽灵机甲消失
+	GHOST_NIAN_2		= 20190911; // 幽灵机甲攻击奖励
+	GHOST_NIAN_3		= 20190912; // 幽灵机甲致命一击奖励
+	GHOST_NIAN_4		= 20190913; // 幽灵机甲最终一击奖励
+	GHOST_NIAN_5		= 20190914; // 幽灵机甲个人排行奖励
+	GHOST_NIAN_6		= 20190915; // 幽灵机甲联盟排行奖励
+	GHOST_NIAN_7		= 20190916; // 幽灵机甲集结致命一击奖励
+	GHOST_NIAN_8		= 20190917; // 幽灵机甲集结最终一击奖励
+	SW_WORLD_KING_GIFT						= 20190922; //大陆霸主颁发礼包
+	SW_PART_KING_GIFT						= 20190923; //三军统帅颁发礼包
+	SW_SELF_MERGE							= 20190924; //自己合服官职清空
+	SW_WORLD_MERGE							= 20190925; //霸主合服了所有官职都清空
+	SW_PART_MERGE							= 20190926; //统帅合服了所有的官职都清空
+	
+	ATTACK_SW_BUILD_SUCC_TO_FROM				= 20190927; // 攻击泰伯利亚建筑胜利 (攻击方)
+	ATTACK_SW_BUILD_SUCC_TO_TARGET				= 20190928; // 防守泰伯利亚建筑失败 (被攻击方)
+	ATTACK_SW_BUILD_FAILED_TO_FROM				= 20190929; // 攻击泰伯利亚建筑失败	(攻击方)
+	ATTACK_SW_BUILD_FAILED_TO_TARGET			= 20190930; // 防守泰伯利亚建筑胜利 (被攻击方)
+	SW_SPY_BUILD_SUCCESS						= 20190931;//泰伯利亚建筑侦察成功	2020009
+	SW_SPY_BUILD_FAIL							= 20190932;//泰伯利亚建筑侦察失败	2020010
+	SW_SPY_BUILD_BE								= 20190933; //泰伯利亚建筑被侦察	2020011
+	ATTACK_SW_TERMINAL_BUILD_SUCC_TO_FROM				= 20190934; // 攻击泰伯利亚建筑胜利 (攻击方)
+	ATTACK_SW_TERMINAL_BUILD_SUCC_TO_TARGET				= 20190935; // 防守泰伯利亚建筑失败 (被攻击方)
+	ATTACK_SW_TERMINAL_BUILD_FAILED_TO_FROM				= 20190936; // 攻击泰伯利亚建筑失败	(攻击方)
+	ATTACK_SW_TERMINAL_BUILD_FAILED_TO_TARGET			= 20190937; // 防守泰伯利亚建筑胜利 (被攻击方)
+	SW_TERMINAL_SPY_BUILD_SUCCESS						= 20190938;//泰伯利亚建筑侦察成功	2020009
+	SW_TERMINAL_SPY_BUILD_FAIL							= 20190939;//泰伯利亚建筑侦察失败	2020010
+	SW_TERMINAL_SPY_BUILD_BE							= 20190940; //泰伯利亚建筑被侦察	2020011
+	
+	EVOLUTION_TASK_EXP_REWARD							= 20190941; //英雄进化之路任务自动领取积分通知
+	HERO_SKIN_RECHARGE = 20190942; // 英雄皮肤投放活动充值给券
+	SIMULATE_WAR_ATK_WIN								= 20190943; //攻防模拟战胜利
+	SIMULATE_WAR_ATK_FAIL								= 20190944; //攻防模拟战失败
+	SIMULATE_WAR_WIN_3									= 20190945; //攻防模拟战三路胜利
+	SIMULATE_WAR_WIN_2									= 20190946; //攻防模拟战二路胜利
+	SIMULATE_WAR_WIN_1									= 20190947; //攻防模拟战一路胜利
+	SIMULATE_WAR_WIN0									= 20190948; //攻防模拟战0路胜利.
+	SIMULATE_WAR_CAN_NOT_JOIN_MATCH						= 20190949; //不能参与匹配.
+	
+	PYLON_COLLECT						= 2019102901; //能量塔采集邮件
+	ATK_PYLON_SUCCESS					= 2019102903; //攻击能量塔成功
+	DEF_PYLON_FAIL						= 2019102904; //防守能量塔失败
+	ATK_PYLON_FAIL						= 2019102905; //攻击能量塔失败
+	DEF_PYLON_SUCCESS					= 2019102906; //防守能量塔成功
+	CROSS_CHARGE_RANK_SELF_AWARD		= 2019102907; //充能排行榜个人
+	CROSS_CHARGE_RANK_GUILD_AWARD		= 2019102908; //充能排行榜联盟
+	CROSS_TAX_SEND						= 2019102909; //资源分配邮件
+	PYLON_DISPARE						= 2019102910; //能量塔消失
+
+	DETECT_PLYON_SUCCESS = 2019102911;//	 能量塔侦察成功	2019102911
+	DETECT_PLYON_FAIL = 2019102912;//能量塔侦察失败	2019102912
+	DETECT_PLYON_BE = 2019102902;//【能量塔】被其他玩家侦查邮件	2019102902
+
+	TIBERIUM_LEAGUA_RANK_REWARD			= 30000016; // 泰伯利亚联赛排行奖励
+	TBLY_NUCLEAR_HIT 		= 20191121; // 核弹命中
+	TBLY_NUCLEAR_MIS 		= 20191122; // 核弹未命中
+	STAR_WAR_ZONE_JOIN		= 20191123;	// 星球大战-赛区入围
+	STAR_WAR_WORLD_JOIN		= 20191124; // 星球大战-决赛入围
+	CHRISTMAS_PERSONAL_KILL		= 2019120201; //圣诞boss 个人击杀
+	CHRISTMAS_MASS_KILL			= 2019120202; //圣诞boss 集结击杀.
+	CHRISTMAS_PERSONAL_DEADLINESS = 2019120203; //圣诞个人致命一击
+	CHRISTMAS_MASS_DEADLINESS = 2019120204; //圣诞集结致命一击
+	CHRISTMAS_ATK				= 2019120205; //圣诞 攻击奖励.
+	CHRISTMAS_MISS				= 2019120206; //圣诞boss 消失.
+	CHRISTMAS_BOX_MISS			= 2019120207; //圣诞宝箱miss;
+	CHRISTMAS_BOX_AWARD			= 2019120208; //圣诞宝箱奖励.
+	CHRISTMAS_PERSONAL_ATTACK_RANK	= 2019120209; //圣诞个人攻击
+	CHRISTMAS_GUILD_ATTACK_RANK	    = 2019120210; //圣诞工会攻击
+	CHRISTMAS_PERSONAL_KILL_RANK = 2019120211; //圣诞个人击杀奖励.
+
+	TBLY_NIAN_ATK		= 20191214;
+	TBLY_NIAN_ONCE_ATK	= 20191215;
+	TBLY_NIAN_KILL		= 20191216;
+	
+	TLW_INIT_ELO_SCORE_WITH_POWER	= 20191219; //泰伯利亚elo积分初始化-含战力加分
+	TLW_ELO_SCORE_SEASON_CALC		= 20191220; // 泰伯利亚elo积分赛季末结算
+	TLW_ELO_ABSENT_DISS_SCORE		= 20191221; // 泰伯利亚连续缺席积分衰减
+	TLW_INIT_ELO_SCORE				= 20191222; // 泰伯利亚elo积分初始化
+
+	XW_SIGNUP_OPEN					= 20191224; // 星海开始报名通知邮件
+	XW_MATCH_RESULT					= 20191225; // 星海匹配结果通知邮件
+	XW_BATTLE_WIN					= 20191226; // 星海胜利奖励邮件
+	XW_BATTLE_LOST_1				= 20191227; // 星海惜败奖励邮件
+	XW_BATTLE_LOST_2				= 20191228; // 星海失败奖励邮件
+
+
+	
+	ATTACK_CHRISTMAS_SUCC_TO_FROM				= 2019120212; // 攻击圣诞宝箱胜利 (攻击方)
+	ATTACK_CHRISTMAS_SUCC_TO_TARGET				= 2019120213; // 防守圣诞宝箱失败 (被攻击方)
+	ATTACK_CHRISTMAS_FAILED_TO_FROM				= 2019120214; // 攻击圣诞宝箱失败 (攻击方)
+	ATTACK_CHRISTMAS_FAILED_TO_TARGET			= 2019120215; // 防守圣诞宝箱胜利 (被攻击方)
+	CHRISTMAS_BOX_SPY				= 2019120216;
+	CHRISTMAS_BOX_SPYED				= 2019120217;
+	
+	SNOWBALL_MAIL_1 = 20191201; // 雪球邮件 - 攻击雪球成功
+	SNOWBALL_MAIL_2 = 20191202; // 雪球邮件 - 攻击雪球失败
+	SNOWBALL_MAIL_3 = 20191203; // 雪球邮件 - 进球奖励邮件
+	SNOWBALL_MAIL_4 = 20191204; // 雪球邮件 - 阶段进球奖励邮件
+	SNOWBALL_MAIL_5 = 20191205; // 雪球邮件 - 个人积分排行奖励邮件
+	SNOWBALL_MAIL_6 = 20191206; // 雪球邮件 - 联盟积分排行奖励邮件
+	SNOWBALL_MAIL_7 = 20191207; // 雪球邮件 - 结算邮件
+	SNOWBALL_MAIL_8 = 20191208; // 雪球邮件 - 使用雪球道具邮件
+	SNOWBALL_MAIL_9 = 20191209; // 雪球邮件 - 被雪球砸中邮件
+	SNOWBALL_MAIL_10 = 20191210; // 雪球邮件 - 使用间谍道具邮件
+	SNOWBALL_MAIL_11 = 20191211; // 雪球邮件 - 被间谍侦查邮件
+	SNOWBALL_MAIL_12 = 20191212; // 雪球邮件 - 间谍潜入失败：玩家迁城
+	SNOWBALL_MAIL_13 = 20191213; // 雪球邮件 - 间谍潜入失败：玩家保护罩失效
+	SNOWBALL_MAIL_18 = 20191218; // 雪球邮件 - 进球助攻邮件
+	SNOWBALL_MAIL_23 = 20191223; // 雪球邮件 - 进球不发奖励邮件
+
+	GUARD_FRIEND_SEND = 2019122601; //守护好友赠送.
+	GUARD_FRIEND_BLAG = 2019122602; //守护好友索要.
+	GUARD_GUILD_SEND  = 2019122603; //守护盟友赠送.
+	GUARD_GUILD_BLAG  = 2019122604; //守护盟友索要.
+
+	CROSS_STAR_RANK_MAIL  = 2019122606; //结算航海之星
+	CROSS_CONQUER_RANK_MAIL  = 2019122607; //结算征服次数
+
+
+	CYBORG_BACK_SOLDIER = 2020010601; // 四国返还秒兵 
+	CYBORG_NUCLEAR_HIT 		= 2020010602; // 核弹命中
+	CYBORG_NUCLEAR_MIS 		= 2020010603; // 核弹未命中
+	CYBORG_NIAN_ATK		= 2020010604; //20191214
+	CYBORG_NIAN_ONCE_ATK	= 2020010605;
+	CYBORG_NIAN_KILL		= 2020010606;
+	CYBORG_SPY_BUILD_SUCCESS	= 2020010607;//泰伯利亚建筑侦察成功	2020009
+	CYBORG_SPY_BUILD_FAIL		= 2020010608;//泰伯利亚建筑侦察失败	2020010
+	CYBORG_SPY_BUILD_BE			= 2020010609; //泰伯利亚建筑被侦察	2020011
+	CYBORG_ATTACK_BUILD_SUCC_TO_FROM				= 2020010610; //2020012 攻击泰伯利亚建筑胜利 (攻击方)
+	CYBORG_ATTACK_BUILD_SUCC_TO_TARGET				= 2020010611; //2020013 防守泰伯利亚建筑失败 (被攻击方)
+	CYBORG_ATTACK_BUILD_FAILED_TO_FROM				= 2020010612; //2020014 攻击泰伯利亚建筑失败	(攻击方)
+	CYBORG_ATTACK_BUILD_FAILED_TO_TARGET			= 2020010613; //2020015 防守泰伯利亚建筑胜利 (被攻击方)
+	
+
+	CYBORG_SIGN_NOTICE			= 2020021701;	//赛博之战-报名通知邮件
+	CYBORG_MATCH_NOTICE			= 2020021702;	//赛博之战-匹配通知邮件
+	CYBORG_SELF_REWARD			= 2020021703;	//赛博之战-个人奖励邮件
+	CYBORG_MATCH_FAILED			= 2020021704;	//赛博之战-匹配失败通知邮件
+	CYBORG_CONTRIBUTE_NOTICE    = 2020021705;   //赛博之战-重大贡献通知邮件
+	
+	CYBORG_ATK_MONSTER_SUCCESS				    = 2020021706; //泰伯利亚野怪击杀邮件	2021112401  四个参数，分别是1 坐标  2击杀个人积分  3击杀号令能量  4 联盟总号令能量
+	CYBORG_ATK_MONSTER_FAIL						= 2020021707; //泰伯利亚野怪失败邮件	2021112402   1个参数，坐标
+    CYBORG_ATK_MONSTER_MISS 					= 2020021708; // 泰伯利亚野怪消失邮件	2021112403   1个参数，坐标	
+
+
+	COUNTRY_QUEST_BUILDING 			= 2020022601;	//建设任务结算
+	COUNTRY_QUEST_COUNTRY 			= 2020022602;	//国家任务结算
+	COUNTRY_QUEST_COUNTRY_OPEN 		= 2020022603;	//国家任务开启邮件首次
+	COUNTRY_QUEST_COUNTRY_OPEN2 	= 2020022604;	//国家任务开启邮件2
+	COUNTRY_QUEST_COMPLETE_KING 	= 2020022605;	//建筑业绩结算-司令
+	COUNTRY_QUEST_COMPLETE_OFFICIAL = 2020022606;	//建筑业绩结算-功臣
+	COUNTRY_QUEST_COMPLETE_PALYER	= 2020022607;	//建筑业绩结算-玩家
+	
+	COUNTRY_POLICY_CHANGE =  2020022608;            //国家策略更换邮件
+	
+	COUNTRY_NOHURT					= 2020030301;	// 国家系统免伤作用号通知
+	
+	RECHARGE_FUND_REWARD			= 2020032501;	//充值基金未领奖励补发邮件
+	
+	CROSS_PRESIDENT_FIRST_OCCUPY = 2020032701; // 跨服王战首次占领奖励 发给队伍
+	CROSS_PRESIDENT_OCCUPY = 2020032702; // 跨服王战占领奖励 发给联盟
+	CROSS_PRESIDENT_WIN_AWARD = 2020032703; // 控制奖励
+	CROSS_PRESIDENT_WIN_GUILD_AWARD = 2020032704; // 控制全盟奖励
+	
+	
+	POWER_SEND_BACK_GFIT =  2020042201;//赠送体力活动，回礼信件
+	DEVELOP_SPURT_REISSUE_GFIT =  2020042301;//发展冲刺，补发奖励
+	
+	CLW_DIVISION_INIT_HIGH					= 2020042601; // 赛博之战赛季定级邮件(额外加星)
+	CLW_DIVISION_INIT_NORMAL				= 2020042602; // 赛博之战赛季定级邮件
+	CLW_DIVISION_EXTRA_REWARD				= 2020042603; // 赛博之战赛季段位战斗额外奖励
+	CLW_DIVISION_GUILD_SCORE_REWARD			= 2020042604; // 赛博之战赛季联盟积分奖励
+	CLW_DIVISION_FINAL_REWARD				= 2020042605; // 赛博之战赛季段位结算奖励
+	CLW_DIVISION_RANK_REWARD				= 2020042606; // 赛博之战赛季段位排行奖励
+	CLW_DIVISION_MATCH_FAILED				= 2020042607; // 赛博之战赛季匹配失败加星
+	CLW_DIVISION_NO_SIGN					= 2020042608; // 赛博之战赛季未报名将星
+	
+	
+	GHOST_TOWER_MONSTER_ATTACK_SUCC_TO_FROM   = 2020051901; //幽灵工厂攻击成功
+	GHOST_TOWER_MONSTER_ATTACK_FAILED_TO_FROM = 2020051902; //幽灵工厂攻击失败
+	GHOST_TOWER_MONSTER_ATTACK_FAILED_CHANGED = 2020051903; //幽灵工厂怪点改变
+	GHOST_TOWER_CHALLENGE_REWARD              = 2020051904; //幽灵工厂挑战成功奖励邮件
+	
+	ENERGIES_SELF_RANK		= 2020052901; // 能源滚滚个人排行 
+	ENERGIES_GUILD_RANK		= 2020052902; // 能源滚滚联盟排行
+	ENERGIES_DROP			= 2020052903; // 能源滚滚掉落奖励
+	
+	GHOST_SECRET_EXTRA_REWARD = 2020060101;  //幽灵秘宝额外奖励邮件
+	
+	DRAGON_BOAT_CELEBRATION_LEVEL_UP_REWARD = 2020060801;  //端午活动-联盟庆典升级奖励
+	DRAGON_BOAT_CELEBRATION_DROP = 2020061101;  //端午活动-联盟庆典掉落邮件
+	DRAGON_BOAT_GIFT_ACHIEVE = 2020061001; //端午活动-龙船送礼奖励
+	DRAGON_BOAT_POINT_CHANGE = 2020061401;  //端午活动-龙船送礼,龙船世界点消失
+	DRAGON_BOAT_GIFT_LESS = 2020061601;//端午活动-龙船送礼奖励已经被领完
+	MEDAL_FUND_REWARD = 2020062601;  	//勋章基金奖励邮件
+	SW_WORLD_KING_CHANGE						= 20200623; //大陆霸主更改.
+	SW_PART_KING_PERSONAL_AWARD							= 2020062317; //全军他统帅个人奖励.
+	SW_WORLD_KING_PERSONAL_AWARD						= 2020062318;//霸主个人奖励.
+	
+	SW_ACTIVITY_OPEN		= 2020062301; // 统帅之战活动开启通知 
+	SW_MATCH_JOINER_NOTICE	= 2020062302; // 统帅之战本服出战联盟公告
+	
+	SW_WAR_ONE_OPEN			= 2020062305; // 统帅之战第一场开赛前通知
+	SW_WAR_ONE_END			= 2020062306; // 统帅之战第一场结果通知
+	SW_WAR_ONE_WIN			= 2020062307; // 统帅之战第一场胜利者奖励
+	SW_WAR_ONE_LOSE			= 2020062308; // 统帅之战第一场失败者奖励
+	
+	SW_WAR_TWO_OPEN			= 2020062309; // 统帅之战第二场开赛前通知
+	SW_WAR_TWO_END			= 2020062310; // 统帅之战第二场结果通知
+	SW_WAR_TWO_WIN			= 2020062311; // 统帅之战第二场胜利者奖励
+	SW_WAR_TWO_LOSE			= 2020062312; // 统帅之战第二场失败者奖励
+	
+	SW_WAR_THREE_OPEN		= 2020062313; // 统帅之战第三场开赛前通知
+	SW_WAR_THREE_END		= 2020062314; // 统帅之战第三场结果通知
+	SW_WAR_THREE_WIN		= 2020062315; // 统帅之战第三场胜利者奖励
+	SW_WAR_THREE_LOSE		= 2020062316; // 统帅之战第三场失败者奖励
+	
+	ATTACK_SW_ONE_BUILD_SUCC_TO_FROM				= 2020062320; // 统帅之战第一场攻击建筑胜利 (攻击方)
+	ATTACK_SW_ONE_BUILD_SUCC_TO_TARGET				= 2020062321; // 统帅之战第一场防守建筑失败 (被攻击方)
+	ATTACK_SW_ONE_BUILD_FAILED_TO_FROM				= 2020062322; // 统帅之战第一场攻击建筑失败	(攻击方)
+	ATTACK_SW_ONE_BUILD_FAILED_TO_TARGET			= 2020062323; // 统帅之战第一场防守建筑胜利 (被攻击方)
+	SW_ONE_SPY_BUILD_SUCCESS						= 2020062324; // 统帅之战第一场建筑侦察成功	
+	SW_ONE_SPY_BUILD_FAIL							= 2020062325; // 统帅之战第一场建筑侦察失败	
+	SW_ONE_SPY_BUILD_BE								= 2020062326; // 统帅之战第一场建筑被侦察	
+
+	XLZJ_SPY_STRONGPOINT_SUCCESS				= 2030001; // 泰伯利亚侦察驻扎点	2020001
+	XLZJ_SPY_STRONGPOINT_BE  					= 2030002; //泰伯利亚被侦察驻扎点	2020002
+	XLZJ_SPY_STRONGPOINT_FAIL					= 2030003; //泰伯利亚驻扎点侦察失败（撤离）	2020003
+	XLZJ_SPY_STRONGPOINT_FAIL_SAME_GUILD		= 2030004; //泰伯利亚驻扎点侦察失败（联盟变更）	2020004
+	XLZJ_SPY_RES_SUCCESS						= 2030005; //泰伯利亚侦察资源点	2020005
+	XLZJ_SPY_RES_BE								= 2030006; //泰伯利亚被侦察资源点	2020006
+	XLZJ_SPY_RES_FAIL							= 2030007; //泰伯利亚资源点侦察失败（撤离）	2020007
+	XLZJ_SPY_RES_FAIL_SAME_GUILD				= 2030008; //泰伯利亚资源点侦察失败（联盟变更）	2020008
+	XLZJ_SPY_BUILD_SUCCESS						= 2030009; //泰伯利亚建筑侦察成功	2020009
+	XLZJ_SPY_BUILD_FAIL							= 2030010; //泰伯利亚建筑侦察失败	2020010
+	XLZJ_SPY_BUILD_BE							= 2030011; //泰伯利亚建筑被侦察	2020011
+	XLZJ_ATTACK_BUILD_SUCC_TO_FROM				= 2030012; // 攻击泰伯利亚建筑胜利 (攻击方)
+	XLZJ_ATTACK_BUILD_SUCC_TO_TARGET			= 2030013; // 防守泰伯利亚建筑失败 (被攻击方)
+	XLZJ_ATTACK_BUILD_FAILED_TO_FROM			= 2030014; // 攻击泰伯利亚建筑失败	(攻击方)
+	XLZJ_ATTACK_BUILD_FAILED_TO_TARGET			= 2030015; // 防守泰伯利亚建筑胜利 (被攻击方)
+	XLZJ_ATTACK_RES_SUCC_TO_FROM				= 2030016; // 攻击泰伯利亚资源点胜利 (攻击方)
+	XLZJ_ATTACK_RES_SUCC_TO_TARGET				= 2030017; // 防守泰伯利亚资源点失败 (被攻击方)
+	XLZJ_ATTACK_RES_FAILED_TO_FROM				= 2030018; // 攻击泰伯利亚资源点失败	(攻击方)
+	XLZJ_ATTACK_RES_FAILED_TO_TARGET			= 2030019; // 防守泰伯利亚资源点胜利 (被攻击方)
+	
+	XLZJ_GUILD_WIN_MAIL							= 2030022; // 泰伯利亚联盟奖励邮件（胜利）
+	XLZJ_GUILD_LOSE_MAIL						= 2030023; // 泰伯利亚联盟奖励邮件（失败）
+	XLZJ_SELF_WIN_MAIL							= 2030024; // 泰伯利亚个人奖励邮件（胜利）（邮件正文携带参数：个人积分数值）
+	XLZJ_SELF_LOSE_MAIL							= 2030025; // 泰伯利亚个人奖励邮件（失败）（邮件正文携带参数：个人积分数值）
+	
+	XLZJ_GUILD_MEMBER_NOT_ENOUGH				= 2030026; // 泰伯利亚联盟出战人数不足,不参与匹配
+	XLZJ_GUILD_MATCH_FAILED						= 2030027; // 泰伯利亚联盟匹配失败
+	XLZJ_BACK_SOLDIER							= 2030028; // 返兵
+	XLZJ_SELF_PAUSE_MAIL						= 2030029; // 泰伯利亚个人奖励邮件 (中断补发最高奖励)
+
+	XLZJ_NUCLEAR_HIT 							= 20391121; // 核弹命中
+	XLZJ_NUCLEAR_MIS 							= 20391122; // 核弹未命中
+	XLZJ_NIAN_ATK								= 20391214;
+	XLZJ_NIAN_ONCE_ATK							= 20391215;
+	XLZJ_NIAN_KILL								= 20391216;
+	
+	ENERGY_INVEST_REWARD = 2020071001;  	//能量源基金奖励邮件
+	
+	SUPERSOLDIER_INVEST_REWARD = 2020071002;  	//机甲基金奖励邮件
+	
+	AIRDROP_SUPPLY_REWARD = 2020073002;  	//空投补给奖励邮件
+	
+	NEW_ORDER_ACTIVITY_ADVANCE_REWARD = 2020073001; //新服战令进阶奖励邮件
+
+	TIBERIUM_SEASON_OPEN		= 2020073101; // 泰伯赛季开启通知
+	TIBERIUM_SEASON_PICKED		= 2020073102; // 入围通知
+	TIBERIUM_SEASON_TEAM_GROUP	= 2020073103; // 小组分组
+	TIBERIUM_SEASON_FINAL_GROUP = 2020073104; // 季后赛分组
+	
+	WAR_FLAG_CENTER_REWARD = 2020080401; // 母旗结算奖励邮件（须领取邮件才发奖）
+	WAR_FLAG_CENTER_ATK_REWARD = 2020080402; // 攻占他人母旗抢夺奖励的邮件（须领取邮件才发奖）
+	
+	SPY_CENTER_FLAG 	= 2020081801; // 侦查母旗
+	BE_SPY_CENTER_FLAG 	= 2020081802; // 母旗被侦查
+	
+	GROUP_BUY_REWARD = 2020220001;  	//团购差价奖励邮件
+    CAKE_SHARE_POINT_CHANGE = 2020241001;  	//周年庆共享蛋糕世界点消失
+	CAKE_SHARE_REWARD_LESS 	= 2020241002;	//周年庆共享蛋糕奖励已经被领完
+	CAKE_SHARE_REWARD_ACHIEVE = 2020241003; //周年庆共享蛋糕送礼奖励
+
+	GUILD_BACK_MAIL_2024100201 = 2024100201;//联盟回流活动邮件
+	GUILD_BACK_MAIL_2024100202 = 2024100202;//联盟回流活动邮件
+
+	CELEBRATION_FOOD_COMMON_REWARD				= 2020238001;	//周年庆庆典美食奖励
+	CELEBRATION_FOOD_DROP_REWARD				= 2020238002;	//周年庆庆典美食 道具掉落邮件	
+
+	HONOR_REPAY_REWARD							= 2020092101;	//荣耀返利补发邮件
+	HONOR_REPAY_GOLD							= 202209271;	//荣耀返利补发邮件
+
+	EXTRA_COLLECT_ARMY							= 2020092102;	//额外收取士兵邮件（拉斐尔的祝福）
+	
+	ORDER_EQUIP_ACTIVITY_ADVANCE_REWARD			= 2021072701; //装备战令进阶版本奖励邮件
+	ORDER_EQUIP_ACTIVITY_LVL_REWARD				= 2021072702; // 装备战令等级奖励邮件
+	GROW_FUND_ACTIVITY_REWARD_GRANT             = 2021081201; // 成长基金补发邮件
+	GIFT_ZERO_ACTIVITY_REWARD_GRANT             = 2021082001; // 0元礼包补发奖励
+	
+	
+	
+	XZQ_SIGNUP_NOTICE					    = 2021102001;    //小战区报名提醒
+	XZQ_SIGNUP_SUCESS                       = 2021102002;    //报名成功
+	XZQ_SIGNUP_CANCEL                       = 2021102003;    //报名取消
+	XZQ_TICKET_ACHIVE                       = 2021102004;    //小站区门票获取
+	
+	DETECT_XZQ_SUCC							= 2021102005;	//小战区侦查成功
+	DETECT_XZQ_FAILED						= 2021102006;	//小战区侦查失败
+	XZQ_BEDETECT							= 2021102007;    //小战区被侦查
+	
+	ATTACK_XZQ_SUCC_TO_FROM					= 2021102008;	//小战区成功（攻击方）
+	ATTACK_XZQ_FAILED_TO_FROM				= 2021102009;	//小战区点失败（攻击方）
+	ATTACK_XZQ_FAILED_TO_TARGET				= 2021102010;	//小战区点失败（被攻击方）
+	ATTACK_XZQ_SUCC_TO_TARGET				= 2021102011;	//小战区点成功（被攻击方）
+	ATTACK_XZQ_PVE_SUCC_TO_FROM				= 2021102012;	//小战区NPC成功
+	ATTACK_XZQ_PVE_FAILED_TO_FROM			= 2021102013;   //小战区NPC失败
+	XZQ_OCCUPY_SUCC							= 2021102014;	//小战区占领成功通知
+	XZQ_HAS_CONTROL							= 2021102015;	//小战区占领成功通知
+	
+	
+	XZQ_ATTACK_GUILD_AWARD					= 2021102016;   //小战区-攻占奖励-联盟全员奖励
+	XZQ_ATTACK_MEMBER_AWARD					= 2021102017;   //小战区-攻占奖励-攻占者奖励
+	XZQ_OCCUPY_GUILD_AWARD					= 2021102018;	//小战区-驻守奖励-联盟全员奖励
+	XZQ_GIFT_SEND_OCCUPY					= 2021102019;	//小战区-颁发礼包-驻守
+	XZQ_CONTROL_GUILD_AWARD					= 2021102020;	//小战区-控制奖励-联盟全员奖励
+	XZQ_GIFT_SEND_CONTROL					= 2021102021;	//小战区-颁发礼包-控制
+	XZQ_GIFT_SEND_ATTACK					= 2021102022;	//小战区-颁发礼包-攻占
+	
+	
+	ALLIANCE_CELEBRATE_REWARD_RANK          = 202110281;  // 联盟欢庆活动排行榜奖励邮件
+	
+	
+	DRAWING_SEARCH_RES_COLLECT 				= 2021111001;  // 装扮投放系列活动一:搜寻图纸 城内收取资源
+	DRAWING_SEARCH_WORLD_COLLECT			= 2021111002;  // 装扮投放系列活动一:搜寻图纸 世界采集资源
+	DRAWING_SEARCH_BEAT_YURI				= 2021111003;  // 装扮投放系列活动一:搜寻图纸 击败尤里
+	DRAWING_SEARCH_WISH						= 2021111004;  // 装扮投放系列活动一:搜寻图纸 许愿
+	
+	PEAK_HONOUR_GUILD_SCORE_AWARD = 2021113001; // 巅峰荣耀活动联盟积分奖励
+	PEAK_HONOUR_RANK_AWARD = 2021113002; // 巅峰荣耀活动排行榜奖励
+	
+	RECALL_FRIEND_GUIULD_ACHIEVE_REWARD = 2021121401;  	//好友召回活动,联盟成就奖励邮件
+	
+	AGENCY_RESCURMARCH  = 2021011203; // 情报中心救援
+	AGENCY_COASTERMARCH = 2021011205; //情报中心搜索
+	AGENCY_POINT_NULL   = 2021011204; //情报中心点消失,返还体力
+	
+	
+	RED_BLUE_OPEN_TICKET_AWARD   = 2022010224; // 红蓝对决活动翻牌基础奖励邮件
+	MEDAL_FUND_TWO_REWARD        = 20220221;   // 勋章投资二活动邮件
+
+	DYZZ_SPY_STRONGPOINT_SUCCESS				= 20220301; //= 2020001; // 泰伯利亚侦察驻扎点	2020001
+	DYZZ_SPY_STRONGPOINT_BE  					= 20220302; //= 2020002; //泰伯利亚被侦察驻扎点	2020002
+	DYZZ_SPY_STRONGPOINT_FAIL					= 20220303; //= 2020003;//泰伯利亚驻扎点侦察失败（撤离）	2020003
+	DYZZ_SPY_STRONGPOINT_FAIL_SAME_GUILD		= 20220304; //= 2020004;//泰伯利亚驻扎点侦察失败（联盟变更）	2020004
+	DYZZ_SPY_RES_SUCCESS						= 20220305; //= 2020005;//泰伯利亚侦察资源点	2020005
+	DYZZ_SPY_RES_BE								= 20220306; //= 2020006;//泰伯利亚被侦察资源点	2020006
+	DYZZ_SPY_RES_FAIL							= 20220307; //= 2020007;//泰伯利亚资源点侦察失败（撤离）	2020007
+	DYZZ_SPY_RES_FAIL_SAME_GUILD				= 20220308; //= 2020008;//泰伯利亚资源点侦察失败（联盟变更）	2020008
+	DYZZ_SPY_BUILD_SUCCESS						= 20220309; //= 2020009;//泰伯利亚建筑侦察成功	2020009
+	DYZZ_SPY_BUILD_FAIL							= 20220310; //= 2020010;//泰伯利亚建筑侦察失败	2020010
+	DYZZ_SPY_BUILD_BE							= 20220311; //= 2020011; //泰伯利亚建筑被侦察	2020011
+	ATTACK_DYZZ_BUILD_SUCC_TO_FROM				= 20220312; //= 2020012; // 攻击泰伯利亚建筑胜利 (攻击方)
+	ATTACK_DYZZ_BUILD_SUCC_TO_TARGET			= 20220313; //= 2020013; // 防守泰伯利亚建筑失败 (被攻击方)
+	ATTACK_DYZZ_BUILD_FAILED_TO_FROM			= 20220314; //= 2020014; // 攻击泰伯利亚建筑失败	(攻击方)
+	ATTACK_DYZZ_BUILD_FAILED_TO_TARGET			= 20220315; //= 2020015; // 防守泰伯利亚建筑胜利 (被攻击方)
+	ATTACK_DYZZ_RES_SUCC_TO_FROM				= 20220316; //= 2020016; // 攻击泰伯利亚资源点胜利 (攻击方)
+	ATTACK_DYZZ_RES_SUCC_TO_TARGET				= 20220317; //= 2020017; // 防守泰伯利亚资源点失败 (被攻击方)
+	ATTACK_DYZZ_RES_FAILED_TO_FROM				= 20220318; //= 2020018; // 攻击泰伯利亚资源点失败	(攻击方)
+	ATTACK_DYZZ_RES_FAILED_TO_TARGET			= 20220319; //= 2020019; // 防守泰伯利亚资源点胜利 (被攻击方)
+
+	PLANT_SECRET_END_REWARD                     = 2022033001;  // 泰能机密活动结束奖励
+	HAPPY_RED_RECHARGE_REWARD                   = 20220297;    // 欢乐红包限购奖励
+	CELEBRATION_FUND_RECHARGE_REWARD            = 20220298;    // 周年庆庆典基金金条礼包购买收据
+	
+	DYZZ_WAR_WIN_REWARD        = 20220320;//大雅之战,玩家获胜奖励邮件
+	DYZZ_WAR_MVP_REWARD        = 20220321;//大雅之战,玩家获胜+mvp奖励邮件
+	DYZZ_WAR_LOSS_REWARD       = 20220322;//大雅之战,玩家失败奖励邮件
+	DYZZ_WAR_SMVP_REWARD       = 20220323;//大雅之战,玩家失败+svp奖励邮件
+	DYZZ_WAR_NEGATIVE_REWARD   = 20220324;//大雅之战,玩家消极怠工奖励邮件
+	
+	DYZZ_SEASON_OPEN                = 202207301;//赛季开始	
+	DYZZ_SEASON_GRADE_REWARD        = 202207302;//赛季结算奖励	
+	DYZZ_SEASON_BATTLE_FIRST_WIN    = 202207303;//首胜奖励	
+	DYZZ_SEASON_BATTLE_WIN          = 202207304;//战斗胜利奖励	
+	DYZZ_SEASON_BATTLE_MVP          = 202207305;//战斗胜利加MVP奖励	
+	DYZZ_SEASON_BATTLE_LOSS         = 202207306;//战斗失败奖励	
+	DYZZ_SEASON_BATTLE_SMVP         = 202207307;//战斗失败加SVP奖励	
+	DYZZ_SEASON_BATTLE_NEGATIVE     = 202207308;//战斗消极奖励
+	DYZZ_SEASON_GRADE_RESET			= 2022112900;//新赛季段位分重置
+	DYZZ_SEASON_LAST_ORDER			= 2022112901;//上赛季未领取战令奖励补发	
+
+	AUTO_PUT_RES_NO_ITEM       = 20220421;  //超时空，道具不足，无法放锅
+	AUTO_PUT_RES_POS_OCCUPY    = 20220422;  //超时空，位置被占用，无法放锅
+	AUTO_PUT_RES_INTERUPT      = 20220423;  //超时空，放锅地点空置超过时间限制，停止自动放
+	AUTO_PUT_RES_EXPIRE        = 20220424;  //超时空，特权卡到期
+	AUTO_PUT_ARMY_LIMIT_ERR    = 20220425;  //超时空，拉锅队伍兵超上限，自动拉锅停止
+
+	
+	LUCKY_BOX_RECOVER                   = 2022033002; //幸运转盘回收道具
+
+	IMMGRATION_SUCCESS = 2021011206; //迁服成功
+	
+	TIME_LIMIT_RECHARGE_GOLD = 20220279; // 显示累充金条奖励
+	
+	SUPER_VIP_LEVE_REWARD = 202235069;  // 至尊vip升级奖励
+	
+	NATIONAL_NATION_REWARD = 500101; // 国家建设处-国家建设任务奖励
+	NATIONAL_PERSON_REWARD = 500201; // 国家建设处-个人建设任务奖励
+	
+	NATIONAL_BUILD_BACK_ITEM = 500301; // 国家建设处道具使用返还
+	NATIONAL_TECH_BACK_ITEM = 500302; // 国家科技道具使用返还
+	
+	NATION_TECH_HELP_REWARD = 500401; // 科技助力奖励
+	NATION_SHIP_HELP_REWARD = 500402; // 飞船助力奖励
+	
+	CROSS_ACTIVITY_MAIL_20190113 = 20190113; // 临时司令任命邮件
+	CROSS_ACTIVITY_MAIL_20190114 = 20190114; // 临时司令卸任邮件
+	CROSS_ACTIVITY_MAIL_20190116 = 20190116; // 远征要塞占领奖励
+	CROSS_ACTIVITY_MAIL_20190117 = 20190117; // 积分赛结束邮件
+	CROSS_ACTIVITY_MAIL_20190118 = 20190118; // 跨服盟总争夺-征服成功说明邮件
+	CROSS_ACTIVITY_MAIL_20190119 = 20190119; // 跨服盟总争夺-防守成功说明邮件
+	CROSS_ACTIVITY_MAIL_20190120 = 20190120; // 盟军司令就职
+	CROSS_ACTIVITY_MAIL_20181223 = 20181223; // 颁发礼包邮件
+	CROSS_ACTIVITY_MAIL_2019122605 = 2019122605; // 胜利方参战联盟奖励邮件
+	
+	HEAVEN_BLESSING_MAIL_FREE	 	= 3020001; // 天降鸿福免费礼包购买收据
+	HEAVEN_BLESSING_MAIL_PAY 		= 3020002; // 天降鸿福直购礼包购买收据
+	HEAVEN_BLESSING_MAIL_RANDOM 	= 3020003; // 天降鸿福随机礼包购买收据
+	HEAVEN_BLESSING_MAIL_END 		= 3020004; // 天降鸿福结束后，直购礼包补发邮件
+	GRATEFUL_BENEFITS_MAIL_SHARE	= 202230301; // 303活动,感恩福利的分享奖励收据邮件
+	SEASON_ACTIVITY_GRADE			= 2023318001; // 荣耀联赛星空赛季 段位奖励
+	SEASON_ACTIVITY_KING_RANK		= 2023318002; // 荣耀联赛星空赛季 王者排名奖励
+	SEASON_ACTIVITY_ORDER_REWARD	= 2023318003; // 荣耀联赛星空赛季 战令奖励补发
+	STAR_LIGHT_SIGN_REWARD_2023321001	= 2023321001; // 世界勋章补发奖励
+	STAR_LIGHT_SIGN_REWARD_2023321002	= 2023321002; // 世界勋章补发奖励
+
+	BACK_TO_NEW_FLY_MAIL			= 339000001; // 新服回流飞升
+	
+	ALLIANCE_WISH_ACHIVE_SUPLLY = 2980001; //联盟祝福补发奖励
+
+	ALLIANCE_CARNIVAL_PAY_REWARD = 202208021;  // 联盟总动员典藏奖励
+	ALLIANCE_CARNIVAL_PAY_REWARD_ISSUE = 202208022;  // 联盟总动员典藏奖励额外补偿
+
+	ALLIANCE_SHARE_GLORY_ENERGYA_LEVELUP_REWARD = 2019120218; //荣耀同享能量柱A升级奖励
+	ALLIANCE_SHARE_GLORY_RETURN_REWARDA = 2019120219;  //荣耀同享返还奖励A
+	ALLIANCE_SHARE_GLORY_ENERGYB_LEVELUP_REWARD = 2019120220; //荣耀同享能量柱B升级奖励
+	ALLIANCE_SHARE_GLORY_RETURN_REWARDB = 2019120221;  //荣耀同享返还奖励B
+	
+	LOGIN_GIFT_ADVANCE_MAIL = 2022111620;   // 登录豪礼进阶奖励购买收据邮件
+	
+	NEW_YEAR_LOTTERY_ACHIEVE_COMMON  = 2022315101; //双旦活动普通成就任务进度补发
+	NEW_YEAR_LOTTERY_ACHIEVE_ADVANCE = 2022315102; //双旦活动高级成就任务进度补发
+	NEW_YEAR_LOTTERY_ACHIEVE_COMMON_FREE  = 2022315103; //双旦活动普通成就任务进度补发（免费）
+	NEW_YEAR_LOTTERY_ACHIEVE_ADVANCE_FREE = 2022315104; //双旦活动高级成就任务进度补发（免费）
+	NEW_YEAR_LOTTERY_COMMON          = 2022315201; //双旦活动普通头彩补发
+	NEW_YEAR_LOTTERY_ADVANCE         = 2022315202; //双旦活动高级头彩补发
+	NEW_YEAR_LOTTERY_GIFT_COMMON          = 2022315300; //双旦活动银色礼包购买收据
+	NEW_YEAR_LOTTERY_GIFT_ADVANCE         = 2022315301; //双旦活动金色礼包购买收据
+	
+	
+
+	YQZZ_SPY_RES_SUCCESS						= 20220405;//20220305; //泰伯利亚侦察资源点	2020005
+	YQZZ_SPY_RES_BE								= 20220406;//20220306; //泰伯利亚被侦察资源点	2020006
+	YQZZ_SPY_RES_FAIL							= 20220407;//20220307; //泰伯利亚资源点侦察失败（撤离）	2020007
+	YQZZ_SPY_RES_FAIL_SAME_GUILD				= 20220408;//20220308; //泰伯利亚资源点侦察失败（联盟变更）	2020008
+	YQZZ_SPY_BUILD_SUCCESS						= 20220409;//20220309; //泰伯利亚建筑侦察成功	2020009
+	YQZZ_SPY_BUILD_FAIL							= 20220410;//20220310; //泰伯利亚建筑侦察失败	2020010
+	YQZZ_SPY_BUILD_BE							= 20220411;//20220311;  //泰伯利亚建筑被侦察	2020011
+	ATTACK_YQZZ_BUILD_SUCC_TO_FROM				= 20220412;//20220312;  // 攻击泰伯利亚建筑胜利 (攻击方)
+	ATTACK_YQZZ_BUILD_SUCC_TO_TARGET			= 20220413;//20220313;  // 防守泰伯利亚建筑失败 (被攻击方)
+	ATTACK_YQZZ_BUILD_FAILED_TO_FROM			= 20220414;//20220314;  // 攻击泰伯利亚建筑失败	(攻击方)
+	ATTACK_YQZZ_BUILD_FAILED_TO_TARGET			= 20220415;//20220315;  // 防守泰伯利亚建筑胜利 (被攻击方)
+	ATTACK_YQZZ_BUILD_SUCC_TO_FROM_PVE				= 20220416;//20220312;  // 攻击泰伯利亚建筑胜利PVE (攻击方)
+	ATTACK_YQZZ_BUILD_FAILED_TO_FROM_PVE			= 20220417;//20220314;  // 攻击泰伯利亚建筑失败PVE	(攻击方)
+	ATTACK_YQZZ_BUILD_FIRST_CONTROL					= 20220418; // 建筑首占奖励
+	YQZZ_ACTIVITY_START                = 20190442;//月球之战开启邮件：达成参与条件	该服所有玩家	
+	YQZZ_ACTIVITY_MATCH_RLT            = 20190443;//匹配结果通知邮件	该服所有玩家	
+	YQZZ_ACTIVITY_COUNTRY_RANK_REWARD  = 20190444;//国家排名奖励邮件	该服所有玩家	
+	YQZZ_ACTIVITY_GUILD_RANK_REWARD    = 20190445;//联盟排名奖励邮件	该联盟所有玩家	
+	YQZZ_ACTIVITY_PLAYER_RANK_REWARD   = 20190446;//个人排名奖励邮件	该玩家	
+	YQZZ_ACTIVITY_PLAYER_JOIN_FREE     = 20190447;//比赛开始前-告知100名玩家可自由进出战场的邮件	本服出战的5个盟中，战力排名前100名的玩家	
+	YQZZ_ACTIVITY_PLAYER_JOIN_EXTRA    = 20190448;//比赛开始前-告知非前100名玩家共享150人名单的邮件	本服出战的5个盟中，战力排名100名以上的玩家	
+	YQZZ_AUTO_KICK_OUT	= 2023202303; // 玩家被踢出战场的通知邮件，邮件ID：2023202303，无参数
+
+	PDD_ORDER_SUCCESS	= 2021083001; // 拼单成功
+	PDD_ORDER_FAIL	= 2021083002; // 拼单失败
+	PDD_ORDER_GIVE	= 2021083004; // 未领取补发
+
+	LUCK_GET_GOLD_WIN = 2021083005; // 鸿运夺金得奖邮件
+
+	SPACE_MECHA_WIN_REWARD_ALL                      = 2023316001; //星甲召唤: 防守成功全员奖邮件
+	SPACE_MECHA_WIN_REWARD_MEMBER                   = 2023316002; //星甲召唤: 防守成功参与奖邮件
+	SPACE_MECHA_SLAVE_WIN_REWARD_MEMBER             = 2023316003; //星甲召唤: 子舱防守成功参与奖邮件
+	SPACE_MECHA_BOX_COLLECT_AWARD                   = 2023316004; //星甲召唤：宝箱采集成功邮件
+	SPACE_MECHA_BOX_COLLECT_FAILED                  = 2023316005; //星甲召唤：宝箱采集失败邮件
+	SPACE_MECHA_SHUTDOWN_ISSUE                      = 2023316006; //星甲召唤：停服补偿星币邮件
+	SPACE_MECHA_POINT_GOT                           = 2023316007; //星甲召唤：获得星币邮件凭证
+	SPACE_MECHA_FIGHT_WIN							= 2023316008; //星甲召唤: 防守战斗胜利
+	SPACE_MECHA_FIGHT_FAILED						= 2023316009; //星甲召唤: 防守战斗失败
+	SPACE_MECHA_STRONG_HOLD_FIGHT_WIN               = 2023316010; //星甲召唤: 据点进攻战斗胜利
+	SPACE_MECHA_STRONG_HOLD_FIGHT_FAILED	        = 2023316011; //星甲召唤: 据点进攻战斗失败
+	SPACE_MECHA_STRONGHOLD_DISPEAR                  = 2023316012; //星甲召唤：进攻据点时据点消失邮件
+	SPACE_MECHA_BOX_DISPEAR                         = 2023316013; //星甲召唤：行军途中阶段结束宝箱消失邮件
+	
+	SPACE_MECHA_MAINSPACE_BROKEN                    = 2023316014; //星甲召唤：防守主舱战斗，最终被打爆，失败
+	SPACE_MECHA_SUBSPACE_BROKEN                     = 2023316015; //星甲召唤：防守子舱舱战斗，最终被打爆，失败
+	SPACE_MECHA_STRONGHOLD_BROKEN                   = 2023316016; //星甲召唤：据点进攻战斗，打爆据点，胜利
+	
+	MACHINE_LAB_EVENT_MAIL      = 2023317001; //机甲研究所，事件掉落
+	MACHINE_LAB_RANK_MAIL       = 2023317002; //机甲研究所，排行榜发奖
+	MACHINE_LAB_SUPPLEMENT_MAIL = 2023317003; //机甲研究所，补发奖励
+	MACHINE_LAB_BUY_GIFT_MAIL   = 2023317004; //机甲研究所,礼包购买
+	
+	MACHINE_LAB_EVENT_MAIL_MULTI = 2023317005; //机甲研究所活动奖励邮件（高能打野一次行军打多次野怪）
+	ENERGIES_DROP_MULTI          = 2023317006; //能源滚滚活动掉落奖励邮件（高能打野一次行军打多次野怪）
+	CELEBRATION_FOOD_DROP_REWARD_MULTI = 2023317007;	//周年庆庆典美食活动道具掉落邮件高能打野一次行军打多次野怪）
+
+	YQZZ_NUCLEAR_HIT 		= 2023202301; // 核弹命中
+	YQZZ_NUCLEAR_MIS 		= 2023202302; // 核弹未命中
+	CHANGE_SVR_APPLY_MAIL	= 2023318004; // 数据迁移报名成功
+	CHANGE_SVR_INVITE_MAIL	= 2023318005; // 数据迁移邀请成功
+	CHANGE_SVR_CANCEL_MAIL	= 2023318006; // 数据迁移报名取消
+
+	NATION_MILITARY_RESET = 20190115;// 军功重置
+	
+	SEPARATE_GUARD_RET_MAIL = 20190950; // 拆服补偿邮件
+	JIJIA_SKIN_RECHARGE = 20190951;// 机甲皮肤投放活动充值给券
+	YQZZ_GIVEUP_BUILD_MAIL = 202311113; // 放弃建筑需要有邮件说明，发送目标为被放弃建筑的联盟内所有玩家
+	
+	LIFE_TIME_CARD_COMMON = 202311151; //购买终身卡邮件奖励
+	LIFE_TIME_CARD_ADVANCE = 202311152; //终身卡进阶邮件奖励
+	LIFE_TIME_CARD_AWARD_WEEK = 202311153; //终身卡每周奖励补发
+	LIFE_TIME_CARD_AWARD_MONTH = 202311154; //终身卡每月奖励补发
+	LIFE_TIME_CARD_ADVANCE_THREE_DAY = 202311155; //购买月度卡即时邮件奖励（3日产量奖励）
+	
+	DIRECT_GIFT_OUTTER_BUY  = 202312271; // 游戏外购买直购礼包（0104版本活动礼包）
+
+	ATTACK_MEDALF_SUCC_TO_FROM		= 2024032701; // 驱赶胜利
+	ATTACK_MEDALF_SUCC_TO_TARGET	= 2024032702; // 驱赶胜利对方
+	ATTACK_MEDALF_FAILED_TO_FROM 	= 2024032703; // 驱赶失败
+	ATTACK_MEDALF_FAILED_TO_TARGET 	= 2024032704; // 驱赶失败对方
+	ATTACK_MEDALF_STEAL 			= 2024032705; // 偷取奖励发放邮件，正文有一个参数，被偷的玩家的名称
+	MONTHARD_MEDALF_REWARD			= 2024032706; // 月卡补发
+	
+	MERGE_INVITE_PERMISSION = 202311156; // 合服邀请权限邮件
+	POINT_SPRINT_RANK_AWARD = 2024042501; // 345活动排行榜奖励
+	
+	PLANET_EXPLORE_SCORE_RANK  = 2024071201; //星能探索活动探索积分排行奖励
+	COLL_PLANET_TREASURE_FAIL  = 2024071202; //星能锅采集失败
+	MAIL_2024071203  = 2024071203; //348幸运补给柜活动道具清除补偿邮件
+	XHJZ_BACK_SOLDIER = 2024072501; // 星海秒兵返还
+	XHJZ_SEASON_2024072502 = 2024072502; // 赛事开启邮件
+	XHJZ_SEASON_2024072503 = 2024072503; // 入围成功邮件
+	XHJZ_SEASON_2024072504 = 2024072504; // 入围失败邮件
+	XHJZ_SEASON_2024072505 = 2024072505; // 目标奖励邮件
+	XHJZ_SEASON_2024072506 = 2024072506; // 排名奖励邮件
+
+	LOTTERY_TICKET_ASSIST_USE_REWARD = 2024090201; //呱呱乐代刮奖励给到邀请人邮件
+	LOTTERY_TICKET_ITEM_RECOVER_ACHIEVE = 2024090202; //呱呱乐回收道具奖励
+	LOTTERY_TICKET_APPY_BACK_REFUSE = 2024090203; //呱呱乐回退申请，被拒绝
+	LOTTERY_TICKET_APPY_BACK_TIME_OUT = 2024090204; //呱呱乐回退申请，超时
+	LOTTERY_TICKET_ASSIST_USE_ASSISTER_REWARD = 2024090205; //呱呱乐代刮者刮出大奖奖励邮件
+	LOTTERY_TICKET_USE_REWRD_MAIL = 2024090206; //呱呱乐自刮奖励展示邮件
+
+	SHOOTING_PRACTICE_RANK_REWARD = 2024101001; //打靶活动排行榜奖励
+
+	ATTACK_XHJZ_BUILD_SUCC_TO_FROM				= 2024083101;//20220312;  // 攻击星海建筑胜利 (攻击方)
+	ATTACK_XHJZ_BUILD_SUCC_TO_TARGET			= 2024083102;//20220313;  // 防守星海建筑失败 (被攻击方)
+	ATTACK_XHJZ_BUILD_FAILED_TO_FROM			= 2024083103;//20220314;  // 攻击星海建筑失败	(攻击方)
+	ATTACK_XHJZ_BUILD_FAILED_TO_TARGET			= 2024083104;//20220315;  // 防守星海建筑胜利 (被攻击方)
+	
+	STAR_INVEST_RECHARGE_REWARD_ONE   = 2024101401;  	//星海投资基金奖励邮件
+	STAR_INVEST_RECHARGE_REWARD_TWO   = 2024101402;  	//星海投资基金奖励邮件
+	STAR_INVEST_RECHARGE_REWARD_THREE = 2024101403;  	//星海投资基金奖励邮件
+	
+	COLLEGE_VIT_SEND         = 2024110701; //军事学院体力发放邮件
+	COLLEGE_DISPENSE_REWARD  = 2024110702; //军事学院购买礼包的共享奖励
+	COLLEGE_APPLY_AGREE_JOIN = 2024110703; //军事学院申请同意
+	COLLEGE_DISMISS          = 2024110704; //军事学院解散
+	COLLEGE_COACH_CHANGE     = 2024110705; //军事学院教官转换
+	
+	FGYL_BACK_SOLDIER 							= 2024122601; // 反攻幽灵秒兵
+	FGYL_ATK_MONSTER_SUCCESS				    = 2024122602; //泰伯利亚野怪击杀邮件	2021112401  四个参数，分别是1 坐标  2击杀个人积分  3击杀号令能量  4 联盟总号令能量
+	FGYL_ATK_MONSTER_FAIL						= 2024122603; //泰伯利亚野怪失败邮件	2021112402   1个参数，坐标
+    FGYL_ATK_MONSTER_MISS 						= 2024122604; // 泰伯利亚野怪消失邮件	2021112403   1个参数，坐标
+    ATTACK_FGYL_BUILD_SUCC_TO_FROM_PVE			= 2024122605;//20220312;  // 攻击泰伯利亚建筑胜利PVE (攻击方)
+	
+	FGYL_WAR_SIGN                               = 2024112404; //反攻幽灵报名
+	FGYL_WAR_FIGHT_WIN                          = 2024112405; //反攻幽灵战斗胜利
+	FGYL_WAR_FIGHT_FAIL                         = 2024112406; //反攻幽灵战斗失败
+	FGYL_WAR_RANK_REWARD                        = 2024112407; //反攻幽灵排行榜奖励
+	
+	BEST_PRIZE_PURCHASE                         = 2025011001; //新春头奖专柜活动付费收据邮件
+	PLANT_SOLDIER_FACTORY_PURCHASE              = 2025011002; //泰能活动活动付费收据邮件
+	BEST_PRIZE_END_CLEAR                        = 2025011003; //新春头奖专柜活动结束后清空抽奖券
+	
+	QUEST_TREASURE_RECOVER                      = 2025022801; //秘境寻宝道具回收
+	
+	SUBMARINE_WAR_RECOVER_COST                  = 2025030301; //潜艇大战道具回收
+	SUBMARINE_WAR_DAILY_RANK_REWARD             = 2025030302; //潜艇大战每日排行奖励
+	SUBMARINE_WAR_FINAL_RANK_REWARD             = 2025030303; //潜艇大战最终排行奖励
+	
+	MASS_FOGGY_REWARD                           = 2025031401; //集结进攻幽灵基地，个人额外奖励邮件（发起集结）
+	JOIN_FOGGY_REWARD                           = 2025031402; //集结进攻幽灵基地，个人额外奖励邮件（参与集结）
+
+	XQHX_SPY_RES_SUCCESS						= 20250305;//20220305; //先驱回响侦察资源点	2020005
+	XQHX_SPY_RES_BE								= 20250306;//20220306; //先驱回响被侦察资源点	2020006
+	XQHX_SPY_RES_FAIL							= 20250307;//20220307; //先驱回响资源点侦察失败（撤离）	2020007
+	XQHX_SPY_RES_FAIL_SAME_GUILD				= 20250308;//20220308; //先驱回响资源点侦察失败（联盟变更）	2020008
+	XQHX_SPY_BUILD_SUCCESS						= 20250309;//20220309; //先驱回响建筑侦察成功	2020009
+	XQHX_SPY_BUILD_FAIL							= 20250310;//20220310; //先驱回响建筑侦察失败	2020010
+	XQHX_SPY_BUILD_BE							= 20250311;//20220311;  //先驱回响建筑被侦察	2020011
+	ATTACK_XQHX_BUILD_SUCC_TO_FROM				= 20250312;//20220312;  // 攻击先驱回响建筑胜利 (攻击方)
+	ATTACK_XQHX_BUILD_SUCC_TO_TARGET			= 20250313;//20220313;  // 防守先驱回响建筑失败 (被攻击方)
+	ATTACK_XQHX_BUILD_FAILED_TO_FROM			= 20250314;//20220314;  // 攻击先驱回响建筑失败	(攻击方)
+	ATTACK_XQHX_BUILD_FAILED_TO_TARGET			= 20250315;//20220315;  // 防守先驱回响建筑胜利 (被攻击方)
+	ATTACK_XQHX_BUILD_SUCC_TO_FROM_PVE			= 20250316;//20220312;  // 攻击先驱回响建筑胜利PVE (攻击方)
+	ATTACK_XQHX_BUILD_FAILED_TO_FROM_PVE		= 20250317;//20220314;  // 攻击先驱回响建筑失败PVE	(攻击方)
+	ATTACK_XQHX_BUILD_FIRST_CONTROL				= 20250318; // 建筑首占奖励
+	XQHX_ATK_MONSTER_SUCCESS				    = 20250319; //先驱回响野怪击杀邮件	2021112401  四个参数，分别是1 坐标  2击杀个人积分  3击杀号令能量  4 联盟总号令能量
+	XQHX_ATK_MONSTER_FAIL						= 20250320; //先驱回响野怪失败邮件	2021112402   1个参数，坐标
+    XQHX_ATK_MONSTER_MISS 						= 20250321; //先驱回响野怪消失邮件	2021112403   1个参数，坐标
+    XQHX_BACK_SOLDIER							= 20250322; // 副本内造兵返兵
+	XQHX_20250323								= 20250323; //报名提醒邮件
+	XQHX_20250324								= 20250324; //匹配成功邮件
+	XQHX_20250325								= 20250325; //比赛胜利邮件
+	XQHX_20250326								= 20250326; //比赛失败邮件
+    XQHX_PYLON_COLLECT							= 20250333; // 先驱回想能量塔采集邮件
+    ATK_XQHX_PYLON_SUCCESS						= 20250334; //攻击能量塔成功
+	DEF_XQHX_PYLON_FAIL							= 20250335; //防守能量塔失败
+	ATK_XQHX_PYLON_FAIL							= 20250336; //攻击能量塔失败
+	DEF_XQHX_PYLON_SUCCESS						= 20250337; //防守能量塔成功
+	DETECT_XQHX_PLYON_SUCCESS 					= 20250338;//	 能量塔侦察成功	2019102911
+	DETECT_XQHX_PLYON_BE 						= 20250339;//【能量塔】被其他玩家侦查邮件	2019102902
+
+	MERGE_COMPETE_RANK_AWARD_POWER              = 202503311; //合服比拼-个人去兵战力排行奖励邮件
+	MERGE_COMPETE_RANK_AWARD_GUILD              = 202503312; //合服比拼-联盟去兵战力排行奖励邮件
+	MERGE_COMPETE_RANK_AWARD_VITCOST            = 202503313; //合服比拼-个人体力消耗排行奖励邮件
+	MERGE_COMPETE_RANK_AWARD_GIFT               = 202503314; //合服比拼-个人嘉奖积分排行奖励邮件
+	MERGE_COMPETE_RANK_SERVER_VICTORY           = 202503315; //合服比拼-区服比拼胜利邮件
+	MERGE_COMPETE_RANK_SERVER_FAILED            = 202503316; //合服比拼-区服比拼失败邮件
+	
+	WAR_COLLEGE_FIRST_REWARD      = 2025040701; //联合军演首通奖励邮件
+	WAR_COLLEGE_HELP_REWARD       = 2025040702; //联合军演带新奖励邮件
+	
+	ACTIVITY_371_SEND_GIFT        = 2025043001; //赛后庆典371活动赠礼邮件
+	ACTIVITY_371_RECIEVE_GIFT     = 2025043002; //赛后庆典371活动接受赠礼邮件
+	
+	
+	GUILD_DRAGON_ATTCK_APPOINTMENT            = 2025052301; //联盟巨龙来袭预约邮件
+	GUILD_DRAGON_ATTCK_PLAYER_FIGHT           = 2025052302; //联盟巨龙来袭伤害邮件
+	GUILD_DRAGON_ATTCK_PLAYER_DAMAGE_REWARD   = 2025052303; //联盟巨龙来袭单人伤害奖励邮件
+	GUILD_DRAGON_ATTCK_GUILD_DAMAGE_REWARD    = 2025052304; //联盟巨龙来袭联盟伤害奖励邮件
+	GUILD_DRAGON_ATTCK_GUILD_DAMAGE_NO_REWARD = 2025052305; //联盟巨龙来袭联盟伤害不足邮件
+	
+	SEASON_PUZZLE_SEND_ITEM    = 2025052701; //赛季拼图活动收到他人赠送的拼图碎片
+	SEASON_PUZZLE_ACHIEVE_ITEM = 2025052702; //赛季拼图活动通过做任务获得拼图碎片
+	CORE_EXPLORE_END_NOTIFY    = 2025052703; //核心勘探活动自动挖矿结束通知邮件（只有在非正常结束的情况下才发邮件）
+	SHARE_PROSP_OLDSVR_REWARD  = 2025061801; //有福同享活动新服充值给老服角色发奖励邮件
+	
+	
+	AUTO_MASS_JOIN_MISS         = 2025062301; //自动集结未加入邮件
+	METERIAL_TRANSPORT_ATK_WIN						= 250702911; // 押镖进攻方胜利
+	METERIAL_TRANSPORT_ATK_FAILED					= 250702912; // 押镖进攻方失败
+	
+	HOT_BLOOD_WAR_END_BACK = 2025070801;  //热血畅战-结束返还伤兵
+
+	MT_SINGLE_REACH		 	= 2025071401; // 押镖车到达奖励   
+	MT_ROB_WIN 				= 2025071403; // 抢劫胜利奖励
+	MT_ROB_LOSE 			= 2025071404; // 抢劫失败
+	MT_WIN_LIMIT 			= 2025071405; // 抢劫到达上限
+
+	CROSS_ACTIVITY_SEASON_BATTLE_REWARD       = 2025072301; //航海赛季战斗结束奖励
+	CROSS_ACTIVITY_SEASON_FINAL_RANK_REWARD   = 2025072302; //航海赛季最终排行奖励
+	CROSS_ACTIVITY_SEASON_OPEN_MAIL           = 2025072303; //航海赛季开启通知邮件
+	CROSS_ACTIVITY_SEASON_MATCH_FAIL_MAIL     = 2025072304; //航海赛季匹配失败奖励
+	
+	HOME_PUZZLE_PURCHASE       			  	  = 2025081901; //心愿庄园礼包购买凭据
+	
+};
+
+enum SysMsgType{
+	ADD_MEMBER		= 1;//添加玩家
+	DEL_MEMBER		= 2;//删除玩家
+	MEMBER_LEAVE	= 3;//自己退出
+	BE_DEL_MEMBER	= 4;//被删除玩家
+	CHANGE_CHATROOM	= 5;//修改聊天室名称
+	UPDATE_MEMBER   = 6;//更新聊天室信息
+}

@@ -1,0 +1,36 @@
+return {
+	prop =
+	{
+		activityId = 80,
+		PeriodPic = [[Activity_u_StrongestLeader_Banner_Render_02.png]],
+		icon = [[Activity_Icon_80_Nor.png]],
+		selecticon = [[Activity_Icon_80_Sel.png]],
+		name = [[超值好礼]],
+		priority = 20410,
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Microsoft YaHei" fontsize ="20">1.指挥官在活动界面可查看<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">各阶段</font>的超级返利礼包，点击礼包可查看礼包中包含的全部奖励内容；<br/>2.指挥官在当前阶段礼包<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">全部购买</font>之后即可购买下一阶段礼包；<br/>3.阶段宝箱对应的阶段礼包在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">全部购买</font>完毕之后即可领取，宝箱中有丰厚的稀有奖励；<br/>4.活动结束后奖励<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">未领取</font>视为放弃。</font>]],
+		isOpen = 1,
+	},
+	super_gift_bag = [[id	giftId	giftStage	channelType
+1	1	1	2
+1	270001	1	android
+2	270002	2	android
+3	270003	3	android
+4	270004	4	android
+5	270005	5	android
+6	270006	6	android
+7	280001	1	ios
+8	280002	2	ios
+9	280003	3	ios
+10	280004	4	ios
+11	280005	5	ios
+12	280006	6	ios
+]],
+	super_gift_chest = [[stageId	name	award	chestPos
+1	2	2	1
+2	阶段2	30000_1780083_10,30000_1780080_10,30000_800000_10,30000_1490006_25,30000_800110_20,30000_1510003_20,30000_13310003_20	1
+4	阶段4	30000_1000003_20,30000_21063005_20,30000_800000_15,30000_1490006_50,30000_800110_30,30000_1510003_30,30000_13310003_30	3
+6	阶段6	30000_1000003_80,30000_21063005_80,30000_800000_25,30000_1490005_5,30000_1490006_75,30000_800110_50,30000_1510003_50,30000_13310003_50	5
+]],
+
+}

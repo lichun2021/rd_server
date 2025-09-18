@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" isWin="1" range="1200" awardPack="30000_840203_1" />
+      <data id="2" isWin="1" range="900_1199" awardPack="30000_840204_1" />
+      <data id="3" isWin="1" range="600_899" awardPack="30000_840205_1" />
+      <data id="4" isWin="1" range="300_599" awardPack="30000_840206_1" />
+      <data id="5" isWin="1" range="0_299" awardPack="30000_840207_1" />
+      <data id="6" isWin="0" range="1200" awardPack="30000_840208_1" />
+      <data id="7" isWin="0" range="900_1199" awardPack="30000_840209_1" />
+      <data id="8" isWin="0" range="600_899" awardPack="30000_840210_1" />
+      <data id="9" isWin="0" range="300_599" awardPack="30000_840211_1" />
+      <data id="10" isWin="0" range="0_299" awardPack="30000_840212_1" />
+</root>

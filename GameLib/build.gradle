@@ -1,0 +1,7 @@
+project.archivesBaseName = "gamelib"
+
+dependencies {
+	compile fileTree(dir: '../HawkEngine/lib', include: '*.jar');
+	compile fileTree(dir: '../GameServer/lib', include: '*.jar');
+	compile fileTree(dir: 'lib', include: '*.jar');		
+}

@@ -1,0 +1,45 @@
+# 初始和平时间(s)
+initPeaceTime = 259200
+
+# 初始开始的星期数，只能配1-7
+initday = 3
+
+# 初始开始时间点（下午两点）
+initTime = 20
+
+# 出事开始时间点（分钟）
+initMinute = 0
+
+# 占领战区指挥部到控制的时间
+occupationTime = 1800
+
+# 战争时期周期(s)
+warfareTime = 7200
+
+# tick周期(ms)
+tickPeriod = 30000
+
+# 开启前公告时间
+mailBeforeTime = 1800_600_300
+
+# 结束前公告时间
+mailAfterTime = 1800_600_300
+
+# 报名时间
+signUpTime = 172800
+
+# 战区争夺活动预热时间
+prepareTime = 259200
+
+# 控制周期时间
+controlTime = 172800
+
+# 战区争夺总开关
+isClosed = FALSE
+
+# 最大可报名数量
+maxSighUp = 2
+
+# 每个赛季期数
+seasonPeriodNum = 6
+

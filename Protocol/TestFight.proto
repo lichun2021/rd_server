@@ -1,0 +1,49 @@
+option java_package = "com.hawk.game.protocol";
+import "World.proto";
+import "Player.proto";
+
+enum codeTestFitht{
+	GUILD_MEMER_LIST_C 	= 2023080701; // TFGuildInfoReq
+	GUILD_MEMER_LIST_S 	= 2023080702; // TFGuildInfoResp
+
+	GUILD_TEST_FIGHT 	= 2023080703; // TFTestFightReq
+}
+
+
+// 请求 TFGuildInfoResp
+message TFGuildInfoReq{
+	optional string guildNameA = 1; // 联盟名
+	optional string guildNameB = 2;
+
+}
+
+message TFGuildInfoResp{
+	optional TFGuildInfo guildA = 1;
+	optional TFGuildInfo guildB = 2;
+}
+
+
+// 战斗
+message TFTestFightReq{
+	repeated TFFightUnit atks = 1;
+	repeated TFFightUnit defs = 2;
+	optional bool jueduo = 3; // 采用决斗模式
+	optional int32 count = 4; 
+}
+
+message TFFightUnit{
+	optional string playerId = 1;
+	optional int32 presetmarch = 2; // 编队号 
+}
+
+message TFGuildInfo{
+	optional string guildId = 1;
+	optional string guiName = 2;
+	repeated TFFighter guildMesbers = 3;
+}
+
+message TFFighter{
+	optional PlayerSnapshotPB player = 1; // 玩家
+	optional PlayerPresetMarchInfo preset = 2; // 编队
+}
+

@@ -1,0 +1,57 @@
+# 准备时间
+prepairTime = 10
+
+# 第二阶段准备 开罩 迁城
+secondPrepair = 1210
+
+# 第二阶段 开打
+secondStartTime = 1220
+
+# 第三阶段准备 开罩 迁城
+thirdPrepair = 2420
+
+# 第三阶段 开打
+thirdStartTime = 2430
+
+# 年兽buff
+nianBuffList1 = 102_5000,136_5000
+
+# 年兽buff
+nianBuffList2 = 100_5000,136_5000
+
+# 年兽buff
+nianBuffList3 = 100_5000,102_5000
+
+# 燃烧加速
+fireSpeed = 45
+
+# 外 中圈对角点
+firstSecond = 25_50,125_250
+
+# 中 内 圈对角点
+secondThird = 50_100,100_200
+
+# 行军加速
+playerMarchSpeedUp = 1.5
+
+# 在图边界
+mapX = 150
+
+# 在图边界
+mapY = 300
+
+# 迁城cd /秒
+moveCityCd = 900
+
+# 副本建筑内击杀敌方战斗力获取1个人积分
+scoreForKill = 50000
+
+# 副本建筑内防御坦克损失战斗力获取1个人积分
+scoreForDefense = 10000
+
+# 治疗加速倍数
+cureSpeedUp = 4
+
+# 热血模式倒计时秒(游戏结束前)
+hotBloodModel = 600
+

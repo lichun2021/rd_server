@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2021-12-10 00:00:00" startTime="2021-12-10 00:00:00" endTime="2021-12-12 23:59:59" hiddenTime="2021-12-13 23:59:59" />
+      <data termId="2" showTime="2022-2-11 00:00:00" startTime="2022-2-11 00:00:00" endTime="2022-2-13 23:59:59" hiddenTime="2022-2-14 23:59:59" />
+      <data termId="3" showTime="2022-4-5 00:00:00" startTime="2022-4-5 00:00:00" endTime="2022-4-7 23:59:59" hiddenTime="2022-4-8 23:59:59" />
+      <data termId="4" showTime="2022-5-10 00:00:00" startTime="2022-5-10 00:00:00" endTime="2022-5-16 23:59:59" hiddenTime="2022-5-17 23:59:59" />
+      <data termId="5" showTime="2022-6-10 00:00:00" startTime="2022-6-10 00:00:00" endTime="2022-6-16 23:59:59" hiddenTime="2022-6-17 23:59:59" />
+      <data termId="6" showTime="2022-7-10 00:00:00" startTime="2022-7-10 00:00:00" endTime="2022-7-16 23:59:59" hiddenTime="2022-7-17 23:59:59" />
+</root>

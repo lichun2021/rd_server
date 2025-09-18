@@ -1,0 +1,2 @@
+call gradle jar
+@pause

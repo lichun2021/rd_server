@@ -1,0 +1,14 @@
+return {
+	prop =
+	{
+		activityId = 4,
+		name = [[海量加速]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 点击下方"立即前往"按钮即可跳转到热销商品界面；<br/>2. 商城每日限量出售加速宝箱，海量加速立即购买！；</font>]],
+		priority = 20450,
+		icon = [[Activity_Icon_4.png]],
+		toType = 2,
+		serverDelay = 0,
+	},
+
+}

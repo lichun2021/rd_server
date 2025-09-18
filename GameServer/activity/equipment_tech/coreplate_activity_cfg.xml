@@ -1,0 +1,9 @@
+# 每次抽取获取积分
+coreplateSocre = 1
+
+# 开启宝箱所需抽取芯片次数
+boxScore = 50
+
+# 随机稀有芯片
+boxAwardId = 12121
+

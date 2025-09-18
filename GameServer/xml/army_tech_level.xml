@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1000101" techId="10001" techLevel="1" frontBuilding="22313100" techEffect="820_1" battlePoint="1000" />
+      <data id="1000201" techId="10002" techLevel="1" frontTech="1000101" techEffect="821_1" battlePoint="500" />
+      <data id="1000202" techId="10002" techLevel="2" frontTech="1000101" techEffect="821_2" battlePoint="1000" />
+      <data id="1000203" techId="10002" techLevel="3" frontTech="1000101" techEffect="821_3" battlePoint="1500" />
+      <data id="1000204" techId="10002" techLevel="4" frontTech="1000101" techEffect="821_4" battlePoint="2000" />
+      <data id="1000205" techId="10002" techLevel="5" frontTech="1000101" techEffect="821_5" battlePoint="2500" />
+      <data id="1000301" techId="10003" techLevel="1" frontTech="1000101" techEffect="822_1" battlePoint="500" />
+      <data id="1000302" techId="10003" techLevel="2" frontTech="1000101" techEffect="822_2" battlePoint="1000" />
+      <data id="1000303" techId="10003" techLevel="3" frontTech="1000101" techEffect="822_3" battlePoint="1500" />
+      <data id="1000304" techId="10003" techLevel="4" frontTech="1000101" techEffect="822_4" battlePoint="2000" />
+      <data id="1000305" techId="10003" techLevel="5" frontTech="1000101" techEffect="822_5" battlePoint="2500" />
+      <data id="1000401" techId="10004" techLevel="1" frontTech="1000101" techEffect="823_1" battlePoint="500" />
+      <data id="1000402" techId="10004" techLevel="2" frontTech="1000101" techEffect="823_2" battlePoint="1000" />
+      <data id="1000403" techId="10004" techLevel="3" frontTech="1000101" techEffect="823_3" battlePoint="1500" />
+      <data id="1000404" techId="10004" techLevel="4" frontTech="1000101" techEffect="823_4" battlePoint="2000" />
+      <data id="1000405" techId="10004" techLevel="5" frontTech="1000101" techEffect="823_5" battlePoint="2500" />
+      <data id="1000501" techId="10005" techLevel="1" frontTech="1000101" techEffect="824_1" battlePoint="500" />
+      <data id="1000502" techId="10005" techLevel="2" frontTech="1000101" techEffect="824_2" battlePoint="1000" />
+      <data id="1000503" techId="10005" techLevel="3" frontTech="1000101" techEffect="824_3" battlePoint="1500" />
+      <data id="1000504" techId="10005" techLevel="4" frontTech="1000101" techEffect="824_4" battlePoint="2000" />
+      <data id="1000505" techId="10005" techLevel="5" frontTech="1000101" techEffect="824_5" battlePoint="2500" />
+      <data id="1000601" techId="10006" techLevel="1" frontTech="1000201|1000301|1000401|1000501" totalLevel="6" techEffect="201_5000" battlePoint="1000" />
+      <data id="1000602" techId="10006" techLevel="2" frontTech="1000201|1000301|1000401|1000501" totalLevel="6" techEffect="201_10000" battlePoint="2000" />
+      <data id="1000603" techId="10006" techLevel="3" frontTech="1000201|1000301|1000401|1000501" totalLevel="6" techEffect="201_15000" battlePoint="3000" />
+      <data id="1000604" techId="10006" techLevel="4" frontTech="1000201|1000301|1000401|1000501" totalLevel="6" techEffect="201_20000" battlePoint="4000" />
+      <data id="1000605" techId="10006" techLevel="5" frontTech="1000201|1000301|1000401|1000501" totalLevel="6" techEffect="201_25000" battlePoint="5000" />
+      <data id="1000701" techId="10007" techLevel="1" frontTech="1000601" techEffect="841_1" battlePoint="500" />
+      <data id="1000702" techId="10007" techLevel="2" frontTech="1000601" techEffect="841_2" battlePoint="1000" />
+      <data id="1000703" techId="10007" techLevel="3" frontTech="1000601" techEffect="841_3" battlePoint="1500" />
+      <data id="1000801" techId="10008" techLevel="1" frontTech="1000703" techEffect="842_120" battlePoint="1000" />
+      <data id="2000101" techId="20001" techLevel="1" frontTech="1000605" produceLevel="10" techEffect="820_2" battlePoint="1000" />
+      <data id="2000201" techId="20002" techLevel="1" frontTech="2000101" frontBuilding="20123100" techEffect="825_1" battlePoint="500" />
+      <data id="2000202" techId="20002" techLevel="2" frontTech="2000101" frontBuilding="20123100" techEffect="825_2" battlePoint="1000" />
+      <data id="2000203" techId="20002" techLevel="3" frontTech="2000101" frontBuilding="20123100" techEffect="825_3" battlePoint="1500" />
+      <data id="2000204" techId="20002" techLevel="4" frontTech="2000101" frontBuilding="20123100" techEffect="825_4" battlePoint="2000" />
+      <data id="2000205" techId="20002" techLevel="5" frontTech="2000101" frontBuilding="20123100" techEffect="825_5" battlePoint="2500" />
+      <data id="2000301" techId="20003" techLevel="1" frontTech="2000101" frontBuilding="20143100" techEffect="826_1" battlePoint="500" />
+      <data id="2000302" techId="20003" techLevel="2" frontTech="2000101" frontBuilding="20143100" techEffect="826_2" battlePoint="1000" />
+      <data id="2000303" techId="20003" techLevel="3" frontTech="2000101" frontBuilding="20143100" techEffect="826_3" battlePoint="1500" />
+      <data id="2000304" techId="20003" techLevel="4" frontTech="2000101" frontBuilding="20143100" techEffect="826_4" battlePoint="2000" />
+      <data id="2000305" techId="20003" techLevel="5" frontTech="2000101" frontBuilding="20143100" techEffect="826_5" battlePoint="2500" />
+      <data id="2000401" techId="20004" techLevel="1" frontTech="2000101" frontBuilding="20113100" techEffect="827_1" battlePoint="500" />
+      <data id="2000402" techId="20004" techLevel="2" frontTech="2000101" frontBuilding="20113100" techEffect="827_2" battlePoint="1000" />
+      <data id="2000403" techId="20004" techLevel="3" frontTech="2000101" frontBuilding="20113100" techEffect="827_3" battlePoint="1500" />
+      <data id="2000404" techId="20004" techLevel="4" frontTech="2000101" frontBuilding="20113100" techEffect="827_4" battlePoint="2000" />
+      <data id="2000405" techId="20004" techLevel="5" frontTech="2000101" frontBuilding="20113100" techEffect="827_5" battlePoint="2500" />
+      <data id="2000501" techId="20005" techLevel="1" frontTech="2000101" frontBuilding="20133100" techEffect="828_1" battlePoint="500" />
+      <data id="2000502" techId="20005" techLevel="2" frontTech="2000101" frontBuilding="20133100" techEffect="828_2" battlePoint="1000" />
+      <data id="2000503" techId="20005" techLevel="3" frontTech="2000101" frontBuilding="20133100" techEffect="828_3" battlePoint="1500" />
+      <data id="2000504" techId="20005" techLevel="4" frontTech="2000101" frontBuilding="20133100" techEffect="828_4" battlePoint="2000" />
+      <data id="2000505" techId="20005" techLevel="5" frontTech="2000101" frontBuilding="20133100" techEffect="828_5" battlePoint="2500" />
+      <data id="2000601" techId="20006" techLevel="1" frontTech="2000201|2000301|2000401|2000501" totalLevel="19" techEffect="607_15000" battlePoint="1000" />
+      <data id="2000602" techId="20006" techLevel="2" frontTech="2000201|2000301|2000401|2000501" totalLevel="19" techEffect="607_30000" battlePoint="2000" />
+      <data id="2000603" techId="20006" techLevel="3" frontTech="2000201|2000301|2000401|2000501" totalLevel="19" techEffect="607_45000" battlePoint="3000" />
+      <data id="2000604" techId="20006" techLevel="4" frontTech="2000201|2000301|2000401|2000501" totalLevel="19" techEffect="607_60000" battlePoint="4000" />
+      <data id="2000605" techId="20006" techLevel="5" frontTech="2000201|2000301|2000401|2000501" totalLevel="19" techEffect="607_75000" battlePoint="5000" />
+      <data id="2000701" techId="20007" techLevel="1" frontTech="2000601" techEffect="841_1" battlePoint="500" />
+      <data id="2000702" techId="20007" techLevel="2" frontTech="2000601" techEffect="841_2" battlePoint="1000" />
+      <data id="2000703" techId="20007" techLevel="3" frontTech="2000601" techEffect="841_3" battlePoint="1500" />
+      <data id="2000704" techId="20007" techLevel="4" frontTech="2000601" techEffect="841_4" battlePoint="2000" />
+      <data id="2000801" techId="20008" techLevel="1" frontTech="2000704" techEffect="842_120" battlePoint="1000" />
+      <data id="2000901" techId="20009" techLevel="1" frontTech="2000605" totalLevel="23" techEffect="843_3000" battlePoint="1000" />
+      <data id="2001001" techId="20010" techLevel="1" frontTech="2000901" techEffect="848_650" battlePoint="1000" />
+      <data id="2001101" techId="20011" techLevel="1" frontTech="2001001" techEffect="850_2000" battlePoint="1000" />
+      <data id="2001201" techId="20012" techLevel="1" frontTech="2000901" totalLevel="26" techEffect="820_3" battlePoint="500" />
+      <data id="2001202" techId="20012" techLevel="2" frontTech="2000901" totalLevel="26" techEffect="820_4" battlePoint="1000" />
+      <data id="3000101" techId="30001" techLevel="1" frontTech="2001202" frontBuilding="22313200" produceLevel="20" techEffect="820_5" battlePoint="1000" />
+      <data id="3000201" techId="30002" techLevel="1" frontTech="3000101" frontBuilding="20123200" techEffect="829_1" battlePoint="500" />
+      <data id="3000202" techId="30002" techLevel="2" frontTech="3000101" techEffect="829_2" battlePoint="1000" />
+      <data id="3000203" techId="30002" techLevel="3" frontTech="3000101" techEffect="829_3" battlePoint="1500" />
+      <data id="3000204" techId="30002" techLevel="4" frontTech="3000101" techEffect="829_4" battlePoint="2000" />
+      <data id="3000205" techId="30002" techLevel="5" frontTech="3000101" techEffect="829_5" battlePoint="2500" />
+      <data id="3000301" techId="30003" techLevel="1" frontTech="3000101" frontBuilding="20143200" techEffect="830_1" battlePoint="500" />
+      <data id="3000302" techId="30003" techLevel="2" frontTech="3000101" techEffect="830_2" battlePoint="1000" />
+      <data id="3000303" techId="30003" techLevel="3" frontTech="3000101" techEffect="830_3" battlePoint="1500" />
+      <data id="3000304" techId="30003" techLevel="4" frontTech="3000101" techEffect="830_4" battlePoint="2000" />
+      <data id="3000305" techId="30003" techLevel="5" frontTech="3000101" techEffect="830_5" battlePoint="2500" />
+      <data id="3000401" techId="30004" techLevel="1" frontTech="3000101" frontBuilding="20113200" techEffect="831_1" battlePoint="500" />
+      <data id="3000402" techId="30004" techLevel="2" frontTech="3000101" techEffect="831_2" battlePoint="1000" />
+      <data id="3000403" techId="30004" techLevel="3" frontTech="3000101" techEffect="831_3" battlePoint="1500" />
+      <data id="3000404" techId="30004" techLevel="4" frontTech="3000101" techEffect="831_4" battlePoint="2000" />
+      <data id="3000405" techId="30004" techLevel="5" frontTech="3000101" techEffect="831_5" battlePoint="2500" />
+      <data id="3000501" techId="30005" techLevel="1" frontTech="3000101" frontBuilding="20133200" techEffect="832_1" battlePoint="500" />
+      <data id="3000502" techId="30005" techLevel="2" frontTech="3000101" techEffect="832_2" battlePoint="1000" />
+      <data id="3000503" techId="30005" techLevel="3" frontTech="3000101" techEffect="832_3" battlePoint="1500" />
+      <data id="3000504" techId="30005" techLevel="4" frontTech="3000101" techEffect="832_4" battlePoint="2000" />
+      <data id="3000505" techId="30005" techLevel="5" frontTech="3000101" techEffect="832_5" battlePoint="2500" />
+      <data id="3000601" techId="30006" techLevel="1" frontTech="3000201|3000301|3000401|3000501" frontBuilding="22313300" totalLevel="35" techEffect="604_10000" battlePoint="1000" />
+      <data id="3000602" techId="30006" techLevel="2" frontTech="3000201|3000301|3000401|3000501" totalLevel="35" techEffect="604_20000" battlePoint="2000" />
+      <data id="3000603" techId="30006" techLevel="3" frontTech="3000201|3000301|3000401|3000501" totalLevel="35" techEffect="604_30000" battlePoint="3000" />
+      <data id="3000604" techId="30006" techLevel="4" frontTech="3000201|3000301|3000401|3000501" totalLevel="35" techEffect="604_40000" battlePoint="4000" />
+      <data id="3000605" techId="30006" techLevel="5" frontTech="3000201|3000301|3000401|3000501" totalLevel="35" techEffect="604_50000" battlePoint="5000" />
+      <data id="3000701" techId="30007" techLevel="1" frontTech="3000601" techEffect="841_1" battlePoint="500" />
+      <data id="3000702" techId="30007" techLevel="2" frontTech="3000601" techEffect="841_2" battlePoint="1000" />
+      <data id="3000703" techId="30007" techLevel="3" frontTech="3000601" techEffect="841_3" battlePoint="1500" />
+      <data id="3000704" techId="30007" techLevel="4" frontTech="3000601" techEffect="841_4" battlePoint="2000" />
+      <data id="3000705" techId="30007" techLevel="5" frontTech="3000601" techEffect="841_5" battlePoint="2500" />
+      <data id="3000801" techId="30008" techLevel="1" frontTech="3000605" totalLevel="40" techEffect="844_3000" battlePoint="1000" />
+      <data id="3000901" techId="30009" techLevel="1" frontTech="3000801" techEffect="848_1640" battlePoint="1000" />
+      <data id="3001001" techId="30010" techLevel="1" frontTech="3000901;2001001" techEffect="851_2000" battlePoint="1000" />
+      <data id="3001101" techId="30011" techLevel="1" frontTech="3000801" totalLevel="45" techEffect="820_6" battlePoint="500" />
+      <data id="3001102" techId="30011" techLevel="2" frontTech="3000801" totalLevel="45" techEffect="820_7" battlePoint="1000" />
+      <data id="4000101" techId="40001" techLevel="1" frontTech="3001102" frontBuilding="22313400" produceLevel="30" techEffect="820_8" battlePoint="1000" />
+      <data id="4000201" techId="40002" techLevel="1" frontTech="4000101" frontBuilding="20123400" techEffect="833_1" battlePoint="500" />
+      <data id="4000202" techId="40002" techLevel="2" frontTech="4000101" techEffect="833_2" battlePoint="1000" />
+      <data id="4000203" techId="40002" techLevel="3" frontTech="4000101" techEffect="833_3" battlePoint="1500" />
+      <data id="4000204" techId="40002" techLevel="4" frontTech="4000101" techEffect="833_4" battlePoint="2000" />
+      <data id="4000205" techId="40002" techLevel="5" frontTech="4000101" techEffect="833_5" battlePoint="2500" />
+      <data id="4000301" techId="40003" techLevel="1" frontTech="4000101" frontBuilding="20143400" techEffect="834_1" battlePoint="500" />
+      <data id="4000302" techId="40003" techLevel="2" frontTech="4000101" techEffect="834_2" battlePoint="1000" />
+      <data id="4000303" techId="40003" techLevel="3" frontTech="4000101" techEffect="834_3" battlePoint="1500" />
+      <data id="4000304" techId="40003" techLevel="4" frontTech="4000101" techEffect="834_4" battlePoint="2000" />
+      <data id="4000305" techId="40003" techLevel="5" frontTech="4000101" techEffect="834_5" battlePoint="2500" />
+      <data id="4000401" techId="40004" techLevel="1" frontTech="4000101" frontBuilding="20113400" techEffect="835_1" battlePoint="500" />
+      <data id="4000402" techId="40004" techLevel="2" frontTech="4000101" techEffect="835_2" battlePoint="1000" />
+      <data id="4000403" techId="40004" techLevel="3" frontTech="4000101" techEffect="835_3" battlePoint="1500" />
+      <data id="4000404" techId="40004" techLevel="4" frontTech="4000101" techEffect="835_4" battlePoint="2000" />
+      <data id="4000405" techId="40004" techLevel="5" frontTech="4000101" techEffect="835_5" battlePoint="2500" />
+      <data id="4000501" techId="40005" techLevel="1" frontTech="4000101" frontBuilding="20133400" techEffect="836_1" battlePoint="500" />
+      <data id="4000502" techId="40005" techLevel="2" frontTech="4000101" techEffect="836_2" battlePoint="1000" />
+      <data id="4000503" techId="40005" techLevel="3" frontTech="4000101" techEffect="836_3" battlePoint="1500" />
+      <data id="4000504" techId="40005" techLevel="4" frontTech="4000101" techEffect="836_4" battlePoint="2000" />
+      <data id="4000505" techId="40005" techLevel="5" frontTech="4000101" techEffect="836_5" battlePoint="2500" />
+      <data id="4000601" techId="40006" techLevel="1" frontTech="4000201|4000301|4000401|4000501" frontBuilding="22313500" totalLevel="55" techEffect="412_7000" battlePoint="1000" />
+      <data id="4000602" techId="40006" techLevel="2" frontTech="4000201|4000301|4000401|4000501" totalLevel="55" techEffect="412_14000" battlePoint="2000" />
+      <data id="4000603" techId="40006" techLevel="3" frontTech="4000201|4000301|4000401|4000501" totalLevel="55" techEffect="412_21000" battlePoint="3000" />
+      <data id="4000604" techId="40006" techLevel="4" frontTech="4000201|4000301|4000401|4000501" totalLevel="55" techEffect="412_28000" battlePoint="4000" />
+      <data id="4000605" techId="40006" techLevel="5" frontTech="4000201|4000301|4000401|4000501" totalLevel="55" techEffect="412_35000" battlePoint="5000" />
+      <data id="4000701" techId="40007" techLevel="1" frontTech="4000601" techEffect="841_1" battlePoint="500" />
+      <data id="4000702" techId="40007" techLevel="2" frontTech="4000601" techEffect="841_2" battlePoint="1000" />
+      <data id="4000703" techId="40007" techLevel="3" frontTech="4000601" techEffect="841_3" battlePoint="1500" />
+      <data id="4000704" techId="40007" techLevel="4" frontTech="4000601" techEffect="841_4" battlePoint="2000" />
+      <data id="4000705" techId="40007" techLevel="5" frontTech="4000601" techEffect="841_5" battlePoint="2500" />
+      <data id="4000706" techId="40007" techLevel="6" frontTech="4000601" techEffect="841_6" battlePoint="3000" />
+      <data id="4000801" techId="40008" techLevel="1" frontTech="4000605" techEffect="845_3000" battlePoint="1000" />
+      <data id="4000901" techId="40009" techLevel="1" frontTech="4000801;3001001" totalLevel="60" techEffect="848_2630" battlePoint="1000" />
+      <data id="4001001" techId="40010" techLevel="1" frontTech="4000901" techEffect="852_2000" battlePoint="1000" />
+      <data id="4001101" techId="40011" techLevel="1" frontTech="4000801" techEffect="820_9" battlePoint="500" />
+      <data id="4001102" techId="40011" techLevel="2" frontTech="4000801" totalLevel="65" techEffect="820_10" battlePoint="1000" />
+      <data id="5000101" techId="50001" techLevel="1" frontTech="4001102" frontBuilding="22313600" produceLevel="40" techEffect="820_11" battlePoint="1000" />
+      <data id="5000201" techId="50002" techLevel="1" frontTech="5000101" frontBuilding="20123600" techEffect="837_1" battlePoint="500" />
+      <data id="5000202" techId="50002" techLevel="2" frontTech="5000101" techEffect="837_2" battlePoint="1000" />
+      <data id="5000203" techId="50002" techLevel="3" frontTech="5000101" techEffect="837_3" battlePoint="1500" />
+      <data id="5000204" techId="50002" techLevel="4" frontTech="5000101" techEffect="837_4" battlePoint="2000" />
+      <data id="5000205" techId="50002" techLevel="5" frontTech="5000101" techEffect="837_5" battlePoint="2500" />
+      <data id="5000301" techId="50003" techLevel="1" frontTech="5000101" frontBuilding="20143600" techEffect="838_1" battlePoint="500" />
+      <data id="5000302" techId="50003" techLevel="2" frontTech="5000101" techEffect="838_2" battlePoint="1000" />
+      <data id="5000303" techId="50003" techLevel="3" frontTech="5000101" techEffect="838_3" battlePoint="1500" />
+      <data id="5000304" techId="50003" techLevel="4" frontTech="5000101" techEffect="838_4" battlePoint="2000" />
+      <data id="5000305" techId="50003" techLevel="5" frontTech="5000101" techEffect="838_5" battlePoint="2500" />
+      <data id="5000401" techId="50004" techLevel="1" frontTech="5000101" frontBuilding="20113600" techEffect="839_1" battlePoint="500" />
+      <data id="5000402" techId="50004" techLevel="2" frontTech="5000101" techEffect="839_2" battlePoint="1000" />
+      <data id="5000403" techId="50004" techLevel="3" frontTech="5000101" techEffect="839_3" battlePoint="1500" />
+      <data id="5000404" techId="50004" techLevel="4" frontTech="5000101" techEffect="839_4" battlePoint="2000" />
+      <data id="5000405" techId="50004" techLevel="5" frontTech="5000101" techEffect="839_5" battlePoint="2500" />
+      <data id="5000501" techId="50005" techLevel="1" frontTech="5000101" frontBuilding="20133600" techEffect="840_1" battlePoint="500" />
+      <data id="5000502" techId="50005" techLevel="2" frontTech="5000101" techEffect="840_2" battlePoint="1000" />
+      <data id="5000503" techId="50005" techLevel="3" frontTech="5000101" techEffect="840_3" battlePoint="1500" />
+      <data id="5000504" techId="50005" techLevel="4" frontTech="5000101" techEffect="840_4" battlePoint="2000" />
+      <data id="5000505" techId="50005" techLevel="5" frontTech="5000101" techEffect="840_5" battlePoint="2500" />
+      <data id="5000601" techId="50006" techLevel="1" frontTech="5000201|5000301|5000401|5000501" frontBuilding="22313700" totalLevel="75" techEffect="846_3000" battlePoint="1000" />
+      <data id="5000701" techId="50007" techLevel="1" frontTech="5000601;4000901" techEffect="848_3620" battlePoint="1000" />
+      <data id="5000801" techId="50008" techLevel="1" frontTech="5000701" techEffect="853_2000" battlePoint="1000" />
+      <data id="5000901" techId="50009" techLevel="1" frontTech="5000601" totalLevel="80" techEffect="820_12" battlePoint="500" />
+      <data id="5000902" techId="50009" techLevel="2" frontTech="5000901" totalLevel="80" techEffect="820_13" battlePoint="1000" />
+</root>

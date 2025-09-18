@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" costMoney="10000_1000_1" addMoney="10000_1001_1" />
+      <data id="2" costMoney="10000_1000_2" addMoney="10000_1001_2" />
+      <data id="3" costMoney="10000_1000_3" addMoney="10000_1001_3" />
+      <data id="4" costMoney="10000_1000_4" addMoney="10000_1001_4" />
+      <data id="5" costMoney="10000_1000_5" addMoney="10000_1001_5" />
+      <data id="6" costMoney="10000_1000_6" addMoney="10000_1001_6" />
+      <data id="7" costMoney="10000_1000_7" addMoney="10000_1001_7" />
+      <data id="8" costMoney="10000_1000_8" addMoney="10000_1001_8" />
+      <data id="9" costMoney="10000_1000_9" addMoney="10000_1001_9" />
+      <data id="10" costMoney="10000_1000_10" addMoney="10000_1001_10" />
+      <data id="11" costMoney="10000_1000_20" addMoney="10000_1001_20" />
+      <data id="12" costMoney="10000_1000_20" addMoney="10000_1001_20" />
+      <data id="13" costMoney="10000_1000_20" addMoney="10000_1001_20" />
+      <data id="14" costMoney="10000_1000_20" addMoney="10000_1001_20" />
+      <data id="15" costMoney="10000_1000_20" addMoney="10000_1001_20" />
+      <data id="16" costMoney="10000_1000_30" addMoney="10000_1001_30" />
+      <data id="17" costMoney="10000_1000_30" addMoney="10000_1001_30" />
+      <data id="18" costMoney="10000_1000_30" addMoney="10000_1001_30" />
+      <data id="19" costMoney="10000_1000_30" addMoney="10000_1001_30" />
+      <data id="20" costMoney="10000_1000_30" addMoney="10000_1001_30" />
+      <data id="21" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="22" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="23" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="24" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="25" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="26" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="27" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="28" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="29" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+      <data id="30" costMoney="10000_1000_50" addMoney="10000_1001_50" />
+</root>

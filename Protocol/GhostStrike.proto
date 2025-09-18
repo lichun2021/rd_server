@@ -1,0 +1,6 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 发起幽灵来袭行军
+message GhostMarchReq {
+	required int32 taskId = 1; // 任务id
+}

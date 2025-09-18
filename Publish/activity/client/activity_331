@@ -1,0 +1,54 @@
+return {
+	prop =
+	{
+		activityId = 331,
+		name = [[百炼成钢]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">1.活动期间，临时文本</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_319_Nor.png]],
+		selecticon = [[Activity_Icon_319_Sel.png]],
+	},
+	appoint_get_achieve = [[achieveId	conditionType	conditionValue	rewards	isReset	title	gotoType	gotoValue
+1	1	1	2	1	2	1	2
+331001	140900	1	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日登录游戏<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>	-1	
+331002	170100	150	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+331003	170100	300	30000_1400009_1	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日消耗体力<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>点</font>	200	2_0
+331004	700093	6	30000_1400009_4	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331005	700093	30	30000_1400009_18	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331006	700093	68	30000_1400009_33	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331007	700093	100	30000_1400009_30	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331008	700093	300	30000_1400009_60	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331009	700093	600	30000_1400009_90	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331010	700093	1000	30000_1400009_120	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331011	700093	2000	30000_1400009_300	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+331012	700093	3000	30000_1400009_399	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计充值达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>元</font>	1001	1
+]],
+	appoint_get_box = [[achieveId	conditionType	conditionValue	rewards
+1	1	1	2
+331501	1	300	30000_1400009_1
+331502	1	500	30000_1400009_1
+331503	1	1000	30000_1400009_1
+331504	1	3000	30000_1400009_4
+331505	2	300	30000_1400009_18
+331506	2	500	30000_1400009_33
+331507	2	1000	30000_1400009_30
+331508	2	3000	30000_1400009_60
+331509	3	300	30000_1400009_90
+331510	3	500	30000_1400009_120
+331511	3	1000	30000_1400009_300
+331512	3	3000	30000_1400009_399
+331513	4	0	30000_1400010_1
+]],
+	appoint_get_draw = [[id	weight	gainItem	notice
+1	1	2	1
+1	100	30000_1000005_20	1
+2	200	30000_1400011_100	1
+3	400	30000_21063005_150	1
+4	2000	30000_21063005_30	
+5	1000	30000_1000005_5	
+6	2150	30000_1400011_30	
+7	2000	30000_21063005_45	
+8	2150	30000_1400011_20	
+]],
+
+}

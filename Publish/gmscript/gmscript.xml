@@ -1,0 +1,105 @@
+<script>
+	<item id="welcome"				className="com.hawk.game.gmscript.WelcomeHandler"/>
+	<item id="ping"					className="com.hawk.game.gmscript.PingPongHandler"/>
+	<item id="xmlreload"			className="com.hawk.game.gmscript.XmlReloadHandler"/>
+	<item id="dbland"				className="com.hawk.game.gmscript.LandImmediately"/>
+	<item id="hotfix"				className="com.hawk.game.gmscript.HotfixHandler"/>
+	<item id="sysop"				className="com.hawk.game.gmscript.SysOperationHandler"/>
+	<item id="status"				className="com.hawk.game.gmscript.ServerStatusHandler"/>
+	<item id="monitor" 				className="com.hawk.game.gmscript.MonitorHandler"/>
+	<item id="serverlist" 			className="com.hawk.game.gmscript.ServerListHandler"/>
+	<item id="serverlist_web" 			className="com.hawk.game.gmscript.ServerListHandler_Web"/>
+	<item id="onshutdown"			className="com.hawk.game.gmscript.ShutdownCallbackHandler"/>
+	<item id="savedata"				className="com.hawk.game.gmscript.SaveDataHandler" />
+	<item id="protocol"				className="com.hawk.game.gmscript.AsyncProtocolHandler" />
+	
+	<item id="addSoldier"			className="com.hawk.game.gmscript.AddSoldierHandler" />
+	<!-- 平台好友赠送礼物  -->
+	<item id="sendGift"				className="com.hawk.game.gmscript.SendGiftHandler" />
+	<!-- 密友邀请成功通知 -->
+	<item id="inviteSuccNotify"	    className="com.hawk.game.gmscript.InviteSuccNotifyHandler" />
+	<!-- 密友任务数据信息变化通知  -->
+	<item id="notifyInvitor"	    className="com.hawk.game.gmscript.NotifyInvitorHandler" />
+	
+	<!-- CDK使用 -->
+	<item id="cdkuse"				className="com.hawk.game.gmscript.CdkUseHandler"/>
+	
+	<!-- 充值回调	-->
+	<item id="recharge"				className="com.hawk.game.gmscript.RechargeHandler"/>
+	
+	<!-- 问卷回调-->
+	<item id="survey"				className="com.hawk.game.gmscript.SurveyNotifyHandler"/>
+	
+	<!-- 修改钻石数量-->
+	<item id="changeDiamond"		className="com.hawk.game.gmscript.ChangeDiamondHandler"/>
+	
+	<!-- 超级武器开启关闭服务-->
+	<item id="superweapon"			className="com.hawk.game.gmscript.SuperWeaponSwitchHandler"/>
+	
+	<!-- 清除玩家城点-->
+	<item id="cleanPlayerPoint"		className="com.hawk.game.gmscript.CleanPlayerPointHandler"/>
+	
+	<!-- 返回玩家行军-->
+	<item id="returnMarch"			className="com.hawk.game.gmscript.ReturnMarchHandler"/>
+	
+	<!-- 检测基础+所有分组配置 -->
+	<item id="groupDataCheck"		className="com.hawk.game.gmscript.GroupDataCheckHandler"/>
+	
+	<!-- 清空登录排队等待session队列 -->
+	<item id="clearLoginWaitQueue"		className="com.hawk.game.gmscript.ClearLoginWaitQueue"/>
+	
+	<!-- 刷新战区争夺开启时间 -->
+	<item id="refreshSuperWeapon"		className="com.hawk.game.gmscript.RefreshSuperWeapon"/>
+	
+	<!-- 扫描卡兵玩儿家 -->
+	<item id="scanarmy"		className="com.hawk.game.gmscript.ScanArmyHandler"/>
+	
+	<!-- 移除联盟领地 -->
+	<item id="rmGuildManor"		className="com.hawk.game.gmscript.RemoveGuildManorHandler"/>
+	
+	<!-- 开启联盟矿 -->
+	<item id="openGuildMine"		className="com.hawk.game.gmscript.OpenGuildMineHandler"/>
+	
+	<!-- 修复玩家数据 -->
+	<item id="repairData"		className="com.hawk.game.gmscript.PlayerDataRepairHandler"/>
+	
+	<!-- 强制迁回玩家 -->
+	<item id="crossPlayerMoveBack" className="com.hawk.game.gmscript.CrossPlayerMoveBackHandler" />
+	<!-- 添加平台好友 -->
+	<item id="addPlatformFriend" className="com.hawk.game.gmscript.AddPlatformFriendHandler" />
+	
+	<!-- 合服的关服处理 -->
+	<item id="closeForMergeServer" className="com.hawk.game.gmscript.CloseForMergeServerHandler" />
+	<!-- 合服之后撒城点 -->
+	<item id="mergeServerCreatePoint" className="com.hawk.game.gmscript.MergedServerCreatePointHandler" />
+	<item id="tiberiumMoveBack" className="com.hawk.game.gmscript.TiberiumMoveBackHandler" />
+	
+	<!-- 推广员活动 -->
+	<item id="spreadBindSuccNotify" className="com.hawk.game.gmscript.SpreadBindSuccNotifyHandler" />
+	<item id="spreadBindPlayerUpdate" className="com.hawk.game.gmscript.SpreadBindPlayerUpdateHandler" />
+	<item id="spreadOperatorRet" className="com.hawk.game.gmscript.SpreadOperatorRetSyncHandler" />
+	<!-- 星球大战 -->
+	<item id="starWarsMoveBack" className="com.hawk.game.gmscript.StarWarsMoveBackHandler" />
+	<!--  赛博之战. -->
+	<item id="cyborgMoveBack" className="com.hawk.game.gmscript.CyborgMoveBackHandler" />
+	<!-- 跨服自动匹配 -->
+	<item id="crossMatch" className="com.hawk.game.gmscript.CrossMatchHandler" />
+	
+	<!-- 好友推送 -->
+	<item id="sendFriendLossPush" className="com.hawk.game.gmscript.SendFriendLossPushHandler" />
+	<!--  赛博之战. -->
+	<item id="DyzzMoveBack" className="com.hawk.game.gmscript.DyzzMoveBackHandler" />
+	<!-- 月球之战-->
+	<item id="YqzzMoveBack" className="com.hawk.game.gmscript.YqzzMoveBackHandler" />
+	<!-- 星海激战-->
+	<item id="XhjzMoveBack" className="com.hawk.game.gmscript.XhjzMoveBackHandler" />
+	<!-- 先驱回响-->
+	<item id="XqhxMoveBack" className="com.hawk.game.gmscript.XqhxMoveBackHandler" />
+	<!-- 赛季荣耀殿堂-->
+	<item id="SeasonHonorGm" className="com.hawk.game.gmscript.SeasonHonorGmHandler" />
+	<!-- 修改gm服务器（wx）地址 -->
+	<item id="gmserverChange" className="com.hawk.game.gmscript.GmServerChangeHandler" />
+	
+	<item id="separateAfter" className="com.hawk.game.gmscript.SeparateAfterHandler" />
+	<item id="sfFight" className="com.hawk.game.gmscript.SFFightHandler" />
+</script>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="370001" exp="1000" order="1" />
+      <data id="370002" exp="5000" order="2" />
+      <data id="380001" exp="1000" order="1" />
+      <data id="380002" exp="5000" order="2" />
+      <data id="370013" exp="4000" order="2" supply="1" />
+      <data id="380013" exp="4000" order="2" supply="1" />
+</root>

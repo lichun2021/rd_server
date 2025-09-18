@@ -1,0 +1,23 @@
+return {
+	prop =
+	{
+		activityId = 23,
+		name = [[幸运加成]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">本活动开放后，全服玩家按阶段获取加速buff，急速发展，在此一举！</font>]],
+		priority = 11550,
+		icon = [[Activity_Icon_18.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+	},
+	activity_buff = [[termId	stageTime	stageBuff	buffName1	buffName2	buffName3	icon1	icon2	icon3
+1	2	2	2	2	2	2	2	2
+1	0_172799|172800_345599	23093_23094|23097_23098	@ActivityBuffName1	@ActivityBuffName3	@ActivityBuffName3	Item_BuildSpeed.png	Item_TrainingSpeed.png	empty.png
+2	0_172799|172800_345599	23093_23094|23097_23098	@ActivityBuffName1	@ActivityBuffName3	@ActivityBuffName3	Item_BuildSpeed.png	Item_TrainingSpeed.png	empty.png
+]],
+	activity_buff_time = [[termId	showTime	startTime	endTime	hiddenTime
+1	1	1	1	1
+1	172800	345600	691199	691199
+2	777600	950400	1295999	1295999
+]],
+
+}

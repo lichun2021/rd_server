@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data missionId="10101" missionName="@DramaChapterName1" chapterId="50001" sequeceNo="1" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_5" />
+      <data missionId="10102" missionName="@DramaChapterName2" chapterId="50001" sequeceNo="7" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_30" />
+      <data missionId="10103" missionName="@DramaChapterName6" chapterId="50001" sequeceNo="8" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_30" />
+      <data missionId="10104" missionName="@DramaChapterName5" chapterId="50001" sequeceNo="2" rankLevel="0" missionChapter="1" minTime="12000" maxTime="280000" firstReward="30000_1001031_5" />
+      <data missionId="10105" missionName="@DramaChapterName7" chapterId="50001" sequeceNo="3" rankLevel="0" missionChapter="1" minTime="12000" maxTime="300000" firstReward="30000_1001031_10" />
+      <data missionId="10106" missionName="@DramaChapterName4" chapterId="50001" sequeceNo="4" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_10" />
+      <data missionId="10107" missionName="@DramaChapterName3" chapterId="50001" sequeceNo="5" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_20" />
+      <data missionId="10108" missionName="@DramaChapterName8" chapterId="50001" sequeceNo="6" rankLevel="0" missionChapter="1" minTime="12000" maxTime="180000" firstReward="30000_1001031_20" />
+</root>

@@ -1,0 +1,90 @@
+# 套装组合
+suit_combination = 2_4_6_7
+
+# 装备页签初始值
+armour_page_initial = 1
+
+# 解锁页签消耗
+suitUnlockCost = 10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000;10000_1001_1000
+
+# 额外属性数量
+extraAttrCount = 1_1,2_2,3_3,4_4
+
+#  铠甲套装名字长度
+suitNameLength = 1_8
+
+# 套装最大数量
+suitMaxCount = 8
+
+# 累计抽卡次数可开启宝箱
+gachaTimesBox = 50
+
+# 装备穿戴等级
+cityLevelUnlock = 17
+
+# 铠甲背包上限
+armourMaxCount = 1000
+
+# 每日抽取上限
+gacha_limit = 9999
+
+# 装备随机充能免费次数
+freeCharge = 1
+
+# 装备随机充能金币消耗
+chargeRefreshConsume = 10000_1001_10;10000_1001_20;10000_1001_30;10000_1001_40;10000_1001_60;10000_1001_80;10000_1001_100
+
+# 装备充能普通消耗
+chargeConsumeCommon = 30000_802002_1
+
+# 装备充能高级消耗
+chargeConsumeSpecial = 30000_802003_1
+
+# 升星品质限制
+starQualityLimit = 3,4
+
+# 升星等级限制
+starLevelLimit = 30
+
+# 装备普通充能限制
+chargeCommonLimit = 2000
+
+# 装备高级充能限制
+chargeSpecialLimit = 10000
+
+# 装备普通充能
+chargeCommonRate = 1000_1000
+
+# 装备高级充能
+chargeSpecialRate = 1000_1000
+
+# 星级属性分解比率
+startAttrResolveRate = 8000
+
+# 解锁红装前置装备品质需求
+quantumQualityLimit = 4
+
+# 解锁红装前置装备等级需求
+quantumLevelLimit = 45
+
+# 解锁红装后额外可强化等级次数
+quantumLevelLimitAdd = 15
+
+# 槽位X级，橙装变红
+quantumRedLevel = 60
+
+# 解锁红装后额外可泰晶强化等级次数
+starLimitAdd = 10
+
+# 装备红色充能限制
+chargeRedLimit = 22500
+
+# 装备红色充能进度/次
+chargeRedRate = 1000_1000
+
+# 装备红色充能消耗
+chargeConsumeRed = 30000_802004_1
+
+# 装备红色品质基础属性品质系数
+breakGrowUpRed = 80000
+

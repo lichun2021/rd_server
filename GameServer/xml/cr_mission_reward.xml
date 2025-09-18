@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" minScore="0" maxScore="1000" awardId="4800001" />
+      <data id="2" minScore="1001" maxScore="2000" awardId="4800002" />
+      <data id="3" minScore="2001" maxScore="3000" awardId="4800003" />
+      <data id="4" minScore="3001" maxScore="4000" awardId="4800004" />
+      <data id="5" minScore="4001" maxScore="5000" awardId="4800005" />
+      <data id="6" minScore="5001" maxScore="6000" awardId="4800006" />
+      <data id="7" minScore="6001" maxScore="7000" awardId="4800007" />
+      <data id="8" minScore="7001" maxScore="8000" awardId="4800008" />
+      <data id="9" minScore="8001" maxScore="10000" awardId="4800009" />
+      <data id="10" minScore="10001" maxScore="99999" awardId="4800010" />
+</root>

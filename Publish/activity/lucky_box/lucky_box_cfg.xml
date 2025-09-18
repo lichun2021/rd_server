@@ -1,0 +1,27 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# # 使用道具
+itemOnce = 30000_29200001_1
+
+#  玩家单次最大可转动次数
+rotationtimes = 5
+
+# 道具可购买次数
+buytimes = 200
+
+# 道具购买花费
+buyprice = 10000_1000_249
+
+# 购买获得道具
+gainItem = 30000_29200001_1
+
+# 限定保底次数
+must = 160_180_190_199
+
+# 回收物品ID
+recoverItem = 0
+
+# 回收兑换物品
+recoverSendItem = 0
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" enemyList="1001_0" />
+      <data id="2" enemyList="1002_0" />
+      <data id="3" enemyList="1003_0" />
+      <data id="4" enemyList="1004_0" />
+      <data id="5" enemyList="1001_0,1003_1200,1002_300" />
+</root>

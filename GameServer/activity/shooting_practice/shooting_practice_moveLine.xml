@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" posindex="1" floatingRange="20" direction="1" EnemyGroupOdds="1_100;2_100;3_100;5_50" />
+      <data id="2" posindex="2" floatingRange="15" direction="1" EnemyGroupOdds="1_100;2_100;3_100" />
+      <data id="3" posindex="3" floatingRange="10" direction="1" EnemyGroupOdds="1_100;2_100;3_100" />
+      <data id="4" posindex="4" floatingRange="20" direction="1" EnemyGroupOdds="4_100" />
+      <data id="5" posindex="4" floatingRange="20" direction="2" EnemyGroupOdds="4_100" />
+</root>

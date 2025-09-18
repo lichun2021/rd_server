@@ -1,0 +1,15 @@
+return {
+	prop =
+	{
+		activityId = 58,
+		name = [[首充双倍重置]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1、活动开启时重置商城-充值福利所有档位金条的首次充值双倍机会；<br/>2、重置后，每个金条档位首次充值可获得双倍数量的金条，首次以后再充值获得对应界面显示数量的金条；<br/>3、点击下方“即刻前往”可直接跳转到商城-充值福利界面。</font>]],
+		priority = 10059,
+		icon = [[Activity_Icon_58_Nor.png]],
+		selecticon = [[Activity_Icon_58_Sel.png]],
+		toType = 1,
+		serverDelay = 1728000,
+	},
+
+}

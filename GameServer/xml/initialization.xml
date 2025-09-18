@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" value="2101_2_11" />
+      <data id="2" type="1" value="2102_1_10" />
+      <data id="3" type="1" value="2011_1_1" />
+      <data id="4" type="1" value="2010_2_1" />
+      <data id="5" type="1" value="2012_1_1" />
+      <data id="6" type="2" value="10000_1007_5200,10000_1008_5200,10000_1001_5" />
+      <data id="7" type="3" value="100501_10" />
+      <data id="8" type="4" value="11_1" />
+      <data id="9" type="4" value="12_1" />
+      <data id="10" type="5" value="30000_1000011_100" />
+</root>

@@ -1,0 +1,25 @@
+return {
+	prop =
+	{
+		activityId = 307,
+		name = [[周年历程]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动描述：<br/>1.活动期间，点击【开启独家记忆】生成您的专属回忆。<br/>2.生成回忆后，每天可通过分享活动链接积累宝箱进度，达到一定值时可领取宝箱奖励。</font>]],
+		priority = 20200,
+		icon = [[Activity_Icon_307_Nor.png]],
+		selecticon = [[Activity_Icon_307_Sel.png]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20240909znqdate/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20240909znqdate/index.html]],
+		urlGuest = [[https://hongjing.qq.com/cp/a20240909znqdate/index.html]],
+		urlTitle = [[@Act307UrlTitle]],
+		urlDes = [[@Act307UrlDes]],
+	},
+	exclusive_memory_achieve = [[achieveId	conditionValue	rewards
+1	1	2
+30700001	1	30000_11023000_1,30000_24200026_200,30000_1000005_1,30000_1000003_2,30000_810001_5,30000_1780050_5
+30700002	2	30000_24200026_400,30000_1000005_2,30000_1000003_4,30000_810001_10,30000_1780050_10
+30700003	4	30000_24200026_600,30000_1000005_3,30000_1000003_6,30000_810001_15,30000_1780050_15
+30700004	6	30000_24200026_800,30000_1000005_4,30000_1000003_8,30000_810001_20,30000_1780050_20
+]],
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="25" buildLevel="2" count="1" effects="400_500" />
+      <data id="26" buildLevel="2" count="2" effects="400_500,136_200" />
+      <data id="27" buildLevel="2" count="3" effects="400_500,136_200,320_1500" />
+      <data id="28" buildLevel="2" count="4" effects="400_500,136_200,320_1500,136_300" />
+      <data id="45" buildLevel="3" count="1" effects="401_500" />
+      <data id="46" buildLevel="3" count="2" effects="401_500,100_200" />
+      <data id="47" buildLevel="3" count="3" effects="401_500,100_200,301_1500" />
+      <data id="48" buildLevel="3" count="4" effects="401_500,100_200,301_1500,100_300" />
+      <data id="61" buildLevel="4" count="1" effects="402_500" />
+      <data id="62" buildLevel="4" count="2" effects="402_500,102_500" />
+      <data id="63" buildLevel="4" count="3" effects="402_500,102_500,502_500" />
+      <data id="64" buildLevel="4" count="4" effects="402_500,102_500,502_500,1147_500" />
+</root>

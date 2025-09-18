@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" triggerPlot="99999" triggerCityLevel ="0" triggerPlayerLevel="0" triggerMilitaryRank="0" triggerPower="0" enemyArmy="100301_300,100401_300" arrivalTime="60" rewardArmy="100301_300,100401_300" purifyTime="60" purifyCost="10000_1007_1000,10000_1008_1000" scanningTime="60" rewards="30000_800143_3,30000_800143_5,30000_1510004_10,30000_1510005_10" />
+      <data id="1002" triggerPlot="99999" triggerCityLevel ="0" triggerPlayerLevel="0" triggerMilitaryRank="0" triggerPower="0" enemyArmy="100301_300,100401_300" arrivalTime="60" rewardArmy="100301_300,100401_300" purifyTime="60" purifyCost="10000_1007_1000,10000_1008_1000" scanningTime="60" rewards="30000_800143_3,30000_800143_5,30000_1510004_10,30000_1510005_10" />
+      <data id="1003" triggerPlot="99999" triggerCityLevel ="0" triggerPlayerLevel="0" triggerMilitaryRank="0" triggerPower="0" enemyArmy="100301_300,100401_300" arrivalTime="60" rewardArmy="100301_300,100401_300" purifyTime="60" purifyCost="10000_1007_1000,10000_1008_1000" scanningTime="60" rewards="30000_800143_3,30000_800143_5,30000_1510004_10,30000_1510005_10" />
+</root>

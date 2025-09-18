@@ -1,0 +1,504 @@
+option java_package	= "com.hawk.game.protocol";
+import "Const.proto";
+
+
+// 联盟信息
+message TWGuildInfo{
+	required string id		= 1;
+	required string name	= 2; //名称
+	required string tag		= 3; //简称
+	required int32 guildFlag	= 4; //联盟旗帜
+	required string serverId	= 5;
+	optional int64 battlePoint	= 6; //参战人员总战力
+	optional int32 memberCnt	= 7; //参战人员数量
+	optional int32 eloScoreBef	= 8; //赛前积分
+	optional int32 currEloScore	= 9; //赛后积分
+	optional int64 warStartTime	= 10; //开战时间
+	optional int32 eloScoreChange = 11; //积分变化
+	optional int64 score		  = 12; //得分
+	optional bool isWin			  = 13; //是否胜利
+	optional string teamName 	  = 14;
+}
+
+// 玩家信息
+message TWPlayerInfo{
+	required string id		= 1;
+	required string name	= 2;
+	required string serverId	= 3;
+	optional int32 icon			= 4;
+	optional string pfIcon		= 5;
+	required string guildId		= 6;
+	required string guildTag	= 7;
+	required int32 auth		= 8; //权限
+	optional int32 guildOfficer	= 9;
+	required int64 battlePoint	= 10; 
+	optional bool isJoin		= 11; //是否参战
+}
+
+// 泰伯利亚战斗历史记录
+message TWBattleLog{
+	required string 		roomId = 1;
+	required int32			termId = 2;
+	required int64			time   = 3;
+	repeated TWGuildInfo 	guildInfo = 4;
+	required string 		winGuild = 5;
+}
+
+// 获取历史战斗记录
+message TWGetHistoryResp{
+	repeated TWBattleLog battleLog = 1;
+	optional int32 eloScore	= 2; // elo积分
+}
+
+
+// 活动阶段
+enum TWState{
+	NOT_OPEN	= 	1; //未开启
+	SIGN_UP		=	2; //报名阶段
+	MATCH_WAIT	=	3; //匹配阶段
+	MATCH		=	4; //匹配阶段
+	WAR_WAIT	=	5; //等待开战
+	WAR_OPEN	= 	6; //战场开启
+	WAR_FINISH	= 	7; //战场结束
+}
+
+// 跨服活动状态信息
+message TWStateInfo{
+	required TWState state 			= 1;//活动状态
+	optional int32 stage			= 2;//当前周期数
+	optional int64 signStartTime	= 3;//报名开启时间(ms)
+	optional int64 signEndTime		= 4;//报名结束时间(ms)
+	optional int64 warStartTime		= 5;//本盟战斗开启时间(ms)
+	optional int64 warEndTime		= 6;//本盟战斗结束时间(ms)
+	optional int64 showEndTime		= 7;//本盟战斗结束时间(ms)
+	repeated WarTimeChoose choose	= 8;// 报名选项
+}
+
+// 报名选择时间
+message WarTimeChoose
+{
+	required int32 index	= 1;
+	required int64 time		= 2;
+	optional int32 guildCnt	= 3; // 已报名联盟数量
+}
+
+
+// 界面信息
+message TWPageInfo{
+	optional TWStateInfo stateInfo	= 1; //活动状态信息
+	optional bool isSignUp			= 2; //是否报名
+	optional TWGuildInfo oppGuild	= 3; //对手联盟
+	optional TWGuildInfo selfGuild	= 4; //自己联盟
+	optional bool isGuildJoin		= 5; //联盟是否可以参赛
+	optional bool isPlayerJoin		= 6; //玩家是否可以参赛
+	optional bool isEnterMax		= 7; //战场是否进满了 
+}
+
+// 报名请求
+message TWSignUpReq{
+	required int32 timeIndex	= 1; //报名时间段0,1,2
+}
+
+// 参战玩家信息
+message TWPlayerList
+{
+	repeated TWPlayerInfo playerInfo	= 1;
+}
+
+// 管理参战人员id
+message TWPlayerManage
+{
+	required int32 type = 1; //0 取消出战, 1 出战
+	required string	playerId = 2;
+}
+
+//请求回到原服的玩家.
+message TiberiumWarInnerBackServerReq {
+	required string playerId = 1;//
+}
+
+//签回玩家.
+message TiberiumWarMoveBackReq {
+	required string playerId = 1;//
+}
+
+
+// 小组成员信息
+message TWTeamMember{
+	required string id = 1;
+	required string name = 2;
+	optional int32 icon			= 3;
+	optional string pfIcon		= 4;
+	required int32 auth		= 5; //权限
+	optional int32 guildOfficer	= 6;
+	required int64 battlePoint	= 7;
+	repeated SoldierType mainSoldier = 8;
+	repeated int32 memberTarget	= 9;
+	optional bool isCaptain = 10;
+	optional bool isTeamMember	= 11;
+}
+
+// 获取小组信息
+message TWGetTeamInfo{
+	required int32 teamIndex = 1;
+}
+
+// 小组信息
+message TWTeamInfo{
+	required int32 index = 1;
+	required string teamName = 2;
+	repeated TWTeamMember memberInfo = 3;
+	repeated int32 teamTarget = 4;
+}
+
+// 个人小队任务
+message TeamSummary{
+	required int32 teamIndex = 1;
+	required string teamName = 2;
+	optional string leaderName = 3;
+	repeated int32 teamTarget = 4;
+	repeated int32 memberTarget = 5;
+}
+
+//个人小队任务信息列表
+message TWGetTeamSummaryResp{
+	repeated TeamSummary summary = 1;
+}
+
+// 联盟所有小组信息
+message TWGuildTeamInfo{
+	repeated TWTeamInfo teamInfo = 1;
+}
+
+// 获取小组管理界面信息
+message TWTeamManageInfoReq{
+	required int32 teamIndex = 1;
+}
+
+message TWTeamManageInfoResp{
+	required int32 teamIndex = 1;
+	repeated TWTeamMember member = 2;
+}
+
+// 活动阶段
+enum TWMemberMangeType{
+	CANCEL		= 	1; //取消组员身份
+	MIX_IN		=	2; //纳入小组
+	SET_CAPTAIN		=	3; //设置队长
+}
+
+// 管理小组人员
+message TWTeamMemberManage
+{
+	required int32 teamIndex = 1;
+	required TWMemberMangeType type = 2; 
+	required string	playerId = 3;
+}
+
+
+// 重置小组人员
+message TWTeamMemberReset
+{
+	required int32 teamIndex = 1;
+}
+
+// 修改个人策略
+message TWEditMemberTarget{
+	required int32 teamIndex = 1;
+	required string memberId = 2;
+	repeated int32 memberTarget = 3;
+}
+
+// 修改小组名称
+message TWEditTeamName{
+	required int32 teamIndex = 1;
+	required string name = 2;
+}
+
+// 修改小组目标
+message TWEditTeamTarget{
+	required int32 teamIndex = 1;
+	repeated int32 teamTarget = 2;
+}
+
+// 服务器类型
+enum TLWServer{
+	TLW_TOP_SERVER   = 100; //巅峰区
+	TLW_DAWN_SERVER  = 200; //曙光区
+	TLW_HOT_SERVER   = 300; //热血区
+
+	TLW_OLD_SERVER = 1; // 老服赛区--老版本暂时废除不用
+	TLW_NEW_SERVER = 2; // 新服赛区--老版本暂时废除不用	
+}
+
+// 活动大阶段
+enum TLWBigState{
+	TLW_BIG_NOT_OPEN	= 	1; // 未开启
+	TLW_BIG_SIGNUP		= 	2; // 报名开始
+	TLW_BIG_GROUP		= 	3; // 小组赛
+	TLW_BIG_KICKOUT		= 	4; // 淘汰赛
+	TLW_BIG_FINAL		= 	5; // 总决赛
+}
+
+message TLWBigStateInfo{
+	required TLWBigState state 		= 1;//活动状态
+	optional int64 seasonStartTime	= 2;//开启时间(ms)
+}
+
+// 组别
+enum TLWGroup{
+	NOMAL_GROUP		= 0; // 未入选
+	TEAM_GROUP		= 1; // 常规赛小组
+	S_GROUP			= 2; // S组
+	A_GROUP 		= 3; // A组
+	B_GROUP			= 4; // B组
+	KICK_OUT		= 5; // 被淘汰
+	NOT_SIGNUP		= 6; // 未报名
+	
+}
+
+
+//淘汰赛分组类型
+enum PBTLWEliminationGroup{
+	ELIMINATION_NONE = 0; //无
+	ELIMINATION_WIN  = 1; //淘汰赛胜者组
+	ELIMINATION_LOSS = 2; //淘汰赛败者组
+}
+
+
+// 活动阶段
+enum TLWState{
+	TLW_NOT_OPEN	= 	1; //未开启
+	TLW_PEACE		=	2; //和平阶段
+	TLW_MATCH		=	3; //匹配阶段
+	TLW_WAR_MANGE	=	4; //出战管理阶段
+	TLW_WAR_WAIT	=	5; //开战等待
+	TLW_WAR_OPEN	= 	6; //战场开启
+}
+
+
+//对战房间类型
+enum TLWBattle{
+	TLW_BATTLE_NORMAL                  = 0; //普通赛对战
+	TLW_BATTLE_ELIMINATION_WIN_GROUP   = 1; //淘汰赛胜者组对战
+	TLW_BATTLE_ELIMINATION_LOSS_GROUP  = 2; //淘汰赛败者组对战
+	TLW_BATTLE_ELIMINATION_FINAL       = 3; //决赛对战
+	TLW_BATTLE_TEAM                    = 4;//小组赛对战
+}
+
+
+// 联赛活动状态信息
+message TLWStateInfo{
+	required TLWState state 		= 1;//活动状态
+	optional int32 season			= 2;//当前赛季
+	optional int32 termId			= 3;//当前轮次
+	optional int64 seasonStartTime	= 4;//赛季开启时间(ms)
+	optional int64 signEndTime		= 5;//赛季报名结束时间(ms)
+	optional int64 matchStartTime	= 6;//匹配开始时间
+	optional int64 matchEndTime		= 7;//匹配结束时间
+	optional int64 mangeEndTime		= 8;//管理结束时间(ms)
+	optional int64 warStartTime		= 9;//战斗开启时间(ms)
+	optional int64 warFinishTime	= 10; //战斗结束时间(ms)
+	optional int64 warEndTime		= 11;//战斗阶段结束时间(ms)
+	optional int64 seasonEndTime	= 12;//赛季结束时间(ms)
+	optional int64 teamNum			= 13;//小组赛组数
+	optional int64 maxNormalTermNum = 14;//小组赛轮数
+	optional int64 maxTermNum		= 15;//总轮数
+}
+
+// 切换页面
+message TLWPageInfoReq{
+	required TLWServer server 		= 1; //服务器赛事类型
+}
+
+// 界面信息
+message TLWPageInfo{
+	optional TLWStateInfo stateInfo	= 1; //活动状态信息
+	optional bool inSeasonWar		= 2; //是否参与赛季赛
+	optional TWGuildInfo oppGuild	= 3; //对手联盟
+	optional int32 teamId			= 4; //本盟所在小组
+	optional TLWGroup group			= 5; //本盟组别
+	optional TLWBigStateInfo bigStateInfo = 6; //大阶段信息
+	optional TLWServer serverType 	= 7; //服务器赛事类型
+	optional TLWServer guildType 	= 8; //联盟赛事类型
+	optional bool isEnterMax		= 9; //战场是否进满了 
+}
+
+// 积分奖励信息
+message TLWScoreInfo{
+	required int64 score		= 1;
+	repeated int32 rewardedId	= 2;
+}
+
+// 获取联赛积分奖励信息
+message TLWGetScoreInfoResp{
+	optional TLWScoreInfo guildScore 	= 1;
+	optional TLWScoreInfo selfScore		= 2;
+}
+
+// 联盟基础信息
+message TLWGuildBaseInfo{
+	required string id		= 1;
+	required string name	= 2; //名称
+	required string tag		= 3; //简称
+	required int32 guildFlag	= 4; //联盟旗帜
+	required string leaderName = 5;
+	required string serverId	= 6;
+	optional int32 teamId		= 7;
+}
+
+// 泰伯利亚联赛联盟信息
+message TLWGuildInfo{
+	required TLWGuildBaseInfo baseInfo 	= 1;
+	optional int64 battlePoint			= 2; // 参战人员总战力
+	optional int32 memberCnt			= 3; // 参战人员数量
+	optional int64 seasonScore			= 4; // 赛季分数
+	optional TLWGroup group				= 5; // 组别
+	optional int32 currRank				= 6; // 当前名次
+	optional PBTLWEliminationGroup eliminationGroup = 7; //淘汰赛组别(胜者组或者败者组)
+}
+
+message TLWGuildRank{
+	required int32 rank = 1;
+	required TLWGuildInfo guildInfo = 2;
+}
+
+
+// 泰伯利亚联赛联盟排行信-联盟排名界面 ***33500
+message GetTLWGuildRankResp{
+	repeated TLWGuildRank rankInfo = 1;
+	optional TLWGuildRank selfRank = 2;	
+}
+
+
+// 赛区(小组)参战联盟信息
+message TLWTeamGuildInfo{
+	required TLWGuildBaseInfo baseInfo = 1;
+	optional int32 teamId		= 2; // 战区id
+	optional TLWGroup group		= 3; // 组别
+	optional int64 battlePoint	= 4; 
+	optional int64 winCnt		= 5;
+	optional int64 loseCnt		= 6;
+	optional int64 score		= 7;
+	optional int32 rank			= 8;
+	optional bool isSeed		= 9;// 是否种子队
+}
+
+// 获取赛区(小组)参赛联盟列表-小组排名界面***33512
+message TLWGetTeamGuildInfoReq{
+	required int32 teamId = 1;
+	optional TLWServer server = 2; //服务器赛事类型
+}
+
+message TLWGetTeamGuildInfoResp{
+	repeated TLWTeamGuildInfo guildInfo = 1;
+	required int32 teamId 				= 2;
+}
+
+
+// 联盟对战信息
+message TLWGetMatchInfo{
+	optional string roomId				= 1;
+	optional TLWGuildBaseInfo guildA 	= 2;
+	optional TLWGuildBaseInfo guildB 	= 3;
+	optional string winnerId 			= 4;
+	optional int32 pos					= 5;
+	optional TLWBattle battleType       = 6;
+}
+
+// 获取赛程安排-赛程安排界面 ***33514
+message TLWGetMatchInfoReq{
+	optional int32 termId = 1; // 期数
+	optional int32 teamId = 2; // 小组(常规赛)
+	optional TLWGroup group = 3; // 组别(季后赛)
+	optional TLWServer server = 4; //服务器赛事类型
+}
+
+message TLWGetMatchInfoResp{
+	repeated TLWGetMatchInfo matchInfo 	= 1; 
+	optional int32 teamId 				= 2;
+	optional TLWGroup group 			= 3;
+	required int32 termId 				= 4;
+	required int64 warTime 				= 5; // 对战时间
+	repeated TLWFinalMatchMatchInfo finalMatchInfo = 6;//最终一期
+}
+//最终决赛信息
+message TLWFinalMatchMatchInfo{
+	optional string roomId				= 1;
+	optional TLWGuildBaseInfo guildA 	= 2;
+	optional TLWGuildBaseInfo guildB 	= 3;
+	optional TLWGuildBaseInfo guildC 	= 4;
+	optional string winnerId 			= 5;
+	optional int32 pos					= 6;
+	optional TLWBattle battleType       = 7;
+	optional TLWGroup group 			= 8;
+
+}
+
+
+
+// 决赛阶段
+enum TLWFinalStage{
+	TLW128_64 	= 1;
+	TLW64_32	= 2;
+	TLW32_16	= 3;
+	TLW16_8		= 4;
+	TLW8_4		= 5;
+	TLW4_2		= 6;
+	TLW2_1		= 7;
+}
+
+
+// 决赛阶段对战信息
+message TLWFinalMatchStageInfo{
+	repeated TLWGetMatchInfo matchInfo = 1;
+	required int32 termId = 2;
+}
+
+// 获取联赛决赛信息-季后赛对阵界面***33516
+message TLWGetFinalMatchInfoReq{
+	required TLWGroup group = 1;
+	optional TLWServer server = 2; //服务器赛事类型
+}
+
+message TLWGetFinalMatchInfoResp{
+	repeated TLWFinalMatchStageInfo stageInfo = 1;
+	required TLWGroup group = 2;
+}
+
+// 泰伯利亚联赛房间信息列表
+message TLWGetOBRoomInfo{
+	required int32 season	= 1;
+	required int32 termId	= 2;
+	optional int64 warStartTime 	= 3;
+	optional int64 warFinishTime	= 4; //战斗结束时间(ms)
+	repeated TLWRoomInfo roomInfo 	= 5; //房间信息
+}
+
+// 联赛房间信息
+message TLWRoomInfo{
+	required TLWGetMatchInfo matchInfo 	= 1;
+	required string roomId				= 2;
+	required string roomServer			= 3;
+	optional int32 termId				= 4;
+	optional int64 warStartTime 		= 5;
+	optional int64 warFinishTime		= 6; //战斗结束时间(ms)
+}
+
+
+
+//联赛免战期数
+message TLWFreeRoom{
+	optional int32 termId				= 4;
+	optional int64 warStartTime 		= 5;
+	optional int64 warFinishTime		= 6; //战斗结束时间(ms)
+}
+
+
+
+// 联赛己方联盟对战列表-我的赛程界面***35521
+message TLWSelfMatchList{
+	repeated TLWRoomInfo roomInfo  = 1; //参战信息
+	repeated TLWFreeRoom freeInfos = 2; //免战信息
+}
+

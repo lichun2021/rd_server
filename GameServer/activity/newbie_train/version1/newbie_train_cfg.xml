@@ -1,0 +1,27 @@
+# 基地等级大于等于此等级才开启
+buildMin = 5
+
+# 基地等于大于等于此等级才开启装备作训
+equipMin = 17
+
+# 开服时间晚于此时间的服务器才开启
+serverOpenTime = 2023-12-7 08:00:00
+
+# 普通服务器高级招募多少次给1次英雄作训
+normalServerHero = 25
+
+# 专服服务器高级招募多少次给1次英雄作训
+specialServerHero = 20
+
+# 普通服务器装备打造多少次给1次装备作训
+normalServerEquip = 50
+
+# 专服服务器装备打造多少次给1次装备作训
+specialServerEquip = 40
+
+# 单次作训最大次数
+trainMax = 25
+
+# 作训记录数据条目上线
+recordMax = 50
+

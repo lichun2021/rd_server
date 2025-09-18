@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" next="2" iosPayId="3220013" androidPayID="3220020" maxGoldValue="10000_1000_360" buyPrice="10000_1000_1" needPoint="100" />
+      <data id="2" next="3" iosPayId="3220014" androidPayID="3220021" maxGoldValue="10000_1000_780" buyPrice="10000_1000_1" needPoint="200" />
+      <data id="3" next="4" iosPayId="3220015" androidPayID="3220022" maxGoldValue="10000_1000_1200" buyPrice="10000_1000_1" needPoint="300" />
+      <data id="4" next="5" iosPayId="3220016" androidPayID="3220023" maxGoldValue="10000_1000_1700" buyPrice="10000_1000_1" needPoint="300" />
+      <data id="5" next="6" iosPayId="3220017" androidPayID="3220024" maxGoldValue="10000_1000_2180" buyPrice="10000_1000_1" needPoint="300" />
+      <data id="6" next="7" iosPayId="3220018" androidPayID="3220025" maxGoldValue="10000_1000_3080" buyPrice="10000_1000_1" needPoint="300" />
+      <data id="7" iosPayId="3220019" androidPayID="3220026" maxGoldValue="10000_1000_3680" buyPrice="10000_1000_1" needPoint="400" />
+</root>

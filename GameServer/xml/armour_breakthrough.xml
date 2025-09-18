@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data quality="1" consume="30000_802001_200" levelLimit="10" breakGrowUp="30000" resolve="8100000" armourCombat="200" armourSuitCombat="600_1200_1800_2400" initAttrWeight="1_10000" starLimit="0" atkAttr="2_30000,1_30000,4_30000,3_30000,6_30000,5_30000,8_30000,7_30000" hpAttr="2_30000,1_30000,4_30000,3_30000,6_30000,5_30000,8_30000,7_30000" />
+      <data quality="2" consume="30000_802002_500" levelLimit="20" breakGrowUp="40000" resolve="8100001" armourCombat="500" armourSuitCombat="1500_3000_4500_6000" initAttrWeight="2_10000;1_4000,2_6000" starLimit="0" atkAttr="2_40000,1_40000,4_40000,3_40000,6_40000,5_40000,8_40000,7_40000" hpAttr="2_40000,1_40000,4_40000,3_40000,6_40000,5_40000,8_40000,7_40000" />
+      <data quality="3" consume="30000_802003_1000" levelLimit="30" breakGrowUp="60000" resolve="8100002" armourCombat="1000" armourSuitCombat="3000_6000_9000_12000" initAttrWeight="3_10000;3_6000,2_3000,1_1000;3_4000,2_5000,1_1000" starLimit="20" atkAttr="2_60000,1_60000,4_60000,3_60000,6_60000,5_60000,8_60000,7_60000" hpAttr="2_60000,1_60000,4_60000,3_60000,6_60000,5_60000,8_60000,7_60000" />
+      <data quality="4" consume="30000_802003_99999999" levelLimit="40" breakGrowUp="70000" resolve="8100003" armourCombat="3000" armourSuitCombat="9000_18000_27000_36000" initAttrWeight="4_10000;4_10000;4_10000;4_10000" starLimit="30" atkAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" hpAttr="2_70000,1_70000,4_70000,3_70000,6_70000,5_70000,8_70000,7_70000" />
+      <data quality="5" consume="30000_802003_99999999" breakGrowUp="80000" armourCombat="4000" />
+</root>

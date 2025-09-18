@@ -1,0 +1,21 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1209600
+
+# 翻牌消耗
+treasureCost = 30000_1150170_1
+
+# 翻牌1次获得的随机奖励
+randReward = 2510024
+
+# 重置消耗
+resetCost = 10000_1001_20
+
+# 每日可手动重置次数
+dailyResetTimes = 99
+
+# 道具价格
+itemOnecePrice = 10000_1000_128
+
+# 购买1次获得固定奖励
+extReward = 30000_840172_1
+

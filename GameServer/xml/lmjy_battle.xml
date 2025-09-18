@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" difficult="1" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="900" npc="101,102,103" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="102" difficult="2" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="900" npc="104,105,106" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="103" difficult="3" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1080" npc="107,108,109" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="104" difficult="4" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1080" npc="110,111,112" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="105" difficult="5" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1200" npc="113,114,115" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="106" difficult="6" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1200" npc="116,117,118" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="107" difficult="7" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1500" npc="119,120,121" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="108" difficult="8" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1500" npc="122,123,124" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="109" difficult="9" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1500" npc="125,126,127" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="110" difficult="10" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1800" npc="128,129,130" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="111" difficult="11" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1800" npc="131,132,133" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="112" difficult="12" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1800" npc="134,135,136" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+      <data id="113" difficult="13" playerMarchSpeedUp="1.5" npcMarchSpeedUp="1.5" fireSpeed="45" prepairTime="30" battleTime="1800" npc="137,138,139" bornPointA="17,20|20,11|21,28" bornPointB="31,20|30,11|29,28" />
+</root>

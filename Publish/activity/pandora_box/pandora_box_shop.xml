@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" goods="30000_1480010_1" total="10" price="50" />
+      <data id="2" goods="30000_100060_1" total="20" price="25" />
+      <data id="3" goods="30000_1001020_1" total="20" price="20" />
+      <data id="4" goods="30000_1780080_2" total="50" price="10" />
+      <data id="5" goods="30000_13310004_20" total="50" price="10" />
+      <data id="6" goods="30000_850009_1" total="50" price="10" />
+      <data id="7" goods="30000_850039_1" total="50" price="10" />
+      <data id="8" goods="30000_810001_6" total="50" price="10" />
+      <data id="9" goods="30000_850007_1" total="100" price="3" />
+      <data id="10" goods="30000_850037_1" total="100" price="3" />
+      <data id="11" goods="30000_850017_1" total="100" price="3" />
+      <data id="12" goods="30000_850027_1" total="100" price="3" />
+      <data id="13" goods="30000_810000_5" total="999" price="1" />
+</root>

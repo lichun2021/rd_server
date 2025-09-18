@@ -1,0 +1,3 @@
+<script	baseSrcDir="${app}/script" baseOutDir="${app}/script/bin" sysUser="">
+	<item id="welcome"				className="com.hawk.robot.script.WelcomeHandler"/>
+</script>

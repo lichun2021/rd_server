@@ -1,0 +1,57 @@
+option java_package = "com.hawk.game.protocol";
+import "Reward.proto";
+
+
+
+//挑战幽灵塔请求
+message GhostTowerChanllageReq{
+
+}
+
+//挑战幽灵塔响应
+message GhostTowerChanllageResp{
+	required int32 posX = 1; //怪点坐标X
+	required int32 poxY = 2; //怪点坐标Y
+}
+
+
+
+//幽灵怪信息请求
+message TowerGhostDetailReq{
+	required int32 stageId = 1;
+}
+
+
+//幽灵怪挑战成功
+message AttackGhostSucessResp{
+	required int32 stageId = 1; //层级ID
+	repeated RewardItem rewards = 2;  //奖励列表
+}
+
+
+//收集产出请求
+message CollectTowerProdutionReq{
+
+}
+
+
+//收集产出响应
+message CollectTowerProdutionResp{
+	required int64 productionTime = 1;  //生产用时
+	repeated RewardItem rewards = 2;  //奖励列表
+}
+
+
+//幽灵工厂信息
+message GhostTowerInfoResp{
+	required PBGhostTower towerInfo = 1;
+}
+
+
+
+
+//幽灵塔信息
+message PBGhostTower{
+	required int32 stageId = 1;   //当前阶层
+	required int64 productTime = 2; //生产时间点
+}

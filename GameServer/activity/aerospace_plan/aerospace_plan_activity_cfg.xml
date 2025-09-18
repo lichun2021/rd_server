@@ -1,0 +1,30 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 604800
+
+# 单次助燃值
+helpExp = 10
+
+# 单次助燃消耗道具数
+helpConsume = 30000_23710001_1
+
+# 小怪ID
+smallMonster = 23710001
+
+# 精英ID
+bigMonster = 23710002
+
+# 刷怪半径
+raiusMonster = 80
+
+# 小怪刷新时间点
+refreshTime = 19:00_20:00
+
+# 打小怪奖励（助燃道具）
+smallMonsterReward = 30000_23710001_1_30,30000_23720001_1_30
+
+# 打精英奖励（助燃道具）
+bigMonsterReward = 30000_23710001_10_50,30000_23720001_10_50
+
+# 2天内加入公会的人员的无法参与活动
+joinGuildTime = 172800
+

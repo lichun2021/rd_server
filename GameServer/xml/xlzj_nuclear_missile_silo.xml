@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" redis="4" killPercentage="30" missileCoolDownTime="600" firstControlHonor="10" firstControlGuildHonor="10" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="2" redis="4" killPercentage="30" missileCoolDownTime="600" firstControlHonor="10" firstControlGuildHonor="10" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="3" redis="4" killPercentage="30" missileCoolDownTime="600" firstControlHonor="10" firstControlGuildHonor="10" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="4" redis="4" killPercentage="30" missileCoolDownTime="600" firstControlHonor="10" firstControlGuildHonor="10" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+</root>

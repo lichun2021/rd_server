@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data connectId="1" achieveConnect="3261001_3261002_3261003_3261004" />
+      <data connectId="2" achieveConnect="3261005_3261006_3261007_3261008" />
+      <data connectId="3" achieveConnect="3261009_3261010_3261011_3261012" />
+      <data connectId="4" achieveConnect="3261013_3261014_3261015_3261016" />
+      <data connectId="5" achieveConnect="3261001_3261005_3261009_3261013" />
+      <data connectId="6" achieveConnect="3261002_3261006_3261010_3261014" />
+      <data connectId="7" achieveConnect="3261003_3261007_3261011_3261015" />
+      <data connectId="8" achieveConnect="3261004_3261008_3261012_3261016" />
+      <data connectId="9" achieveConnect="3261001_3261006_3261011_3261016" />
+</root>

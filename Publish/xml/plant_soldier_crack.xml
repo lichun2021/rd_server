@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="210000" soldierType="1" level="0" maxChipLevel="10" chips="211000,212000,213000,214000" power="0" frontBuild="20123800" postStage="210001" />
+      <data id="210001" soldierType="1" level="1" maxChipLevel="10" chips="211000,212000,213000,214000" power="30000" frontBuild="20123800" frontStage="210000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="1_2000" baseHpAttr="1_2000" />
+      <data id="220000" soldierType="2" level="0" maxChipLevel="10" chips="221000,222000,223000,224000" power="0" frontBuild="20123800" postStage="220001" />
+      <data id="220001" soldierType="2" level="1" maxChipLevel="10" chips="221000,222000,223000,224000" power="30000" frontBuild="20123800" frontStage="220000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="2_2000" baseHpAttr="2_2000" />
+      <data id="230000" soldierType="3" level="0" maxChipLevel="10" chips="231000,232000,233000,234000" power="0" frontBuild="20143800" postStage="230001" />
+      <data id="230001" soldierType="3" level="1" maxChipLevel="10" chips="231000,232000,233000,234000" power="30000" frontBuild="20143800" frontStage="230000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="3_2000" baseHpAttr="3_2000" />
+      <data id="240000" soldierType="4" level="0" maxChipLevel="10" chips="241000,242000,243000,244000" power="0" frontBuild="20143800" postStage="240001" />
+      <data id="240001" soldierType="4" level="1" maxChipLevel="10" chips="241000,242000,243000,244000" power="30000" frontBuild="20143800" frontStage="240000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="4_2000" baseHpAttr="4_2000" />
+      <data id="250000" soldierType="5" level="0" maxChipLevel="10" chips="251000,252000,253000,254000" power="0" frontBuild="20113800" postStage="250001" />
+      <data id="250001" soldierType="5" level="1" maxChipLevel="10" chips="251000,252000,253000,254000" power="30000" frontBuild="20113800" frontStage="250000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="5_2000" baseHpAttr="5_2000" />
+      <data id="260000" soldierType="6" level="0" maxChipLevel="10" chips="261000,262000,263000,264000" power="0" frontBuild="20113800" postStage="260001" />
+      <data id="260001" soldierType="6" level="1" maxChipLevel="10" chips="261000,262000,263000,264000" power="30000" frontBuild="20113800" frontStage="260000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="6_2000" baseHpAttr="6_2000" />
+      <data id="270000" soldierType="7" level="0" maxChipLevel="10" chips="271000,272000,273000,274000" power="0" frontBuild="20133800" postStage="270001" />
+      <data id="270001" soldierType="7" level="1" maxChipLevel="10" chips="271000,272000,273000,274000" power="30000" frontBuild="20133800" frontStage="270000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="7_2000" baseHpAttr="7_2000" />
+      <data id="280000" soldierType="8" level="0" maxChipLevel="10" chips="281000,282000,283000,284000" power="0" frontBuild="20133800" postStage="280001" />
+      <data id="280001" soldierType="8" level="1" maxChipLevel="10" chips="281000,282000,283000,284000" power="30000" frontBuild="20133800" frontStage="280000" buildCost="30000_21063005_1000,30000_21063003_500,30000_21063002_500" baseAtkAttr="8_2000" baseHpAttr="8_2000" />
+</root>

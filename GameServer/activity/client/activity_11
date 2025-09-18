@@ -1,0 +1,29 @@
+return {
+	prop =
+	{
+		activityId = 11,
+		limitVipLevel = 0,
+		costNum  = [[10000_1000_888]],
+		name = [[成长基金]],
+		subName = [[双重基金]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官可消耗指定数量的金条购买成长基金；<br/>2. 成长基金购买后，指挥官建筑工厂达到指定等级即可领取对应的奖励内容；<br/>4. 请您返回活动页面查看奖励详情和获奖条件。</font>]],
+		priority = 20800,
+		icon = [[Activity_Icon_61_Nor.png]],
+		selecticon = [[Activity_Icon_61_Sel.png]],
+		bigIcon = [[Activity_GrowthFund.png]],
+		coinValue = 18000,
+	},
+	growfund_activity = [[achieveId	configValue	rewards
+1	1	2
+110001	5	10000_1001_188
+110002	10	10000_1001_288
+110003	15	10000_1001_488
+110004	19	10000_1001_888
+110005	22	10000_1001_1288
+110006	25	10000_1001_2088
+110007	28	10000_1001_3888
+110008	30	10000_1001_8888
+]],
+
+}

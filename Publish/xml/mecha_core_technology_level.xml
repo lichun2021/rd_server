@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" coreTechnologyLevelType="1" coreLevels="0" rankLevel="0" specialLevel="1" coreTechnologyLevelAttr="100_100,136_100" power="100" />
+      <data id="2" coreTechnologyLevelType="1" coreLevels="1" rankLevel="0" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_1" />
+      <data id="3" coreTechnologyLevelType="1" coreLevels="2" rankLevel="0" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_2" />
+      <data id="4" coreTechnologyLevelType="1" coreLevels="3" rankLevel="0" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_3" />
+      <data id="5" coreTechnologyLevelType="1" coreLevels="4" rankLevel="0" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_4" />
+      <data id="6" coreTechnologyLevelType="1" coreLevels="5" rankLevel="0" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_5" />
+      <data id="7" coreTechnologyLevelType="1" coreLevels="6" rankLevel="1" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_6" />
+      <data id="8" coreTechnologyLevelType="1" coreLevels="7" rankLevel="1" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_7" />
+      <data id="9" coreTechnologyLevelType="1" coreLevels="8" rankLevel="1" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_8" />
+      <data id="10" coreTechnologyLevelType="1" coreLevels="9" rankLevel="1" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_9" />
+      <data id="11" coreTechnologyLevelType="1" coreLevels="10" rankLevel="1" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_10" />
+      <data id="12" coreTechnologyLevelType="1" coreLevels="11" rankLevel="2" specialLevel="2" coreTechnologyLevelAttr="100_3500,136_3500" power="100" needItem="30000_21070056_11" />
+      <data id="13" coreTechnologyLevelType="1" coreLevels="12" rankLevel="2" coreTechnologyLevelAttr="100_3750,136_3750" power="100" needItem="30000_21070056_12" />
+      <data id="14" coreTechnologyLevelType="1" coreLevels="13" rankLevel="2" coreTechnologyLevelAttr="100_4000,136_4000" power="100" needItem="30000_21070056_13" />
+      <data id="15" coreTechnologyLevelType="1" coreLevels="14" rankLevel="2" coreTechnologyLevelAttr="100_4250,136_4250" power="100" needItem="30000_21070056_14" />
+      <data id="16" coreTechnologyLevelType="1" coreLevels="15" rankLevel="2" coreTechnologyLevelAttr="100_4500,136_4500" power="100" needItem="30000_21070056_15" />
+      <data id="17" coreTechnologyLevelType="1" coreLevels="16" rankLevel="3" specialLevel="2" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_16" />
+      <data id="18" coreTechnologyLevelType="1" coreLevels="17" rankLevel="3" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_17" />
+      <data id="19" coreTechnologyLevelType="1" coreLevels="18" rankLevel="3" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_18" />
+      <data id="20" coreTechnologyLevelType="1" coreLevels="19" rankLevel="3" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_19" />
+      <data id="21" coreTechnologyLevelType="1" coreLevels="20" rankLevel="3" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_20" />
+      <data id="22" coreTechnologyLevelType="1" coreLevels="21" rankLevel="4" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_21" />
+      <data id="23" coreTechnologyLevelType="1" coreLevels="22" rankLevel="4" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_22" />
+      <data id="24" coreTechnologyLevelType="1" coreLevels="23" rankLevel="4" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_23" />
+      <data id="25" coreTechnologyLevelType="1" coreLevels="24" rankLevel="4" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_24" />
+      <data id="26" coreTechnologyLevelType="1" coreLevels="25" rankLevel="4" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_25" />
+      <data id="27" coreTechnologyLevelType="1" coreLevels="26" rankLevel="5" specialLevel="2" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_26" />
+      <data id="28" coreTechnologyLevelType="1" coreLevels="27" rankLevel="5" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_27" />
+      <data id="29" coreTechnologyLevelType="1" coreLevels="28" rankLevel="5" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_28" />
+      <data id="30" coreTechnologyLevelType="1" coreLevels="29" rankLevel="5" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_29" />
+      <data id="31" coreTechnologyLevelType="1" coreLevels="30" rankLevel="5" specialLevel="3" coreTechnologyLevelAttr="100_2000,136_2001" power="100" needItem="30000_21070056_30" />
+      <data id="32" coreTechnologyLevelType="2" coreLevels="0" rankLevel="0" specialLevel="1" coreTechnologyLevelAttr="100_100,136_100" power="100" />
+      <data id="33" coreTechnologyLevelType="2" coreLevels="1" rankLevel="0" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_1" />
+      <data id="34" coreTechnologyLevelType="2" coreLevels="2" rankLevel="0" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_2" />
+      <data id="35" coreTechnologyLevelType="2" coreLevels="3" rankLevel="0" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_3" />
+      <data id="36" coreTechnologyLevelType="2" coreLevels="4" rankLevel="0" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_4" />
+      <data id="37" coreTechnologyLevelType="2" coreLevels="5" rankLevel="0" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_5" />
+      <data id="38" coreTechnologyLevelType="2" coreLevels="6" rankLevel="1" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_6" />
+      <data id="39" coreTechnologyLevelType="2" coreLevels="7" rankLevel="1" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_7" />
+      <data id="40" coreTechnologyLevelType="2" coreLevels="8" rankLevel="1" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_8" />
+      <data id="41" coreTechnologyLevelType="2" coreLevels="9" rankLevel="1" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_9" />
+      <data id="42" coreTechnologyLevelType="2" coreLevels="10" rankLevel="1" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_10" />
+      <data id="43" coreTechnologyLevelType="2" coreLevels="11" rankLevel="2" specialLevel="2" coreTechnologyLevelAttr="100_3500,136_3500" power="100" needItem="30000_21070056_11" />
+      <data id="44" coreTechnologyLevelType="2" coreLevels="12" rankLevel="2" coreTechnologyLevelAttr="100_3750,136_3750" power="100" needItem="30000_21070056_12" />
+      <data id="45" coreTechnologyLevelType="2" coreLevels="13" rankLevel="2" coreTechnologyLevelAttr="100_4000,136_4000" power="100" needItem="30000_21070056_13" />
+      <data id="46" coreTechnologyLevelType="2" coreLevels="14" rankLevel="2" coreTechnologyLevelAttr="100_4250,136_4250" power="100" needItem="30000_21070056_14" />
+      <data id="47" coreTechnologyLevelType="2" coreLevels="15" rankLevel="2" coreTechnologyLevelAttr="100_4500,136_4500" power="100" needItem="30000_21070056_15" />
+      <data id="48" coreTechnologyLevelType="2" coreLevels="16" rankLevel="3" specialLevel="2" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_16" />
+      <data id="49" coreTechnologyLevelType="2" coreLevels="17" rankLevel="3" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_17" />
+      <data id="50" coreTechnologyLevelType="2" coreLevels="18" rankLevel="3" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_18" />
+      <data id="51" coreTechnologyLevelType="2" coreLevels="19" rankLevel="3" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_19" />
+      <data id="52" coreTechnologyLevelType="2" coreLevels="20" rankLevel="3" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_20" />
+      <data id="53" coreTechnologyLevelType="2" coreLevels="21" rankLevel="4" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_21" />
+      <data id="54" coreTechnologyLevelType="2" coreLevels="22" rankLevel="4" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_22" />
+      <data id="55" coreTechnologyLevelType="2" coreLevels="23" rankLevel="4" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_23" />
+      <data id="56" coreTechnologyLevelType="2" coreLevels="24" rankLevel="4" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_24" />
+      <data id="57" coreTechnologyLevelType="2" coreLevels="25" rankLevel="4" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_25" />
+      <data id="58" coreTechnologyLevelType="2" coreLevels="26" rankLevel="5" specialLevel="2" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_26" />
+      <data id="59" coreTechnologyLevelType="2" coreLevels="27" rankLevel="5" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_27" />
+      <data id="60" coreTechnologyLevelType="2" coreLevels="28" rankLevel="5" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_28" />
+      <data id="61" coreTechnologyLevelType="2" coreLevels="29" rankLevel="5" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_29" />
+      <data id="62" coreTechnologyLevelType="2" coreLevels="30" rankLevel="5" specialLevel="3" coreTechnologyLevelAttr="100_2000,136_2001" power="100" needItem="30000_21070056_30" />
+      <data id="63" coreTechnologyLevelType="3" coreLevels="0" rankLevel="0" specialLevel="1" coreTechnologyLevelAttr="100_100,136_100" power="100" />
+      <data id="64" coreTechnologyLevelType="3" coreLevels="1" rankLevel="0" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_1" />
+      <data id="65" coreTechnologyLevelType="3" coreLevels="2" rankLevel="0" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_2" />
+      <data id="66" coreTechnologyLevelType="3" coreLevels="3" rankLevel="0" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_3" />
+      <data id="67" coreTechnologyLevelType="3" coreLevels="4" rankLevel="0" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_4" />
+      <data id="68" coreTechnologyLevelType="3" coreLevels="5" rankLevel="0" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_5" />
+      <data id="69" coreTechnologyLevelType="3" coreLevels="6" rankLevel="1" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_6" />
+      <data id="70" coreTechnologyLevelType="3" coreLevels="7" rankLevel="1" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_7" />
+      <data id="71" coreTechnologyLevelType="3" coreLevels="8" rankLevel="1" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_8" />
+      <data id="72" coreTechnologyLevelType="3" coreLevels="9" rankLevel="1" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_9" />
+      <data id="73" coreTechnologyLevelType="3" coreLevels="10" rankLevel="1" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_10" />
+      <data id="74" coreTechnologyLevelType="3" coreLevels="11" rankLevel="2" specialLevel="2" coreTechnologyLevelAttr="100_3500,136_3500" power="100" needItem="30000_21070056_11" />
+      <data id="75" coreTechnologyLevelType="3" coreLevels="12" rankLevel="2" coreTechnologyLevelAttr="100_3750,136_3750" power="100" needItem="30000_21070056_12" />
+      <data id="76" coreTechnologyLevelType="3" coreLevels="13" rankLevel="2" coreTechnologyLevelAttr="100_4000,136_4000" power="100" needItem="30000_21070056_13" />
+      <data id="77" coreTechnologyLevelType="3" coreLevels="14" rankLevel="2" coreTechnologyLevelAttr="100_4250,136_4250" power="100" needItem="30000_21070056_14" />
+      <data id="78" coreTechnologyLevelType="3" coreLevels="15" rankLevel="2" coreTechnologyLevelAttr="100_4500,136_4500" power="100" needItem="30000_21070056_15" />
+      <data id="79" coreTechnologyLevelType="3" coreLevels="16" rankLevel="3" specialLevel="2" coreTechnologyLevelAttr="100_1000,136_1000" power="100" needItem="30000_21070056_16" />
+      <data id="80" coreTechnologyLevelType="3" coreLevels="17" rankLevel="3" coreTechnologyLevelAttr="100_1250,136_1250" power="100" needItem="30000_21070056_17" />
+      <data id="81" coreTechnologyLevelType="3" coreLevels="18" rankLevel="3" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_18" />
+      <data id="82" coreTechnologyLevelType="3" coreLevels="19" rankLevel="3" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_19" />
+      <data id="83" coreTechnologyLevelType="3" coreLevels="20" rankLevel="3" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_20" />
+      <data id="84" coreTechnologyLevelType="3" coreLevels="21" rankLevel="4" specialLevel="2" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_21" />
+      <data id="85" coreTechnologyLevelType="3" coreLevels="22" rankLevel="4" coreTechnologyLevelAttr="100_2500,136_2500" power="100" needItem="30000_21070056_22" />
+      <data id="86" coreTechnologyLevelType="3" coreLevels="23" rankLevel="4" coreTechnologyLevelAttr="100_2750,136_2750" power="100" needItem="30000_21070056_23" />
+      <data id="87" coreTechnologyLevelType="3" coreLevels="24" rankLevel="4" coreTechnologyLevelAttr="100_3000,136_3000" power="100" needItem="30000_21070056_24" />
+      <data id="88" coreTechnologyLevelType="3" coreLevels="25" rankLevel="4" coreTechnologyLevelAttr="100_3250,136_3250" power="100" needItem="30000_21070056_25" />
+      <data id="89" coreTechnologyLevelType="3" coreLevels="26" rankLevel="5" specialLevel="2" coreTechnologyLevelAttr="100_1500,136_1500" power="100" needItem="30000_21070056_26" />
+      <data id="90" coreTechnologyLevelType="3" coreLevels="27" rankLevel="5" coreTechnologyLevelAttr="100_1750,136_1750" power="100" needItem="30000_21070056_27" />
+      <data id="91" coreTechnologyLevelType="3" coreLevels="28" rankLevel="5" coreTechnologyLevelAttr="100_2000,136_2000" power="100" needItem="30000_21070056_28" />
+      <data id="92" coreTechnologyLevelType="3" coreLevels="29" rankLevel="5" coreTechnologyLevelAttr="100_2250,136_2250" power="100" needItem="30000_21070056_29" />
+      <data id="93" coreTechnologyLevelType="3" coreLevels="30" rankLevel="5" specialLevel="3" coreTechnologyLevelAttr="100_2000,136_2001" power="100" needItem="30000_21070056_30" />
+</root>

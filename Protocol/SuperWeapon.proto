@@ -1,0 +1,322 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "Army.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+
+// 超级武器的周期状态
+enum SuperWeaponPeriod
+{
+	INIT	 	= 1;
+	SIGNUP	 	= 2;
+	SIGNUPREADY = 3;
+	PEACE 	 	= 4;
+	WARFARE  	= 5;
+	CONTROL 	= 6;
+	CLOSED		= 7;
+}
+
+// 所用超级武器数据
+message AllSuperWeaponInfo
+{
+	required int32 periodType = 1;					// 时期阶段
+	required int32 turnCount = 2;					// 第几期
+	optional int64 periodEndTime = 3;				// 当前阶段的结束时间
+	repeated SuperWeaponInfo superWeaponInfo = 4;	// 每个超级武器单独的信息
+	optional int32 seasonCount = 5;					// 第几赛季
+	optional int32 seasonTurn = 6;					// 第几期
+}
+
+// 单个超级武器数据
+message SuperWeaponInfo
+{
+	required int32 x 					= 1;  //超级武器坐标
+	required int32 y 					= 2;  //超级武器坐标
+	required int32 periodType 			= 3;  //时期阶段
+	required int32 turnCount 			= 4;  //第几期
+	optional int64 periodEndTime 		= 5;  //当前阶段的结束时间
+	optional int64 warStartTime 		= 6;  //本次超武战的开启时间
+	optional bool hasSignUp 			= 7;  //是否有人报名
+	optional int64 occupyTime 			= 8;  //占领时间
+	optional string commanderId 		= 9;  //总司令的信息
+	optional string commanderName 		= 10;
+	optional int32 commanderIcon 		= 11;
+	optional int64 tenureTime 			= 12; //任期开始时间
+	optional string commanderPfIcon 	= 13; //国王平台头像
+	optional string commanderGuildId 	= 14; //总司令联盟信息
+	optional string commanderGuildName 	= 15;
+	optional string commanderGuildTag 	= 16;
+	optional int32 commanderGuildFlagId = 17;
+	optional string leaderId 	    	= 18; //当前队长信息
+	optional string leaderName 			= 19;
+	optional int32 leaderIcon 			= 20;
+	optional string leaderPfIcon 		= 21;
+	optional string leaderGuildId 		= 22;
+	optional string leaderGuildTag 		= 23;
+	optional string leaderGuildName 	= 24;
+	optional int32 leaderGuildFlag 		= 25;
+	optional bool hasNpc		 		= 26; //是否有npc占领
+	optional bool hasAutoSignUp 		= 27; //是否已经自动报名
+	optional string serverId			= 38;
+}
+
+
+
+
+// 获取超级武器报名信息
+message SuperWeaponSignUpInfoReq
+{
+
+}
+
+message SuperWeaponSignUpInfoResp
+{
+	repeated SuperWeaponSignUpInfo signUpInfo = 1; //服务器只返回已报名的
+}
+
+message SuperWeaponSignUpInfo
+{
+	required int32 posX 	= 1;
+	required int32 posY 	= 2;
+	required bool isSignUp	= 3;
+	optional bool hasGift   = 4;
+	optional bool isAutoSignUp = 5;
+	optional int64 signUpTime = 6;
+}
+
+
+// 超级武器报名
+message SuperWeaponSignUp
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+
+
+
+
+// 超级武器事件类型定义
+enum SuperWeaponEventType
+{
+	SUPER_WEAPON_PACE_TO_WAR   = 1; //和平变为战争
+	SUPER_WEAPON_OCCUPY_EMPTY  = 2; //占领空的超级武器
+	SUPER_WEAPON_OCCUPY_CHANGE = 3; //占领联盟发生改变
+	SUPER_WEAPON_GUILD_CONTROL = 4; //取得控制权
+	SUPER_WEAPON_OVER_TIME	   = 5; //进入加时阶段
+	SUPER_WEAPON_WAR_TO_PACE   = 6; //战争变为和平
+	SUPER_WEAPON_DEF_WIN	   = 7; //超级武器防守成功
+	SUPER_WEAPON_ASSISTANCE	   = 8; //超级武器支援
+	SUPER_WEAPON_NO_SIGN_UP_CLOSE = 9; //超级武器无人占领关闭
+}
+
+// 超级武器简要战斗记录
+message SuperWeaponBriefFightRecodReq
+{
+}
+
+// 超级武器详细战斗记录
+message SuperWeaponDetailFightRecodReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message SuperWeaponFightRecodResp
+{
+	repeated SuperWeaponEvent event = 1;
+}
+
+// 超级武器事件
+message SuperWeaponEvent
+{	
+	required int32 posX						= 1; //坐标x
+	required int32 posY						= 2; //坐标y
+	required SuperWeaponEventType eventType = 3; //事件类型
+	required int64 eventTime 				= 4; //事件发生时间
+	optional string playerName 				= 5; //玩家名字
+	optional string guildTag 				= 6; //联盟简称
+	optional string guildName 				= 7; //联盟名字
+	
+	optional string otherName				= 8; //另外一方玩家名字
+	optional string otherGuildTag			= 9; //另外一方联盟简称
+	optional string otherGuildName			= 10; //另外一方联盟名字
+}
+
+
+
+
+
+// 超级武器礼包记录
+message SuperWeaponGiftRecodReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+// 国王战礼包颁发记录
+message SuperWeaponGiftRecordResp
+{
+	repeated SuperWeaponGiftRecord giftRecord = 1;
+}
+
+// 礼包颁发记录数据
+message SuperWeaponGiftRecord
+{
+	required int64 sendTime 	= 1;
+	required int32 giftId 		= 2;
+	required string playerName 	= 3;
+	required string playerId 	= 4;
+	optional string guildTag 	= 5;
+	required string presidentName = 6;
+	optional int32 posX			= 7; //坐标x
+	optional int32 posY			= 8; //坐标y
+}
+
+
+
+
+
+// 超级武器国王记录
+message SuperWeaponPresidentRecodReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message SuperWeaponPresidentRecodResp
+{
+	repeated SuperWeaponPresident history = 1;
+}
+
+// 历代超级武器国王信息
+message SuperWeaponPresident
+{
+	required int32 turnCount 	= 1;
+	optional string playerId 	= 2;
+	optional string playerName 	= 3;
+	optional int32 playerIcon 	= 4;
+	optional string guildId 	= 5;
+	optional string guildName 	= 6;
+	optional string guildTag 	= 7;
+	optional int32 guildFlag 	= 8;
+	optional int64 turnTime 	= 9;
+	optional int32 posX			= 10; //坐标x
+	optional int32 posY			= 11; //坐标y
+	optional string pfIcon 		= 12;
+}
+
+
+
+// 超级武器礼包信息获取
+message SuperWeaponGiftInofReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message SuperWeapontGiftInfoResp
+{
+	repeated SuperWeaponGiftInfo giftInfo = 1;
+}
+
+// 超级武器礼包信息
+message SuperWeaponGiftInfo
+{
+	required int32 giftId 		 = 1; //礼包id
+	required int32 residueNumber = 2; //剩余数量
+	required int32 totalNumber 	 = 3; //总数量
+	optional int32 posX			 = 4; //坐标x
+	optional int32 posY			 = 5; //坐标y
+}
+
+
+
+// 超级武器国王战颁发礼包请求
+message SuperWeaponSendGiftReq
+{
+	required int32 posX		= 1; //超级武器坐标x
+	required int32 posY		= 2; //超级武器坐标y
+	required int32 giftId 	= 3; //礼包id
+	repeated SuperWeaponSendGiftInfo playerInfo = 4; //颁发给的玩家
+}
+
+message SuperWeaponSendGiftInfo
+{
+	required string playerId = 1; // 玩家id
+	required int32 count = 2; // 数量
+}
+
+// 超级武器驻扎部队行军信息
+message SuperWeaponQuarterMarch
+{
+	required string playerId 	= 1;
+	required string name 	 	= 2;
+	optional string pfIcon   	= 3;
+	optional string guildTag 	= 4;
+	optional int32 icon 	 	= 5;
+	repeated ArmySoldierPB army = 6;
+	required string marchId 	= 7;
+	repeated int32 heroId 		= 8;
+	repeated PBHeroInfo hero 	= 9;
+	optional PBSuperSoldierInfo ssoldier 	= 10; 
+}
+
+// 超级武器驻扎部队信息
+message SuperWeaponQuarterInfoReq
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+message SuperWeaponQuarterInfoResp
+{
+	repeated SuperWeaponQuarterMarch quarterMarch = 1;
+	optional int32 massSoldierNum				  = 2; //队长集结上限
+}
+
+// 超级武器玩家礼包接收数量
+message SWGiftReceiveCountReq
+{
+	optional string playerId = 1;
+	required int32 giftId = 2;
+	required int32 posX = 3;
+	required int32 posY = 4;
+}
+
+message SWAllGiftReceiveCountResp
+{
+	repeated SWGiftReceiveCountResp sendInfo = 1;
+}
+
+message SWGiftReceiveCountResp
+{
+	required int32 receiveCount = 1;
+	required int32 limitCount = 2;
+	optional string playerId = 3;
+	optional int32 giftId = 4;
+	optional int32 posX = 5;
+	optional int32 posY = 6;
+}
+
+// 战区取消报名
+message SWCancelSignUp
+{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+
+// 战区赛季排行榜
+message SWSeasonRankResp
+{
+	repeated SWSeasonRankInfo info = 1; // 排行榜
+	optional SWSeasonRankInfo own = 2; // 自己盟的
+}
+
+message SWSeasonRankInfo
+{
+	required string guildTag  = 1; //联盟简称
+	required string guildName = 2; //联盟名字
+	required int32 score 	  = 3; //积分
+	required int32 section 	  = 4; //段位(1 王者 2 ···)
+}

@@ -1,0 +1,45 @@
+return {
+	prop =
+	{
+		activityId = 348,
+		name = [[幸运补给柜]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，玩家及联盟达成指定任务目标，即可领取活动道具：<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">幸运密钥</font>。<br/>2.使用幸运密钥可以开启幸运补给柜，每个幸运补给柜含有7个普通物品，1个双倍特权，1个自选终极大奖。<br/>3.获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">双倍特权</font>奖励时，下次开柜获得的奖励数量翻倍，双倍特权不会在第9次获得。<br/>4.开启9次幸运补给柜必定获得补给柜内所有奖励，开柜消耗的幸运密钥数量随开柜次数变化，分别是：1个、2个、4个、6个、8个、10个、12个、14个、16个。<br/>5.从<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">第二轮</font>幸运补给柜起，<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">自选终极大奖</font>额外获得一定的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">倍率数量加成</font>，可与双倍特权相乘叠加生效，最终奖励数量向下取整。<br/>6.活动期间，玩家通过幸运补给柜获得联盟幸运点时，联盟内所有玩家均可累计幸运点进度，每达到200幸运点，可领取1次随机幸运点奖励。<br/>7.每期活动，单个玩家最多可获得19800幸运点进度，即最多可领取99次幸运点奖励，达到上限后不再增加幸运点进度。<br/>8.每期活动幸运点进度重置。<br/>9.<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">活动结束后，未使用的幸运密钥将会自动被兑换成其他道具</font>，每1个幸运密钥可兑换1个加速1小时道具，请您及时使用。<br/>10.活动最后1天，领取完所有任务奖励后，若本轮补给柜未全部开启，则可<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">以10金条</font>的价格购买幸运密钥道具，最多购买至可开启完本轮补给柜所有奖励。<br/>11.活动任务中，充值任务仅计算充值界面进行的充值，赠送额度不计算，每日必买，周卡，月卡等活动不计算在内。<br/><br/>第二轮起，终极自选大奖额外倍率概率公示：<br/>1）1.1倍率，概率：10%<br/>2）1.2倍率，概率：10%<br/>3）1.3倍率，概率：10%<br/>4）1.4倍率，概率：15%<br/>5）1.5倍率，概率：15%<br/>6）1.6倍率，概率：8%<br/>7）1.7倍率，概率：8%<br/>8）1.8倍率，概率：7%<br/>9）1.9倍率，概率：7%<br/>10）2倍率，概率：5%<br/>11）3倍率，概率：3%<br/>12）5倍率，概率：2%<br/><br/>第1轮幸运补给柜获得奖励概率公示：<br/>1）通用加速1小时X15，概率：18%<br/>2）行军时间减少50%X3，概率：18%<br/>3）星耀勋章X125，概率：18%<br/>4）星耀勋章X160，概率：16%<br/>5）联盟幸运点X30，概率：12%<br/>6）联盟幸运点X50，概率：8%<br/>7）炽耀勋章X6，概率：5%<br/>8）双倍特权X1，概率：3%<br/>9）终极自选大奖X1，概率：2%<br/><br/>第二轮起，幸运补给柜获得奖励概率公示：<br/>1）通用加速1小时X30，概率：18%<br/>2）行军时间减少50%X6，概率：18%<br/>3）星耀勋章X250，概率：18%<br/>4）星耀勋章X320，概率：16%<br/>5）联盟幸运点X50，概率：12%<br/>6）联盟幸运点X90，概率：8%<br/>7）炽耀勋章X12，概率：5%<br/>8）双倍特权X1，概率：3%<br/>9）终极自选大奖X1，概率：2%</font>]],
+		priority = 20000,
+		icon = [[Activity_Icon_348_Nor.png]],
+		selecticon = [[Activity_Icon_348_Sel.png]],
+		useItem = [[30000_21063065_1]],
+		targetItem = [[30000_21063066_200]],
+		award = 2021122,
+		buyGold = [[10000_1000_10]],
+	},
+	supply_crate_draw = [[id	range	normal	custom	doubleWeight	useItemNum
+1	2	2	2	2	2
+1	1_1	30000_810001_15,30000_820002_3,30000_1300027_125,30000_1300027_160,30000_21063066_30,30000_21063066_50,30000_1300037_6	30000_1000005_10,30000_1300037_45,30000_1300027_2250,30000_21063005_1200,30000_21065001_170,30000_802005_650,30000_802004_1200,30000_1782123_120,30000_21070056_360	300	1_2_4_6_8_10_12_14_16
+2	2_2	30000_810001_30,30000_820002_6,30000_1300027_250,30000_1300027_320,30000_21063066_50,30000_21063066_90,30000_1300037_12	30000_1000005_20,30000_1300037_90,30000_1300027_4500,30000_21063005_2400,30000_21065001_340,30000_802005_1300,30000_802004_2400,30000_1782123_240,30000_21070056_720	300	1_2_4_6_8_10_12_14_16
+]],
+	supply_crate_achieve = [[achieveId	type	conditionValue	isDaily	rewards	color	gotoType	gotoValue	title
+1	1	1	1	2	1	1	2	2
+3481001	2	3	1	30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>消耗200体力<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481002	2	10	1	30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>消耗200体力<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481003	2	20	1	30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>消耗200体力<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481004	2	5	1	30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>充值60金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481005	2	10	1	30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>充值60金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481006	2	20	1	30000_21063065_2		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}人</font>充值60金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481007	2	60	1	30000_21063065_1		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481008	2	300	1	30000_21063065_2		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481009	2	680	1	30000_21063065_4		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3481010	2	1000		30000_21063065_10		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481011	2	3000		30000_21063065_13		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481012	2	6000		30000_21063065_16		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481013	2	10000		30000_21063065_20		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481014	2	15000		30000_21063065_25		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481015	2	20000		30000_21063065_30		1001		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>金条</font>
+3481016	2	300		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+3481017	2	1000		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+3481018	2	2000		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+3481019	2	3000		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+3481020	2	4000		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+3481021	2	6000		30000_21063065_1		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>个联盟幸运点</font>
+]],
+
+}

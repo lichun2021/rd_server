@@ -1,0 +1,69 @@
+# 初始和平时间(s)
+initPeaceTime = 3628800
+
+# 初始开始的星期数，只能配1-7
+initday = 4
+
+# 初始开始时间点（小时）
+initTime = 20
+
+# 初始开始时间点（分钟）
+initMinute = 0
+
+# 占领首都到成为国王过度时间(s)
+occupationTime = 1800
+
+# 战争时期周期(s)
+warfareTime = 7200
+
+# 国王战事件数量上限
+maxEventCount = 20
+
+# 最大历届国王数
+maxHistoryCount = 200
+
+# 国王战开启前邮件时间
+mailBeforeTime = 1800_600_300
+
+# 国王战结束前邮件时间
+mailAfterTime = 1800_600_120
+
+# tick周期(ms)
+tickPeriod = 30000
+
+# 箭塔伤害（万分比）
+towerAtk = 3
+
+# 资源比例改变cd
+changeResCd = 86400
+
+# 资源比例改变系数
+changeResCoe = 3
+
+# 名字最长长度
+nameLengthLimit = 16
+
+# 王国名字和旗帜修改的次数
+countryModifyTimes = 1
+
+# 国王禁言时间
+broadCastBanTime = 28800
+
+# 国王征税比例（万分比）
+taxPercent = 1000
+
+# 搜索玩家推送个数
+searchMaxCount = 20
+
+# 总统任命时间
+appointTime = 1800
+
+# 司令赐福所用消费
+globalBuff = 3605,10000_1001_200;3606,10000_1001_300;3607,10000_1001_200
+
+# 司令宣言所用消费
+manifestoCost = 10000_1001_100
+
+# 司令上限公告CD
+noticeCdTime = 86400
+

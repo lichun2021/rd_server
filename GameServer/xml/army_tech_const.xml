@@ -1,0 +1,9 @@
+# 初始拥有天赋（不可被重置）
+initialTech = 1000101
+
+# 重置道具
+refreshItem = 30000_9140001_1
+
+# 天赋重置道具价格
+refreshItemPrice = 10000_1000_50
+

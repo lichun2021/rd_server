@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data inlaysId="9111001" soldierType="1" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1003_300" nextGrade="9111002" inlaysShape="0,11" item="30000_9111001_1" />
+      <data inlaysId="9111002" soldierType="1" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1003_500" nextGrade="9111003" inlaysShape="0,11" item="30000_9111002_1" />
+      <data inlaysId="9111003" soldierType="1" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1003_700" nextGrade="9111004" inlaysShape="0,11" item="30000_9111003_1" />
+      <data inlaysId="9111004" soldierType="1" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1003_1000" nextGrade="9111005" inlaysShape="0,11" item="30000_9111004_1" />
+      <data inlaysId="9111005" soldierType="1" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1003_1300" nextGrade="9111006" inlaysShape="0,11" item="30000_9111005_1" />
+      <data inlaysId="9111006" soldierType="1" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1003_1700" nextGrade="9111007" inlaysShape="0,11" item="30000_9111006_1" />
+      <data inlaysId="9111007" soldierType="1" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1003_2100" nextGrade="9111008" inlaysShape="0,11" item="30000_9111007_1" />
+      <data inlaysId="9111008" soldierType="1" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1003_2600" nextGrade="9111009" inlaysShape="0,11" item="30000_9111008_1" />
+      <data inlaysId="9111009" soldierType="1" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1003_3200" nextGrade="9111010" inlaysShape="0,11" item="30000_9111009_1" />
+      <data inlaysId="9111010" soldierType="1" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1003_3800" nextGrade="9111011" inlaysShape="0,11" item="30000_9111010_1" />
+      <data inlaysId="9111011" soldierType="1" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1003_4500" inlaysShape="0,11" item="30000_9111011_1" />
+      <data inlaysId="9112001" soldierType="2" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1004_300" nextGrade="9112002" inlaysShape="0,11" item="30000_9112001_1" />
+      <data inlaysId="9112002" soldierType="2" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1004_500" nextGrade="9112003" inlaysShape="0,11" item="30000_9112002_1" />
+      <data inlaysId="9112003" soldierType="2" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1004_700" nextGrade="9112004" inlaysShape="0,11" item="30000_9112003_1" />
+      <data inlaysId="9112004" soldierType="2" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1004_1000" nextGrade="9112005" inlaysShape="0,11" item="30000_9112004_1" />
+      <data inlaysId="9112005" soldierType="2" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1004_1300" nextGrade="9112006" inlaysShape="0,11" item="30000_9112005_1" />
+      <data inlaysId="9112006" soldierType="2" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1004_1700" nextGrade="9112007" inlaysShape="0,11" item="30000_9112006_1" />
+      <data inlaysId="9112007" soldierType="2" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1004_2100" nextGrade="9112008" inlaysShape="0,11" item="30000_9112007_1" />
+      <data inlaysId="9112008" soldierType="2" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1004_2600" nextGrade="9112009" inlaysShape="0,11" item="30000_9112008_1" />
+      <data inlaysId="9112009" soldierType="2" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1004_3200" nextGrade="9112010" inlaysShape="0,11" item="30000_9112009_1" />
+      <data inlaysId="9112010" soldierType="2" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1004_3800" nextGrade="9112011" inlaysShape="0,11" item="30000_9112010_1" />
+      <data inlaysId="9112011" soldierType="2" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1004_4500" inlaysShape="0,11" item="30000_9112011_1" />
+      <data inlaysId="9113001" soldierType="3" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1005_300" nextGrade="9113002" inlaysShape="0,11" item="30000_9113001_1" />
+      <data inlaysId="9113002" soldierType="3" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1005_500" nextGrade="9113003" inlaysShape="0,11" item="30000_9113002_1" />
+      <data inlaysId="9113003" soldierType="3" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1005_700" nextGrade="9113004" inlaysShape="0,11" item="30000_9113003_1" />
+      <data inlaysId="9113004" soldierType="3" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1005_1000" nextGrade="9113005" inlaysShape="0,11" item="30000_9113004_1" />
+      <data inlaysId="9113005" soldierType="3" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1005_1300" nextGrade="9113006" inlaysShape="0,11" item="30000_9113005_1" />
+      <data inlaysId="9113006" soldierType="3" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1005_1700" nextGrade="9113007" inlaysShape="0,11" item="30000_9113006_1" />
+      <data inlaysId="9113007" soldierType="3" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1005_2100" nextGrade="9113008" inlaysShape="0,11" item="30000_9113007_1" />
+      <data inlaysId="9113008" soldierType="3" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1005_2600" nextGrade="9113009" inlaysShape="0,11" item="30000_9113008_1" />
+      <data inlaysId="9113009" soldierType="3" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1005_3200" nextGrade="9113010" inlaysShape="0,11" item="30000_9113009_1" />
+      <data inlaysId="9113010" soldierType="3" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1005_3800" nextGrade="9113011" inlaysShape="0,11" item="30000_9113010_1" />
+      <data inlaysId="9113011" soldierType="3" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1005_4500" inlaysShape="0,11" item="30000_9113011_1" />
+      <data inlaysId="9114001" soldierType="4" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1006_300" nextGrade="9114002" inlaysShape="0,11" item="30000_9114001_1" />
+      <data inlaysId="9114002" soldierType="4" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1006_500" nextGrade="9114003" inlaysShape="0,11" item="30000_9114002_1" />
+      <data inlaysId="9114003" soldierType="4" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1006_700" nextGrade="9114004" inlaysShape="0,11" item="30000_9114003_1" />
+      <data inlaysId="9114004" soldierType="4" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1006_1000" nextGrade="9114005" inlaysShape="0,11" item="30000_9114004_1" />
+      <data inlaysId="9114005" soldierType="4" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1006_1300" nextGrade="9114006" inlaysShape="0,11" item="30000_9114005_1" />
+      <data inlaysId="9114006" soldierType="4" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1006_1700" nextGrade="9114007" inlaysShape="0,11" item="30000_9114006_1" />
+      <data inlaysId="9114007" soldierType="4" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1006_2100" nextGrade="9114008" inlaysShape="0,11" item="30000_9114007_1" />
+      <data inlaysId="9114008" soldierType="4" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1006_2600" nextGrade="9114009" inlaysShape="0,11" item="30000_9114008_1" />
+      <data inlaysId="9114009" soldierType="4" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1006_3200" nextGrade="9114010" inlaysShape="0,11" item="30000_9114009_1" />
+      <data inlaysId="9114010" soldierType="4" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1006_3800" nextGrade="9114011" inlaysShape="0,11" item="30000_9114010_1" />
+      <data inlaysId="9114011" soldierType="4" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1006_4500" inlaysShape="0,11" item="30000_9114011_1" />
+      <data inlaysId="9115001" soldierType="5" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1007_300" nextGrade="9115002" inlaysShape="0,11" item="30000_9115001_1" />
+      <data inlaysId="9115002" soldierType="5" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1007_500" nextGrade="9115003" inlaysShape="0,11" item="30000_9115002_1" />
+      <data inlaysId="9115003" soldierType="5" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1007_700" nextGrade="9115004" inlaysShape="0,11" item="30000_9115003_1" />
+      <data inlaysId="9115004" soldierType="5" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1007_1000" nextGrade="9115005" inlaysShape="0,11" item="30000_9115004_1" />
+      <data inlaysId="9115005" soldierType="5" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1007_1300" nextGrade="9115006" inlaysShape="0,11" item="30000_9115005_1" />
+      <data inlaysId="9115006" soldierType="5" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1007_1700" nextGrade="9115007" inlaysShape="0,11" item="30000_9115006_1" />
+      <data inlaysId="9115007" soldierType="5" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1007_2100" nextGrade="9115008" inlaysShape="0,11" item="30000_9115007_1" />
+      <data inlaysId="9115008" soldierType="5" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1007_2600" nextGrade="9115009" inlaysShape="0,11" item="30000_9115008_1" />
+      <data inlaysId="9115009" soldierType="5" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1007_3200" nextGrade="9115010" inlaysShape="0,11" item="30000_9115009_1" />
+      <data inlaysId="9115010" soldierType="5" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1007_3800" nextGrade="9115011" inlaysShape="0,11" item="30000_9115010_1" />
+      <data inlaysId="9115011" soldierType="5" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1007_4500" inlaysShape="0,11" item="30000_9115011_1" />
+      <data inlaysId="9116001" soldierType="6" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1008_300" nextGrade="9116002" inlaysShape="0,11" item="30000_9116001_1" />
+      <data inlaysId="9116002" soldierType="6" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1008_500" nextGrade="9116003" inlaysShape="0,11" item="30000_9116002_1" />
+      <data inlaysId="9116003" soldierType="6" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1008_700" nextGrade="9116004" inlaysShape="0,11" item="30000_9116003_1" />
+      <data inlaysId="9116004" soldierType="6" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1008_1000" nextGrade="9116005" inlaysShape="0,11" item="30000_9116004_1" />
+      <data inlaysId="9116005" soldierType="6" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1008_1300" nextGrade="9116006" inlaysShape="0,11" item="30000_9116005_1" />
+      <data inlaysId="9116006" soldierType="6" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1008_1700" nextGrade="9116007" inlaysShape="0,11" item="30000_9116006_1" />
+      <data inlaysId="9116007" soldierType="6" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1008_2100" nextGrade="9116008" inlaysShape="0,11" item="30000_9116007_1" />
+      <data inlaysId="9116008" soldierType="6" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1008_2600" nextGrade="9116009" inlaysShape="0,11" item="30000_9116008_1" />
+      <data inlaysId="9116009" soldierType="6" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1008_3200" nextGrade="9116010" inlaysShape="0,11" item="30000_9116009_1" />
+      <data inlaysId="9116010" soldierType="6" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1008_3800" nextGrade="9116011" inlaysShape="0,11" item="30000_9116010_1" />
+      <data inlaysId="9116011" soldierType="6" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1008_4500" inlaysShape="0,11" item="30000_9116011_1" />
+      <data inlaysId="9117001" soldierType="7" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1009_300" nextGrade="9117002" inlaysShape="0,11" item="30000_9117001_1" />
+      <data inlaysId="9117002" soldierType="7" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1009_500" nextGrade="9117003" inlaysShape="0,11" item="30000_9117002_1" />
+      <data inlaysId="9117003" soldierType="7" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1009_700" nextGrade="9117004" inlaysShape="0,11" item="30000_9117003_1" />
+      <data inlaysId="9117004" soldierType="7" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1009_1000" nextGrade="9117005" inlaysShape="0,11" item="30000_9117004_1" />
+      <data inlaysId="9117005" soldierType="7" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1009_1300" nextGrade="9117006" inlaysShape="0,11" item="30000_9117005_1" />
+      <data inlaysId="9117006" soldierType="7" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1009_1700" nextGrade="9117007" inlaysShape="0,11" item="30000_9117006_1" />
+      <data inlaysId="9117007" soldierType="7" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1009_2100" nextGrade="9117008" inlaysShape="0,11" item="30000_9117007_1" />
+      <data inlaysId="9117008" soldierType="7" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1009_2600" nextGrade="9117009" inlaysShape="0,11" item="30000_9117008_1" />
+      <data inlaysId="9117009" soldierType="7" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1009_3200" nextGrade="9117010" inlaysShape="0,11" item="30000_9117009_1" />
+      <data inlaysId="9117010" soldierType="7" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1009_3800" nextGrade="9117011" inlaysShape="0,11" item="30000_9117010_1" />
+      <data inlaysId="9117011" soldierType="7" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1009_4500" inlaysShape="0,11" item="30000_9117011_1" />
+      <data inlaysId="9118001" soldierType="8" inlaysType="1" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1010_300" nextGrade="9118002" inlaysShape="0,11" item="30000_9118001_1" />
+      <data inlaysId="9118002" soldierType="8" inlaysType="1" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1010_500" nextGrade="9118003" inlaysShape="0,11" item="30000_9118002_1" />
+      <data inlaysId="9118003" soldierType="8" inlaysType="1" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1010_700" nextGrade="9118004" inlaysShape="0,11" item="30000_9118003_1" />
+      <data inlaysId="9118004" soldierType="8" inlaysType="1" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1010_1000" nextGrade="9118005" inlaysShape="0,11" item="30000_9118004_1" />
+      <data inlaysId="9118005" soldierType="8" inlaysType="1" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1010_1300" nextGrade="9118006" inlaysShape="0,11" item="30000_9118005_1" />
+      <data inlaysId="9118006" soldierType="8" inlaysType="1" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1010_1700" nextGrade="9118007" inlaysShape="0,11" item="30000_9118006_1" />
+      <data inlaysId="9118007" soldierType="8" inlaysType="1" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1010_2100" nextGrade="9118008" inlaysShape="0,11" item="30000_9118007_1" />
+      <data inlaysId="9118008" soldierType="8" inlaysType="1" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1010_2600" nextGrade="9118009" inlaysShape="0,11" item="30000_9118008_1" />
+      <data inlaysId="9118009" soldierType="8" inlaysType="1" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1010_3200" nextGrade="9118010" inlaysShape="0,11" item="30000_9118009_1" />
+      <data inlaysId="9118010" soldierType="8" inlaysType="1" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1010_3800" nextGrade="9118011" inlaysShape="0,11" item="30000_9118010_1" />
+      <data inlaysId="9118011" soldierType="8" inlaysType="1" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1010_4500" inlaysShape="0,11" item="30000_9118011_1" />
+      <data inlaysId="9121001" soldierType="1" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1011_600" nextGrade="9121002" inlaysShape="0" item="30000_9121001_1" />
+      <data inlaysId="9121002" soldierType="1" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1011_900" nextGrade="9121003" inlaysShape="0" item="30000_9121002_1" />
+      <data inlaysId="9121003" soldierType="1" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1011_1400" nextGrade="9121004" inlaysShape="0" item="30000_9121003_1" />
+      <data inlaysId="9121004" soldierType="1" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1011_1900" nextGrade="9121005" inlaysShape="0" item="30000_9121004_1" />
+      <data inlaysId="9121005" soldierType="1" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1011_2600" nextGrade="9121006" inlaysShape="0" item="30000_9121005_1" />
+      <data inlaysId="9121006" soldierType="1" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1011_3400" nextGrade="9121007" inlaysShape="0" item="30000_9121006_1" />
+      <data inlaysId="9121007" soldierType="1" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1011_4300" nextGrade="9121008" inlaysShape="0" item="30000_9121007_1" />
+      <data inlaysId="9121008" soldierType="1" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1011_5300" nextGrade="9121009" inlaysShape="0" item="30000_9121008_1" />
+      <data inlaysId="9121009" soldierType="1" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1011_6400" nextGrade="9121010" inlaysShape="0" item="30000_9121009_1" />
+      <data inlaysId="9121010" soldierType="1" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1011_7700" nextGrade="9121011" inlaysShape="0" item="30000_9121010_1" />
+      <data inlaysId="9121011" soldierType="1" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1011_9000" inlaysShape="0" item="30000_9121011_1" />
+      <data inlaysId="9122001" soldierType="2" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1012_600" nextGrade="9122002" inlaysShape="0" item="30000_9122001_1" />
+      <data inlaysId="9122002" soldierType="2" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1012_900" nextGrade="9122003" inlaysShape="0" item="30000_9122002_1" />
+      <data inlaysId="9122003" soldierType="2" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1012_1400" nextGrade="9122004" inlaysShape="0" item="30000_9122003_1" />
+      <data inlaysId="9122004" soldierType="2" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1012_1900" nextGrade="9122005" inlaysShape="0" item="30000_9122004_1" />
+      <data inlaysId="9122005" soldierType="2" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1012_2600" nextGrade="9122006" inlaysShape="0" item="30000_9122005_1" />
+      <data inlaysId="9122006" soldierType="2" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1012_3400" nextGrade="9122007" inlaysShape="0" item="30000_9122006_1" />
+      <data inlaysId="9122007" soldierType="2" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1012_4300" nextGrade="9122008" inlaysShape="0" item="30000_9122007_1" />
+      <data inlaysId="9122008" soldierType="2" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1012_5300" nextGrade="9122009" inlaysShape="0" item="30000_9122008_1" />
+      <data inlaysId="9122009" soldierType="2" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1012_6400" nextGrade="9122010" inlaysShape="0" item="30000_9122009_1" />
+      <data inlaysId="9122010" soldierType="2" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1012_7700" nextGrade="9122011" inlaysShape="0" item="30000_9122010_1" />
+      <data inlaysId="9122011" soldierType="2" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1012_9000" inlaysShape="0" item="30000_9122011_1" />
+      <data inlaysId="9123001" soldierType="3" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1013_600" nextGrade="9123002" inlaysShape="0" item="30000_9123001_1" />
+      <data inlaysId="9123002" soldierType="3" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1013_900" nextGrade="9123003" inlaysShape="0" item="30000_9123002_1" />
+      <data inlaysId="9123003" soldierType="3" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1013_1400" nextGrade="9123004" inlaysShape="0" item="30000_9123003_1" />
+      <data inlaysId="9123004" soldierType="3" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1013_1900" nextGrade="9123005" inlaysShape="0" item="30000_9123004_1" />
+      <data inlaysId="9123005" soldierType="3" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1013_2600" nextGrade="9123006" inlaysShape="0" item="30000_9123005_1" />
+      <data inlaysId="9123006" soldierType="3" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1013_3400" nextGrade="9123007" inlaysShape="0" item="30000_9123006_1" />
+      <data inlaysId="9123007" soldierType="3" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1013_4300" nextGrade="9123008" inlaysShape="0" item="30000_9123007_1" />
+      <data inlaysId="9123008" soldierType="3" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1013_5300" nextGrade="9123009" inlaysShape="0" item="30000_9123008_1" />
+      <data inlaysId="9123009" soldierType="3" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1013_6400" nextGrade="9123010" inlaysShape="0" item="30000_9123009_1" />
+      <data inlaysId="9123010" soldierType="3" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1013_7700" nextGrade="9123011" inlaysShape="0" item="30000_9123010_1" />
+      <data inlaysId="9123011" soldierType="3" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1013_9000" inlaysShape="0" item="30000_9123011_1" />
+      <data inlaysId="9124001" soldierType="4" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1014_600" nextGrade="9124002" inlaysShape="0" item="30000_9124001_1" />
+      <data inlaysId="9124002" soldierType="4" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1014_900" nextGrade="9124003" inlaysShape="0" item="30000_9124002_1" />
+      <data inlaysId="9124003" soldierType="4" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1014_1400" nextGrade="9124004" inlaysShape="0" item="30000_9124003_1" />
+      <data inlaysId="9124004" soldierType="4" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1014_1900" nextGrade="9124005" inlaysShape="0" item="30000_9124004_1" />
+      <data inlaysId="9124005" soldierType="4" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1014_2600" nextGrade="9124006" inlaysShape="0" item="30000_9124005_1" />
+      <data inlaysId="9124006" soldierType="4" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1014_3400" nextGrade="9124007" inlaysShape="0" item="30000_9124006_1" />
+      <data inlaysId="9124007" soldierType="4" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1014_4300" nextGrade="9124008" inlaysShape="0" item="30000_9124007_1" />
+      <data inlaysId="9124008" soldierType="4" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1014_5300" nextGrade="9124009" inlaysShape="0" item="30000_9124008_1" />
+      <data inlaysId="9124009" soldierType="4" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1014_6400" nextGrade="9124010" inlaysShape="0" item="30000_9124009_1" />
+      <data inlaysId="9124010" soldierType="4" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1014_7700" nextGrade="9124011" inlaysShape="0" item="30000_9124010_1" />
+      <data inlaysId="9124011" soldierType="4" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1014_9000" inlaysShape="0" item="30000_9124011_1" />
+      <data inlaysId="9125001" soldierType="5" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1015_600" nextGrade="9125002" inlaysShape="0" item="30000_9125001_1" />
+      <data inlaysId="9125002" soldierType="5" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1015_900" nextGrade="9125003" inlaysShape="0" item="30000_9125002_1" />
+      <data inlaysId="9125003" soldierType="5" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1015_1400" nextGrade="9125004" inlaysShape="0" item="30000_9125003_1" />
+      <data inlaysId="9125004" soldierType="5" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1015_1900" nextGrade="9125005" inlaysShape="0" item="30000_9125004_1" />
+      <data inlaysId="9125005" soldierType="5" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1015_2600" nextGrade="9125006" inlaysShape="0" item="30000_9125005_1" />
+      <data inlaysId="9125006" soldierType="5" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1015_3400" nextGrade="9125007" inlaysShape="0" item="30000_9125006_1" />
+      <data inlaysId="9125007" soldierType="5" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1015_4300" nextGrade="9125008" inlaysShape="0" item="30000_9125007_1" />
+      <data inlaysId="9125008" soldierType="5" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1015_5300" nextGrade="9125009" inlaysShape="0" item="30000_9125008_1" />
+      <data inlaysId="9125009" soldierType="5" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1015_6400" nextGrade="9125010" inlaysShape="0" item="30000_9125009_1" />
+      <data inlaysId="9125010" soldierType="5" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1015_7700" nextGrade="9125011" inlaysShape="0" item="30000_9125010_1" />
+      <data inlaysId="9125011" soldierType="5" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1015_9000" inlaysShape="0" item="30000_9125011_1" />
+      <data inlaysId="9126001" soldierType="6" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1016_600" nextGrade="9126002" inlaysShape="0" item="30000_9126001_1" />
+      <data inlaysId="9126002" soldierType="6" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1016_900" nextGrade="9126003" inlaysShape="0" item="30000_9126002_1" />
+      <data inlaysId="9126003" soldierType="6" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1016_1400" nextGrade="9126004" inlaysShape="0" item="30000_9126003_1" />
+      <data inlaysId="9126004" soldierType="6" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1016_1900" nextGrade="9126005" inlaysShape="0" item="30000_9126004_1" />
+      <data inlaysId="9126005" soldierType="6" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1016_2600" nextGrade="9126006" inlaysShape="0" item="30000_9126005_1" />
+      <data inlaysId="9126006" soldierType="6" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1016_3400" nextGrade="9126007" inlaysShape="0" item="30000_9126006_1" />
+      <data inlaysId="9126007" soldierType="6" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1016_4300" nextGrade="9126008" inlaysShape="0" item="30000_9126007_1" />
+      <data inlaysId="9126008" soldierType="6" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1016_5300" nextGrade="9126009" inlaysShape="0" item="30000_9126008_1" />
+      <data inlaysId="9126009" soldierType="6" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1016_6400" nextGrade="9126010" inlaysShape="0" item="30000_9126009_1" />
+      <data inlaysId="9126010" soldierType="6" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1016_7700" nextGrade="9126011" inlaysShape="0" item="30000_9126010_1" />
+      <data inlaysId="9126011" soldierType="6" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1016_9000" inlaysShape="0" item="30000_9126011_1" />
+      <data inlaysId="9127001" soldierType="7" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1017_600" nextGrade="9127002" inlaysShape="0" item="30000_9127001_1" />
+      <data inlaysId="9127002" soldierType="7" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1017_900" nextGrade="9127003" inlaysShape="0" item="30000_9127002_1" />
+      <data inlaysId="9127003" soldierType="7" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1017_1400" nextGrade="9127004" inlaysShape="0" item="30000_9127003_1" />
+      <data inlaysId="9127004" soldierType="7" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1017_1900" nextGrade="9127005" inlaysShape="0" item="30000_9127004_1" />
+      <data inlaysId="9127005" soldierType="7" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1017_2600" nextGrade="9127006" inlaysShape="0" item="30000_9127005_1" />
+      <data inlaysId="9127006" soldierType="7" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1017_3400" nextGrade="9127007" inlaysShape="0" item="30000_9127006_1" />
+      <data inlaysId="9127007" soldierType="7" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1017_4300" nextGrade="9127008" inlaysShape="0" item="30000_9127007_1" />
+      <data inlaysId="9127008" soldierType="7" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1017_5300" nextGrade="9127009" inlaysShape="0" item="30000_9127008_1" />
+      <data inlaysId="9127009" soldierType="7" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1017_6400" nextGrade="9127010" inlaysShape="0" item="30000_9127009_1" />
+      <data inlaysId="9127010" soldierType="7" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1017_7700" nextGrade="9127011" inlaysShape="0" item="30000_9127010_1" />
+      <data inlaysId="9127011" soldierType="7" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1017_9000" inlaysShape="0" item="30000_9127011_1" />
+      <data inlaysId="9128001" soldierType="8" inlaysType="2" qualityColor="1" iniLevel="1" inlaysPower="960" iniStats="1018_600" nextGrade="9128002" inlaysShape="0" item="30000_9128001_1" />
+      <data inlaysId="9128002" soldierType="8" inlaysType="2" qualityColor="2" iniLevel="1" inlaysPower="1600" iniStats="1018_900" nextGrade="9128003" inlaysShape="0" item="30000_9128002_1" />
+      <data inlaysId="9128003" soldierType="8" inlaysType="2" qualityColor="3" iniLevel="1" inlaysPower="2240" iniStats="1018_1400" nextGrade="9128004" inlaysShape="0" item="30000_9128003_1" />
+      <data inlaysId="9128004" soldierType="8" inlaysType="2" qualityColor="3" iniLevel="2" inlaysPower="3200" iniStats="1018_1900" nextGrade="9128005" inlaysShape="0" item="30000_9128004_1" />
+      <data inlaysId="9128005" soldierType="8" inlaysType="2" qualityColor="4" iniLevel="1" inlaysPower="4160" iniStats="1018_2600" nextGrade="9128006" inlaysShape="0" item="30000_9128005_1" />
+      <data inlaysId="9128006" soldierType="8" inlaysType="2" qualityColor="4" iniLevel="2" inlaysPower="5440" iniStats="1018_3400" nextGrade="9128007" inlaysShape="0" item="30000_9128006_1" />
+      <data inlaysId="9128007" soldierType="8" inlaysType="2" qualityColor="4" iniLevel="3" inlaysPower="6720" iniStats="1018_4300" nextGrade="9128008" inlaysShape="0" item="30000_9128007_1" />
+      <data inlaysId="9128008" soldierType="8" inlaysType="2" qualityColor="5" iniLevel="1" inlaysPower="8320" iniStats="1018_5300" nextGrade="9128009" inlaysShape="0" item="30000_9128008_1" />
+      <data inlaysId="9128009" soldierType="8" inlaysType="2" qualityColor="5" iniLevel="2" inlaysPower="10240" iniStats="1018_6400" nextGrade="9128010" inlaysShape="0" item="30000_9128009_1" />
+      <data inlaysId="9128010" soldierType="8" inlaysType="2" qualityColor="5" iniLevel="3" inlaysPower="12160" iniStats="1018_7700" nextGrade="9128011" inlaysShape="0" item="30000_9128010_1" />
+      <data inlaysId="9128011" soldierType="8" inlaysType="2" qualityColor="5" iniLevel="4" inlaysPower="14400" iniStats="1018_9000" inlaysShape="0" item="30000_9128011_1" />
+      <data inlaysId="9131001" soldierType="1" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1019_400" nextGrade="9131002" inlaysShape="0,10" item="30000_9131001_1" />
+      <data inlaysId="9131002" soldierType="1" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1019_600" nextGrade="9131003" inlaysShape="0,10" item="30000_9131002_1" />
+      <data inlaysId="9131003" soldierType="1" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1019_900" nextGrade="9131004" inlaysShape="0,10" item="30000_9131003_1" />
+      <data inlaysId="9131004" soldierType="1" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1019_1300" nextGrade="9131005" inlaysShape="0,10" item="30000_9131004_1" />
+      <data inlaysId="9131005" soldierType="1" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1019_1700" nextGrade="9131006" inlaysShape="0,10" item="30000_9131005_1" />
+      <data inlaysId="9131006" soldierType="1" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1019_2300" nextGrade="9131007" inlaysShape="0,10" item="30000_9131006_1" />
+      <data inlaysId="9131007" soldierType="1" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1019_2900" nextGrade="9131008" inlaysShape="0,10" item="30000_9131007_1" />
+      <data inlaysId="9131008" soldierType="1" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1019_3500" nextGrade="9131009" inlaysShape="0,10" item="30000_9131008_1" />
+      <data inlaysId="9131009" soldierType="1" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1019_4300" nextGrade="9131010" inlaysShape="0,10" item="30000_9131009_1" />
+      <data inlaysId="9131010" soldierType="1" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1019_5100" nextGrade="9131011" inlaysShape="0,10" item="30000_9131010_1" />
+      <data inlaysId="9131011" soldierType="1" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1019_6000" inlaysShape="0,10" item="30000_9131011_1" />
+      <data inlaysId="9132001" soldierType="2" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1020_400" nextGrade="9132002" inlaysShape="0,10" item="30000_9132001_1" />
+      <data inlaysId="9132002" soldierType="2" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1020_600" nextGrade="9132003" inlaysShape="0,10" item="30000_9132002_1" />
+      <data inlaysId="9132003" soldierType="2" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1020_900" nextGrade="9132004" inlaysShape="0,10" item="30000_9132003_1" />
+      <data inlaysId="9132004" soldierType="2" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1020_1300" nextGrade="9132005" inlaysShape="0,10" item="30000_9132004_1" />
+      <data inlaysId="9132005" soldierType="2" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1020_1700" nextGrade="9132006" inlaysShape="0,10" item="30000_9132005_1" />
+      <data inlaysId="9132006" soldierType="2" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1020_2300" nextGrade="9132007" inlaysShape="0,10" item="30000_9132006_1" />
+      <data inlaysId="9132007" soldierType="2" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1020_2900" nextGrade="9132008" inlaysShape="0,10" item="30000_9132007_1" />
+      <data inlaysId="9132008" soldierType="2" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1020_3500" nextGrade="9132009" inlaysShape="0,10" item="30000_9132008_1" />
+      <data inlaysId="9132009" soldierType="2" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1020_4300" nextGrade="9132010" inlaysShape="0,10" item="30000_9132009_1" />
+      <data inlaysId="9132010" soldierType="2" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1020_5100" nextGrade="9132011" inlaysShape="0,10" item="30000_9132010_1" />
+      <data inlaysId="9132011" soldierType="2" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1020_6000" inlaysShape="0,10" item="30000_9132011_1" />
+      <data inlaysId="9133001" soldierType="3" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1021_400" nextGrade="9133002" inlaysShape="0,10" item="30000_9133001_1" />
+      <data inlaysId="9133002" soldierType="3" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1021_600" nextGrade="9133003" inlaysShape="0,10" item="30000_9133002_1" />
+      <data inlaysId="9133003" soldierType="3" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1021_900" nextGrade="9133004" inlaysShape="0,10" item="30000_9133003_1" />
+      <data inlaysId="9133004" soldierType="3" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1021_1300" nextGrade="9133005" inlaysShape="0,10" item="30000_9133004_1" />
+      <data inlaysId="9133005" soldierType="3" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1021_1700" nextGrade="9133006" inlaysShape="0,10" item="30000_9133005_1" />
+      <data inlaysId="9133006" soldierType="3" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1021_2300" nextGrade="9133007" inlaysShape="0,10" item="30000_9133006_1" />
+      <data inlaysId="9133007" soldierType="3" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1021_2900" nextGrade="9133008" inlaysShape="0,10" item="30000_9133007_1" />
+      <data inlaysId="9133008" soldierType="3" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1021_3500" nextGrade="9133009" inlaysShape="0,10" item="30000_9133008_1" />
+      <data inlaysId="9133009" soldierType="3" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1021_4300" nextGrade="9133010" inlaysShape="0,10" item="30000_9133009_1" />
+      <data inlaysId="9133010" soldierType="3" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1021_5100" nextGrade="9133011" inlaysShape="0,10" item="30000_9133010_1" />
+      <data inlaysId="9133011" soldierType="3" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1021_6000" inlaysShape="0,10" item="30000_9133011_1" />
+      <data inlaysId="9134001" soldierType="4" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1022_400" nextGrade="9134002" inlaysShape="0,10" item="30000_9134001_1" />
+      <data inlaysId="9134002" soldierType="4" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1022_600" nextGrade="9134003" inlaysShape="0,10" item="30000_9134002_1" />
+      <data inlaysId="9134003" soldierType="4" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1022_900" nextGrade="9134004" inlaysShape="0,10" item="30000_9134003_1" />
+      <data inlaysId="9134004" soldierType="4" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1022_1300" nextGrade="9134005" inlaysShape="0,10" item="30000_9134004_1" />
+      <data inlaysId="9134005" soldierType="4" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1022_1700" nextGrade="9134006" inlaysShape="0,10" item="30000_9134005_1" />
+      <data inlaysId="9134006" soldierType="4" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1022_2300" nextGrade="9134007" inlaysShape="0,10" item="30000_9134006_1" />
+      <data inlaysId="9134007" soldierType="4" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1022_2900" nextGrade="9134008" inlaysShape="0,10" item="30000_9134007_1" />
+      <data inlaysId="9134008" soldierType="4" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1022_3500" nextGrade="9134009" inlaysShape="0,10" item="30000_9134008_1" />
+      <data inlaysId="9134009" soldierType="4" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1022_4300" nextGrade="9134010" inlaysShape="0,10" item="30000_9134009_1" />
+      <data inlaysId="9134010" soldierType="4" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1022_5100" nextGrade="9134011" inlaysShape="0,10" item="30000_9134010_1" />
+      <data inlaysId="9134011" soldierType="4" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1022_6000" inlaysShape="0,10" item="30000_9134011_1" />
+      <data inlaysId="9135001" soldierType="5" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1023_400" nextGrade="9135002" inlaysShape="0,10" item="30000_9135001_1" />
+      <data inlaysId="9135002" soldierType="5" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1023_600" nextGrade="9135003" inlaysShape="0,10" item="30000_9135002_1" />
+      <data inlaysId="9135003" soldierType="5" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1023_900" nextGrade="9135004" inlaysShape="0,10" item="30000_9135003_1" />
+      <data inlaysId="9135004" soldierType="5" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1023_1300" nextGrade="9135005" inlaysShape="0,10" item="30000_9135004_1" />
+      <data inlaysId="9135005" soldierType="5" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1023_1700" nextGrade="9135006" inlaysShape="0,10" item="30000_9135005_1" />
+      <data inlaysId="9135006" soldierType="5" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1023_2300" nextGrade="9135007" inlaysShape="0,10" item="30000_9135006_1" />
+      <data inlaysId="9135007" soldierType="5" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1023_2900" nextGrade="9135008" inlaysShape="0,10" item="30000_9135007_1" />
+      <data inlaysId="9135008" soldierType="5" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1023_3500" nextGrade="9135009" inlaysShape="0,10" item="30000_9135008_1" />
+      <data inlaysId="9135009" soldierType="5" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1023_4300" nextGrade="9135010" inlaysShape="0,10" item="30000_9135009_1" />
+      <data inlaysId="9135010" soldierType="5" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1023_5100" nextGrade="9135011" inlaysShape="0,10" item="30000_9135010_1" />
+      <data inlaysId="9135011" soldierType="5" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1023_6000" inlaysShape="0,10" item="30000_9135011_1" />
+      <data inlaysId="9136001" soldierType="6" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1024_400" nextGrade="9136002" inlaysShape="0,10" item="30000_9136001_1" />
+      <data inlaysId="9136002" soldierType="6" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1024_600" nextGrade="9136003" inlaysShape="0,10" item="30000_9136002_1" />
+      <data inlaysId="9136003" soldierType="6" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1024_900" nextGrade="9136004" inlaysShape="0,10" item="30000_9136003_1" />
+      <data inlaysId="9136004" soldierType="6" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1024_1300" nextGrade="9136005" inlaysShape="0,10" item="30000_9136004_1" />
+      <data inlaysId="9136005" soldierType="6" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1024_1700" nextGrade="9136006" inlaysShape="0,10" item="30000_9136005_1" />
+      <data inlaysId="9136006" soldierType="6" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1024_2300" nextGrade="9136007" inlaysShape="0,10" item="30000_9136006_1" />
+      <data inlaysId="9136007" soldierType="6" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1024_2900" nextGrade="9136008" inlaysShape="0,10" item="30000_9136007_1" />
+      <data inlaysId="9136008" soldierType="6" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1024_3500" nextGrade="9136009" inlaysShape="0,10" item="30000_9136008_1" />
+      <data inlaysId="9136009" soldierType="6" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1024_4300" nextGrade="9136010" inlaysShape="0,10" item="30000_9136009_1" />
+      <data inlaysId="9136010" soldierType="6" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1024_5100" nextGrade="9136011" inlaysShape="0,10" item="30000_9136010_1" />
+      <data inlaysId="9136011" soldierType="6" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1024_6000" inlaysShape="0,10" item="30000_9136011_1" />
+      <data inlaysId="9137001" soldierType="7" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1025_400" nextGrade="9137002" inlaysShape="0,10" item="30000_9137001_1" />
+      <data inlaysId="9137002" soldierType="7" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1025_600" nextGrade="9137003" inlaysShape="0,10" item="30000_9137002_1" />
+      <data inlaysId="9137003" soldierType="7" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1025_900" nextGrade="9137004" inlaysShape="0,10" item="30000_9137003_1" />
+      <data inlaysId="9137004" soldierType="7" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1025_1300" nextGrade="9137005" inlaysShape="0,10" item="30000_9137004_1" />
+      <data inlaysId="9137005" soldierType="7" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1025_1700" nextGrade="9137006" inlaysShape="0,10" item="30000_9137005_1" />
+      <data inlaysId="9137006" soldierType="7" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1025_2300" nextGrade="9137007" inlaysShape="0,10" item="30000_9137006_1" />
+      <data inlaysId="9137007" soldierType="7" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1025_2900" nextGrade="9137008" inlaysShape="0,10" item="30000_9137007_1" />
+      <data inlaysId="9137008" soldierType="7" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1025_3500" nextGrade="9137009" inlaysShape="0,10" item="30000_9137008_1" />
+      <data inlaysId="9137009" soldierType="7" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1025_4300" nextGrade="9137010" inlaysShape="0,10" item="30000_9137009_1" />
+      <data inlaysId="9137010" soldierType="7" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1025_5100" nextGrade="9137011" inlaysShape="0,10" item="30000_9137010_1" />
+      <data inlaysId="9137011" soldierType="7" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1025_6000" inlaysShape="0,10" item="30000_9137011_1" />
+      <data inlaysId="9138001" soldierType="8" inlaysType="3" qualityColor="1" iniLevel="1" inlaysPower="1920" iniStats="1026_400" nextGrade="9138002" inlaysShape="0,10" item="30000_9138001_1" />
+      <data inlaysId="9138002" soldierType="8" inlaysType="3" qualityColor="2" iniLevel="1" inlaysPower="3200" iniStats="1026_600" nextGrade="9138003" inlaysShape="0,10" item="30000_9138002_1" />
+      <data inlaysId="9138003" soldierType="8" inlaysType="3" qualityColor="3" iniLevel="1" inlaysPower="4480" iniStats="1026_900" nextGrade="9138004" inlaysShape="0,10" item="30000_9138003_1" />
+      <data inlaysId="9138004" soldierType="8" inlaysType="3" qualityColor="3" iniLevel="2" inlaysPower="6400" iniStats="1026_1300" nextGrade="9138005" inlaysShape="0,10" item="30000_9138004_1" />
+      <data inlaysId="9138005" soldierType="8" inlaysType="3" qualityColor="4" iniLevel="1" inlaysPower="8320" iniStats="1026_1700" nextGrade="9138006" inlaysShape="0,10" item="30000_9138005_1" />
+      <data inlaysId="9138006" soldierType="8" inlaysType="3" qualityColor="4" iniLevel="2" inlaysPower="10880" iniStats="1026_2300" nextGrade="9138007" inlaysShape="0,10" item="30000_9138006_1" />
+      <data inlaysId="9138007" soldierType="8" inlaysType="3" qualityColor="4" iniLevel="3" inlaysPower="13440" iniStats="1026_2900" nextGrade="9138008" inlaysShape="0,10" item="30000_9138007_1" />
+      <data inlaysId="9138008" soldierType="8" inlaysType="3" qualityColor="5" iniLevel="1" inlaysPower="16640" iniStats="1026_3500" nextGrade="9138009" inlaysShape="0,10" item="30000_9138008_1" />
+      <data inlaysId="9138009" soldierType="8" inlaysType="3" qualityColor="5" iniLevel="2" inlaysPower="20480" iniStats="1026_4300" nextGrade="9138010" inlaysShape="0,10" item="30000_9138009_1" />
+      <data inlaysId="9138010" soldierType="8" inlaysType="3" qualityColor="5" iniLevel="3" inlaysPower="24320" iniStats="1026_5100" nextGrade="9138011" inlaysShape="0,10" item="30000_9138010_1" />
+      <data inlaysId="9138011" soldierType="8" inlaysType="3" qualityColor="5" iniLevel="4" inlaysPower="28800" iniStats="1026_6000" inlaysShape="0,10" item="30000_9138011_1" />
+</root>

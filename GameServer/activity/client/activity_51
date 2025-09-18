@@ -1,0 +1,15 @@
+return {
+	prop =
+	{
+		activityId = 51,
+		name = [[特权补给]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">点击"前往获取"即可跳转至"特权补给"页面进行购买</font>]],
+		priority = 20020,
+		icon = [[Activity_Icon_51_Nor.png]],
+		selecticon = [[Activity_Icon_51_Sel.png]],
+		toType = 7,
+		serverDelay = 0,
+	},
+
+}

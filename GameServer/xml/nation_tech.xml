@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10101" techLevel="1" techId="101" techType="1" frontBuildLv="1" techCost="200" techTime="60" techEffect="4110_32,4111_32,4112_32,4113_32,4114_32,4115_32,4116_32,4117_32" />
+      <data id="10102" techLevel="2" techId="101" techType="1" frontBuildLv="1" techCost="200" techTime="60" techEffect="4110_64,4111_64,4112_64,4113_64,4114_64,4115_64,4116_64,4117_64" />
+      <data id="10103" techLevel="3" techId="101" techType="1" frontBuildLv="1" techCost="200" techTime="60" techEffect="4110_96,4111_96,4112_96,4113_96,4114_96,4115_96,4116_96,4117_96" />
+      <data id="10104" techLevel="4" techId="101" techType="1" frontBuildLv="1" techCost="200" techTime="60" techEffect="4110_128,4111_128,4112_128,4113_128,4114_128,4115_128,4116_128,4117_128" />
+      <data id="10105" techLevel="5" techId="101" techType="1" frontBuildLv="1" techCost="200" techTime="60" techEffect="4110_160,4111_160,4112_160,4113_160,4114_160,4115_160,4116_160,4117_160" />
+      <data id="10201" techLevel="1" techId="102" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4128_400" />
+      <data id="10202" techLevel="2" techId="102" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4128_800" />
+      <data id="10203" techLevel="3" techId="102" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4128_1200" />
+      <data id="10204" techLevel="4" techId="102" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4128_1600" />
+      <data id="10205" techLevel="5" techId="102" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4128_2000" />
+      <data id="10301" techLevel="1" techId="103" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4101_5000" />
+      <data id="10302" techLevel="2" techId="103" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4101_10000" />
+      <data id="10303" techLevel="3" techId="103" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4101_15000" />
+      <data id="10304" techLevel="4" techId="103" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4101_20000" />
+      <data id="10305" techLevel="5" techId="103" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4101_25000" />
+      <data id="10401" techLevel="1" techId="104" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4127_400" />
+      <data id="10402" techLevel="2" techId="104" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4127_800" />
+      <data id="10403" techLevel="3" techId="104" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4127_1200" />
+      <data id="10404" techLevel="4" techId="104" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4127_1600" />
+      <data id="10405" techLevel="5" techId="104" techType="1" frontTech="101_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="4127_2000" />
+      <data id="10501" techLevel="1" techId="105" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4110_48,4111_48,4112_48,4113_48,4114_48,4115_48,4116_48,4117_48" />
+      <data id="10502" techLevel="2" techId="105" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4110_96,4111_96,4112_96,4113_96,4114_96,4115_96,4116_96,4117_96" />
+      <data id="10503" techLevel="3" techId="105" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4110_144,4111_144,4112_144,4113_144,4114_144,4115_144,4116_144,4117_144" />
+      <data id="10504" techLevel="4" techId="105" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4110_192,4111_192,4112_192,4113_192,4114_192,4115_192,4116_192,4117_192" />
+      <data id="10505" techLevel="5" techId="105" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4110_240,4111_240,4112_240,4113_240,4114_240,4115_240,4116_240,4117_240" />
+      <data id="10601" techLevel="1" techId="106" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4128_600" />
+      <data id="10602" techLevel="2" techId="106" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4128_1200" />
+      <data id="10603" techLevel="3" techId="106" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4128_1800" />
+      <data id="10604" techLevel="4" techId="106" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4128_2400" />
+      <data id="10605" techLevel="5" techId="106" techType="1" frontTech="104_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="4128_3000" />
+      <data id="10701" techLevel="1" techId="107" techType="1" frontTech="104_5" frontBuildLv="3" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+      <data id="10801" techLevel="1" techId="108" techType="1" frontTech="107_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="4101_10000" />
+      <data id="10802" techLevel="2" techId="108" techType="1" frontTech="107_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="4101_20000" />
+      <data id="10803" techLevel="3" techId="108" techType="1" frontTech="107_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="4101_30000" />
+      <data id="10804" techLevel="4" techId="108" techType="1" frontTech="107_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="4101_40000" />
+      <data id="10805" techLevel="5" techId="108" techType="1" frontTech="107_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="4101_50000" />
+      <data id="10901" techLevel="1" techId="109" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4127_600" />
+      <data id="10902" techLevel="2" techId="109" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4127_1200" />
+      <data id="10903" techLevel="3" techId="109" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4127_1800" />
+      <data id="10904" techLevel="4" techId="109" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4127_2400" />
+      <data id="10905" techLevel="5" techId="109" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4127_3000" />
+      <data id="11001" techLevel="1" techId="110" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4110_80,4111_80,4112_80,4113_80,4114_80,4115_80,4116_80,4117_80" />
+      <data id="11002" techLevel="2" techId="110" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4110_160,4111_160,4112_160,4113_160,4114_160,4115_160,4116_160,4117_160" />
+      <data id="11003" techLevel="3" techId="110" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4110_240,4111_240,4112_240,4113_240,4114_240,4115_240,4116_240,4117_240" />
+      <data id="11004" techLevel="4" techId="110" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4110_320,4111_320,4112_320,4113_320,4114_320,4115_320,4116_320,4117_320" />
+      <data id="11005" techLevel="5" techId="110" techType="1" frontTech="108_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="4110_400,4111_400,4112_400,4113_400,4114_400,4115_400,4116_400,4117_400" />
+      <data id="11101" techLevel="1" techId="111" techType="1" frontTech="110_5" frontBuildLv="6" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+      <data id="11201" techLevel="1" techId="112" techType="1" frontTech="111_1" frontBuildLv="7" techCost="200" techTime="60" techEffect="4128_1000" />
+      <data id="11202" techLevel="2" techId="112" techType="1" frontTech="111_1" frontBuildLv="7" techCost="200" techTime="60" techEffect="4128_2000" />
+      <data id="11203" techLevel="3" techId="112" techType="1" frontTech="111_1" frontBuildLv="7" techCost="200" techTime="60" techEffect="4128_3000" />
+      <data id="11204" techLevel="4" techId="112" techType="1" frontTech="111_1" frontBuildLv="7" techCost="200" techTime="60" techEffect="4128_4000" />
+      <data id="11205" techLevel="5" techId="112" techType="1" frontTech="111_1" frontBuildLv="7" techCost="200" techTime="60" techEffect="4128_5000" />
+      <data id="11301" techLevel="1" techId="113" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4101_15000" />
+      <data id="11302" techLevel="2" techId="113" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4101_30000" />
+      <data id="11303" techLevel="3" techId="113" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4101_45000" />
+      <data id="11304" techLevel="4" techId="113" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4101_60000" />
+      <data id="11305" techLevel="5" techId="113" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4101_75000" />
+      <data id="11401" techLevel="1" techId="114" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4127_1000" />
+      <data id="11402" techLevel="2" techId="114" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4127_2000" />
+      <data id="11403" techLevel="3" techId="114" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4127_3000" />
+      <data id="11404" techLevel="4" techId="114" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4127_4000" />
+      <data id="11405" techLevel="5" techId="114" techType="1" frontTech="112_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="4127_5000" />
+      <data id="11501" techLevel="1" techId="115" techType="2" frontTech="112_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="203_50" />
+      <data id="11502" techLevel="2" techId="115" techType="2" frontTech="112_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="203_100" />
+      <data id="11503" techLevel="3" techId="115" techType="2" frontTech="112_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="203_150" />
+      <data id="11504" techLevel="4" techId="115" techType="2" frontTech="112_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="203_200" />
+      <data id="11505" techLevel="5" techId="115" techType="2" frontTech="112_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="203_250" />
+      <data id="11601" techLevel="1" techId="116" techType="2" frontTech="115_5" frontBuildLv="10" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+      <data id="20101" techLevel="1" techId="201" techType="2" frontBuildLv="1" techCost="200" techTime="60" techEffect="203_300" />
+      <data id="20102" techLevel="2" techId="201" techType="2" frontBuildLv="1" techCost="200" techTime="60" techEffect="203_350" />
+      <data id="20103" techLevel="3" techId="201" techType="2" frontBuildLv="1" techCost="200" techTime="60" techEffect="203_400" />
+      <data id="20104" techLevel="4" techId="201" techType="2" frontBuildLv="1" techCost="200" techTime="60" techEffect="203_450" />
+      <data id="20105" techLevel="5" techId="201" techType="2" frontBuildLv="1" techCost="200" techTime="60" techEffect="203_500" />
+      <data id="20201" techLevel="1" techId="202" techType="2" frontTech="201_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="132_250" />
+      <data id="20202" techLevel="2" techId="202" techType="2" frontTech="201_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="132_500" />
+      <data id="20203" techLevel="3" techId="202" techType="2" frontTech="201_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="132_750" />
+      <data id="20204" techLevel="4" techId="202" techType="2" frontTech="201_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="132_1000" />
+      <data id="20205" techLevel="5" techId="202" techType="2" frontTech="201_5" frontBuildLv="1" techCost="200" techTime="60" techEffect="132_1250" />
+      <data id="20301" techLevel="1" techId="203" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="132_1500" />
+      <data id="20302" techLevel="2" techId="203" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="132_1750" />
+      <data id="20303" techLevel="3" techId="203" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="132_2000" />
+      <data id="20304" techLevel="4" techId="203" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="132_2250" />
+      <data id="20305" techLevel="5" techId="203" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="132_2500" />
+      <data id="20401" techLevel="1" techId="204" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_250" />
+      <data id="20402" techLevel="2" techId="204" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_500" />
+      <data id="20403" techLevel="3" techId="204" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_750" />
+      <data id="20404" techLevel="4" techId="204" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_1000" />
+      <data id="20405" techLevel="5" techId="204" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_1250" />
+      <data id="20501" techLevel="1" techId="205" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_1500" />
+      <data id="20502" techLevel="2" techId="205" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_1750" />
+      <data id="20503" techLevel="3" techId="205" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_2000" />
+      <data id="20504" techLevel="4" techId="205" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_2250" />
+      <data id="20505" techLevel="5" techId="205" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="134_2500" />
+      <data id="20601" techLevel="1" techId="206" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="133_250" />
+      <data id="20602" techLevel="2" techId="206" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="133_500" />
+      <data id="20603" techLevel="3" techId="206" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="133_750" />
+      <data id="20604" techLevel="4" techId="206" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="133_1000" />
+      <data id="20605" techLevel="5" techId="206" techType="2" frontTech="202_5" frontBuildLv="2" techCost="200" techTime="60" techEffect="133_1250" />
+      <data id="20701" techLevel="1" techId="207" techType="2" frontTech="206_5" frontBuildLv="3" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+      <data id="20801" techLevel="1" techId="208" techType="2" frontTech="207_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="133_1500" />
+      <data id="20802" techLevel="2" techId="208" techType="2" frontTech="207_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="133_1750" />
+      <data id="20803" techLevel="3" techId="208" techType="2" frontTech="207_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="133_2000" />
+      <data id="20804" techLevel="4" techId="208" techType="2" frontTech="207_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="133_2250" />
+      <data id="20805" techLevel="5" techId="208" techType="2" frontTech="207_1" frontBuildLv="4" techCost="200" techTime="60" techEffect="133_2500" />
+      <data id="20901" techLevel="1" techId="209" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_250" />
+      <data id="20902" techLevel="2" techId="209" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_500" />
+      <data id="20903" techLevel="3" techId="209" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_750" />
+      <data id="20904" techLevel="4" techId="209" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_1000" />
+      <data id="20905" techLevel="5" techId="209" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_1250" />
+      <data id="21001" techLevel="1" techId="210" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_1500" />
+      <data id="21002" techLevel="2" techId="210" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_1750" />
+      <data id="21003" techLevel="3" techId="210" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_2000" />
+      <data id="21004" techLevel="4" techId="210" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_2250" />
+      <data id="21005" techLevel="5" techId="210" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="135_2500" />
+      <data id="21101" techLevel="1" techId="211" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_5000" />
+      <data id="21102" techLevel="2" techId="211" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_10000" />
+      <data id="21103" techLevel="3" techId="211" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_15000" />
+      <data id="21104" techLevel="4" techId="211" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_20000" />
+      <data id="21105" techLevel="5" techId="211" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_25000" />
+      <data id="21201" techLevel="1" techId="212" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_30000" />
+      <data id="21202" techLevel="2" techId="212" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_35000" />
+      <data id="21203" techLevel="3" techId="212" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_40000" />
+      <data id="21204" techLevel="4" techId="212" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_45000" />
+      <data id="21205" techLevel="5" techId="212" techType="2" frontTech="208_5" frontBuildLv="4" techCost="200" techTime="60" techEffect="604_50000" />
+      <data id="21301" techLevel="1" techId="213" techType="2" frontTech="208_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="112_250" />
+      <data id="21302" techLevel="2" techId="213" techType="2" frontTech="208_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="112_500" />
+      <data id="21303" techLevel="3" techId="213" techType="2" frontTech="208_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="112_750" />
+      <data id="21304" techLevel="4" techId="213" techType="2" frontTech="208_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="112_1000" />
+      <data id="21305" techLevel="5" techId="213" techType="2" frontTech="208_5" frontBuildLv="5" techCost="200" techTime="60" techEffect="112_1250" />
+      <data id="21401" techLevel="1" techId="214" techType="2" frontTech="213_5" frontBuildLv="5" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+      <data id="21501" techLevel="1" techId="215" techType="2" frontTech="214_1" frontBuildLv="6" techCost="200" techTime="60" techEffect="112_1500" />
+      <data id="21502" techLevel="2" techId="215" techType="2" frontTech="214_1" frontBuildLv="6" techCost="200" techTime="60" techEffect="112_1750" />
+      <data id="21503" techLevel="3" techId="215" techType="2" frontTech="214_1" frontBuildLv="6" techCost="200" techTime="60" techEffect="112_2000" />
+      <data id="21504" techLevel="4" techId="215" techType="2" frontTech="214_1" frontBuildLv="6" techCost="200" techTime="60" techEffect="112_2250" />
+      <data id="21505" techLevel="5" techId="215" techType="2" frontTech="214_1" frontBuildLv="6" techCost="200" techTime="60" techEffect="112_2500" />
+      <data id="21601" techLevel="1" techId="216" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_250" />
+      <data id="21602" techLevel="2" techId="216" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_500" />
+      <data id="21603" techLevel="3" techId="216" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_750" />
+      <data id="21604" techLevel="4" techId="216" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_1000" />
+      <data id="21605" techLevel="5" techId="216" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_1250" />
+      <data id="21701" techLevel="1" techId="217" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_1500" />
+      <data id="21702" techLevel="2" techId="217" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_1750" />
+      <data id="21703" techLevel="3" techId="217" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_2000" />
+      <data id="21704" techLevel="4" techId="217" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_2250" />
+      <data id="21705" techLevel="5" techId="217" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="107_2500" />
+      <data id="21801" techLevel="1" techId="218" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_250" />
+      <data id="21802" techLevel="2" techId="218" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_500" />
+      <data id="21803" techLevel="3" techId="218" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_750" />
+      <data id="21804" techLevel="4" techId="218" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_1000" />
+      <data id="21805" techLevel="5" techId="218" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_1250" />
+      <data id="21901" techLevel="1" techId="219" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_1500" />
+      <data id="21902" techLevel="2" techId="219" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_1750" />
+      <data id="21903" techLevel="3" techId="219" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_2000" />
+      <data id="21904" techLevel="4" techId="219" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_2250" />
+      <data id="21905" techLevel="5" techId="219" techType="2" frontTech="215_5" frontBuildLv="6" techCost="200" techTime="60" techEffect="117_2500" />
+      <data id="22001" techLevel="1" techId="220" techType="2" frontTech="219_5" frontBuildLv="7" techCost="200" techTime="60" techEffect="122_250" />
+      <data id="22002" techLevel="2" techId="220" techType="2" frontTech="219_5" frontBuildLv="7" techCost="200" techTime="60" techEffect="122_500" />
+      <data id="22003" techLevel="3" techId="220" techType="2" frontTech="219_5" frontBuildLv="7" techCost="200" techTime="60" techEffect="122_750" />
+      <data id="22004" techLevel="4" techId="220" techType="2" frontTech="219_5" frontBuildLv="7" techCost="200" techTime="60" techEffect="122_1000" />
+      <data id="22005" techLevel="5" techId="220" techType="2" frontTech="219_5" frontBuildLv="7" techCost="200" techTime="60" techEffect="122_1250" />
+      <data id="22101" techLevel="1" techId="221" techType="2" frontTech="220_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="122_1500" />
+      <data id="22102" techLevel="2" techId="221" techType="2" frontTech="220_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="122_1750" />
+      <data id="22103" techLevel="3" techId="221" techType="2" frontTech="220_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="122_2000" />
+      <data id="22104" techLevel="4" techId="221" techType="2" frontTech="220_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="122_2250" />
+      <data id="22105" techLevel="5" techId="221" techType="2" frontTech="220_5" frontBuildLv="8" techCost="200" techTime="60" techEffect="122_2500" />
+      <data id="22201" techLevel="1" techId="222" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_5000" />
+      <data id="22202" techLevel="2" techId="222" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_10000" />
+      <data id="22203" techLevel="3" techId="222" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_15000" />
+      <data id="22204" techLevel="4" techId="222" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_20000" />
+      <data id="22205" techLevel="5" techId="222" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_25000" />
+      <data id="22301" techLevel="1" techId="223" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_30000" />
+      <data id="22302" techLevel="2" techId="223" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_35000" />
+      <data id="22303" techLevel="3" techId="223" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_40000" />
+      <data id="22304" techLevel="4" techId="223" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_45000" />
+      <data id="22305" techLevel="5" techId="223" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="607_50000" />
+      <data id="22401" techLevel="1" techId="224" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_250" />
+      <data id="22402" techLevel="2" techId="224" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_500" />
+      <data id="22403" techLevel="3" techId="224" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_750" />
+      <data id="22404" techLevel="4" techId="224" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_1000" />
+      <data id="22405" techLevel="5" techId="224" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_1250" />
+      <data id="22501" techLevel="1" techId="225" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_1500" />
+      <data id="22502" techLevel="2" techId="225" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_1750" />
+      <data id="22503" techLevel="3" techId="225" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_2000" />
+      <data id="22504" techLevel="4" techId="225" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_2250" />
+      <data id="22505" techLevel="5" techId="225" techType="2" frontTech="220_5" frontBuildLv="9" techCost="200" techTime="60" techEffect="110_2500" />
+      <data id="22601" techLevel="1" techId="226" techType="2" frontTech="225_5" frontBuildLv="10" techCost="200" techTime="60" techSkillCd="30" techSkillBuffId="23069" />
+</root>

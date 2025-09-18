@@ -1,0 +1,41 @@
+return {
+	prop =
+	{
+		activityId = 132,
+		name = [[全副武装]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">NOD在与GDI争夺泰矿的战斗中节节退败，为了避免留下军备物资，NOD摧毁了自己的基地，物资和装备被掩埋在废墟中。指挥官接到了寻找物资的任务，请立即使用探测仪寻找物资。<br/><br/>1. 活动期间通过完成探测任务或直接购买可获得探测仪，使用探测仪探测地图获得奖励。<br/>2. 每次探测必定获得奖励，同时有几率额外获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">传承石</font>。<br/>3. 每次探测<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">消耗1个探测仪</font>。<br/>4. 活动期间探测地图、探测任务、购买探测仪均在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日0点重置</font>。<br/>5. 探测任务奖励请及时领取，每日重置后，未领取的奖励将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>。</font>]],
+		priority = 10005,
+		icon = [[Activity_Icon_132_Nor.png]],
+		selecticon = [[Activity_Icon_132_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+	},
+	fully_armed_treasure = [[id	precondition	cost	title	lockImage	unlockImange	fixedRewards	randomRewards
+1	1	2	2	2	2	2	2
+1	0	30000_1150120_1	@FullyArmedTitle1	V5Activity_132_Icon_Ruins_B.png	V5Activity_132_Icon_Ruins_Y.png	30000_802005_18,30000_802004_8,30000_800002_8,30000_800000_8	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+2	1	30000_1150120_1	@FullyArmedTitle2	V5Activity_132_Icon_Ruins_B.png	V5Activity_132_Icon_Ruins_Y.png	30000_802005_18,30000_802004_8,30000_800002_8,30000_800000_8	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+3	2	30000_1150120_1	@FullyArmedTitle3	V5Activity_132_Icon_NPP_B.png	V5Activity_132_Icon_NPP_Y.png	30000_802005_36,30000_802004_16,30000_800002_16,30000_800000_16	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+4	3	30000_1150120_1	@FullyArmedTitle4	V5Activity_132_Icon_Ruins_B.png	V5Activity_132_Icon_Ruins_Y.png	30000_802005_18,30000_802004_8,30000_800002_8,30000_800000_8	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+5	4	30000_1150120_1	@FullyArmedTitle5	V5Activity_132_Icon_Ruins_B.png	V5Activity_132_Icon_Ruins_Y.png	30000_802005_18,30000_802004_8,30000_800002_8,30000_800000_8	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+6	5	30000_1150120_1	@FullyArmedTitle6	V5Activity_132_Icon_NPP_B.png	V5Activity_132_Icon_NPP_Y.png	30000_802005_36,30000_802004_16,30000_800002_16,30000_800000_16	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+7	6	30000_1150120_1	@FullyArmedTitle7	V5Activity_132_Icon_Ruins_B.png	V5Activity_132_Icon_Ruins_Y.png	30000_802005_18,30000_802004_8,30000_800002_8,30000_800000_8	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+8	7	30000_1150120_1	@FullyArmedTitle8	V5Activity_132_Icon_Fort_B.png	V5Activity_132_Icon_Fort_Y.png	30000_802005_54,30000_802004_24,30000_800002_24,30000_800000_24	30000_801001_1,30000_801002_1,30000_801003_1,30000_801004_1
+]],
+	fully_armed_achieve = [[achieveId	conditionType	conditionValue	configValue	gotoType	gotoValue	rewards	title
+1	1	2	1	1	2	2	2
+19060101	700011	1	1	-1		30000_800143_1,30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2	FullyArmedTaskTitle1
+19060102	700012	1	1	1339		30000_1150120_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle2
+19060103	130100	4	4	1338		30000_1150120_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle3
+19060104	200100	0_20	20	31	2_0	30000_1150120_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle4
+19060105	20100	0_3000	3000	-1		30000_1150120_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle5
+19060106	500023	1	1	31	16_1	30000_1150120_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle6
+19060107	31100	0_1500000	1500000	31	1_1_1007	30000_810001_1,30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1	FullyArmedTaskTitle7
+]],
+	fully_armed_package = [[id	itemId	awardId	price	limit
+1	1	1	2	1
+1	1150121	4950028	10000_1000_60	8
+2	802005	4950029	10000_1000_3	100
+3	802004	4950030	10000_1000_5	300
+]],
+
+}

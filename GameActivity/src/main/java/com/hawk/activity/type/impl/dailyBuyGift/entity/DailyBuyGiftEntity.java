@@ -1,0 +1,210 @@
+package com.hawk.activity.type.impl.dailyBuyGift.entity;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hawk.annotation.IndexProp;
+import org.hawk.db.HawkDBEntity;
+import org.hibernate.annotations.GenericGenerator;
+
+import com.hawk.activity.type.IActivityDataEntity;
+import com.hawk.activity.type.impl.achieve.entity.AchieveItem;
+import com.hawk.serialize.string.SerializeHelper;
+
+@Entity
+@Table(name="activity_daiy_buy_gift")
+public class DailyBuyGiftEntity extends HawkDBEntity implements IActivityDataEntity {
+	@Id
+	@GenericGenerator(name = "uuid", strategy = "org.hawk.uuid.HawkUUIDGenerator")
+    @GeneratedValue(generator = "uuid")
+    @IndexProp(id = 1)
+	@Column(name = "id", unique = true, nullable = false)
+	private String id;
+	
+    @IndexProp(id = 2)
+	@Column(name = "playerId", nullable = false)
+	private String playerId = null;
+	
+    @IndexProp(id = 3)
+	@Column(name = "termId", nullable = false)
+	private int termId;
+    
+    @IndexProp(id = 4)
+    @Column(name = "itemRecord", nullable = false)
+    private String itemRecord;
+    
+    @IndexProp(id = 5)
+	@Column(name = "refreshTime", nullable = false)
+    private long refreshTime;
+    
+	/** 活动成就项数据 */
+    @IndexProp(id = 6)
+	@Column(name = "achieveItems", nullable = false)
+	private String achieveItems;
+    
+    @IndexProp(id = 7)
+	@Column(name = "createTime", nullable = false)
+	private long createTime;
+
+    @IndexProp(id = 8)
+	@Column(name = "updateTime", nullable = false)
+	private long updateTime;
+
+    @IndexProp(id = 9)
+	@Column(name = "invalid", nullable = false)
+	private boolean invalid;
+    
+	@Transient
+	private List<AchieveItem> itemList = new CopyOnWriteArrayList<AchieveItem>();
+	
+	@Transient
+	private Map<Integer, Integer> itemRecordMap = new ConcurrentHashMap<>();
+	
+	
+	
+    public DailyBuyGiftEntity(){
+    	
+    	
+    }
+
+    public DailyBuyGiftEntity(String playerId, int termId) {
+    	this.playerId = playerId;
+		this.termId = termId;
+		this.achieveItems = "";
+    }
+    
+    @Override
+    public void beforeWrite() {
+    	this.achieveItems = SerializeHelper.collectionToString(this.itemList, SerializeHelper.ELEMENT_DELIMITER);
+    	this.itemRecord = SerializeHelper.mapToString(itemRecordMap);
+    }
+    
+    @Override
+    public void afterRead() {
+    	this.itemList.clear();
+    	SerializeHelper.stringToList(AchieveItem.class, this.achieveItems, this.itemList);
+    	this.itemRecordMap = SerializeHelper.stringToMap(this.itemRecord, Integer.class, Integer.class);
+    }
+
+    
+    @Override
+    public String getPrimaryKey() {
+        return this.id;
+    }
+
+    @Override
+    public void setPrimaryKey(String primaryKey) {
+    	this.id = primaryKey;
+    }
+
+    @Override
+    public long getCreateTime() {
+        return this.createTime;
+    }
+
+    @Override
+    protected void setCreateTime(long createTime) {
+    	this.createTime = createTime;
+    }
+
+    @Override
+    public long getUpdateTime() {
+        return this.updateTime;
+    }
+
+    @Override
+    protected void setUpdateTime(long updateTime) {
+    	this.updateTime = updateTime;
+    }
+
+    @Override
+    public boolean isInvalid() {
+        return this.invalid;
+    }
+
+    @Override
+    protected void setInvalid(boolean invalid) {
+    	this.invalid = invalid;
+    }
+    
+    
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = playerId;
+	}
+
+	public int getTermId() {
+		return termId;
+	}
+
+	public void setTermId(int termId) {
+		this.termId = termId;
+	}
+	
+	
+	public List<AchieveItem> getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(List<AchieveItem> itemList) {
+		this.itemList = itemList;
+	}
+
+	
+	public long getRefreshTime() {
+		return refreshTime;
+	}
+	
+	public void setRefreshTime(long refreshTime) {
+		this.refreshTime = refreshTime;
+	}
+	
+	public Map<Integer, Integer> getItemRecordMap() {
+		return itemRecordMap;
+	}
+	
+	public void addItemRecordCount(int itemId,int itemNum){
+		int count = this.itemRecordMap.getOrDefault(itemId, 0) + itemNum;
+		this.itemRecordMap.put(itemId, count);
+		this.notifyUpdate();
+	}
+	
+	public int getItemRecordCount(){
+		int sum = 0;
+		for(int count : this.itemRecordMap.values()){
+			sum += count;
+		}
+		return sum;
+	}
+	
+	public void clearItemRecordCount(){
+		this.itemRecordMap = new ConcurrentHashMap<Integer, Integer>();
+		this.notifyUpdate();
+	}
+	
+	
+
+	
+    
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data ShopItemId="100001" ShopQuota="1" ShopQuotaType="1" PayItem="30000_21070025_1200" GetItem="30000_21070009_1" />
+      <data ShopItemId="100002" ShopQuota="1" ShopQuotaType="1" PayItem="30000_21070025_2500" GetItem="30000_21070010_1" />
+      <data ShopItemId="100003" ShopQuota="10" ShopQuotaType="1" PayItem="30000_21070025_880" GetItem="30000_21070011_1" />
+      <data ShopItemId="100004" ShopQuota="1" ShopQuotaType="1" PayItem="30000_21070025_2500" GetItem="30000_21070092_1" />
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="7" foggyFortressId="5701" nationScore="1" allianceScore="0" playerScore="1000" refreshTime="60,760,1760,2760,3760,4760,5760,6760,7760,8760,9760,10760,11760,12760,13760,14760,15760,16760,17760,18760,19760,20760,21600" refreshCount="100" refreshBuildType="1,8" />
+      <data id="14" foggyFortressId="5702" nationScore="1" allianceScore="0" playerScore="1000" refreshTime="60,760,1760,2760,3760,4760,5760,6760,7760,8760,9760,10760,11760,12760,13760,14760,15760,16760,17760,18760,19760,20760,21600" refreshCount="100" refreshBuildType="1,8" />
+      <data id="21" foggyFortressId="5703" nationScore="1" allianceScore="0" playerScore="1000" refreshTime="60,760,1760,2760,3760,4760,5760,6760,7760,8760,9760,10760,11760,12760,13760,14760,15760,16760,17760,18760,19760,20760,21600" refreshCount="100" refreshBuildType="1,8" />
+</root>

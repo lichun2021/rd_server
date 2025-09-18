@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" minScore="0" maxScore="2600" awardId="4800001" />
+      <data id="2" minScore="2601" maxScore="4500" awardId="4800002" />
+      <data id="3" minScore="4501" maxScore="9000" awardId="4800003" />
+</root>

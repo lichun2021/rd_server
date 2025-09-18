@@ -1,0 +1,220 @@
+option java_package = "com.hawk.game.protocol";
+import "Player.proto";
+import "Hero.proto";
+import "SuperSoldier.proto";
+import "World.proto";
+import "Armour.proto";
+import "Manhattan.proto";
+import "MechaCore.proto";
+
+
+// 出战玩家
+message PBChampionPlayer{
+	optional PlayerSnapshotPB playerInfo = 1;
+	repeated PBChampionSoldier soldiers = 2;
+	repeated PBHeroInfo heros = 3;
+	optional PBSuperSoldierInfo superSoldier = 4;
+	repeated PBChampionEff effs = 5;
+	optional ArmourBriefInfo 	armourBrief = 6; // 装备
+	repeated int32 dressId = 7; // 皮肤
+	optional bool manhattanFuncUnlock      = 8;  //超武
+	optional PBManhattanInfo manhattanInfo = 9;
+	optional bool mechacoreFuncUnlock      = 10; //机甲核心
+	optional PBMechaCoreInfo mechacoreInfo = 11;
+}
+
+// 做用号
+message PBChampionEff{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+message PBChampionSoldier{
+	optional int32 armyId =1;
+	optional int32 star = 2;
+	optional int32 count = 3;
+	optional int32 plantStep = 4; // 泰能等级
+	optional int32 plantSkillLevel = 5; // 泰能强化技能等级
+	optional int32 plantMilitaryLevel = 6;//泰能兵军衔等级
+}
+
+
+/********************************活动阶段控制*******************************/
+// 活动阶段
+enum GCState{
+	NOT_OPEN	=	1; //未开启
+	SHOW		= 	2; //预览阶段
+	SIGN_UP		=	3; //报名阶段
+	MATCH		=	4; //匹配阶段
+	WAR			=	5; //战斗阶段
+	END			=	6; //结算阶段
+	GC_HIDDEN	= 	7; //活动关闭
+}
+
+// 锦标赛活动状态信息
+message GCStateInfo{
+	required GCState state 			= 1;//活动状态
+	optional int32 stage			= 2;//当前周期数
+	optional int64 showStartTime	= 3;//报名开启时间(ms)
+	optional int64 signStartTime	= 4;//报名结束时间(ms)
+	optional int64 matchStartTime	= 5;//匹配开始时间(ms)
+	optional int64 warStartTime		= 6;//战斗开启时间(ms)
+	optional int64 war16to8Time		= 7;//战斗开启时间(ms)
+	optional int64 war8to4Time		= 8;//战斗开启时间(ms)
+	optional int64 war4to2Time		= 9;//战斗开启时间(ms)
+	optional int64 war2to1Time		= 10;//战斗开启时间(ms)
+	optional int64 endStartTime		= 11;//战斗结束时间(ms)
+	optional int64 hiddenTime		= 12;//结算结束时间(ms)
+	optional int64 newlyTime		= 13;//活动展示'新'标识的截止时间(ms)
+}
+/********************************活动阶段控制*******************************/
+// 主界面信息
+message GCPageInfo{
+	optional GCStateInfo stateInfo		= 1; //阶段信息
+	repeated GCPlayerInfo joinPlayers	= 2; //联盟报名成员列表
+	repeated GCStageBattle stageBattle	= 3; //战斗阶段数据
+	optional int32 grade				= 4; //本盟段位
+	optional bool isSigned				= 5; //是否报名
+	optional bool ifMatchFinish			= 6; //匹配是否完成
+	optional int32 groupRank			= 7; //小组排名
+	optional int32 lastGrade			= 8; //变更前段位
+	optional GCRewardState rewardState	= 9; //奖励状态
+}
+
+// 更新出战阵容 CHAMPIONSHIP_SIGN_UP_C/CHAMPIONSHIP_FLUSH_MARCH_C
+message GCFlushMarch{
+	required WorldMarchReq marchInfo	= 1;
+}
+
+// 查看成员出战部队
+message GCGetMemberMarchReq{
+	required string playerId	= 1;
+}
+
+message GCGetMemberMarchResp{
+	required PBChampionPlayer info	= 1;
+}
+
+
+// 锦标赛奖励状态
+enum GCRewardState{
+	NO_REWARD	= 1; // 无奖励
+	CAN_TAKE	= 2; // 可领取
+	TOOK		= 3; // 已领取
+}
+
+// 联盟信息
+message GCGuildInfo{
+	required string id			= 1;
+	required string name		= 2; //名称
+	required string tag			= 3; //简称
+	required int32 guildFlag	= 4; //联盟旗帜
+	required string serverId	= 5;
+	optional int32 memberCnt	= 6; //参战玩家数量
+	optional int32 grade		= 7; //段位
+	optional string groupId		= 8; //分组id
+	optional int32 gPosIndex	= 9; //联盟在小组中的位置
+	optional int32 lastGrade	= 10; //上一期段位
+	optional int32 battleRank	= 11; //小组排名
+	optional int64 totalPower	= 12; //出战总战力
+}
+
+// 玩家信息
+message GCPlayerInfo{
+	required string id			= 1;
+	required string name		= 2;
+	required string serverId	= 3;
+	optional int32 icon			= 4;
+	optional string pfIcon		= 5;
+	required string guildId		= 6;
+	required string guildTag	= 7;
+	required int64 battlePoint	= 8; 
+	optional int32 battleRank	= 9;
+	optional int64 pPosIndex	= 10; // (战斗)出战序列
+	optional int32 armyCnt		= 11; // (战斗)部队数量
+	optional int32 disCnt		= 12; // (战斗)部队损失数量
+	optional int32 successive  	= 13; // (战斗)连胜次数
+}
+
+// 战斗数据
+message GCBattelInfo{
+	required string pBattleId		= 1;
+	optional GCPlayerInfo playerA	= 2;
+	optional GCPlayerInfo playerB	= 3;
+	required string winnerId		= 4;
+}
+
+// 联盟对战数据
+message GCGuildBattle{
+	required string gBattleId		= 1;
+	required int32 bPosIndex		= 2; // 对战序列
+	optional GCGuildInfo guildA		= 3;
+	optional GCGuildInfo guildB		= 4;
+	repeated GCBattelInfo battleInfo	= 5;
+	optional string winnerGuild		= 6;
+}
+
+// 战斗阶段数据
+message GCStageBattle{
+	required int32 battleStage		= 1;
+	repeated GCGuildBattle battle	= 2;
+}
+
+// 获取联盟对战详情 : CHAMPIONSHIP_GET_GUILDBATTLE_C
+message GetGuildBattleInfo{
+	required string gBattleId	= 1;
+}
+
+// 获取联盟小组排行信息
+message GCGetGroupRankResp{
+	repeated GCGuildInfo guildInfo = 1;
+}
+
+// 获取小组历史战斗阶段数据
+message GetHistoryBattleResp{
+	repeated GCStageBattle stageBattle	= 1; //战斗阶段数据
+}
+
+// 锦标赛排行类型
+enum GCRankType{
+	G_KILL	= 1; // 联盟击杀
+	S_KILL	= 2; // 个人击杀
+	S_CWIN	= 3; // 个人连胜
+	S_BEAT	= 4; // 个人击败
+}
+
+// 拉取段位排行信息
+message GCGetRankReq{
+	required GCRankType rankType	= 1;
+	optional int32 grade			= 2;
+}
+
+// 拉取段位排行信息
+message GCGetRankResp{
+	required GCRankType rankType	= 1;
+	repeated GCRankInfo rankInfo	= 2; // 排行数据
+	repeated GCSelfRank	selfRank	= 3; // 己方排行
+	required bool	 isLastStage	= 4; // 是否是上一期榜单
+	optional int32 selfGrade		= 5; // 榜单内所属段位(联盟段位榜单界面信息用)
+	optional int32 grade			= 6; // 请求的段位信息
+}
+
+
+message GCSelfRank{
+	required GCRankType rankType	= 1;
+	optional GCRankInfo	rankInfo	= 2; // 己方排行
+}
+
+// 排行单元
+message GCRankInfo{
+	required string id			= 1; // 个人/联盟id
+	required string serverId	= 2; // 区服id
+	required int64 score		= 3; // 积分
+	required int32 rank			= 4; // 排行
+	required string tag 		= 5; // 联盟简称
+	required string name		= 6; // 联盟/个人名字
+	optional int32 flag			= 7; // 联盟旗帜
+	optional int32 icon			= 8; // 个人头像
+	optional string pfIcon		= 9;
+	repeated int32 personalProtectSwitch = 10; // player个人对应的个保法开关
+}

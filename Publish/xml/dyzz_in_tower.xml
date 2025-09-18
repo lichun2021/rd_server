@@ -1,0 +1,27 @@
+# 半径
+redis = 5
+
+# 控制时长
+controlCountDown = 60
+
+# 加成
+collectBuffList = 
+
+# 坐标
+refreshPointA = 12_134
+
+# 坐标
+refreshPointB = 58_20
+
+# 攻击间隔
+atkCd = 60
+
+# 攻击伤害
+atkVal = 5
+
+# 能源井伤害
+wellAtkVal = 5
+
+# 黑心商人导弹伤害
+orderAtkVal = 0
+

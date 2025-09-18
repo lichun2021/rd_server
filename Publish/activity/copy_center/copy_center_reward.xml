@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" type="1" rewards="30000_1510003_2" weight="20" />
+      <data id="2" type="1" rewards="30000_1510004_2" weight="20" />
+      <data id="3" type="1" rewards="30000_1510005_2" weight="10" />
+      <data id="4" type="1" rewards="30000_13310003_2" weight="20" />
+      <data id="5" type="1" rewards="30000_13310004_2" weight="20" />
+      <data id="6" type="1" rewards="30000_13310005_2" weight="10" />
+      <data id="7" type="2" rewards="30000_800143_3" weight="20" />
+      <data id="8" type="2" rewards="30000_800143_5" weight="10" />
+      <data id="9" type="2" rewards="30000_1510004_10" weight="20" />
+      <data id="10" type="2" rewards="30000_1510005_10" weight="15" />
+      <data id="11" type="2" rewards="30000_13310004_10" weight="20" />
+      <data id="12" type="2" rewards="30000_13310005_10" weight="15" />
+</root>

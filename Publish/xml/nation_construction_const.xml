@@ -1,0 +1,129 @@
+# 任务刷新数量
+refreshTimes = 3
+
+# 任务刷新消耗
+refreshCost = 10000_1001_50
+
+# 每日完成任务次数上限
+timesLimit = 5
+
+# 任务刷新次数上限
+refreshTimesLimit = 99999
+
+# 任务需求兵数
+taskSoldiers = 50000
+
+# 任务行军时间（秒）
+marchTime = 60
+
+# 建筑与个人建设道具对应关系
+buildItemContact = 1_500101,2_500102,3_500103,4_500104,5_500105,6_500106,7_500107,8_500108
+
+# 国家系统服务器延迟时间（天）
+nationOpenDelay = 120
+
+# 建筑占地半径（格子数）
+radius = 4
+
+# 重建值上限
+rebuildingLimit = 200000
+
+# 捐献奖励
+rebuildingAward = 30000_1300017_5
+
+# 每日捐献次数上限
+rebuildingCountLimit = 20
+
+# 捐献恢复时间
+rebuildingRecoveryTime = 3600
+
+# 捐献消耗资源量
+consumeRes = 10000_1007_100000;10000_1008_100000;10000_1010_16000;10000_1009_4000
+
+# 单次捐献转化重建值
+rebuildVal = 10
+
+# 资助获得建设值
+supportBuilding = 200
+
+# 每日资助次数上限
+supportLimit = 1
+
+# 单次资助消耗
+supportCost = 10000_1000_1000
+
+# 单次资助转换国家金条
+supportGold = 500
+
+# 资助奖励
+supportAward = 30000_500402_1000
+
+# 捐献消耗KVK道具
+warehouseConsumeRes = 30000_500301_1;30000_500302_1;30000_500303_1;30000_500304_1
+
+# 单次捐献上限
+warehouseConsumeLimit = 2000000000
+
+# 单次捐献个人奖励
+warehouseAward = 30000_500402_5,30000_500403_1
+
+# 捐献金条记录的存储条数上限值
+warehouseListLimit = 200
+
+# 泰能兵死兵恢复特殊处理
+specialSoldierType = 13_14
+
+# 泰能兵死兵恢复特殊处理时间
+specialSoldierTime = 445
+
+# 任务刷新时间（秒）
+missionRefreshTime = 3600
+
+# 0到1级初始刷新任务
+missionInitCount = 10
+
+# 任务列表上限
+missionTaskLimit = 15
+
+# 每日可购买任务数
+missionDayBuyTimes = 1
+
+# 购买任务消耗
+missionPrice = 10000_1001_50
+
+# 放弃任务时间间隔（秒）
+missionGiveupCd = 3600
+
+# 全服每日科技值上限
+missionWeekLimit = 10000
+
+# 玩家初始任务次数
+playerMissionInitCount = 10
+
+# 科技单人助力时间(秒)
+assistTechTime = 60
+
+# 科技助力奖励
+assistTechAward = 30000_500401_1
+
+# 科技助力每日上限时间（秒）
+assistTechLimit = 6000
+
+# 科技取消升级返回资源比例-万分比
+cancelTechReturn = 5000
+
+# 飞船单人助力时间(秒)
+assistTime = 60
+
+# 飞船助力奖励
+assistAward = 30000_500401_1
+
+# 飞船助力每日上限时间（秒）
+assistLimit = 6000
+
+# 飞船取消升级返回资源比例-万分比
+cancelReturn = 5000
+
+# 国家是否开启（服务器代码开关，更改后需要重启服务器）
+nationalOpen = 1
+

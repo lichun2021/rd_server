@@ -1,0 +1,366 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+
+// 权限类型
+enum CollegeAuth
+{
+	NOJOIN 			= 0;	//未加入学院  
+	COACH			= 1;	//教官
+	TRAINEE			= 2;	//学员
+}
+
+enum RewardStatus
+{
+	NOT_REACH			= 0;	// 未达成
+	NOT_REWARD			= 1;	// 已达成未领取
+	TOOKEN				= 2;	// 已领取
+}
+
+//学院奖励信息
+message RewardInfo
+{
+	required int32 id		= 1; //id
+	required int32 value 	= 2; //奖励进度
+	required RewardStatus status	= 3; //奖励状态 
+}
+
+// 学院基本信息
+message CollegeBaseInfo
+{
+	required string id 		= 1; 
+	required string coachId	= 2; //教官id
+	required string coachName	= 3; // 教官名称
+	required int32 memberCnt	= 4; // 成员数量
+	optional PlayerCommon common 	= 5; // 玩家通用数据
+	optional string collegeName = 6;
+	optional int32 level = 7;
+	optional int32 exp = 8;
+	optional int32 joinFree = 9; //自由加入 0需要申请 1自由加入
+	optional int32 loginCount = 10; //今天登录过的玩家数量
+	optional int32 reNameCount = 11; //改名次数
+}
+
+// 学院成员信息
+message CollegeMemberInfo
+{
+	required string id		= 1;
+	optional string collegeId = 2; // 学院id
+	required string name	= 3;
+	required int32 level	= 4;
+	required int32 cityLvl	= 5;
+	required int64 power	= 6;
+	required CollegeAuth auth	= 7;//学院权限
+	required int32 icon	= 8;
+	optional string pfIcon	= 9; 
+	optional bool online	= 10; // 是否在线
+	optional int64 offlineTime	= 11; // 上次离线时间
+	optional int64 onlineTime	= 12; // 今日在线时长
+	repeated RewardInfo reward	= 13; // 在线时长奖励信息
+	optional int64 lastNotifyedTime = 14; // 上次被提醒上线的时间
+	optional PlayerCommon common 	= 15; // 玩家通用数据
+	optional int32 weekScore = 16; //周活跃积分
+}
+
+// 学院信息
+message CollegeInfo
+{
+	optional CollegeBaseInfo baseInfo	= 1;
+	optional CollegeMemberInfo coachInfo	= 2; //教官信息
+	repeated CollegeMemberInfo memberInfo	= 3; //成员信息
+}
+
+//学员数据
+message CollegeMemberData
+{
+	required CollegeScore scoreInfo        = 1; //积分信息
+	repeated CollegeShopItem shopInfo      = 2; //兑换商店商品购买信息
+	repeated CollegeMission missionInfo    = 3; //任务
+	repeated CollegeGiftItem giftInfo      = 4; //直购礼包商店商品购买信息
+	repeated PBCollegeEffect levelEffectInfo  = 5; //学院做用号
+	repeated PBCollegeEffect onlineEffectInfo = 6;//学院做用号
+	repeated OnlineRewardInfo onlineRewards   = 7; //在线奖励列表
+}
+
+// 学院积分
+message CollegeScore
+{
+	required int32 score	 = 1; //总积分
+	required int32 weekScore = 2; //周积分
+}
+
+//兑换商店商品兑换信息
+message CollegeShopItem
+{
+	required int32 shopId	     = 1; //id
+	required int32 exchangeCount = 2; //购买次数
+	required int32 tip           = 3; //关注
+}
+
+//直购礼包商店商品购买信息
+message CollegeGiftItem
+{
+	required int32 giftId	= 1; //id
+	required int32 buyCount = 2; //购买次数
+}
+
+
+//单条任务状态结构体
+message CollegeMission
+{
+	required int32 missionId = 1;//任务Id
+	required int32 num = 2;//进度
+	required int32 state = 3;//状态0=未完成,1=可以领取,2=已领取
+}
+
+//学院体力信息
+message CollegeVitality
+{
+	required int32 vitality = 1;//体力值
+	repeated CollegeVitalityItem vitalityInfo = 2; //体力分配
+
+}
+
+// 学院体力分配
+message CollegeVitalityItem
+{
+	required string member             = 1; //id
+	required int32 sendCount           = 2; //购买次数
+}
+
+//学院做用号
+message PBCollegeEffect{
+	optional int32 effectId =1; // 做用号
+	optional int32 value = 2;	// 值
+}
+
+
+// 获取申请列表
+message GetApplyListResp
+{
+	repeated CollegeMemberInfo member = 1;
+}
+
+// 获取可申请加入的学院的教官列表
+message GetCollegeLeaderResp
+{
+	repeated CollegeInfo member = 1;
+}
+
+// 领取成员在线时长奖励
+message GetOnlineRewardReq{
+	required string memberId = 1; // 成员id
+	repeated int32 rewardId  = 2; // 奖励id
+}
+
+// 申请加入学院
+message ApplyCollegeReq
+{
+	required string collegeId    = 1;
+	optional string guildApplyId = 2;
+}
+
+// 踢出学院
+message KickoutCollegeReq
+{
+	repeated string memberId = 1;
+}
+
+// 邀请类型
+enum InviteType{
+	GUILD_CHAT	= 0;	// 联盟
+	APP_FRIEND 	= 1;	// QQ/微信好友
+	GAME_FRIEND	= 2;	// 游戏内好友
+}
+
+// 邀请加入学院
+message InviteJoinCollegeReq
+{
+	required InviteType type = 1;
+	optional string playerId = 2; // 被邀请者id
+}
+
+// 邀请上线
+message InviteLoginReq
+{
+	required string memberId = 1;
+	required bool platFriend = 2; // 是否是平台好友	
+}
+
+// 查找教官
+message SearchCoachReq
+{
+	required string name = 1;
+}
+
+// 处理学院成员申请
+message DealApplyReq
+{
+	repeated string memberId = 1;
+}
+
+// 学院变更信息-申请被通过,被踢出,学院解散
+message CollegeAlterResp
+{
+	optional string collegeId	= 1;
+	optional string coachId		= 2;
+	optional string coachName	= 3;
+}
+
+
+//搜索学院
+message CollegeSearchReq
+{
+	required string name = 1;
+}
+
+
+// 搜索学院
+message CollegeSearchResp
+{
+	repeated CollegeBaseInfo colleges = 1;
+}
+
+//创建学院
+message CollegeCreateReq
+{
+	required string name = 1;
+}
+
+// 学院重命名
+message CollegeRenameReq
+{
+	required string name = 1;
+}
+
+// 转让教官
+message CollegeCoachChangeReq
+{
+	required string name = 1;
+}
+
+
+//积分刷新
+message CollegeScoreResp{
+	required CollegeScore scoreInfo        = 1; //积分信息
+}
+
+
+//兑换商店兑换请求
+message CollegeExchangeReq
+{
+	required int32 shopId = 1; //商品ID
+	required int32 count  = 2; //兑换数量
+}
+
+//兑换商店兑换返回
+message CollegeExchangeResp
+{
+	repeated CollegeShopItem shopInfo = 1; //兑换商店商品信息
+}
+
+//直购礼包购买请求
+message CollegeGiftBuyReq
+{
+	required int32 giftId    = 1; //商品ID
+	required int32 buyCount  = 2; //购买数量
+}
+
+//直购礼包购买返回
+message CollegeGiftBuyResp
+{
+	repeated CollegeGiftItem giftInfo = 4; //礼包
+}
+
+message CollegeShopTip{
+    required int32 id   = 1; //商品ID
+	required int32 tip  = 2; //标识 0为去掉勾 1为勾上
+}
+
+//学院商店提醒请求
+message CollegeShopTipReq
+{
+	repeated CollegeShopTip tips = 1; 
+}
+
+//学院商店提醒返回
+message CollegeShopTipResp
+{
+	repeated CollegeShopTip tips = 1; 
+}
+
+
+//任务领奖
+message CollegeMissionTakeRewardReq
+{
+	required int32 missionId = 1; //任务ID
+}
+
+//学院成就刷新
+message CollegeMissionUpdateResp
+{
+	repeated CollegeMission missions = 1; //任务列表
+}
+
+//学院做用号刷新
+message CollegeEffectUpdateResp{
+	repeated PBCollegeEffect levelEffectInfo  = 1; //学院做用号
+	repeated PBCollegeEffect onlineEffectInfo = 2;//学院做用号
+}
+
+
+// 学院体力分配
+message CollegeVitalitySendReq
+{
+	repeated CollegeVitalitySend sends = 1; //体力值
+}
+
+//体力分配
+message CollegeVitalitySend
+{
+	required string memberId = 1; //ID
+	required int32 vitality = 2; //体力值
+}
+
+// 学院体力分配
+message CollegeVitalitySendResp
+{
+	required CollegeVitality vitality = 1; //体力值信息
+}
+
+
+
+
+message CollegeRecommendListReq{
+	required int32 page = 1; //页数
+}
+
+message CollegeRecommendListResp{
+	repeated CollegeBaseInfo colleges = 1;
+}
+	
+message CollegeJoinFreeSetReq{
+	required int32 joinFree = 1;  //1可以自由加入 0需要申请  
+}
+
+
+
+//学院在线奖励信息
+message OnlineRewardInfo
+{
+	required int32 id		    = 1; //id
+	required int32 takeCount 	= 2; //领取次数
+	required int32 canTakeCount = 3; //可以领取的次数
+}
+
+
+//更新在线下奖励列表
+message OnlineRewardInfoResp{
+	repeated OnlineRewardInfo onlineRewards = 1; //在线奖励列表
+}
+
+//领取在线奖励
+message CollegeTakeOnlineRewardInfoReq{
+
+	required int32 id = 1;//领取在线奖励
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" cost="10000_1025_3500" item="30000_9210011_1" numLimit="1" />
+      <data id="2" cost="10000_1025_3500" item="30000_9210012_1" numLimit="1" />
+      <data id="3" cost="10000_1025_3500" item="30000_9210013_1" numLimit="1" />
+      <data id="4" cost="10000_1025_3500" item="30000_9210014_1" numLimit="1" />
+      <data id="5" cost="10000_1025_2500" item="30000_9220001_5" numLimit="1" />
+      <data id="6" cost="10000_1025_2250" item="30000_101050_1" numLimit="1" />
+      <data id="7" cost="10000_1025_2250" item="30000_104050_1" numLimit="1" />
+      <data id="8" cost="10000_1025_2250" item="30000_103050_1" numLimit="1" />
+      <data id="9" cost="10000_1025_2250" item="30000_105050_1" numLimit="1" />
+      <data id="10" cost="10000_1025_1800" item="30000_850006_1" numLimit="1" />
+      <data id="11" cost="10000_1025_1800" item="30000_850036_1" numLimit="1" />
+      <data id="12" cost="10000_1025_1800" item="30000_850016_1" numLimit="1" />
+      <data id="13" cost="10000_1025_1800" item="30000_850026_1" numLimit="1" />
+      <data id="14" cost="10000_1025_900" item="30000_830031_1" numLimit="1" />
+      <data id="15" cost="10000_1025_900" item="30000_830032_1" numLimit="1" />
+      <data id="16" cost="10000_1025_900" item="30000_830033_1" numLimit="1" />
+      <data id="17" cost="10000_1025_900" item="30000_830034_1" numLimit="1" />
+</root>

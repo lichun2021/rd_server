@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="16600001" conditionType="141002" conditionValue="1" rewards="30000_1150116_1" />
+      <data achieveId="16600002" conditionType="500011" conditionValue="0_999_20" rewards="30000_1150116_1" />
+      <data achieveId="16600003" conditionType="500011" conditionValue="0_999_50" rewards="30000_1150116_1" />
+      <data achieveId="16600004" conditionType="31100" conditionValue="0_500000" rewards="30000_1150116_1" />
+      <data achieveId="16600005" conditionType="31100" conditionValue="0_1500000" rewards="30000_1150116_1" />
+      <data achieveId="16600006" conditionType="20100" conditionValue="0_3000" rewards="30000_1150116_1" />
+      <data achieveId="16600007" conditionType="500020" conditionValue="3" rewards="30000_1150116_1" />
+</root>

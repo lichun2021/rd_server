@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data achieveId="1170001" conditionType="700003" conditionValue="90" rewards="30000_9990007_20,30000_840166_20,30000_840165_20" />
+      <data achieveId="1170002" conditionType="700003" conditionValue="180" rewards="30000_9990007_20,30000_840166_25,30000_840165_25" />
+      <data achieveId="1170003" conditionType="700003" conditionValue="270" rewards="30000_9990007_20,30000_840166_30,30000_840165_30" />
+      <data achieveId="1170004" conditionType="700003" conditionValue="360" rewards="30000_9990007_20,30000_840166_35,30000_840165_35" />
+      <data achieveId="1170005" conditionType="700003" conditionValue="450" rewards="30000_9990007_20,30000_840166_40,30000_840165_40" />
+</root>

@@ -1,0 +1,619 @@
+option java_package	= "com.hawk.game.protocol";
+
+import "Player.proto";
+import "MilitaryCollege.proto";
+import "Common.proto";
+
+//好友信息请求
+message FriendInfoReq {
+	
+}
+
+//好友信息返回
+message FriendInfoResp {
+	repeated FriendMsg friends = 1;//好友列表
+	optional int32 dayAddCount = 2; // 今天已经添加数
+}
+
+
+
+
+//所有的申请信息请求
+message FriendApplyInfoReq {
+	
+}
+
+//请求黑名单
+message BlacklistInfoReq{
+}
+
+//请求黑名单
+message BlacklistInfoResp{
+	repeated BlackListMsg blackLists = 1; //黑名单
+}
+
+
+//所有的申请信息返回
+message FriendApplyInfoResp {
+	repeated FriendApplyMsg applyMsgs = 1 ;//申请的信息
+}
+
+//推荐好友请求
+message RecommendFriendsReq {
+	
+}
+
+//推荐好友返回
+message RecommendFriendsResp {
+	repeated StrangerMsg strangers = 1; //推荐的好友列表
+}
+
+//查找
+message SearchStrangerReq {
+	required int32 sex  = 1 ;// 0男 1女 2 男女
+	required int32 sameCity = 2; //是否是同城 
+	required string name = 3; //名字
+}
+
+//查找
+message SearchStrangerResp {
+	repeated StrangerMsg strangers = 1; //搜索出来的陌生人.
+}
+
+//添加好友
+message FriendAddReq {
+	repeated string playerIds = 1; //玩家ID列表
+	optional string content = 2;  //
+}
+
+//同步添好友信息 两个人都会收到信息
+message SynFriendInfo {	
+	repeated FriendMsg friend = 1; //新增加的好友
+	optional OperationFrom from = 2; //同步来源
+}
+
+enum OperationFrom {
+	FROMCOMMON = 0; //
+	HANDLER = 1; //处理者
+	BE_HANDLER = 2; //被处理者
+}
+
+//处理好友申请
+message HandleFriendApplyReq {
+	optional string playerId = 1; //处理的玩家ID  为null则是所有
+	required OperationType type = 2; //操作类型
+}
+
+//更新申请好友列表, 两个列表都需要判null
+message SynFriendApplyUpdate{
+	repeated FriendApplyMsg apply = 1; //新增好友申请  
+	repeated string playerIds = 2; //已经处理的好友申请 
+}
+
+
+//删除好友
+message DeleteFriendReq{
+	required string playerId = 1; //玩家ID
+}
+
+//删除好友返回  A删除B, B收到此协议
+message SynDeleteFriend{
+	optional string playerId = 1; //哪个玩家被删除
+	optional OperationFrom from = 2; //来源
+}
+
+//黑名单操作
+message BlackListOperationReq {
+	required BlackListOper oper = 1; //操作类型
+	required string playerId = 2; //玩家ID
+}
+
+//同步黑名单 添加
+message SynBlackList {
+	optional BlackListMsg blackList = 1; //黑名单	
+}
+
+//黑名单的删除
+message SynDeleteBlackList {
+	repeated string playerIds = 1; //黑名单的删除
+}
+
+//操作类型
+enum OperationType {
+	AGREEE  = 1 ;//同意
+	REJECT  = 2 ;//拒绝
+}
+
+enum BlackListOper {
+	ADD = 1 ; //添加到黑名单
+	DELETE = 2 ;//取消黑名单
+}
+
+enum FriendType {
+	COMMON	 = 1; //任意
+	PLATFORM = 2; //平台好友
+	GAME 	 = 3; //游戏好友
+}
+
+
+//社交系统的礼物赠送
+message PresentGiftReq{
+	required FriendType type	   = 1; //赠送的好友类型
+	optional string playerId	   = 2;
+}
+message PresentGiftResp{
+	optional FriendType type	   = 1;
+	optional string playerId	   = 2;
+	repeated string friendList	   = 3;
+}
+
+//社交系统的礼物接收次数
+message GiftReceiveTimesPush {
+	required int32 count	=2;
+}
+
+//好友礼物赠送
+message FriendGavePresentReq {
+	required string playerId = 1; //指定赠送的玩家ID
+}
+
+//好友礼物赠送
+message FriendGavePresentResp {
+	optional string playerId = 1; //赠送的玩家ID
+	optional int32 love = 2; //亲密度
+}
+
+//申请的结构
+message FriendApplyMsg {
+	optional string playerId = 1; //申请的玩家ID
+	optional string guildName = 2; //联盟名字
+	optional string playerName = 3; //玩家名字
+	optional string content = 4; //申请内容
+	optional int32 icon = 5; //头像
+	optional string pfIcon = 6; //平台头像
+	optional int32 vipLevel = 7; // VIP 等级
+	optional PlayerCommon common 	= 8; // 玩家通用数据
+}
+
+//查找出来的人 陌生人
+message StrangerMsg {
+	optional string playerId = 1; //玩家Id
+	optional string guildName = 2; //工会名字
+	optional string playerName = 3; //玩家名字
+	optional int32 sex = 4; //性别
+	optional int32 location = 5; //所在地区
+	optional int32 icon = 6; //头像
+	optional string pfIcon = 7; //平台头像
+	optional int32 applyState = 8;  //0没有申请 1发送申请, 2 已经是好友
+	optional int64 battleValue = 9; //战斗力	
+	optional int32 vipLevel = 10; // VIP 等级
+	optional PlayerCommon common = 11; // 玩家通用数据
+}
+
+//社交系统
+message SnsMsg {
+	optional string puId = 1; //唯一标识
+	optional int32 serverId = 2; //区服
+	optional string snsName = 3; //社交系统的名字
+	optional string playerName = 4; //游戏的名字
+	optional string playerId = 5; //玩家的ID
+	optional int32 battleValue = 6; //战力
+	optional int32 level = 7; //等级
+	optional int32 gave = 8 ;//是否送过礼物
+	optional int32 icon = 9; //头像
+	optional string pfIcon = 10; //平台头像
+	optional int32 vipLevel = 11; // VIP 等级
+}
+
+//好友
+message FriendMsg {
+	optional string playerId = 1 ;//玩家ID
+	optional string playerName = 2;//玩家的名字
+	optional int32 vip = 3; //vip
+	optional int64 battleValue = 4; //战力
+	optional int32 level = 5; //等级
+	optional int32 love = 6; //亲密度
+	optional bool lively = 7;//活跃
+	optional int32 gave = 8; //是否送过礼物 0没有送过1送过.
+	optional int32 icon = 9 ;//头像
+	optional string pfIcon = 10; //平台头像
+	optional int32 cityLevel = 11; //基地等级
+	optional int32 vipLevel = 12; // VIP 等级
+	optional PlayerCommon common = 13; // 玩家通用数据
+	optional string remark = 14; //好友名字备注.
+	optional string guildName		= 15;   //联盟简称
+	optional CollegeAuth collegeAuth = 16; // 战争学院成员权限
+}
+
+//黑名单
+message BlackListMsg {
+	optional int32 icon = 1; //头像
+	optional string playerId = 2; //玩家ID
+	optional string playerName = 3; //玩家的名字
+	optional string guildName = 4; //工会名字
+	optional int32 location = 5; //位置
+	optional string pfIcon = 6; //平台头像
+	optional int64 battleValue = 7; //战力
+	optional int32 vipLevel = 8; // VIP 等级
+	optional PlayerCommon common = 9; // 玩家通用数据
+}
+
+//亲密度增加推送
+message LoveAddPush
+{
+	required string playerId = 1;
+	required int32 loveAdd	 = 2;
+}
+
+// 平台好友信息请求
+message PlatformFriendReq
+{
+}
+
+// 平台好友信息响应
+message PlatformFriendResp
+{
+	repeated PlatformFriendInfo platformFriend = 1;
+}
+
+// 平台好友信息
+message PlatformFriendInfo
+{
+	optional string playerId 		= 1; 	// 玩家ID
+	required string openid      	= 2;  	// 玩家 openId
+	required string playerName  	= 3;  	// 玩家的名字
+	required string nickName    	= 4;  	// 昵称
+	required int64  battleValue 	= 5;  	// 战力
+	optional int32 gave 			= 6;  	// 是否送过礼物 0没有送过1送过.
+	optional int32 icon 			= 7;  	// 头像
+	required string pfIcon      	= 8;  	// 平台头像
+	required int32  level 			= 9;  	// 玩家等级
+	required int32  cityLevel   	= 10;  	// 基地等级
+	required int64  logoutTime  	= 11;  	// 最后一次登出时间，为0是表示在线
+	optional int32 vipLevel 		= 12;	// VIP 等级
+	optional PlayerCommon common 	= 13; 	// 玩家通用数据
+	optional string serverId        = 14;   // 平台好友所在的服务器ID
+	optional int32 militaryRankLvl	= 15;   // 军衔等级
+	optional int32 QQSVIPLevel      = 16;   // 手Q玩家超级会员等级
+    optional int32 QQVIPLevel       = 17;   // 手Q玩家普通会员等级	
+}
+
+// 好友分享类型
+enum ShareType
+{
+	MSG_INVITE          = 1;//邀请 
+	MSG_FRIEND_EXCEED   = 2; //超越炫耀 
+	MSG_HEART_SEND      = 3;//送心 
+	MSG_SHARE_FRIEND_PVP = 4; //PVP对战字段值必须大写
+}
+
+// 好友分享请求
+message FriendShareReq
+{
+	required string fopenid = 1;  // 接受分享的好友openid
+	required ShareType shareType = 2;  // 分享类型
+}
+
+// 好友分享请求应答
+message FriendShareResp
+{
+	required int32 result = 1;       // 为0表示分享成功，其它值分享失败
+    optional string errMsg  = 2;   // 分享失败时的错误信息
+}
+
+message UpdateFriendInfoReq {
+	required string friendPlayerId = 1; //修改的玩家ID
+	required string remark = 2; //备注
+}
+
+// 未注册游戏好友
+message UnRegFriendInfoPB {
+	required string openid     = 1; // 好友openid
+	required string nickName   = 2; // 好友昵称
+	required string headImgUrl = 3; // 好友头像
+    required int64 inviteTime  = 4; // 邀请时间，未发出过邀请的或是邀请已过期的，此字段值填0
+}
+
+// 未注册好友列表
+message UnRegFriendsPB {
+	repeated UnRegFriendInfoPB unRegFriend = 1;  // 未注册好友列表
+}
+
+// 客户端通知服务器邀请了谁
+message ClientInviteFriendResult {
+	required string friendOpenid   = 1;  // 好友的openid
+}
+
+// 邀请好友任务类型
+enum InviteTaskType {
+	FRIEND_COUNT  = 1;        // 邀请人数
+    FRIEND_CITYLVL_COUNT = 2;  // 邀请好友中满足大本等级要求的人数
+}
+
+// 领取任务奖励
+message InviteTaskAwardReq {
+	required  int32 taskId  = 1;   // 任务ID（配置表中配置的ID）
+}
+
+// 已邀请成功的好友信息
+message InvitedFriendInfoPB {
+	required string openid    = 1;
+	required string playerId  = 2;
+	required string playerName = 3;
+    required string nickName   = 4;
+	required int32 cityLevel   = 5;
+    required string serverId   = 6;
+	required int32 icon 	   = 7;  // 头像
+	required string pfIcon     = 8;  // 平台头像
+	optional int64 inviteTime  = 9;  // 邀请时间
+}
+
+// 已邀请成功的好友数据
+message InvitedFriendData {
+	repeated InvitedFriendInfoPB invitedFriend = 1;
+}
+
+// 已领取过奖励的邀请任务ID
+message InviteTaskRewardedPushPB {
+	repeated int32 taskId  = 1;
+}
+
+//可邀请的玩家.
+message GuardCanInvitePlayersReq {
+
+}
+
+//可邀请的玩家列表
+message GuardCanInvitePlayersResp {
+	repeated CanInvitePlayerMsg playerMsg = 1; //玩家的好友消息.
+}
+
+
+//可邀请玩家.
+message CanInvitePlayerMsg {
+	required string playerId = 1; //玩家的ID
+	required string name = 2;  //玩家的名字
+	optional string remark = 3; //备注信息.
+	required string guildTag = 4; //工会的tag 没有传""
+	optional int32 icon 			= 5;  	// 头像
+	required string pfIcon      	= 6;  	// 平台头像	
+	required PlayerCommon common 	= 7;    //
+	required int64 battleValue 		= 8;  //战力
+	required InviteState state 			= 9;  // 0未邀请, 1已邀请. 2 已经建立邀请关系
+	optional int64 inviteEndTime 	= 10; //在已邀请的时候有一个到期时间.
+}
+
+enum InviteState {
+	NONE 		  = 0;
+	INVITED 	  = 1;//已经邀请.
+	GUARD	      = 2; //已经建立了守护关系.
+}
+
+//请求守护信息
+message GuardInfoReq {
+
+}
+
+
+
+//请求守护信息
+message GuardInfoResp {
+	optional GuardPlayerMsg playerInfo = 1;
+	optional int32 guardValue = 2; //守护值.	
+	optional int64 protectedEndTime = 3; //保护罩的到期时间.
+	optional int64 fireEndTime		= 4; //基地着火的时间到期时间.
+	optional int64 warFeverEndTime  = 5; //守护兑现的战争狂热结束状态.
+	optional int64 protectedStartTime = 6; //罩子的开始时间.	
+}
+
+
+message GuardDressItemInfo {	
+	repeated KeyValuePairInt ownerDressItemInfos = 1; //自己的dressItem 信息  itemId, endTime;
+	repeated KeyValuePairInt guardDressItemInfos = 2; //自己的守护者的信息,   itemId, endTime;
+}
+
+//更新守护修改.
+message GuardInfoUpdateSyn {
+	optional int64 protectedEndTime = 1; //保护罩的到期时间.
+	optional int64 fireEndTime		= 2; //基地着火的时间到期时间.
+	optional int64 warFeverEndTime  = 3; //守护兑现的战争狂热结束状态.
+	optional int64 protectedStartTime = 4; //罩子的开始时间.
+}
+
+//邀请守护
+message GuardInvitePlayerReq {
+	required string playerId = 1; //邀请守护.
+}
+
+message GuardInvitePlayerResp {
+	required CanInvitePlayerMsg msg = 1; //返回一个列表让客户端刷新倒计时
+}
+
+//拉取守护申请列表.
+message GuardInviteListReq {
+}
+
+//拉取守护申请列表.
+message GuardInviteListResp {
+	repeated GuardPlayerMsg msg = 1;
+}
+
+//处理守护申请.
+message GuardInviteHandleReq {
+	required OperationType  oper = 1; //
+	required string playerId	= 2; //玩家ID
+}
+
+
+
+//同步删除申请列表
+message GuardInviteDeleteSyn{
+	required string playerId = 1;
+}
+
+//接受新的守护邀请.
+message GuardHudSyn{
+	optional int32 invite = 1; //是否有守护申请 大于0为有
+	optional int32 gift = 2; // 是否有礼物.   大于0为有
+}
+
+//守护关系建立
+message GuardRelationCreateSyn{
+	required GuardPlayerMsg playerInfo = 1; 
+}
+
+//守护关系删除 
+message GuardRelationDeleteReq {
+	
+}
+
+//守护关系删除
+message GuardRelationDeleteResp {
+}
+
+//守护设置修改.
+message GuardSettingEditReq{
+	required PlayerFlagPosition position = 1;
+}
+
+//守护设置修改走player同步flag
+message GuardSettingEditResp{
+	required int32 flag = 1; //PlayerFlagSyn该协议里面的flag
+}
+
+//请求守护礼包信息
+message GuardGiftInfoReq {
+
+}
+
+//请求守护礼包信息.
+message GuardGiftInfoResp {
+	repeated GuardGiftMsg giftList = 1; //
+}
+
+message GuardGiftMsg {
+	required int32 giftId = 1; //礼包ID
+	required int32 sentNum = 2; //已经购买数量
+}
+
+//守护礼包赠送
+message GuardGiftSendReq {
+	required int32 giftId = 1;
+}
+
+//守护礼包赠送.
+message GuardGiftSendResp {
+	required GuardGiftMsg giftMsg = 1; 
+	required int32 guardValue	  = 2; //守护值
+}
+
+message GuardDressReq {
+	
+}
+
+//同步dress信息, 兑换之后也返回这个.
+message GuardDressResp {
+	optional int32 dressId = 1; //dressId; 
+	optional GuardDressItemInfo dressItemInfo = 2;
+}
+
+//修改dress信息 修改之后收到 #GuardDressResp 信息.
+message GuardDressUpdateReq{
+	required int32 dressId = 1;
+}
+
+
+//几个界面都有用到玩家信息,重用一下.
+message GuardPlayerMsg {
+	required string playerId = 1; //玩家的ID
+	required string name = 2;  //玩家的名字
+	required int64 offlineTime = 3; //玩家的离线时间  0代表在线.
+	required string guildTag = 4; //工会的tag 没有传""
+	required int32 x = 5;         //坐标x 
+	required int32 y = 6;         //坐标y
+	optional int32 icon 			= 7;  	// 头像
+	required string pfIcon      	= 8;  	// 平台头像	
+	required PlayerCommon common 	= 9;    //	
+}
+
+//灭火
+message GuardOutFireReq {
+}
+
+
+//开罩
+message GuardOpenCoverReq {
+	required int32 helpCfgId = 1; //guardian_help.xml#id
+}
+
+//仇恨单
+message HateInfoMsg {
+	optional string playerId = 1;   //玩家ID
+	optional string playerName = 2; //玩家的名字
+	optional string guildName = 3; 	//工会名字
+	optional int64 killPower = 4;  	//杀掉对方战力
+	optional int64 losePower = 5;  	//自己损失战力	
+}
+
+//请求仇恨排行榜单
+message HateRankListReq{
+}
+
+//同步黑名单 添加
+message SyncHateRankList {
+	repeated HateInfoMsg hateList = 1; //仇恨排行榜单	
+}
+
+
+
+
+//请求兑换.
+message GuardDressItemExchangeReq {
+	required int32 itemId = 1; //兑换哪个道具.
+}
+
+//赠送道具
+message GuardDressItemSendReq {
+	required int32 itemId = 1;//赠送道具
+	optional string sendWord = 2; //赠送寄语.
+	required string playerId = 3; //赠送的玩家ID.
+	required int32 relationType = 4; //1好友, 2联盟.
+}
+
+//索要道具
+message GuardDressItemBlagReq {
+	required int32 dressId = 1;//索要的dressId
+	required string sendWord = 2; //索要寄语
+	required string playerId = 3; //被索要的玩家id
+	required int32 relationType = 4; //1好友, 2联盟.
+}
+
+enum GuardOptType {
+	GUARD_SEND = 1; //赠送
+	GUARD_BLAG = 2; //索要
+}
+//请求道具的索要或者赠送记录.
+message GuardSendAndBlagHistoryReq {
+	required GuardOptType type = 1;//
+}
+//道具的索要赠送记录
+message GuardSendAndBlagHistoryResp {
+	required GuardOptType type = 1;//
+	repeated GuardSendAndBlagHistoryInfo infos = 2;
+}
+
+//道具的赠送和索要记录
+message GuardSendAndBlagHistoryInfo{
+	optional string playerId = 1;
+	optional string playerName = 2;
+	optional string pfIcon = 3;
+	optional int32 level = 4;
+	optional int32 cityLevel = 5;
+	optional int64 power = 6;
+	optional string guildName = 7;
+	optional string guildTag = 8;
+	optional string guildId = 9;
+	optional int64 lastOpTime = 10;
+	optional string sendItem = 11; // 都是三段式结构.
+	optional int32  askDressId = 12; //索要的皮肤ID。
+}

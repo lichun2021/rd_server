@@ -1,0 +1,24 @@
+return {
+	prop =
+	{
+		activityId = 330,
+		name = [[庆典基金]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">1.活动期间通过完成<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">每日任务</font>，每获得1点活跃积分可获得1点庆典积分。<br/>2.庆典积分满后即可<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">解锁</font>当前阶段庆典基金购买资格。<br/>3.当前庆典积分满后<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">不会继续累积</font>，解锁当前阶段后下一阶段积分需要重新累积。<br/>4.每一阶段解锁需要的积分数量不同（完成数量分别为100积分、200积分、300积分、300积分、300积分、300积分、400积分）。<br/>5.活动结束前24小时至活动结束前5分钟可花费<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">金条购买庆典积分</font>，每1金条可购买1点庆典积分。</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_330_Nor.png]],
+		selecticon = [[Activity_Icon_330_Sel.png]],
+		buyPointTimeStart = 86400,
+		buyPointTimeEnd = 300,
+	},
+	celebration_fund_buy = [[id	next	picture	iosPayId	androidPayID	initialGoldValue	incremental	maxGoldValue	oriPrice	buyPrice	needPoint
+1	1	2	1	1	1	1	2	1	2	1
+1	2	V5Activity_330_Icon_01.png	3220013	3220020	60	3	10000_1000_360	26	10000_1000_1	100
+2	3	V5Activity_330_Icon_02.png	3220014	3220021	180	3	10000_1000_780	78	10000_1000_1	200
+3	4	V5Activity_330_Icon_03.png	3220015	3220022	300	3	10000_1000_1200	120	10000_1000_1	300
+4	5	V5Activity_330_Icon_04.png	3220016	3220023	500	4	10000_1000_1700	170	10000_1000_1	300
+5	6	V5Activity_330_Icon_05.png	3220017	3220024	680	5	10000_1000_2180	218	10000_1000_1	300
+6	7	V5Activity_330_Icon_06.png	3220018	3220025	980	7	10000_1000_3080	278	10000_1000_1	300
+7		V5Activity_330_Icon_06.png	3220019	3220026	1280	6	10000_1000_3680	368	10000_1000_1	400
+]],
+
+}

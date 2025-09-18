@@ -1,0 +1,1054 @@
+option java_package	= "com.hawk.game.protocol";
+import "Const.proto";
+import "Reward.proto";
+import "Player.proto";
+import "Army.proto";
+import "Hero.proto";
+import "GuildManager.proto";
+import "SuperSoldier.proto";
+import "Armour.proto";
+import "Manhattan.proto";
+import "MechaCore.proto";
+
+message MailCreateChatRoomCD{
+	optional int64 cdTime = 1;
+}
+
+// 邮件体,序列化后保存. 不可修改以有字段
+message	MailLiteInfo{
+	required string	id			= 1;	//uuId
+	required int32 mailId		= 2;	//邮件ID
+	required sint32	type		= 3;	//邮件类型
+	optional string	title		= 4;	//标题
+	optional string	subTitle	= 5;	//副标题
+	required int64 ctime		= 6;	//创建时间
+	optional int32 status		= 7;	//邮件状态（已读，未读）
+	optional bool hasReward		= 8;	//是否有奖励能
+	repeated int32 icon			= 9;	//头像（玩家头像或联盟旗帜,怪物ID）
+	optional int32 lock			= 10;	//是否锁定（0:未锁定，1：锁定）
+	repeated ChatRoomMember	mem	= 11;	//聊天室当前成员信息
+	optional string	pfIcon	    = 12;   //平台头像
+	optional int32 chatType		= 13;   //私聊类型 0 普通 1 全体
+	repeated string tips		= 14;	//邮件提示
+	optional string createrId 	= 15;   // 创建者id
+	optional string playerId	= 16; 	// 收件人
+	optional string oppPlayerId = 17; 	// 侦查等邮件对方的玩家
+	optional string globalMailId = 18;  //
+	optional string reward      = 19;   // 奖励
+	optional string additionalParam = 20; // 额外参数 腾讯冲钻石
+	optional int64  lastShare		= 21; // 最近一次分享时间
+	optional bool isLmjy			= 22; // 联盟军演邮件
+	optional string sendServerId		= 23;  // 邮件发送服id
+	optional bool isTBLY				= 24; // 是联盟锦标赛邮件
+	optional bool isSW				= 25; // 是联盟锦标赛邮件
+	optional int32 duntype		= 26; // 1 lmjy 3 tbly 5 sw 7 cyborg
+	optional string	midTitle	= 27;	//中间标题
+}
+
+// 取邮件
+message HPListMailReq{
+	repeated HPListMail list = 1;
+}
+
+message HPListMail{
+	optional int32 type = 1;// 类型
+	optional string lastMailId = 2; //最后一封的id. 取头部不传
+	optional int32 count = 3; // 取多少. 最多20
+}
+
+// 按而反回邮件 
+message	HPListMailResp{
+	repeated HPTypeMail list = 1; 
+}
+
+message HPTypeMail{
+	repeated MailLiteInfo mail = 1; // 不足量说明到底了
+	optional bool hasNext = 2; // true 还有 false没有
+	optional int32 type = 3;// 类型
+}
+
+// 未读数
+message HPMailUnreadReq{
+	repeated int32 type = 1; // 类型
+}
+
+
+// 未读数
+message HPMailUnreadResp{
+	repeated MailUnread unread = 1;
+}
+
+message MailUnread{
+	optional int32 type = 1; // 类型
+	optional int32 count = 2; 
+}
+
+
+//邮件列表
+message	HPMailListSync
+{
+	repeated MailLiteInfo mail = 1;
+}
+
+//标记读取邮件
+message	HPMarkReadMailReq
+{
+	repeated string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//收藏邮件
+message	HPSaveMailReq
+{
+	repeated string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//取消收藏邮件
+message	HPCancelSaveMailReq
+{
+	repeated string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//通过邮件ID删除邮件
+message	HPDelMailByIdReq
+{
+	repeated string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+message	HPDelMailByIdResp
+{
+	repeated string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//通过邮件类型删除邮件
+message	HPDelMailByTypeReq
+{
+	required sint32	type	= 1; //邮件类型
+}
+
+//创建聊天室
+message	HPCreateChatRoomReq
+{
+	repeated string	toPlayer = 1;
+	required string	msg		= 2;
+}
+
+//推送新邮件
+message	HPNewMailRes
+{
+	repeated MailLiteInfo mail	= 1; //邮件
+}
+
+//发送聊天消息
+message	HPSendChatRoomMsgReq
+{
+	required string	id		= 1; //邮件ID
+	required string	msg		= 2; //消息内容
+	optional bytes voice			= 3; // 语音消息
+	optional int32 voiceLength		= 4; // 语音时长/秒
+}
+
+//推送聊天消息
+message	HPPushChatRoomMsgRes
+{
+	required string	id			= 1; //邮件ID
+	required string	msg			= 2; //消息内容
+	optional string	playerName	= 3; //玩家名字
+	optional string voiceId		= 4;   // 如果有语音,语音id
+	optional int32 voiceLength	= 5; 	// 语音时长/秒
+	optional string guildTag 			=6 ; // 联盟简称
+	optional int64 msgTime				= 7; // 时间
+	optional int32 officeId				= 8; // 官职
+	optional int32 dressTitle	= 9; // 称号
+	optional int32 dressTitleType = 10; // 称号显示类型 0 默认
+}
+
+//通用邮件
+message	CommonMail
+{
+	optional string	mailMessage		= 1; //邮件内容
+	repeated RewardItem	rewards		= 2; //奖励
+}
+
+//聊天室一条消息
+message	ChatRoomMsg{
+	optional string	playerId	= 1;//玩家ID
+	required string	msg			= 2;//消息内容
+	optional string voiceId		= 3;   // 如果有语音,语音id
+	optional int32 voiceLength	= 4; 	// 语音时长/秒
+	optional string guildTag 			=6 ; // 联盟简称
+	optional int64 msgTime				= 7; // 时间
+	optional int32 officeId				= 8; // 官职
+	optional int32 dressTitle	= 10; // 称号
+	optional int32 dressTitleType = 11; // 称号显示类型 0 默认
+}
+
+//聊天室成员
+message	ChatRoomMember{
+	required string	playerId	= 1; //玩家ID
+	required string	name		= 2; //玩家名称
+	required sint32	icon		= 3; //玩家头像
+	optional string pfIcon      = 4; //平台头像
+	optional int64 offlineTime  = 5;
+	optional bool online = 6;
+	optional string guildTag 			=7 ; // 联盟简称
+	optional int32 vipLevel		= 8; // 玩家 vip 等级
+	optional PlayerCommon common = 9; // 玩家通用数据
+	optional int32 dressTitle	= 10; // 称号
+	optional int32 dressTitleType = 11; // 称号显示类型 0 默认
+}
+
+//聊天邮件
+message	ChatRoomMail
+{
+	repeated ChatRoomMsg msg	= 1; //聊天室消息
+	optional string	createrId	= 2; //聊天室创建者ID
+	repeated ChatRoomMember	roomMember	= 3;//聊天室成员信息
+}
+
+//打怪邮件
+message	MonsterMail{
+	required int32 monsterId			= 1; //怪物ID
+	required FightResult result			= 2; //是否胜利
+	optional bool firstKill				= 3; //是否首杀
+	repeated RewardItem	rewards			= 4; //普通奖励
+	repeated RewardItem	firstKillReward	= 5; //首杀奖励
+	optional int32 x					= 6; //坐标X
+	optional int32 y					= 7; //坐标Y
+	required FighteInfo	atkFight		= 8; //我方战斗数据
+	optional int32 heroExp				= 9; //英雄经验
+	optional float remainBlood			= 10;//剩余血量
+	optional float atkValue				= 11;//输出伤害
+	optional int32 woundCount			= 12;//受伤部队数量
+	optional float atkBuff				= 13;//伤害加成
+	optional int32 atkTimes				= 14;//第n次攻击
+	optional int32 atkCount				= 15;//多次攻击次数
+	optional int32 validCount			= 16;//有效攻击次数
+	repeated RewardItem	killReward		= 17; //击杀奖励
+	optional bool isAtkMax				= 18;//是否达到攻击上限
+	optional int32 maxBlood				= 19;//怪物最大血量
+	optional bool fixed				= 20; //伤害系数是否修正过
+	optional int32 totalTimes       = 21; //打野次数，没有传该字段的情况下默认就是1
+	optional bool killCntLimit      = 22; //打boss数量是否超限无奖励
+}
+
+//尤里复仇战斗邮件
+message YuriRevengeFightMail{
+	required int32 turn		= 1; //波次
+	required int32 posX		= 2; //战斗点坐标
+	required int32 posY		= 3; 
+	required int32 enemyCnt = 4; //敌军总数量
+	required int32 enemyDeadCnt = 5; //敌军被消灭数量
+	required int32 failedTimes	= 6; //失败次数
+	required int32 killRate = 7; // 消灭比例
+	required int32 disPoint = 8; //损失战力
+	required int32 totalCnt = 9; //己方部队数量
+	required int32 woundCnt = 10; //己方伤兵数量
+	required int32 score 	= 11; //获得积分
+	optional MailPlayerInfo selfInfo 	= 12; // 个人信息
+	optional MailPlayerInfo targetInfo 	= 13; // 被援助者信息
+}
+
+
+//类似PVP战报的PVE战报邮件(据点,要塞等)
+message	PveFightMail{
+	optional FightResult result				= 1; //战斗结果
+	required MailPlayerInfo selfPlayer		= 2; //己方玩家信息
+	required int32 monsterId				= 3; //怪物id(据点/迷雾要塞等id)
+	repeated RewardItem	items				= 4; //成功奖励或失败损失
+	required FighteInfo	selfFight			= 5; //己方战斗数据
+	required FighteInfo	oppFight			= 6; //对方战斗数据
+	repeated MailArmyInfo selfArmy			= 7; //己方军队数据
+	repeated MailArmyInfo oppArmy			= 8; //对方军队数据
+	repeated EffectPB selfEffs				= 9; //己方作用号信息
+	required int32 battleX					= 10; //战斗地点坐标X
+	required int32 battleY					= 11; //战斗地点坐标Y
+	required int32 battleAnalysis			= 12; //战斗分析
+	required int32 battlePrompt				= 13; //战斗提示
+	optional int32 battleGreat				= 14; //是否大胜或者惨败1-是，0-不是
+	repeated EffectPB oppfEffs				= 16; //敌方作用号信息
+	optional MailPlayerInfo oppPlayer		= 17; //敌方玩家信息
+	optional int32 duntype		= 18; // 1 lmjy 3 tbly 5 sw 7 cyborg
+	repeated string extraParam  = 19; // 额外参数，因不同邮件而异
+	optional int32 fgylMaxBlood = 20;  // 反攻幽灵最大血
+	optional int32 fgylRemainBlood = 21;  //剩余
+	optional int32 fgylKillBlood = 22;  // 打掉
+	optional int32 fgylEnemy = 23;
+}
+
+message CollectResource
+{
+	required int32 resType			= 1; //资源所属大类
+	required int32 resId			= 2; //资源ID
+	required int32 resCount			= 3; //资源数量
+	optional int32 worldResId		= 4; //如果是资源矿，则是资源矿ID
+}
+
+//采集资源邮件
+message	CollectMail{
+	required int32 mailId			= 1; //邮件ID
+	repeated CollectResource res	= 2; //采集数目
+	required sint32	x				= 3; //坐标X
+	required sint32	y				= 4; //坐标Y
+	optional CollectType type		= 5; //采集矿点类型
+	optional int32 collectTime		= 6; //本次采集时间
+	optional int64 beginTime		= 7;
+	optional int64 endTime			= 8;
+	optional int32 cfgId			= 9;
+	repeated CollectResource firstRes	= 10; // 首次搬运奖励. 如果有的话( 资源宝库)
+	optional bool isLimit			= 11; // 达到负重上限( 资源宝库)
+	optional string guildTag		= 12; // ( 资源宝库)
+	optional int32 resTreasureId    = 13; //资源宝库Id ( 资源宝库)
+	optional int32 tax				= 14; //税率
+	optional int32 isCrossTax		= 15;//是否是跨服税率
+	
+}
+
+//采集矿点类型
+enum CollectType 
+{
+	NORMAL_RES			= 0;	// 普通资源点
+	SUPER_RES			= 1;	// 超级矿资源点
+	YURI_RES			= 2;	// 尤里点
+	STRONGPOINT			= 3;	// 据点
+	TH_RES				= 4;	// 寻宝据点
+	TRRES_TRESURE		= 5;    // 粮仓
+	PYLON				= 6;	// 能量塔
+}
+
+//玩家数据
+message	MailPlayerInfo{
+	optional string	playerId		= 1; //玩家ID
+	optional string	name			= 2; //玩家名称
+	optional string	guildTag		= 3; //联盟简称
+	optional sint32	icon			= 4; //玩家头像
+	optional sint32	x				= 5; //坐标X
+	optional sint32	y				= 6; //坐标Y
+	optional int32 commanderState	= 7; //指挥官状态
+	optional int32 disBattlePoint	= 8; //损失的战力
+	optional string	guildName		= 9; //联盟全称
+	optional string pfIcon			= 10;//平台头像
+	optional int64 power			= 11; // 玩家战力
+}
+
+//战斗数据
+message	FighteInfo{
+	optional sint32	totalSoldier		= 1; //总兵力
+	optional sint32	deadSoldier			= 2; //阵亡数量
+	optional sint32	hurtSoldier			= 3; //受伤数量
+	optional sint32	survivalSoldier		= 4; //存活数量
+	optional sint32 killSoldier			= 5; //消灭数量
+	optional sint32 battlefieldCure		= 6; //战地医疗
+	optional sint32	defBuildLose		= 7; //防御武器损失
+	optional sint32 disBattlePoint		= 8; //损失战斗力(打怪邮件用)
+	optional int32 nationMilitary 		= 9; // 战斗获得军功
+	optional int32 nationalHospital		= 10; // 我方进入国家医院总量
+	optional int32 staffPoint = 11; // 军威
+	repeated PBStaffOfficeSkill staffSkills = 12; // 生效之参谋技
+	repeated PBHeroInfo staffHeros = 13; // 队长参谋
+	optional int32 eff12111Cnt = 14; // 军威：战斗开始前，使敌方 XX% 的部队军心动摇，无法参与战斗
+	optional int64 forceFieldMax = 15; // 星穹护盾 最大
+	optional int64 forceField = 16; //星穹护盾 当前
+}
+
+// 兵种数据
+message	MailSoldierPB
+{
+	required int32 soldierId		= 1; //兵种ID
+	optional int32 survivedCnt		= 2; //存活（战斗邮件用）
+	optional int32 woundedCnt		= 3; //受伤（战斗邮件用）
+	optional int32 deadCnt			= 4; //死亡（战斗邮件用）
+	optional int32 killCnt			= 5; //击杀（战斗邮件用）
+	optional int32 defencedCount	= 6; //防守部队数目（侦查邮件用）
+	optional int32 enchantLevel 	= 7; //品阶
+	optional int32 star 			= 8; //星级
+	optional int32 realLoseCnt		= 9; //实际损失值(部分战斗会有伤兵衰减,此处为衰减前的值)
+	optional int32 shadowVanishCnt	= 10; //影子部队直接消失数量(战后未损失的影子部队直接消失)
+	optional int32 shadowLoseCnt	= 11; //影子部队损失数量
+	optional int32 plantStep 		= 12; // 泰能等级
+	optional int32 save1634			= 13;// 1634 回城直接转为free的数量
+	optional int32 help1635TarCount = 14;// 帮助几个目标
+	optional int32 help1635Count 	= 15; // 帮了多少次
+	optional int32 dodgeCnt 		= 16; // “！”显示文本 ：本次战斗，强化隐匿触发 X 次*/
+	optional int32 extrAtktimes		= 17; //本次战斗，强化连击触发 X 次
+	optional int32 plantSkillLevel  = 18; // 泰能强化技能等级
+	optional int32  liao1645Cnt		= 19; // M5军事直升机英雄 卡鲁索
+	optional int32  liao1645Kill	= 20;
+	optional int32 nationalHospital		= 21; // 进入国家医院
+	optional int32 kunNa1652Help = 22; // 本次战斗，铁幕保护我方 x 目标 （x为，全部回合buff我方单位的排数量，非士兵数量）
+	optional int32 kunNa1653Kill = 23; // 本次战斗，铁幕消灭敌方 y 名士兵 （y为，1653杀伤的士兵数）
+	optional int32 sssKaiEn1656Cnt = 24; // 本次战斗，负面效果命中空军 x 次
+	optional int32 sssSLM1667Kill = 25; //  本次战斗, 所罗门 战技宝宝击杀数
+
+	optional int32 survivedPower		= 32; //存活（战斗邮件用）
+	optional int32 woundedPower			= 33; //受伤（战斗邮件用）
+	optional int32 deadPower			= 34; //死亡（战斗邮件用）
+	optional int32 killPower			= 35; //击杀（战斗邮件用）
+	optional int32 realLosePower		= 36; //实际损失值(部分战斗会有伤兵衰减,此处为衰减前的值)
+	optional int32 shadowLosePower		= 37; //影子部队损失数量
+	optional int32 eff12086Zhuan 		= 38; //12086】勠力同心
+	optional int32 eff12086ZhuanAll 	= 39; //12086】勠力同心
+	optional int32 plantMilitaryLevel   = 40;//泰能兵军衔等级
+	optional int32 eff12339Cnt = 41; // 开启聚能环护模式:  并在本回合结束时恢复其于最近的
+	optional int32 eff12339Power = 42; //开启聚能环护模式:  并在本回合结束时恢复其于最近的 pow
+	optional int32 eff11044Kill = 43; // 召唤其守护玩家部队
+}
+
+//防御建筑信息(战斗邮件使用)
+message MailDefBuildingPB
+{
+	required int32 buildingId	= 1; //建筑cfgId
+	required int32 killCnt		= 2; //击杀	
+	optional int32 killPower    = 3; //击杀（战斗邮件用）
+}
+
+//部队数据
+message	MailArmyInfo{
+	optional string	playerName		= 1; //玩家名称
+	optional sint32	level			= 2; //等级
+	optional sint32	icon			= 3; //头像
+	optional string pfIcon			= 4; //平台头像
+	repeated MailSoldierPB soldier	= 5; //兵种数据
+	optional int32 totalNum			= 6; //部队总数（侦查报告用）
+	optional bool isAboutValue		= 7; //精确值还是大概值（侦查报告用）
+	repeated PBHeroInfo	hero		= 8; //英雄数据
+	repeated MailDefBuildingPB	defBuilding	= 9; //防御建筑数据
+	optional int32 battlePoint		= 10; //战前战斗力
+	optional int32 disBattlePoint	= 11; //损失战斗力
+	optional string guildName		= 12;
+	optional string guildTag		= 13;
+	repeated int32 superWeponEff	= 14; // 超级武器做用号
+	optional string playerId  		= 15; 
+	optional PBSuperSoldierInfo ssoldier 	= 16;
+	optional ArmourBriefInfo 	armourBrief = 17; // 装备
+	optional int32	blackHoleDeadCnt		= 18; // 黑洞导致敌方的部队死亡数量
+	optional int32 plantStep 		        = 19; // 泰能等级
+	optional int32 nationMilitary           = 20; // 战斗获得军功
+	repeated MailEffVal effVal              = 21; // 作用号数据
+	optional int32 nationalHospital		  = 22; //  个人进入国家医院总量
+	optional int32 swDeadCount            = 23; // 本次统帅之战累计死兵
+	optional PBManhattanInfo manhattan    = 24; //超武信息
+	optional int32 fgylSkill              = 28; //  反攻幽灵使用技能 技能点不足的时候勾选关闭
+	optional PB12541Detail manhattan12541 = 29; //心灵控制器
+	optional PBMechaCoreInfo mechacore    = 30; //机甲核心信息
+}
+
+message PB12541Detail{
+	optional string playerName = 1;
+	optional int32 soldierId = 2;
+	optional int32 kill = 3;
+}
+
+// 邮件中所带的作用号数据
+message MailEffVal
+{
+	required int32 effId  = 1;  // 作用号ID
+	required int32 effVal = 2;  // 作用号值
+}
+
+//战斗邮件
+message	FightMail{
+	optional FightResult result				= 1; //战斗结果
+	optional MailPlayerInfo selfPlayer		= 2; //己方玩家信息
+	optional MailPlayerInfo oppPlayer		= 3; //对方玩家信息
+	repeated RewardItem	items				= 4; //成功奖励或失败损失
+	required FighteInfo	selfFight			= 5; //己方战斗数据
+	required FighteInfo	oppFight			= 6; //对方战斗数据
+	repeated MailArmyInfo selfArmy			= 7; //己方军队数据
+	repeated MailArmyInfo oppArmy			= 8; //对方军队数据
+	repeated EffectPB selfEffs				= 9; //己方作用号信息
+	repeated EffectPB oppfEffs				= 10; //对方作用号信息
+	required int32 battleX					= 11; //战斗地点坐标X
+	required int32 battleY					= 12; //战斗地点坐标Y
+	optional int32 battleRound				= 13; //战斗进行回合数
+	required int32 battleAnalysis			= 14; //战斗分析
+	required int32 battlePrompt				= 15; //战斗提示
+	optional int32 battleGreat				= 16; //是否大胜或者惨败1-是，0-不是
+	optional bool plunderupLimit1007		= 17; // 掠夺达到上限
+	optional bool plunderupLimit1008		= 18; // 掠夺达到上限
+	optional bool plunderupLimit1009		= 19; // 掠夺达到上限
+	optional bool plunderupLimit1010		= 20; // 掠夺达到上限
+	optional bool isLmjy					= 21; // 联盟军演邮件
+	optional bool isTBLY					= 22; // 是联盟锦标赛邮件
+	optional bool isSW				= 25; // 是联盟锦标赛邮件
+	optional int32 duntype		= 26; // 1 lmjy 3 tbly 5 sw 7 cyborg
+}
+
+//防御建筑
+message	DefenceBuilding{
+	optional sint32	id	= 1;//建筑ID
+	optional sint32	num	= 2;//建筑数目
+	optional int32 type = 3; // 1 建筑, 2 士兵 , 3 城墙
+	optional int32 level = 4; // 等级 
+	optional int32 cityDefVal = 5; // 城防值
+	optional int32 fireSpeed = 6;// 燃烧速度 
+	optional int32 honor = 7; // 星
+}
+
+//侦查邮件
+message	DetectMail{
+	optional PBDetectData detectData = 1; // 旧有邮件内容	
+	optional PBDetectManor detectManor	=2; // 侦查联盟堡垒
+	optional int64 selfPower			=3; // 自已当时的战力
+	optional PBDetectCapital detectCapital = 4; // 侦查首都
+	optional PBDetectStrongpoint strongpoint = 5; // 侦查据点
+	optional PBDetectFoggy detectFoggy = 6; // 侦查迷雾
+	optional PBDetectTHRes detectTHRes = 7; // 侦查宝藏点
+	optional PBDetectWarFlag detectWarFlag = 8; // 侦查warFlag
+	optional PBDetectTBLYBuilding tblyBuild = 9; // 泰博利亚8建筑 
+	optional PBDetectSWBuilding starwarsBuild = 10; // 星求大战建筑 
+	optional PBDetectCYBORGBuilding cyborgBuild = 11; // 赛博建筑 
+	optional PBDetectXLZJBuilding xlzjBuild = 12; // 赛博建筑 
+	optional PBDetectDYZZBuilding dyzzBuild = 13; // 泰博利亚8建筑 
+	optional PBDetectYQZZBuilding yqzzBuild = 14; // 月球建筑 
+	optional PBDetectXQHXBuilding xqhxBuild = 15; // 先驱回响
+}
+
+message PBDetectXQHXBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectYQZZBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectXLZJBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectSWBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectCYBORGBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectTBLYBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectDYZZBuilding{
+	optional int32 buildId = 1; // 
+	optional int32 index = 2; // 刷新序号 
+	optional int32	pointX	=3;
+	optional int32  pointY	=4;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+}
+
+message PBDetectTHRes{
+	optional int32 resourceId = 1; // 资源Id
+	optional int32 pointX	=2;
+	optional int32  pointY	=3;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+}
+
+message PBDetectFoggy{
+	optional int32 foggyId = 1; // 迷雾要塞Id
+	optional int32	pointX	=2;
+	optional int32  pointY	=3;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+}
+
+
+message PBDetectStrongpoint{
+	optional int32	pointX	=2;
+	optional int32  pointY	=3;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional int32 cfgId						= 8; // 据点配置id
+}
+
+
+message PBDetectManor{
+	optional string manorName =1; //堡垒名
+	optional int32	manorX	=2;
+	optional int32  manorY	=3;
+	optional int32	manorState = 4; //  堡垒状态(见GuildManor.proto ->GuildManorStat)
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional string	guildTag					= 8; //联盟简称
+}
+
+message PBDetectWarFlag{
+	optional int32	pointX	=2;
+	optional int32  pointY	=3;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+	optional MailPlayerInfo	player				= 8; //被侦查者玩家信息
+	optional string	guildTag		= 9; //联盟简称
+	optional string	guildName		= 10; //联盟全称
+}
+
+message PBDetectCapital{
+	optional int32	pointX	=2;
+	optional int32  pointY	=3;
+	repeated MailArmyInfo defenceArmy			= 5; //防守部队 跟据堡垒状态不同部队作用不同 
+	optional int32 defenceArmyAboutNum			= 6; //防守部队 大至数量
+	optional int32 level						= 7; //雷达等级
+}
+
+message PBDetectData{
+	optional MailPlayerInfo	player				= 1; //被侦查者玩家信息
+	repeated RewardItem	canPlunderItem			= 2; //可掠夺资源
+	optional int32 defenceArmyAboutNum			= 3; //防守部队兵大致总数
+	optional int32 helpArmyAboutNum				= 4; //援军士兵大致总数
+	optional MailArmyInfo defenceArmy			= 5; //防守部队
+	repeated MailArmyInfo helpArmy				= 6; //援军部队
+	optional int32 defenceNum					= 7; //防御武器数目
+	repeated DefenceBuilding defenceBuildings	= 8; //防御建筑组成
+	optional int32 level						= 9; //雷达等级
+	repeated RewardItem	canPlunderItemStore		= 10; //可掠夺资源(未收取)
+	repeated int32 tech							= 12; //  科技
+	repeated SpyTaltentPB talent 	 			= 13; //  天赋
+	optional int32 massNum						= 14; // 发起集结的士兵数量
+	repeated MailArmyInfo massArmy				= 15; // 发起集结的士兵详情
+	optional int32 massNumReach					= 16; // 已到达集结的士兵数量
+	repeated MailArmyInfo massArmyReach			= 17; // 已到达集结的士兵详情
+	repeated MailArmyInfo hiddenArmy			= 18; // 藏兵
+	optional int32 hiddenArmyAboutNum    		= 19; // 藏兵大至总数
+	optional int32 myCityLevel					= 20;  // 大本等级
+	optional string leaderMarchId				= 21; // 队长行军id
+}
+
+message SpyTaltentPB{
+	optional int32 talentId = 1;
+	optional int32 level = 2;
+}
+
+//侦查邮件兵种
+message	DetectMailSoldier
+{
+	required int32 id			= 1;//兵种ID
+	optional int32 num			= 2;//数目（不设数目说明雷达等级不够没有侦查到）
+	optional bool isAboutValue	= 3;//每种兵的数目是否是大约值(true	: 大约值，false	：精确值)
+}
+
+//治伤兵邮件
+message	CureMail{
+	required sint32	hospitalCap	= 1; //医院空位数目
+	required sint32	totalHurt	= 2; //受伤士兵总数（包括医院容不下直接死亡的兵）
+	required sint32	dead		= 3; //死亡士兵数量
+	repeated MailSoldierPB detail =4; // 死兵详情
+}
+
+// 援助资源详情
+message	ResourceAssistance {
+	required int32 itemId =	1;//资源ID
+	required int32 type	= 2;//资源类型
+	required int32 num = 3;//资源数目
+}
+
+// 资源援助邮件
+message	ResAssistanceMail {
+	required int32 playerIcon =	1; // 对方ICON
+	required string	id = 2;	// 对方ID
+	required string	name = 3; // 对方名字
+	required int64 atime = 4; // 援助时间
+	required sint32	x =	5; // 坐标X
+	required sint32	y =	6; // 坐标Y
+	required int32 tradeTaxRate	= 7; //	援助税率
+	repeated ResourceAssistance	resource = 8; // 援助资源详情
+	optional string pfIcon  = 9;  // 平台头像
+	optional string guildTag =10 ; // 联盟简称
+}
+
+// 士兵援助邮件
+message	SoilderAssistanceMail {
+	required int32 playerIcon =	1; // 对方ICON
+	required string	id = 2;	// 对方ID
+	required string	name = 3; // 对方名字
+	required int64 atime = 4; // 援助时间
+	required sint32	x =	5; // 坐标X
+	required sint32	y =	6; // 坐标Y
+	repeated ArmySoldierPB soldier = 7;	// 援助兵种详情
+	optional string pfIcon  = 8;  // 平台头像
+	repeated PBHeroInfo	hero = 9; //英雄数据
+	optional string guildTag =10 ; // 联盟简称
+	optional PBSuperSoldierInfo ssoldier 	= 11;
+	optional ArmourBriefInfo 	armourBrief = 12; // 装备
+}
+
+//查看邮件
+message	HPCheckMailReq
+{
+	required string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//查看邮件返回
+message	HPCheckMailRes
+{
+	required string	id									= 1; //uuId
+	optional int64 createTime							= 2; //创建时间  只在分享时使用
+	optional CommonMail	commonMail						= 3; //通用邮件
+	optional ChatRoomMail chatRoomMail					= 4; //聊天邮件
+	optional MonsterMail monsterMail					= 5; //打怪邮件
+	optional CollectMail collectMail					= 6; //采集邮件
+	optional DetectMail	detectMail						= 7; //侦查邮件
+	optional FightMail fightMail						= 8; //战斗邮件
+	optional CureMail cureMail							= 9; //治疗伤兵邮件
+	optional ResAssistanceMail resAssistanceMail		= 10; //资源援助邮件
+	optional SoilderAssistanceMail assistanceMail		= 11; //士兵援助邮件
+	optional YuriRevengeFightMail yuriRevengeMail		= 12; //尤里复仇战报邮件
+	optional MoveCityInviteMail  moveCityInviteMail     = 13; //迁城邀请
+	optional GuildInviteMail guildInviteMail			= 14; //联盟邀请函
+	optional PveFightMail pveFightMail					= 15; //PVE战报邮件
+	optional PBGuildHospiceMail guildHospiceMail		= 16; //关怀奖励邮件
+	optional PBGuildRankContent guildRankTop3Mail       = 17; //联盟排行榜前三邮件
+	optional PBGundamStartUp gundamStartup				= 18; // 机甲进阶
+	optional bool isLmjy								= 19; // 联盟军演邮件
+    optional PBPlayerDressAskMailContent dressSend		= 20; //装扮赠送
+    optional bool isTBLY								= 21; // 联盟军演邮件
+    optional bool isSW				= 25; // 是联盟锦标赛邮件
+    optional PBTBLYNuclearHitContent tblyNuclear		= 22; // 核弹命中
+    optional PBPlayerGuardDressMailContent  guardDress	= 23; //守护特效.
+    optional PBCYBORGNuclearHitContent cyborgNuclear = 27;
+    optional int32 duntype		= 28; // 1 lmjy 3 tbly 5 sw 7 cyborg
+    optional PBXLZJNuclearHitContent xlzjNuclear = 29;
+	optional PBCyborgContributionMail cyborgContribution = 30;  //赛博重大贡献
+	optional PBYQZZNuclearHitContent yqzzNuclear = 31; //核弹命中
+	optional PBGuildDragonAttackDamageMail dragonAtkMail = 32; //巨龙来袭战报
+}
+
+//查看某一类邮件
+message	HPCheckMailByTypeReq
+{
+	//required int32 type	= 1; //邮件类型
+	repeated string mailId = 1; // 取啥发啥 
+}
+
+//查看某一类邮件返回
+message	HPCheckMailByTypeRes
+{
+	repeated HPCheckMailRes	mails	= 1; //邮件内容
+}
+
+message HPCheckIntegralMail{
+	required MailLiteInfo lite = 1;
+	required HPCheckMailRes content = 2;
+}
+
+//领取奖励
+message	HPGetMailRewardReq
+{
+	required string	id	= 1; //邮件ID
+	required int32 type	= 2; //邮件类型
+}
+
+//邮件分享
+message	HPMailShareReq
+{
+	required string	mailId	= 1; //邮件ID
+	required int32 type		= 2; //邮件类型
+	repeated string parames = 3; // 参数
+	optional ChatType channal = 4;// 默认为分享到联盟.  如分享到其它频道可指定 如: CHAT_CYBORG_SYS 到战场小队
+}
+
+//查看其它玩家邮件
+message	HPCheckOtherPlayerMailReq
+{
+	required string	playerId	= 1; //玩家ID
+	required string	mailId		= 2; //邮件ID
+	required int32 type			= 3; //邮件类型
+}
+
+//返回历史交互玩家
+message	HistoryPlayersRes{
+	repeated ChatRoomMember	member	= 1;//玩家信息
+}
+
+//添加或删除玩家
+message	ChangeMembersReq{
+	required string	mailUuid		= 1;//邮件ID
+	repeated string	playerId		= 2;//添加或删除的玩家的名称
+}
+
+//修改聊天室名称
+message	ChangeChatRoomName{
+	required string	mailUuid		= 1;//邮件ID
+	required string	name			= 2;//聊天室名称
+	optional string	operatorName	= 3;//操作者名称
+}
+
+//服务器推送删除邮件
+message	PushDelMail{
+	repeated string	uuid			= 1;//邮件唯一ID
+}
+
+//服务器推送被踢出聊天室
+message	BeDelFromChatRoomRes{
+	required string	uuid			= 1;//邮件唯一ID
+	optional string	operatorName	= 2;//操作者名称
+}
+
+//玩家退出聊天室
+message	LeaveChatRoomReq{
+	required string	uuid			= 1;//邮件唯一ID
+}
+
+// 请求更新聊天室成员数据（个保法合规需求添加）
+message	UpdateChatRoomReq{
+	required string	roomId		= 1;//聊天室roomId
+}
+
+// 聊天室数据更新
+message	UpdateChatRoom{
+	required string	uuid			= 1;//邮件唯一ID
+	optional string	createrId		= 2;//创建者ID
+	optional string	name			= 3;//聊天室名称
+	optional int32 operatorType		= 4;//成员列表操作类型
+	repeated ChatRoomMember	member	= 5;//成员列表
+}
+
+// 迁城邀请
+message MoveCityInviteMail{
+	required string	playerId	= 1; //玩家ID
+	required string	name		= 2; //玩家名称
+	required sint32	icon		= 3; //玩家头像
+	optional string pfIcon      = 4; //平台头像
+	optional int32 x  			= 5;
+	optional int32 y 			= 6;
+	optional string guildTag 	=7 ; // 联盟简称
+	optional int32 mailState	= 8; // 0 未处理 ,1 拒绝 , 2 接受
+	optional string guildId		= 9; 
+}
+
+//处理迁城邀请
+message ReplyMoveCityInviteMail{
+	optional string mailId = 1;
+	optional int32 state = 2; //1 拒绝 , 2 接受
+}
+
+// 联盟邀请函
+message GuildInviteMail{
+	required string guildId		= 1; //联盟ID
+	required string	playerId	= 2; //盟主ID
+	required string	name		= 3; //盟主名称
+	required sint32	icon		= 4; //盟主头像
+	optional string pfIcon      = 5; //盟主平台头像
+	optional int64 battlePoint	= 6; //联盟战力
+	optional int32 memberNum	= 7; //联盟人数
+	optional int32 memberMaxNum	= 8; //联盟人数上限
+	optional string guildTag 	= 9; // 联盟简称
+	optional string guildName 	= 10; // 联盟简称
+	optional int32 guildFlag	= 11; // 联盟旗帜
+	optional InviteState inviteState	= 12; // 邀请函状态
+}
+
+// 邀请函状态
+enum InviteState{
+	NOTDEAL		= 0; //未处理
+	ACCEPTED	= 1; //已接受
+	REFUSED		= 2; //已拒绝
+}
+
+
+// 联盟关怀奖励邮件
+message PBGuildHospiceMail{
+	optional string pfIcon = 3;
+	optional int32 icon = 4;
+	optional string name = 5;
+	optional string guildTag = 6;
+
+	optional string epfIcon = 12; // 敌方平台头像
+	optional int32 eicon = 13; // 敌方头象
+	optional string ename = 14;  // 敌方名字
+	optional string eguildTag = 15; // 敌方联盟简称
+
+	optional string rewards = 16; //xxx
+	optional int64 battleTime = 17; // 战斗发生时间
+	optional int32 overwhelming = 18; // 1 碾压
+
+	repeated PBHospiceHelper helpers = 20; // 帮助者
+}
+
+message PBHospiceHelper{
+	optional string pfIcon = 1;
+	optional int32 icon = 2;
+	optional string name = 3;
+}
+
+message PBGuildRankContent{
+	repeated GuildGetRankResp ranks = 1;
+}
+
+/**机甲进阶*/
+message PBGundamStartUp{
+	optional PBSuperSoldierInfo ssoldier = 1;
+}
+
+message PBPlayerDressAskMailContent{
+	optional string playerId = 1;
+	optional string playerName = 2;
+	optional string pfIcon = 3;
+	optional int32 level = 4;
+	optional int32 cityLevel = 5;
+	optional int64 power = 6;
+	optional string guildName = 7;
+	optional string guildTag = 8;
+	optional string guildId = 9;
+	optional int64 lastOpTime = 10;
+	optional string sendItem = 11;
+	optional int32 askDressId = 12;
+	optional string content = 13;
+}
+
+message PBPlayerGuardDressMailContent {
+	optional string playerId = 1;
+	optional string playerName = 2;
+	optional string pfIcon = 3;
+	optional int32 level = 4;
+	optional int32 cityLevel = 5;
+	optional int64 power = 6;
+	optional string guildName = 7;
+	optional string guildTag = 8;
+	optional string guildId = 9;
+	optional int64 lastOpTime = 10;
+	optional string sendItem = 11;  //赠送道具
+	optional int32 askDressId = 12; //索要皮肤
+	optional string content = 13;  //
+}
+
+message PBXLZJNuclearHitContent{
+	optional int32 x = 1; // 命中坐标
+	optional int32 y = 2;
+	optional string guildTag = 3;
+	optional string guildname = 4;
+	optional int32 camp = 5;
+	optional MailPlayerInfo tarPlayer = 6; // 被命中玩家城点, 如果没有侧是命中建筑, 或玩家撤离
+	optional int32 killNum = 7;
+	optional float killPow = 8;
+	repeated MailArmyInfo hitPlayers = 9; // 被命中玩家
+}
+
+/**TbLY核弹*/
+message PBTBLYNuclearHitContent{
+	optional int32 x = 1; // 命中坐标
+	optional int32 y = 2;
+	optional string guildTag = 3;
+	optional string guildname = 4;
+	optional int32 camp = 5;
+	optional MailPlayerInfo tarPlayer = 6; // 被命中玩家城点, 如果没有侧是命中建筑, 或玩家撤离
+	optional int32 killNum = 7;
+	optional float killPow = 8;
+	repeated MailArmyInfo hitPlayers = 9; // 被命中玩家
+}
+
+message PBCYBORGNuclearHitContent{
+	optional int32 x = 1; // 命中坐标
+	optional int32 y = 2;
+	optional string guildTag = 3;
+	optional string guildname = 4;
+	optional int32 camp = 5;
+	optional MailPlayerInfo tarPlayer = 6; // 被命中玩家城点, 如果没有侧是命中建筑, 或玩家撤离
+	optional int32 killNum = 7;
+	optional float killPow = 8;
+	repeated MailArmyInfo hitPlayers = 9; // 被命中玩家
+}
+
+message PBYQZZNuclearHitContent{
+	optional int32 x = 1; // 命中坐标
+	optional int32 y = 2;
+	optional string guildTag = 3;
+	optional string guildname = 4;
+	optional int32 camp = 5;
+	optional MailPlayerInfo tarPlayer = 6; // 被命中玩家城点, 如果没有侧是命中建筑, 或玩家撤离
+	optional int32 killNum = 7;
+	optional float killPow = 8;
+	repeated MailArmyInfo hitPlayers = 9; // 被命中玩家
+}
+
+message PBCyborgContributionMail{
+	optional PBCyborgContributePlayer killMax = 1;
+	optional PBCyborgContributePlayer damagedMax = 2;
+	optional PBCyborgContributePlayer monsterMax = 3;
+}
+
+
+
+
+message PBCyborgContributePlayer{
+	optional string playerId = 1;
+	optional string name     = 2;
+	optional sint32	icon	 = 3; //玩家头像
+	optional string pfIcon   = 4;//平台头像
+	optional int32 killPower   = 5; // 杀敌战力
+	optional int32 lostPower   = 6; // 损失防坦战力
+	optional int32 killMonster = 7; // 杀怪
+	
+}
+
+//联盟巨龙来袭战报邮件
+message PBGuildDragonAttackDamageMail{
+	optional int32 x = 1; // 命中坐标
+	optional int32 y = 2;
+	optional PBGuildDragonAttackDamagePlayer selfDamage = 3;
+	repeated PBGuildDragonAttackDamagePlayer rankDamages = 4;
+}
+
+message PBGuildDragonAttackDamagePlayer{
+	optional string playerId = 1;
+	optional string name     = 2;
+	optional sint32	icon	 = 3; //玩家头像
+	optional string pfIcon   = 4;//平台头像
+	optional int32 rank      = 5; //排行
+	optional int32 killScore = 6; // 杀敌积分
+	
+}

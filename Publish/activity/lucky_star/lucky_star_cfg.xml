@@ -1,0 +1,12 @@
+# 抽奖每满多少次会获得奖励
+lotteryCnt = 10
+
+# 保底奖励序列；取lucky_star_lottery对应id内容
+rewardId = 1
+
+# 每次抽奖消耗道具
+cost = 30000_9990005_1
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 259200
+

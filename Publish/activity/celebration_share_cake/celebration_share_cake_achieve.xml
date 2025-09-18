@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data lv="1" cakeCost="30000_23800011_15,30000_23800012_15" rewards="30000_100050_1" bestRewards="30000_1000003_5" supreRewards="30000_1000003_5" />
+      <data lv="2" cakeCost="30000_23800011_15,30000_23800012_15" rewards="30000_840194_150" bestRewards="30000_840194_300" supreRewards="30000_840194_450" />
+      <data lv="3" cakeCost="30000_23800011_15,30000_23800012_15" rewards="30000_3010002_500" bestRewards="30000_3010002_1000" supreRewards="30000_1480001_300" />
+      <data lv="4" cakeCost="30000_23800011_15,30000_23800012_15" rewards="30000_1300017_75" bestRewards="30000_1300017_150" supreRewards="30000_1300017_225" />
+      <data lv="5" cakeCost="30000_23800011_15,30000_23800012_15" rewards="30000_800000_15" bestRewards="30000_800000_30" supreRewards="30000_802003_10" />
+      <data lv="6" cakeCost="30000_23800011_30,30000_23800012_30" rewards="30000_100050_2" bestRewards="30000_810002_2" supreRewards="30000_100060_1" />
+      <data lv="7" cakeCost="30000_23800011_30,30000_23800012_30" rewards="30000_840194_150" bestRewards="30000_840194_300" supreRewards="30000_840194_450" />
+      <data lv="8" cakeCost="30000_23800011_30,30000_23800012_30" rewards="30000_3010002_500" bestRewards="30000_3010002_1000" supreRewards="30000_1480001_300" />
+      <data lv="9" cakeCost="30000_23800011_30,30000_23800012_30" rewards="30000_1300017_75" bestRewards="30000_1300017_150" supreRewards="30000_1300017_225" />
+      <data lv="10" cakeCost="30000_23800011_30,30000_23800012_30" rewards="30000_800000_20" bestRewards="30000_800000_40" supreRewards="30000_802003_15" />
+      <data lv="11" cakeCost="30000_23800011_45,30000_23800012_45" rewards="30000_810002_1" bestRewards="30000_100060_1" supreRewards="30000_100060_1" />
+      <data lv="12" cakeCost="30000_23800011_45,30000_23800012_45" rewards="30000_1800000_75" bestRewards="30000_1800000_150" supreRewards="30000_1800001_15" />
+      <data lv="13" cakeCost="30000_23800011_45,30000_23800012_45" rewards="30000_1480001_150" bestRewards="30000_1480001_300" supreRewards="30000_1480001_450" />
+      <data lv="14" cakeCost="30000_23800011_45,30000_23800012_45" rewards="30000_1300017_150" bestRewards="30000_1300017_300" supreRewards="30000_1300017_450" />
+      <data lv="15" cakeCost="30000_23800011_45,30000_23800012_45" rewards="30000_800000_25" bestRewards="30000_800000_50" supreRewards="30000_802003_20" />
+      <data lv="16" cakeCost="30000_23800011_60,30000_23800012_60" rewards="30000_9820000_1" bestRewards="30000_1780083_10" supreRewards="30000_9421000_1" />
+      <data lv="17" cakeCost="30000_23800011_60,30000_23800012_60" rewards="30000_1800000_150" bestRewards="30000_1800000_300" supreRewards="30000_1800001_25" />
+      <data lv="18" cakeCost="30000_23800011_60,30000_23800012_60" rewards="30000_1300017_150" bestRewards="30000_1300017_300" supreRewards="30000_1300017_450" />
+      <data lv="19" cakeCost="30000_23800011_60,30000_23800012_60" rewards="30000_800000_30" bestRewards="30000_800000_60" supreRewards="30000_802003_25" />
+      <data lv="20" cakeCost="30000_23800011_60,30000_23800012_60" rewards="30000_1000003_10" bestRewards="30000_1000003_20" supreRewards="30000_1000003_20" />
+</root>

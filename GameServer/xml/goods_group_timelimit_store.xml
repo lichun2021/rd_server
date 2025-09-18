@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data groupId="1" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="1" />
+      <data groupId="2" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="2" />
+      <data groupId="3" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="3" />
+      <data groupId="4" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="4" />
+      <data groupId="5" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="5" />
+      <data groupId="6" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="6" />
+      <data groupId="7" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="7" />
+      <data groupId="8" includeItem="810001_810002_810003_810004_810005_810006_810007_810008" triggerType="8" />
+</root>

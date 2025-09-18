@@ -1,0 +1,17 @@
+return {
+	prop =
+	{
+		activityId = 73,
+		name = [[关注公众号]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间，关注微信公众号获取更多游戏资讯，领取更多游戏礼包哦；</font>]],
+		priority = 11220,
+		icon = [[Activity_Icon_73_Nor.png]],
+		selecticon = [[Activity_Icon_73_Sel.png]],
+		urlQQ = [[https://w.url.cn/s/AJBYhCX]],
+		urlWX = [[https://w.url.cn/s/AJBYhCX]],
+		guestUrl = [[https://w.url.cn/s/AJBYhCX]],
+		platform = [[]],
+	},
+
+}

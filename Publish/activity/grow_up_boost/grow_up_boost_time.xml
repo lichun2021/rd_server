@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2024-7-24 00:00:00" startTime="2024-7-24 00:00:00" endTime="2024-7-30 23:59:59" hiddenTime="2024-7-30 23:59:59" configId="1" />
+      <data termId="2" showTime="2024-7-31 00:00:00" startTime="2024-7-31 00:00:00" endTime="2024-8-4 23:59:59" hiddenTime="2024-8-4 23:59:59" configId="2" />
+      <data termId="3" showTime="2024-8-7 00:00:00" startTime="2024-8-7 00:00:00" endTime="2024-8-11 23:59:59" hiddenTime="2024-8-11 23:59:59" configId="3" />
+</root>

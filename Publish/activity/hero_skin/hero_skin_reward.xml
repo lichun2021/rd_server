@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" needGold="10000_1000_30" needItem="30000_1150126_3" point="0_50" rewardID="1_2_3_4_5" />
+      <data id="2" needGold="10000_1000_100" needItem="30000_1150126_10" point="51_100" rewardID="6_7_8_9" />
+      <data id="3" needGold="10000_1000_300" needItem="30000_1150126_30" point="101_125" rewardID="10_11_12" />
+      <data id="4" needGold="10000_1000_980" needItem="30000_1150126_98" point="126_150" rewardID="13_14" />
+      <data id="5" needGold="10000_1000_6480" needItem="30000_1150126_648" point="151_200" rewardID="15" />
+</root>

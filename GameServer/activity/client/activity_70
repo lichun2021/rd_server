@@ -1,0 +1,19 @@
+return {
+	prop =
+	{
+		activityId = 70,
+		name = [[老友召回]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">玩家可在活动页面召回流失用户可获得抽奖机会，符合条件的回流玩家可额外获得丰厚奖励</font>]],
+		priority = 11280,
+		icon = [[Activity_Icon_70_Nor.png]],
+		selecticon = [[Activity_Icon_70_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20250418new/index3.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20250418new/index3.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20250418new/index3.html]],
+		platform = [[]],
+		urlDailyReward = [[]],
+	},
+
+}

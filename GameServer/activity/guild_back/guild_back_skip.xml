@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" skipTxt="集结攻击其他玩家" isShow="1" gotoType="1201" />
+      <data id="2" skipTxt="集结攻击幽灵基地" isShow="1" gotoType="51" gotoParam="0_0_0_8" />
+      <data id="3" skipTxt="集结攻击狂暴机甲" isShow="1" gotoType="51" gotoParam="0_0_0_12" />
+      <data id="4" skipTxt="集结攻击入侵首领" isShow="1" gotoType="1201" />
+      <data id="5" skipTxt="参加联合军演" isShow="1" gotoType="1321" />
+      <data id="6" skipTxt="参加星海激战" isShow="1" gotoType="300" gotoParam="8" />
+      <data id="7" skipTxt="参加泰伯利亚" isShow="1" gotoType="300" gotoParam="1" />
+</root>

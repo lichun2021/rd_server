@@ -1,0 +1,188 @@
+ext.ivypath = "../HawkEngine/lib";
+
+subprojects {
+	apply plugin: 'java';
+	sourceCompatibility=1.8;
+	
+	tasks.withType(JavaCompile) {		
+		options.encoding = "UTF-8";
+	}
+}
+
+def publishDir = 'Publish';
+def dependLibDir = 'HawkEngine/lib';
+// 版本文件环境类型选择：由gradle启动命令参数-D输入系统属性envType。
+// envType可选：windows，linux
+// 发布临时路径自定义：由gradle启动命令参数-D输入系统属性publishPath。
+
+// 发布
+task publish(type:Copy) {
+
+}
+
+// 清理发布文件
+task cleanPublish() {
+	def publishPath = System.properties['publishPath'];
+	if (publishPath != null) {
+		publishDir = publishPath;
+	}
+	// 排除svn版本文件
+	fileTree(publishDir).exclude(".svn/**/*").each{
+		it.delete();
+	};
+	def publish = file(publishDir);
+	publish.listFiles().each {
+		if(it.name.endsWith('.svn') == false) {
+			it.deleteDir();
+		}
+	};
+	
+	file('GameServer/lib/gameprotocol.jar').delete();
+	file('GameServer/lib/gameactivity.jar').delete();
+	file('GameServer/lib/gamelib.jar').delete();
+	file('GameServer/lib/gamelog.jar').delete();
+}
+
+// 复制构建出来的jars
+task copyBuildedJars(type:Copy) {
+	copy {
+		from 'Protocol/Protobuf/Java/build/libs';
+		from 'GameActivity/build/libs';
+		from 'GameLog/build/libs';
+		from 'GameLib/build/libs';		
+		into 'GameServer/lib';
+		include '*.jar';
+		include '*.dll';
+		include '*.so';
+	}
+}
+
+// 发布游戏文件
+task publishGameFiles(type:Copy) {
+	copy {
+		from 'GameServer/cfg/';
+		into publishDir + '/cfg';
+	}
+	
+	copy {
+		from 'GameServer/log4j/';
+		into publishDir + '/log4j';
+	}
+	
+	copy {
+		from 'GameServer/script/';
+		into publishDir + '/script';
+		exclude 'bin';
+	}
+	
+	copy {
+		from 'GameServer/gmscript/';
+		into publishDir + '/gmscript';
+		exclude 'bin';
+	}
+	
+	copy {
+		from 'GameServer/sql/';
+		into publishDir + '/sql';
+	}
+	
+	copy {
+		from 'GameServer/tmp/';
+		into publishDir + '/tmp';
+	}
+	
+	copy {
+		from 'GameServer/activity/';
+		into publishDir + '/activity';
+	}
+	
+	copy {
+		from 'GameServer/tomcat/';
+		into publishDir + '/tomcat';
+	}
+	
+	copy {
+		from 'GameServer/xml/';
+		into publishDir + '/xml';
+	}
+	
+	copy {
+		from 'GameServer/groupData/';
+		into publishDir + '/groupData';
+	}
+}
+
+// 发布游戏依赖jars
+task publishGameJars(type:Copy) {
+	copy {
+		from 'HawkEngine/lib';
+		into publishDir + '/lib';
+		include '**/*.jar';
+		include '*.dll';
+		include '*.so';
+	}
+	
+	copy {
+		from 'GameServer/lib/';
+		into publishDir + '/lib';
+		include '**/*.jar';
+		include '*.dll';
+		include '*.so';
+		include 'l5sys.so.java1.8.libc-2.4';
+	}
+	
+	copy {
+		from 'GameServer/build/libs';
+		into publishDir;
+		include '*.jar';
+	}
+	
+	copy {
+		from 'Protocol/Protobuf/Java/build/libs';
+		into publishDir + '/lib';
+		include '*.jar';
+	}
+	
+	copy {
+		from 'GameLib/build/libs';
+		into publishDir + '/lib';
+		include '*.jar';
+	}
+	
+	copy {
+		from 'GameLog/build/libs';
+		into publishDir + '/lib';
+		include '*.jar';
+	}
+	
+	copy {
+		from 'GameActivity/build/libs';
+		into publishDir + '/lib';
+		include '*.jar';
+	}
+}
+
+// 发布版本文件
+task publishVersionFiles() {
+	def versionFolder = System.properties['versionFolder'];
+	if (versionFolder == null) {
+		copy {
+			// 默认windows文件夹
+			from 'Launcher/windows';
+			into publishDir;
+		}
+	} else {
+		copy {
+			// 复制版本文件
+			from 'Launcher/' + versionFolder;
+			into publishDir;
+		}
+	}
+}
+
+// 行为依赖
+copyBuildedJars.dependsOn 'cleanPublish';
+publishGameFiles.dependsOn 'copyBuildedJars';
+publishGameJars.dependsOn 'publishGameFiles';
+publishVersionFiles.dependsOn 'publishGameJars';
+publish.dependsOn 'publishVersionFiles';

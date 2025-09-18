@@ -1,0 +1,18 @@
+return {
+	prop =
+	{
+		activityId = 70,
+		name = [[最美指挥官]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">最美指挥官活动正式开始，点击立即前往按钮参与活动。</font>]],
+		priority = 11280,
+		icon = [[Activity_Icon_70_Nor.png]],
+		selecticon = [[Activity_Icon_70_Sel.png]],
+		urlType = [[]],
+		urlQQ = [[https://hongjing.qq.com/act/a20220328vote/index.html]],
+		urlWX = [[https://hongjing.qq.com/act/a20220328vote/index.html]],
+		guestUrl = [[https://hongjing.qq.com/act/a20220328vote/index.html]],
+		platform = [[]],
+	},
+
+}

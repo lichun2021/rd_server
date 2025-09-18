@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="901001" group="1" isUse="1" newShelfMark="0" shopItemID="100050" number="1" buyLV="1" price="10000_1000_75" />
+      <data id="901002" group="1" isUse="1" newShelfMark="0" shopItemID="810002" number="1" buyLV="1" price="10000_1000_260" />
+      <data id="21063002" group="1" isUse="1" newShelfMark="0" shopItemID="21063002" number="1" buyLV="1" price="10000_1000_30" />
+      <data id="21063003" group="1" isUse="1" newShelfMark="0" shopItemID="21063003" number="1" buyLV="1" price="10000_1000_30" />
+      <data id="901003" group="3" isUse="1" newShelfMark="0" shopItemID="810000" number="1" buyLV="1" price="10000_1001_4" />
+      <data id="901004" group="3" isUse="1" newShelfMark="0" shopItemID="810001" number="1" buyLV="1" price="10000_1001_40" />
+      <data id="901005" group="3" isUse="1" newShelfMark="0" shopItemID="810003" number="1" buyLV="1" price="10000_1001_4" />
+      <data id="901006" group="3" isUse="1" newShelfMark="0" shopItemID="101050" number="1" buyLV="1" price="10000_1001_75" />
+      <data id="901007" group="3" isUse="1" newShelfMark="0" shopItemID="810010" number="1" buyLV="1" price="10000_1001_4" />
+      <data id="901008" group="3" isUse="1" newShelfMark="0" shopItemID="104050" number="1" buyLV="1" price="10000_1001_75" />
+      <data id="901010" group="3" isUse="1" newShelfMark="0" shopItemID="810008" number="1" buyLV="1" price="10000_1001_4" />
+      <data id="901011" group="3" isUse="1" newShelfMark="0" shopItemID="103050" number="1" buyLV="1" price="10000_1001_75" />
+      <data id="901012" group="3" isUse="1" newShelfMark="0" shopItemID="810012" number="1" buyLV="1" price="10000_1001_4" />
+      <data id="901013" group="3" isUse="1" newShelfMark="0" shopItemID="105050" number="1" buyLV="1" price="10000_1001_75" />
+      <data id="901016" group="4" isUse="1" newShelfMark="0" shopItemID="820001" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901017" group="4" isUse="1" newShelfMark="0" shopItemID="820002" number="1" buyLV="1" price="10000_1001_150" />
+      <data id="901022" group="2" isUse="1" newShelfMark="0" shopItemID="850004" number="1" buyLV="1" price="10000_1001_6" />
+      <data id="901023" group="2" isUse="1" newShelfMark="0" shopItemID="850005" number="1" buyLV="1" price="10000_1001_24" />
+      <data id="901024" group="2" isUse="1" newShelfMark="0" shopItemID="850006" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901025" group="2" isUse="1" newShelfMark="0" shopItemID="850007" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901026" group="2" isUse="1" newShelfMark="0" shopItemID="850008" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901027" group="2" isUse="1" newShelfMark="0" shopItemID="850009" number="1" buyLV="1" price="10000_1001_1500" />
+      <data id="901032" group="2" isUse="1" newShelfMark="0" shopItemID="850014" number="1" buyLV="1" price="10000_1001_6" />
+      <data id="901033" group="2" isUse="1" newShelfMark="0" shopItemID="850015" number="1" buyLV="1" price="10000_1001_24" />
+      <data id="901034" group="2" isUse="1" newShelfMark="0" shopItemID="850016" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901035" group="2" isUse="1" newShelfMark="0" shopItemID="850017" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901036" group="2" isUse="1" newShelfMark="0" shopItemID="850018" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901037" group="2" isUse="1" newShelfMark="0" shopItemID="850019" number="1" buyLV="1" price="10000_1001_1500" />
+      <data id="901042" group="2" isUse="1" newShelfMark="0" shopItemID="850024" number="1" buyLV="1" price="10000_1001_6" />
+      <data id="901043" group="2" isUse="1" newShelfMark="0" shopItemID="850025" number="1" buyLV="1" price="10000_1001_24" />
+      <data id="901044" group="2" isUse="1" newShelfMark="0" shopItemID="850026" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901045" group="2" isUse="1" newShelfMark="0" shopItemID="850027" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901046" group="2" isUse="1" newShelfMark="0" shopItemID="850028" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901047" group="2" isUse="1" newShelfMark="0" shopItemID="850029" number="1" buyLV="1" price="10000_1001_1500" />
+      <data id="901052" group="2" isUse="1" newShelfMark="0" shopItemID="850034" number="1" buyLV="1" price="10000_1001_6" />
+      <data id="901053" group="2" isUse="1" newShelfMark="0" shopItemID="850035" number="1" buyLV="1" price="10000_1001_24" />
+      <data id="901054" group="2" isUse="1" newShelfMark="0" shopItemID="850036" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901055" group="2" isUse="1" newShelfMark="0" shopItemID="850037" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901056" group="2" isUse="1" newShelfMark="0" shopItemID="850038" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901057" group="2" isUse="1" newShelfMark="0" shopItemID="850039" number="1" buyLV="1" price="10000_1001_1500" />
+      <data id="901058" isUse="0" newShelfMark="0" shopItemID="851040" number="1" buyLV="1" price="10000_1001_6" />
+      <data id="901059" isUse="0" newShelfMark="0" shopItemID="851060" number="1" buyLV="1" price="10000_1001_24" />
+      <data id="901060" isUse="0" newShelfMark="0" shopItemID="851070" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901061" isUse="0" newShelfMark="0" shopItemID="851080" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901062" isUse="0" newShelfMark="0" shopItemID="851090" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901063" isUse="0" newShelfMark="0" shopItemID="851100" number="1" buyLV="1" price="10000_1001_1500" />
+      <data id="901075" group="4" isUse="1" newShelfMark="0" shopItemID="830014" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901076" group="4" isUse="1" newShelfMark="0" shopItemID="830017" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901092" group="4" isUse="1" newShelfMark="0" shopItemID="830060" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="901077" group="4" isUse="1" newShelfMark="0" shopItemID="830001" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901078" group="4" isUse="1" newShelfMark="0" shopItemID="830002" number="1" buyLV="1" price="10000_1001_210" />
+      <data id="901079" group="1" isUse="1" newShelfMark="0" shopItemID="830003" number="1" buyLV="1" price="10000_1000_400" />
+      <data id="901083" isUse="0" newShelfMark="0" shopItemID="830039" number="1" buyLV="1" price="10000_1001_750" />
+      <data id="901084" group="4" isUse="1" newShelfMark="0" shopItemID="830027" number="1" buyLV="1" price="10000_1001_150" />
+      <data id="901085" isUse="0" newShelfMark="0" shopItemID="830028" number="1" buyLV="1" price="10000_1001_300" />
+      <data id="901086" isUse="0" newShelfMark="0" shopItemID="830015" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901087" isUse="0" newShelfMark="0" shopItemID="830016" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901088" isUse="0" newShelfMark="0" shopItemID="830012" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901089" isUse="0" newShelfMark="0" shopItemID="830013" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901090" isUse="0" newShelfMark="0" shopItemID="830058" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901091" isUse="0" newShelfMark="0" shopItemID="830059" number="1" buyLV="1" price="10000_1001_180" />
+      <data id="901100" group="4" isUse="1" newShelfMark="0" shopItemID="830024" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901101" group="4" isUse="1" newShelfMark="0" shopItemID="830025" number="1" buyLV="1" price="10000_1001_500" />
+      <data id="901102" group="4" isUse="1" newShelfMark="0" shopItemID="830026" number="1" buyLV="1" price="10000_1001_50" />
+      <data id="901104" isUse="0" newShelfMark="0" shopItemID="830028" number="1" buyLV="1" price="10000_1001_300" />
+      <data id="901105" isUse="0" newShelfMark="0" shopItemID="830029" number="1" buyLV="1" price="10000_1001_30" />
+      <data id="901106" group="4" isUse="1" newShelfMark="0" shopItemID="830030" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901107" isUse="0" newShelfMark="0" shopItemID="830031" number="1" buyLV="1" price="10000_1001_5" />
+      <data id="901108" isUse="0" newShelfMark="0" shopItemID="830032" number="1" buyLV="1" price="10000_1001_5" />
+      <data id="901109" isUse="0" newShelfMark="0" shopItemID="830033" number="1" buyLV="1" price="10000_1001_10" />
+      <data id="901110" isUse="0" newShelfMark="0" shopItemID="830034" number="1" buyLV="1" price="10000_1001_20" />
+      <data id="901111" isUse="0" newShelfMark="0" shopItemID="840151" number="1" buyLV="1" buyCount="100" price="10000_1001_68" />
+      <data id="500005" isUse="0" newShelfMark="0" shopItemID="840152" number="1" buyLV="1" buyCount="100" price="10000_1001_58" />
+      <data id="500010" isUse="0" newShelfMark="0" shopItemID="840153" number="1" buyLV="1" buyCount="100" price="10000_1001_58" />
+      <data id="500015" isUse="0" newShelfMark="0" shopItemID="840160" number="1" buyLV="1" price="10000_1000_68" />
+      <data id="901112" group="5" isUse="1" newShelfMark="0" shopItemID="1300006" number="1" buyLV="1" price="10000_1001_2" />
+      <data id="901113" group="5" isUse="1" newShelfMark="0" shopItemID="1300009" number="1" buyLV="1" price="10000_1001_1" />
+      <data id="901114" group="5" isUse="1" newShelfMark="0" shopItemID="800100" number="1" buyLV="1" price="10000_1001_50" />
+      <data id="901115" group="5" isUse="1" newShelfMark="0" shopItemID="800101" number="1" buyLV="1" price="10000_1001_300" />
+      <data id="901116" group="5" isUse="1" newShelfMark="0" shopItemID="800102" number="1" buyLV="1" price="10000_1001_10" />
+      <data id="901117" group="5" isUse="1" newShelfMark="0" shopItemID="800103" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901118" group="4" isUse="1" newShelfMark="0" shopItemID="830035" number="1" buyLV="1" price="10000_1001_50" />
+      <data id="901119" group="4" isUse="1" newShelfMark="0" shopItemID="830036" number="1" buyLV="1" price="10000_1001_200" />
+      <data id="901120" group="4" isUse="1" newShelfMark="0" shopItemID="830037" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="901121" group="4" isUse="1" newShelfMark="0" shopItemID="830038" number="1" buyLV="1" price="10000_1001_400" />
+      <data id="901170" group="1" isUse="1" newShelfMark="0" shopItemID="100060" number="1" buyLV="1" price="10000_1000_700" />
+      <data id="902001" group="1" isUse="1" newShelfMark="0" shopItemID="800106" number="1" buyLV="1" price="10000_1000_75" />
+      <data id="902002" isUse="0" newShelfMark="0" shopItemID="800105" number="1" buyLV="1" price="10000_1001_200" />
+      <data id="902003" isUse="0" newShelfMark="0" shopItemID="800107" number="1" buyLV="1" price="10000_1001_200" />
+      <data id="902004" group="5" isUse="1" newShelfMark="0" shopItemID="1510001" number="1" buyLV="1" price="10000_1001_1" />
+      <data id="902005" group="5" isUse="1" newShelfMark="0" shopItemID="1510002" number="1" buyLV="1" price="10000_1001_3" />
+      <data id="902006" group="5" isUse="1" newShelfMark="0" shopItemID="1510003" number="1" buyLV="1" price="10000_1001_9" />
+      <data id="902007" group="5" isUse="1" newShelfMark="0" shopItemID="1510004" number="1" buyLV="1" price="10000_1001_30" />
+      <data id="902008" group="5" isUse="1" newShelfMark="0" shopItemID="1510005" number="1" buyLV="1" price="10000_1001_90" />
+      <data id="902009" group="5" isUse="1" newShelfMark="0" shopItemID="13310001" number="1" buyLV="1" price="10000_1001_1" />
+      <data id="902010" group="5" isUse="1" newShelfMark="0" shopItemID="13310002" number="1" buyLV="1" price="10000_1001_3" />
+      <data id="902011" group="5" isUse="1" newShelfMark="0" shopItemID="13310003" number="1" buyLV="1" price="10000_1001_9" />
+      <data id="902012" group="5" isUse="1" newShelfMark="0" shopItemID="13310004" number="1" buyLV="1" price="10000_1001_30" />
+      <data id="902013" group="5" isUse="1" newShelfMark="0" shopItemID="13310005" number="1" buyLV="1" price="10000_1001_90" />
+      <data id="902014" group="5" isUse="1" newShelfMark="0" shopItemID="800143" number="1" buyLV="1" price="10000_1001_50" />
+      <data id="902015" group="5" isUse="1" newShelfMark="0" shopItemID="800109" number="1" buyLV="1" price="10000_1001_38" />
+      <data id="903001" isUse="1" newShelfMark="0" shopItemID="1300006" number="1" buyLV="1" price="10000_1001_2" />
+      <data id="903002" isUse="1" newShelfMark="0" shopItemID="1300006" number="10" buyLV="1" price="10000_1001_16" />
+      <data id="903003" isUse="1" newShelfMark="0" shopItemID="1300006" number="100" buyLV="1" price="10000_1001_150" />
+      <data id="903004" isUse="1" newShelfMark="0" shopItemID="1300006" number="1000" buyLV="1" price="10000_1001_1350" />
+      <data id="903013" isUse="1" newShelfMark="0" shopItemID="1300009" number="1" buyLV="1" price="10000_1001_1" />
+      <data id="903014" isUse="1" newShelfMark="0" shopItemID="1300009" number="10" buyLV="1" price="10000_1001_9" />
+      <data id="903015" isUse="1" newShelfMark="0" shopItemID="1300009" number="100" buyLV="1" price="10000_1001_85" />
+      <data id="903016" isUse="1" newShelfMark="0" shopItemID="1300009" number="1000" buyLV="1" price="10000_1001_800" />
+      <data id="903017" group="5" isUse="0" newShelfMark="0" shopItemID="15210001" number="1" buyLV="12" buyCount="100" price="10000_1001_25" />
+      <data id="903018" group="5" isUse="0" newShelfMark="0" shopItemID="15210002" number="1" buyLV="12" buyCount="100" price="10000_1001_25" />
+      <data id="903019" group="5" isUse="0" newShelfMark="0" shopItemID="15210003" number="1" buyLV="12" buyCount="100" price="10000_1001_25" />
+      <data id="903020" group="5" isUse="0" newShelfMark="0" shopItemID="15210004" number="1" buyLV="12" buyCount="100" price="10000_1001_25" />
+      <data id="903025" group="5" isUse="1" newShelfMark="1" shopItemID="15210005" number="1" buyLV="12" buyCount="100" price="10000_1001_35" />
+      <data id="903026" group="5" isUse="1" newShelfMark="1" shopItemID="15210006" number="1" buyLV="12" buyCount="100" price="10000_1001_35" />
+      <data id="903027" group="5" isUse="1" newShelfMark="1" shopItemID="15210007" number="1" buyLV="12" buyCount="100" price="10000_1001_35" />
+      <data id="903028" group="5" isUse="1" newShelfMark="1" shopItemID="15210008" number="1" buyLV="12" buyCount="100" price="10000_1001_35" />
+      <data id="1490001" isUse="0" newShelfMark="0" shopItemID="1490001" number="1" buyLV="1" price="10000_1001_30" />
+      <data id="1490002" isUse="0" newShelfMark="0" shopItemID="1490002" number="1" buyLV="1" price="10000_1001_60" />
+      <data id="1490003" isUse="0" newShelfMark="0" shopItemID="1490003" number="1" buyLV="1" price="10000_1001_120" />
+      <data id="1490004" isUse="0" newShelfMark="0" shopItemID="1490004" number="1" buyLV="1" price="10000_1001_480" />
+      <data id="1300017" group="5" isUse="1" newShelfMark="0" shopItemID="1300017" number="1" buyLV="1" buyCount="100" price="10000_1001_25" />
+      <data id="1780080" isUse="0" newShelfMark="0" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" />
+      <data id="1780081" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-5-6 00:00:00" hiddenTime="2019-5-12 23:59:59" />
+      <data id="1780082" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-5-27 00:00:00" hiddenTime="2019-6-2 23:59:59" />
+      <data id="1780083" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-6-26 00:00:00" hiddenTime="2019-6-30 23:59:59" />
+      <data id="1780084" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-7-24 00:00:00" hiddenTime="2019-7-28 23:59:59" />
+      <data id="1780085" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-8-27 00:00:00" hiddenTime="2019-8-31 23:59:59" />
+      <data id="1780086" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-9-27 00:00:00" hiddenTime="2019-10-1 23:59:59" />
+      <data id="1780087" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-10-13 00:00:00" hiddenTime="2019-10-17 23:59:59" />
+      <data id="1780088" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2019-12-1 00:00:00" hiddenTime="2019-12-5 23:59:59" />
+      <data id="1780089" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-1-1 00:00:00" hiddenTime="2020-1-5 23:59:59" />
+      <data id="1780090" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-2-1 00:00:00" hiddenTime="2020-2-5 23:59:59" />
+      <data id="1780091" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-3-2 00:00:00" hiddenTime="2020-3-6 23:59:59" />
+      <data id="1780092" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-4-5 00:00:00" hiddenTime="2020-4-9 23:59:59" />
+      <data id="1780093" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-5-4 00:00:00" hiddenTime="2020-5-8 23:59:59" />
+      <data id="1780094" group="5" isUse="1" newShelfMark="1" shopItemID="1780080" number="1" buyLV="1" buyCount="100" price="10000_1001_188" showTime="2020-6-1 00:00:00" hiddenTime="2020-6-5 23:59:59" />
+      <data id="3080001" group="5" isUse="1" newShelfMark="1" shopItemID="1400008" number="1" buyLV="1" buyCount="100" price="10000_1001_20" showTime="2025-7-18 00:00:00" hiddenTime="2025-7-21 23:59:59" />
+      <data id="1790001" group="1" isUse="1" newShelfMark="1" shopItemID="800000" number="1" buyLV="1" price="10000_1000_128" />
+      <data id="1790010" group="1" isUse="1" newShelfMark="1" shopItemID="800002" number="1" buyLV="1" buyCount="100" price="10000_1000_20" />
+      <data id="1790002" group="5" isUse="1" newShelfMark="1" shopItemID="800001" number="1" buyLV="1" buyCount="200" price="10000_1001_10" />
+      <data id="1790003" group="5" isUse="1" newShelfMark="1" shopItemID="801001" number="1" buyLV="1" price="10000_1001_1" />
+      <data id="1790004" group="5" isUse="1" newShelfMark="1" shopItemID="801002" number="1" buyLV="1" price="10000_1001_5" />
+      <data id="1790005" group="5" isUse="1" newShelfMark="1" shopItemID="801003" number="1" buyLV="1" price="10000_1001_50" />
+      <data id="1790006" group="5" isUse="1" newShelfMark="1" shopItemID="801004" number="1" buyLV="1" price="10000_1001_200" />
+      <data id="1790007" group="1" isUse="1" newShelfMark="0" shopItemID="1490005" number="1" buyLV="1" price="10000_1000_500" />
+      <data id="1790011" group="5" isUse="1" newShelfMark="1" shopItemID="21070058" number="1" buyLV="35" buyCount="200" price="10000_1001_50" />
+      <data id="903021" isUse="1" newShelfMark="0" shopItemID="9990009" number="1" buyLV="1" price="10000_1001_30" extraItem="30000_840172_1" />
+      <data id="903022" isUse="1" newShelfMark="0" shopItemID="9990009" number="10" buyLV="1" price="10000_1001_250" extraItem="30000_840172_10" />
+      <data id="903023" isUse="1" newShelfMark="0" shopItemID="9990009" number="50" buyLV="1" price="10000_1001_1100" extraItem="30000_840172_50" />
+      <data id="903024" isUse="1" newShelfMark="0" shopItemID="9990009" number="100" buyLV="1" price="10000_1001_2000" extraItem="30000_840172_100" />
+      <data id="1150128" group="1" isUse="1" newShelfMark="1" shopItemID="1150128" number="1" buyLV="1" buyCount="1" price="10000_1000_99" />
+      <data id="1800001" group="5" isUse="1" newShelfMark="1" shopItemID="9071001" number="1" buyLV="1" price="10000_1001_100" />
+      <data id="1150116" isUse="1" newShelfMark="0" shopItemID="1150116" number="1" buyLV="1" buyCount="7" price="10000_1001_50" />
+      <data id="1800002" group="5" isUse="1" newShelfMark="1" shopItemID="1800000" number="1" buyLV="1" buyCount="100" price="10000_1001_10" />
+      <data id="2380001" group="5" isUse="1" newShelfMark="1" shopItemID="23810001" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2021-10-09 00:00:00" hiddenTime="2021-10-15 23:59:59" />
+      <data id="2380002" group="5" isUse="1" newShelfMark="1" shopItemID="23810002" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2021-10-09 00:00:00" hiddenTime="2021-10-15 23:59:59" />
+      <data id="21012002" group="5" isUse="1" newShelfMark="1" shopItemID="21012002" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-01-31 00:00:00" hiddenTime="2022-02-06 23:59:59" />
+      <data id="21012003" group="5" isUse="1" newShelfMark="1" shopItemID="21012003" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-01-31 00:00:00" hiddenTime="2022-02-06 23:59:59" />
+      <data id="23800003" group="5" isUse="1" newShelfMark="1" shopItemID="23800003" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-03-29 00:00:00" hiddenTime="2022-04-04 23:59:59" />
+      <data id="23800004" group="5" isUse="1" newShelfMark="1" shopItemID="23800004" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-03-29 00:00:00" hiddenTime="2022-04-04 23:59:59" />
+      <data id="23800005" group="5" isUse="1" newShelfMark="1" shopItemID="23800005" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-04-30 00:00:00" hiddenTime="2022-05-06 23:59:59" />
+      <data id="23800006" group="5" isUse="1" newShelfMark="1" shopItemID="23800006" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-04-30 00:00:00" hiddenTime="2022-05-06 23:59:59" />
+      <data id="21063005" group="1" isUse="1" newShelfMark="1" shopItemID="21063005" number="1" buyLV="38" buyCount="50" price="10000_1000_30" />
+      <data id="21063006" group="1" isUse="1" newShelfMark="1" shopItemID="9990032" number="1" buyLV="26" buyCount="100" price="10000_1000_10" />
+      <data id="21063007" group="1" isUse="1" newShelfMark="1" shopItemID="1300027" number="1" buyLV="38" buyCount="10" price="10000_1000_30" />
+      <data id="21063008" group="1" isUse="1" newShelfMark="1" shopItemID="802004" number="1" buyLV="17" buyCount="100" price="10000_1000_30" />
+      <data id="23800007" group="5" isUse="1" newShelfMark="1" shopItemID="23800007" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-05-30 00:00:00" hiddenTime="2022-06-5 23:59:59" />
+      <data id="23800008" group="5" isUse="1" newShelfMark="1" shopItemID="23800008" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-05-30 00:00:00" hiddenTime="2022-06-5 23:59:59" />
+      <data id="23800009" group="5" isUse="1" newShelfMark="1" shopItemID="23800009" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-06-29 00:00:00" hiddenTime="2022-07-5 23:59:59" />
+      <data id="23800010" group="5" isUse="1" newShelfMark="1" shopItemID="23800010" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-06-29 00:00:00" hiddenTime="2022-07-5 23:59:59" />
+      <data id="23800011" group="5" isUse="1" newShelfMark="1" shopItemID="23800011" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-07-30 00:00:00" hiddenTime="2022-08-5 23:59:59" />
+      <data id="23800012" group="5" isUse="1" newShelfMark="1" shopItemID="23800012" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-07-30 00:00:00" hiddenTime="2022-08-5 23:59:59" />
+      <data id="23800013" group="5" isUse="1" newShelfMark="1" shopItemID="23800013" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-08-20 00:00:00" hiddenTime="2022-08-26 23:59:59" />
+      <data id="23800014" group="5" isUse="1" newShelfMark="1" shopItemID="23800014" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-08-20 00:00:00" hiddenTime="2022-08-26 23:59:59" />
+      <data id="23800015" group="5" isUse="1" newShelfMark="1" shopItemID="23800015" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-09-9 00:00:00" hiddenTime="2022-09-15 23:59:59" />
+      <data id="23800016" group="5" isUse="1" newShelfMark="1" shopItemID="23800016" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-09-9 00:00:00" hiddenTime="2022-09-15 23:59:59" />
+      <data id="23800017" group="5" isUse="1" newShelfMark="1" shopItemID="23800017" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-10-1 00:00:00" hiddenTime="2022-10-7 23:59:59" />
+      <data id="23800018" group="5" isUse="1" newShelfMark="1" shopItemID="23800018" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-10-1 00:00:00" hiddenTime="2022-10-7 23:59:59" />
+      <data id="23800019" group="5" isUse="1" newShelfMark="1" shopItemID="23800019" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-10-24 00:00:00" hiddenTime="2022-10-30 23:59:59" />
+      <data id="23800020" group="5" isUse="1" newShelfMark="1" shopItemID="23800020" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-10-24 00:00:00" hiddenTime="2022-10-30 23:59:59" />
+      <data id="23800021" group="5" isUse="1" newShelfMark="1" shopItemID="23800021" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-11-24 00:00:00" hiddenTime="2022-11-30 23:59:59" />
+      <data id="23800022" group="5" isUse="1" newShelfMark="1" shopItemID="23800022" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-11-24 00:00:00" hiddenTime="2022-11-30 23:59:59" />
+      <data id="23800023" group="5" isUse="1" newShelfMark="1" shopItemID="23800023" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-12-12 00:00:00" hiddenTime="2022-12-18 23:59:59" />
+      <data id="23800024" group="5" isUse="1" newShelfMark="1" shopItemID="23800024" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-12-12 00:00:00" hiddenTime="2022-12-18 23:59:59" />
+      <data id="23800025" group="5" isUse="1" newShelfMark="1" shopItemID="23800025" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-12-25 00:00:00" hiddenTime="2022-12-31 23:59:59" />
+      <data id="23800026" group="5" isUse="1" newShelfMark="1" shopItemID="23800026" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2022-12-25 00:00:00" hiddenTime="2022-12-31 23:59:59" />
+      <data id="23800029" group="5" isUse="1" newShelfMark="1" shopItemID="23800029" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-02-14 00:00:00" hiddenTime="2023-02-20 23:59:59" />
+      <data id="23800030" group="5" isUse="1" newShelfMark="1" shopItemID="23800030" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-02-14 00:00:00" hiddenTime="2023-02-20 23:59:60" />
+      <data id="23800031" group="5" isUse="1" newShelfMark="1" shopItemID="23800031" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-2-25 00:00:00" hiddenTime="2023-3-3 23:59:59" />
+      <data id="23800032" group="5" isUse="1" newShelfMark="1" shopItemID="23800032" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-2-25 00:00:00" hiddenTime="2023-3-3 23:59:59" />
+      <data id="23800033" group="5" isUse="1" newShelfMark="1" shopItemID="23800033" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-3-13 00:00:00" hiddenTime="2023-3-19 23:59:59" />
+      <data id="23800034" group="5" isUse="1" newShelfMark="1" shopItemID="23800034" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-3-13 00:00:00" hiddenTime="2023-3-19 23:59:59" />
+      <data id="23800035" group="5" isUse="1" newShelfMark="1" shopItemID="23800035" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-3-30 00:00:00" hiddenTime="2023-4-5 23:59:59" />
+      <data id="23800036" group="5" isUse="1" newShelfMark="1" shopItemID="23800036" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-3-30 00:00:00" hiddenTime="2023-4-5 23:59:59" />
+      <data id="23800037" group="5" isUse="1" newShelfMark="1" shopItemID="23800037" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-4-29 00:00:00" hiddenTime="2023-5-5 23:59:59" />
+      <data id="23800038" group="5" isUse="1" newShelfMark="1" shopItemID="23800038" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-4-29 00:00:00" hiddenTime="2023-5-5 23:59:59" />
+      <data id="23800039" group="5" isUse="1" newShelfMark="1" shopItemID="23800039" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-5-30 00:00:00" hiddenTime="2023-6-5 23:59:59" />
+      <data id="23800040" group="5" isUse="1" newShelfMark="1" shopItemID="23800040" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-5-30 00:00:00" hiddenTime="2023-6-5 23:59:59" />
+      <data id="23800041" group="5" isUse="1" newShelfMark="1" shopItemID="23800041" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-6-22 00:00:00" hiddenTime="2023-6-28 23:59:59" />
+      <data id="23800042" group="5" isUse="1" newShelfMark="1" shopItemID="23800042" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-6-22 00:00:00" hiddenTime="2023-6-28 23:59:59" />
+      <data id="23800043" group="5" isUse="1" newShelfMark="1" shopItemID="23800043" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-7-17 00:00:00" hiddenTime="2023-7-23 23:59:59" />
+      <data id="23800044" group="5" isUse="1" newShelfMark="1" shopItemID="23800044" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-7-17 00:00:00" hiddenTime="2023-7-23 23:59:59" />
+      <data id="23800045" group="5" isUse="1" newShelfMark="1" shopItemID="23800045" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-8-22 00:00:00" hiddenTime="2023-8-28 23:59:59" />
+      <data id="23800046" group="5" isUse="1" newShelfMark="1" shopItemID="23800046" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-8-22 00:00:00" hiddenTime="2023-8-28 23:59:59" />
+      <data id="23800047" group="5" isUse="1" newShelfMark="1" shopItemID="23800047" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-9-14 00:00:00" hiddenTime="2023-9-20 23:59:59" />
+      <data id="23800048" group="5" isUse="1" newShelfMark="1" shopItemID="23800048" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-9-14 00:00:00" hiddenTime="2023-9-20 23:59:59" />
+      <data id="23800049" group="5" isUse="1" newShelfMark="1" shopItemID="23800049" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-9-29 00:00:00" hiddenTime="2023-10-6 23:59:59" />
+      <data id="23800050" group="5" isUse="1" newShelfMark="1" shopItemID="23800050" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-9-29 00:00:00" hiddenTime="2023-10-6 23:59:59" />
+      <data id="23800051" group="5" isUse="1" newShelfMark="1" shopItemID="23800051" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-10-17 00:00:00" hiddenTime="2023-10-23 23:59:59" />
+      <data id="23800052" group="5" isUse="1" newShelfMark="1" shopItemID="23800052" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-10-17 00:00:00" hiddenTime="2023-10-23 23:59:59" />
+      <data id="23800053" group="5" isUse="1" newShelfMark="1" shopItemID="23800053" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-11-10 00:00:00" hiddenTime="2023-11-14 23:59:59" />
+      <data id="23800054" group="5" isUse="1" newShelfMark="1" shopItemID="23800054" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-11-10 00:00:00" hiddenTime="2023-11-14 23:59:59" />
+      <data id="23800055" group="5" isUse="1" newShelfMark="1" shopItemID="23800055" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-11-24 00:00:00" hiddenTime="2023-11-30 23:59:59" />
+      <data id="23800056" group="5" isUse="1" newShelfMark="1" shopItemID="23800056" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-11-24 00:00:00" hiddenTime="2023-11-30 23:59:59" />
+      <data id="23800057" group="5" isUse="1" newShelfMark="1" shopItemID="23800057" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-12-12 00:00:00" hiddenTime="2023-12-16 23:59:59" />
+      <data id="23800058" group="5" isUse="1" newShelfMark="1" shopItemID="23800058" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-12-12 00:00:00" hiddenTime="2023-12-16 23:59:59" />
+      <data id="23800059" group="5" isUse="1" newShelfMark="1" shopItemID="23800059" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-12-24 00:00:00" hiddenTime="2023-12-31 23:59:59" />
+      <data id="23800060" group="5" isUse="1" newShelfMark="1" shopItemID="23800060" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2023-12-24 00:00:00" hiddenTime="2023-12-31 23:59:59" />
+      <data id="23800061" group="5" isUse="1" newShelfMark="1" shopItemID="23800061" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-1-15 00:00:00" hiddenTime="2024-1-21 23:59:59" />
+      <data id="23800062" group="5" isUse="1" newShelfMark="1" shopItemID="23800062" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-1-15 00:00:00" hiddenTime="2024-1-21 23:59:59" />
+      <data id="23800063" group="5" isUse="1" newShelfMark="1" shopItemID="23800063" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-1-27 00:00:00" hiddenTime="2024-1-31 23:59:59" />
+      <data id="23800064" group="5" isUse="1" newShelfMark="1" shopItemID="23800064" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-1-27 00:00:00" hiddenTime="2024-1-31 23:59:59" />
+      <data id="23800065" group="5" isUse="1" newShelfMark="1" shopItemID="23800065" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-2-9 00:00:00" hiddenTime="2024-2-15 23:59:59" />
+      <data id="23800066" group="5" isUse="1" newShelfMark="1" shopItemID="23800066" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-2-9 00:00:00" hiddenTime="2024-2-15 23:59:59" />
+      <data id="23800067" group="5" isUse="1" newShelfMark="1" shopItemID="23800067" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-2-24 00:00:00" hiddenTime="2024-2-29 23:59:59" />
+      <data id="23800068" group="5" isUse="1" newShelfMark="1" shopItemID="23800068" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-2-24 00:00:00" hiddenTime="2024-2-29 23:59:59" />
+      <data id="23800069" group="5" isUse="1" newShelfMark="1" shopItemID="23800069" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-3-12 00:00:00" hiddenTime="2024-3-18 23:59:59" />
+      <data id="23800070" group="5" isUse="1" newShelfMark="1" shopItemID="23800070" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-3-12 00:00:00" hiddenTime="2024-3-18 23:59:59" />
+      <data id="23800071" group="5" isUse="1" newShelfMark="1" shopItemID="23800071" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-3-29 00:00:00" hiddenTime="2024-4-4 23:59:59" />
+      <data id="23800072" group="5" isUse="1" newShelfMark="1" shopItemID="23800072" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-3-29 00:00:00" hiddenTime="2024-4-4 23:59:59" />
+      <data id="23800073" group="5" isUse="1" newShelfMark="1" shopItemID="23800073" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-4-16 00:00:00" hiddenTime="2024-4-22 23:59:59" />
+      <data id="23800074" group="5" isUse="1" newShelfMark="1" shopItemID="23800074" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-4-16 00:00:00" hiddenTime="2024-4-22 23:59:59" />
+      <data id="23800075" group="5" isUse="1" newShelfMark="1" shopItemID="23800075" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-4-28 00:00:00" hiddenTime="2024-5-4 23:59:59" />
+      <data id="23800076" group="5" isUse="1" newShelfMark="1" shopItemID="23800076" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-4-28 00:00:00" hiddenTime="2024-5-4 23:59:59" />
+      <data id="23800077" group="5" isUse="1" newShelfMark="1" shopItemID="23800077" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-5-22 00:00:00" hiddenTime="2024-5-27 23:59:59" />
+      <data id="23800078" group="5" isUse="1" newShelfMark="1" shopItemID="23800078" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-5-22 00:00:00" hiddenTime="2024-5-27 23:59:59" />
+      <data id="23800079" group="5" isUse="1" newShelfMark="1" shopItemID="23800079" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-6-8 00:00:00" hiddenTime="2024-6-14 23:59:59" />
+      <data id="23800080" group="5" isUse="1" newShelfMark="1" shopItemID="23800080" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-6-8 00:00:00" hiddenTime="2024-6-14 23:59:59" />
+      <data id="23800081" group="5" isUse="1" newShelfMark="1" shopItemID="23800081" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-6-22 00:00:00" hiddenTime="2024-6-27 23:59:59" />
+      <data id="23800082" group="5" isUse="1" newShelfMark="1" shopItemID="23800082" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-6-22 00:00:00" hiddenTime="2024-6-27 23:59:59" />
+      <data id="23800083" group="5" isUse="1" newShelfMark="1" shopItemID="23800083" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-7-13 00:00:00" hiddenTime="2024-7-19 23:59:59" />
+      <data id="23800084" group="5" isUse="1" newShelfMark="1" shopItemID="23800084" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-7-13 00:00:00" hiddenTime="2024-7-19 23:59:59" />
+      <data id="23800085" group="1" isUse="1" newShelfMark="1" shopItemID="802005" number="1" buyLV="17" buyCount="60" price="10000_1000_10" />
+      <data id="23800086" group="5" isUse="1" newShelfMark="1" shopItemID="23800085" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-7-26 00:00:00" hiddenTime="2024-7-31 23:59:59" />
+      <data id="23800087" group="5" isUse="1" newShelfMark="1" shopItemID="23800086" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-7-26 00:00:00" hiddenTime="2024-7-31 23:59:59" />
+      <data id="23800088" group="5" isUse="1" newShelfMark="1" shopItemID="23800087" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-8-10 00:00:00" hiddenTime="2024-8-16 23:59:59" />
+      <data id="23800089" group="5" isUse="1" newShelfMark="1" shopItemID="23800088" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-8-10 00:00:00" hiddenTime="2024-8-16 23:59:59" />
+      <data id="23800090" group="5" isUse="1" newShelfMark="1" shopItemID="23800089" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-8-25 00:00:00" hiddenTime="2024-8-30 23:59:59" />
+      <data id="23800091" group="5" isUse="1" newShelfMark="1" shopItemID="23800090" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-8-25 00:00:00" hiddenTime="2024-8-30 23:59:59" />
+      <data id="23800092" group="5" isUse="1" newShelfMark="1" shopItemID="23800091" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-9-17 00:00:00" hiddenTime="2024-9-23 23:59:59" />
+      <data id="23800093" group="5" isUse="1" newShelfMark="1" shopItemID="23800092" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-9-17 00:00:00" hiddenTime="2024-9-23 23:59:59" />
+      <data id="23800134" group="1" isUse="1" newShelfMark="1" shopItemID="1300037" number="1" buyLV="45" buyCount="10" price="10000_1000_30" />
+      <data id="23800127" group="1" isUse="1" newShelfMark="1" shopItemID="21070056" number="1" buyLV="35" buyCount="30" price="10000_1000_10" />
+      <data id="23800112" group="1" isUse="1" newShelfMark="1" shopItemID="21065001" number="1" buyLV="38" buyCount="50" price="10000_1000_30" />
+      <data id="23800094" group="1" isUse="1" newShelfMark="1" shopItemID="9990041" number="1" buyLV="30" buyCount="50" price="10000_1000_3" />
+      <data id="23800095" group="1" isUse="1" newShelfMark="1" shopItemID="9990042" number="1" buyLV="30" buyCount="10" price="10000_1000_15" />
+      <data id="23800096" group="1" isUse="1" newShelfMark="1" shopItemID="9990051" number="1" buyLV="30" buyCount="25" price="10000_1000_6" />
+      <data id="23800097" group="1" isUse="1" newShelfMark="1" shopItemID="9990052" number="1" buyLV="30" buyCount="5" price="10000_1000_30" />
+      <data id="23800098" group="5" isUse="1" newShelfMark="1" shopItemID="23800093" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-9-28 00:00:00" hiddenTime="2024-10-05 23:59:59" />
+      <data id="23800099" group="5" isUse="1" newShelfMark="1" shopItemID="23800094" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-9-28 00:00:00" hiddenTime="2024-10-05 23:59:59" />
+      <data id="23800100" group="5" isUse="1" newShelfMark="1" shopItemID="23800095" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-10-7 00:00:00" hiddenTime="2024-10-31 23:59:59" />
+      <data id="23800101" group="5" isUse="1" newShelfMark="1" shopItemID="23800096" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-10-7 00:00:00" hiddenTime="2024-10-31 23:59:59" />
+      <data id="23800102" group="5" isUse="1" newShelfMark="1" shopItemID="23800097" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-11-11 00:00:00" hiddenTime="2024-11-17 23:59:59" />
+      <data id="23800103" group="5" isUse="1" newShelfMark="1" shopItemID="23800098" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-11-11 00:00:00" hiddenTime="2024-11-17 23:59:59" />
+      <data id="23800104" group="5" isUse="1" newShelfMark="1" shopItemID="23800099" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-11-28 00:00:00" hiddenTime="2024-12-04 23:59:59" />
+      <data id="23800105" group="5" isUse="1" newShelfMark="1" shopItemID="23800100" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-11-28 00:00:00" hiddenTime="2024-12-04 23:59:59" />
+      <data id="23800106" group="5" isUse="1" newShelfMark="1" shopItemID="23800101" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-12-12 00:00:00" hiddenTime="2024-12-18 23:59:59" />
+      <data id="23800107" group="5" isUse="1" newShelfMark="1" shopItemID="23800102" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-12-12 00:00:00" hiddenTime="2024-12-18 23:59:59" />
+      <data id="23800108" group="5" isUse="1" newShelfMark="1" shopItemID="23800103" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-12-25 00:00:00" hiddenTime="2025-1-3 23:59:59" />
+      <data id="23800109" group="5" isUse="1" newShelfMark="1" shopItemID="23800104" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2024-12-25 00:00:00" hiddenTime="2025-1-3 23:59:59" />
+      <data id="23800110" group="5" isUse="1" newShelfMark="1" shopItemID="23800105" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-1-14 00:00:00" hiddenTime="2025-1-20 23:59:59" />
+      <data id="23800111" group="5" isUse="1" newShelfMark="1" shopItemID="23800106" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-1-14 00:00:00" hiddenTime="2025-1-20 23:59:59" />
+      <data id="23800113" group="5" isUse="1" newShelfMark="1" shopItemID="23800107" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-1-28 00:00:00" hiddenTime="2025-2-4 23:59:59" />
+      <data id="23800114" group="5" isUse="1" newShelfMark="1" shopItemID="23800108" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-1-28 00:00:00" hiddenTime="2025-2-4 23:59:59" />
+      <data id="23800115" group="5" isUse="1" newShelfMark="1" shopItemID="23800109" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-2-14 00:00:00" hiddenTime="2025-2-20 23:59:59" />
+      <data id="23800116" group="5" isUse="1" newShelfMark="1" shopItemID="23800110" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-2-14 00:00:00" hiddenTime="2025-2-20 23:59:59" />
+      <data id="23800117" group="5" isUse="1" newShelfMark="1" shopItemID="23800111" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-2-28 00:00:00" hiddenTime="2025-3-6 23:59:59" />
+      <data id="23800118" group="5" isUse="1" newShelfMark="1" shopItemID="23800112" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-2-28 00:00:00" hiddenTime="2025-3-6 23:59:59" />
+      <data id="23800119" group="5" isUse="1" newShelfMark="1" shopItemID="23800113" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-3-21 00:00:00" hiddenTime="2025-3-27 23:59:59" />
+      <data id="23800120" group="5" isUse="1" newShelfMark="1" shopItemID="23800114" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-3-21 00:00:00" hiddenTime="2025-3-27 23:59:59" />
+      <data id="23800121" group="5" isUse="1" newShelfMark="1" shopItemID="23800115" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-4-3 00:00:00" hiddenTime="2025-4-9 23:59:59" />
+      <data id="23800122" group="5" isUse="1" newShelfMark="1" shopItemID="23800116" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-4-3 00:00:00" hiddenTime="2025-4-9 23:59:59" />
+      <data id="23800123" group="5" isUse="1" newShelfMark="1" shopItemID="23800117" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-4-18 00:00:00" hiddenTime="2025-4-27 23:59:59" />
+      <data id="23800124" group="5" isUse="1" newShelfMark="1" shopItemID="23800118" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-4-18 00:00:00" hiddenTime="2025-4-27 23:59:59" />
+      <data id="23800125" group="5" isUse="1" newShelfMark="1" shopItemID="23800119" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-1 00:00:00" hiddenTime="2025-5-7 23:59:59" />
+      <data id="23800126" group="5" isUse="1" newShelfMark="1" shopItemID="23800120" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-1 00:00:00" hiddenTime="2025-5-7 23:59:59" />
+      <data id="23800128" group="5" isUse="1" newShelfMark="1" shopItemID="23800121" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-16 00:00:00" hiddenTime="2025-5-22 23:59:59" />
+      <data id="23800129" group="5" isUse="1" newShelfMark="1" shopItemID="23800122" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-16 00:00:00" hiddenTime="2025-5-22 23:59:59" />
+      <data id="23800130" group="5" isUse="1" newShelfMark="1" shopItemID="23800123" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-30 00:00:00" hiddenTime="2025-6-5 23:59:59" />
+      <data id="23800131" group="5" isUse="1" newShelfMark="1" shopItemID="23800124" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-5-30 00:00:00" hiddenTime="2025-6-5 23:59:59" />
+      <data id="23800132" group="5" isUse="1" newShelfMark="1" shopItemID="23800127" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-7-18 00:00:00" hiddenTime="2025-8-2 23:59:59" />
+      <data id="23800133" group="5" isUse="1" newShelfMark="1" shopItemID="23800128" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-7-18 00:00:00" hiddenTime="2025-8-2 23:59:59" />
+      <data id="23800135" group="5" isUse="1" newShelfMark="1" shopItemID="23800129" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-8-17 00:00:00" hiddenTime="2025-8-23 23:59:59" />
+      <data id="23800136" group="5" isUse="1" newShelfMark="1" shopItemID="23800130" number="1" buyLV="1" buyCount="200" price="10000_1001_10" showTime="2025-8-17 00:00:00" hiddenTime="2025-8-23 23:59:59" />
+</root>

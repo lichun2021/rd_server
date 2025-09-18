@@ -1,0 +1,21 @@
+# 半径
+redis = 4
+
+# 资源ID
+resourceId = 1027
+
+# 采集速度
+collectSpeed = 2_3_4_5_6_6_6_6
+
+# 总计资源量
+totalRes = 3000
+
+# 消失数量
+minRes = 1
+
+# 坐标
+refreshPoint = 27_60,50_101
+
+# 补足刷新
+minNum = 1
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data enemyId="1001" score="3" doubleScore="6" shootAddValue="0" timeAddValue="0" />
+      <data enemyId="1002" score="2" doubleScore="4" shootAddValue="0" timeAddValue="0" />
+      <data enemyId="1003" score="1" doubleScore="2" shootAddValue="0" timeAddValue="0" />
+      <data enemyId="1004" score="4" doubleScore="8" shootAddValue="3" timeAddValue="3000" />
+</root>

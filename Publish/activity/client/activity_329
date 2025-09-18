@@ -1,0 +1,22 @@
+return {
+	prop =
+	{
+		activityId = 329,
+		name = [[5与伦比]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">活动期间，指挥官收集并激活各种周年庆装扮，即可免费获得永久"5与伦比"称号！</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_319_Nor.png]],
+		selecticon = [[Activity_Icon_319_Sel.png]],
+	},
+	dress_collection_achieve = [[achieveId	conditionType	conditionValue	rewards
+1	1	1	2
+329101	170100	1	30000_1400009_1
+329102	170100	2	30000_1400009_1
+329103	170100	3	30000_1400009_1
+329104	170100	4	30000_1400009_4
+329105	170100	5	30000_1400009_18
+329106	170100	6	30000_1400009_33
+329107	170100	7	30000_1400009_30
+]],
+
+}

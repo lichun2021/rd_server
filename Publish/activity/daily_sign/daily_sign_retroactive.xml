@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" times="1" retroactiveCost="10000_1001_5" />
+      <data id="2" times="2" retroactiveCost="10000_1001_5" />
+      <data id="3" times="3" retroactiveCost="10000_1001_10" />
+      <data id="4" times="4" retroactiveCost="10000_1001_10" />
+      <data id="5" times="5" retroactiveCost="10000_1001_15" />
+      <data id="6" times="6" retroactiveCost="10000_1001_15" />
+      <data id="7" times="7" retroactiveCost="10000_1001_20" />
+      <data id="8" times="8" retroactiveCost="10000_1001_20" />
+      <data id="9" times="9" retroactiveCost="10000_1001_25" />
+      <data id="10" times="10" retroactiveCost="10000_1001_25" />
+      <data id="11" times="11" retroactiveCost="10000_1001_30" />
+      <data id="12" times="12" retroactiveCost="10000_1001_30" />
+      <data id="13" times="13" retroactiveCost="10000_1001_35" />
+      <data id="14" times="14" retroactiveCost="10000_1001_35" />
+      <data id="15" times="15" retroactiveCost="10000_1001_40" />
+      <data id="16" times="16" retroactiveCost="10000_1001_40" />
+      <data id="17" times="17" retroactiveCost="10000_1001_45" />
+      <data id="18" times="18" retroactiveCost="10000_1001_45" />
+      <data id="19" times="19" retroactiveCost="10000_1001_50" />
+      <data id="20" times="20" retroactiveCost="10000_1001_50" />
+      <data id="21" times="21" retroactiveCost="10000_1001_55" />
+      <data id="22" times="22" retroactiveCost="10000_1001_55" />
+      <data id="23" times="23" retroactiveCost="10000_1001_60" />
+      <data id="24" times="24" retroactiveCost="10000_1001_60" />
+      <data id="25" times="25" retroactiveCost="10000_1001_65" />
+      <data id="26" times="26" retroactiveCost="10000_1001_65" />
+      <data id="27" times="27" retroactiveCost="10000_1001_70" />
+      <data id="28" times="28" retroactiveCost="10000_1001_70" />
+      <data id="29" times="29" retroactiveCost="10000_1001_75" />
+</root>

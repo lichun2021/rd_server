@@ -1,0 +1,27 @@
+# 玩家参与主堡等级限制>=N
+fortLevel = 19
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 518400
+
+# 每队伍最大人数
+teamMemberCount = 1
+
+# 地图大小
+mapSize = 80_160
+
+# 玩家单日奖励可获取次数
+rewardlimittimes = 3
+
+# 灰度测试，服务器屏蔽
+limitServer = 
+
+# 记录条数
+recordtimes = 20
+
+# 邀请冷却
+inviteCD = 10
+
+# 奖励获取积分限制
+negativeintegral = 2
+

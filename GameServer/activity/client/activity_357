@@ -1,0 +1,28 @@
+return {
+	prop =
+	{
+		activityId = 357,
+		name = [[回流移民]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">临时介绍，后续补充</font>]],
+		priority = 10051,
+		icon = [[Activity_Icon_293_Nor.png]],
+		selecticon = [[Activity_Icon_293_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+	},
+	back_immgration_condition = [[id	type	order	html	gotoType	gotoParam	isHide
+1	1	1	2	1	1	1
+29330001	1	1	MigrantCondition1	2007		0
+29330002	2	2	MigrantCondition2	1201		0
+29330003	3	3	MigrantCondition3	2008		0
+29330004	4	4	MigrantCondition4	2009		0
+29330005	5	5	MigrantCondition5	2010		0
+29330006	6	6	MigrantCondition6	2011		0
+29330007	7	10	MigrantCondition7	-1		1
+29330008	8	11	MigrantCondition8	-1		1
+29330009	9	7	MigrantCondition9	1125	2214	0
+29330010	10	8	MigrantCondition10	1125	2214	0
+29330011	11	9	MigrantCondition11	1125	2227	0
+]],
+
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" fuelRange="80_160" />
+      <data id="2" fuelRange="50_79" effect="102_-200,606_-200" />
+      <data id="3" fuelRange="20_49" effect="102_-400,606_-400" />
+      <data id="4" fuelRange="0_19" effect="102_-600,606_-600" />
+</root>

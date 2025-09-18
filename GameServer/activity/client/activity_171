@@ -1,0 +1,24 @@
+return {
+	prop =
+	{
+		activityId = 171,
+		name = [[回归有礼]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">欢迎回来，指挥官阁下！没有什么比您的回归更让我们激动的了，完成<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">再续前缘</font>的相关活动任务可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">王者归来礼券</font>。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="22">回归转盘概率公示：</font><br/>橙色品质道具   2%<br/>紫色品质道具   20%<br/>蓝色品质道具   78%</font>]],
+		priority = 11001,
+		icon = [[Activity_Icon_171_Nor.png]],
+		selecticon = [[Activity_Icon_171_Sel.png]],
+		bigIcon = [[Activity_Icon_171_Sel.png]],
+		resetLimit = 5,
+		costFree = 1,
+		lotteryLimitCd = 45000,
+		lotteryCostItem = [[30000_17199001_1]],
+	},
+	back_gift_activity_award = [[id	awards
+1	2
+1	30000_1000005_1,30000_1000003_10,30000_9274030_1,30000_9257030_1,30000_1782123_10,30000_1300027_200,30000_21065001_10,30000_1610008_1
+2	30000_802004_50,30000_21063005_100,30000_802005_40,30000_810002_5,30000_1300027_100,30000_1610005_1,30000_830052_2,30000_830041_2,30000_830047_2
+3	30000_810001_6,30000_800002_50,30000_1300017_160,30000_9990032_30,30000_1610004_1,30000_820001_5,30000_830039_2,30000_830040_2,30000_830046_2
+]],
+
+}

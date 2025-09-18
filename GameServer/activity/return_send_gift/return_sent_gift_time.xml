@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2020-4-16 00:00:00" startTime="2020-4-16 00:00:00" stopTrigger="2020-5-6 00:00:00" endTime="2020-5-12 23:59:59" hiddenTime="2020-5-12 23:59:59" />
+      <data termId="2" showTime="2020-5-21 00:00:00" startTime="2020-5-21 00:00:00" stopTrigger="2021-12-9 23:59:59" endTime="2021-12-23 23:59:59" hiddenTime="2021-12-23 23:59:59" />
+      <data termId="3" showTime="2021-12-24 00:00:00" startTime="2021-12-24 00:00:00" stopTrigger="2022-9-1 23:59:59" endTime="2022-9-15 23:59:59" hiddenTime="2022-9-15 23:59:59" />
+      <data termId="4" showTime="2022-9-26 00:00:00" startTime="2022-9-26 00:00:00" stopTrigger="2023-9-21 23:59:59" endTime="2023-10-5 23:59:59" hiddenTime="2023-10-5 23:59:59" />
+      <data termId="5" showTime="2023-10-17 00:00:00" startTime="2023-10-17 00:00:00" stopTrigger="2024-3-21 23:59:59" endTime="2024-4-4 23:59:59" hiddenTime="2024-4-4 23:59:59" />
+      <data termId="6" showTime="2024-4-11 00:00:00" startTime="2024-4-11 00:00:00" stopTrigger="2024-7-25 08:00:00" endTime="2024-8-8 08:00:00" hiddenTime="2024-8-8 08:00:00" />
+      <data termId="7" showTime="2024-8-8 09:00:00" startTime="2024-8-8 09:00:00" stopTrigger="2024-9-19 08:00:00" endTime="2024-10-3 08:00:00" hiddenTime="2024-10-3 08:00:00" />
+      <data termId="8" showTime="2024-10-17 09:00:00" startTime="2024-10-17 09:00:00" stopTrigger="2024-12-26 08:00:00" endTime="2025-1-9 08:00:00" hiddenTime="2025-1-9 08:00:00" />
+      <data termId="9" showTime="2025-1-17 09:00:00" startTime="2025-1-17 09:00:00" stopTrigger="2025-3-18 08:00:00" endTime="2025-4-1 08:00:00" hiddenTime="2025-4-1 08:00:00" />
+      <data termId="10" showTime="2025-4-14 00:00:00" startTime="2025-4-14 00:00:00" stopTrigger="2025-7-3 08:00:00" endTime="2025-7-17 08:00:00" hiddenTime="2025-7-17 08:00:00" />
+      <data termId="11" showTime="2025-7-18 00:00:00" startTime="2025-7-18 00:00:00" stopTrigger="2026-12-3 08:00:00" endTime="2026-12-17 08:00:00" hiddenTime="2026-12-17 08:00:00" />
+</root>

@@ -1,0 +1,38 @@
+return {
+	prop =
+	{
+		activityId = 114,
+		name = [[星海流光]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，限时出售星海流光宝箱。<br/>2. 开启星海旗舰宝箱必定获得星海之心，并额外赠送资源、加速、增益道具，更有机会直接获得 永久星海旗舰装扮。<br/>3.星海之心可用于兑换 永久星海旗舰装扮、加速、资源等道具。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">星海旗舰宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得星海之心，40%概率获得1个，30%概率获得2个，20%概率获得3个，10%概率获得5个。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">城建加速2小时*1  11%<br/>科技研究加速2小时*1  11%<br/>部队训练加速2小时*1  11%<br/>医疗加速2小时*1  11%<br/>500000矿石*3  8%<br/>500000石油*3  8%<br/>80000合金*3  8%<br/>20000稀土*3  8%<br/>500000矿石*4  5%<br/>500000石油*4  5%<br/>80000合金*4  5%<br/>20000稀土*4  5%<br/>高级行军加速*1  3%<br/>1天星海旗舰装扮*1  0.7%<br/>3天星海旗舰装扮*1  0.29%<br/>永久星海旗舰装扮*1  0.01%<br/><br/></font>]],
+		priority = 10015,
+		icon = [[Activity_Icon_114_Nor.png]],
+		selecticon = [[Activity_Icon_114_Sel.png]],
+		bigIcon = [[]],
+		mandatoryRewards = [[30000_1150286_1]],
+		randomRewards = [[30000_2352000_1,30000_2352003_1,30000_2352001_1,30000_820002_1]],
+		showDressing = 2352,
+		showEffect = 1605,
+	},
+	universal_exchange = [[id	priority	needItem	gainItem	des	times	exchangeTips	mainShow
+1	1	2	2	2	1	1	1
+1	1	30000_1150286_1200	30000_2352000_1	ActivityExchangeGainItemDes1	1	1	1
+2	2	30000_1150286_1	30000_1150098_1	ActivityExchangeGainItemDes1	1	1	
+3	3	30000_1150286_68	30000_2352007_1	ActivityExchangeGainItemDes1	1	1	
+4	4	30000_1150286_34	30000_2352003_1	ActivityExchangeGainItemDes1	1	1	
+5	5	30000_1150286_5	30000_2359000_1	ActivityExchangeGainItemDes1	1	1	
+6	6	30000_1150286_15	30000_850008_1	ActivityExchangeGainItemDes1	30		
+7	7	30000_1150286_15	30000_850038_1	ActivityExchangeGainItemDes1	30		
+8	8	30000_1150286_15	30000_850018_1	ActivityExchangeGainItemDes1	30		
+9	9	30000_1150286_15	30000_850028_1	ActivityExchangeGainItemDes1	30		
+10	10	30000_1150286_8	30000_810002_1	ActivityExchangeGainItemDes1	60		
+11	11	30000_1150286_1	30000_1510003_3	ActivityExchangeGainItemDes1	999		
+12	12	30000_1150286_1	30000_13310003_3	ActivityExchangeGainItemDes1	999		
+13	13	30000_1150286_1	30000_1480001_12	ActivityExchangeGainItemDes1	999		
+]],
+	universal_package = [[id	itemId	awardId	price	limit
+1	1	1	2	1
+100001	1150286	4950159	10000_1000_68	999
+]],
+
+}

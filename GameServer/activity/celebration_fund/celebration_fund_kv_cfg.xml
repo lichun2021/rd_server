@@ -1,0 +1,9 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 距离活动结束前X秒可购买积分
+buyPointTimeStart = 86400
+
+# 距离活动结束前X秒不可再购买积分
+buyPointTimeEnd = 300
+

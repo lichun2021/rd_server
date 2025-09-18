@@ -1,0 +1,12 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 大奖抽到刷新次数
+grandTimesRefresh = 3
+
+# 抽奖需要消耗数量
+drawItem = 30000_21070054_1
+
+# 玩家每人每日可抽奖上限
+drawValueLimit = 9999
+

@@ -1,0 +1,75 @@
+return {
+	prop =
+	{
+		activityId = 169,
+		name = [[时空豪礼]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间可通过“每日任务”获得奖励，并可获得时空之钥。<br/>2. 使用时空之钥可解锁时空之门，开启时空宝藏，若时空之钥数量不足，可花费金币购买获得。<br/>3. 时空之门分为绿、蓝、紫、橙、红5个品质，品质越高宝藏奖励越好。<br/>4. 每个时空之门对应的时空宝藏分为免费宝藏和特惠宝藏2种，特惠宝藏通过直购形式获得，消耗的金额不计入首充、累充等活动，免费宝藏在解锁时空之门后即可领取。<br/>5. 活动期间，时空之门和每日任务每日0点重置，重置后可重新解锁时空之门，开启宝藏。<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。</font>]],
+		priority = 20010,
+		icon = [[Activity_Icon_169_Nor.png]],
+		selecticon = [[Activity_Icon_169_Sel.png]],
+		openCost = [[30000_1150118_1]],
+		itemPrice = [[10000_1001_10]],
+		buyLimit = 125,
+	},
+	space_gift_level = [[giftId	androidPayId	iosPayId	purchaseVipExp	unlockItem	freeRewards	chooseItems	showDiscount	showRmb	showScript	unlockBox	unlockedBox
+1	1	1	2	2	2	1	1	1	2	2	2
+1	530001	540001	10000_1005_60	30000_1150118_1	30000_840194_1,30000_1780040_1,30000_850051_1	3	0.3	20000	V5Activity_169_u_Gates_01_Title.png	V5Activity_169_u_Gates_01_Closed.png	V5Activity_169_u_Gates_01_Open.png
+2	530002	540002	10000_1005_300	30000_1150118_4	30000_840194_4,30000_1780040_3,30000_850051_2	3	0.34	88300	V5Activity_169_u_Gates_02_Title.png	V5Activity_169_u_Gates_02_Closed.png	V5Activity_169_u_Gates_02_Open.png
+3	530003	540003	10000_1005_980	30000_1150118_20	30000_840194_20,30000_1780040_12,30000_850052_1	3	0.4	245000	V5Activity_169_u_Gates_03_Title.png	V5Activity_169_u_Gates_03_Closed.png	V5Activity_169_u_Gates_03_Open.png
+4	530004	540004	10000_1005_3280	30000_1150118_40	30000_840194_40,30000_1780040_20,30000_850052_2	3	0.45	728900	V5Activity_169_u_Gates_04_Title.png	V5Activity_169_u_Gates_04_Closed.png	V5Activity_169_u_Gates_04_Open.png
+5	530005	540005	10000_1005_6480	30000_1150118_60	30000_840194_60,30000_1780040_30,30000_850052_3	3	0.5	1296000	V5Activity_169_u_Gates_05_Title.png	V5Activity_169_u_Gates_05_Closed.png	V5Activity_169_u_Gates_05_Open.png
+]],
+	space_gift_reward = [[id	giftId	reward
+1	1	2
+1	1	30000_1780045_1
+2	1	30000_100050_1
+3	1	30000_1510002_30
+4	1	30000_13310002_30
+5	1	30000_800101_1
+6	1	30000_9990008_300
+7	1	30000_840194_15
+8	1	30000_1780083_1
+9	2	30000_1780050_1
+10	2	30000_100050_6
+11	2	30000_1510003_60
+12	2	30000_13310003_60
+13	2	30000_830001_3
+14	2	30000_840194_30
+15	2	30000_1300017_20
+16	2	30000_1780083_5
+17	3	30000_1780050_3
+18	3	30000_810002_4
+19	3	30000_1510005_20
+20	3	30000_13310005_20
+21	3	30000_840194_125
+22	3	30000_1300017_50
+23	3	30000_1780083_4
+24	3	30000_1000003_6
+25	4	30000_1780050_8
+26	4	30000_810002_10
+27	4	30000_800101_6
+28	4	30000_820002_30
+29	4	30000_840194_400
+30	4	30000_1300017_120
+31	4	30000_1780083_12
+32	4	30000_1000003_18
+33	5	30000_1780050_12
+34	5	30000_810002_15
+35	5	30000_1300018_10
+36	5	30000_820002_60
+37	5	30000_800001_300
+38	5	30000_800000_100
+39	5	30000_801004_10
+40	5	30000_802003_100
+]],
+	space_gift_achieve = [[achieveId	conditionValue	gotoType	gotoValue	rewards	title
+1	1	1	2	2	2
+16900001	1	-1		30000_1150118_1,30000_830031_2,30000_830032_2,30000_830033_2,30000_830034_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计登录<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>天</font>
+16900002	20	200	2_0	30000_1150118_1,30000_1780040_1,30000_850075_10,30000_1510002_10,30000_13310002_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">击败任意等级野外敌军<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+16900003	1500000	31	1_1_1007	30000_1150118_1,30000_1780040_1,30000_1780035_1,30000_1780030_1,30000_1780025_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">采集任意资源<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+16900004	1	31	16_1	30000_1150118_1,30000_1780040_1,30000_800000_1,30000_800110_1,30000_800143_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">集结战胜幽灵基地<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+16900005	5000	23	2012	30000_1150118_1,30000_1780040_1,30000_1780035_1,30000_104050_1,30000_810010_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练任意兵种<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+]],
+
+}

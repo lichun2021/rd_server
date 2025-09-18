@@ -1,0 +1,18 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 个人排名记录的总名次
+personRankSize = 100
+
+# 联盟排名记录的总名次
+guildRankSize = 10
+
+# 收集道具ID
+itemId = 1300017
+
+# 个人排名奖励发放邮件ID
+personalRankAwardMail = 20190101
+
+# 联盟排名奖励发放邮件ID
+allianceRankAwardMail = 20190102
+

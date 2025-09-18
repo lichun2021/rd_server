@@ -1,0 +1,97 @@
+option java_package = "com.hawk.game.protocol";
+
+// 单个超级武器信息
+message ManhattanSWInfo
+{
+	required string manhattanId		 = 1; //超级武器uuid
+	required int32 cfgId 			 = 2; //超级武器配置id
+	required int32 stage			 = 3; //超级武器品阶
+	optional int32 deployed		     = 4; //是否已部署（1是0否）
+	repeated ManhattanPosInfo posLevels = 5; //超武部件等级 
+	optional int64 showTime          = 6; //起始可见时间（为0表示始终可见）
+	optional int32 cityShow          = 7; //是否内城展示（1是0否）
+}
+
+// 超武部件信息
+message ManhattanPosInfo
+{
+	required int32 cfgId		 	 = 1; //level表配置id
+	required int32 posId             = 2; //部件id
+	required int32 level		 	 = 3; //部件等级
+}
+
+// 超武功能信息同步
+message ManhattanInfoSync
+{
+	required int32 funcUnlocked   	        = 1; //功能是否解锁（1是0否）
+	optional PBManhattanInfo manhattanInfo  = 2; //超武（含底座）信息
+}
+
+// 战报中展示的超武信息
+message PBManhattanInfo
+{
+	optional int32 baseStage		          = 1; //超武聚能底座品阶
+	repeated ManhattanPosInfo basePosLevels   = 2; //聚能底座部件等级
+	repeated ManhattanSWInfo swInfos          = 3; //超级武器信息
+	optional int32 power                      = 4; //所有超武战力之和（对应战报中展示的提升战斗力）
+}
+
+// 超级武器类型
+enum ManhattanSWType
+{
+	ATT 	= 1; //进攻型
+	DEF 	= 2; //防守型
+}
+
+// 超级聚能底座部件升级
+message ManhattanBaseLevelUpReq
+{
+   required int32  posId             = 1; //部件id
+}
+
+// 超级武器解锁
+message ManhattanSWUnlockReq
+{
+	required int32 cfgId 	= 1; //超级武器配置id
+}
+
+// 超级武器升阶
+message ManhattanSWStageUpReq
+{
+	required int32 cfgId		 = 1; //超级武器配置id
+}
+
+// 超级武器部件升级
+message ManhattanSWLevelUpReq
+{
+   required int32 cfgId		 = 1; //超级武器配置id
+   required int32 posId      = 2; //部件id
+}
+
+// 超级武器部署
+message ManhattanSWDeployReq
+{
+   required int32 cfgId		 = 1; //超级武器配置id
+}
+
+// 超级武器撤下
+message ManhattanSWUnDeployReq
+{
+   required int32 cfgId		 = 1; //超级武器配置id
+}
+
+// 超武内城展示
+message ManhattanSWShowReq
+{
+   required int32 cfgId		 = 1; //超级武器配置id
+   optional int32 show       = 2; //1表示展示，0表示取消展示
+}
+
+// 已部署的超武信息
+message PBDeployedSwInfo
+{
+	optional int32 atkSwId		  = 1; //进攻型超武id
+	optional int32 atkSwSkillId   = 2; //进攻型超武技能id
+	optional int32 defSwId		  = 3; //防守型超武id
+	optional int32 defSwSkillId   = 4; //防守型超武技能id
+}

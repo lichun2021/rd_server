@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data termId="1" showTime="2018-10-17 00:00:00" startTime="2018-10-17 00:00:00" endTime="2018-10-23 23:59:59" hiddenTime="2018-10-23 23:59:59" />
+      <data termId="2" showTime="2018-10-31 00:00:00" startTime="2018-10-31 00:00:00" endTime="2018-11-6 23:59:59" hiddenTime="2018-11-6 23:59:59" />
+      <data termId="3" showTime="2018-11-29 00:00:00" startTime="2018-11-29 00:00:00" endTime="2018-12-5 23:59:59" hiddenTime="2018-12-5 23:59:59" />
+      <data termId="4" showTime="2018-12-13 00:00:00" startTime="2018-12-13 00:00:00" endTime="2018-12-19 23:59:59" hiddenTime="2018-12-19 23:59:59" />
+      <data termId="5" showTime="2019-1-7 00:00:00" startTime="2019-1-7 00:00:00" endTime="2019-1-13 23:59:59" hiddenTime="2019-1-13 23:59:59" />
+      <data termId="6" showTime="2019-1-17 00:00:00" startTime="2019-1-17 00:00:00" endTime="2019-1-23 23:59:59" hiddenTime="2019-1-23 23:59:59" />
+      <data termId="7" showTime="2019-3-22 12:00:00" startTime="2019-3-22 12:00:00" endTime="2019-3-25 23:59:59" hiddenTime="2019-3-25 23:59:59" />
+      <data termId="8" showTime="2019-8-12 11:00:00" startTime="2019-8-12 11:00:00" endTime="2019-8-14 23:59:59" hiddenTime="2019-8-14 23:59:59" />
+      <data termId="9" showTime="2019-8-19 11:00:00" startTime="2019-8-19 11:00:00" endTime="2019-8-21 23:59:59" hiddenTime="2019-8-21 23:59:59" />
+      <data termId="10" showTime="2019-8-26 11:00:00" startTime="2019-8-26 11:00:00" endTime="2019-8-28 23:59:59" hiddenTime="2019-8-28 23:59:59" />
+      <data termId="11" showTime="2019-9-2 11:00:00" startTime="2019-9-2 11:00:00" endTime="2019-9-4 23:59:59" hiddenTime="2019-9-4 23:59:59" />
+      <data termId="12" showTime="2019-9-30 11:00:00" startTime="2019-9-30 11:00:00" endTime="2019-11-30 23:59:59" hiddenTime="2019-11-30 23:59:59" />
+      <data termId="13" showTime="2019-12-24 11:00:00" startTime="2019-12-24 11:00:00" endTime="2020-1-6 23:59:59" hiddenTime="2020-1-6 23:59:59" />
+      <data termId="14" showTime="2020-1-16 11:00:00" startTime="2020-1-16 11:00:00" endTime="2020-2-2 23:59:59" hiddenTime="2020-2-2 23:59:59" />
+      <data termId="15" showTime="2020-3-17 11:00:00" startTime="2020-3-17 11:00:00" endTime="2020-4-19 23:59:59" hiddenTime="2020-4-19 23:59:59" />
+      <data termId="16" showTime="2020-4-27 11:00:00" startTime="2020-4-27 11:00:00" endTime="2020-5-7 23:59:59" hiddenTime="2020-5-7 23:59:59" />
+      <data termId="17" showTime="2020-5-29 11:00:00" startTime="2020-5-29 11:00:00" endTime="2020-5-31 23:59:59" hiddenTime="2020-5-31 23:59:59" />
+      <data termId="18" showTime="2020-6-11 11:00:00" startTime="2020-6-11 11:00:00" endTime="2020-6-17 23:59:59" hiddenTime="2020-6-17 23:59:59" />
+      <data termId="19" showTime="2020-6-19 11:00:00" startTime="2020-6-19 11:00:00" endTime="2020-7-19 23:59:59" hiddenTime="2020-7-19 23:59:59" />
+      <data termId="20" showTime="2020-7-27 11:00:00" startTime="2020-7-27 11:00:00" endTime="2020-8-2 23:59:59" hiddenTime="2020-8-2 23:59:59" />
+      <data termId="21" showTime="2020-8-21 11:00:00" startTime="2020-8-21 11:00:00" endTime="2020-11-30 23:59:59" hiddenTime="2020-11-30 23:59:59" />
+      <data termId="22" showTime="2021-4-28 00:00:00" startTime="2021-4-28 00:00:00" endTime="2021-5-27 23:59:59" hiddenTime="2021-5-27 23:59:59" />
+      <data termId="23" showTime="2021-12-23 8:00:00" startTime="2021-12-23 8:00:00" endTime="2022-3-27 23:59:59" hiddenTime="2022-3-27 23:59:59" />
+      <data termId="24" showTime="2022-6-10 12:00:00" startTime="2022-6-10 12:00:00" endTime="2022-6-23 23:59:59" hiddenTime="2022-6-23 23:59:59" />
+      <data termId="25" showTime="2022-9-22 12:00:00" startTime="2022-9-22 12:00:00" endTime="2022-10-9 23:59:59" hiddenTime="2022-10-9 23:59:59" />
+      <data termId="26" showTime="2022-11-4 17:00:00" startTime="2022-11-4 17:00:00" endTime="2022-11-4 20:29:59" hiddenTime="2022-11-4 20:29:59" />
+      <data termId="27" showTime="2023-1-5 10:00:00" startTime="2023-1-5 10:00:00" endTime="2023-1-12 23:59:59" hiddenTime="2023-1-12 23:59:59" />
+      <data termId="28" showTime="2023-3-23 10:00:00" startTime="2023-3-23 10:00:00" endTime="2023-3-26 22:00:00" hiddenTime="2023-3-26 22:00:00" />
+      <data termId="29" showTime="2023-4-18 10:00:00" startTime="2023-4-18 10:00:00" endTime="2023-4-24 23:59:59" hiddenTime="2023-4-24 23:59:59" />
+      <data termId="30" showTime="2023-6-12 10:00:00" startTime="2023-6-12 10:00:00" endTime="2023-6-26 23:59:59" hiddenTime="2023-6-26 23:59:59" />
+      <data termId="31" showTime="2023-7-20 10:00:00" startTime="2023-7-20 10:00:00" endTime="2023-8-2 23:59:59" hiddenTime="2023-8-2 23:59:59" />
+      <data termId="32" showTime="2023-8-10 10:00:00" startTime="2023-8-10 10:00:00" endTime="2023-8-30 23:59:59" hiddenTime="2023-8-30 23:59:59" />
+      <data termId="33" showTime="2023-9-14 10:00:00" startTime="2023-9-14 10:00:00" endTime="2023-10-11 23:59:59" hiddenTime="2023-10-11 23:59:59" />
+      <data termId="34" showTime="2023-10-26 10:00:00" startTime="2023-10-26 10:00:00" endTime="2023-11-25 23:59:59" hiddenTime="2023-11-25 23:59:59" />
+      <data termId="35" showTime="2023-12-7 10:00:00" startTime="2023-12-7 10:00:00" endTime="2023-12-11 23:59:59" hiddenTime="2023-12-11 23:59:59" />
+      <data termId="36" showTime="2023-12-24 10:00:00" startTime="2023-12-24 10:00:00" endTime="2023-12-31 23:59:59" hiddenTime="2023-12-31 23:59:59" />
+      <data termId="37" showTime="2024-1-5 10:00:00" startTime="2024-1-5 10:00:00" endTime="2024-1-15 23:59:59" hiddenTime="2024-1-15 23:59:59" />
+      <data termId="38" showTime="2024-2-18 10:00:00" startTime="2024-2-18 10:00:00" endTime="2024-2-23 23:59:59" hiddenTime="2024-2-23 23:59:59" />
+      <data termId="39" showTime="2024-3-7 10:00:00" startTime="2024-3-7 10:00:00" endTime="2024-4-7 23:59:59" hiddenTime="2024-4-7 23:59:59" />
+      <data termId="40" showTime="2024-5-16 10:00:00" startTime="2024-5-16 10:00:00" endTime="2024-9-30 23:59:59" hiddenTime="2024-9-30 23:59:59" />
+      <data termId="41" showTime="2025-2-20 10:00:00" startTime="2025-2-20 10:00:00" endTime="2025-3-20 23:59:59" hiddenTime="2025-3-20 23:59:59" />
+      <data termId="42" showTime="2025-3-27 10:00:00" startTime="2025-3-27 10:00:00" endTime="2025-4-17 23:59:59" hiddenTime="2025-4-17 23:59:59" />
+      <data termId="43" showTime="2025-4-24 10:00:00" startTime="2025-4-24 10:00:00" endTime="2025-4-30 23:59:59" hiddenTime="2025-4-30 23:59:59" />
+      <data termId="44" showTime="2025-5-15 10:00:00" startTime="2025-5-15 10:00:00" endTime="2025-6-14 23:59:59" hiddenTime="2025-6-14 23:59:59" />
+</root>

@@ -1,0 +1,45 @@
+# 初始积分
+seasonScoreInit = 0
+
+# 基础分
+scoreParam1 = 16
+
+# 除法
+scoreParam2 = 3
+
+# 减法
+scoreParam3 = 0
+
+# 排行榜显示数量
+scoreRankSize = 200
+
+# 排行榜刷新(星期_时_分_是否刷新名人堂)
+scoreRankRefresh = 1800
+
+# 名人堂人员数量
+fameHallSize = 5
+
+# 匹配间隔
+matchTimeInterval = 10
+
+# 匹配不上积分增加
+matchAdd = 50
+
+# 重置算法参数
+contineScoreParam1 = 100
+
+# 重置算法参数
+contineScoreParam2 = 0.8
+
+# 重置算法参数
+contineScoreParam3 = 60
+
+# 安卓战令
+androidPayId = 3000001
+
+# IOS战令
+iosPayId = 3000002
+
+# 分享场次限制
+shareLimit = 5
+

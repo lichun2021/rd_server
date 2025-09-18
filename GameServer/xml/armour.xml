@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data armourId="102" pos="1" baseAttr="1481_18000" armourSuitId="2" atkAttr="2_9000" />
+      <data armourId="202" pos="2" baseAttr="110_10000" armourSuitId="2" atkAttr="2_10000" />
+      <data armourId="302" pos="3" baseAttr="1004_15000" armourSuitId="2" atkAttr="2_15000" />
+      <data armourId="402" pos="4" baseAttr="132_10000" armourSuitId="2" hpAttr="2_3000" />
+      <data armourId="502" pos="5" baseAttr="1012_15000" armourSuitId="2" hpAttr="2_4500" />
+      <data armourId="602" pos="6" baseAttr="112_10000" armourSuitId="2" hpAttr="2_10000" />
+      <data armourId="702" pos="7" baseAttr="1020_15000" armourSuitId="2" hpAttr="2_15000" />
+      <data armourId="101" pos="1" baseAttr="1482_18000" armourSuitId="1" hpAttr="1_2700" />
+      <data armourId="201" pos="2" baseAttr="110_10000" armourSuitId="1" atkAttr="1_10000" />
+      <data armourId="301" pos="3" baseAttr="1003_15000" armourSuitId="1" atkAttr="1_15000" />
+      <data armourId="401" pos="4" baseAttr="132_10000" armourSuitId="1" hpAttr="1_3000" />
+      <data armourId="501" pos="5" baseAttr="1011_15000" armourSuitId="1" hpAttr="1_4500" />
+      <data armourId="601" pos="6" baseAttr="112_10000" armourSuitId="1" hpAttr="1_10000" />
+      <data armourId="701" pos="7" baseAttr="1019_15000" armourSuitId="1" hpAttr="1_15000" />
+      <data armourId="104" pos="1" baseAttr="1483_18000" armourSuitId="4" atkAttr="4_9000" />
+      <data armourId="204" pos="2" baseAttr="115_10000" armourSuitId="4" atkAttr="4_10000" />
+      <data armourId="304" pos="3" baseAttr="1006_15000" armourSuitId="4" atkAttr="4_15000" />
+      <data armourId="404" pos="4" baseAttr="133_10000" armourSuitId="4" hpAttr="4_3000" />
+      <data armourId="504" pos="5" baseAttr="1014_15000" armourSuitId="4" hpAttr="4_4500" />
+      <data armourId="604" pos="6" baseAttr="117_10000" armourSuitId="4" hpAttr="4_10000" />
+      <data armourId="704" pos="7" baseAttr="1022_15000" armourSuitId="4" hpAttr="4_15000" />
+      <data armourId="103" pos="1" baseAttr="1484_18000" armourSuitId="3" atkAttr="3_9000" />
+      <data armourId="203" pos="2" baseAttr="115_10000" armourSuitId="3" atkAttr="3_10000" />
+      <data armourId="303" pos="3" baseAttr="1005_15000" armourSuitId="3" atkAttr="3_15000" />
+      <data armourId="403" pos="4" baseAttr="133_10000" armourSuitId="3" hpAttr="3_3000" />
+      <data armourId="503" pos="5" baseAttr="1013_15000" armourSuitId="3" hpAttr="3_4500" />
+      <data armourId="603" pos="6" baseAttr="117_10000" armourSuitId="3" hpAttr="3_10000" />
+      <data armourId="703" pos="7" baseAttr="1021_15000" armourSuitId="3" hpAttr="3_15000" />
+      <data armourId="106" pos="1" baseAttr="1485_18000" armourSuitId="6" atkAttr="6_9000" />
+      <data armourId="206" pos="2" baseAttr="105_10000" armourSuitId="6" atkAttr="6_10000" />
+      <data armourId="306" pos="3" baseAttr="1008_15000" armourSuitId="6" atkAttr="6_15000" />
+      <data armourId="406" pos="4" baseAttr="134_10000" armourSuitId="6" hpAttr="6_3000" />
+      <data armourId="506" pos="5" baseAttr="1016_15000" armourSuitId="6" hpAttr="6_4500" />
+      <data armourId="606" pos="6" baseAttr="107_10000" armourSuitId="6" hpAttr="6_10000" />
+      <data armourId="706" pos="7" baseAttr="1024_15000" armourSuitId="6" hpAttr="6_15000" />
+      <data armourId="105" pos="1" baseAttr="1486_18000" armourSuitId="5" atkAttr="5_9000" />
+      <data armourId="205" pos="2" baseAttr="105_10000" armourSuitId="5" atkAttr="5_10000" />
+      <data armourId="305" pos="3" baseAttr="1007_15000" armourSuitId="5" atkAttr="5_15000" />
+      <data armourId="405" pos="4" baseAttr="134_10000" armourSuitId="5" hpAttr="5_3000" />
+      <data armourId="505" pos="5" baseAttr="1015_15000" armourSuitId="5" hpAttr="5_4500" />
+      <data armourId="605" pos="6" baseAttr="107_10000" armourSuitId="5" hpAttr="5_10000" />
+      <data armourId="705" pos="7" baseAttr="1023_15000" armourSuitId="5" hpAttr="5_15000" />
+      <data armourId="108" pos="1" baseAttr="1487_18000" armourSuitId="8" hpAttr="8_2700" />
+      <data armourId="208" pos="2" baseAttr="120_10000" armourSuitId="8" atkAttr="8_10000" />
+      <data armourId="308" pos="3" baseAttr="1010_15000" armourSuitId="8" atkAttr="8_15000" />
+      <data armourId="408" pos="4" baseAttr="135_10000" armourSuitId="8" hpAttr="8_3000" />
+      <data armourId="508" pos="5" baseAttr="1018_15000" armourSuitId="8" hpAttr="8_4500" />
+      <data armourId="608" pos="6" baseAttr="122_10000" armourSuitId="8" hpAttr="8_10000" />
+      <data armourId="708" pos="7" baseAttr="1026_15000" armourSuitId="8" hpAttr="8_15000" />
+      <data armourId="107" pos="1" baseAttr="1488_18000" armourSuitId="7" atkAttr="7_9000" />
+      <data armourId="207" pos="2" baseAttr="120_10000" armourSuitId="7" atkAttr="7_10000" />
+      <data armourId="307" pos="3" baseAttr="1009_15000" armourSuitId="7" atkAttr="7_15000" />
+      <data armourId="407" pos="4" baseAttr="135_10000" armourSuitId="7" hpAttr="7_3000" />
+      <data armourId="507" pos="5" baseAttr="1017_15000" armourSuitId="7" hpAttr="7_4500" />
+      <data armourId="607" pos="6" baseAttr="122_10000" armourSuitId="7" hpAttr="7_10000" />
+      <data armourId="707" pos="7" baseAttr="1025_15000" armourSuitId="7" hpAttr="7_15000" />
+      <data armourId="807" pos="1" isSuper="true" superExtraAttr="10001,10009,10017,10021" skillAttr="12001" lifeTime="1892160000" baseAttr="1481_15741" />
+      <data armourId="808" pos="1" isSuper="true" superExtraAttr="10002,10010,10017,10021" skillAttr="12002" lifeTime="1892160000" baseAttr="1482_15741" />
+      <data armourId="809" pos="1" isSuper="true" superExtraAttr="10003,10011,10018,10022" skillAttr="12003" lifeTime="1892160000" baseAttr="1483_15741" />
+      <data armourId="810" pos="1" isSuper="true" superExtraAttr="10004,10012,10018,10022" skillAttr="12004" lifeTime="1892160000" baseAttr="1484_15741" />
+      <data armourId="811" pos="1" isSuper="true" superExtraAttr="10005,10013,10019,10023" skillAttr="12005" lifeTime="1892160000" baseAttr="1485_15741" />
+      <data armourId="812" pos="1" isSuper="true" superExtraAttr="10006,10014,10019,10023" skillAttr="12006" lifeTime="1892160000" baseAttr="1486_15741" />
+      <data armourId="813" pos="1" isSuper="true" superExtraAttr="10007,10015,10020,10024" skillAttr="12007" lifeTime="1892160000" baseAttr="1487_15741" />
+      <data armourId="814" pos="1" isSuper="true" superExtraAttr="10008,10016,10020,10024" skillAttr="12008" lifeTime="1892160000" baseAttr="1488_15741" />
+</root>

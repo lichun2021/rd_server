@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" powerLower="999999999" powerUpper="90000000" cost="5000" />
+      <data id="2" powerLower="89999999" powerUpper="80000000" cost="4500" />
+      <data id="3" powerLower="79999999" powerUpper="75000000" cost="4000" />
+      <data id="4" powerLower="74999999" powerUpper="70000000" cost="3600" />
+      <data id="5" powerLower="69999999" powerUpper="66000000" cost="3200" />
+      <data id="6" powerLower="65999999" powerUpper="63000000" cost="2800" />
+      <data id="7" powerLower="62999999" powerUpper="60000000" cost="2400" />
+      <data id="8" powerLower="59999999" powerUpper="57000000" cost="2100" />
+      <data id="9" powerLower="56999999" powerUpper="54000000" cost="1800" />
+      <data id="10" powerLower="53999999" powerUpper="51000000" cost="1500" />
+      <data id="11" powerLower="50999999" powerUpper="48000000" cost="1200" />
+      <data id="12" powerLower="47999999" powerUpper="45000000" cost="1000" />
+      <data id="13" powerLower="44999999" powerUpper="42000000" cost="800" />
+      <data id="14" powerLower="41999999" powerUpper="39000000" cost="600" />
+      <data id="15" powerLower="38999999" powerUpper="36000000" cost="500" />
+      <data id="16" powerLower="35999999" powerUpper="33000000" cost="400" />
+      <data id="17" powerLower="32999999" powerUpper="30000000" cost="350" />
+      <data id="18" powerLower="29999999" powerUpper="25000000" cost="300" />
+      <data id="19" powerLower="24999999" powerUpper="20000000" cost="250" />
+      <data id="20" powerLower="19999999" powerUpper="10000000" cost="200" />
+</root>

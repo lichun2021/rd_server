@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="10201" library="1" weight="6000" reward="30000_21063063_20" stealTime="180" stealReward="30000_21063063_4" stealNumMax="3" />
+      <data id="10202" library="1" weight="3000" reward="30000_21063063_40" stealTime="300" stealReward="30000_21063063_8" stealNumMax="3" />
+      <data id="10203" library="1" weight="800" reward="30000_21063063_80" stealTime="600" stealReward="30000_21063063_16" stealNumMax="3" />
+      <data id="10204" library="1" weight="200" reward="30000_21063063_140" stealTime="900" stealReward="30000_21063063_28" stealNumMax="3" />
+      <data id="10205" library="2" weight="2000" reward="30000_21063063_20" stealTime="180" stealReward="30000_21063063_4" stealNumMax="3" />
+      <data id="10206" library="2" weight="4000" reward="30000_21063063_40" stealTime="300" stealReward="30000_21063063_8" stealNumMax="3" />
+      <data id="10207" library="2" weight="2000" reward="30000_21063063_80" stealTime="600" stealReward="30000_21063063_16" stealNumMax="3" />
+      <data id="10208" library="2" weight="2000" reward="30000_21063063_140" stealTime="900" stealReward="30000_21063063_28" stealNumMax="3" />
+      <data id="10209" library="3" weight="0" reward="30000_21063063_20" stealTime="180" stealReward="30000_21063063_4" stealNumMax="3" />
+      <data id="10210" library="3" weight="0" reward="30000_21063063_40" stealTime="300" stealReward="30000_21063063_8" stealNumMax="3" />
+      <data id="10211" library="3" weight="0" reward="30000_21063063_80" stealTime="600" stealReward="30000_21063063_16" stealNumMax="3" />
+      <data id="10212" library="3" weight="10000" reward="30000_21063063_140" stealTime="900" stealReward="30000_21063063_28" stealNumMax="3" />
+</root>

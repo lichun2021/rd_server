@@ -1,0 +1,122 @@
+option java_package	= "com.hawk.game.protocol";
+
+//组队类型
+enum GuildTeamType{
+    TBLY_WAR    = 1;//泰伯利亚
+	XQHX_WAR    = 2;//先驱回响
+}
+
+
+//玩家角色
+enum GuildTeamAuth{
+    GT_COMMAND        = 1;//指挥官
+    GT_STARTER        = 2;//正选队员
+    GT_CANDIDATE      = 3;//预备队员
+    GT_NO_TEAM        = 4;//未出战
+}
+
+//队伍操作
+enum GuildTeamOpt{
+    GT_TEAM_CREATE   = 1;//创建战队
+    GT_CHANGE_NAME   = 2;//战队改名
+    GT_CHOOSE_TIME   = 3;//报名时段
+    GT_TEAM_DISMISS  = 4;//解散
+    GT_TEAM_UPDATE   = 5;//成员变化
+}
+
+//战队信息
+message GuildTeamInfo{
+    required string id                  = 1;//战队id
+	optional string guildId             = 2;//联盟id
+	optional string guildName           = 3;//联盟名字
+	optional string guildTag            = 4;//联盟简称
+	optional int32 guildFlag            = 5;//联盟旗帜
+	optional int64 creatTime            = 6;//创建时间(战队，战绩)
+	required string name                = 7;//战队名字
+	optional string serverId            = 8;//服务器
+	optional int64 battlePoint          = 9;//参战人员总战力
+	optional int32 memberCnt            = 10;//参战人员数量
+    optional int32 timeIndex            = 11;//报名时间段
+    optional int64 battleStartTime      = 12;//战斗开始时间
+    optional int64 battleEndtime        = 13;//战斗结束时间
+    optional GuildTeamInfo oppTeam      = 14;//对手队伍
+    optional int32 rank                 = 15;//比赛排行
+	optional int64 score                = 16;//比赛积分
+    optional bool isWin                 = 17;//是否获胜
+	optional bool canDissmiss           = 18;//是否可以解散
+	optional bool isInSeason           	= 19;//是否参与赛季
+}
+
+
+// 玩家信息
+message GuildTeamMemberInfo{
+	required string id		        = 1;//玩家id
+	required string name	        = 2;//玩家名字
+	optional string serverId	    = 3;//服务器id
+	optional int32 icon			    = 4;//头像
+	optional string pfIcon		    = 5;//平台头像
+	optional string guildId		    = 6;//联盟id
+	optional string guildTag	    = 7;//联盟简称
+	optional string teamId		    = 8;//队伍id
+    optional int32 auth             = 9;//联盟阶级
+	required GuildTeamAuth teamAuth	= 10;//权限
+	optional int32 guildOfficer	    = 11;//联盟官职
+	optional int64 battlePoint	    = 12;//战力
+}
+
+//队伍管理请求 GUILD_BATTLE_TEAM_MANAGER_REQ = 55061;
+message GuildBattleTeamManagerReq{
+	required GuildTeamType type 				= 1;//类型
+    required GuildTeamOpt opt      				= 2;//队伍操作
+    optional string teamId      				= 3;//队伍id
+    optional string name	    				= 4;//队伍名字
+    optional int32 timeIndex					= 5;//队伍名字
+}
+
+//队伍管理返回 GUILD_BATTLE_TEAM_MANAGER_RESP = 55062;
+message GuildBattleTeamManagerResp{
+	required GuildTeamType type 				= 1;//类型
+	required GuildTeamOpt opt          			= 2;//队伍操作
+    required GuildTeamInfo teamInfo    			= 3;//队伍信息
+    
+} 
+
+//成员管理请求 GUILD_BATTLE_MEMBER_MANAGER_REQ = 55063;
+message GuildBattleMemberManagerReq{
+	required GuildTeamType type 				= 1;//类型
+	optional GuildTeamAuth auth  				= 2;//权限
+    required string playerId    				= 3;//玩家id
+    optional string teamId      				= 4;//队伍id
+    
+}
+
+//成员管理返回 GUILD_BATTLE_MEMBER_MANAGER_RESP = 55064;
+message GuildBattleMemberManagerResp{
+	required GuildTeamType type 				= 1;//类型
+	optional GuildTeamAuth auth          		= 2;//权限
+    required GuildTeamMemberInfo memberInfo    	= 3;//玩家信息
+   
+}
+
+//小队列表请求 GUILD_BATTLE_TEAM_LIST_REQ          = 55065;
+message GuildBattleTeamListReq{
+	required GuildTeamType type 				= 1;//类型
+}
+
+//小队列表返回 GUILD_BATTLE_TEAM_LIST_RESP = 55066;//队伍列表返回
+message GuildBattleTeamListResp{
+	required GuildTeamType type 				= 1;//类型
+    repeated GuildTeamInfo teamInfos 			= 2;//队伍列表
+	optional string selfTeamId          		= 3;//自己的队伍id
+}
+
+//成员列表请求 GUILD_BATTLE_MEMBER_LIST_REQ        = 55067;
+message GuildBattleMemberListReq{
+	required GuildTeamType type 				= 1;//类型
+} 
+
+//成员列表返回 GUILD_BATTLE_MEMBER_LIST_RESP = 55068;
+message GuildBattleMemberListResp{
+	required GuildTeamType type 				= 1;//类型
+    repeated GuildTeamMemberInfo memberInfos	= 2;//成员列表
+} 

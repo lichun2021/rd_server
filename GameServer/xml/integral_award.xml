@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" personIntegral="10000" allianceIntegral="10000" award="10000_1001_50" />
+      <data id="2" personIntegral="20000" allianceIntegral="20000" award="10000_1001_100" />
+      <data id="3" personIntegral="30000" allianceIntegral="30000" award="10000_1001_150" />
+      <data id="4" personIntegral="40000" allianceIntegral="40000" award="10000_1001_200" />
+      <data id="5" personIntegral="50000" allianceIntegral="50000" award="10000_1001_250" />
+      <data id="6" personIntegral="60000" allianceIntegral="60000" award="10000_1001_300" />
+      <data id="7" personIntegral="70000" allianceIntegral="70000" award="10000_1001_350" />
+      <data id="8" personIntegral="80000" allianceIntegral="80000" award="10000_1001_400" />
+      <data id="9" personIntegral="90000" allianceIntegral="90000" award="10000_1001_450" />
+      <data id="10" personIntegral="100000" allianceIntegral="100000" award="10000_1001_500" />
+</root>

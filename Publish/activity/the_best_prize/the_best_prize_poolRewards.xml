@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rewards="30000_9990052_2" bigPrize="1" poolId="1" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="2" rewards="30000_9990051_10" poolId="1" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="3" rewards="30000_1480001_120" poolId="1" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="4" rewards="30000_840194_120" poolId="1" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="5" rewards="30000_1300017_40" poolId="1" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="6" rewards="30000_810001_3" poolId="1" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="7" rewards="30000_850008_5" poolId="1" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="8" rewards="30000_9990052_2" bigPrize="1" poolId="2" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="9" rewards="30000_9990051_10" poolId="2" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="10" rewards="30000_1480001_120" poolId="2" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="11" rewards="30000_840194_120" poolId="2" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="12" rewards="30000_1300017_40" poolId="2" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="13" rewards="30000_810001_3" poolId="2" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="14" rewards="30000_850008_5" poolId="2" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="15" rewards="30000_9990052_2" bigPrize="1" poolId="3" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="16" rewards="30000_9990051_10" poolId="3" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="17" rewards="30000_1480001_120" poolId="3" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="18" rewards="30000_840194_120" poolId="3" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="19" rewards="30000_1300017_40" poolId="3" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="20" rewards="30000_810001_3" poolId="3" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="21" rewards="30000_850008_5" poolId="3" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="22" rewards="30000_9990052_2" bigPrize="1" poolId="4" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="23" rewards="30000_9990051_10" poolId="4" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="24" rewards="30000_1480001_120" poolId="4" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="25" rewards="30000_840194_120" poolId="4" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="26" rewards="30000_1300017_40" poolId="4" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="27" rewards="30000_810001_3" poolId="4" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="28" rewards="30000_850008_5" poolId="4" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="29" rewards="30000_9990052_2" bigPrize="1" poolId="5" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="30" rewards="30000_9990051_10" poolId="5" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="31" rewards="30000_1480001_120" poolId="5" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="32" rewards="30000_840194_120" poolId="5" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="33" rewards="30000_1300017_40" poolId="5" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="34" rewards="30000_810001_3" poolId="5" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="35" rewards="30000_850008_5" poolId="5" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="36" rewards="30000_9990052_2" bigPrize="1" poolId="6" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="37" rewards="30000_9990051_10" poolId="6" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="38" rewards="30000_1480001_120" poolId="6" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="39" rewards="30000_840194_120" poolId="6" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="40" rewards="30000_1300017_40" poolId="6" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="41" rewards="30000_810001_3" poolId="6" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="42" rewards="30000_850008_5" poolId="6" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="43" rewards="30000_9990052_2" bigPrize="1" poolId="7" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="44" rewards="30000_9990051_10" poolId="7" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="45" rewards="30000_1480001_120" poolId="7" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="46" rewards="30000_840194_120" poolId="7" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="47" rewards="30000_1300017_40" poolId="7" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="48" rewards="30000_810001_3" poolId="7" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="49" rewards="30000_850008_5" poolId="7" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="50" rewards="30000_9990052_2" bigPrize="1" poolId="8" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="51" rewards="30000_9990051_10" poolId="8" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="52" rewards="30000_1480001_120" poolId="8" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="53" rewards="30000_840194_120" poolId="8" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="54" rewards="30000_1300017_40" poolId="8" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="55" rewards="30000_810001_3" poolId="8" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="56" rewards="30000_850008_5" poolId="8" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="57" rewards="30000_9990052_2" bigPrize="1" poolId="9" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="58" rewards="30000_9990051_10" poolId="9" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="59" rewards="30000_1480001_120" poolId="9" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="60" rewards="30000_840194_120" poolId="9" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="61" rewards="30000_1300017_40" poolId="9" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="62" rewards="30000_810001_3" poolId="9" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="63" rewards="30000_850008_5" poolId="9" limitTimes="80" changePoints="30000_21070053_1" />
+      <data id="64" rewards="30000_9990052_2" bigPrize="1" poolId="10" limitTimes="1" changePoints="30000_21070053_100" />
+      <data id="65" rewards="30000_9990051_10" poolId="10" limitTimes="2" changePoints="30000_21070053_20" />
+      <data id="66" rewards="30000_1480001_120" poolId="10" limitTimes="3" changePoints="30000_21070053_10" />
+      <data id="67" rewards="30000_840194_120" poolId="10" limitTimes="30" changePoints="30000_21070053_5" />
+      <data id="68" rewards="30000_1300017_40" poolId="10" limitTimes="40" changePoints="30000_21070053_3" />
+      <data id="69" rewards="30000_810001_3" poolId="10" limitTimes="70" changePoints="30000_21070053_2" />
+      <data id="70" rewards="30000_850008_5" poolId="10" limitTimes="80" changePoints="30000_21070053_1" />
+</root>

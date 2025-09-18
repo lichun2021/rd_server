@@ -1,0 +1,37 @@
+option java_package	= "com.hawk.game.protocol";
+
+// 巅峰荣耀活动界面信息
+message PeakHonourPageInfo {
+	required int64 ownScore = 1; // 我的积分
+	required int32 ownRank = 2; // 我的排名
+	required string ownServerId = 3; // 我的服务器id
+	required int64 ownPoint = 4; // 个人点数
+	required int64 guildPoint = 5; // 联盟点数
+	repeated int32 ownPointReward = 6; // 已领取的个人积分奖励
+	repeated int32 guildPointReward = 7; // 已领取的联盟积分奖励
+	repeated PeakHonourRankMsg rankList = 8; // 排行榜的列表信息
+	repeated PeakHonourGetScore getScore = 9; // 巅峰荣耀获取积分详情
+	optional string serverList = 10;
+}
+
+message PeakHonourRankMsg {
+	required int32 rank = 1; // 名次
+	optional string guildTag = 2; // 联盟简称
+	required string playerName = 3; // 玩家名称
+	required int64 score = 4; // 积分
+	optional string serverId = 5; // 服务器id
+	optional int32 icon = 6; // 头像
+	optional string pfIcon = 7; // 平台头像
+	required string playerId = 8; // 玩家id
+}
+
+// 巅峰荣耀获取积分详情
+message PeakHonourGetScore {
+	required int32 getType = 1; // 获取的积分类型
+	required int32 getScore = 2; // 获取的积分
+}
+
+// 巅峰荣耀获取积分奖励
+message PeakHonourGetPointReward {
+	required int32 id = 1;  // 奖励挡位id
+}

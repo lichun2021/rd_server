@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+	<data id="1" poolId="1" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="2" poolId="1" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="3" poolId="1" level="1" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="4" poolId="1" level="1" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="5" poolId="1" level="1" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="6" poolId="1" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="7" poolId="1" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="8" poolId="1" level="1" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="9" poolId="1" level="1" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="10" poolId="1" level="1" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="11" poolId="1" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="12" poolId="1" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="13" poolId="1" level="2" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="14" poolId="1" level="2" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="15" poolId="1" level="2" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="16" poolId="1" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="17" poolId="1" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="18" poolId="1" level="2" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="19" poolId="1" level="2" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="20" poolId="1" level="2" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="21" poolId="1" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="22" poolId="1" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="23" poolId="1" level="3" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="24" poolId="1" level="3" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="25" poolId="1" level="3" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="26" poolId="1" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="27" poolId="1" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="28" poolId="1" level="3" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="29" poolId="1" level="3" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="30" poolId="1" level="3" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	
+
+
+	<data id="31" poolId="2" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="32" poolId="2" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="33" poolId="2" level="1" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="34" poolId="2" level="1" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="35" poolId="2" level="1" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="36" poolId="2" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="37" poolId="2" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="38" poolId="2" level="1" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="39" poolId="2" level="1" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="40" poolId="2" level="1" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="41" poolId="2" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="42" poolId="2" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="43" poolId="2" level="2" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="44" poolId="2" level="2" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="45" poolId="2" level="2" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="46" poolId="2" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="47" poolId="2" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="48" poolId="2" level="2" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="49" poolId="2" level="2" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="50" poolId="2" level="2" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="51" poolId="2" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="52" poolId="2" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="53" poolId="2" level="3" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="54" poolId="2" level="3" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="55" poolId="2" level="3" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />	
+	<data id="56" poolId="2" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="57" poolId="2" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="58" poolId="2" level="3" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="59" poolId="2" level="3" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="60" poolId="2" level="3" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	
+	<data id="61" poolId="3" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="62" poolId="3" level="1" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="63" poolId="3" level="1" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="64" poolId="3" level="1" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="65" poolId="3" level="1" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="66" poolId="3" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="67" poolId="3" level="1" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="68" poolId="3" level="1" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="69" poolId="3" level="1" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="70" poolId="3" level="1" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="71" poolId="3" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="72" poolId="3" level="2" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="73" poolId="3" level="2" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="74" poolId="3" level="2" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="75" poolId="3" level="2" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />
+	<data id="76" poolId="3" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="77" poolId="3" level="2" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="78" poolId="3" level="2" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="79" poolId="3" level="2" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="80" poolId="3" level="2" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	<data id="81" poolId="3" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="90" />
+	<data id="82" poolId="3" level="3" rewards="30000_850051_10" times="1.5" isTopGrade="0" weight="30" />
+	<data id="83" poolId="3" level="3" rewards="30000_1780030_10" times="1.5" isTopGrade="0" weight="880" />
+	<data id="84" poolId="3" level="3" rewards="30000_101050_10" times="1.5" isTopGrade="0" weight="175" />
+	<data id="85" poolId="3" level="3" rewards="30000_103050_10" times="1.5" isTopGrade="1" weight="175" />	
+	<data id="86" poolId="3" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="90" />
+	<data id="87" poolId="3" level="3" rewards="30000_850051_20" times="3" isTopGrade="0" weight="30" />
+	<data id="88" poolId="3" level="3" rewards="30000_1780030_20" times="3" isTopGrade="0" weight="880" />
+	<data id="89" poolId="3" level="3" rewards="30000_101050_20" times="3" isTopGrade="0" weight="175" />
+	<data id="90" poolId="3" level="3" rewards="30000_103050_20" times="3" isTopGrade="1" weight="175" />
+	
+</root>

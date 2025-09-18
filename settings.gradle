@@ -1,0 +1,7 @@
+rootProject.name='GameProject'
+
+include 'Protocol/Protobuf/Java'
+include 'GameLib'
+include 'GameLog'
+include 'GameActivity'
+include 'GameServer'

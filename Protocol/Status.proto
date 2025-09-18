@@ -1,0 +1,2547 @@
+option java_package	= "com.hawk.game.protocol";
+
+enum SysError
+{
+	SUCCESS_OK							= 0;	    // 成功默认值
+	DATA_ERROR							= 1;	    // 数据错误
+	EXCEPTION							= 2;        //内部错误
+	CONFIG_ERROR						= 10001;	// 配置文件错误
+	PARAMS_INVALID						= 10002;	// 参数错误
+	SERVER_NOT_OPENED					= 10003;	// 服务器未开启
+	SERVER_GRAY_STATE					= 10004;	// 服务器灰度状态中
+	FETCH_PUID_FAILED					= 10005;	// 获取平台ID失败
+	ACCOUNT_NOT_EXIST					= 10006;	// 玩家账号不存在
+	PLAYER_FORBIDDEN					= 10007;	// 玩家被封号
+	PLAYER_KICKOUT						= 10008;	// 玩家被踢下线
+	PUID_CTRL_DISABLE					= 10009;	// puid白名单控制不可登录
+	SERVER_ID_DISABLE					= 10010;	// 服务器不存在
+	AUTH_CHECK_FAILED					= 10011;    // 登录鉴权失败
+	PLAYER_FREQUENT_LOGIN               = 10012;    // 玩家登录过于频繁
+	SERVER_REGISTER_FULL				= 10013;	// 单服角色已满
+	FORCE_TO_OFFLINE                    = 10014;    // 强制离线
+	PLAYER_CREATE_FAILED				= 10015;	// 玩家创建失败
+    OPENID_INVALID                      = 10016;    // openid为空不能登录
+	MODULE_CLOSED                       = 10017;    // 系统模块关闭
+	PLAYER_EXIST						= 10018;    //目标服已存在角色 (用于迁服)
+	PLAYER_INVALID						= 10019; 	//角色无效
+	SERVER_INVALID						= 10020;    //目标服务器无法连接
+	SERVER_NOT_EXIST					= 10021;    //目标服务器不存在
+	ACCOUNT_DIFF_ROLE_KICKOUT           = 10022;    // 同一账号另一角色已上线，此角色被踢下线
+	SERVER_CLOSE						= 10023;    //服务器关服
+	PLAYER_INIT_FAILED					= 10024;	// 玩家初始化失败
+	BACKGROUND_KICKOUT                  = 10025;    // 挂后台太久被踢下线
+	SERVER_BUSY_LIMIT					= 10026;	// 服务器当前繁忙，请稍后再试
+	PROTOCOL_BUSY						= 10027;	// 协议频繁
+
+    APPLE_LOGIN_DENIED                  = 10028;    // 非审核环境拒绝apple登录                    
+	
+	RECHARGE_GIFT_OFF                   = 10030;    // 该充值礼包已下架
+	DAILY_SPECIAL_GIFT_OFF              = 10031;    // 该特惠礼包（道具直购）已下架
+	PREMIUM_GIFT_OFF                    = 10032;    // 该超值礼包已下架
+	SALES_GOODS_OFF                     = 10033;    // 该热销商品已下架
+	VIP_SHOP_GOODS_OFF                  = 10034;    // 该vip商城商品已下架
+	VIP_GIFT_OFF                        = 10035;    // 该vip专属礼包已下架
+	INDEPENDENT_ARMS_SYSTEM_CLOSED      = 10036;    // 独立军火商（黑市商人）系统已关闭
+	ALLIED_DEPOT_SYSTEM_CLOSED          = 10037;    // 盟军补给站（军需处）系统已关闭
+	DAILY_TASK_SYSTEM_CLOSED            = 10038;    // 每日任务（酒馆）系统已关闭
+	WORLD_CHAT_SYSTEM_CLOSED            = 10039;    // 世界聊天系统已关闭
+	GUILD_CHAT_SYSTEM_CLOSED            = 10040;    // 联盟聊天系统已关闭
+	ITEM_USE_OFF                        = 10041;    // 该道具目前禁止使用
+	ITEM_GET_OFF                        = 10042;    // 该道具目前禁止获取
+	MAIL_AWARD_RECV_OFF                 = 10043;    // 邮件奖励目前禁止领取
+	GOLD_USE_OFF                        = 10044;    // 目前禁止使用水晶
+	DIAMOND_USE_OFF                     = 10045;    // 目前禁止使用钻石
+	SKILL_USE_OFF                       = 10046;    // 该技能目前禁止使用
+	ACTIVITY_CLOSED                     = 10047;    // 该活动已关闭
+	IMMGRATION_BAN_LOGIN				= 10048;    // 迁服后禁止登录
+	
+	HEALTHGAME_ACCUMULATE_REST_TIME     = 10060;    // 健康游戏累计强制休息时间未结束
+	HEALTHGAME_ONCEGAME_REST_TIME       = 10061;    // 健康游戏单次强制休息时间未结束
+	HEALTHGAME_CURFEW_GAME              = 10062;    // 健康游戏宵禁中
+	HEALTHGAME_BAN_GAME                 = 10063;    // 健康游戏禁玩中
+	HEALTHGAME_ZK_BAN                   = 10064;    // 中控禁玩中
+	NOT_SELL							= 10070;    // 暂不出售.
+	VIP_LEVEL_INSUFFICIENT				= 10071;    // VIP等级不足.	
+	ZERO_EARNING_STATE                  = 10072;    // 零收益状态
+	LOGIN_ON_OTHER_SERVER               = 10073;    // 账号已在其他服务器登录
+	
+	GIFT_NOT_SALE						= 10081;    //礼包已经下架(通用)
+	CREDIT_SCORE_NOT_ENOUGH			  	= 10082; 	//信用分不足
+	ADMIN_OPERATION						= 10083;    //系统操作.
+	
+	GLOBAL_BAN_CHANGE_NAME              = 10084;    // 目前禁止玩家修改角色名称
+	GLOBAL_BAN_CHANGE_ICON              = 10085;    // 目前禁止玩家修改头像
+	GLOBAL_BAN_CHANGE_GUILD_NAME        = 10086;    // 目前禁止玩家修改联盟名称
+	GLOBAL_BAN_CHANGE_MANOR_NAME        = 10087;    // 目前禁止玩家修改联盟堡垒名称
+	GLOBAL_BAN_CHANGE_GUILD_ANNOUNCE    = 10088;    // 目前禁止玩家修改联盟宣言	
+	FORBID_CREATE_ROLE                  = 10089;    // 账号被禁止创建角色
+	PERSONAL_PROTECTED                  = 10090;    // 由于个人保护已关闭该功能
+	PLATFORM_RELATION_CANCEL            = 10091;    // 您的平台好友关系链已解除授权，不能拉取平台好友
+	PROTOCOL_COUNTER_BAN                = 10092;    // 协议计数封禁
+	ROLE_EXCHANGE_FORBIDDEN             = 10093;    // 心悦角色交易期间，当前状态禁止登录
+	ROLE_EXCHANGE_FORBIDDEN_REQ         = 10094;    // 心悦角色交易考察期，禁止操作
+}
+
+enum Error
+{
+	OVER_MAX_LEVEL						= 11;	// 超出最大等级
+	ELECTRIC_NOT_ENOUGH					= 12;	// 电力不足
+	GOLDORE_NOT_ENOUGH					= 13;	// 黄金不足
+	OIL_NOT_ENOUGH						= 14;	// 石油不足
+	STEEL_NOT_ENOUGH					= 15;	// 钢铁不足
+	TOMBARTHITE_NOT_ENOUGH				= 16;	// 合金不足
+	BUILDINGF_CONFIG_ID_ERROR			= 17;	// 建筑ID配置不存在
+	BUILDING_NUM_MAX					= 18;	// 该建筑数目已达可建上限
+	COORDINAGE_ERROR					= 19;	// 坐标错误
+	BUILDING_COORDINATE_USED			= 20;	// 坐标已经被占用
+	BUILDING_NOT_EXISIT					= 21;	// 该建筑不存在
+	TALENT_POINT_NOT_ENOUGH				= 22;	// 战略点不足
+	TALENT_CONDTION_NOT_ENOUGH			= 23;	// 战略升级条件不足
+	ARMY_IN_TRAINNING					= 24;	// 该兵种正在训练中
+	ARMY_COUNT_ERROR					= 25;	// 造兵数量不合法
+	ARMY_ENTITY_ERROR					= 26;	// 没有该兵种的数据
+	SOLDIER_NOT_UNLOCKED				= 27;	// 兵种未解锁
+	ARMY_UNDER_TREATMENT				= 28;	// 正在治疗中
+	MISSION_NOT_FINISH					= 29;	// 任务未完成不可领取奖励
+	NAME_ERROR_PLAYER					= 31;	// 玩家名不合法
+	NAME_ERROR_GUILD					= 32;	// 联盟名不合法
+	CODITION_NOT_MATCH					= 33;	// 前置条件不满足
+	BUILDING_FRONT_NOT_EXISIT			= 34;	// 前置建筑没有或者等级不足
+	MOVE_CITY_NEED_QUIT_GUILD			= 35;	// 跨服迁城需要退出联盟
+	QUEUE_FREE_LACK						= 36;	// 剩余时间超过玩家免费时间，不能免费完成
+	FAVORITE_MAX_LIMIT					= 37;	// 收藏夹数量超过上限
+	BUILDING_STATUS_REPAIR				= 38;	// 建筑正在修复中
+	BUILDING_STATUS_UPGRADE				= 39;	// 建筑正在升级
+	BUILDING_STATUS_SOILDER_CREATE		= 40;	// 建筑正在造兵
+	BUILDING_STATUS_TECHNOLOGY			= 41;	// 正在研究科技
+	BUILDING_STATUS_SOILDER_HARVEST		= 42;	// 等待收兵
+	BUILDING_STATUS_SOILDER_CURE		= 43;	// 该建筑正在治疗中
+	WORLD_MARCH_NOT_EXISIT				= 45;	// 找不到行军信息
+	BUILDING_QUEUE_ONLY					= 46;	// 只有普通建筑队列才有免费时间
+	WORLD_MONSTER_DIE					= 47;	// 怪物已死
+	HAS_SAME_MARCH_THIS_POINT			= 48;	// 您已有部队在向该坐标点发起行军
+	VIP_NOT_ACTIVE						= 49;	// VIP未激活
+	LEVELUP_REWARD_NOT_EXIST			= 50;	// 升级奖励不存在
+	LEVELUP_REWARD_LEVEL_ERROR			= 51;	// 升级奖励等级错误
+	BUILDING_DATA_ALREADY_REFRESH		= 52;	// 建筑数据已刷新
+	TALENT_CHANGE_FAILED				= 53;	// 战略切换失败
+	MOVE_CITY_CANNOT_RANDOM_CROSS		= 54;	// 跨服不能随机迁城
+	MOVE_CITY_PRESIDENT_STAGE_LIMIT		= 55;	// 元首战特殊时期限制
+	PLAYER_ICON_NOT_EXIST				= 56;	// 头像不存在
+	PLAYER_ICON_NOT_BUY					= 57;	// 头像未购买
+	MAIL_NOT_EXIST						= 58;	// 邮件不存在
+	SAVE_MAIL_OVER_MAX					= 59;	// 邮件数量超出上限，已将老旧邮件删除
+
+	BUILDING_REBUILD_NOT_ALLOWED		= 60;	// 建筑为不可改建的建筑
+	BUILDING_LIMITTYPE_NOT_EQUAL		= 61;	// 只能改建成限制类型相同的建筑
+	BUILDING_BUILDTYPE_EQUAL			= 62;	// 只能改建成建筑类型不同的建筑
+	BUILDING_REBUILD_LEVEL_ERROR		= 63;	// 改建前后的两个建筑等级须相等
+	DEFENCE_BUILDING_HP_NOT_FULL		= 64;	// 防御建筑只有满血时才可改建
+	BUILDING_NOT_DEFENCE_TYPE			= 65;	// 非防御建筑不可进行修复操作
+	DEFENCE_BUILDING_HP_FULL			= 66;	// 防御建筑只有在受损的时候才可进行修复操作
+	DEFENCE_BUILDING_POSITION_ERROR		= 67;	// 防御建筑只能建在已开锁的防御建筑专用位置
+	BUILDING_POSITION_ERROR				= 68;	// 非防御建筑不能占用防御建筑的专用位置
+
+    SOLDIER_WOUND_NEED_CURE             = 69;   // 有伤兵待治疗
+	CURE_FINISH_SOLDIER_NONE			= 70;	// 无治疗完成的兵可领取
+	CURE_FINISH_SOLDIER_NOT_NONE		= 71;	// 还有治疗完成的兵未领取
+	CANNOT_TRAIN_OVER_POPULATION		= 72;	// 立即训练后将超出人口上限,无法完成立即训练
+	CANNOT_COLLECT_OVER_POPULATION		= 73;	// 已达到最大人口上限,无法收取部队
+	EXCEED_WOUNED_SOLDIER               = 74;   // 治疗伤兵时数量超出已有伤兵上限
+	SCIENCE_FRONT_NOT_COMPLETE			= 75;	// 前置科技条件不满足
+	SCIENCE_RESEARCHED					= 76;	// 科技已研究
+	EXCEED_SOLDIER                      = 77;   // 解雇士兵时超出已有兵的上限
+
+	CHAT_MSG_TOO_LONG                   = 79;   // 聊天信息内容长度超出限制
+	IDIP_BAN_SEND_MSG					= 80;	// 玩家被GM禁言
+	BUILDING_STATUS_CREATE				= 81;	// 建筑建造中
+	BUILDING_STATUS_REMOVE				= 82;	// 建筑拆除中
+	BUILDING_STATUS_REBUILD				= 83;	// 建筑改建中
+	BUILDING_STATUS_CURE			    = 84;	// 建筑正在治疗伤兵	
+	CITY_DEF_EXCEED_LIMIT               = 85;   // 城防值超过上限
+	CITY_REPAIR_EARLY                   = 86;   // 修复城防时间未到
+	CITY_NOT_ON_FIRE                    = 87;   // 城防不处于燃烧状态
+	BUILDING_YURI_LOCK					= 88;   // 被尤里来袭锁定
+	
+	CONTINUE_RECHARGE_AWARD_RECEIVED   = 89;    // 奖励已领取
+	BUILDIGN_AWARD_NOT_EXIST           = 90;    // 建筑奖励不存在
+	BUILDIGN_AWARD_HAS_TAKEN           = 91;    // 该等级建筑奖励已领取过
+	BUILDING_LEVEL_NOT_MATCH           = 92;    // 建筑等级未达到，不可领取奖励
+	WISHING_WELL_LOCKED                = 93;    // 军需处建筑未解锁，不能使用军需处补给券
+	TRAIN_QUANTITY_ADD_FAILD           = 94;    // 同类征兵令不能叠加使用
+	TRAIN_ADVANCE_ADD_FAILD          = 95;    // 同类征兵令不能叠加使用
+
+	MILITARY_SCORE_NOT_ENOUGH           = 99;   // 军演积分不足
+	VIT_NOT_ENOUGH						= 100;	// 体力不足
+	GOLD_NOT_ENOUGH						= 101;	// 水晶不足
+	COINS_NOT_ENOUGH					= 102;	// 金币不足
+	VIP_NOT_ENOUGH						= 103;	// vip等级不足
+	ITEM_NOT_FOUND						= 104;	// 道具未找到
+	ITEM_NOT_ENOUGH						= 105;	// 道具不足
+	CITY_LEVEL_NOT_ENOUGH				= 106;	// 大本等级不够
+	PLAYER_LEVEL_NOT_ENOUGH				= 107;	// 玩家等级不够
+	GOODS_CAN_NOT_SELL					= 108;	// 商品不可出售
+	TECHNOLOGY_IS_RESEARCHING			= 109;	// 科技正在研究
+	HAS_BUYED_TODAY						= 110;	// 热卖商品今天已买过，当天不能再买
+	HOT_SALES_ID_ERROR					= 111;	// 商品热卖Id错误:跨天出现前后端salesId不一致
+	ITEM_CAN_NOT_USE_IN_BAG				= 112;	// 道具不能在背包使用
+	CITY_LEVEL_OVERHEAD_LIMIT			= 113;	// 大本等级超过限制
+	RECRUITS_NOT_ENOUGH					= 114;  // 新兵不足
+	GOLD_DIAMONDS_NOT_ENOUGH			= 115;	// 水晶和钻石不足
+	DIAMONDS_NOT_ENOUGH					= 116;	// 钻石不足
+	EXP_NOT_ENOUGH                      = 117;  // 玩家经验扣除量大于玩家现有经验值
+	VIP_EXP_NOT_ENOUGH                  = 118;  // vip经验扣除量大于玩家现有vip经验值
+	PLAYER_ATTRIBUTE_NOT_EXIST          = 119;  // 玩家属性不存在
+    ITEMS_ADD_FAILED                    = 120;  // 物品发放失败
+	ITEM_TYPE_ERROR                     = 121;  // 道具类型错误
+    ITEM_USE_COUNT_ERROR                = 122;  // 道具使用数量错误，不能批量使用的道具一次只能使用一个
+	ITEM_BUY_COUNT_EXCEED               = 123;  // 道具购买数量超出上限
+	VIP_GOODS_PURCHASE_TIME_OVERLIMIT   = 124;  // VIP商城该物品购买次数已超上限
+	VIP_EXCLUSIVE_BOUGHT                = 125;  // 此vip专属礼包已购买
+	VIP_BENEFIT_TAKEN_TODAY             = 126;  // 此vip福利礼包今日已领取过
+	VIP_LEVEL_LOWER                     = 127;  // VIP等级未达到
+	VIP_SHOP_OUT_OF_DATE                = 128;  // vip商城商品有效时间已过（跨周刷新）
+	
+	FOGGYBOX_NOT_EXIST                  = 129;  // 迷雾要塞宝箱不存在
+	FOGGYBOX_UNLOCKED                   = 131;  // 迷雾要塞宝箱已开启
+	FOGGYBOX_LOCKED                     = 132;  // 迷雾要塞宝箱未开启
+	FOGGYBOX_QUEUE_OCCUPIED             = 133;  // 迷雾要塞宝箱队列已被占用
+	SPEEDUP_ITEM_COUNT_ERROR            = 134;  // 时间队列加速道具数量不对
+	
+	RES_BUILDING_TYPE_NEED              = 135;  // 非资源田类型
+	RES_BUILDING_COUNT_ZERO             = 136;  // 不存在相应类型的资源田建筑
+	NO_RES_BUILDING_INC_PRODUCT         = 137;  // 没有资源田需要增产
+	NO_NEWLY_SHOP_ITEM                  = 138;  // 没有新上架的商品
+	ONERMB_PURCHASE_NOT_OPEN            = 139;  // 一元购活动暂未开启
+
+	PAY_GIFT_LAST_UNFINISH              = 144;  // 此礼包上次购买流程未结束，不能重复购买
+	RECHARGE_ORDER_GEN_FAILED           = 145;  // 充值订单生成失败
+	RECHARGE_GOODS_UNMATCHED            = 146;  // 前后端订单商品id不匹配
+	INVALID_RECHARGE_ORDER              = 147;  // 无效订单（服务器存储的订单id有过期，或客户端发来的是假订单id，即不是服务器生成的订单id）              
+	NO_VALID_MONTHCARD                  = 148;  // 无生效月卡，不能购买每日特惠礼包
+	PAY_GIFT_BUY_FAILED                 = 149;  // 购买礼包失败
+	PAY_GOODS_NOT_EXIST					= 150;	// 购买的商品不存在
+	PAY_GOODS_CANNOT_SALE				= 151;	// 此商品当前不可购买
+	PAYADD_GOLD_NOT_ENOUGH				= 152;	// 累计充值钻石不够
+	PAYADD_REWARD_NOT_EXIST				= 153;	// 累计充值奖励不存在
+	PAYADD_INFO_NOT_EXIST				= 154;	// 累计充值信息不存在
+	PAYADD_LEVEL_MAX					= 155;	// 累计充值已升到最高等级
+	LEVEL_TAKE_AWARD_ALREADY			= 156;	// 此档次的奖励已领取
+	VIT_PURCHARSE_TIMES_LIMIT           = 157;  // 当日购买体力次数已达上限
+	PAY_GIFT_NOT_EXIST					= 158;	// 所购礼包不存在
+	PAY_GIFT_BUY_FULL_TODAY				= 159;	// 该礼包今日购买次数已满
+
+	CAPTIVE_NOT_EXIST					= 160;	// 俘虏不存在
+	CAPTIVE_STATE_ERROR					= 161;	// 俘虏状态不对
+	CAPTIVE_PUNISH_COOLING				= 162;	// 俘虏处决冷却中
+	COMMANDER_CAPTURED					= 165;	// 指挥官被抓不能跨服迁城
+	COMMANDER_HAS_CAPTIVE				= 166;	// 监狱尚有俘虏不能跨服迁城
+	GEN_CAPTIVE_RELEASE_MARCH			= 167;	// 生成释放俘虏行军失败
+	
+	SKILL_CFG_ERROR						= 170;	// 技能配置不存在
+	SKILL_UNLOCK						= 171;	// 技能未解锁
+	SKILL_IN_CD							= 172;	// 技能冷却中
+	SKILL_CONDITION_NOT_MATCH			= 173;	// 技能释放条件不满足
+
+	VIT_BUY_COUNT_ERROR                 = 174;  // 购买体力次数错误
+	VIT_BUYTIMES_ANOTHERDAY_RESET       = 175;  // 跨天了，购买体力次数重置刷新
+	DAILY_BUYVIT_TIMES_LIMIT_ERROR      = 176;  // 当日花费金币购买体力次数超上限
+	TOOL_BACK_GOLD_LIMIT_ERROR          = 177;  // 当日使用道具获得金币数量超上限
+	
+	FIRST_AID_STATION_NOT_EXIST         = 178;  // 超时空急救站建筑不存在
+	FIRST_AID_STATION_RECOVERING        = 179;  // 超时空急救站冷却恢复中
+	FIRST_AID_SOLDIER_COUNT_ERR         = 180;  // 阵亡部队急救数量错误 
+	BUILDING_RECOVER_QUEUE_SPEED_ERR    = 181;  // 超时空急救站恢复队列不能加速
+	BUILDING_RECOVER_QUEUE_CANCEL_ERR   = 182;  // 超时空急救站恢复队列不能取消
+	
+	ITEM_EXCHANGE_TIME_LIMIT            = 183;  // 物品兑换次数已达上限
+	MILITARY_ITEM_LOCKED                = 184;  // 军演商店物品还未解锁
+	MILITARY_ITEM_BUY_COUNT_LIMIT       = 185;  // 军演商店物品购买次数达上限
+	
+	BUILD_DRAMA_CHAPTER_COND_ERROR      = 186;  // 建筑升级-剧情章节完成条件未达成
+	BUILD_DRAMA_MISSION_COND_ERROR      = 187;  // 建筑升级-剧情任务完成条件未达成
+	BUILD_GENERAL_MISSION_COND_ERROR    = 188;  // 建筑升级-主线任务完成条件未达成
+	BUILD_TECH_LEVEL_COND_ERROR         = 189;  // 建筑升级-科技研究完成条件未达成
+	
+	GUILD_NOT_SUIT						= 199;	// 当前没有合适的联盟,请稍候再加入(一键加盟)
+	GUILD_NOT_EXIST						= 200;	// 联盟不存在
+	GUILD_LOW_AUTHORITY					= 201;	// 联盟操作权限不足
+	GUILD_FLAG_NOTEXIST					= 202;	// 联盟旗帜不存在
+	GUILD_LANG_NOTEXIST					= 203;	// 联盟语言不存在
+	GUILD_FULL							= 204;	// 联盟人员已满
+	GUILD_ALREADY_APPLY					= 205;	// 联盟已经申请
+	GUILD_APPLY_NOTEXIST				= 206;	// 联盟申请不存在
+	GUILD_ALREADYJOIN					= 207;	// 玩家已加入联盟
+	GUILD_INVITE_NOTEXIST				= 208;	// 联盟邀请不存在
+	GUILD_ANNOUNCEMENT_ILLEGAL			= 209;	// 联盟宣言非法
+	GUILD_NOTICE_ILLEGAL				= 210;	// 联盟通告非法
+	GUILD_MESSAGE_ILLEGAL				= 211;	// 联盟留言非法
+	GUILD_NOT_MEMBER					= 212;	// 玩家不是本联盟成员
+	GUILD_HIGHEST_LEVEL					= 213;	// 玩家达到最大权限
+	GUILD_LOWEST_LEVEL					= 214;	// 玩家达到最小权限
+	GUILD_LEADER_CANNOT_KICK			= 215;	// 联盟盟主不能被踢出联盟
+	GUILD_LEADER_CANNOT_DEMISE			= 216;	// 联盟盟主不能被选为盟主
+	GUILD_LEADER_CANNOT_REPLACE			= 217;	// 联盟盟主在线,不能被取代
+	GUILD_APPLY_NOTMATCH				= 218;	// 联盟加入不满足条件
+	GUILD_LEVELNAME_ILLEGAL				= 219;	// 联盟阶级称谓非法
+	GUILD_MEMBERNUM_ILLEGAL				= 220;	// 联盟人数大于1个
+	GUILD_QUITTIME_ILLEGAL				= 221;	// 退出联盟时间少于4小时,不能加入联盟
+	GUILD_CONTRIBUTION_NOT_ENOUGH		= 222;	// 联盟贡献不足
+	GUILD_MESSAGE_FORBID				= 223;	// 已被屏蔽发留言
+	GUILD_SCORE_NOT_ENOUGH				= 224;	// 联盟积分不足
+	GUILD_ALREADY_INVITE				= 225;	// 已邀请
+	GUILD_ALREADY_MARCH_QUIT			= 226;	// 您的队伍正在参与联盟战争，无法退出！
+	GUILD_ALREADY_MANOR					= 227;	// 联盟已经有领地
+	GUILD_MANOR_ALREADY_OCCUPY			= 228;	// 领地已被占领
+	GUILD_MANOR_NOTEXIST				= 229;	// 领地不存在
+	GUILD_HASNOT_MANOR					= 230;	// 联盟没有领地
+	GUILD_INVITE_IN_CD					= 231;	// 联盟邀请邮件cd
+	GUILD_INVITE_MOVE_CITY_CD			= 232;	// 联盟迁城邀请邮件cd
+	GUILD_CREATE_FAILE					= 233;	// 联盟创建失败
+	GUILD_JOIN_FAILE					= 234;	// 加入联盟失败
+	GUILD_ALREADY_MARCH_KICK			= 235;	// 该玩家的队伍正在参与联盟战争，无法逐出！
+	GUILD_FROBID_MEMBER					= 236;	// 同联盟成员无法屏蔽留言
+	GUILD_CANNOT_REPLACE_SELF			= 237;	// 自己已是盟主,不能取代自己
+	GUILD_CANNOT_REPLACE_TIME_LESS		= 238;	// 时间不满足,不能取代
+	GUILD_CANNOT_REPLACE_STAGE_AUTH_LESS= 239;	// 当前阶段,仅R4以上玩家才能接替
+	
+	GUILD_TECHNOLOGY_NOT_MATCH			= 240;	// 联盟科技不满足
+	GUILD_SIGN_CFG_ERROR				= 241;	// 联盟标记id不合法
+	GUILD_SIGN_TO_LONG					= 242;	// 联盟标记信息长度超过限制
+	GUILD_SIGN_INFO_ERROR				= 243;	// 联盟标记信息含有非法字符
+	GUILD_SIGN_POINT_REPEAT				= 244;	// 该位置已有联盟标记
+	GUILD_SHOP_ITEM_COUNT_NOT_ENOUGH	= 245;	// 联盟商店商品数量不足
+	GUILD_SHOP_ITEM_NOT_EXIST			= 246;	// 联盟商品信息不存在
+	GUILD_NUCLEAR_IN_PROTECTED			= 247;	// 当前处于超级武器投票保护时间
+	GUILD_NO_JOIN						= 248;	// 玩家尚未加入联盟
+
+	GUILD_PLAYER_HASNOT_GUILD			= 250;	// 玩家未加入联盟
+	GUILD_DISMISS_OFFICER_FAILED		= 251;	// 解除联盟官员失败
+	GUILD_NOT_SAME						= 252;	// 玩家不在同一联盟
+	GUILD_OFFICEID_ERROR				= 253;	// 联盟官职id错误
+	GUILD_ALREADY_IS_OFFICER			= 254;	// 该成员已经是联盟官员
+	GUILD_OFFICE_ALREADY_APPOINT		= 255;	// 该官职已有指定成员
+
+	GUILD_LEVEL_NOT_ENOUGH				= 256;	// 联盟等级不足
+	
+	GUILD_ALREADY_SIGN					= 257;	// 今日已进行联盟签到
+	GUILD_QUITTIME_NOT_ENOUGH			= 258;	// 距离上次退盟时间少于xxx
+	GUILD_NO_TASK_REWARD				= 259;	// 没有可领取的联盟任务奖励
+	
+	GUILD_NO_EMBASSY					= 293;	// 没有建造大使馆,不能申请联盟帮助
+	GUILD_SELF_NO_TRADE_CENTER			= 294;	// 没有建造贸易中心,不能援助
+	GUILD_MEMBER_NO_TRADE_CENTER		= 295;	// 盟友没有贸易中心,不能援助
+	GUILD_LEADER_CANT_MOVE_CITY			= 296;	// 盟主不能使用传送道具
+	GUILD_LEADER_NO_PLACE				= 297;	// 盟主周围没有空闲区域
+	GUILD_CLEAR_MAX_NUM					= 298;	// 清理资源点次数已达上限
+	GUILD_RES_HAS_BEEN_COLLCET			= 299;	// 资源点正在被采集，不能清理
+
+	WORLD_POINT_NOT_EXIST				= 300;	// 世界坐标点不存在
+	WORLD_POINT_EMPTY					= 301;	// 世界坐标点空白
+	WORLD_POINT_NOT_EMPTY				= 302;	// 世界坐标点空白
+	WORLD_MARCH_MAX_LIMIT				= 303;	// 行军数量已达上限
+	RADAR_NOT_EXIST						= 304;	// 监测卫星至少1级才能侦查
+	WORLD_POINT_INVALID					= 305;	// 城点无效
+	MOVE_CITY_FAILED					= 306;	// 迁城失败
+	WORLD_SEARCH_NO_TARGET				= 307;	// 找不到满足条件的点
+	WORLD_SEARCH_NO_MANOR				= 308;	// 找不到满足条件的领地
+	WORLD_MARCH_HAS_REFRESH				= 309;	// 行军信息已刷新
+	HAS_MARCH_IN_WORLD					= 310;	// 有部队在城外行军
+	CITY_BEEN_ATTACKING					= 311;	// 城点被攻击中
+	CITY_BEEN_SPYING					= 312;	// 城点被侦查中
+	CITY_BEEN_ASSISTANCE				= 313;	// 城点被援助中
+	WORLD_POINT_NOT_MONSTER				= 314;	// 目标点不为怪物
+	WORLD_MARCH_ARMY_COUNT				= 315;	// 出征队列出兵数量与可出征数量不符
+	WORLD_MARCH_ARMY_TOTALCOUNT			= 316;	// 出征士兵数量大于最大可出征数量
+	WORLD_POINT_NOT_RESOURCE			= 317;	// 目标点不为资源
+	WORLD_POINT_GUILDTAKE				= 318;	// 目标点被同联盟人员占领
+	WORLD_POINT_SPY_NOT_ALLOWED			= 319;	// 目标点不是可侦查的点
+	CITY_UNDER_PROTECTED				= 320;	// 城点正处于保护状态
+	WORLD_POINT_WITHOUT_ARMY			= 321;	// 目标点没有部队
+	WORLD_POINT_TYPE_ERROR				= 322;	// 目标点类型错误
+	HAS_SAME_TYPE_MARCH					= 323;	// 已向目标点发起同类型行军
+	MASS_ERR_TARCITY_LOW				= 324;	// 目标等级太低不能被集结
+	MASS_ERR_MARCH_NOT_EXIST			= 325;	// 集结行军不存在
+	MASS_ERR_NOT_SAME_GUILD				= 326;	// 集结成员不在同联盟
+	MASS_ERR_TIME						= 327;	// 集结时间不合法
+	MASS_ERR_OVER_PLAYER_CNT			= 328;	// 集结队伍超过上限
+	MASS_ERR_JOINED						= 329;	// 集结已加入
+	MASS_ERR_CANOT_JOIN_SELF			= 330;	// 不能加入自己发起的集结
+	MASS_ERR_CANOT_START_TWO_MASS		= 331;	// 一个玩家同时只能发起一个集结
+	WORLD_MARCH_RETURNING				= 332;	// 行军返回中
+	WORLD_MARCH_NO_ARMY					= 333;	// 没有带兵
+	WORLD_MARCH_MASS_CANNOT_CALLBACK	= 334;	// 集结类型的行军不能召回
+	WORLD_MARCH_NOT_ASSIST				= 335;	// 非援助类型行军不能遣返
+	WORLD_MARCH_NOT_MASS				= 336;	// 不是集结类型行军不能做此操作
+	WORLD_MARCH_NOT_LEADER				= 337;	// 不是队长不能操作
+	WORLD_MARCH_ALREADY_MARCHING		= 338;	// 行军以出发，不能做次操作
+	WORLD_MARCH_NOT_TEAM_MEMBER			= 339;	// 目标不是队员
+	ASSISTANCE_RES_MAX					= 340;	// 资源援助超过最大值
+	WORLD_MARCH_ASSIST_BACK_HOME		= 341;	// 援助部队已回家
+	WORLD_MARCH_STATUS_CHANGED			= 342;	// 行军已到达或者行军状态已发生变化
+	WORLD_MARCH_NOT_REACH				= 343;	// 队员还没到你家，不能遣返
+	WORLD_MARCH_MANOR_NO_GUILD			= 344;	// 没有联盟的玩家不能攻击领地堡垒
+	WORLD_MARCH_MANOR_CANOT_MOVE_CITY	= 345;	// 联盟领地迷雾还未散去，不能迁城
+	NOT_YOUR_GUILD_MANOR				= 346;	// 不是你盟的领地
+	QUARTERED_MARCHS_FULL				= 347;	// 驻军已满
+	WORLD_MARCH_REQ_TYPE_ERROR			= 348;	// 请求行军类型错误
+	MANOR_MARCH_NOT_SELF				= 349;	// 不是自己的行军不能召回
+	PLAYER_HAS_BEEN_SHIELD				= 350;	// 该玩家已被屏蔽
+	SHIELD_NUM_UP_LIMIT					= 351;	// 已到达屏蔽数量上限
+	PLAYER_HAS_NOT_BEEN_SHIELD			= 352;	// 该玩家没有被屏蔽（解除屏蔽失败）
+	MONSTER_HAS_OWNER					= 353;	// 其他玩家的专属怪
+	RESOURCE_HAS_OWNER					= 354;	// 其他玩家的专属矿
+	CANT_ADD_CITY_PROTECTED				= 355;	// 尚有攻击性行军未结束，不能使用保护
+	GUILD_WAR_BUY_ITEMS_OVER			= 356;	// 购买集结参与格子数目超限
+	WORLD_MARCH_PRESIDENT_NOT_FIGHT_TIME= 357;	// 非战争时期，不能发起攻击
+	PRESIDENT_NOT_YOUR_GUILD_OCCPY	= 358;	// 国王不是你盟的，不能援助
+	POINT_NO_MARCH_CALL_BACK			= 359;	// 目标点没有可召回的行军
+	TARGET_PLAYER_ZEROEARNING_STATE     = 360;  // 目标玩家处于零收益状态，不可被援助资源
+
+	RANDOM_MOVE_CITY_BEING_ATTACTED		= 365;	// 正在被攻击
+	MASS_JOIN_TYPE_ERROR				= 366;	// 集结参与类型不对
+	MASS_JOIN_REPEAT					= 368;	// 已经有加入该支部队集结的队伍
+	BE_ASS_RES_TIMES_MAX				= 369;	// 被资源援助次数达到上限
+
+	TRAVEL_SHOP_GOODS_NOT_EXIST			= 370;	// 黑市商人商品不存在
+	TRAVEL_SHOP_GOODS_ALREADY_BOUGHT	= 371;	// 黑市商品已购买
+	TRAVEL_SHOP_TIME_OUT                = 372;  // 黑市商人时间到了。
+	BUBBLE_REWARD_TIMES_OVER_LIMIT      = 373;  // 冒泡奖励领取次数已达上限，当天不能再领取冒泡奖励
+	TRAVEL_SHOP_REFREASH_MAX 			= 374;  // 黑市商人刷新次数已满
+	TRAVEL_GIFT_NOT_EXIST				= 375;  //黑市礼包不存在
+	TRAVEL_GIFT_ALREADY_BOUGHT			= 376;  //黑市礼包已经购买
+	ASS_RES_TIMES_MAX					= 377;	// 资源援助次数达到上限
+	
+	ACTIVITY_NOT_AVAILABLE				= 380;	// 活动不存在
+	ACTIVITY_RUNS_ERROR					= 381;	// 活动进行出错
+	AWARD_TIMES_MAX_TODAY				= 382;	// 今日已达到最大领奖次数
+	AWARD_TIME_NOT_REACH				= 383;	// 宝箱还未刷出
+	AWARD_ITEM_ERROR					= 384;	// 宝箱奖励出错
+	ACTIVITY_DATA_NOT_FOUND				= 385;	// 活动数据不存在
+	ACTIVITY_CONFIG_NOT_FOUND			= 386;	// 活动相关配置未找到
+	ACTIVITY_NOT_OPEN					= 387;	// 活动未开启
+	
+	ACTIVITY_POWERFUND_IS_BUY			= 389;	// 已购买战力基金
+	ACTIVITY_CAN_NOT_TAKE_REWARD		= 390;	// 活动奖励不可领取
+	ACTIVITY_REWARD_IS_TOOK				= 391;	// 活动奖励已领取
+	ACTIVITY_VIT_RECEIVE_TIME_ERROR		= 392;	// 当前时间不可领取体力
+	ACTIVITY_GROWFUND_IS_BUY			= 393;	// 已购买等级基金
+	ACTIVITY_GROWFUND_CONFIG_NOT_FOUND	= 394;	// 等级基金配置未找到
+	ACTIVITY_GROWFUND_VIP_LEVEL_NOT_ENOUGH	= 395;	// 贵族等级不够，不能购买等级基金
+	ACTIVITY_PUSH_GIFT_NOT_FOUND		= 396;	// 推送礼包不存在
+	ACTIVITY_PUSH_GIFT_WAS_BOUGHT		= 397;	// 推送礼包已购买
+	ACTIVITY_PUSH_GIFT_CONFIG_NOT_FOUND	= 398;	// 推送礼包配置不存在
+	ACTIVITY_PUSH_GIFT_RESOURCE_NOT_ENOUGH	= 399;	// 资源不足，无法购买推送礼包
+	ACTIVITY_PUSH_GIFT_CAN_NOT_BUY		= 400;	// 该礼包暂不出售，已为您刷新新的礼包
+	ACTIVITY_VIT_RECEIVE_IS_TOOK		= 401;	// 当前时间已领取体力，不可重复领取
+	ACTIVITY_PUSH_GIFT_NOT_SALE			= 402;	// 该礼包暂时不进行出售，已为您刷新其他礼包
+	ACTIVITY_LOGINFUND_IS_BUY			= 403;	// 已购买登录基金
+	
+	ACTIVITY_NO_ROLE_CAN_INHERIT		= 404;	// 没有满足需求的帐号可以被承接
+	ACTIVITY_ALREADY_INHERITED			= 405;	// 当前帐号已进行军魂承接
+	ACTIVITY_NOT_BACK_PLAYER			= 406;	// 不是回归玩家,不能进行承接
+	
+	NEED_BUY_GROWFUND_NEW			    = 407;	// 未购买成长基金
+	
+	MONTHCARD_BUILD_LEVEL_ERROR              = 408;  // 激活月卡-建筑等级条件不满足
+	ACTIVITY_MONTHCARD_ACTIVATED             = 409;  // 此类月卡正处于激活状态
+	ACTIVITY_MONTHCARD_PURCHASED             = 410;  // 已购买该月卡
+	ACTIVITY_MONTHCARD_CONFIG_ERROR          = 411;  // 月卡配置错误
+	MONEY_NOT_ENOUGH                         = 412;  // 钻石货币不足
+	ACTIVITY_MONTHCARD_CANNOT_RECEIVE        = 413;  // 月卡奖励礼包不可领取状态
+	ACTIVITY_MONTHCARD_CANNOT_RENEW          = 414;  // 月卡奖励礼包不可续费状态
+	TAKE_MONTHCARD_BOX_FAILED                = 415;  // 领取月卡免费宝箱失败
+
+	REMIAD_SELF_NOT_ALLOWED             = 416;  // 联盟盟主不允许通知自己建群
+	GUILD_LEADER_NOT_FOUND              = 417;  // 联盟盟主没找到
+	REMIND_GAP_LIMIT                    = 418;  // 提醒时间间隔时长未达到
+	UNSURPPORT_CHANNEL_PLAYER           = 419;  // 不支持的渠道用户
+	NO_AUTHORITY_UNBIND_GROUP           = 420;  // 非盟主没有解绑群的权限
+	UNLINK_QQ_GROUP_FAILED              = 421;  // QQ群解绑失败
+	
+	MARCH_EMOTION_INTERVAL_ERROR        = 424;  // 集结行军使用行军表情的时间间隔太短
+	WORLD_MARCH_NOT_SELF                = 425;  // 不是自己的行军不能操作
+	MARCH_STATUS_NOT_SUPPORT_EMOTICON   = 426;  // 此状态行军不支持使用行军表情
+	MARCH_EMOTICON_UNLOCKED             = 427;  // 行军表情包已解锁
+	MARCH_EMOTICON_LOCKED               = 428;  // 行军表情包未解锁
+	
+	TIBERIUM_SIGNED						= 430;	// 泰伯利亚之战已报名
+	TIBERIUM_NOT_SIGN_STATE				= 431;	// 当前不是报名阶段
+	TIBERIUM_PLAYER_OVER_LIMIT			= 432;	// 参战玩家超过上限
+	TIBERIUM_RANK_NOT_ENOUGH			= 433;	// 联盟战力排行未达标
+	TIBERIUM_CANNOT_MANAGE_STATE		= 434;	// 当前阶段不能进行出战管理
+	TIBERIUM_SIGNED_CANNOT_DISMISS		= 435;	// 已报名泰伯利亚之战,不能解散联盟
+	TIBERIUM_NOT_IN_INSTANCE			= 436;  // 不在泰伯利亚的副本.
+	TIBERIUM_IN_WAR_FEVER				= 437;  // 战争狂热状态.
+	TIBERIUM_HAS_PASSIVE_MARCH			= 438;  // 有被动行军
+	TIBERIUM_ON_FIRE					= 439;  // 城墙在起火.
+	TIBERIUM_HAS_NO_MATCH_INFO			= 440;  // 找不到相应的匹配信息.
+	TIBERIUM_NOT_IN_THIS_WAR			= 441;  // 不是本次战斗出战人员
+	TIBERIUM_HAS_JOINED_WAR				= 442;	// 已经进入过本次战场
+	TIBERIUM_ROOM_DATE_NOT_INIT			= 443;	// 副本信息还未初始化
+	TIBERIUM_ROOM_DATE_NOT_EXIST		= 444;	// 副本信息不存在
+	TIBERIUM_JOIN_ROOM_ERROR			= 445;	// 进入副本失败
+	TIBERIUM_ROOM_NOT_OPEN				= 446;	// 当前非副本开启时间
+	TIBERIUM_ROOM_NEAR_CLOSE			= 447;	// 副本即将关闭
+	TIBERIUM_MEMBER_IN_ROOM				= 448;	// 目标玩家在泰伯利亚战场中
+	TIBERIUM_GUILD_NEW					= 449;	// 联盟创建时间不足,不能报名
+	TIBERIUM_GUILD_OPERATION_FORBID		= 450;	// 已参与本次泰伯利亚之战,该联盟操作禁用
+	TIBERIUM_HAS_MARCH					= 451;  // 有行军不能参加泰伯利亚
+	TIBERIUM_HAS_ASSISTANCE_MARCH		= 452;  // 有援助行军不能参加泰伯利亚
+	TIBERIUM_TIME_FIERY					= 453;	// 该时段报名过于火爆,请选择其他时段
+	
+	CHAMPIONSHIP_STATE_HIDDEN			= 454;	// 竞标赛活动已关闭
+	CHAMPIONSHIP_STATE_NOT_SIGN			= 455;	// 当前不是报名阶段
+	CHAMPIONSHIP_STATE_ERROR			= 456;	// 当前阶段不能进行该操作
+	CHAMPIONSHIP_GUILD_NOT_JOIN			= 457;	// 你所在联盟未参与本次锦标赛
+	CHAMPIONSHIP_PLAYER_BATTLE_DATA_ERROR	= 458;	// 玩家出战阵容信息异常
+	CHAMPIONSHIP_GUILD_BATTLE_NOT_EXIST	= 459;	// 联盟对战信息不存在
+	CHAMPIONSHIP_NO_REWARD				= 460;	// 未报名本次锦标赛,没有领奖资格
+	CHAMPIONSHIP_ALREADY_REWARDED		= 461;	// 已领取本期奖励
+	CHAMPIONSHIP_ARMY_CNT_NOT_ENOUGH	= 462;	// 部队数量不足
+	CHAMPIONSHIP_ARMY_EMPTY				= 463;	// 出战部队人数为零
+	
+	TIBERIUM_TEAMINDEX_ERROR			= 470;	// 小组id错误
+	TIBERIUM_TEAMDATA_ERROR				= 471;	// 小组信息异常
+	TIBERIUM_CAPTAIN_EXIST				= 472;	// 小组已有队长
+	TIBERIUM_NOT_MEMBER					= 473;	// 非本小组成员
+	TIBERIUM_NO_MEMBER_JOIN				= 474;	// 本盟无人出战
+	TIBERIUM_MEMBER_OVER_LIMIT			= 475;	// 小组人数超过上限
+	TIBERIUM_TEAM_TARGET_OVER_LIMIT		= 476;	// 小组目标超出上限
+	TIBERIUM_MEMBER_TARGET_OVER_LIMIT	= 477;	// 成员目标超出上限
+	
+	TIBERIUM_LEAGUA_CANNOT_MANAGE_STATE	= 478;	// 已参与本期正赛,当前阶段不能进行出战管理
+	TIBERIUM_LEAGUA_CANNOT_SIGNUP		= 479;	// 已参与本期正赛,正赛期间不能报名泰伯利亚之战
+	TIBERIUM_LEAGUA_TERMID_ERROR		= 480;	// 轮次错误,当前轮次没有比赛
+	TIBERIUM_LEAGUA_CANNOT_DISMISS		= 481;	// 已参加泰伯利亚联赛正赛,不能解散联盟
+	TIBERIUM_LEAGUA_SEASON_NOT_OPEN		= 482;	// 当前泰伯利亚联赛赛季未开启
+	TIBERIUM_LEAGUA_CANNOT_MANAGE_TEAM	= 483;	// 已参与本期泰伯利亚联赛,当前阶段不能进行小队管理
+	TIBERIUM_OB_NO_GAME					= 484; // 主播观战对战未找到
+	TIBERIUM_LEAGUA_JOIN_WIN			= 485; // 已参与本轮胜者组
+	TIBERIUM_LEAGUA_LEADER_SIGNUP_OLD	= 487;	// 只有盟主可以报名巅峰赛区
+
+	PRESIDENT_NOT_KING					= 500;	// 不是大统领
+	COUNTRY_CANNOT_CHANGE_AGAIN			= 501;	// 国家信息不可再次被修改
+	PRESIDENT_CANNOT_CROSS_MOVE			= 502;	// 大统领不可用跨服迁城
+	PRESIDENT_CANNOT_DISMISS			= 503;	// 大统领联盟不可被解散
+	PRESIDENT_CANNOT_ABDICATE			= 504;	// 大统领不可让我盟主
+	COUNTRY_NAME_TOO_LONG				= 505;	// 国家名字长度超过上限
+	
+	PROVISIONAL_PRESIDENT_CAN_NOT_QUIT		 =  506;  //临时总统无法退出联盟
+	PROVISIONAL_PRESIDENT_CAN_NOT_DISMISS	 =  507;  //临时总统无法解散联盟
+	PROVISIONAL_PRESIDENT_CAN_NOT_DEMISE	 =  508;  //临时总统无法转让盟主
+	PRESIDENT_SET_OUT_TIME					 =  509; //不在可设置总统时间内
+	
+
+	OFFICER_TYPE_NOT_EXIST				= 510;	// 官职类型不存在
+	OFFICER_SET_SELF_ERROR				= 511;	// 不能为自己设置官职
+	OFFICER_SET_TIME_ERROR				= 512;	// 现在还不能设置官职
+	OFFICER_SET_CDTIME_ERROR			= 513;	// 官职冷却时间未结束
+	OFFICER_SET_SAME_ERROR				= 514;	// 已经设置过该官职
+	PRESIDENT_RESOURCE_CD				= 515;  //修改资源cd时间.
+	PRESIDENT_RESOURCE_SAME				= 516;  //不能设置同样的资源.
+	PRESIDENT_HAVE_SET				    = 517; //已经设置了
+	GUILD_TAX_TIME_ERROR				= 520;	// 现在还不能征税
+	GUILD_TAXED							= 521;	// 已对该联盟征税
+	GUILD_TAX_SELF						= 522;	// 不能对自己征税
+	GUILD_TAX_TARGET_ERROR				= 523;	// 不能对该联盟征税
+	PLAYER_BE_WORLD_SILENT_TODAY		= 525;	// 玩家今天已经被世界频道禁言
+	GUILD_TAX_PLAYER_CHANGED			= 526;	// 目标玩家信息变化不能征税
+
+	PRESIDENT_PLAYER_GOT_GIFT			= 530;	// 存在已获得过礼包账号
+	PRESIDENT_PLAYER_REPEAT				= 531;	// 颁发礼包账号重复
+	PRESIDENT_GIFT_CHECK				= 533;	// 没找到颁发礼包数据
+	PRESIDENT_GIFT_NUMBER				= 534;	// 礼包数量不足
+	NON_SATELLITE_COMMUNICATIONS		= 535;	// 没有建造卫星通信所
+	PRESIDENT_BUFF_CD					= 536;  //司令赐福buffCd未到.
+
+	DUNGEON_PRE_NOT_PASSED				= 540;	// PVE前置关卡没有通过
+	DUNGEON_ARMY_COUNT_ERROR			= 541;	// PVE部队信息异常
+	DUNGEON_POPULATION_OVERFLOW			= 542;	// PVE部队人口超标
+	DUNGEON_SWEEP_TIMES_ERROR			= 543;	// PVE扫荡次数异常
+	DUNGEON_SWEEP_ID_ERROR				= 544;	// PVE小关卡不能扫荡
+	DUNGEON_SWEEP_STAR_NOT_ENOUGH		= 545;	// PVE当前关卡星数不足,不能扫荡
+	DUNGEON_CHAPTER_LOCKED				= 546;	// PVE章节未解锁
+	DUNGEON_BATTLE_RESULT_ERROR			= 547;	// PVE战斗结果异常
+	DUNGEON_ATKTIMES_OVER_LIMIT			= 548;	// PVE超出关卡攻打次数上限
+	DUNGEON_ATKTIMES_REMAIN				= 549;	// PVE关卡还剩余攻打次数,不需要购买
+	DUNGEON_BUY_ATKTIMES_OVER_LIMIT		= 568;	// PVE超出关卡购买攻打次数上限
+	
+	PLAYER_HERO_NOT_EXISIT				= 550;	// 英雄不存在
+	PLAYER_HERO_TRAIN_TIME_ERROR		= 551;	// 英雄训练
+	PLAYER_HERO_QUEUE_BUSY				= 552;	// 英雄队列繁忙
+	PLAYER_HERO_NOT_TRAINNING_FINISH	= 553;	// 英雄队列未完成
+	PLAYER_HERO_HP_FULL					= 554;	// 当前血量是满的
+	PLAYER_HERO_SKILL_NOT_EXISIT		= 555;	// 英雄技能不存在
+	PLAYER_HERO_SKILL_POINT_LESS		= 556;	// 技能点不足
+	PLAYER_HERO_LEVEL_LESS				= 557;	// 英雄等级不足
+	PLAYER_HERO_SKILL_UPGRADE_CFG_ERROR = 558;	// 配置不存在
+	PLAYER_HERO_SKILL_UPGRADE_FULL		= 559;	// 英雄技能已满级(找不到下一级配置)
+	PLAYER_HERO_LEVEL_FULL				= 560;	// 英雄等级已满
+	PLAYER_HERO_NOT_FREE				= 561;	// 英雄非空闲,不能出征
+	PLAYER_HERO_MARCH_TYPE_ERROR		= 562;	// 行军类型不允许英雄出征
+	PLAYER_HERO_MARCH_NO_CURE			= 563;	// 出征中的英雄不能治疗
+	PLAYER_HERO_MARCH_NO_TRAIN			= 564;	// 出征中的英雄不能训练
+	PLAYER_HERO_BUSY_NOT_STAR_UP		= 565;	// 英雄忙碌中，不能升星
+	PLAYER_HERO_STAR_FULL				= 566;	// 英雄星级已满
+	PLAYER_HERO_ALREADY_UNLOCK			= 567;	// 英雄已经解锁
+	
+	SEC_PASSWD_CANNOT_EMPTY             = 571;  // 二级密码不能设置为空
+	SEC_PASSWD_CHECK_FAILED             = 572;  // 二级密码校验失败
+	OLD_PASSWD_INPUT_INVALID            = 573;  // 老密码输入错误
+	SEC_PASSWD_NOT_EXIST                = 574;  // 还未设置密码
+	SEC_PASSWD_INALID                   = 575;  // 二级密码已失效
+	
+	SCORE_NOT_ENOUGH_REWARD				= 580;  // 积分不足，不能领奖
+	REWARD_CAN_NOT_REVEIVE				= 581;	// 奖励不可领取
+	MISSION_HAS_ALREADY_REFRESH         = 582;  // 任务列表已经刷新，奖励发至背包
+	
+	ORDER_WEEK_ERROR					= 585;	// 战令-周数错误
+	ORDER_EXP_BUY_REPEATED				= 586;	// 战令-本周已买过这档经验
+	
+	QUESTIONNAIRE_DATA_ERROR			= 600;	// 问卷信息异常
+	QUESTIONNAIRE_ALREADY_COMMIT		= 601;	// 已提交过该问卷
+	QUESTIONNAIRE_NOT_MEET				= 602;	// 问卷参与条件不满足
+
+	VOICE_EXPIRE						= 603; 	// 语音文件已过期 
+	
+	QUESTIONNAIRE_EXPIRE				= 604;	// 问卷已经过期
+	
+	GUILD_INVITE_OVER_TIME				= 605;	// 联盟邀请函已过期
+	GUILD_INVITE_DEALED					= 606;	// 联盟邀请函已处理
+	
+	QUESTIONNAIRE_INVALID				= 607;	// 问卷已失效
+	
+	
+	MONSTER_LEVEL_CAN_NOT_KILL			= 610;  // 不可击杀当前等级怪物(应先击杀前置等级的怪物)
+	
+	GUILD_SCIENCE_UNLOCK				= 611;	// 联盟科技未解锁
+	GUILD_SCIENCE_DONATE_NOT_ENOUGH		= 612;	// 联盟科技科研值不足
+	GUILD_SCIENCE_DONATE_FULL			= 613;	// 联盟科技科研值已满
+	GUILD_SCIENCE_ON_RESEARCHING		= 614;	// 联盟科技正在研究
+	GUILD_SCIENCE_JOIN_TIME_SHORT		= 615;	// 入盟时间过短,不能捐献
+	GUILD_DONATE_TIMES_OVER_LIMIT		= 616;	// 超出捐献次数
+	GUILD_DONATE_RESET_TIMES_OVER_LIMIT	= 617;	// 捐献重置次数超出上限
+	GUILD_DONATE_OVER_RECOMMEND_COUNT	= 618;	// 超出可推荐科技数量
+	GUILD_SCIENCE_LVL_MAX				= 619;	// 联盟科技已达到最高等级
+	GUILD_SCIENCE_OTHER_RESEARCHING		= 620;	// 当前有其他科技正在研究
+	GUILD_BOARD_LOCKED					= 621;	// 当前榜单未开放
+	GUILD_BOUNTYADD_SELF_LIMIT			= 622;	// 追加上限
+	GUILD_BOUNTYADD_ATK_LIMIT			= 623;	// 被追加上限
+	GUILD_BOUNTYADD_ONE_LIMIT			= 624;	// 单次悬赏追加上限
+	
+	STORE_HOUSE_HELPED					= 630; // 宝藏已被他们帮助
+	STORE_HOUSE_HELPLESS				= 631; // 帮助次数不足
+	STORE_HOUSE_EXCPLESS				= 632; // 挖掘次数不足
+	STORE_HOUSE_DISAPER					= 633; // 宝藏已消失
+	
+	MANOR_CANNOT_CHANGE_NAME            = 649; //联盟堡垒未完成建造不可改名
+	CREATE_MANOR_FAILED					= 650; //无法创建世界点
+	MANOR_CAN_NOT_CREATE				= 651; //建筑状态不正确
+	WORLD_POINT_NOT_MANOR				= 652; //目标不是联盟建筑
+	MANOR_CAN_NOT_BUILD					= 653; //联盟领地的建筑值已满
+	MANOR_CAN_NOT_ATTACK				= 654; //未加入联盟或目标点是本联盟
+	MANOR_MINE_EMPTY					= 655; //矿资源已被挖空
+	CAN_NOT_COLLECT_RES					= 656; //当前建筑工厂等级不可以收集此资源
+	HAS_ALREADY_COLLECT_RES				= 657; //您已经有部队在采集超级矿了
+	
+	WISHING_LEVEL_CONFIG_NOT_FOUND		= 660; // 许愿池等级配置不存在
+	WISHING_RESOURCE_NOT_ENOUGH			= 661; // 许愿所需资源不足
+	WISHING_RESOURCE_TYPE_NOT_FOUND		= 662; // 许愿资源类型不存在
+	WISHING_TODAY_IS_MAX_COUNT			= 663; // 今日许愿次数已达到最大次数
+	WISHING_CRIT_CONFIG_ERROR			= 664; // 许愿池暴击配置错误
+	TAVERN_BOX_REWARD_NOT_FOUND			= 665; // 酒馆宝箱奖励不存在
+
+	BUILDING_STATUS_TRAINING            = 669;  // 建筑正在训练中
+	BUILDING_STATUS_MAKING_TRAP         = 670;  // 战争堡垒正在制造陷阱中
+	BUILDING_STATUS_TRAP_HARVEST        = 671;  // 战争堡垒处有制造完成的陷阱未取走
+    TRAP_TOTAL_EXCEED_CAPACITY          = 672;  // 陷阱总数已超过陷阱容量
+    TRAP_COUNT_EXCEED_LIMIT             = 673;  // 陷阱数量以超过单次可造陷阱上限
+    TRAP_NOT_UNLOCKED                   = 674;  // 陷阱还未解锁
+    BUILDING_QUEUE_STATUS_BUSY          = 675;  // 城建队列被占用
+	PAID_QUEUE_TIME_NOT_ENOUGH          = 676;  // 第二建造队列剩余时间不足
+    BUILDING_TYPE_NOT_RESOURCE          = 677;  // 非资源建筑
+	BUILDING_TYPE_NOT_SHATE_BLOCK       = 678;  // 非共享地块建筑类型
+	BUILDING_AREA_UNLOCKED              = 679;  // 区块已解锁
+    BUILDING_AREA_UNLOCK_NOT_ALLOWED    = 680;  // 区块当前不可解锁
+	BUILDING_AREA_NOT_UNLOCKED          = 681;  // 区块未解锁
+	CREATE_SOLDIER_FAILED               = 682;  // 造兵失败
+	BUILD_QUEUE2_UNLOCKED_PERMANENT     = 683;  // 第二建造队列已永久开启
+    QUEUE_NOT_EXIST                     = 684;  // 队列未找到
+	TARGET_BUILD_INDEX_LOCKED           = 685;  // 建筑不能移动到未解锁的地块上（目标地块未解锁）
+	BUILD_INDEX_NOT_CHANGE              = 686;  // 建筑地块未发生变化
+	MOVE_BUILDING_TYPE_ERROR            = 687;  // 非共享地块类型的建筑不能移动
+
+	SOLDIER_RECEIVE_OVER_TIME           = 688;  // 新兵救援领取时间已过（超过30天）
+    PROTECT_SOLDIER_NOT_EXIST           = 689;  // 不存在可救援的新兵
+	PROTECT_SOLDIER_LEVEL_ERROR         = 690;  // 救援新兵等级错误（大于6级）
+    PROTECT_SOLDIER_COUNT_ERROR         = 691;  // 救援新兵数量不足
+    SOLDIER_RECEIVE_DAY_EXCEED          = 692;  // 救援新兵超出单日上限
+	SOLDIER_RECEIVE_TOTAL_EXCEED        = 693;  // 救援新兵超出总上限
+	
+	TALENT_SKILL_NOT_UNLOCK             = 700;  // 天赋技能未解锁
+	TALENT_SKILL_NOT_REFRESH            = 701;  // 天赋技能未刷新
+	TALENT_SKILL_MUTUAL_EXCLUSION       = 702;  // 天赋技能被互斥
+	TALENT_SKILL_USE_FAIL               = 703;  // 天赋技能使用失败
+	
+	SELL_ITEM_INVALID                   = 704;  // 该商品不在上架时间范围内
+	REVENGE_NOT_OPEN                    = 705;  // 大R复仇条件未达成暂未开启
+	REVENGE_SHOP_COUNT_ERROR            = 706;  // 大R复仇折扣商品购买数量错误
+	REVENGE_SHOP_CONDITION_ERROR        = 707;  // 大R复仇折扣商品购买条件未达成
+	REVENGE_BUY_COUNT_EXCEED            = 708;  // 大R复仇折扣商品购买数量超上限
+	
+	TIME_LIMIT_STORE_END                = 711;  // 本期限时商店已结束
+	TIME_LIMIT_STORE_NOT_MATCH          = 712;  // 商品库不匹配（实际开启的是触发条件1触发的，前端发的是触发条件2触发的商品库）
+	TIME_LIMIT_BUY_COUNT_EXCEED         = 713;  // 商品购买数量超出上限
+	TIME_LIMIT_GOODS_NOT_EXIST          = 714;  // 商店中购买的物品不存在
+	
+	SKILL_ERROR_HAS_NO_MARCH			= 720;  // 玩家没有行军出征，不能使用技能
+	SKILL_ERROR_VIT_IS_FULL			    = 721;  // 玩家体力已经达到最大，不能使用技能
+	SKILL_ERROR_TRAP_IS_FULL			= 722;  // 玩家陷阱数目已经达到最大，不能使用技能
+	SKILL_ERROR_HAS_NO_RES				= 723;  // 没有资源田，不能使用技能
+	SKILL_ERROR_VIT_NOT_ENOUGH			= 724;  // 当前体力不足以攻打一次野怪
+	SKILL_ERROR_HAS_NO_TRAP_BUILD		= 725;  // 玩家没有战争堡垒，不能使用技能
+	
+	WHARF_AWARD_TIME_NOT_ACHIEVE		= 726;  // 码头货物时间未到，不可领取
+	WHARF_AWARD_CONFIG_NOT_FOUND		= 727;  // 码头奖励配置未找到
+	WHARF_AWARD_NOT_EXIST				= 728;  // 当前没有奖励可领取
+	WHARF_AWARD_WAS_TOOK				= 729;  // 码头奖励已经领取过了
+	
+	EXPLORE_TIME_INVAILD				= 730; // 探索时间不合法
+	EXPLORE_MARCH_LIMITED				= 731; // 只能同时发起一支探索行军
+	EXPLORE_MARCH_NOT_EXSIT				= 732; // 没有正在探索的部队
+	EXPLORE_MARCH_NOT_REACH				= 733; // 探索的部队还没有到达
+	
+	YURI_REVENGE_ALREADY_OPEN			= 734; // 本联盟尤里的复仇已经开启
+	YURI_REVENGE_CAN_NOT_FIND_POINT		= 735; // 无法找到尤里的据点	
+	YURI_REVENGE_ACTIVITY_NOT_OPEN		= 736; // 尤里复仇活动未开启
+	YURI_REVENGE_FINISHED				= 737; // 本盟尤里复仇活动已完成
+	
+	RELATION_FRIEND_MAX 				= 751; // 好友达到上限
+	RELATION_BLACKLIST_MAX 				= 752; // 黑名单达到上限
+	RELATION_FRIEND_NOT_EXIST 			= 753; // 不是好友
+	RELATION_BLACKLIST_NOT_EXIST		= 754; // 不在黑名单里面
+	RELATION_FRIEND_ALEARDY_EXIST       = 756; // 已在好友列表里面
+	RELATION_BLACKLIST_ALEARDY_EXIST    = 757; // 已经在黑名单列表里面
+	RELATION_APPLY_NOT_EXIST 			= 758; // 申请不存在或已处理
+	RELATION_APPLYER_FIREND_MAX 		= 759; // 对方的好友数已满， 只有在单个添加好友的时候生效
+	RELATION_ALEARDY_APPLY				= 760; // 已经发送过申请请求
+	RELATION_CAN_NOT_ADD_SELF 			= 761; //不能添加自己
+	RELATION_ID_NOT_NULL				= 762; //玩家id不能为空
+	RELATION_REPEATED_ID				= 763; //重复的ID
+	RELATION_ALEARDY_PRESENT			= 764; //已经赠送
+	RELATION_CAN_NOT_PRESENT_SELF       = 765; //不能赠送自己
+	RELATION_CAN_NOT_DELTEE_ON_GUARD 	= 766;//守护关系不能删除好友
+	
+	CAN_NOT_DISMISS_GUILD_HAS_MASS		= 780; // 有集结行军，不能解散联盟
+	
+	TARGET_MONSTER_DISAPPEAR			= 790; // 目标野怪点消失
+	CR_REWARD_OVER_LIMIT				= 791; // 超过今日英雄试练领奖上限
+	
+	EQUIP_NOT_EXIST						= 800; // 装备不存在
+	EQUIP_QUEUE_BUSY					= 801; // 装备相关队列被占用
+	EQUIP_MAX_QUALITY					= 802; // 装备品质达到最高
+	EQUIP_NOT_FREE						= 805; // 装备已被穿戴
+	EQUIP_NOT_EQUIPED					= 810; // 装备未被穿戴
+	EQUIP_NEXT_LVL_OVER_COMMANDER		= 811; // 装备升阶后等级大于指挥官等级
+	EQUIP_POS_TYPE_ERROR				= 812; // 装备位置错误
+	EQUIP_BUILDING_LOCKED				= 813; // 装备研究所未解锁
+
+	INVITE_CHANNEL_ERROR                = 814; // 渠道未开启密友邀请功能
+    FETCH_UNREG_FRIENDS_FAILED          = 815; // 未注册密友拉取失败
+    FRIEND_INVITE_NOT_EXPIRE            = 816; // 上次邀请的有效期未过
+	HAS_NOT_INVITE_FRIEND               = 817; // 还未邀请过密友
+    TASK_AWARD_HAS_TAKEN                = 818; // 该（密友）邀请任务奖励已领取过
+    TASK_HAS_NOT_COMPLETE               = 819; // 该（密友）邀请任务还未完成
+    TASK_NOT_EXIST                      = 820; // 该（密友）邀请任务不存在（配置表中没有相应的配置数据）
+	NOT_UNREG_FRIEND                    = 821; // 密友不存在（不是您的密友）
+	
+
+	CAN_QUIT_GUILD_PRESIDENT_MARCH		= 850; // 有国王战相关行军，不能退盟
+	
+	MIGRATE_SYSTEM_ERROR 				= 851; //系统错误
+	MIGRATE_SERIAL_ERROR				= 852; //序列化数据出错.
+	MIGRATE_FINISH						= 853; //迁服完成
+	MIGRATE_NO_DATA						= 854; //reids中没有数据
+	MIGRATE_UNSERIAL_ERROR				= 855; //反序列化数据出错.
+	MIGRATE_SAVE_DB_ERROR				= 856; //数据落地失败
+	MIGRATE_GUILD_LEADER				= 857; //工会会长不允许迁城
+	
+	PUSH_GIFT_ID_NOT_EXIST				= 861; //礼包ID不存在
+	PUSH_GIFT_NOT_OPEN					= 862; //礼包未开启
+	PUSH_GIFT_ALEARDY_BOUGHT			= 863; //已经购买
+	PUSH_GIFT_SOLD_OUT					= 864; //下架
+	
+	FOGGY_CAN_NOT_ATTACK				= 870; //迷雾要塞正在出兵，不能被攻击
+	RESOURCE_GIFT_OFF 					= 881; //资源礼包已经下架
+	RESOURCE_GIFT_NOT_EXIST 			= 882; //该ID不在可购买ID列表中
+	
+	POINT_NOT_EXIST_OR_TYPE_ERROR		= 883; //目标点不存在或类型错误
+	TREASURY_TIME_DEFICIENCY			= 891; //时间未到宝箱不可领取
+	TREASURY_ALREADY_RECEIVED			= 892; //金币宝藏已经领取
+	TREASURY_NOT_HAVE					= 893; //没有金条可领取
+	
+	HAVE_NO_OWEN_MARCH					= 900; //没有自己的行军，不能查看
+	NOT_MARCH_STATE						= 901; //不是行军中的行军
+	
+	ADD_NOT_INGAME_FRIEND              = 902; // 不是同服玩家，无法添加好友
+	BLACK_NOT_INGAME_FRIEND            = 903; // 不是同服玩家，无法拉黑
+	DETAIL_NOT_INGAME_FRIEND           = 904; // 不是同服玩家，无法查看详情
+	GUILD_INVITE_NOT_INGAME_FRIEND     = 905; // 不是同服玩家，无法邀请入盟
+	GUILD_INFO_NOT_INGAME_FRIEND       = 906; // 不是同服玩家，无法查看联盟信息
+	CHAT_NOT_INGAME_FRIEND             = 907; // 不是同服玩家，无法创建聊天室发送聊天消息
+	
+	NOT_GET_THIS_IMAGE                 = 908; //未拥有此头像
+	NOT_GET_THIS_IMAGE_CIRCLE          = 909; //未拥有此头像框
+	HELL_FIRE_NOT_FINISH			   = 910; //成就未达成	
+	HELL_FIRE_ALEARDY_RECEIVED		   = 911; //奖励已经领取
+	HELL_FIRE_ACHIEVE_NOT_EXIST		   = 912; //成就不存在.
+	THIS_IMAGE_INUSE                   = 913; //头像正在使用中
+	THIS_CIRCLE_INUSE                  = 914; //头像框正在使用中
+	
+	HAS_REWARD_ORDER                   = 915; //拥有悬赏令
+	HAS_REWARD_ORDER_REWARD            = 916; //有悬赏令奖励未领取
+	NOT_CONTAIN_ORDER_ID               = 917; //不存在此悬赏令
+	
+	GUILD_FULL_ENTER_ANOTHER           = 918; //联盟满员，加入了其它联盟
+	GUILD_FULL_AND_CANNOT_ENTER        = 919; //人太多，找不到合适的联盟，稍后重试
+	PANDORA_LOTTERY_TIMES_NOT_ENOUGH   = 921; //次数不足
+	WAR_COLLEGE_INSTANCE_NOT_EXIST	   = 922; //战争学院副本配置不存在
+	WAR_COLLEGE_INSTANCE_NOT_OPEN	   = 923; //联盟副本活动未开启
+	WAR_COLLEGE_ALEARDY_IN_TEAM		   = 924; //已经在队伍里
+	WAR_COLLEGE_NOT_HAVE_GUILD		   = 925; //不在公会里面
+	WAR_COLLEGE_NOT_LEADER			   = 926; //不是队长
+	WAR_COLLEGE_NOT_HAVA_TEAM		   = 927; //不在队伍里
+	WAR_COLLEGE_TEAM_STATE_NOT_WAIT	   = 928; //队伍已经开始战斗
+	WAR_COLLEGE_TEAM_NOT_EXIST		   = 929; //队伍不存在
+	OUT_OF_MEMBER_LIMIT				   = 930; //超出人数限制
+	WAR_COLLEGE_ALREARDY_IN_INSTANCE  = 931; //已经在副本里了
+	WAR_COLLEGE_LEADER_CAN_NOT_QUTI   = 932; //队长不能退出
+	REWARD_ORDER_RECIEVE_MAX_COUNT    = 933; //悬赏令领取次数达到最大上限
+	
+	ATK_GUNDAM_TIMES_LIMIT			  = 934; //攻击机甲次数限制
+	LMJY_BAN_OP						= 935; // 演习禁止操作
+	LMJY_HAS_PLYAER_MARCH			= 936; // 有行军 不能进入副本
+	WAR_COLLEGE_TIMES_NOT_ENOUGH    = 937; //联盟副本攻打次数不足
+	WAR_COLLEGE_DATA_ERR    		= 938; //联盟副本数据异常
+	WAR_COLLEGE_IN    				= 939; //正在联盟副本中
+	WAR_COLLEGE_NOT_SAME    		= 940; //不是同一个联盟
+	WAR_COLLEGE_NOT_PASS_BEFORE    		= 941; //前置副本没打过
+	WAR_COLLEGE_SHARE_CD    		= 942; //频繁发邀请
+	WAR_COLLEGE_JOIN_QUICK_FAIL    		= 943; //快速加入队伍失败
+	WAR_COLLEGE_TEAM_NUM_NOT_ENOUGH    		= 944; //队伍人数不足
+	WAR_COLLEGE_CITY_FIRE    		= 945; //主城在燃烧
+	LMJY_PREPARING					= 946; // 演习准备中
+	GUILD_KICKOUT_IN_WAR_COLLEGE_TARGET         = 947;//不能踢演习中的成员出联盟 
+	GUILD_KICKOUT_IN_WAR_COLLEGE_SELF        = 948;//自己演习中不能踢成员出联盟 
+	GUILD_QUIT_IN_WAR_COLLEGE			=949;//演习中，不能退出联盟 
+	LMJY_HAS_PLYAER_BEATK				= 950; // 有敌对行军
+	
+	RED_ENVELOPE_NOT_START              = 951; //该红包还未到时间，不能抢
+	RED_ENVELOPE_ALREADY_RECIEVE        = 952; //已经抢过该红包
+	RED_ENVELOPE_DELIVE_OVER            = 953; //已经派完
+	
+	RED_ENVELOPE_PLAYER_EXPIRE          = 954; //红包已经过期
+	BANNER_KILL_TARGET_RECEIVED         = 955; // 战神降临活动目标积分奖励已领取
+	BANNER_KILL_TARGET_NOT_FINISH       = 956; // 战神降临活动目标未达成
+	RED_ENVELOPE_TOUCH_LIMIT            = 957; // 当日个人领取红包数量已达上线
+
+	ATK_NIAN_TIMES_LIMIT			  = 960; //攻击年兽次数限制
+
+
+	
+	TBLY_HAS_PLYAER_MARCH			= 962; // 有行军 不能进入副本
+	TBLY_PREPARING					= 963; // 演习准备中
+	TBLY_HAS_PLYAER_BEATK			= 964; // 有敌对行军
+	TBLY_BAN_OP						= 961; // 泰博利亚期间禁止操作
+	TBLY_PRETIME_CANNOT_MARCH		= 965; // 准备期不能行军
+	TBLY_BUILD_PROCTED				= 966; // 建筑处于保护状态
+	TBLY_PRETIME_CANNOT_MOVE		= 967; // 准备期间不能传送
+	LMJY_CD							= 968; // 进入演习cd中
+	TBLY_ORDER_IN_EFFECT            = 969; //号令生效中
+	TBLY_ORDER_IN_COOL              = 970; //号令冷却中
+	TBLY_ORDER_POWER_NOT_ENOUGH     = 971; //号令能量不足
+	TBLY_ORDER10001_MARCH			= 1051; // 被围困无法支援
+	TBLY_ORDER10001_DOUBLE			= 1052; // 不对对被围困无法支援的建筑围困
+	TBLY_BUILD_STATUS				= 1053; // 这种建筑状态改变，不能使用号令和技能的
+	TBLY_MARCH_BAN					= 1054; // 
+	TBLY_DAODAN_BAN					= 1055; // 禁止向城堡发射导弹
+	
+	SW_HAS_PLYAER_MARCH			= 972; // 有行军 不能进入副本
+	SW_PREPARING					= 973; // 演习准备中
+	SW_HAS_PLYAER_BEATK			= 974; // 有敌对行军
+	SW_PRETIME_CANNOT_MARCH		= 975; // 准备期不能行军
+	SW_BUILD_PROCTED				= 976; // 建筑处于保护状态
+	SW_PRETIME_CANNOT_MOVE		= 977; // 准备期间不能传送
+	SW_BAN_OP						= 978; // 泰博利亚期间禁止操作
+	SW_NO_NICEO						= 979; // 没有指定录像
+
+	TBLY_ORDER_EFF_EXCLUSION        = 980;  //泰伯利亚号令互斥
+	
+	XLZJ_BAN_OP						= 981; // 泰博利亚期间禁止操作
+	XLZJ_HAS_PLYAER_MARCH			= 982; // 有行军 不能进入副本
+	XLZJ_PREPARING					= 983; // 演习准备中
+	XLZJ_HAS_PLYAER_BEATK			= 984; // 有敌对行军
+	XLZJ_PRETIME_CANNOT_MARCH		= 985; // 准备期不能行军
+	XLZJ_BUILD_PROCTED				= 986; // 建筑处于保护状态
+	XLZJ_PRETIME_CANNOT_MOVE		= 987; // 准备期间不能传送
+	
+	SW_MATCH_CANNOT_DISMISS			= 989; // 统帅之战匹配阶段不能解散联盟
+	SW_NOT_OPEN_STATE				= 990; // 非战场开启时间
+	SW_GUILD_NOT_JOIN				= 991; // 联盟未入围
+	SW_HAS_ENTERED					= 992; // 已加入过战场
+	SW_ENTER_CNT_OVER_LIMIT			= 993; // 本盟战场内人数超过限制
+	SW_ENTER_ROOM_ERROR				= 994; // 进入战场失败
+	SW_ROOM_NOT_EXIST				= 995; // 战场信息不存在
+	SW_JOIN_GUILD_CANNOT_DISMISS	= 996; // 星球大战入围联盟不能解散
+	SW_GUILD_OPS_LIMIT				= 997; // 星球大战参与成员已锁定,该阶段无法进行此操作(踢人,加人)
+	SW_KING_CANNOT_DISMISS			= 998; // 霸主/统帅不能解散联盟
+	SW_KING_CANNOT_DEMISE_LEADER	= 999; // 霸主/统帅不能转让盟主
+	SW_KING_CANNOT_IMPEACHEMENT		= 1000; // 霸主/统帅不能被取代盟主
+	
+	GIFTZERO_FREE_REWARD_TAKEN        = 1100; //今日奖励已领取
+	RECALL_FRIEND_ALEARDY_REQ		  = 1101; //已经发送了请求.	
+	RECALL_FRIEND_NUM_NOT_ENOUGH      = 1102; //当日召唤次数已经用光.
+	RECALL_FRIEND_NOT_VALID			  = 1103; //不是可召回玩家.
+	
+	AUTO_ATK_MONSTER_NOT_FUNCTION     = 1104; // 自动打野功能未开放（要先购买特定月卡）
+	AUTO_ATK_MONSTER_SEARCH_BREAK     = 1105; // 没有搜索到指定等级野怪，关闭自动打野
+	
+	CUSTOM_GIFT_ACTIVITY_NOT_OPEN     = 1106; // 定制礼包活动未开启
+	GIFT_CHOOSEITEM_NOT_MATCH         = 1107; // 定制礼包与所选奖励不匹配
+	GIFT_ZERO_ALREADY_BOUGHT          = 1108; // 此0元礼包已购买
+	
+	AUTO_ATK_MONSTER_VIT_BREAK        = 1109; // 体力不足中断搜索，关闭自动打野
+	AUTO_ATK_MONSTER_ARMY_BREAK       = 1110; // 编队没有空闲兵中断搜索，关闭自动打野
+	AUTO_ATK_MONSTER_PVE_BREAK        = 1111; // 打野失败中断搜索，关闭自动打野
+	AUTO_ATK_MONSTER_BUFF_BREAK       = 1112; // 自动打野作用号结束中断搜索，关闭自动打野
+	AUTO_ATK_MONSTER_MARCH_BACK       = 1113; // 由于迁城等原因导致所有行军被强制遣返，自动打野行军需要重新发起（这个是内部语言，给玩家的提示策划看着修改吧）
+	
+	SELECT_REWARD_COUNT_ERROR         = 1114; // 奖励选择个数不对
+	RECHARGE_BUY_GIFT_COND_ERROR      = 1115; // 礼包购买条件未达成
+	RECHARGE_BUY_GIFT_NOT_SELECT      = 1116; // 礼包定制奖励还未选择
+	RECHARGE_BUY_GIFT_BOUGHT          = 1117; // 礼包已购买
+	
+	MONSTER_SEARCH_FAIL     		  = 1118; 	// 没有搜索到指定等级野怪
+	
+	IN_SAME_COLLEGE						= 1119; // 在同一学院
+	NOT_IN_SAME_COLLEGE					= 1120; // 不在同一个学院
+	ALREADY_IN_COLLEGE					= 1121; // 已加入学院
+	NOT_IN_COLLEGE						= 1122; // 未加入学院
+	COLLEGE_MEMBER_MAX					= 1123; // 学院已满员
+	COLLEGE_NOT_EXIST					= 1124;	// 学院信息不存在
+	COLLEGE_APPLY_NOT_EXIST				= 1125; // 学院申请已失效或不存在
+	TARGET_ALREADY_IN_COLLEGE			= 1126; // 对方已加入学院
+	COLLEGE_NO_ONLINE_REWARD			= 1127; // 没有可领取的在线时长奖励
+	COLLEGE_NOT_COACH					= 1128; // 不是教官不能进行操作
+	COLLEGE_NOT_TRAINEE					= 1129; // 普通学员才能进行此操作
+	MEMBER_IS_ONLINE					= 1130;	// 学院成员当前在线
+	MEMBER_OFFLINE_NOT_ENOUGH			= 1131; // 学院成员离线时间不足,不能邀请上线
+	INVITE_LOGIN_CD						= 1132; // 邀请上线冷却中
+	COLLEGE_ONLINE_REWARD_MAX			= 1133; // 已达到当天可领取上限
+
+	ASK_DRESS_NOT_SM_GUILD				= 1140; // 不是盟友  
+	ASK_DRESS_NOT_FRIEND				= 1141; // 不是好友 
+	ASK_DRESS_CFG_NOTFOUND				= 1142; // 未找到配置表
+	ASK_DRESS_ASK_CD			        = 1143; // 同一个人cd
+	ASK_DRESS_DRESS_NOT_CFG			    = 1144; // 装扮配置不存在
+	ASK_DRESS_NOT_TPLAYER			    = 1145; // 目标玩家不存在
+	ASK_DRESS_NOT_ITEM		    		= 1146; // 赠送道具不足
+	ASK_DRESS_NOT_ITEM_CFG		    	= 1147; // 道具不合法
+	ASK_DRESS_ITEM_CANNOT_SEND		    = 1148; // 该道具不能赠送 
+	ASK_DRESS_TARGET_REFUSE		        = 1149; // 目标玩家设置默认拒绝请求 
+	ASK_DRESS_DIRTY_WORD		        = 1150; // 内容有屏蔽字 
+	ASK_DRESS_WORD_LEN			        = 1151; // 内容长度不合法
+	ASK_DRESS_WORD_ZERO_ITEM			= 1152; // 您的永久装扮信使不足,无法赠送
+	ASK_DRESS_ENOUGH_THIS_WEEK_SEND		= 1153; // 本周获得装扮已达上限(赠送)
+	ASK_DRESS_ENOUGH_THIS_WEEK_ASK		= 1154; // 本周获得装扮已达上限(索要)
+	
+	SPREAD_ACTIVITY_NOT_OPEN			= 1155; //活动未开放
+	SPREAD_ACTIVITY_NOT_EXISTS			= 1156; //活动不存在
+	SPREAD_ACTIVITY_DAILY_AWARDED		= 1157; //每日奖励已领取
+	SPREAD_ACTIVITY_EXCHANGE_CFG		= 1158; //兑换配置不正确
+	SPREAD_ACTIVITY_EXCHANGE_TIMES		= 1159; //兑换次数不正确
+	SPREAD_ACTIVITY_EXCHANGE_ITEMS		= 1160; //兑换道具不足
+	SPREAD_ACTIVITY_BIND_LV				= 1161; //绑定时等级不满足新玩家需求
+	SPREAD_ACTIVITY_BIND_LOG			= 1162; //绑定时注册时间不满足新玩家需求
+	SPREAD_ACTIVITY_BIND_OPENID			= 1163; //推广码不不存在
+	SPREAD_ACTIVITY_BINDED              = 1164; //已经绑定过推广码
+	SPREAD_ACTIVITY_BIND_SELF           = 1165; //不能绑定自己
+	SPREAD_ACTIVITY_AWARD_TIMES         = 1167; //领取次数不足
+	SPREAD_ACTIVITY_BIND_CROSS          = 1168; //跨服玩家不能被绑定
+	SPREAD_ACTIVITY_ACHIEVE_CFG		    = 1169; //老兵成就配置不正确
+	SPREAD_ACTIVITY_BIND_WAIT         	= 1170; //绑定失败稍后再试
+	SPREAD_ACTIVITY_NOT_FIRST         	= 1171; //绑定失败平台首个帐号可以绑定
+	
+	INVEST_PRODUCT_ON_STATUS            = 1177; //理财产品投资生效中
+	INVEST_AMOUNT_INVALID               = 1178; //投资额度不在合理范围内
+	INVEST_PROFIT_RECEIVED              = 1179; //投资收益已返还
+	INVEST_DURATION_NOT_END             = 1180; //投资期未结束，不能领取投资收益
+	INVEST_NOT_MATCH                    = 1181; //未投资过此理财产品
+	INVEST_DURATION_END                 = 1182; //投资期已结束，无法取消
+
+	INVITE_MASS_CD						= 1188; // 邀请集结cd
+	
+	HERO_TRIAL_COUNT_ERROR				= 1190; //英雄试炼数量错误
+	HERO_TRIAL_MISSOIN_NOT_FOUND		= 1191; //英雄试炼没有找到任务
+	HERO_TRIAL_REFRESH_TIMES_LIMIT		= 1192; //英雄试炼刷新次数限制
+	HERO_TRIAL_ACCEPT_MISSION_LIMIT		= 1193; //英雄试炼接受任务次数限制
+	HERO_TRIAL_MISSOIN_CFG_NOT_FOUND	= 1194; //英雄试炼接任务配置没有找到
+	HERO_TRIAL_MISSOIN_NOT_ACCEPT		= 1195; //英雄试炼任务未接受
+	HERO_TRIAL_MISSOIN_NOT_COMPLETE		= 1196; //英雄试炼任务未完成
+	HERO_TRIAL_HERO_ALREADY_TRIAL		= 1197; //英雄试炼英雄已经在试炼中
+	HERO_TRIAL_BASE_CONDITION_FAIL		= 1198; //英雄试炼基础条件不满足
+
+	BLACK_TECH_NOT_OPEN					= 1200; //黑科技活动未开启
+	BLACK_TECH_NO_CFG				    = 1201; //黑科技活动配置不存在
+	BLACK_TECH_RAND_CFG					= 1202; //黑科技活动随机配置不存在
+	BLACK_TECH_DRAW_ITEM				= 1203; //黑科技活动刷新奖池道具不足
+	BLACK_TECH_POOL_CLOSE				= 1204; //黑科技活动奖池已关闭
+	BLACK_TECH_PACKAGE_CFG				= 1205; //黑科技活动礼包加持奖池配置不存在
+	BLACK_TECH_PACKAGE_TIMES			= 1206; //黑科技活动礼包加持奖池购买次数不正确
+	BLACK_TECH_PACKAGE_ITEM				= 1207; //黑科技活动礼包加持奖池购买道具(金条)不足 
+	BLACK_TECH_ACTIVE_TIMES				= 1208; //黑科技活动buff激活次数不足
+	BLACK_TECH_DRAW_BUFF				= 1209; //黑科技活动buff未结束
+
+	LUCKY_DISCOUNT_NOT_OPEN				= 1210; //幸运折扣活动未开放 
+	LUCKY_DISCOUNT_NOT_EXISTS			= 1211; //活动配置不存在
+	LUCKY_DISCOUNT_BUY_TIMES			= 1212; //购买数量不正确
+	LUCKY_DISCOUNT_BUY_GOLDEN			= 1213; //金条不足无法购买
+	LUCKY_DISCOUNT_DRAW_TIMES			= 1214; //刷新奖池道具不足
+	LUCKY_DISCOUNT_POOL_CLOSE			= 1215; //奖池已关闭
+	LUCKY_DISCOUNT_POOL_CFG				= 1216; //奖池配置不正确 
+	LUCKY_DISCOUNT_BUY_ITEM_CFG			= 1217; //未找到商品配置
+
+	FULLY_ARMED_UNKNOW_ERR				= 1220; //未知错误	
+	FULLY_ARMED_NOT_OPEN				= 1221; //活动未开启
+	FULLY_ARMED_SEARCH_ALL				= 1222; //已经全部探索
+	FULLY_ARMED_SEARCH_ITEM				= 1223; //探测仪不足
+	FULLY_ARMED_SEARCH_ITEM_BUY			= 1224; //无法购买探测仪金币不足
+	FULLY_ARMED_ITEM_BUY_CFG			= 1225; //购买配置不存在
+	FULLY_ARMED_ITEM_BUY_TIMES			= 1226; //购买次数不正确
+
+	QUESTION_SHARED_UNKONW_ERR			= 1230; //未知错误
+	QUESTION_SHARED_NOT_OPEN			= 1231; //活动未开启
+	QUESTION_SHARED_DAILY_AWARDED		= 1232; //每日奖励已领取
+	QUESTION_SHARED_DAILY_REWARD_CFG	= 1233; //每日奖励配置不正确
+
+    PIONEER_ACTIVITY_NOT_OPEN           = 1234; // 先锋豪礼活动未开启
+    PIONEER_DATA_ERROR                  = 1235; // 先锋豪礼活动数据错误
+    PIONEER_GIFT_NOT_SELECTED           = 1236; // 购买前未选择礼包
+    PIONEER_GIFT_PURCHASED              = 1237; // 此档次礼包当日已购买
+	PIONEER_FREE_GIFT_TAKEN             = 1238; // 先锋豪礼免费礼包当日已领取
+	PIONEER_ACC_DAY_NOT_ENOUGH          = 1239; // 先锋豪礼购买累计天数未达成
+    PIONEER_ACC_REWARD_TAKEN            = 1240; // 先锋豪礼累计购买奖励已领取
+
+	ROULETTE_ACTIVITY_NOT_OPEN			= 1250; //时空轮盘活动未开启
+	ROULETTE_ACTIVITY_CFG_ERR			= 1251; //时空轮盘活动配置表不存在
+	ROULETTE_ACTIVITY_NO_KEY			= 1252; //时空轮盘活动道具不足
+	ROULETTE_ACTIVITY_BOX_SCORE			= 1253; //时空轮盘活动时空宝箱进度未满
+	ROULETTE_ACTIVITY_ITEM_NOSET		= 1254; //时空轮盘活动奖励未设置
+    ROULETTE_ACTIVITY_DATA_ERROR        = 1255; //时空轮盘活动数据错误
+	ROULETTE_ACTIVITY_UNKNOW			= 1256; //未知错误
+	ROULETTE_ACTIVITY_PARAM				= 1257; //参数错误
+	ROULETTE_ACTIVITY_RANDOM_ERR		= 1258; //随机到的配置表不存在
+	ROULETTE_ACTIVITY_ITEMSET_ERR		= 1259; //时空轮盘设置的参数错误
+	
+	ROULETTE_ACTIVITY_SET_ID_ERR		= 1260; //时空轮盘设置的时候id不正确
+	ROULETTE_ACTIVITY_SET_EMPTY			= 1261; //时空轮盘道具未全部设置
+	ROULETTE_ACTIVITY_SET_VAL_ERR		= 1262; //时空轮盘设置的值超过范围
+
+	SUPER_GIFT_PAY_ID_NOT_FOUND         = 1271; //找不到和PayId对应的giftId
+	SUPER_GIFT_LIMIT					= 1272; //超值礼包限购
+	SUPER_GIFT_NOT_IN_LIST				= 1273; //不在你的刷新列表.
+	
+	GUARD_ALEARDY_INVITED				= 1281; //已经申请请了守护
+	GUARD_NOT_CREATED					= 1282; //没有建立守护关系
+	GUARD_ALEARDY_CREATED				= 1283; //已经建立了守护关系
+	GUARD_INVITE_NOT_EXIST				= 1284; //申请不存在或者已经过期.
+	GUARD_GIFT_LIMIMT					= 1285; //次数限购.
+	GUARD_LOVE_NOT_ENOUGH				= 1286; //好感度不够,权限未解锁.
+	GUARD_NO_WORLD_POINT				= 1287; //没有城点.
+	GUARD_NOT_IN_SAME_SERVER			= 1288; //不是同一个服.
+	
+	SKIN_PLAN_MAX_LEVEL					= 1290;  //皮肤计划已经领取最高级别奖励
+	
+	GUARD_ON_WAR_TIME					= 1301; //对方处于狂热状态
+	GUARD_IN_INSTACNE					= 1302; //对方在副本中.
+
+	DAILY_RECHARGE_ACC_BOX_BOUGHT       = 1303; // 宝箱已购买，不能重复重复购买
+	DAILY_RECHARGE_ACC_CONDITION_ERROR  = 1304; // 宝箱购买条件未达成
+	GUARD_NOT_ON_FIRE					= 1305; //你的守护对象城墙未着火.
+	GUARD_NOT_ALLOW						= 1306; //您的守护对象禁止您做此操作.
+	GUARD_ON_CROSS						= 1307; //您或者您的对象在跨服状态,
+	LMJY_WAR_FEVER						= 1308;  // 战争狂热状态.
+	
+	MID_AUTUMN_GIFT_BOUGHT				= 1309;  //中秋庆典礼包已经购买过
+	VOUCHER_UNAVAILABLE					= 1310;  //代金券不可用
+	VOUCHER_OVERTIME					= 1311;  //代金券过期
+	
+	STAR_WARS_NOT_KING					= 1321; //不是统治者.
+	STAR_WARS_IN_CD						= 1322; //官职任免cd中.
+	STAR_WARS_SAME_OFFICER				= 1323; //同一个官职.
+	STAR_WARS_INCORRECT_OFFICERID		= 1324; //错误的官职ID.
+	STAR_WARS_INCORRECT_GIFTID			= 1325; //错误的giftid
+	STAR_WARS_ALREADY_SEND_GIFT			= 1326; //已经发过礼包
+	STAR_WARS_INCORRECT_PART			= 1327; //不是合法的区服。
+	STAR_WARS_NOT_IN_POPEDOM			= 1328; //不在辖区里面.
+	STAR_WARS_SET_SELF					= 1329; //不能任命自己.
+	STAR_WARS_CAN_NOT_SET_KING			= 1330; //管理者职位不能设置.
+	STAR_WARS_GIFT_NOT_ENOUGH			= 1331; //礼包不够.
+	STAR_WARS_BLESS_CD					= 1332; //服务器加持cd中
+	STAR_WARS_SEARCH_TIME_OUT			= 1333; //跨服搜索玩家超时.
+	STAR_WARS_INCORRECT_SERVER_ID		= 1334; //不合法的serverId;
+	STAR_WARS_NO_OFFICER				= 1335; //该官职没有任命.
+	STAR_WARS_IN_WAR_FEVER				= 1336;  // 战争狂热状态.
+	STAR_WARS_HAS_PASSIVE_MARCH			= 1337;  // 有被动行军
+	STAR_WARS_ON_FIRE					= 1338;  // 城墙在起火.
+	STAR_WARS_HAS_NO_MATCH_INFO			= 1339;  // 找不到相应的匹配信息.	
+	STAR_WARS_HAS_MARCH					= 1340;  // 有行军不能参加泰伯利亚
+	STAR_WARS_HAS_ASSISTANCE_MARCH		= 1341;  // 有援助行军不能参加泰伯利亚
+	STAR_WARS_NOT_IN_INSTANCE			= 1342;  //不在星球大战副本.
+	STAR_WARS_BATTLE_SERVER_BUSY 		= 1343;  //战场服正忙.
+	
+	TIME_LIMIT_ROUND_END 				= 1347;   //整个领奖阶段已经结束
+	TIME_LIMIT_ROUND_NO_SAME 			= 1348;	 //领奖的期数不对
+	TIME_LIMIT_NOT_IN_REWARD_STATE 		= 1349;	 //不在领奖时间段内
+	
+	MEDAL_ACTION_LOTTERY_TIMES_LIMIT	= 1350;  // 勋章行动抽奖次数不足
+	
+	ASK_FUZI_NOT_SM_GUILD				= 1351; // 不是盟友  
+	ASK_FUZI_NOT_FRIEND					= 1352; // 不是好友 
+	ASK_FUZI_CFG_NOTFOUND				= 1353; // 未找到配置表
+	ASK_FUZI_ASK_CD			        	= 1354; // 索要cd
+	ASK_FUZI_NOT_CFG			    	= 1355; // 福字配置不存在
+	ASK_FUZI_NOT_TPLAYER			    = 1356; // 目标玩家不存在
+	ASK_FUZI_NOT_ITEM		    		= 1357; // 赠送道具不足
+	ASK_FUZI_NOT_ITEM_CFG		    	= 1358; // 道具不合法
+	ASK_FUZI_GIVE_ALREADY			    = 1359; // 已经有人送给玩家福字了
+	DIVIDE_GOLD_ACTIVITY_NOT_OPEN		= 1360; // 瓜分金币活动未开启
+	DIVIDE_GOLD_FUZI_NOT_OPEN			= 1361; // 瓜分金币活动未在集福字阶段 
+	DIVIDE_GOLD_RED_NOT_OPEN			= 1362; // 瓜分金币活动未在红包开奖阶段 
+	DIVIDE_GOLD_RED_NUM_NOT_ENOUGH		= 1363; // 瓜分金币活动红包数量不足
+	DIVIDE_GOLD_COMPOUND_RED_LIMIT		= 1364; // 瓜分金币活动红包合成已达上限
+	DIVIDE_ASK_FUZI_LIMIT				= 1365; // 通过索要被赠送获得道具已达上限(发索要时)
+	DIVIDE_GIVE_FUZI_TARGET_LIMIT		= 1366; // 通过索要被赠送获得道具已达上限(赠送时)
+	DIVIDE_GIVE_FUZI_LIMIT				= 1367; // 赠送福字已达上限 
+	DIVIDE_GIVE_FUZI_NO_SELF			= 1368; // 赠送福字不能给自己 
+	
+	TBLY_GUESS_AREADY_VOTE_GUILD		= 1369; // 泰伯利亚竞猜已经竞猜过该联盟 
+	TBLY_GUESS_AREADY_VOTE_SAME_ROOM	= 1370; // 泰伯利亚竞猜同组只能竞猜一个
+	
+	GHOST_BOX_TIMES_LIMIT				= 1390; // 幽灵宝箱次数限制
+	CAHT_FAIL_HAS_BLACK 				= 1391;  // 包含黑名单玩家, 操作失败
+	
+	
+	REDKOI_NOT_IN_WISH_TIME             = 1402;   //红警锦鲤不在许愿时间内
+	PLAYER_IN_INSTANCE					= 1410;  //玩家在副本中此操作不允许.
+
+	EXCHANGE_TIMES_UPLIMIT      = 1411;  // 兑换次数已超出上限
+	
+	HERO_SKIN_ACTI_HAS_FINALLY	= 1412; // 英雄皮肤活动，已经抽取到最终奖励，不能刷新
+
+	CUR_LEVEL_AWARD_RECIEVED    = 1413;   // 当前等级的奖励已领取，不能重复领取
+	EXCHANGE_POOL_GOODS_REMAIN  = 1414;   // 奖池中的物品还没有兑换完，不能领取等级奖励
+	POOL_GOODS_EXCHANGED        = 1415;   // 改物品已兑换过，不能重复兑换
+	NOT_CUR_LEVEL_POOL_GOODS    = 1416;   // 不是当前等级奖池的物品，不能兑换
+	EXCHANGE_CONSUME_NOT_ENOUGH = 1417;   // 经验积分不足，不能兑换
+	
+	SIMULATE_WAR_STATE_NOT_SIGN					= 1421; //非报名阶段.
+	SIMULATE_WAR_ARMY_CNT_NOT_ENOUGH			= 1422; //兵的数量不够.
+	SIMULATE_WAR_ARMY_EMPTY						= 1423; //士兵数量为空。
+	SIMULATE_WAR_STATE_NOT_ALLOW_OPERATION 		= 1424; //该阶段不允许此操作.
+	SIMULATE_WAR_GUILD_NOT_JOIN 				= 1425; //公会未参加.
+	SIMULATE_WAR_ENCOURAGE_MAX					= 1426; //达到捐献最大值.
+	SIMULATE_WAR_MARCH_HERO_NOT_EXIST			= 1427; //出征的英雄不存在
+	SIMULATE_WAR_MARCH_SUPERSOLDIER_NOT_EXIST	= 1428; //出征的机甲不存在
+	SIMULATE_WAR_ARMOURBRIEF_NOT_EXITS			= 1429; //套装不存在.
+	SIMULATE_WAR_PERSON_MAX_TEAM				= 1430; //个人出征最大数.
+	SIMULATE_WAR_DUMPLICATE_HERO					= 1431; //英雄重复出征.
+	SIMULATE_WAR_NOT_FOUND_MARCH				= 1432; //找不到相应的出征信息.
+	SIMULATE_WAR_NOT_FOUND_GUILD_DATA			= 1433; //找不到对应的公会报名信息.
+	SIMULATE_WAR_DUMPLICATE_WAY					= 1434; //该只出征队伍已经是该路了.
+	SIMULATE_WAR_MARCH_ID_ERROR					= 1435; //发上来的出征队伍ID有问题.
+	SIMULATE_WAR_CAN_NOT_DISSOLVE				= 1436; //此阶段不允许解散工会。
+
+	CHRISTMAS_WAR_KILLED_MONSTER_NOT_ENOUGH		= 1441; //全服的杀敌积分不足,不足以领取该奖励.
+	CHRISTMAS_WAR_ALREADY_RECEIVE				= 1442; //已经领奖了.
+	CHRISTMAS_BOX_TIMES_LIMIT					= 1443; //圣诞宝箱次数限制.
+	CHRISTMAS_ATK_TIMES_LIMIT					= 1444; //圣诞攻击次数限制.
+	CHRISTMAS_BOX_GUILD_MEMBER_OWN				= 1445; //箱子为盟友拥有不能发起行军。
+	
+	SNOWBALL_MARCH_COUNT_NOT_ENOUGTH			= 1450; // 踢雪球行军士兵数量不足
+	KICK_SNOWBALL_DIRECTION_ERROR				= 1451; // 踢雪球方向错误
+	KICK_SNOWBALL_ONCE_LIMIT					= 1452; // 踢一个雪球的次数限制
+	
+	ESPIONAGE_CAN_NOT_SAME_GUILD				= 1453; // 间谍行军不能对同盟玩家发起
+	ESPIONAGE_HAVE_NO_PROTECT					= 1454; // 间谍行军不能发起，对面没有开罩
+	SNOWBALL_ATK_CAN_NOT_SAME_GUILD				= 1455; // 雪球攻击不能对同盟玩家发起
+	SNOWBALL_ATK_DISTANCE_LIMIT					= 1456; // 雪球攻击距离限制
+	SNOWBALL_ATK_IN_CD							= 1457; // 雪球攻击cd中
+	SEARCH_SNOWBALL_NULL						= 1458; // 找不到雪球
+	
+	PRESIDENT_TARGET_HAS_NO_GUILD				= 1461; //转让总统对象没有工会.
+	
+	COUNTRY_QUEST_KING_NO_DO					= 1469; //国王和官员不能做国家任务
+	COUNTRY_QUEST_NOT_OPEN						= 1470; //当前国家任务没有开启
+	COUNTRY_QUEST_MARCH_LIMITED					= 1471; //只能同时发起一支国家任务行军
+	COUNTRY_QUEST_HAS_USED						= 1472; //当前位置已被占用
+	COUNTRY_QUEST_COUNT_MAX						= 1473; //次数已达上限
+
+	GUARD_DRESS_HAS_OWN							= 1474; //该守护特效已经拥有.
+	GUARD_DRESS_NOT_HAVE						= 1475; //该守护未拥有.
+	GUARD_DRESS_GUARDER_NOT_HAVE				= 1476; //你的守护对象未拥有此特效。
+	GUARD_DRESS_ITEM_NOT_ENOUGH					= 1477; //道具或者信使不足。
+	GUARD_DRESS_SEND_WORDS_LIMIT				= 1478; //赠送文字太长
+	GUARD_DRESS_ASK_WORDS_LIMIT				    = 1479; //索要文字太长.
+	GUARD_DRESS_BLAG_CD							= 1480; //索要cd时间.
+
+	CYBORG_PREPARING				= 1481; // 演习准备中
+	CYBORG_HAS_PLYAER_BEATK			= 1482; // 有敌对行军
+	CYBORG_BAN_OP					= 1483; // 泰博利亚期间禁止操作
+	CYBORG_PRETIME_CANNOT_MARCH		= 1484; // 准备期不能行军
+	CYBORG_BUILD_PROCTED			= 1485; // 建筑处于保护状态
+	CYBORG_PRETIME_CANNOT_MOVE		= 1486; // 准备期间不能传送
+	CYBORG_BUILD_NOT_LINK			= 1487; // 
+	CYBORG_IN_WAR_FEVER				= 1488;  // 战争狂热状态.
+	CYBORG_HAS_PASSIVE_MARCH		= 1489;  // 有被动行军
+	CYBORG_ON_FIRE					= 1490;  // 城墙在起火.
+	CYBORG_HAS_MARCH				= 1491;  // 有行军不能参加赛博
+	CYBORG_HAS_ASSISTANCE_MARCH		= 1492;  // 有援助行军不能参加赛博
+	CYBORG_NOT_IN_INISTANCE			= 1493;  //不在副本中.
+	
+	COUNTRY_QUEST_TIME_NOT_ENOUGH	= 1494;  //完成任务时间不足，无法开始任务
+	COUNTRY_QUEST_CAN_NOT_HERO		= 1495;  //任务不可携带英雄和机甲
+	COUNTRY_BUILDING_PATROL			= 1496;  //当前不可以巡视
+	
+	CYBORG_STATE_CANNOT_DISMISS		= 1498; // 联盟在赛博之战匹配/战斗阶段,不能解散
+	CYBORG_MEMBER_CANNOT_QUIT		= 1499; // 赛博之战队员,在匹配/战斗阶段,不能退出或被踢出联盟
+	CYBORG_TEAM_NOT_EXIST			= 1500;	// 战队不存在
+	CYBORG_TEAM_HAS_JOINED			= 1501; // 战队已报名,不能进行该操作
+	CYBORG_TEAM_NAME_LONG			= 1502; // 战队名称过长
+	CYBORG_NEW_MEMBER_TOO_MUCH		= 1503; // 战队本期新加入人员超过限制
+	CYBORG_PLAYER_OVER_LIMIT		= 1504;	// 参战玩家超过上限
+	CYBORG_SIGNED_CANNOT_DISMISS	= 1505;	// 已报名赛博之战,不能解散联盟
+	CYBORG_HAS_NO_MATCH_INFO		= 1506; // 找不到相应的匹配信息.
+	CYBORG_NOT_IN_THIS_WAR			= 1507; // 不是本次战斗出战人员
+	CYBORG_RANK_NOT_ENOUGH			= 1508;	// 战队战力排行未达标
+	CYBORG_CANNOT_MANAGE_STATE		= 1509;	// 当前阶段不能进行出战管理
+	CYBORG_TEAM_NEW					= 1510;	// 战队创建时间不足,不能报名
+	CYBORG_OPERATION_FORBID			= 1511;	// 已参与本次赛博之战,该操作禁用
+	CYBORG_ROOM_NOT_OPEN			= 1512;	// 当前非副本开启时间
+	CYBORG_ROOM_DATE_NOT_INIT		= 1513;	// 副本信息还未初始化
+	CYBORG_ROOM_DATE_NOT_EXIST		= 1514;	// 副本信息不存在
+	CYBORG_NOT_SIGN_STAGE			= 1515; // 当前非报名阶段
+	CYBORG_ORG_TEAM_JOINED			= 1516; // 目标成员原战队已报名,不能进行转队操作
+	CYBORG_TEAM_NOT_MATCH			= 1517; // 战队ID不一致,不能进行该操作
+	CYBORG_TEAM_NUM_OVER_LIMIT		= 1518; // 联盟战队数量超过限制
+	CYBORG_ROOM_NEAR_CLOSE			= 1519;	// 战场即将关闭,不能进入战场
+	CYBORG_HAS_QUIT_ROOM			= 1520; // 玩家主动退出过副本,禁止进入
+	CYBORG_MEMBER_CNT_MIN			= 1521;	// 战队出战人数不足,不能报名
+	CYBORG_HAS_PLYAER_MARCH			= 1522; // 有行军 不能进入副本
+	CYBORG_TEAM_NAME_OVER_LIMIT		= 1523;	// 战队名字超长
+	CYBORG_BUY_OVER_LIMIT			= 1524; // 赛博商店商品购买数量超过限制	
+	CYBORG_SIGNED_CANNOT_QUIT		= 1525;	// 已报名赛博之战,不能退出联盟
+	CYBORG_SIGNED_CANNOT_KICK_OUT	= 1526;	// 目标玩家已报名赛博之战,不能被踢出联盟
+	CYBORG_TEAM_NAME_EXIST			= 1527; // 战队名称已存在
+	CYBORG_TOO_MUCH_NEW_MEMBER		= 1528; // 本期新增出战人员数量过多,不能报名
+	CYBORG_CANNOT_DISMISS_STATE		= 1529;	// 当前阶段不能进行战队操作(解散,改名,创建等)
+
+	
+	NOT_SUPPORT_DRESS_TYPE          = 1530; // 不支持的装扮类型（只支持基地装扮和行军装扮）
+	DRESS_ITEM_NOT_FOUND            = 1531; // 未找到装扮信息
+	DRESS_SHOW_CHANGE_NOT_SUPPORT   = 1532; // 当前装扮不支持更换外观
+	TARGET_DRESS_NOT_ACTIVATE       = 1533; // 目标装扮不在有效期内
+	ORDER_LVL_NOT_ENOUGH			= 1534; // 战令等级不达标,不能购买
+	ORDER_NOT_ENOUGH				= 1535; // 战令等阶不达标,不能购买
+	ORDER_LVL_CHANGED				= 1536; // 战令等级已发生变化
+	ORDER_WEEK_ORDER				= 1537; // 已达每周购买上限
+	
+	
+	
+	RF_STAGE_NOT_INVEST				= 1540; // 当前不是投资阶段
+	RF_STAGE_NOT_REWARD				= 1541;	// 当前不是收益阶段
+	RF_STATE_UNLOCK					= 1542;	// 该基金未解锁
+	RF_STATE_UNINVEST				= 1543; // 该基金未投资,不能进行该操作
+	RF_STATE_INVESTED				= 1544; // 该基金已投资
+	RF_DIY_NOT_ENOUGH				= 1545; // 自选奖励不全
+	RF_DAYS_NOT_ENOUGH				= 1546; // 时间不足,还不能领奖
+	RF_REWARDED						= 1547; // 奖励已领取,不能重复领奖
+	RF_GIFT_ID_ERROR				= 1548; // 投资id异常
+	RF_DATA_ERROR					= 1549; // 数据异常
+	
+	
+	CHRONO_GIFT_CHOOSE_NOT_MATCH    = 1550; // 时空豪礼礼品选择不符合要求
+	CHRONO_GIFT_BUY_NUM_NOT_ENOUGH  = 1551; // 时空之钥购买数量不足
+	
+	CYBORG_SIGN_TOO_MUCH			= 1552; // 赛博之战当前时段报名战队过多
+	SEND_COUPON_FAILED              = 1553; // 领取微券失败
+	
+	DEVELOP_SPURT_ADVANCE_GIFT_BUY  = 1554; // 发展冲刺高级礼包只能购买一次	
+	
+	DEVELOP_SPURT_SIGN_TODAY        = 1555; //发展冲刺活动,今天已经签到
+	
+	POWER_MESSAGE_OUT_TIME          = 1556; //赠送体力活动，信件已经过期
+	POWER_MESSAGE_PRESSED           = 1557; //赠送体力活动，信件每天只能催促一次
+
+	JOY_BUY_EXCHANGE_NOT_EXIST      = 1558; //兑换id不存在,请刷新列表
+	JOY_BUY_EXCHANGE_NUMBER_OVERTOP      = 1559; //兑换id超出上限
+	JOY_BUY_EXCHANGE_COST_ITEM_ERROR      = 1560; //兑换道具不足
+	JOY_BUY_EXCHANGE_DAY_NUMBER_OVERTOP      = 1561; //超出当天兑换上限
+	JOY_BUY_EXCHANGE_REFRESH_NUMBER_OVERTOP      = 1562; //超出当天刷新上限
+	JOY_BUY_EXCHANGE_REFRESH_COST_ERROR      = 1563; //兑换刷新消耗品不足
+	JOY_BUY_EXCHANGE_REFRESH_INFORM      = 1564; //刷新兑换列表成功通知
+	
+	CYBORG_SHOP_SEASON_LIMIT			= 1565; // 赛博商店赛季专属奖励限制
+	EXCHANGE_DECORATE_LEVEL_REWARD_YEST = 1566;//装扮兑换 已经领取过
+	EXCHANGE_DECORATE_LEVEL_REWARD_ID_NOT_FIND = 1567;//装扮兑换 等级id数据未找到
+	EXCHANGE_DECORATE_COST_ERROR = 1568;//装扮兑换 购买XXX，货币不足
+	EXCHANGE_DECORATE_LEVEL_LIMIT_ID_NOT_FIND = 1569;//装扮兑换 未到到开启等级兑换
+	EXCHANGE_DECORATE_LEVEL_OPEN_NUMBER_ERROR = 1570;//装扮兑换 等级特惠超出兑换上限
+	EXCHANGE_DECORATE_NUMBER_ERROR = 1571;//装扮兑换 装扮超出兑换上限
+	EXCHANGE_DECORATE_BUY_LIMIT_NUMBER_ERROR = 1572;//装扮兑换 解锁等级次数已达上限
+
+	GHOST_TOWER_MONSTER_NOT_YOURS = 1573;  //此幽灵不属于您
+	GHOST_TOWER_MONSTER_CAN_NOT_SEAT = 1574; //没有空地放在幽灵
+	GHOST_TOWER_CAN_NOT_BUILDING = 1575;  //幽灵工厂不能建造
+
+	GHOST_SECRET_CARD_IS_DREWD = 1577;  	//幽灵秘宝此牌已翻过
+	GHOST_SECRET_RESET_TIME_LIMIT = 1578;   //幽灵秘宝重置次数已达上限
+	GHOST_SECRET_ALL_CARD_IS_DREWD = 1579;  //幽灵秘宝所有牌已翻过
+	
+	DRAGON_BOAT_CELEBREATION_MAKE_GIFT_LIMIT = 1582;  //端午-联盟庆典 制作礼物次数达到上限
+	DRAGON_BOAT_EXCHANGE_LIMIT = 1583;   //端午-节日兑换 兑换次数到达上限
+	DRAGON_BOAT_GIFT_ACHIEVE  = 1584;  //端午-福船送礼 当前龙船的礼物已经领取
+	DRAGON_BOAT_LUCKY_BAG_OPEN_LIMIT  = 1585;  //端午-福袋 福袋开启达到上限
+	DRAGON_BOAT_GIFT_HIDDEN  = 1586; //端午-福船送礼 不在活动中
+	DRAGON_BOAT_MARCH_LIMITED = 1587; //端午-福船送礼,同一时间只能有一只队伍去领取奖励
+
+	VIRTUAL_CARD_IS_OPENED = 1580;  //虚拟实验室此牌已翻过
+	VIRTUAL_RESET_LIMITE = 1581;    //虚拟实验室重置次数已不够
+	VIRTUAL_CARD_IS_ALL_CLOSE = 1588;    //虚拟实验室所有牌都扣着无法重置
+	
+	MEDAL_FUND_NO_BUY = 1589;			//未购买勋章基金
+	MEDAL_FUND_HAVE_RECEIVED = 1590;	//已经领取过 
+	MEDAL_FUND_NO_TIME_LIMIT = 1591; 	//不在收割期
+	MEDAL_FUND_NO_REWARD_FOR_SCORE = 1592; 	//每日积分不满足条件无奖励
+	
+
+	RECHARGE_WELFARE_ITEM_SET_ERROR			= 1593; //充值福利抽奖奖励设置错误
+    RECHARGE_WELFARE_LOTTERY_TIMES_LIMIT 	= 1594; //充值福利抽奖次数已达上限
+	RECHARGE_WELFARE_RECEIVE_COUPON_LIMIT	= 1595; //领取充值点券已达上限
+	RECHARGE_WELFARE_RECEIVE_COUPON_NO_HAVE	= 1596; //没有可领取的点券
+	RECHARGE_WELFARE_DAILY_RECEIVED			= 1597; //每日积分奖励点券已经领取过
+	RECHARGE_WELFARE_DAILY_SCORE_NO_ENOUGH	= 1598; //每日积分不够
+	NEW_ORDER_EXP_BUY_LIMIT				    = 1599;	//新服战令-此档经验已经买过
+	NEW_ORDER_LEVEL_REWARD_LIMIT            = 1600; //新服战令-等级奖励已经领取
+	SW_CHANGE_TIMEOUT						= 1601; //星球大战转让时间已过
+	SW_HAS_CHANGED							= 1602; //星球大战国王已经转让过了
+	ENERGY_INVEST_NO_BUY                    = 1603;	//未购买能量源基金
+	ENERGY_INVEST_HAVE_RECEIVED             = 1604;	//已经领取过 
+	ENERGY_INVEST_NO_TIME_LIMIT             = 1605; //不在收割期
+	ENERGY_INVEST_NO_REWARD_FOR_SCORE       = 1606; //每日积分不满足条件无奖励
+	SUPERSOLDIER_INVEST_NO_BUY              = 1607; //未购买机甲基金
+	SUPERSOLDIER_INVEST_HAVE_RECEIVED       = 1608;	//已经领取过 
+	SUPERSOLDIER_INVEST_NO_TIME_LIMIT       = 1609;	//不在收割期
+	SUPERSOLDIER_INVEST_NO_REWARD_FOR_SCORE = 1610; //每日积分不满足条件无奖励
+	OVERLORD_BLESS_COMPLETED				= 1611; //膜拜已完成
+	OVERLORD_BLESS_NO_COMPLETE				= 1612; //未完成膜拜无法领奖
+	OVERLORD_BLESS_REWARD_HAVE_RECEIVED		= 1613; //膜拜奖励已领取
+	OVERLORD_SHARE_NO_COMPLETE				= 1614; //未完成膜拜分享无法领奖
+	OVERLORD_SHARE_REWARD_HAVE_RECEIVED		= 1615; //膜拜分享奖励已领取
+	ARMIES_MASS_GIFT_BUY_LIMIT              = 1616; //礼包购买已经达到上限
+	ARMIES_MASS_OPEN_TIME_LIMIT             = 1617; //侦查次数不足
+
+	DOUBLE_GIFT_NOT_SELECTED           = 1623; //购买双享前未选择奖励
+    DOUBLE_GIFT_BUYED              	   = 1624; //此档次礼包当日已购买
+	DOUBLE_FREE_GIFT_TAKEN             = 1625; //双享豪礼免费礼包当日已领取
+	DOUBLE_ACC_DAY_NOT_ENOUGH          = 1626; //双享豪礼购买累计天数未达成
+	GROUP_BUY_TIMES_LIMIT          	   = 1627; //万人团购活动,礼包购买次数已达上限
+	GROUP_BUY_CHECK_DISCOUNT_FAILD     = 1628; //万人团购活动 校验折扣信息失败
+	PLAYER_RED_PACKAGE_OUT_TIME        = 1629; //红包活动，红包已经过期
+
+	
+	BATTLE_FIELD_BUY_DICE_OVERLIMIT           = 1630; //战地寻宝-购买骰子次数已达单日次数上限
+	BATTLE_FIELD_LOGIN_REWARD_NEED_PURCHARSE  = 1631; //战地寻宝-领取累计登录奖励,需要先购买通行证
+	BATTLE_FIELD_LOGIN_REWARD_DAY_OVERLIMIT   = 1632; //战地寻宝-领取累计登录奖励,领取天数超过实际的登录天数
+	BATTLE_FIELD_LOGIN_REWARD_REPEATED        = 1633; //战地寻宝-领取累计登录奖励,重复领取
+	ORDNANCE_FORTRESS_BIG_REWARD_COUNT_LIMIT  = 1634; //军械要塞大奖次数不足
+    BATTLE_FIELD_BUY_DICE_FAILED              = 1635; //战地寻宝活动购买骰子失败
+	
+	SHARE_CAKE_GIFT_ACHIEVE				= 1636; //分享蛋糕 当前蛋糕的礼物已经领取
+	SHARE_CAKE_GIFT_HIDDEN  			= 1637; //分享蛋糕 不在活动中
+	SHARE_CAKE_MARCH_LIMITED 			= 1638;	//分享蛋糕,同一时间只能有一只队伍去领取奖励
+	FIRE_WORKS_NO_FREE_TIME 			= 1639;	//烟花盛典免费领取奖励时间未到
+	CELEBRATION_FOOD_LEVEL_ERROR  		= 1640;	//周年庆制作美食等级错误
+	SHARE_CAKE_MARCH_TIME_LIMITED 		= 1641;	//分享蛋糕,不在领取蛋糕的时间范围内
+
+	CELEBRATION_COURSE_SIGN_YET_ERROR  	= 1642;	//周年历程已经签到过
+	CELEBRATION_COURSE_ID_NOT_OPEN = 1643;	//周年历程分享id未开启
+	CELEBRATION_COURSE_SHARE_DAY_ERROR = 1644;	//周年历程分享每日一次		
+	CELEBRATION_COURSE_SHARE_DATA_ERROR = 1645;	//请求x8数据异常
+	CELEBRATION_SHOP_ID_NOT_FIND  = 1646;//兑换id未找到
+	CELEBRATION_SHOP_NUMBER_LIMIT_ERROR  = 1647;//兑换id超出数量限制
+	CELEBRATION_SHOP_EXCHANGE_LIMIT_ERROR  = 1648;//兑换id条件不足
+
+	ARMAMENT_ERROR_NUMBER = 1649;//兑换次数与道具数量不一致错误
+	ARMAMENT_ERROR_NOTFINDID = 1650;//兑换道具ID包含非法ID
+	ARMAMENT_ERROR_NOT_OPEN = 1651;//未开启该宝箱
+	ARMAMENT_ERROR_EXCHANGE_NUMBER = 1652;//兑换次数达到上限
+	ARMAMENT_ERROR_COST = 1653;//消耗道具不足
+
+	
+	
+
+	ORDER_EQUIP_LVL_CHANGED				= 1654; // 装备战令等级已发生变化
+	ORDER_EQUIP_WEEK_ORDER				= 1655; // 装备战令经验购买已达每周购买上限
+	
+	
+	ITEM_CAN_NOT_USE_IN_CROSS			= 1656;	// 该道具不能在跨服期间使用
+	
+	
+	SUPER_DISCOUNT_NOT_OPEN				= 1657; //幸运折扣活动未开放 
+	SUPER_DISCOUNT_NOT_EXISTS			= 1658; //活动配置不存在
+	SUPER_DISCOUNT_BUY_TIMES			= 1659; //购买数量不正确
+	SUPER_DISCOUNT_BUY_GOLDEN			= 1660; //金条不足无法购买
+	SUPER_DISCOUNT_DRAW_TIMES			= 1661; //刷新奖池道具不足
+	SUPER_DISCOUNT_POOL_CLOSE			= 1662; //奖池已关闭
+	SUPER_DISCOUNT_POOL_CFG				= 1663; //奖池配置不正确 
+	SUPER_DISCOUNT_BUY_ITEM_CFG			= 1664; //未找到商品配置
+	SUPER_DISCOUNT_REFRESH_TIMES		= 1665; //刷新次数不足
+	
+	
+
+	
+	
+	ALLIANCE_CELEBRATE_REWARD_DONATE_LIMIT 	= 1666; //联盟欢庆活动,个人贡献度不够,无法领奖
+	ALLIANCE_CELEBRATE_REWARD_LV_LIMIT 		= 1667; //联盟欢庆活动,联盟活动等级不够,无法领奖
+	ALLIANCE_CELEBRATE_REWARD_RECEIVED 		= 1668; //联盟欢庆活动,已经领取过此奖励
+
+
+	RETURN_PUZZLE_MISSION_FAIL 		= 1669; //未解锁全部碎片
+
+
+	SE_CS_NOT = 1680; // 跨服不可兵种转换
+	SE_Dungeon_NOT = 1681; // 副本中不可兵种转换
+	SE_NationalHospitalDead_NOT = 1682; // 国家医院有伤兵不可兵种转换
+	SE_TrainCount_NOT = 1683; // 正在训练士兵不可兵种转换
+	SE_TrainFinishCount_NOT = 1684; // 训练完未收取士兵不可兵种转换
+	SE_WoundedCount_NOT = 1685; // 有伤兵不可兵种转换
+	SE_March_NOT = 1686; // 有出征兵不可兵种转换
+	SE_CityShieldTime_NOT = 1687; // 无保护罩不可兵种转换
+	SE_Asst_NOT = 1688; // 有援军不可兵种转换
+	SE_PassiveMarch_NOT = 1689; // 有被动行军不可兵种转换
+	SE_BuildUPLevel_NOT = 1690; // 有建筑在升级不可兵种转换
+	SE_EQUIP_RESEARCH_NOT = 1691; // 当前有正在研究的装备科技不可兵种转换
+	SE_CHAMP_NOT = 1692; // 攻防模拟不可兵种转换
+	SE_SimulateWar_NOT = 1693; // 军团模拟不可兵种转换
+	SE_exchangeCD_NOT = 1694; // 转换CD中不可兵种转换
+	
+	SE_TECH_RESEARCH_NOT          = 1695; // 当前有正在研究的普通科技（对应作战实验室）不可兵种转换
+	SE_GUILD_HOSPICE_NOT          = 1696; // 当前有正在进行的联盟关怀不可兵种转换
+	SE_CROSS_TECH_RESEARCH_NOT    = 1697; // 当前有正在研究的远征科技不可兵种转换
+	SE_PLANT_SCIENCE_RESEARCH_NOT = 1698; // 当前有正在研究的泰能科技不可兵种转换
+
+
+	FIRE_REIGNITE_REWARD_BOX_LIMIT 			= 1671; //装扮投放系列活动三:重燃战火无   经验不够无法领取的宝箱
+	FIRE_REIGNITE_EXCHANGE_LIMIT 			= 1701; //装扮投放系列活动三:重燃战火无  兑换次数已达上限
+	
+	PLANT_FORTRESS_BUY_COUNT_LIMIT = 1702;   //泰能宝库购买次数不足
+	PLANT_FORTRESS_BIG_REWARD_COUNT_LIMIT  = 1703; //泰能宝库大奖次数不足
+	
+	TIME_LIMIT_BUY_NOT_IN_TURN		= 1710; // 限时抢购活动，当前轮次未开启
+	TIME_LIMIT_BUY_NOT_CURRENT_TURN	= 1711; // 限时抢购活动，不能购买当前轮次物品
+	TIME_LIMIT_BUY_GOODS_HAVE_NO	= 1712; // 限时抢购活动，物品已被抢光
+	TIME_LIMIT_BUY_OWN_LIMIT		= 1713; // 限时抢购活动，个人购买数量已经达到上限
+	TIME_LIMIT_BUY_AREAID_ERROR		= 1714; // 大区错误
+	
+		
+	FIRE_REIGNITE_TWO_REWARD_BOX_LIMIT 		= 1709; //圣诞节系列活动二:冬日装扮活动 经验不够无法领取的宝箱
+	FIRE_REIGNITE_TWO_EXCHANGE_LIMIT 		= 1715; //圣诞节系列活动二:冬日装扮活动 兑换次数已达上限
+
+	RECALL_FRIEND_GUILD_HAS_RECALL      = 1716; //好友召回活动,联盟召回,已经召回过此玩家
+	RECALL_FRIEND_GUILD_TARGET_LIMIT	= 1717; //好友召回活动,联盟召回,此玩家被召回次数已达上限
+	RECALL_FRIEND_GUILD_IS_MYSELF       = 1718; //好友召回活动,联盟召回,不能召回自己
+	
+	
+	
+	HONG_FU_CHOOSE_REWARD_INVALID		= 1719; //自选奖励和礼包不是对应关系
+	HONG_FU_GIFT_NO_FREE				= 1720; //不是免费礼包无法免费解锁
+	HONG_FU_GIFT_HAS_UNLOCK				= 1721; //礼包已经解锁
+	HONG_FU_GIFT_NO_CHOOSE_REWARD		= 1722; //礼包中未选择自选奖励
+	HONG_FU_GIFT_NO_UNLOCK_REC			= 1723; //礼包未解锁,无法领奖
+	HONG_FU_GIFT_NO_REWARD_REC			= 1724; //礼包奖励已经领取过,暂无奖励可领取
+	HONG_FU_GIFT_NO_NEED_BUY_FREE		= 1725; //是免费礼包无须直购解锁
+	
+	RED_BLUE_TICKET_REPEATED            = 1726; // 不能重复翻同样的牌
+	RED_BLUE_NOT_START                  = 1727; // 还未开始不能翻牌
+    RED_BLUE_REFRESH_LIMIT              = 1728; // 洗牌次数已达上限
+
+	HONOR_REPAY_RECEIVE_TIME_LIMIT 		= 1731;	//荣耀返利领取奖励不在规定时间范围内
+	HONOR_REPAY_RECEIVE_NO_BUY			= 1732;	//荣耀返利领取奖励 没有购买无法领取
+	HONOR_REPAY_RECEIVED 				= 1733;	//荣耀返利领取奖励 已经领取过无法领取
+	HONOR_REPAY_BUY_TIME_LIMIT 			= 1734;	//荣耀返利购买 不在规定时间范围内
+	HONOR_REPAY_BUY_TIMES_LIMIT 		= 1735;	//荣耀返利购买次数已用尽
+	DYZZ_CHOOSE_BOX_SAME		 		= 1736;	//已拥有
+	ROSE_GIFT_DRAW_NOT_ENOUGH			= 1737; //奖池已抽空
+	SECOND_BUILD_GIFT_BUY_LIMIT         = 1738; //第二城建队列已解锁，不能购买该礼包
+
+	GUILD_WISH_INVITE_IN_CD				= 9672; // 您已经发送盟友祝福邀请，请稍后再试
+	DO_NOT_HAVE_A_GUILD					= 9673; // 您当前暂无联盟，请先加入一个联盟
+	DO_NOT_TO_YOUERSELF 				= 9674;	// 不可对自身信息进行此操作
+	NOT_USEFUL_INFORMATION 				= 9675;	// 此邀请信息已无效
+
+	MACHA_REPAIR_CHAPTER_UNREACH        = 11001;  // 修复该机甲部件的章节任务条件未达成
+    MACHA_PART_REPAIRED                 = 11002;  // 该机甲部件已修复
+    MECHA_REPAIR_COND_UNREACH           = 11003;  // 修复该机甲部件所需条件未达成
+    MECHA_PART_NEED_REPAIR              = 11004;  // 需要修复完所有部件才能解锁机甲
+	
+	DRESS_TREASURE_RERST_COUNT_LIMIT     = 11009; //精装夺宝重置次数限制
+	DRESS_TREASURE_EXCHANGE_COUNT_LIMIT  = 11010; //精装夺宝兑换次数不足
+	DRESS_TREASURE_EXCHANGE_SCORE_LIMIT  = 11011; //精装夺宝兑换分数不足
+	PLANT_SECRET_OPEN_CARD_REPEAT        = 11012; //已翻过此牌11004
+	PLANT_SECRET_OPEN_BOX_FAILED         = 11013; //密码输入错误，开箱失败
+	PLANT_SECRET_BUY_ITEM_LIMIT          = 11014; //购买翻牌道具数量超出上限
+	
+	DRESS_TREASURE_RERST_LIMIT           = 11015; //精装夺宝，没活得奖励不能重置
+
+	
+	LUCKY_BOX_FINISH_LIMIT               = 11016; //幸运转盘已经结束
+	LUCKY_BOX_EXCHANGE_COUNT_LIMIT       = 11017; //幸运转盘兑换次数不足
+	LUCKY_BOX_BUY_COUNT_LIMIT            = 11018; //幸运转盘购买次数不足
+	LUCKY_BOX_EXCHANGE_TIME_LIMIT        = 11019; //幸运转盘购兑换时间限制
+	
+	NO_BUILDING_TO_REFRESH				 = 11020; //没有建筑可以刷新任务
+	ONLY_OFFICER_TO_OPER				 = 11021; //只有国王和官员可以操作
+	ARMY_NOT_ENOUGH						 = 11022; //所需部队数量不足
+	NATION_BUILD_NOT_ENOUGH				 = 11023; //建设任务条件不满足
+	NATION_BUILDING_UNOPEN				 = 11024; //国家建筑暂未开放
+	NATION_CANT_CHANGE_QUEST_TYPE		 = 11025; //有正在进行中的任务，不可改变任务类型
+	NATION_HOSPITAL_NOT_EXIST            = 11026; //国家医院建筑不存在
+	NATION_SPEED_ITEM_ERROR              = 11027; //国家医院死兵恢复加速道具不匹配
+	NATION_SHOP_PASS_WEEK                = 11028; //国家商店跨周重置
+	
+	NATION_SHIP_ALEADY_UPGRADE			 = 11029; //国家飞船正在升级中
+	NATION_SHIP_LEVEL_NOT_ENOUGH		 = 11030; //飞船等级不足，不能升级部件
+	NATION_RESOURCE_NOT_ENOUGH			 = 11031; //国家资源不足
+	NATION_SHIP_NOT_UPGRADE			 	 = 11032; //当前没有部件正在升级
+	
+	NATION_BUILD_SUPPORT_LIMIT           = 11033; //该建筑当天资助金条次数已达上限
+	NATION_MILITARY_LEVEL_NOT_MATCH      = 11034; //国家商店中购买此商品所需的军衔等级不够
+	NATION_WAREHOUSE_DONATE_FREQUENCY    = 11035; //国家仓库中捐献资源的频率过高
+	
+	NATION_SHIP_ASSIST_LIMIT			 = 11036; //当日助力已达上限，不再减少时间
+	
+	NATION_WAREHOUSE_NOT_EXIST           = 11037; //国家仓库建筑不存在
+	
+	NATION_BUILD_VAL_LIMIT				 = 11038; // 当前建设值已达每日上限，使用失败 
+	
+	PLANT_SOLDIER_ADVANCE_ARMY_LESS      = 11039;// 泰能兵进化,低级兵数量不够
+
+	ALLIANCE_WISH_ACCEPT_HELP_OVER       = 11040;//盟军祝福活动,玩家接受祝福次数已满
+	ALLIANCE_WISH_ACCEPT_HELP_ALREADY    = 11042;//盟军祝福活动,已经收到玩家祝福
+	
+	
+	
+	DONATE_TIMES_NOT_ENOUGH				 = 11043; //捐献次数不足
+	REFRESH_TIMES_NOT_ENOUGH			 = 11044; //刷新次数不足
+	QUEST_TIMES_NOT_ENOUGH				 = 11045; //任务次数不足
+	ASSIST_TIMES_NOT_ENOUGH				 = 11046; //助力次数不足
+	
+	ALLIANCE_WISH_ACCEPT_HELP_ACHIEVE_OVER    = 11047; //盟军祝福活动,已经收获了祝福星
+	ALLIANCE_WISH_SEND_HELP_GUILD_LIMIT       = 11048; //盟军祝福活动,没有联盟不能发送申请
+	ALLIANCE_WISH_ACCEPT_HELP_NOT_SAME_GUILD  = 11049;//盟军祝福活动,不是盟友
+	ALLIANCE_WISH_ACCEPT_HELP_IN_CROSS        = 11050;//盟军祝福活动,被祝福的盟友正在跨服中
+	
+	NATION_TECH_BUILD					 = 11051; // 建筑正在建造不能研究
+	NATION_TECH_RESEARCH				 = 11052; // 已经在研究了
+	
+	NATION_MISSION_NONE				 	 = 11053; // 国家任务不存在
+	NATION_MISISON_PICK_LIMIT			 = 11054; // 国家任务接取次数达到上限
+	NATION_MISSION_NO_REMAIN			 = 11055; // 国家任务没有剩余接取次数
+	NATION_BUILDING_RUNNING				 = 11056; // 建筑正在运行中不可升级
+	NATION_TECH_NONE				 = 11057; // 科技已经不存在了
+	NATION_TECH_TOOL_ENOUGTH		= 11058; // 使用科技道具失败，已到上限
+	
+	NATION_BUILDING_ALEADY_UPGRADE			 = 11060; // 建筑当前已经在升级中
+	
+	SUPER_VIP_NO_TOUCH              = 11061;  // 当前还未开启至尊vip
+	SUPER_VIP_MONTH_GIFT_RECIEVED   = 11062;  // 该月度礼包已领取过了
+	SUPER_VIP_LEVEL_NOT_MATCH       = 11063;  // 当前周期内的激活等级未达到该礼包对应的等级
+	SUPER_VIP_DAILY_GIFT_ERROR      = 11064;  // 每日礼包当天不能重复领取
+	SUPER_VIP_DAILY_SCORE_ERROR     = 11065;  // 每日奖励积分当天不能重复领取
+	SUPER_VIP_DAILY_ACTIVE_LIMIT    = 11066;  // 每日活跃任务积分未达到要求
+	SUPER_VIP_NOT_ACTIVATED         = 11067;  // 当前周期内未激活至尊vip
+	SUPER_VIP_EFF_ACTIVATE_FREQUENCY = 11068; // 操作过于频繁
+	
+	GUILD_INVITE_HAS_BEEN = 11069; // 不能邀请该成员
+	MASS_JOIN_HAS_NO_GUILD= 11070; // 没有联盟不能加入集结
+	
+	NATION_CANCEL_IN_CD = 11071; // 取消功能冷却中，请{0}后再试
+	HEAL_EXCHANGE_NOT_ACTIV = 11073; // 兑换没有激活
+
+	SUPER_VIP_AUTO_ACTIVATED   = 11074; // 当月至尊vip已自动激活生效，不需要再手动激活
+    SUPER_VIP_ACTIVATED_ENOUGH = 11075; // 至尊vip手动激活已超出当月时间，不需要再激活
+	
+	ALLIANCE_WISH_ACHIEVE_ZERO = 11076; //联盟祝福收获为0
+	NATION_TECH_SKILL_NOT_OPEN = 11077; // 国家技能未开放
+	SHARE_GLORY_DONATE_EXCEED_THE_LIMIT = 11080; //荣耀同享捐献超出上限
+	HONOUR_HERO_RETURN_REWARD_TIMES_NOT_ENOUGH = 11081;//荣耀英雄回归抽奖次数不足
+	HONOUR_HERO_RETURN_EXCAHNGE_TIMES_NOT_ENOUGH = 11082;//荣耀英雄回归兑换次数不足
+
+	
+	HONOUR_HERO_BEFELL_LOTTERY_COUNT_LESS = 11083; //荣耀英雄降临抽奖次数不足
+	//-------------道具回收功能开始----------------
+	ITEM_RECYCLE_REDEMPTION_EXCEED_THE_LIMIT = 11086; //道具赎回单次数量超过上限
+	ITEM_RECYCLE_RECYCLE_EXCEED_THE_LIMIT = 11087; //道具回收单次数量超过上限
+	ITEM_RECYCLE_ENTEGRAL_EXCHANGE_TIMES_NOT_ENOUGH = 11088;	//道具回收积分兑换当前物品次数不足
+	ITEM_RECYCLE_RECOVERY_ORDINARY_TIMES_NOT_ENOUGH = 11089;	//道具普通精炼次数不足
+	ITEM_RECYCLE_RECOVERY_EXTRAORDINARY_TIMES_NOT_ENOUGH = 11090;	//道具高级精炼次数不足
+	//-------------道具回收功能结束----------------
+	
+	LOGIN_GIFTS_COMM_RECIEVED_ALL         = 11091; // 当前累计登录的普通奖励已领取完
+	LOGIN_GIFTS_ADV_LOCKED                = 11092; // 进阶奖励还未解锁
+	LOGIN_GIFTS_ADV_RECIEVED_ALL          = 11093; // 当前累计登录的进阶奖励已领取完
+	LOGIN_GIFTS_RECIEVED                  = 11094; // 该累计登录天的奖励已领取
+	LOGIN_GIFTS_DAY_PARAM_ERROR           = 11095; // 累计登录天数参数错误
+	
+	NEWYEAR_LOTTERY_GIFT_NEED_GUILD       = 11096; // 未加入联盟不能购买礼包
+	NEWYEAR_LOTTERY_OPER_NEED_GUILD       = 11097; // 未加入联盟不能进行该操作
+	NEWYEAR_LOTTERY_GIFT_PAIED            = 11098; // 当天已购买完该礼包，不必再选择自选奖励
+	NEWYEAR_LOTTERY_ACHIEVE_STATUS_ERROR  = 11099; // 该进度任务的状态不能领取奖励
+	NEWYEAR_LOTTERY_COST_ERROR            = 11100; // 抽奖券不足
+	NEWYEAR_LOTTERY_NOT_OPEN              = 11101; // 头彩抽奖还未达成
+	NEWYEAR_LOTTERY_CROSS_DAY             = 11102; // 赶上跨天了，抽奖失败
+	
+	SPACE_MECHA_PLACE_TIME_ERROR         = 11103; // 离活动结束30分钟内或活动未开启时不能防止舱体
+	SPACE_MECHA_GUILD_NEED               = 11104; // 未加入联盟不能进行星甲召唤相关操作
+	SPACE_MECHA_PLACED                   = 11105; // 已放置舱体的周期未结束，不能重复放置
+	SPACE_MECHA_LEVEL_ERROR              = 11106; // 舱体等级错误
+	SPACE_MECHA_PLACE_AUTH_ERROR         = 11107; // 权限不足
+	SPACE_MECHA_POINT_NOT_ENOUGH         = 11108; // 星币不足
+	SPACE_MECHA_POS_RANGE_ERROR          = 11109; // 位置超出地图范围
+	SPACE_MECHA_POS_STOP_POINT           = 11110; // 位置包含阻挡点
+	SPACE_MECHA_POINT_OCCUPIED           = 11111; // 所选放置点周围没有空闲位置
+	SPACE_MECHA_CALL_TODAY               = 11112; // 当日已发起过召唤
+	SPACE_MECHA_ACTIVITY_CLOSED          = 11113; // 星甲召唤活动未开启不能进行相关操作
+	SPACE_MECHA_MARCH_TYPE_ERROR         = 11114; // 行军类型与目标点类型不匹配
+	SPACE_MECHA_POINT_OWNER_ERROR        = 11115; // 目标点不是自己盟的
+	SPACE_MECHA_STAGE_ERROR              = 11116; // 当前阶段不支持该操作
+	SPACE_MECHA_MARCH_EXIST              = 11117; // 你已存在发往该目标点的行军
+	SPACE_MECHA_POINT_MARCH_LIMIT        = 11118; // 目标点所能支持的行军数量已达上限
+	SPACE_MECHA_BOX_OCCUPIED             = 11119; // 该宝箱点正在被他人采集中
+	SPACE_MECHA_BOX_COLLECTED            = 11120; // 您已采集过宝箱
+	SPACE_MECHA_MARCH_SPEED_ERROR        = 11121; // 星甲召唤相关行军不能加速
+	SPACE_MECHA_GUILD_OPER_ERROR         = 11122; // 星甲召唤放置舱体后不允许相关联盟操作
+	SPACE_MECHA_PLACED_NEED              = 11123; // 需要先放置舱体才能操作
+	SPACE_MECHA_SET_TIMES_LIMIT          = 11124; // 舱体放置次数已超出上限
+	SPACE_MECHA_COLLECT_MARCH_ERROR      = 11125; // 同时只能派一队采集行军
+	SPACE_MECHA_REPATRIATE_MARCH_FAILED  = 11126; // 行军遣返失败
+	SPACE_MECHA_BROKEN                   = 11127; // 舱体已被打爆，不能再进行增援
+	SPACE_MECHA_CHANGE_LEADER_AUTH_EER   = 11128; // 任命队长失败，权限错误
+	SPACE_MECHA_CANNOT_DISSOLVE          = 11129; // 星甲召唤舱体正在进行中，不能解散联盟
+	SPACE_MECHA_COLLECT_LIMIT            = 11130; // 星甲召唤采集数量已达上限
+	SPACE_MECHA_CHANGE_LEADER_TIME_ERR   = 11131; // 任命队长失败,时机错误
+	SEASON_ORDER_NEED_BUY			     = 11132; // 任命队长失败,时机错误
+
+	STAR_LIGHT_SIGN_ERROR			     = 321001; // 前七天没参加过活动的，点击领取奖励，给他报个错误码提示
+	STAR_LIGHT_SIGN_EIGHT			     = 321002; // 前七天没参加过活动的，点击领取奖励，给他报个错误码提示
+
+	PDD_ORDER_END					     = 324001; // 订单已过期
+	PDD_BUY_COUNT_NOT_ENOUGH		     = 324002; // 订单购买次数不足
+	PDD_CAN_NOT_BUY_SELF				 = 324003; // 不能加入自己的订单
+	PDD_ORDER_SHARE_CD					 = 324004; // 订单分享冷却中 
+	PDD_ORDER_CREAT_TIME_LIMIT			 = 324005; // 时间不足不能创建订单
+	PDD_ORDER_SHARE_CONUT_LIMIT			 = 324006; // 订单分享已达上限
+
+	SUPPLY_CRATE_GUILD_BOX_LIMIT		 = 324101; // 联盟宝箱领取次数已经到达上限
+	SUPPLY_CRATE_NOT_NEXT				 = 324102; // 当前已经是最后一个宝箱
+	SUPPLY_CRATE_LAST_DAY				 = 324103; // 没到最后一天
+	SUPPLY_CRATE_ACHIEVE_NOT_FINISH		 = 324104; // 成就没有都完成
+	SUPPLY_CRATE_HAS_OPENED				 = 324105; // 该箱子已经打开
+	SUPPLY_CRATE_BUY_LIMIT				 = 324106; // 买道具数量超过上限
+
+	JIJIA_SKIN_ACTI_HAS_FINALLY			 = 324111; // 机甲皮肤活动，已经抽取到最终奖励，不能刷新
+
+	GUILD_BACK_ACTI_POOL_NOT_ENOUGH		 = 324121; // 当前奖池中没有奖励不可瓜分
+	GUILD_BACK_ACTI_POOL_LIMIT		 	 = 324122; // 瓜分奖池次数限制
+	GUILD_BACK_ACTI_NEW_JOIN			 = 324123; // 加入联盟时间不够
+
+	CHANGE_SVR_INVITE_CONUT_LIMIT		 = 325001; // 对方邀请已达上限
+	CHANGE_SVR_INVITE_CONUT_LIMIT_SELF	 = 325002; // 自己邀请已达上限
+	CHANGE_SVR_INVITE_HAVE_ACCOUNT_SELF	 = 325003; // 您目标服存在账号，无法进行迁移报名。
+	CHANGE_SVR_INVITE_HAVE_ACCOUNT	     = 325004; // 您邀请的玩家目标服存在账号，无法进行迁移报名。
+	
+	GUARD_EXP_ITEM_USE_ERROR = 324007; // 没有守护对象不能使用守护道具
+	TYPE_MARCH_EXIST         = 324008; // 不能重复发起此类行军
+	CELEBRATION_FUND_SCORE_NOT_ENOUGH  = 324009;  // 周年庆庆典基金购买条件未满足，积分不够
+	CELEBRATION_FUND_LEVEL_ERROR       = 324010;  // 周年庆庆典基金购买条件不满足，基金档位对不上
+	CELEBRATION_FUND_BUY_OVER          = 324011;  // 所有档位的庆典基金都买过了，不能重复购买
+	CELEBRATION_FUND_GOODSID_ERROR     = 324012;  // 周年庆庆典基金购买条件不满足，商品ID对不上
+	CELEBRATION_FUND_BUY_SCORE_ERROR1  = 324013;  // 所有档位的庆典基金都买过了, 不需要再购买积分
+	CELEBRATION_FUND_BUY_SCORE_ERROR2  = 324014;  // 货币不足，购买积分失败
+	CELEBRATION_FUND_BUY_SCORE_ERROR3  = 324015;  // 当前档位积分已满足，不需要再购买积分
+	CELEBRATION_FUND_BUY_SCORE_ERROR4  = 324016;  // 当前不在购买积分许可时间范围内
+
+	LUCK_GET_GOLD_DAILY_MAX_LIMIT = 327001;//单日最大抽奖次数
+	LUCK_GET_GOLD_DRAW_END		  = 327002;//抽奖结束
+	
+	GOLD_BABY_BUY_TICKET_ERROR = 324017; //道具购买超出上限
+	GOLD_BABY_BUY_TICKET_COST_ERROR = 324018; //金条不足无法购买
+	GOLD_BABY_FIND_ERROR = 324019; //奖池搜寻完了，不可再搜
+	GOLD_BABY_FIND_COST_ERROR = 324020; //道具不足，无法搜寻
+	
+	NEWBIE_TRAIN_SELECT_NEED      = 324021; // 还未选择作训英雄（装备兵种），不能进行作训操作
+	NEWBIE_TRAIN_TIMES_ENOUGH     = 324022; // 当前剩余的作训次数不足
+	NEWBIE_TRAIN_GIFT_TYPE_ERROR  = 324023; // 当前礼包跟作训类型不匹配
+	NEWBIE_TRAIN_GIFT_SVR_ERROR   = 324024; // 当前礼包跟专服属性不匹配
+	NEWBIE_TRAIN_COND_ERROR       = 324025; // 装备作训的建筑等级条件未达成
+	NEWBIE_TRAIN_GIFT_BOUGHT      = 324026; // 当日已购买过该礼包
+	
+	PLANT_WEAPON_GIVEUP_COOL      = 32800; //泰能超武活动中放弃研究冷却中，不能操作......
+	PLANT_WEAPON_RANDON_EMPTY     = 32801; //泰能超武活动中还未确定研究方向（还没有随机出奖励）
+	PLANT_WEAPON_TURN_MAX         = 32802; //泰能超武活动中抽奖轮次已达到最大轮次
+	PLANT_WEAPON_DRAW_LOW         = 32803; //泰能超武活动中当前轮次连续抽奖次数还没满，不能进入下一轮
+	PLANT_WEAPON_CONFIG_ERROR     = 32804; //泰能超武活动配置错误（找不到超武id对应的解锁道具配置）
+	PLANT_WEAPON_CHOOSE_UNLOCKED  = 32805; //泰能超武活动中选择的超武已解锁
+	PLANT_WEAPON_CHOOSE_ENOUGH    = 32806; //泰能超武活动中选择的超武其解锁道具已足够解锁
+	PLANT_WEAPON_FREE_EMPTY       = 32807; //泰能超武活动中还未配置免费奖励
+	PLANT_WEAPON_FREE_RECIEVED    = 32808; //泰能超武活动中当日免费奖励已领取过了
+	PLANT_WEAPON_PAYGIFT_EMPTY    = 32809; //泰能超武活动中未找到直购id对应的商品配置
+	PLANT_WEAPON_SHOP_LIMIT       = 32810; //泰能超武活动中对应商品购买次数已达到限购次数
+	PLANT_WEAPON_SHOP_BUY_ERROR   = 32811; //泰能超武活动中对应商品不支持花金条购买
+	PLANT_WEAPON_INSPIRE_LIMIT    = 32812; //当前轮次灵感值未满，不能选超武
+	
+	PLANT_WEAPON_BACK_DRAW_LIMIT    = 32813; //超武返场抽奖次数达上限
+	INVITE_MERGE_NOT_PERMIT         = 32814; //不是同类服务器不能邀请合服
+	PW_BACK_EXCHANGE_LIMIT          = 32185; //对应超武已经解锁，或解锁道具已经够解锁的情况下，不能再兑换了
+	
+	BEST_PRIZE_EXCHANGE_LIMIT       = 32816; //新春头奖专柜活动--积分兑换次数达上限
+	BEST_PRIZE_SHOP_LIMIT           = 32817; //新春头奖专柜活动--对应商品购买次数已达到限购次数
+	BEST_PRIZE_SHOP_BUY_ERROR       = 32818; //新春头奖专柜活动--对应商品不支持花金条购买
+	BEST_PRIZE_PAYGIFT_EMPTY        = 32819; //新春头奖专柜活动--未找到直购id对应的商品配置
+	BEST_PRIZE_POOL_FINISH          = 32820; //新春头奖专柜活动--该奖池已抽完
+	BEST_PRIZE_POOL_DRAWING         = 32821; //新春头奖专柜活动--该奖池当前有人正在抽奖
+	BEST_PRIZE_DRAW_TIME_ERROR      = 32822; //新春头奖专柜活动--当前时间不在可抽奖时间段
+	BEST_PRIZE_DRAW_CONSUME_ERROR   = 32823; //新春头奖专柜活动--当前持有抽奖券不足
+	BEST_PRIZE_BUY_TIME_ERROR       = 32824; //新春头奖专柜活动--当前时间不能购买券
+	BEST_PRIZE_BIG_POOL_LIMIT       = 32825; //新春头奖专柜活动--当前奖池已经到达抽取上限
+
+	MONTHCARD_ACTIVE_BY_ITEM_ERROR  = 32900; //该特权卡当前处于激活状态，道具无法使用
+	MEFAL_NO_17		 		= 32901; // 没有设置驱赶队列不能驱赶
+	MEFAL_STEAL_OVER 		= 32902; // 已偷取成攻不能驱赶
+	MEFAL_STEAL_ING 		= 32903; // 正被他人偷取
+	MEFAL_STEAL_TOMUCH 		= 32904; // 到偷取上限
+	MEFAL_STEALED_TOMUCH 	= 32905; // 对方到被偷取上限
+	MEFAL_STEALED_HAS 		= 32906; // 已经偷取过该物
+	MEFAL_STEALED_ING 		= 32907; // 同人时只能有一条偷取队列
+	MEFAL_TAR_CHANGHE 		= 32908; // 目标信息改变, 无法偷取
+	MEFAL_NO_16		 		= 32909; // 没有设置采集队列不能采集
+	MEFAL_NOT_UNLOCK		= 32910; // 月卡过期未解锁
+	
+	ROLE_EXCHANGE_CONSUME_FORBIDDEN = 32911; //心悦角色交易考察期禁止消耗资源或物品
+	PLANET_EXPLORE_FINAL_LIMIT	 = 32912; //星能探索活动-活动结束前X秒不能探索
+	PLANET_EXPLORE_COLLECT_LIMIT = 32913; //星能探索活动-当日累计采集数量已达上限
+	PLANET_EXPLORE_DRAW_LIMIT    = 32914; //星能探索活动-本期活动探索次数已达上限
+	
+	MONTHCARD_EXCHANGE_LIMIT     = 32915; //特权卡兑换商店-该物品兑换次数超出上限
+	MONTHCARD_STATUS_UNMATCH     = 32916; //特权卡当前状态不支持选择定制奖励
+	MONTHCARD_CUSTOM_COUNT_ERROR = 32917; //定制特权卡奖励选择数量不匹配
+	MONTHCARD_CUSTOM_REWARD_ERROR = 32918; //定制特权卡奖励不匹配
+	MONTHCARD_CUSTOM_PAY_FAILED  = 32919; //定制类特权卡还未选择定制奖励，不能购买
+	MONTHCARD_COIN_NOT_ENOUGH    = 32920; //特权卡兑换商店兑换币不足
+	MONTHCARD_RENEW_STATUS_ERROR = 32921; //该特权卡处于非续费状态
+	MONTHCARD_NOT_IN_SELL        = 32922; //当前月卡不在可出售时间窗口范围内，不可购买
+	
+	LOTTERY_TICKET_ASSIST_COUNT_LIMIT = 32924; //好友代刮次数不足
+	LOTTERY_TICKET_ASSIST_TIME_LESS   = 32925; //临近结束，不能发送代刮申请
+	LOTTERY_TICKET_ASSIST_IN_CROSS    = 32926; //对方正在跨服中，不能发送邀请
+	LOTTERY_TICKET_ASSIST_OUT_LIMIT   = 32927; //代刮申请已经完成或者获取
+	
+	MANHATTAN_LOCK_STATE      = 32940; //超武功能未解锁
+	MANHATTAN_BASE_NOT_EXIST  = 32941; //聚能底座不存在
+	MANHATTAN_BASE_MAX_STAGE  = 32942; //聚能底座已达到最高品阶
+	MANHATTAN_BASE_MAX_LEVEL  = 32943; //此聚能底座部件已达到最高等级
+	MANHATTAN_SW_NOT_EXIST    = 32944; //此超级武器不存在（找不到配置）
+	MANHATTAN_SW_UNLOCKED     = 32945; //此超级武器已解锁
+	MANHATTAN_SW_LOCK_STATE   = 32946; //此超级武器未解锁，不能升阶、升级、部署
+	MANHATTAN_BASE_NOT_MATCH  = 32947; //超武底座品阶条件未达成
+	MANHATTAN_SW_MAX_STAGE    = 32948; //此超级武器已达到最高品阶
+	MANHATTAN_SW_MAX_LEVEL    = 32949; //此超级武器部件已达到最高等级
+	MANHATTAN_NOT_DEPLOYED    = 32950; //未部署的超级武器不能设置城内展示
+	
+	STAR_INVEST_NO_BUY        = 32955;  //未购买基金-星海投资
+	STAR_INVEST_HAVE_RECEIVED = 32956;  //已经领取过奖励-星海投资
+	STAR_INVEST_NO_TIME_LIMIT = 32957;  //不在收割期-星海投资
+	STAR_INVEST_NO_REWARD_FOR_SCORE = 32958; //每日积分不满足条件无奖励-星海投资
+	
+	MOVE_CITY_FIX_CS_NOT             = 32970; // 跨服中不能修复
+	MOVE_CITY_FIX_DUNGEON_NOT        = 32971; // 副本中不可修复
+	MOVE_CITY_FIX_MARCH_NOT          = 32972; // 有出征兵不可修复
+	MOVE_CITY_FIX_CITYSHIELDTIME_NOT = 32973; // 无保护罩不可兵种转换
+	MOVE_CITY_FIX_ASST_NOT           = 32974; // 有援军不可兵种转换
+	MOVE_CITY_FIX_PASSIVEMARCH_NOT   = 32975; // 有被动行军不可兵种转换
+	MOVE_CITY_FIX_CD_NOT             = 32976; // 转换CD中不可兵种转换
+	
+	GROUP_BUY_DISCOUNT_LOW              = 32983; //还未达到最高折扣,不能领取最高折扣奖励
+	GROUP_BUY_DISCOUNT_REWARD_REPEATED  = 32984; //当前礼包当前档位最高折扣奖励已领取过了
+	GROUP_BUY_DISCOUNT_BUYTIMES_ERR     = 32985; //当前礼包当前档位最高折扣奖励所要求的购买次数未达成
+	GROUP_BUY_DISCOUNT_ITEM_ERR         = 32986; //当前礼包不存在这一购买次数对应的档次
+	GROUP_BUY_HOT_SELL_ERR              = 32987; //当前礼包不属于热销商品
+	GROUP_BUY_HOT_SELL_REPEATED         = 32988; //当前礼包下的热销商品免费积分已经领取过了
+
+	MEMBER_NOT_IN_COLLEGE               = 32991; //当前还未加入（军事）学院，不能进行该操作
+	COLLEGE_OPER_FORBID_7_DAYS          = 32992; //退出学院后重新加入，7天内不能进行兑换或礼包购买操作
+	COLLEGE_GIFT_CANNOT_SELL            = 32993; //该礼包未上架，不能购买
+	COLLEGE_GIFT_BOUGHT_TIMES_LIMIT     = 32994; //该礼包购买次数已达上限
+	COLLEGE_GOODS_CANNOT_EXCHANGE       = 32995; //该物品未上架，不能兑换
+	COLLEGE_GOODS_EXCHANGE_TIMES_LIMIT  = 32996; //该物品兑换次数已达上限
+	COLLEGE_NANME_LEN_ERR               = 32997; //学院名字长度不合规
+	COLLEGE_FAST_JOIN_NO_FIND           = 32998; //快速加入没有找到合适的学院
+	COLLEGE_VIT_SEND_MEMBER_LIMIT       = 32999; //学院成员体力接受达到上限
+	COLLEGE_VIT_SEND_LESS               = 33000; //学院体力库不足
+	COLLEGE_KICK_GUILD_APPLY_JOIN_CD    = 33001; //被踢后从联盟邀请进入，在冷却时间内
+	COLLEGE_GUILD_APPLY_SEND_CD         = 33002; //联盟邀请发送CD内
+	COLLEGE_GUILD_APPLY_OUT_TIME        = 33003; //联盟邀请已经失效
+	COLLEGE_MEMBER_CITY_LEVEL_NOT_ENOUGH = 33004; //目标成员 大本等级不够
+	COLLEGE_MEMBER_LEVEL_NOT_ENOUGH      = 33005; //目标成员 等级不足
+	COLLEGE_INVITE_MAIL_SEND_CD          = 33006; //邀请目标玩家进学院，邀请邮件CD
+	
+	MECHA_CORE_FUNC_LOCK                 = 33007; //机甲核心-功能未解锁
+	MECHA_CORE_TECH_MAXLV                = 33008; //机甲核心-当前科技已达到最高等级
+	MECHA_CORE_RANKLV_ERROR              = 33009; //机甲核心-科技升级所需的核心突破等级未达成
+	MECHA_CORE_RANKLV_MAX                = 33010; //机甲核心-已突破至最高等级
+	MECHA_CORE_PRE_TECH_ERROR            = 33011; //机甲核心-前置科技等级条件未达成
+	MECHA_CORE_SLOT_UNLOCKED             = 33012; //机甲核心-当前槽位已解锁
+	MECHA_CORE_SLOT_BASELV_ERROR         = 33013; //机甲核心-当前槽位解锁所需的城堡等级条件未达成
+	MECHA_CORE_SLOT_RANKLV_ERROR         = 33014; //机甲核心-当前槽位解锁所需的核心突破等级未达成
+	MECHA_CORE_SLOT_LOCKED               = 33015; //机甲核心-当前槽位未解锁，不能进行相关操作
+	MECHA_CORE_SLOTLV_MAX                = 33016; //机甲核心-当前槽位已升至最高等级
+	MECHA_CORE_SLOT_LOADED               = 33017; //机甲核心-当前槽位已经装载了模块
+	MECHA_CORE_MODULE_NOT_EXIST          = 33018; //机甲核心-当前所要装载的模块不存在
+	MECHA_CORE_SLOT_NOT_LOAD             = 33019; //机甲核心-当前槽位未装载模块
+	MECHA_CORE_MODULE_TYPE_ERROR         = 33020; //机甲核心-模块类型不同，不能进行属性传承
+	MECHA_CORE_MODULE_ATTR_ERROR         = 33021; //机甲核心-模块随机属性中不包含该属性
+	MECHA_CORE_FUNC_CLOSE                = 33022; //机甲核心-功能已关闭
+	MECHA_CORE_SUIT_LOCK_ERR             = 33023; //机甲核心-套装未解锁
+	MECHA_CORE_SUIT_UNLOCKED_ERR         = 33024; //机甲核心-套装已解锁
+	MECHA_CORE_SLOT_MODULE_TYPE_ERR      = 33025; //机甲核心-模块跟槽位类型不配，不能装配模块
+	MECHA_CORE_SUIT_SWITCH_ERR           = 33026; //机甲核心-当前就是该套装，不用切换
+	MECHA_CORE_MODULE_MAX_LIMIT          = 33027; //机甲核心-模块背包中模块数量达上限
+	MECHA_CORE_ATTR_ENOUGH               = 33028; //机甲核心-模块随机词条属性数量已达上限
+	MECHA_CORE_MODULE_ATTR_ERROR1        = 33029; //机甲核心-交换同种属性词条如果属性低于目标属性不可交换
+	MECHA_CORE_MODULE_ATTR_ERROR2        = 33030; //机甲核心-相同作用号的词条不能同时随机到2条及以上
+
+	MERGE_COMPETE_GIFT_AWARD_ERR         = 33031; //合服比拼-当前礼包已领完
+	
+	CORE_EXPLORE_SHOP_LOCK               = 33032; //核心勘探-兑换商店未解锁
+	CORE_EXPLORE_SHOP_ITEM_LOCK          = 33033; //核心勘探-商品未解锁
+	CORE_EXPLORE_SHOP_EXCHANGE_LIMIT     = 33034; //核心勘探-该商品兑换总次数超出上限
+	CORE_EXPLORE_TECH_COMPLETE           = 33035; //核心勘探-该科技已完成
+	CORE_EXPLORE_TECH_PRE_UNREACH        = 33036; //核心勘探-前置科技未完成
+	CORE_EXPLORE_BUY_PICK_LIMIT          = 33037; //核心勘探-矿镐购买数量超出上限
+	CORE_EXPLORE_BOX_NOT_EXIST           = 33038; //核心勘探-宝箱不存在
+	CORE_EXPLORE_BOX_REWARD_LIMIT        = 33039; //核心勘探-该宝箱奖励领取次数已用完
+	CORE_EXPLORE_GRID_EMPTY              = 33040; //核心勘探-该坐标下不存在障碍物，不需要清理
+	CORE_EXPLORE_GRID_BOX                = 33041; //核心勘探-该坐标下得宝箱未领取完，请先领取宝箱奖励
+	CORE_EXPLORE_GRID_CONNECTED_ERR      = 33042; //核心勘探-该坐标不在通路上
+	CORE_EXPLORE_GRID_OBSTACLE           = 33043; //核心勘探-该坐标下存在障碍物
+
+	AFTER_COMPE_HOMAGE_REPEATED          = 33044; //赛后庆典-每天只能致敬一次，今天已致敬
+	AFTER_COMPE_SENGGIFT_TIME_END        = 33045; //赛后庆典-活动结束前X小时不能进行赠礼
+	AFTER_COMPE_GIFT_PAY_RMB             = 33046; //赛后庆典-此礼物需要花人民币购买
+	AFTER_COMPE_GIFT_LOCK_ERR            = 33047; //赛后庆典-此礼物还未解锁
+	AFTER_COMPE_GIFT_BUY_UPLIMIT         = 33048; //赛后庆典-此礼物购买次数已达上限
+	AFTER_COMPE_RECIEVER_SERVER_ERR      = 33049; //赛后庆典-只能给本服玩家赠送礼物（此玩家非本服玩家）
+	AFTER_COMPE_BIGAWARD_PERMISSION      = 33050; //赛后庆典-非冠军盟盟主没有权限发放全服大奖
+	AFTER_COMPE_BIGAWARD_TIME_ERR        = 33051; //赛后庆典-发送大赏的时间限定在活动期间的每日晚上8~10点
+	AFTER_COMPE_BIGAWARD_NOT_EXIST       = 33052; //赛后庆典-不能领取未曾发放过的大奖
+
+	
+	GUILD_DRAGON_ACTTACK_OPEN_AUTH_ERR  = 330053; //巨龙来袭-操作权限不够
+	GUILD_DRAGON_ACTTACK_OPEN_IN_CD     = 330054; //巨龙来袭-开放冷却中
+	GUILD_DRAGON_ACTTACK_BUILD_UNLOCK   = 330055; //巨龙来袭-联盟建筑未开放
+	GUILD_DRAGON_ACTTACK_BUILD_NO_POINT = 330056; //巨龙来袭-世界点未放置
+	GUILD_DRAGON_ACTTACK_OPEN_TIME_LESS = 330057; //巨龙来袭-即将开启禁止操作
+	GUILD_DRAGON_ACTTACK_OPEN_TIME_ERR  = 330058; //巨龙来袭-不在开放时间段内
+	GUILD_DRAGON_ACTTACK_CLOSED         = 330059; //巨龙来袭-建筑活动未开启
+	GUILD_DRAGON_ACTTACK_STATE_LIMIT    = 330060; //巨龙来袭-当前状态下禁止次操作（统一）
+	GUILD_DRAGON_MASS_MARCH_LIMIT       = 330061; //巨龙来袭-同时只能有一个集结行军
+	
+	SEASON_PUZZLE_PERIOD_EMPTY          = 330071; //不存在当前时间对应的拼图期数
+	SEASON_PUZZLE_ITEM_INVALID          = 330072; //当前拼图期数下不支持该碎片的求助(或帮助)
+	SEASON_PUZZLE_CALLHELP_COOLING      = 330073; //当前处于求助冷却期
+	SEASON_PUZZLE_CALLHELP_PARAM_ERR    = 330074; //向个人求助需要指定求助人
+	SEASON_PUZZLE_CALLHELP_PERSON_ERR   = 330075; //该求助人非本服玩家，不能向他求助
+	SEASON_PUZZLE_CALLHELP_GUILD_ERR    = 330076; //未加入联盟，不能发起联盟频道的求助
+	SEASON_PUZZLE_CALLHELP_EMPTY        = 330077; //不存在对应的求助信息
+	SEASON_PUZZLE_CALLHELP_EXPIRED      = 330078; //请求信息已过期（只在当天有效）
+	SEASON_PUZZLE_HELP_ERROR            = 330079; //非求助对象玩家不能帮助（针对向个人求助的）
+	SEASON_PUZZLE_HELP_ONCE             = 330080; //一份求助信息只能被一个人帮助（已经被别人帮助了）
+	SEASON_PUZZLE_SET_REPEATED          = 330081; //该位置已经放入过拼图碎片了，不能重复放入
+	
+	SHARE_PROSP_BIND_ALREADY            = 330082; //有福同享活动--已绑定过角色
+	SHARE_PROSP_ROLE_INVALID            = 330083; //有福同享活动--角色不满足绑定条件
+	
+	SCHEDULE_TITLE_EMPTY_ERR            = 330084; //待办事项标题不能为空
+	SCHEDULE_TIME_ERR                   = 330085; //待办事项开启时间错误
+	SCHEDULE_CONTINUES_ERR              = 330086; //待办事项持续时长错误
+	SCHEDULE_POSXY_ERR                  = 330087; //待办事项跳转目标点坐标错误
+	SCHEDULE_TYPE_ERR                   = 330088; //待办事项类型错误
+	SCHEDULE_TYPE9_COUNT_ERR            = 330089; //联盟待办事项最多2条，无法新建
+	SCHEDULE_NOT_EXIST                  = 330090; //待办事项不存在，无法编辑修改
+}
+
+enum NameError
+{
+	NAME_BLANK_ERROR					= 1001;	// 名字不能为空
+	NAME_LENGTH_ERROR					= 1002;	// 名字长度须在4-12个字符之间
+	CONTAIN_ILLEGAL_CHART				= 1003;	// 包含非法字符（名称只能包含中英文或数字）
+	ALREADY_EXISTS						= 1004;	// 该名称已被使用
+	CONTAINS_FILTER_WORD                = 1005; // 存在敏感字符
+	MARCH_NAME_LENGTH_ERROR				= 1006; // 名字长度须在2-8个字符之间
+}
+
+enum DeviceError
+{
+	DEVICE_NOT_ACTIVE					= 2000;	// 设备未激活
+	ACTIVE_TOKEN_NOT_EXIST				= 2001;	// 激活码不存在
+	ACTIVE_TOKEN_BEEN_USED				= 2002;	// 激活码已使用
+}
+
+enum IDIPErrorCode
+{
+	CHANGE_ROLE_NAME_CD_ING      = 2010; // 修改角色名称冷却时间未结束
+	CHANGE_SIGNATURE_CD_ING      = 2011; // 修改基地签名冷却时间未结束
+	CHANGE_GUILD_NAME_CD_ING     = 2012; // 修改联盟名称冷却时间未结束
+	CHANGE_MANOR_NAME_CD_ING     = 2013; // 修改联盟堡垒名称冷却时间未结束
+	CHANGE_GUILD_ANNOUNCE_CD_ING = 2014; // 修改联盟宣言冷却时间未结束
+}
+
+enum AccountError
+{
+	PF_ACCOUNT_IS_BINDED				= 3000;	// 社交账号已绑定过游戏角色
+}
+
+enum WaitLoginCode 
+{
+	WAIT_LOGIN_UPPER_LIMIT                 = 4000; // 等待登录人数已达上限
+	WAITING_LOGIN                          = 4001; // 排队等待
+	ALLOW_LOGIN                            = 4002; // 有玩家下线，可以登录
+    LOGIN_TIMEOUT                          = 4003; // 超时未登录，服务器通知ALLOW_LOGIN后，客户端在一段时间（10s）内未登录，服务器发送此提示后主动关闭session
+}
+
+enum IdipMsgCode
+{
+	ZERO_EARNING                           = 5000;  // 游戏过程中零收益提示
+	ZERO_EARNING_LOGIN                     = 5001;  // 登录时零收益提示
+	ZERO_EARNING_RELEASE                   = 5002;  // 零收益解除提示
+	IDIP_ACCOUNT_FORBID_OFFLINE            = 5010;  // idip接口封停帐号，强制下线
+	IDIP_SET_SCORE_OFFLINE                 = 5011;  // idip接口设置分数，强制下线
+	IDIP_CHANGE_DIAMOND_OFFLINE            = 5012;  // idip接口改变钻石数量，强制下线
+	IDIP_ACCOUNT_RESET_OFFLINE             = 5013;  // idip接口重置账号，强制下线
+	IDIP_RESET_SCORE_OFFLINE               = 5014;  // idip接口分数清零，强制下线
+	IDIP_BAN_JOIN_RANK_OFFLINE             = 5015;  // idip接口禁止参与排行榜，强制下线
+	
+	IDIP_BAN_JOIN_RANK_RELEASE             = 5016;  // idip禁止参与排行榜解除提示
+	IDIP_BAN_MSG_RELEASE                   = 5017;  // idip禁言解除提示
+	IDIP_RESOURCE_TRANSFER                 = 5018;  // idip非安全资源转安全资源，强制下线
+	IDIP_DEL_ITEM                          = 5019;  // idip删除物品，强制下线
+	IDIP_DEL_MAIL                          = 5020;  // idip删除邮件，强制下线
+    IDIP_CHANGE_GUILD_SCORE                = 5021;  // idip修改联盟积分，强制下线
+	IDIP_CHANGE_BUILD_LEVEL                = 5022;  // idip修改建筑等级，强制下线
+	IDIP_CHANGE_VIT                        = 5023;  // idip修改体力，强制下线
+	IDIP_ADD_CITY_GUARD                    = 5024;  // idip全区开启保护罩，强制下线
+	IDIP_MOVE_CITY                         = 5025;  // idip强制迁城，强制下线	
+	IDIP_REMOVE_HERO                       = 5026;  // idip删除英雄，强制下线
+	IDIP_NARCH_BACK                        = 5027;  // idip强制外出部队回城，强制下线
+	IDIP_BAN_CHANGE_ICON                   = 5028;  // idip禁止修改头像
+    IDIP_AUTH_RELEASE_OFFLINE              = 5029;  // 解除授权被踢下线
+	IDIP_EXCHANGE_ROLE_OFFLINE             = 5030;  // 角色交易转移被踢下线
+	IDIP_EXCHANGE_NOTICE_OFFLINE           = 5031;  // 角色交易进入公示期被踢下线
+	IDIP_EXCHANGE_LAUNCH_OFFLINE           = 5032;  // 角色交易进入上架期被踢下线
+	IDIP_INSPECTION_FAILED_OFFLINE         = 5033;  // 角色交易考察不通过被踢下线
+}
+
+enum AnchorMsgCode
+{
+	TOKEN_IS_NULL                          = 6000;  // 登录主播服务器凭证为空
+	TOKEN_EXPIRE                           = 6001;  // 登录主播服务器凭证已过期
+	ANCHOR_NOT_CLOSE					   = 6002; 	// 当前有主播未下播
+	ANCHOR_SERVER_ERROR					   = 6003;  // 当前本服暂未添加主播
+}
+
+enum SuperWeaponError
+{
+	SUPER_WEAPON_NOT_SIGN_UP			= 7000; //未报名超级武器
+	SUPER_WEAPON_HAS_SIGN_CURRENT_LEVEL	= 7001; //已经报名同等级超级武器，不能攻击这个等级的自由争夺状态的超级武器
+	SUPER_WEAPON_HAS_SIGN_UP_THIS_LEVEL = 7002; //已经报名同等级的超级武器
+	SUPER_WEAPON_NOT_SIGN_UP_PERIOD		= 7003; //不是报名时间
+	SUPER_WEAPON_CAN_NOT_DIS_GUILD		= 7004; //有控制中的超级武器，不能解散联盟
+	SUPER_WEAPON_SIGN_UP_NO_GUILD		= 7005; //没有联盟不能报名超级武器
+	SUPER_WEAPON_SIGN_UP_NO_AUTHORITY	= 7006; //没有权限报名超级武器
+	SUPER_WEAPON_HAS_ALREADY_AUTO_SIGN_UP = 7007; //超级兵营已经自动报名
+	SUPER_WEAPON_SIGN_UP_INFO_CHANGE	= 7008; //超级武器报名信息已经改变
+	SEND_GIFT_ONE_LIMIT					= 7009; //超级武器礼包颁发个人限制
+	SUPER_WEAPON_CANNOT_QUIT_GUILD		= 7010; //超级武器礼战斗期间不能退出联盟
+	SUPER_WEAPON_CANNOT_KICK_GUILD		= 7011; //超级武器礼战斗期间不能踢出联盟
+	SEND_GIFT_AUTH_LIMIT				= 7012; //没有权限颁发礼包
+	SIGN_UP_COUNT_LIMIT					= 7013; //报名数量限制
+	SUPER_WEAPON_CANCEL_SIGN_AUTHORITY	= 7014; //没有权限取消报名超级武器
+}
+
+enum XZQError
+{
+	XZQ_LIMIT_NO_GUILD              = 7100; //没有联盟不能参加小站区活动
+	XZQ_NOT_SIGN_UP_AUTH_LIMIT		= 7101; //没有报名权限
+	XZQ_CANCEL_SIGN_UP_AUTH_LIMIT	= 7102; //没有权限取消报名超级武器
+	XZQ_NOT_SIGN_UP_PERIOD		    = 7103; //不是报名时间
+	XZQ_SIGN_UP_NO_TICKETS          = 7104; //小站区报名门票不足
+	XZQ_SIGN_UP_GUILD_MEMBER_LIMIT  = 7105; //小站区报名联盟成员人数不够
+	XZQ_SIGN_UP_COUNT_LIMIT	        = 7106; //报名数量限制
+	XZQ_SIGN_UP_ALREADY_CONTROL     = 7107; //已经攻占了建筑，不需要报名
+	XZQ_SIGN_UP_ALREADY             = 7108; //已经报名过此建筑
+	XZQ_SIGN_UP_FREQUENTLY          = 7109; //报名动作过于频繁
+	XZQ_ATK_LIMIT_NO_SIGN           = 7110; //没有报名,不能攻击
+	XZQ_ATK_LIMIT_NO_CONTROL_PRE    = 7111; //没有占领前置建筑,不能攻击
+	XZQ_ATK_LIMIT_CONTROL_COUNT     = 7112; //控制数量达到上限,不能攻击
+	XZQ_ATK_LIMIT_NOT_BATTLE_TIME   = 7113; //不在争夺时间内，不能攻击
+	
+	XZQ_CAN_NOT_DIS_GUILD		    = 7114; //有控制中的建筑，不能解散联盟
+	XZQ_SEND_GIFT_ONE_LIMIT		    = 7115; //超级武器礼包颁发个人限制
+	XZQ_CANNOT_QUIT_GUILD		    = 7116; //超级武器礼战斗期间不能退出联盟
+	XZQ_CANNOT_KICK_GUILD		    = 7117; //超级武器礼战斗期间不能踢出联盟
+	XZQ_SEND_GIFT_AUTH_LIMIT        = 7118; //没有权限颁发礼包
+	
+	
+	XZQ_FORCE_COLOR_CONTROL_LIMIT   = 7119; //小战区颜色设置，控制数量不足
+	XZQ_FORCE_COLOR_IN_USE          = 7120; //小战区颜色设置，颜色被占用
+	XZQ_FORCE_COLOR_IN_CD           = 7121; //小战区颜色设置，冷却中
+	
+	XZQ_GIVE_UP_STATUE_LIMIT        = 7122; //小战区放弃,阶段限制
+	XZQ_GIVE_UP_CONTROL_NUM_LIMIT   = 7123; //小战区放弃,控制数量限制
+	XZQ_GIVE_UP_GIFT_LIMIT          = 7124; //小战区放弃,奖励未发放限制
+	XZQ_SIGN_UP_COUNT_LIMIT_SCIENCE = 7125; //报名数量限制,升级联盟科技
+	XZQ_GIFT_NOT_HAVE               = 7126; //报名发放奖励,奖励不存在
+	
+}
+
+enum CrossServerError
+{
+	CROSS_FIGHTERING					= 8001; //已经在跨服中
+	CROSS_NOT_OPEN						= 8002; //跨服未开启
+	CROSS_SERVER_NOT_GROUP				= 8003; //不是同一组不能跨服
+	CROSS_HAVE_MARCH					= 8004; //拥有行军不能跨服
+	CROSS_PROTOCOL_SHIELD				= 8005; //跨服状态下该操作不可进行.
+	CROSS_OPERATION_NOT_SUPPOERT		= 8006; //操作涉及到跨服玩家,不支持.
+	CROSS_SERVER_NOT_ACTIVE				= 8007; //目标服没有起服.
+	CROSS_NOT_IN						= 8008; //玩家不在跨服中.
+	CROSS_WILL_CLOSE					= 8009; //跨服即将结束.
+	CROSS_HAVE_NO_GUILD					= 8010; //没有联盟
+	CROSS_CAN_NOT_DISMISS_GUILD			= 8011; //跨服活动期间不能解散联盟
+	CROSS_ACTION_ILLEGAL_DURNING_OPEN	= 8012;	//跨服活动期间不支持此操作
+	CROSS_CD							= 8013;	//跨服CD
+	CROSS_UNOPERATE_TIME				= 8014; //该时间不可进行, 跨服退出跨服
+	CROSS_SEND_TAX_COUNT_LIMIT			= 8015;	//跨服发税收奖励数量限制
+	CROSS_SEND_TAX_TIMES_LIMIT			= 8016;	//跨服发税收奖励次数限制
+	CROSS_HOSPITAL_COUNT_ERROR			= 8017;	//跨服医院恢复死兵数量错误
+	CROSS_HOSPITAL_STAGE_ERROR			= 8018;	//跨服医院恢复死兵阶段错误
+	CROSS_HAVE_NO_FIGHT_PERM = 8019; // 没有出战权限
+	CROSS_SET_FIGHT_PERM = 8020; // 没有设置出战的权限
+	CROSS_GET_BOX_AWARD_BUFF = 8021; // 领取宝箱奖励,作用号没触发
+	CROSS_RESOURCE_SPREE_NOT_WINNER     = 8022;//资源狂欢宝箱不能发起行军，不是胜利方
+	
+	CROSS_SEND_GIFT_ID_ERROR = 8023; // 跨服礼包颁发,礼包不存在
+	CROSS_SEND_GIFT_TYPE_ERROR = 8024; // 跨服礼包颁发,礼包类型错误
+	CROSS_SEND_GIFT_AUTH_ERROR = 8025; // 跨服礼包颁发,没有权限颁发
+	CROSS_SEND_GIFT_COUNT_LIMIT_ERROR = 8026; // 跨服礼包颁发,发放数量达到上限
+	CROSS_SEND_GIFT_PLYAER_REP_ERROR = 8027; // 跨服礼包颁发,玩家不能被重复颁发一种类型礼包
+	CROSS_SEND_GIFT_PLYAER_NO_ERROR = 8028; // 跨服礼包颁发,目标玩家不存在
+	CROSS_SEND_GIFT_PEROID_ERROR = 8029; // 跨服礼包颁发,不是颁发礼包阶段
+	CROSS_TALENT_CHANGEDD	= 8030; // 当前战略等级已改变，请刷新界面
+	CROSS_RESOURCE_SPREE_COUNT_LIMIT = 8031; //资源狂欢宝箱获取上限
+	CROSS_UP_TALENT_PARM = 8032; // 升级战略点权限不足
+	CROSS_PYLON_MARCH_LIMIT = 8033; // 攻打能量塔部队数量不足
+	
+	CROSS_MARCH_REPATRIATE_ERROR = 8034; // 跨服遣返权限不足
+	CROSS_MARCH_CHANGE_LEADER_ERROR = 8035; // 跨服更换队长权限不足
+	CROSS_MARCH_MASS_NOT_STAR_ERROR = 8036; // 跨服加速行军权限不足(未出发)
+	CROSS_MARCH_MASS_STAR_ERROR = 8037; // 跨服加速行军权限限不足(已出发)
+	
+	CROSS_SERVER_ERROR_8038 = 8038; // 当前联盟不在可出战列表，不可以被邀请出战
+	CROSS_SERVER_ERROR_8039 = 8039; // 当前联盟已经是出战联盟，不可以被邀请出战
+	CROSS_SERVER_ERROR_8040 = 8040; // 邀请出战cd，x时间cd结束
+	CROSS_SERVER_ERROR_8041 = 8041; // 不是盟主，不能处理出战邀请
+	CROSS_SERVER_ERROR_8042 = 8042; // 不是盟主，不能申请出战
+	CROSS_SERVER_ERROR_8043 = 8043; // 当前联盟不在可出战列表，不可以申请出战
+	CROSS_SERVER_ERROR_8044 = 8044; // 当前联盟已经是出战联盟，不可以申请出战
+	CROSS_SERVER_ERROR_8045 = 8045; // 申请出战cd，x时间cd结束
+	CROSS_SERVER_ERROR_8046 = 8046; // 不是同一个跨服组，不能设置电塔归属为这个服
+	CROSS_SERVER_ERROR_8047 = 8047; // 已经出战的联盟，不能设置电塔归属
+	CROSS_SERVER_ERROR_8048 = 8048; // 不是盟主，不能设置电塔归属
+	CROSS_SERVER_ERROR_8049 = 8049; // 当前电塔不是自己占领的，不能设置电塔归属
+	CROSS_SERVER_ERROR_8050 = 8050; // 设置电塔归属cd，x时间cd结束
+	CROSS_SERVER_ERROR_8051 = 8051; // 电塔归属重复设置
+}
+
+enum WarFlagError
+{
+	PLACE_WAR_FlAG_HAVE_NO_GUILD	 = 9001; //放置旗子失败，玩家没有联盟
+	PLACE_WAR_FLAG_POINT_HAS_REFRESH = 9002; //放置旗子失败，坐标已经刷新
+	PLACE_WAR_FLAG_POS_ERROR		 = 9003; //放置旗子失败，坐标异常
+	PLACE_WAR_FLAG_IN_OTHER_RANGE	 = 9004; //放置旗子失败，不能放置再其它旗子范围内
+	PLACE_WAR_FLAG_NOT_IN_RANGE		 = 9005; //放置旗子失败，要放置在和其它旗子重合的范围内
+	PLACE_WAR_FLAG_AUTH_NOT_ENOUGTH	 = 9006; //放置旗子失败，权限不足
+	
+	PLACE_MANOR_RANGE_HAS_FLAG		 = 9007; //放置领地失败，范围内有旗子
+	
+	TAKE_BACK_FLAG_HAVE_NO_GUILD	 = 9008; //收回旗子失败，玩家没有联盟
+	TAKE_BACK_FLAG_AUTH_NOT_ENOUGTH	 = 9009; //收回旗子失败，权限不足
+	TAKE_BACK_FLAG_NOT_OWN			 = 9010; //收回旗子失败，不是本联盟放置的旗子
+	TAKE_BACK_FLAG_NOT_CURRENT		 = 9011; //收回旗子失败，不是自己占领的旗子
+	TAKE_BACK_FLAG_BE_INVADED	     = 9012; //收回旗子失败，旗子被摧毁中
+	
+	FLAG_CHANGE_LEADER_AUTH	         = 9013; //任命旗子队长失败，权限不足
+	FLAG_REPATRIATE_AUTH	         = 9014; //遣返旗子行军失败失败，权限不足
+	
+	FLAG_ALREADY_TAKE_BACK	         = 9015; //旗子已经被收回
+	FLAG_ALREADY_PLACED	             = 9016; //旗子已经放置
+	
+	CENTER_FLAG_SINGUP_NOT_CENTER	= 9017; // 不是母旗，不能进行此操作(查看详情，报名，取消报名，移除报名)
+	CENTER_FLAG_SINGUP_GUILD_ERROR	= 9018; // 不是本联盟母旗，不能进行此操作(查看详情，报名，取消报名，移除报名)
+	CENTER_FLAG_SINGUP_ALREADY		= 9019; // 已经报名过，不能重复报名
+	CENTER_FLAG_SINGUP_COUNT_LIMIT	= 9020; // 报名格子已满
+	CENTER_FLAG_SINGUP_BE_OCCUPY	= 9021; // 被占领中不能取消报名
+	CENTER_FLAG_SINGUP_BE_REMOVE	= 9022; // 拆除中不能取消报名
+}
+
+enum ArmourError
+{
+	ARMOUR_NOT_FOUND				= 91001; // 铠甲不存在
+	ARMOUR_CONFIG_NOT_FOUND			= 91002; // 铠甲配置不存在
+	ARMOUR_NOT_UNLOCK				= 91003; // 铠甲锁定中
+	ARMOUR_LEVEL_CFG_NOT_FOUND 		= 91004; // 铠甲等级配置不存在
+	ARMOUR_QUALITY_CFG_NOT_FOUND	= 91005; // 铠甲品质配置不存在
+	ARMOUR_LEVEL_LIMIT				= 91006; // 铠甲升级等级限制
+	ARMOUR_TOOL_NOT_ENOUGTH			= 91007; // 铠甲操作道具不足
+	ARMOUR_ATTR_CFG_NOT_FOUND		= 91008; // 铠甲属性配置不存在
+	AROUR_INHERIT_ATTR_NOT_EXIT		= 91009; // 铠甲传承属性不存在
+	AROUR_INHERIT_BE_ATTR_NOT_EXIT	= 91010; // 铠甲被传承属性不存在
+	ARMOUR_SUIT_HAS_UNLOKED			= 91011; // 铠甲套装已解锁
+	ARMOUR_SUIT_HAS_NOT_UNLOKED		= 91012; // 铠甲套装未解锁
+	AROUR_INHERIT_MIN_TO_MAX		= 91013; // 铠甲不能把低属性值传承到高属性值
+	AROUR_INHERIT_ATTR_QUAL_UPER	= 91014; // 铠甲传承属性
+	AROUR_CITY_LEVEL_LIMIT			= 91015; // 铠甲穿戴大本等级限制
+	
+	ARMOUR_RESEARCH_QUEUE			= 91016; // 当前有装备科技队列正在研究
+	ARMOUR_RESEARCH_MAX_LEVEL		= 91017; // 装备科技研究等级达到上限
+	
+	ARMOUR_RESRERCH_REWARD_LEVEL_NOT_ENOUGTH = 91018; // 装备科技宝箱领取，等级不足
+	ARMOUR_RESRERCH_REWARD_ALREADY_RECEIVE   = 91019; // 装备科技宝箱领取，已经领取过
+	ARMOUR_RESEARCH_CONFIG_ERROR 			 = 91020; // 配置错误
+	ARMOUR_RESEARCH_NOT_UNLOCK = 91021; // 装备科技未解锁
+	ARMOUR_RESEARCH_PRE_LEVEL_ERROR = 91022; // 装备科技，前置等级未达成
+	
+}
+
+// 联盟总动员错误码
+enum AllianceCarnivalError
+{
+	AC_HAVE_NO_ALLIANCE 	= 92001; //没有加入联盟，不能操作
+	AC_MISSION_NOT_FOUND 	= 92002; //任务已经被接受/删除
+	AC_INITGUILD_NOT_SAME 	= 92003; //非初始联盟，不能操作
+	AC_RECEIVE_TIMES_ERROR 	= 92004; //接收任务次数已达上限
+	AC_DELETE_MISSION_AUTH 	= 92005; //删除任务，没有操作权限
+	AC_RECEIVE_LEVEL_LIMIT  = 92006; //接受任务等级限制
+	AC_BUY_TIMES_LIMIT		= 92007; //联盟总动员购买次数限制
+	AC_NEW_PLAYER_LIMIT		= 92008; //没有初始联盟
+	AC_POINT_LIMIT		= 92009; //积分不足
+	AC_LEVEL_LIMIT		= 92010; //等级不足
+}
+
+// 资源保卫战错误码
+enum ResourceDefenseError
+{
+	RD_BUILD_TYPE_ERROR = 93001; // 建造资源站，资源类型错误
+	RD_BUILD_INDEX_ERROR = 93002; // 建造资源站，资源站位置错误
+	RD_BUILD_PLACE_ALREADY_BUILD_ERROR = 93003; // 建造资源站，该位置上已经有资源站
+	RD_BUILD_COUNT_LIMIT = 93004; // 建造资源站，资源站数量达到上限
+	RD_AWARD_SUPER_NOT_UNLOCK = 93005; // 领奖，高级奖励未解锁
+	RD_AWARD_ALREADY_RECEIVED = 93006; // 领奖，该档位奖励已经被领取
+	RD_STEAL_TIMES_LIMIT = 93007; // 偷资源，偷取次数达到上限
+	RD_BUY_EXP_TIMES_LIMIT = 93008; // 买经验，购买经验次数达到上限
+	
+	RD_STEAL_TARGET_REFRESH = 93009; // 目标资源已经被别人偷了
+	RD_HELP_ALREADY_HELP = 93011; // 已经帮助过
+	RD_BE_HELP_TIME_LIMIT = 93012; // 被帮助次数达到上限
+	RD_BE_FOR_HELP_ALREADY = 93013; // 今天已经请求过帮助
+	RD_RESOURCE_BE_STEAL = 93014; // 资源已经被收取
+	
+	RD_RESOURCE_HELP_OWN = 93015; // 不能帮助自己
+	RD_RESOURCE_REFRESH = 93016; // 资源站信息已经刷新(点帮助的时候，不可以帮助了)
+	
+	RD_STEAL_ONE_CD = 93017; // 偷取同一玩家cd
+	
+	RD_SKILL_REFRESH_TIME_LIMIT = 93018; // 特工技能刷新次数达到上限
+	RD_NO_SKILL_ACTIVE		 	= 93019; // 特工没有可激活的技能
+	RD_SKILL_IS_ACTIVE			= 93020; // 特工技能已经激活
+	RD_SKILL_ROBOT_NO_EXIST		= 93021; // 特工激活高级机器人技能不存在无法激活
+	RD_SKILL_IS_NO_ACTIVE		= 93022; // 特工技能未激活
+	RD_SKILL_USE_TIME_LIMIT		= 93023; // 特工技能激活次数已达上限
+	RD_ROBOT_STEAL_TIME_LIMIT	= 93024; // 机器人偷取次数已达上限
+	RD_GREAT_ROBOT_NO_ACTIVE	= 93025; // 高级机器人未激活
+	RD_GREAT_ROBOT_NO_RESOURCE	= 93026; // 高级机器人资源站已经没有资源可偷取
+	RD_GREAT_ROBOT_CD_TIME		= 93027; // 高级机器人资源站,3秒内不能再次刷新
+}
+
+// 账号注销错误码
+enum AccountCancellationError
+{
+	ACCOUNT_CANCE_HAS_GUILD = 93101; // 有联盟不能注销
+	ACCOUNT_CANCE_CROSS = 93102; // 跨服状态不能注销
+	ACCOUNT_CANCE_PRESIDENT = 93103; // 国王不能注销
+	ACCOUNT_CANCE_OFFICER = 93104; // 有官职不能注销
+	ACCOUNT_CANCE_COLLEGE = 93105; // 加入军事学院不能注销
+	ACCOUNT_CANCE_GUARDER = 93106; // 有守护关系不能注销
+	ACCOUNT_CANCE_MARCH = 93107; // 有行军不能注销
+}
+
+
+enum PlantFactoryError{
+	PLANT_FACTORY_HAS_UNLOCK = 1701; // 生产线已解锁
+	FRONT_PLANT_NOT_EXIT 	 = 1702; // 前置生产线未解锁
+	PLANT_TECH_HAS_UNLOCK    = 1703; // 泰能强化已解锁
+	FRONT_PLANT_TECH_NOT_EXIT = 1704;// 前置泰能未解锁
+}
+
+
+//方尖碑错误码
+enum ObeliskError
+{
+	OBELISK_NOT_FOUND 			= 93200;  // 方尖碑任务不存在
+	OBELISK_MISSION_NO_FINISH 	= 93201;  // 方尖碑任务未完成
+	OBELISK_CFG_NO_EXIST 		= 93202;  // 方尖碑任务配置不存在
+	OBELISK_FACTORY_LV_LIMIT 	= 93203;  // 方尖碑领奖领主等级不够
+}
+
+
+
+
+// 情报中心错误码
+enum AgencyError
+{
+	AGENCY_COIN_NOT_ENOUGTH    = 93110; //情报中心,情报币不足
+	AGENCY_EVENT_COUNT_MAX     = 93111; //情报中心,事件数量达到上限
+	AGENCY_HAVE_NO_GUILD       = 93112; //情报中心,玩家没有联盟
+	AGENCY_EVENT_NOT_EXIT      = 93113; //情报中心,事件不存在
+	AGENCY_EVENT_ALREADY_ASK_HELP  = 93114; //情报中心,事件已经请求过帮助
+	AGENCY_EVENTT_CAN_NOT_ASK_HELP = 93115; //情报中心,特殊事件不能请求帮助
+	AGENCY_HELP_TIMES_LIMIT        = 93116; //情报中心,当天帮助次数达到上限
+	AGENCY_EVENT_NOT_FINISH        = 93117; //情报中心,事件未完成,不能领取奖励
+	AGENCY_HELP_CONUNT_LIMIT       = 93118; //情报中心,同时帮助数量达到上限
+	AGENCY_CLUE_REWARD_RECEIVED    = 93119; //情报中心,线索奖励已经被领取
+	AGENCY_CLUE_REWARD_CAN_NOT     = 93120; //情报中心,有未找到的线索,不能领奖
+	AGENCY_GACHA_CD                = 93121; //补全事件cd中
+	AGENCY_MARCH_LIMIT             = 93122; //情报中心每个事件只能发出一个行军
+}
+
+enum DYZZError{
+	DYZZ_HAS_PLYAER_MARCH			= 9612; // 有行军 不能进入副本
+	DYZZ_PREPARING					= 9613; // 演习准备中
+	DYZZ_HAS_PLYAER_BEATK			= 9614; // 有敌对行军
+	DYZZ_BAN_OP						= 9611; // 禁止操作 如升级建筑
+	DYZZ_PRETIME_CANNOT_MARCH		= 9615; // 准备期不能行军
+	DYZZ_BUILD_PROCTED				= 9616; // 建筑处于保护状态
+	DYZZ_PRETIME_CANNOT_MOVE		= 9617; // 准备期间不能传送
+	DYZZ_ORDER_IN_EFFECT            = 9618; //号令生效中
+	DYZZ_ORDER_IN_COOL              = 9619; //号令冷却中
+	DYZZ_ORDER_POWER_NOT_ENOUGH     = 9620; //号令能量不足
+	DYZZ_ORDER_EFF_EXCLUSION        = 9621;  //泰伯利亚号令互斥
+	DYZZ_COLLECT_CANNOT_MOVE		= 9622; // 采集期间不能传送到对方区域
+	DYZZ_ORDER_BUT_COUNT   			= 9623; //号令购买达到上限
+	
+	
+	DYZZ_WAR_HAS_IN_TEAM            = 9650;  //达雅之战匹配，已经在队伍中
+	DYZZ_WAR_NO_TEAM                = 9651; //达雅之战匹配，房间不存在
+	DYZZ_WAR_JOIN_TEAM_IN_MATCHING  = 9652;  //达雅之战匹配，当前房间匹配中不能加入加入队伍
+	DYZZ_WAR_JOIN_TEAM_IN_GAMING    = 9653;  //达雅之战匹配，当前房间游戏中不能加入加入队伍
+	DYZZ_WAR_NOT_LEADER             = 9654;  //达雅之战匹配,不是队长不能进行此操作
+	DYZZ_WAR_SHOP_BUY_COUNT_LIMIT   = 9655; //达雅之战商店，购买道具数量不足
+	DYZZ_WAR_NO_MATCH_INFO          = 9656; //达雅之战匹配,找不到此匹配信息
+	DYZZ_WAR_IN_WAR_FEVER           = 9657; // 达雅之战匹配，战争狂热状态不能进副本
+	DYZZ_WAR_HAS_ASSISTANCE_MARCH   = 9658; //达雅之战匹配，有援军不能进入副本 
+	DYZZ_WAR_HAS_PASSIVE_MARCH      = 9659; //达雅之战匹配,有被动援军不能进入副本
+	DYZZ_WAR_ON_FIRE                = 9660; //达雅之战匹配,着火不能进入副本
+	DYZZ_WAR_NOT_IN_INSTANCE        = 9661; //达雅之战匹配，不在达雅副本内
+	DYZZ_WAR_MID_QUIT               = 9662; //达雅之战匹配,中途退出，不能加入副本
+	DYZZ_WAR_JOIN_TEAM_FULL         = 9663;//达雅之战匹配,房间人满
+	DYZZ_WAR_LEVEL_LIMIT            = 9664;//达雅之战匹配,等级不足
+	DYZZ_WAR_INIT_NO_GUILD          = 9665;//大雅之战匹配，没有联盟不能邀请
+	DYZZ_WAR_INIT_IN_CD             = 9666;//大雅之战匹配,邀请冷却
+	DYZZ_WAR_IN_CROSS               = 9667;//达雅之战，跨服种不能进行此操作
+	DYZZ_WAR_NOT_IN_MATCH_TIME      = 9668;//达雅之战，活动已经结束
+	
+	DYZZ_SHARE_COUNT_LIMIT          = 9670; //达雅之战，数据分享次数到上限
+	DYZZ_SHARE_NO_GUILD             = 9671;  //达雅之战，数据分享联盟，没有联盟
+	
+}
+
+//移民功能错误码
+enum Immgration
+{
+	IMMGRATION_HAS_GUILD = 93300; // 有联盟不能移民
+	IMMGRATION_HAS_COLLEGE = 93301; // 有军事学院不能移民
+	IMMGRATION_HAS_MARCH = 93302; // 有行军不能移民
+	IMMGRATION_HAS_BUILD_QUEUE = 93303; // 有建造中的建筑队列，不能移民
+	IMMGRATION_HAS_SCIENCE_QUEUE = 93304; // 有研究中的科技，不能移民
+	IMMGRATION_HAS_SOLIDER_QUEUE = 93305; // 正在造兵，不能移民
+	IMMGRATION_HAS_CURE_QUEUE = 93306; // 有治疗中的兵，不能移民
+	IMMGRATION_HAS_EQUIP_RECHARGE_QUEUE = 93307; // 装备科技研究中，不能移民
+	IMMGRATION_CROSS = 93308; // 玩家处于跨服状态中，不能移民
+	IMMGRATION_TARGET_HAS_ACCOUNT = 93309; // 目标服有账号，不能移民
+	IMMGRATION_TARGET_NUM_LIMIT = 93310; // 目标服移民人数已经达到上限
+	IMMGRATION_TARGET_POWER_LIMIT = 93311; // 超出目标服战力限制，不能移民
+	IMMGRATION_HAS_GUARDER = 93312; // 有守护关系，不能移民
+	IMMGRATION_KICK_OUT = 93313; // 移民成功，踢下线
+	IMMGRATION_LOTTERY_TICKET_APPLY_NEED_DEAL = 93314; //刮刮乐活动-有未完成的申请需要处理
+}
+
+//泰能机密错误码
+enum PlantSecretErr
+{
+	PLANT_SECRET_GUILD_SHARE_LIMIT = 93400;      // 泰能机密工会频道分享次数达到上限
+	PLANT_SECRET_WORLD_SHARE_LIMIT = 93401;      // 泰能机密世界频道分享次数达到上限
+	PLANT_SECRET_SHARE_FREQUENTLY = 93402;       // 泰能机密聊天分享太频繁
+	PLANT_SECRET_OPENBOX_EXCEED_LIMIT = 93403;   // 泰能机密开箱子次数达到每日上限
+	PLANT_SECRET_SHARE_NO_GUILD = 93404;        //  泰能机密工会频道聊天分享，没有加入工会
+	PLANT_SECRET_OPENCARD_COND_SHARE_LIMIT = 93405;    // 若玩家每个区域至少翻开一个牌子，才可分享；点击求助弹出通用提示“您当前未进行任何翻牌，不可求助”
+	PLANT_SECRET_OPENBOX_EXCEED_SHARE_LIMIT = 93406;  // 若玩家当日开启宝箱数已达上限，求助不可以；点击求助弹出通用提示“当日开启宝箱数已达上限”	
+}
+
+//中部培养计划错误码
+enum GrowUpBoostErr
+{
+	GROW_UP_BOOST_ACHIEVE_NOT_FOUND = 93420;      // 泰能机密工会频道分享次数达到上限
+	GROW_UP_BOOST_ACHIEVE_PAGE_LIMITE = 93421;  // 任务开放限制
+}
+
+
+//超时空特权错误码
+enum AutoGatherErr
+{
+	AUTO_PUT_POS_ERR = 93500; //自动放锅的位置无法放置
+	AUTO_MARCH_TARGET_ERR = 93501; //自动拉锅的对象不是超时空采集对象
+	AUTO_MARCH_POS_ERR = 93502; //自动拉锅的坐标非法不符合客户端%2不能=0的规范
+        AUTO_MARCH_NO_MARCH_SELECTED = 93503; //自动拉锅没有选择行军队列
+        AUTO_PUT_ON_BLACK_NOT_ALLOW = 93504; //黑土地不允许放锅
+	AUTO_MARCH_ON_BLACK_NOT_ALLOW = 93505; //黑土地不允许拉锅
+	AUTO_PUT_ALREADY_EXIST = 93506; //选择自动放锅的位置已经有锅，自动放置开启
+	AUTO_KILL_MONSTER = 93507;      //自动打怪中，不能开启自动拉锅
+	AUTO_GATHER_RESOURCE = 93508;   //自动拉锅中，不能开启自动打野
+	AUTO_TRANS_CITY_GATHER_STOP = 93509;   //自动拉锅中，迁城，停止自动
+	AUTO_PUT_ARMY_LIMIT_ERR = 93510;  //自动拉锅队列人数超过上限
+}
+
+enum CYBORGError{
+	CYBORG_ORDER_IN_EFFECT = 9701; //号令生效中
+	CYBORG_ORDER_IN_COOL = 9702; //号令冷却中
+	CYBORG_ORDER_NOT_ACTIVE = 9703; // 号令所绑定的建筑不归属已方
+	CYBORG_ORDER_USE_LIMIT_NO_BUILDING = 9704;  //号令不能使用,没有占领中的建筑
+	CYBORG_ORDER_USE_GUILD_AUTHORITY_LIMIT = 9705; //号令不能使用,联盟权限不足
+	
+}
+
+// 月战
+enum YQZZError{
+	YQZZ_NOT_DECLEAR_WAR = 98001; // 没有宣战的建筑不能攻击
+	YQZZ_DECLEAR_WAR_WAIT = 98002; // 宣战时间没到不能攻击
+	YQZZ_BUILD_NOT_LINK = 98003; // 建筑没有链接
+	YQZZ_NO_TYPE9_BUILD = 98004; // 没有月球关隘 操作失败
+	YQZZ_DECLARE_ITEM_LESS = 98005; //宣战令不足
+	YQZZ_BAN_OP			= 98006; // 月求战场期间禁止操作
+	YQZZ_ROOM_PLYAER_MARCH = 98007; // 有行军不能退出战场
+	YQZZ_ROOM_HAS_ASSISTANCE_MARCH   = 98008;  //月球之战，，有援军不能退出战场
+	YQZZ_ROOM_HAS_PASSIVE_MARCH      = 98009;  //月球之战，,有被动援军不能退出战场
+	
+	YQZZ_WAR_NOT_IN_INSTANCE        = 98053;  //月球之战，不在副本内不能进行此操作
+	YQZZ_WAR_IN_CROSS               = 98054;  //月球之战，跨服中不能进行此操作
+	YQZZ_WAR_NOT_IN_BATTLE_TIME     = 98055;  //月球之战，活动已经结束
+	YQZZ_HAS_PLYAER_MARCH			= 98056;  //月球之战，有行军 不能进入副本
+	YQZZ_WAR_IN_WAR_FEVER           = 98057;  //月球之战，，战争狂热状态不能进副本
+	YQZZ_WAR_HAS_ASSISTANCE_MARCH   = 98058;  //月球之战，，有援军不能进入副本 
+	YQZZ_WAR_HAS_PASSIVE_MARCH      = 98059;  //月球之战，,有被动援军不能进入副本
+	YQZZ_WAR_ON_FIRE                = 98060;  //月球之战，,着火不能进入副本
+	YQZZ_WAR_ENTER_CNT_OVER_LIMIT   = 98061;  //月球之战，进入本服超过人数上限
+	YQZZ_WAR_ENTER_GUILD_LIMIT      = 98062;  //月球之战，所在联盟没有权限
+	YQZZ_WAR_ENTER_CD_LIMIT         = 98063;  //月球之战，进入副本冷却中
+	YQZZ_ACTION_ILLEGAL_DURNING_OPEN= 98064;  //月球之战,活动期间不支持此操作
+	YQZZ_UNOPERATE_TIME				= 98065;   //月球之战,该时间不可进行, 跨服退出跨服
+
+	YQZZ_ORDER_NOT_ACTIVE = 98066; // 号令没解锁
+	YQZZ_ORDER_IN_EFFECT = 98067; //号令生效中
+	YQZZ_ORDER_IN_COOL = 98068; //号令冷却中
+	YQZZ_ORDER_USE_LIMIT_NO_BUILDING = 98069;  //号令不能使用,没有占领中的建筑
+	YQZZ_ORDER_USE_GUILD_AUTHORITY_LIMIT = 98070; //号令不能使用,联盟权限不足
+	YQZZ_NATIONTECH_BUGOU = 98071; //国家科技值不够放技能
+	YQZZ_GIFT_PLAYER_LIMIT = 98072; //重复发给一个人
+	YQZZ_GIFT_SERVER_LIMIT = 98073; //到达总上限
+	YQZZ_PYLON_MARCH_LIMIT = 98074; //能量塔行军上限
+	YQZZ_SAME_NATION = 98075; //同服
+	YQZZ_NOT_PRESIDENT = 98076; //不是国王 不能放弃
+	YQZZ_NOT_CD = 98077; //放弃SC中 不能放弃
+	YQZZ_NOT_NATIONCONTROL = 98078; //不是国家控制 不能放弃
+	YQZZ_MONSTER_LIMIT = 98089; // 怪上限
+	YQZZ_PYLON_LIMIT = 98090; // 能上限
+	YQZZ_FOGGY_MASS_LIMIT = 98091; //幽灵基地发起集结次数已用尽
+	YQZZ_FOGGY_JOIN_LIMIT = 98092; //幽灵基地参与集结次数已用尽
+}
+
+enum XHJZError{
+	XHJZ_BAN_OP = 98101; //战场期间禁止操作
+	XHJZ_NOT_FUEL = 98102; // 燃油不足
+
+	XHJZ_HAS_MARCH = 98151; // 有行军不能参加星海
+	XHJZ_IN_WAR_FEVER = 98152;// 战争狂热
+	XHJZ_HAS_ASSISTANCE_MARCH = 98153;// 城内有援助行军，不能进入星海
+	XHJZ_HAS_PASSIVE_MARCH = 98154;// 有被动行军
+	XHJZ_ON_FIRE = 98155;// 城墙在起火
+	XHJZ_WAR_IN_CROSS = 98156;// 已经在跨服中
+	XHJZ_NOT_IN_THIS_WAR = 98157;// 不是本次战斗出战人员
+	XHJZ_HAS_NO_MATCH_INFO = 98158;// 找不到相应的匹配信息
+	XHJZ_WAR_NOT_IN_BATTLE_TIME = 98159;//月球之战，不在比赛时间内
+	XHJZ_HAS_JOINED_WAR = 98160;// 已经进入过本次战场
+	XHJZ_CANDIDATE_NOT_IN_TIME = 98161;// 没到预备队员进入时间
+	XHJZ_NOT_IN_INISTANCE = 98162;// 不在副本中.
+	XHJZ_TEAM_ENTER_LIMIT = 98163;// 战队进入人数有限制.
+	XHJZ_BATTLE_NEAR_OVER = 98164;// 战斗即将结束.
+	XHJZ_HAS_CHOOSED_TIME = 98165;// 已报名
+	XHJZ_GUILD_OPERATION_FORBID = 98166;// 已参与本次星海,该联盟操作禁用
+	XHJZ_RANK_LIMIT = 98167;// 名次不够，不能报名
+	XHJZ_MEMBER_NUM_LIMIT = 98168;// 人数不足，不能报名
+	XHJZ_IN_SEASON = 98169;// 联赛中不能进行此操作
+}
+
+enum FGYLError{
+	FGYL_BAN_OP 					= 98201; //战场期间禁止操作
+	FGYL_NOT_FUEL 					= 98202; // 燃FGYL
+	
+	FGYL_HAS_MARCH 					= 98251; // 有行军不能参加
+	FGYL_IN_WAR_FEVER 				= 98252;// 战争狂热
+	FGYL_HAS_ASSISTANCE_MARCH 		= 98253;// 城内有援助行军，不能进入星海
+	FGYL_HAS_PASSIVE_MARCH 			= 98254;// 有被动行军
+	FGYL_ON_FIRE 					= 98255;// 城墙在起火
+	FGYL_WAR_IN_CROSS 				= 98256;// 已经在跨服中
+	FGYL_HAS_NO_ROOM     			= 98257;// 找不到相应的匹配信息
+	FGYL_WAR_NOT_IN_OPEM_TIME    	= 98258;//月球之战，不在战斗时间内
+	FGYL_NOT_SIGN        			= 98259;// 没有报名
+	FGYL_SIGN_COUNT_LIMIT 		    = 98260;// 报名次数不足不够，不能报名
+	FGYL_SIGN_TIME_LIMIT 		    = 98261;// 报名时间错误
+	FGYL_WIN_PASS                   = 98262; //已经成功通关，不能进行此操作
+	FGYL_SIGN_LEVEL_LIMIT           = 98263; //不能报名此难度
+	FGYL_SIGN_AUTH_LIMIT            = 98264; //权限不足，不能报名
+	FGYL_HAS_JOINED_WAR 			= 98265;// 已经进入过本次战场
+	FGYL_BATTLE_NEAR_OVER 			= 98266;// 战斗即将结束.不能进行此操作
+	FGYL_MONSTER_MAX 				= 98269;// 打野上限
+	FGYL_SKILLORDER_LESS 			= 98270;// 技能 点不够使用技能
+	FGYL_IN_FIGHTING_LIMIT          = 98271;// 战斗进行中，不能进行此操作
+}
+
+// 月战
+enum XQHXError{
+	XQHX_BAN_OP								= 98406; // 先驱回响战场期间禁止操作
+	XQHX_ROOM_PLYAER_MARCH 					= 98407; // 有行军不能退出战场
+	XQHX_ROOM_HAS_ASSISTANCE_MARCH  		= 98408;  //先驱回响，，有援军不能退出战场
+	XQHX_ROOM_HAS_PASSIVE_MARCH     		= 98409;  //先驱回响，,有被动援军不能退出战场
+	XQHX_WAR_NOT_IN_INSTANCE        		= 98453;  //先驱回响，不在副本内不能进行此操作
+	XQHX_WAR_IN_CROSS               		= 98454;  //先驱回响，跨服中不能进行此操作
+	XQHX_WAR_NOT_IN_BATTLE_TIME     		= 98455;  //先驱回响，活动已经结束
+	XQHX_HAS_PLYAER_MARCH					= 98456;  //先驱回响，有行军 不能进入副本
+	XQHX_WAR_IN_WAR_FEVER           		= 98457;  //先驱回响，，战争狂热状态不能进副本
+	XQHX_WAR_HAS_ASSISTANCE_MARCH   		= 98458;  //先驱回响，，有援军不能进入副本 
+	XQHX_WAR_HAS_PASSIVE_MARCH      		= 98459;  //先驱回响，,有被动援军不能进入副本
+	XQHX_WAR_ON_FIRE                		= 98460;  //先驱回响，,着火不能进入副本
+	XQHX_WAR_ENTER_CNT_OVER_LIMIT   		= 98461;  //先驱回响，进入本服超过人数上限
+	XQHX_WAR_ENTER_GUILD_LIMIT      		= 98462;  //先驱回响，所在联盟没有权限
+	XQHX_WAR_ENTER_CD_LIMIT         		= 98463;  //先驱回响，进入副本冷却中
+	XQHX_ACTION_ILLEGAL_DURNING_OPEN		= 98464;  //先驱回响,活动期间不支持此操作
+	XQHX_UNOPERATE_TIME						= 98465;   //先驱回响,该时间不可进行, 跨服退出跨服
+	XQHX_PYLON_MARCH_LIMIT 					= 98474; //能量塔行军上限
+	XQHX_SAME_NATION 						= 98475; //同服
+	XQHX_MONSTER_LIMIT 						= 98489; // 怪上限
+	XQHX_PYLON_LIMIT 						= 98490; // 能量塔上限
+	XQHX_BUILD_PROCTED						= 98491; // 建筑处于保护状态
+	XQHX_MARCH_BAN							= 98492; // 不能打玩家
+	XQHX_PRETIME_CANNOT_MARCH				= 98493; // 准备期不能行军
+	XQHX_PRETIME_CANNOT_MOVE				= 98494; // 准备期间不能传送
+	XQHX_CROSS_PYLON_MARCH_LIMIT 			= 98495; // 攻打能量塔部队数量不足
+
+
+
+	XQHX_HAS_MARCH = 98501; // 有行军不能参加星海
+	XQHX_IN_WAR_FEVER = 98502;// 战争狂热
+	XQHX_HAS_ASSISTANCE_MARCH = 98503;// 城内有援助行军，不能进入星海
+	XQHX_HAS_PASSIVE_MARCH = 98504;// 有被动行军
+	XQHX_ON_FIRE = 98505;// 城墙在起火
+	XQHX_NOT_IN_THIS_WAR = 98506;// 不是本次战斗出战人员
+	XQHX_HAS_NO_MATCH_INFO = 98507;// 找不到相应的匹配信息
+	XQHX_HAS_JOINED_WAR = 98508;// 已经进入过本次战场
+	XQHX_CANDIDATE_NOT_IN_TIME = 98509;// 没到预备队员进入时间
+	XQHX_NOT_IN_INISTANCE = 98510;// 不在副本中.
+	XQHX_TEAM_ENTER_LIMIT = 98511;// 战队进入人数有限制.
+	XQHX_BATTLE_NEAR_OVER = 98512;// 战斗即将结束.
+	XQHX_HAS_CHOOSED_TIME = 98513;// 已报名
+	XQHX_GUILD_OPERATION_FORBID = 98514;// 已参与本次星海,该联盟操作禁用
+	XQHX_RANK_LIMIT = 98515;// 名次不够，不能报名
+	XQHX_MEMBER_NUM_LIMIT = 98516;// 人数不足，不能报名
+	XQHX_IN_SEASON = 98517;// 联赛中不能进行此操作
+	XQHX_MAMAGE_TEAM_MEMBER_LIMIT = 98518; //小队出战人员达到上线
+	XQHX_MAMAGE_STATE_LIMIT = 98519; //当前阶段不能进行此操作
+}
+
+
+enum MTTError{
+	MT_TRUCK_MARCHEND 	= 5282601; // 列车已到达终点, 不能掠夺
+	MT_TRUCK_ROBOVER	 = 5282602; // 列车已到掠夺上限, 不能掠夺
+	MT_TRUCK_ROB_LIMIT	 = 5282603; // 玩家已到每日掠夺上限, 不能掠夺
+	MT_TRUCK_MARCH 		= 5282604; // 列车已发出. 不能操作
+	MT_TRUCK_PRE_MARCH 		= 5282605; // 没有预设行军 不能操作
+	MT_TRUCK_NUMBER 		= 5282606; //  联盟列车车厢人数满
+	MT_ROB_NOM_LIMIT		= 5283607; // 集结人数超 目标车集结
+	MT_HEAD_ONE				= 5283608; // 不能多次更换车头
+	MT_NO_QUIT_GUILD		= 5283609; // 参与押镖玩法过程中, 禁止该操作
+	MT_GUILD_AWARD_MAX		= 5283610; // 联盟车参与次数用尽
+	MT_GUILD_CREATE_MAX		= 5283611; // 联盟发车次数用尽
+}
+
+enum HOMELANDError{
+	HOME_LAND_UNLOCK 							= 98600; // 家园未解锁
+	HOME_LAND_MAIN_UNLOCK 						= 98601; // 主建筑不存在
+	HOME_LAND_UPGRADE_LEVEL 					= 98602; // 等级不能高于主建筑
+	HOME_LAND_NOT_FIND 							= 98603; // 建筑uuid不存在
+	HOME_LAND_INVALID_POS 						= 98604; // 摆放位置错误	
+	HOME_LAND_RECYCLE_INVALID					= 98605; // 无法拆除
+	HOME_LAND_REPEAT_LIKE						= 98606; // 每日点赞超过上限
+	HOME_LAND_MAP_BUILD_MAX						= 98607; // 超过最大值
+	HOME_LAND_MAIN_BUILD_NOT_CYC				= 98608; // 主建筑不能回收
+	HOME_LAND_THEME_UNLOCK						= 98609; // 主题未解锁
+	HOME_LAND_NOT_ENOUGH_PROSPERITY				= 98610; // 繁荣度不足
+	HOME_LAND_DISASSEMBLY_NOT_ENOUGH			= 98611; // 背包建筑数量不足
+	HOME_LAND_PROSPERITY_NOT_ENOUGH				= 98612; // 繁荣度不够
+	HOME_LAND_PROSPERITY_ALREADY_HAVE			= 98613; // 繁荣度已激活
+	HOME_LAND_DAILY_LIMIT						= 98614; // 购买超过每日上限
+	HOME_LAND_LIKE_CD							= 98615; // 点赞CD中
+	HOME_LAND_UPGRADE_MAX_LEVEL					= 98616; // 已达到最大等级
+	HOME_LAND_VISIT_UNLOCK						= 98617; // 访问家园未解锁
+}
+enum HomePuzzleError{
+	HOME_PUZZLE_SCRATCH_LIMIT 					= 99600; // 心愿庄园刮卡超出每日上限
+	HOME_PUZZLE_SHOP_BUY_LIMIT 					= 99601; // 心愿庄园商店购买超出每日上限
+	HOME_PUZZLE_SHOP_EXCHANGE_LIMIT				= 99602; // 心愿庄园商店兑换超出每日上限
+}
+enum HomeRoundError{
+	HOME_ROUND_DRAW_ZERO_LIMIT					= 99700; // 0层时不可使用普通抽取
+	HOME_ROUND_TAKE_ZERO_LIMIT 					= 99701; // 0层时不可领取奖励
+	HOME_ROUND_SHOP_EXCHANGE_LIMIT				= 99702; // 命运轮抽商店兑换超出上限
+	HOME_ROUND_DAILY_DRAW_LIMIT					= 99703; // 命运轮抽超出每日上限
+	HOME_ROUND_BUY_LIMIT						= 99704; // 命运轮抽购买道具超出限制
+}

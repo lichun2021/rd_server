@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" buildId="201017" buildType="2010" isDIY="0" />
+      <data id="2" buildId="201116" buildType="2011" isDIY="0" />
+      <data id="3" buildId="201216" buildType="2012" isDIY="0" />
+      <data id="4" buildId="201316" buildType="2013" isDIY="0" />
+      <data id="5" buildId="201416" buildType="2014" isDIY="0" />
+      <data id="6" buildId="202416" buildType="2024" isDIY="0" />
+      <data id="7" buildId="221016" buildType="2210" isDIY="0" />
+      <data id="8" buildId="210116" buildType="2101" isDIY="1" />
+      <data id="9" buildId="210216" buildType="2102" isDIY="1" />
+      <data id="10" buildId="221616" buildType="2216" isDIY="1" />
+      <data id="11" buildId="202616" buildType="2026" isDIY="1" />
+      <data id="12" buildId="202216" buildType="2022" isDIY="0" />
+</root>

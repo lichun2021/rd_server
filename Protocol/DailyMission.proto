@@ -1,0 +1,36 @@
+option java_package = "com.hawk.game.protocol";
+
+//单条任务状态结构体
+message MissionData
+{
+	required int32 missionCfgId = 1;//任务配置id
+	required int32 count = 2;	    //进度
+	required int32 times = 3;	    //完成次数
+	required int32 state = 4;       //完成状态(0 未完成 1 已完成)
+}
+
+message RewardState
+{
+	required int32 id = 1;		//id
+	required int32 state = 2;   //奖励状态(0 未完成 1 未领取 2 已领取)
+}
+
+//获取任务界面信息
+message DailyMissionPageReq
+{
+}
+
+//日常任务界面
+message DailyMissionPageResp
+{
+	repeated MissionData data = 1;		  //任务
+	repeated RewardState rewardState = 2; //奖励状态
+	optional int64 curTime			 = 3; //服务器当前时间
+	required int32 cityLvl			 = 4; //玩家大本等级
+}
+
+//领奖
+message DailyMissionRewReq
+{
+	required int32 rewardId = 1;	//奖励Id(0 开始)
+}

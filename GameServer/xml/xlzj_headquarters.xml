@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" redis="7" openStage="1,2" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="2" redis="7" openStage="1,2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="75_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="3" redis="7" openStage="1,2" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_30" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="4" redis="7" openStage="1,2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_160" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="5" redis="7" openStage="1,2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_160" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="6" redis="7" openStage="1,2" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="15_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="7" redis="7" openStage="1,2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="75_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="8" redis="7" openStage="1,2" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="140_280" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="9" redis="7" openStage="2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="75_80" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="10" redis="7" openStage="2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="40_160" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="11" redis="7" openStage="2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="115_160" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="12" redis="7" openStage="2,3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="75_230" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+      <data id="13" redis="7" openStage="3" firstControlHonor="10" firstControlGuildHonor="10" refreshPoint="75_150" honor="1" guildHonor="1" collectArmyMin="50000" controlCountDown="60" />
+</root>

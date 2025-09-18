@@ -1,0 +1,27 @@
+return {
+	prop =
+	{
+		activityId = 79,
+		name = [[礼包返利]],
+		title = [[活动详情]],
+		tips = [[<font color="#a8acb3" face = "Microsoft YaHei" fontsize ="20">1. 指挥官达到<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">指定条件</font>即可领取对应奖励；<br/>2. 具体奖励详情和条件请您查看活动界面；<br/>3. 奖励需要手动领取，活动结束后奖励未领取视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">放弃奖励</font>。</font>]],
+		priority = 20230,
+		icon = [[Activity_Icon_79_Nor.png]],
+		selecticon = [[Activity_Icon_79_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		dailyRefresh = 0,
+	},
+	gift_rebate_achieve = [[achieveId	conditionType	conditionValue	giftrebateValue	title	gotoType	gotoValue	rewards
+1	1	2	2	2	1	1	2
+790001	600000	1	1	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">购买超值礼包<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	1314	2	30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2,30000_810003_5
+790002	600000	3	3	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">购买超值礼包<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>	1314	2	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810003_15
+790003	600001	680	680	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_810003_25
+790004	600001	1960	1960	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_101050_2
+790005	600001	5000	5000	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_101050_5
+790006	600001	10000	10000	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_810001_10,30000_101050_15,30000_104050_15,30000_103050_15,30000_105050_15
+790007	600001	15000	15000	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_1510002_10,30000_1510003_10,30000_1510004_10,30000_1510005_10,30000_800110_10
+790008	600001	20000	20000	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_13310002_10,30000_13310003_10,30000_13310004_10,30000_13310005_10,30000_800143_20
+790009	600001	30000	30000	<font color="#eae9e9" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超值礼包消耗<font color="#ffe782" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>金条</font>	1314	2	30000_830041_3,30000_830047_3,30000_830052_3,30000_820002_30,30000_840156_30
+]],
+
+}

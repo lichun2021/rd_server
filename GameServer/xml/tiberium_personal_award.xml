@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" isWin="1" range="1200" awardPack="30000_1840612_1,10000_1031_100000" />
+      <data id="2" isWin="1" range="900_1199" awardPack="30000_1840613_1,10000_1031_60000" />
+      <data id="3" isWin="1" range="600_899" awardPack="30000_1840614_1,10000_1031_40000" />
+      <data id="4" isWin="1" range="300_599" awardPack="30000_1840615_1,10000_1031_30000" />
+      <data id="5" isWin="1" range="0_299" awardPack="30000_1840616_1,10000_1031_20000" />
+      <data id="6" isWin="0" range="1200" awardPack="30000_1840617_1,10000_1031_75000" />
+      <data id="7" isWin="0" range="900_1199" awardPack="30000_1840618_1,10000_1031_45000" />
+      <data id="8" isWin="0" range="600_899" awardPack="30000_1840619_1,10000_1031_30000" />
+      <data id="9" isWin="0" range="300_599" awardPack="30000_1840620_1,10000_1031_22500" />
+      <data id="10" isWin="0" range="0_299" awardPack="30000_1840621_1,10000_1031_15000" />
+</root>
