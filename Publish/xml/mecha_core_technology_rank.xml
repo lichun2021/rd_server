@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" coreRankLevel="0" techLevelLimit="0" />
-      <data id="2" coreRankLevel="1" techLevelLimit="5" coreRankAttr="100_100,136_100" coreRankEffectId="1980_1000,12101_1000" power="100" needItem="30000_21070056_1000" />
-      <data id="3" coreRankLevel="2" techLevelLimit="10" coreRankAttr="100_1000,136_1000" coreRankEffectId="1980_2000,12101_2000" power="100" needItem="30000_21070056_1000" />
-      <data id="4" coreRankLevel="3" techLevelLimit="15" coreRankAttr="100_1250,136_1250" coreRankEffectId="1980_3000,12101_3000" power="100" needItem="30000_21070056_1000" />
-      <data id="5" coreRankLevel="4" techLevelLimit="20" coreRankAttr="100_1500,136_1500" coreRankEffectId="1980_4000,12101_4000" power="100" needItem="30000_21070056_1000" />
-      <data id="6" coreRankLevel="5" techLevelLimit="25" coreRankAttr="100_1750,136_1750" coreRankEffectId="1980_5000,12101_5000" power="100" needItem="30000_21070056_1000" />
-</root>

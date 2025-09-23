@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" exchangeNum="10" needItem="30000_1150030_1" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+      <data id="2" exchangeNum="10" needItem="30000_1150030_2" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+      <data id="3" exchangeNum="10" needItem="30000_1150030_3" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+      <data id="4" exchangeNum="10" needItem="30000_1150030_4" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+      <data id="5" exchangeNum="10" needItem="30000_1150030_5" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+      <data id="6" exchangeNum="10" needItem="30000_1150030_6" rewards="30000_850005_1,30000_850035_1,30000_810000_10" />
+</root>

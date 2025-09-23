@@ -1,0 +1,136 @@
+return {
+	prop =
+	{
+		activityId = 361,
+		name = [[趣享福柜]],
+		title = [[趣享福柜]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，多个服务器会分为一组，同组服务器的玩家会一同抽取奖励，你可点击热度详情按钮了解本次活动同组的服务器。<br/>2.指挥官可通过消耗趣享福柜券在福柜中抽奖，趣享福柜券在活动商店中获得。<br/>3. 趣享福柜中有多种类型奖励的专柜，每种专柜初始拥有的奖箱数量不同，每个奖箱有一至七等奖和一个最终奖。<br/>4.活动开启后在营业期间每120分钟系统会补充专柜中奖箱数量，每个专柜每天补充的奖箱数量根据专柜不同上限不同。<br/>5.可以点击同步剩余奖励，可同步当前奖箱中的奖励状态。<br/>6.在抽取奖箱之前，可选择不需要的奖励转换为福柜积分。<br/>7.获得奖箱中的最后一个奖励的指挥官，同时获得该奖箱的最终奖。<br/>8.福柜积分可在兑换商店中兑换物品，福柜积分在活动结束后会清空，请及时使用。<br/>9.福柜代金券在活动结束时会自动兑换成金币，每个奖券会自动兑换成30金币，请及时使用福柜代金券。<br/>10.趣享福柜券在活动结束时会保留。<br/>10.初始概率公示:<br/> 一等奖:0.7%<br/> 二等奖:2.4%<br/> 三等奖:5.7%<br/> 四等奖:19.2%<br/> 五等奖:19.2%<br/> 六等奖:26.4%<br/> 七等奖:26.4%<br/>11.抽取奖励后其他没有抽到的奖励获得概率会提升。<br/>12.奖池信息公示:<br/> 炽耀勋章专柜:初始3箱，每日最多补充18箱，每人每期活动获得最多最终奖+一等奖18个<br/> 核心推演原型专柜:初始3箱，每日最多补充18箱，每人每期活动获得最多最终奖+一等奖36个<br/> 泰能辉金专柜:初始4箱，每日最多补充24箱<br/> 万能装扮碎片专柜:初始3箱，每日最多补充18箱<br/> 荣耀通用碎片专柜:初始9箱，每日最多补充54箱<br/> 能量吸收器专柜:初始6箱，每日最多补充36箱<br/> 星耀勋章专柜:初始12箱，每日最多补充72箱<br/> 星能专柜:初始8箱，每日最多补充48箱<br/></font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_361_Nor.png]],
+		selecticon = [[Activity_Icon_361_Sel.png]],
+		maxShowValue = 300,
+		drawTimes = [[10:00-22:00]],
+		baseLevelLimit = 35,
+		vipLevelLimit = 8,
+		exChangeTokenValue = [[30000_21070053_1]],
+		saveDataLimit = 200,
+		drawItem = [[30000_21070060_1]],
+		drawReserveItem = [[30000_21070059_1]],
+		drawItemChange = [[10000_1001_30]],
+	},
+	the_best_prize_pool = [[id	startPoolValue	rewards	poolName	poolIcon	poolIconBG	itemNeedValue	drawConsume	drawReserveConsume	lastRewards	rewardsLevelName	lastRewardsName	maxGetLimit
+1	1	2	2	2	2	2	2	2	2	2	2	1
+1	3	1_70,2_80,3_95,4_160,5_160,6_165,7_165	炽耀勋章专柜	Item_Medal_03.png	Item_Live_Voucher_01.png	6	30000_21070060_1	30000_21070059_1	30000_1300037_350	一等,二等,三等,四等,五等,六等,七等	最终奖	18
+2	3	8_70,9_80,10_95,11_160,12_160,13_165,14_165	核心推演原型专柜	Item_MechaCore_01.png	Item_Live_Voucher_01.png	3	30000_21070060_1	30000_21070059_1	30000_21070056_618	一等,二等,三等,四等,五等,六等,七等	最终奖	36
+3	4	15_70,16_80,17_95,18_160,19_160,20_165,21_165	泰能辉金专柜	Item_TaiEnergy_03.png	Item_Live_Voucher_01.png	5	30000_21070060_1	30000_21070059_1	30000_21065001_618	一等,二等,三等,四等,五等,六等,七等	最终奖	
+4	3	22_70,23_80,24_95,25_160,26_160,27_165,28_165	万能装扮碎片专柜	Item_Act319_03.png	Item_Live_Voucher_02.png	5	30000_21070060_1	30000_21070059_1	30000_1400011_480	一等,二等,三等,四等,五等,六等,七等	最终奖	
+5	9	29_70,30_80,31_95,32_160,33_160,34_165,35_165	荣耀通用碎片专柜	Item_Fragment_Hero_Red.png	Item_Live_Voucher_03.png	3	30000_21070060_1	30000_21070059_1	30000_1000005_48	一等,二等,三等,四等,五等,六等,七等	最终奖	
+6	6	36_70,37_80,38_95,39_160,40_160,41_165,42_165	能量吸收器专柜	Item_MAN_SW_02.png	Item_Act84_21.png	2	30000_21070060_1	30000_21070059_1	30000_9990052_398	一等,二等,三等,四等,五等,六等,七等	最终奖	
+7	12	43_70,44_80,45_95,46_160,47_160,48_165,49_165	星耀勋章专柜	Item_Medal_02.png	Item_Act84_21.png	1	30000_21070060_1	30000_21070059_1	30000_1300027_2688	一等,二等,三等,四等,五等,六等,七等	最终奖	
+8	8	50_70,51_80,52_95,53_160,54_160,55_165,56_165	星能专柜	Item_SolarSys_01.png	Item_Act84_21.png	1	30000_21070060_1	30000_21070059_1	30000_802005_1288	一等,二等,三等,四等,五等,六等,七等	最终奖	
+]],
+	the_best_prize_achieve = [[achieveId	conditionValue	rewards	achieveType	achieveTxt
+1	2	2	1	2
+361000001	20	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">20</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000002	50	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">50</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000003	100	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">100</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000004	200	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">200</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000005	300	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">300</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000006	400	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">400</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000007	50	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">50</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000008	200	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">200</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000009	500	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">500</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000010	1000	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1000</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000011	2000	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">2000</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000012	3000	30000_21070060_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	2	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计加速<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">3000</font>分钟<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000013	1	30000_21070060_1,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000014	5	30000_21070060_1,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">5</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000015	10	30000_21070060_2,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">10</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000016	20	30000_21070060_2,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">20</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000017	40	30000_21070060_3,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">40</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000018	60	30000_21070060_3,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">60</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000019	100	30000_21070060_4,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">100</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000020	150	30000_21070060_4,30000_1782124_8,30000_810001_8,30000_820002_8,30000_1780040_12	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">150</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000021	200	30000_21070060_10,30000_1000005_2,30000_810001_10,30000_820002_10,30000_1780040_15	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">200</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000022	400	30000_21070060_10,30000_1000005_2,30000_810001_10,30000_820002_10,30000_1780040_15	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">400</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000023	600	30000_21070060_10,30000_1000005_2,30000_810001_10,30000_820002_10,30000_1780040_15	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">600</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000024	800	30000_21070060_10,30000_1000005_2,30000_810001_10,30000_820002_10,30000_1780040_15	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">800</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+361000025	1000	30000_21070060_10,30000_1000005_2,30000_810001_10,30000_820002_10,30000_1780040_15	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计消耗奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1000</font>张<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(活动期间不重置)</font></font>
+]],
+	the_best_prize_pointsShop = [[id	times	needItem	gainItem
+1	1	2	2
+1	9999	30000_21070053_5	30000_21070060_1
+2	1000	30000_21070053_1	30000_810001_5
+3	9999	30000_21070053_1	30000_1780040_1
+]],
+	the_best_prize_shop = [[id	shopItemType	times	refreshType	iosPayId	androidPayID	payQuota	payItem	payItemShow	getItem	buyLimitTxt
+1	1	1	1	1	1	1	2	2	2	2
+1	0	1	1						30000_21070060_2,30000_840172_2	每日限购:
+2	2	1	1				10000_1000_100	10000_1000_100	30000_21070060_6,30000_840172_6	每日限购:
+3	1	1	1	3610101	3610001	6			30000_21070059_6,30000_840172_6	每日限购:
+4	1	1	1	3610102	3610002	18			30000_21070059_12,30000_840172_12	每日限购:
+5	1	2	1	3610103	3610003	30			30000_21070059_18,30000_840172_18	每日限购:
+6	1	3		3610104	3610004	328			30000_21070059_110,30000_840172_110	活动限购:
+7	1	10		3610105	3610005	648			30000_21070059_216,30000_840172_216	活动限购:
+]],
+	the_best_prize_poolRewards = [[id	rewards	bigPrize	Level	poolId	limitTimes	changePoints
+1	2	1	1	1	1	2
+1	30000_1300037_350	1	1	1	1	30000_21070053_18
+2	30000_1300027_3588		2	1	3	30000_21070053_10
+3	30000_1300027_2088		3	1	6	30000_21070053_7
+4	30000_820002_40		4	1	12	30000_21070053_5
+5	30000_1300017_4908		5	1	12	30000_21070053_5
+6	30000_1780050_6		6	1	16	30000_21070053_3
+7	30000_101050_50		7	1	16	30000_21070053_3
+8	30000_21070056_618	1	1	2	1	30000_21070053_12
+9	30000_9990032_1688		2	2	3	30000_21070053_8
+10	30000_840194_6188		3	2	6	30000_21070053_5
+11	30000_820002_20		4	2	12	30000_21070053_3
+12	30000_1300017_2488		5	2	12	30000_21070053_3
+13	30000_1780050_3		6	2	16	30000_21070053_2
+14	30000_100050_12		7	2	16	30000_21070053_2
+15	30000_21065001_618	1	1	3	1	30000_21070053_15
+16	30000_21063005_1588		2	3	3	30000_21070053_9
+17	30000_21063005_888		3	3	6	30000_21070053_7
+18	30000_820002_32		4	3	12	30000_21070053_4
+19	30000_1300017_3888		5	3	12	30000_21070053_4
+20	30000_1780050_6		6	3	16	30000_21070053_3
+21	30000_100050_24		7	3	16	30000_21070053_3
+22	30000_1400011_480	1	1	4	1	30000_21070053_15
+23	30000_802004_1088		2	4	3	30000_21070053_9
+24	30000_21063005_880		3	4	6	30000_21070053_7
+25	30000_820002_32		4	4	12	30000_21070053_4
+26	30000_1300017_3888		5	4	12	30000_21070053_4
+27	30000_1780050_6		6	4	16	30000_21070053_3
+28	30000_100050_24		7	4	16	30000_21070053_3
+29	30000_1000005_48	1	1	5	1	30000_21070053_12
+30	30000_802005_588		2	5	3	30000_21070053_8
+31	30000_1300027_988		3	5	6	30000_21070053_5
+32	30000_820002_20		4	5	12	30000_21070053_3
+33	30000_1000003_48		5	5	12	30000_21070053_3
+34	30000_1780050_3		6	5	16	30000_21070053_2
+35	30000_100050_12		7	5	16	30000_21070053_2
+36	30000_9990052_398	1	1	6	1	30000_21070053_10
+37	30000_9990042_198		2	6	3	30000_21070053_6
+38	30000_9990042_98		3	6	6	30000_21070053_4
+39	30000_820002_15		4	6	12	30000_21070053_3
+40	30000_1300017_1688		5	6	12	30000_21070053_3
+41	30000_1780050_2		6	6	16	30000_21070053_1
+42	30000_100050_8		7	6	16	30000_21070053_1
+43	30000_1300027_2688	1	1	7	1	30000_21070053_8
+44	30000_21063005_408		2	7	3	30000_21070053_5
+45	30000_800002_518		3	7	6	30000_21070053_3
+46	30000_820002_8		4	7	12	30000_21070053_2
+47	30000_1300017_888		5	7	12	30000_21070053_2
+48	30000_1780050_1		6	7	16	30000_21070053_1
+49	30000_810001_8		7	7	16	30000_21070053_1
+50	30000_802005_1288	1	1	8	1	30000_21070053_8
+51	30000_802004_348		2	8	3	30000_21070053_5
+52	30000_800002_518		3	8	6	30000_21070053_3
+53	30000_820002_8		4	8	12	30000_21070053_2
+54	30000_1300017_888		5	8	12	30000_21070053_2
+55	30000_1780050_1		6	8	16	30000_21070053_1
+56	30000_810001_8		7	8	16	30000_21070053_1
+]],
+
+}

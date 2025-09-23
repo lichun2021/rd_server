@@ -32,7 +32,7 @@ purchaseExp = 1
 stationCountLimit = 4
 
 # 资源建筑对应类型
-stationResourceType = 1780158_1780157_1780156_1780155
+stationResourceType = 1780222_1780220_1780219_1780218
 
 # 解锁高级礼包后获得经验
 unlockGiftExp = 1000
@@ -62,7 +62,7 @@ stealTimesMax = 10
 stealOneCd = 3600
 
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 1209600
+serverDelay = 604800
 
 # 各类机器人每日可偷晶体个数
 robotStealNum = 2_3,3_3

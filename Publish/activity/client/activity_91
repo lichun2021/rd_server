@@ -4,49 +4,61 @@ return {
 		activityId = 91,
 		name = [[英雄专场]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，英雄回归活动限时出售英雄回归宝箱。<br/>2. 开启英雄回归宝箱必定获得英雄兑换券，并额外赠送资源、加速道具。<br/>3. 英雄兑换券可用于兑换 指定传说英雄碎片、加速 或 资源道具。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，英雄专场活动限时出售英雄宝箱。<br/>2. 开启英雄宝箱必定获得英雄兑换券，并额外赠送加速、英雄培养道具。<br/>3. 英雄兑换券可用于兑换 各类英雄、资源、加速等道具。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">英雄宝箱概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">每次购买必得英雄兑换券，25%个概率获得1个，25%概率获得2个，20%概率获得3个，20%概率获得4个，10%概率获得5个。<br/><br/></font><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">额外获得一种物品的概率：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">特级经验胶囊*3 20%<br/>特级芯片强化器*3 20%<br/>芯片图纸*3 20%<br/>极品经验胶囊*3 5%<br/>极品芯片强化器*3 5%<br/>城建加速2小时*1 10%<br/>研究加速2小时*1 10%<br/>训练加速2小时*1 10%<br/></font>]],
 		priority = 20015,
 		icon = [[Activity_Icon_91_Nor.png]],
 		selecticon = [[Activity_Icon_91_Sel.png]],
 		bigIcon = [[]],
+		fixedReward = [[30000_1150030_1]],
+		randomReward = [[30000_1510004_3,30000_13310004_3,30000_800143_3,30000_1510005_3,30000_13310005_3,30000_101050_1,30000_104050_1,30000_103050_1]],
 	},
 	hero_exchange = [[id	priority	needItem	gainItem	des	times
 1	1	2	2	2	1
-1	1	30000_1150030_10	30000_1001074_1	ActivityExchangeGainItemDes1	99
-2	2	30000_1150030_18	30000_1001073_1	ActivityExchangeGainItemDes1	99
-3	3	30000_1150030_10	30000_1001072_1	ActivityExchangeGainItemDes1	99
-4	4	30000_1150030_10	30000_1001071_1	ActivityExchangeGainItemDes1	99
-5	5	30000_1150030_18	30000_1001070_1	ActivityExchangeGainItemDes1	99
-6	6	30000_1150030_10	30000_1001069_1	ActivityExchangeGainItemDes1	99
-7	7	30000_1150030_10	30000_1001068_1	ActivityExchangeGainItemDes1	99
-8	8	30000_1150030_18	30000_1001067_1	ActivityExchangeGainItemDes1	99
-9	9	30000_1150030_10	30000_1001066_1	ActivityExchangeGainItemDes1	99
-10	10	30000_1150030_10	30000_1001065_1	ActivityExchangeGainItemDes1	99
-11	11	30000_1150030_18	30000_1001064_1	ActivityExchangeGainItemDes1	99
-12	12	30000_1150030_10	30000_1001062_1	ActivityExchangeGainItemDes1	99
-13	13	30000_1150030_10	30000_1001061_1	ActivityExchangeGainItemDes1	99
-14	14	30000_1150030_18	30000_1001059_1	ActivityExchangeGainItemDes1	99
-15	15	30000_1150030_10	30000_1001058_1	ActivityExchangeGainItemDes1	99
-16	16	30000_1150030_18	30000_1001057_1	ActivityExchangeGainItemDes1	99
-17	17	30000_1150030_10	30000_1001055_1	ActivityExchangeGainItemDes1	99
-18	18	30000_1150030_10	30000_1001054_1	ActivityExchangeGainItemDes1	99
-19	19	30000_1150030_18	30000_1001053_1	ActivityExchangeGainItemDes1	99
-20	20	30000_1150030_18	30000_1001052_1	ActivityExchangeGainItemDes1	99
-21	21	30000_1150030_18	30000_1001051_1	ActivityExchangeGainItemDes1	99
-22	22	30000_1150030_18	30000_1001050_1	ActivityExchangeGainItemDes1	99
-23	23	30000_1150030_18	30000_1001049_1	ActivityExchangeGainItemDes1	99
-24	24	30000_1150030_18	30000_1001048_1	ActivityExchangeGainItemDes1	99
-25	25	30000_1150030_18	30000_1001043_1	ActivityExchangeGainItemDes1	99
-26	26	30000_1150030_15	30000_840166_20	ActivityExchangeGainItemDes1	10
-27	27	30000_1150030_12	30000_840156_10	ActivityExchangeGainItemDes1	20
-28	28	30000_1150030_8	30000_810002_1	ActivityExchangeGainItemDes1	20
-29	29	30000_1150030_5	30000_850007_2	ActivityExchangeGainItemDes1	50
-30	30	30000_1150030_5	30000_850037_2	ActivityExchangeGainItemDes1	50
-31	31	30000_1150030_5	30000_850017_2	ActivityExchangeGainItemDes1	50
-32	32	30000_1150030_5	30000_850027_2	ActivityExchangeGainItemDes1	50
-33	33	30000_1150030_1	30000_810001_1	ActivityExchangeGainItemDes1	999
-34	34	30000_1150030_1	30000_1510003_5	ActivityExchangeGainItemDes1	999
-35	35	30000_1150030_1	30000_13310003_5	ActivityExchangeGainItemDes1	999
+1	1	30000_1150030_5	30000_1001057_1	ActivityExchangeGainItemDes1	99
+2	2	30000_1150030_5	30000_1001067_1	ActivityExchangeGainItemDes1	99
+3	3	30000_1150030_5	30000_1001073_1	ActivityExchangeGainItemDes1	99
+4	4	30000_1150030_5	30000_1001053_1	ActivityExchangeGainItemDes1	99
+5	5	30000_1150030_5	30000_1001064_1	ActivityExchangeGainItemDes1	99
+6	6	30000_1150030_5	30000_1001059_1	ActivityExchangeGainItemDes1	99
+7	7	30000_1150030_5	30000_1001070_1	ActivityExchangeGainItemDes1	99
+8	8	30000_1150030_5	30000_1001052_1	ActivityExchangeGainItemDes1	99
+9	9	30000_1150030_5	30000_1001085_1	ActivityExchangeGainItemDes1	99
+10	10	30000_1150030_5	30000_1001001_1	ActivityExchangeGainItemDes1	99
+11	11	30000_1150030_5	30000_1001097_1	ActivityExchangeGainItemDes1	99
+12	12	30000_1150030_5	30000_1001047_1	ActivityExchangeGainItemDes1	99
+13	13	30000_1150030_5	30000_1001063_1	ActivityExchangeGainItemDes1	99
+14	14	30000_1150030_5	30000_1001091_1	ActivityExchangeGainItemDes1	99
+15	15	30000_1150030_5	30000_1001087_1	ActivityExchangeGainItemDes1	99
+16	16	30000_1150030_5	30000_1001084_1	ActivityExchangeGainItemDes1	99
+17	17	30000_1150030_5	30000_1001082_1	ActivityExchangeGainItemDes1	99
+18	18	30000_1150030_5	30000_1001080_1	ActivityExchangeGainItemDes1	99
+19	19	30000_1150030_5	30000_1001079_1	ActivityExchangeGainItemDes1	99
+20	20	30000_1150030_5	30000_1001076_1	ActivityExchangeGainItemDes1	99
+21	21	30000_1150030_5	30000_1001068_1	ActivityExchangeGainItemDes1	99
+22	22	30000_1150030_5	30000_1001072_1	ActivityExchangeGainItemDes1	99
+23	23	30000_1150030_5	30000_1001075_1	ActivityExchangeGainItemDes1	99
+24	24	30000_1150030_5	30000_1001069_1	ActivityExchangeGainItemDes1	99
+25	25	30000_1150030_5	30000_1001071_1	ActivityExchangeGainItemDes1	99
+26	26	30000_1150030_5	30000_1001074_1	ActivityExchangeGainItemDes1	99
+27	27	30000_1150030_5	30000_1001066_1	ActivityExchangeGainItemDes1	99
+28	28	30000_1150030_5	30000_1001061_1	ActivityExchangeGainItemDes1	99
+29	29	30000_1150030_5	30000_1001055_1	ActivityExchangeGainItemDes1	99
+30	30	30000_1150030_5	30000_1001065_1	ActivityExchangeGainItemDes1	99
+31	31	30000_1150030_5	30000_1001062_1	ActivityExchangeGainItemDes1	99
+32	32	30000_1150030_5	30000_1001058_1	ActivityExchangeGainItemDes1	99
+33	33	30000_1150030_5	30000_1001054_1	ActivityExchangeGainItemDes1	99
+34	34	30000_1150030_8	30000_810002_1	ActivityExchangeGainItemDes1	20
+35	35	30000_1150030_5	30000_850007_2	ActivityExchangeGainItemDes1	50
+36	36	30000_1150030_5	30000_850037_2	ActivityExchangeGainItemDes1	50
+37	37	30000_1150030_5	30000_850017_2	ActivityExchangeGainItemDes1	50
+38	38	30000_1150030_5	30000_850027_2	ActivityExchangeGainItemDes1	50
+39	39	30000_1150030_1	30000_810001_1	ActivityExchangeGainItemDes1	999
+40	40	30000_1150030_1	30000_1510003_5	ActivityExchangeGainItemDes1	999
+41	41	30000_1150030_1	30000_13310003_5	ActivityExchangeGainItemDes1	999
+]],
+	hero_exchange_shop = [[id	awardId	price	limit
+1	1	2	1
+100001	4900020	10000_1000_60	999
 ]],
 
 }

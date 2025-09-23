@@ -4,11 +4,12 @@ return {
 		activityId = 6,
 		name = [[基地崛起]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 您的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">建筑工厂</font>达到指定等级后即可获得对应奖励。<br/>2. 请您点击<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">领取按钮</font>领取奖励。<br/>3. 返回活动页面可查看奖励详情。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 您的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">建筑工厂</font>达到指定等级后即可获得对应奖励。<br/>2. 请您点击<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">领取按钮</font>领取奖励。<br/>3. 返回活动页面可查看奖励详情。<br/>4. 活动结束时未领取的奖励视为放弃。</font>]],
 		priority = 10950,
 		icon = [[Activity_Icon_01_Nor.png]],
 		selecticon = [[Activity_Icon_01_Sel.png]],
 		bigIcon = [[DiamondsIcon_02.png]],
+		resetTime = 3888000,
 	},
 	build_level_activity = [[itemId	buildType	level	rewards
 1	1	1	2

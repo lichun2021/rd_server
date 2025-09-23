@@ -1,0 +1,18 @@
+# 流失时间；单位：秒
+lostTime = 1296000
+
+# VIP等级
+vip = 0
+
+# 指挥官等级
+level = 1
+
+# 战斗力达标值
+battlePoint = 1
+
+# 基地等级
+buildlevel = 1
+
+# 每日发送召回次数限制
+recallNumLimit = 5
+

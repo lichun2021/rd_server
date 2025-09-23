@@ -45,4 +45,7 @@
       <data termId="43" showTime="2022-1-27 00:00:00" startTime="2022-1-27 00:00:00" endTime="2022-1-29 23:59:59" hiddenTime="2022-1-29 23:59:59" />
       <data termId="44" showTime="2022-4-28 00:00:00" startTime="2022-4-28 00:00:00" endTime="2022-4-30 23:59:59" hiddenTime="2022-4-30 23:59:59" />
       <data termId="45" showTime="2022-7-25 00:00:00" startTime="2022-7-25 00:00:00" endTime="2022-7-27 23:59:59" hiddenTime="2022-7-27 23:59:59" />
+      <data termId="46" showTime="2022-12-1 00:00:00" startTime="2022-12-1 00:00:00" endTime="2022-12-3 23:59:59" hiddenTime="2022-12-3 23:59:59" />
+      <data termId="47" showTime="2023-1-30 00:00:00" startTime="2023-1-30 00:00:00" endTime="2023-2-1 23:59:59" hiddenTime="2023-2-1 23:59:59" />
+      <data termId="48" showTime="2025-08-21 00:00:00" startTime="2025-08-21 00:00:00" endTime="2025-08-23 23:59:59" hiddenTime="2025-08-23 23:59:59" />
 </root>

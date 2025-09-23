@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" rankUpper="1" rankLower="1" changeServerCount="5" />
+      <data id="2" rankUpper="2" rankLower="2" changeServerCount="3" />
+      <data id="3" rankUpper="3" rankLower="3" changeServerCount="2" />
+      <data id="4" rankUpper="4" rankLower="4" changeServerCount="1" />
+      <data id="5" rankUpper="5" rankLower="5" changeServerCount="1" />
+      <data id="6" rankUpper="6" rankLower="6" changeServerCount="1" />
+      <data id="7" rankUpper="7" rankLower="7" changeServerCount="1" />
+      <data id="8" rankUpper="8" rankLower="8" changeServerCount="1" />
+</root>

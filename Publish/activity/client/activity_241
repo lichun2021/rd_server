@@ -2,8 +2,8 @@ return {
 	prop =
 	{
 		activityId = 241,
-		name = [[机械宝藏]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.机械宝藏活动是通过消耗一条行军队列前往大世界中的活动建筑自动领取一份奖励，奖励会在不同的时间刷新固定份数的奖励，刷新时会有公告提示先到先得。<br/>2.礼物刷新时间为活动期间每天的12点和19点，可领取礼物时间为1小时，领取时间结束后将无法领取奖励。</font>]],
+		name = [[豪礼放送]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.通过消耗一条行军队列前往大世界中的活动建筑自动领取一份奖励，奖励会在不同的时间刷新固定份数的奖励，刷新时会有公告提示先到先得。<br/>2.礼物刷新时间为活动期间每天的12点和19点，可领取礼物时间为1小时，领取时间结束后将无法领取奖励。</font>]],
 		priority = 30000,
 		icon = [[Activity_Icon_241_Nor.png]],
 		selecticon = [[Activity_Icon_241_Sel.png]],

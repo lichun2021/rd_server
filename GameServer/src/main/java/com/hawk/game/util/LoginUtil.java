@@ -233,6 +233,8 @@ public class LoginUtil {
 		playerEntity.setLang(cmd.getLang());
 		playerEntity.setVersion(cmd.getVersion());
 		playerEntity.setChannelId(cmd.getChannelId());
+		// 初始化 OpenHarmony 字段，避免 DB NOT NULL 约束错误
+		playerEntity.setOpenharmony("");
 
 		// 创建玩家的db对象
 		if (!HawkDBManager.getInstance().create(playerEntity)) {

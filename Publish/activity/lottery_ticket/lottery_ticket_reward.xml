@@ -1,75 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" pool="1" multiplyValue="1" showValue="6" reward="30000_1780050_10" weight1="1200" weight2="5200" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="2" pool="1" multiplyValue="1" showValue="6" reward="30000_810002_2" weight1="1200" weight2="1200" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="3" pool="1" multiplyValue="1" showValue="6" reward="30000_840194_800" weight1="700" weight2="700" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="4" pool="1" multiplyValue="1" showValue="6" reward="30000_840195_200" weight1="360" weight2="1360" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="5" pool="1" multiplyValue="1" showValue="6" reward="30000_9990032_400" weight1="360" weight2="360" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="6" pool="1" multiplyValue="1" showValue="6" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="7" pool="1" multiplyValue="1" showValue="6" reward="30000_9990032_1200" weight1="40" weight2="40" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="8" pool="1" multiplyValue="1" showValue="6" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="9" pool="1" multiplyValue="2" showValue="66" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="10" pool="1" multiplyValue="2" showValue="66" reward="30000_810002_2" weight1="1200" weight2="1200" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="11" pool="1" multiplyValue="2" showValue="66" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="12" pool="1" multiplyValue="2" showValue="66" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="13" pool="1" multiplyValue="2" showValue="66" reward="30000_9990032_400" weight1="360" weight2="360" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="14" pool="1" multiplyValue="2" showValue="66" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="15" pool="1" multiplyValue="2" showValue="66" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="16" pool="1" multiplyValue="2" showValue="66" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="17" pool="1" multiplyValue="10" showValue="666" reward="30000_1780050_10" weight1="1200" weight2="5200" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="18" pool="1" multiplyValue="10" showValue="666" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="19" pool="1" multiplyValue="10" showValue="666" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="20" pool="1" multiplyValue="10" showValue="666" reward="30000_840195_200" weight1="360" weight2="1360" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="21" pool="1" multiplyValue="10" showValue="666" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="22" pool="1" multiplyValue="10" showValue="666" reward="30000_9990032_888" weight1="40" weight2="40" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="23" pool="1" multiplyValue="10" showValue="666" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="24" pool="1" multiplyValue="10" showValue="666" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="25" pool="1" multiplyValue="100" showValue="6666" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="26" pool="1" multiplyValue="100" showValue="6666" reward="30000_810002_2" weight1="1200" weight2="1200" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="27" pool="1" multiplyValue="100" showValue="6666" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="28" pool="1" multiplyValue="100" showValue="6666" reward="30000_840195_200" weight1="360" weight2="1360" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200"/>
-      <data id="29" pool="1" multiplyValue="100" showValue="6666" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="30" pool="1" multiplyValue="100" showValue="6666" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="31" pool="1" multiplyValue="100" showValue="6666" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="32" pool="1" multiplyValue="100" showValue="6666" reward="30000_21062410_100" weight1="1" weight2="1" broadcast="1" assistReward="30000_21062410_100,30000_9990032_1200,30000_840195_200" />
-      <data id="33" pool="1" multiplyValue="0" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="34" pool="1" multiplyValue="0" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="35" pool="1" multiplyValue="0" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="36" pool="1" multiplyValue="0" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="37" pool="1" multiplyValue="0" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="38" pool="1" multiplyValue="0" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="39" pool="1" multiplyValue="0" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="40" pool="1" multiplyValue="0" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="41" pool="2" multiplyValue="1" showValue="6" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="42" pool="2" multiplyValue="1" showValue="6" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="43" pool="2" multiplyValue="1" showValue="6" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="44" pool="2" multiplyValue="1" showValue="6" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="45" pool="2" multiplyValue="1" showValue="6" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="46" pool="2" multiplyValue="1" showValue="6" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="47" pool="2" multiplyValue="1" showValue="6" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="48" pool="2" multiplyValue="1" showValue="6" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="49" pool="2" multiplyValue="2" showValue="66" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="50" pool="2" multiplyValue="2" showValue="66" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="51" pool="2" multiplyValue="2" showValue="66" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="52" pool="2" multiplyValue="2" showValue="66" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="53" pool="2" multiplyValue="2" showValue="66" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="54" pool="2" multiplyValue="2" showValue="66" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="55" pool="2" multiplyValue="2" showValue="66" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="56" pool="2" multiplyValue="2" showValue="66" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="57" pool="2" multiplyValue="10" showValue="666" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="58" pool="2" multiplyValue="10" showValue="666" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="59" pool="2" multiplyValue="10" showValue="666" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="60" pool="2" multiplyValue="10" showValue="666" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="61" pool="2" multiplyValue="10" showValue="666" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="62" pool="2" multiplyValue="10" showValue="666" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="63" pool="2" multiplyValue="10" showValue="666" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="64" pool="2" multiplyValue="10" showValue="666" reward="30000_21062410_100" weight1="1" weight2="1" />
-      <data id="65" pool="2" multiplyValue="100" showValue="6666" reward="30000_1780050_10" weight1="1200" weight2="5200" />
-      <data id="66" pool="2" multiplyValue="100" showValue="6666" reward="30000_810002_2" weight1="1200" weight2="1200" />
-      <data id="67" pool="2" multiplyValue="100" showValue="6666" reward="30000_840194_800" weight1="700" weight2="700" />
-      <data id="68" pool="2" multiplyValue="100" showValue="6666" reward="30000_840195_200" weight1="360" weight2="1360" />
-      <data id="69" pool="2" multiplyValue="100" showValue="6666" reward="30000_9990032_400" weight1="360" weight2="360" />
-      <data id="70" pool="2" multiplyValue="100" showValue="6666" reward="30000_9990032_888" weight1="40" weight2="40" />
-      <data id="71" pool="2" multiplyValue="100" showValue="6666" reward="30000_9990032_1200" weight1="40" weight2="40" />
-      <data id="72" pool="2" multiplyValue="100" showValue="6666" reward="30000_21062410_100" weight1="1" weight2="1" />
+      <data id="1" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_1" weight1="900" weight2="900" broadcast="0" />
+      <data id="2" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_3" weight1="900" weight2="900" broadcast="0" />
+      <data id="3" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_8" weight1="900" weight2="900" broadcast="0" />
+      <data id="4" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_18" weight1="100" weight2="100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="5" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_38" weight1="40" weight2="40" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="6" pool="1" multiplyValue="18" showValue="2025" reward="30000_1000005_66" weight1="40" weight2="40" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="7" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_18" weight1="6000" weight2="6000" broadcast="0" />
+      <data id="8" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_28" weight1="4500" weight2="4500" broadcast="0" />
+      <data id="9" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_66" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="10" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_88" weight1="2400" weight2="2400" broadcast="0" />
+      <data id="11" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_128" weight1="1500" weight2="1500" broadcast="0" />
+      <data id="12" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_166" weight1="900" weight2="900" broadcast="0" />
+      <data id="13" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_188" weight1="900" weight2="900" broadcast="0" />
+      <data id="14" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_388" weight1="900" weight2="900" broadcast="0" />
+      <data id="15" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_666" weight1="900" weight2="900" broadcast="0" />
+      <data id="16" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_888" weight1="900" weight2="900" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="17" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_1666" weight1="300" weight2="300" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="18" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_1888" weight1="300" weight2="300" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="19" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_3888" weight1="60" weight2="60" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="20" pool="1" multiplyValue="18" showValue="2025" reward="10000_1000_6666" weight1="60" weight2="60" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="21" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_1" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="22" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_3" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="23" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_8" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="24" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_18" weight1="200" weight2="200" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="25" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_38" weight1="100" weight2="100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="26" pool="1" multiplyValue="6" showValue="666" reward="30000_1000005_66" weight1="100" weight2="100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="27" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_18" weight1="14000" weight2="14000" broadcast="0" />
+      <data id="28" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_28" weight1="10500" weight2="10500" broadcast="0" />
+      <data id="29" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_66" weight1="7000" weight2="7000" broadcast="0" />
+      <data id="30" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_88" weight1="5600" weight2="5600" broadcast="0" />
+      <data id="31" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_128" weight1="3500" weight2="3500" broadcast="0" />
+      <data id="32" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_166" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="33" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_188" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="34" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_388" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="35" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_666" weight1="2100" weight2="2100" broadcast="0" />
+      <data id="36" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_888" weight1="2100" weight2="2100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="37" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_1666" weight1="600" weight2="600" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="38" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_1888" weight1="600" weight2="600" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="39" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_3888" weight1="150" weight2="150" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="40" pool="1" multiplyValue="6" showValue="666" reward="10000_1000_6666" weight1="150" weight2="150" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="41" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_1" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="42" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_3" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="43" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_8" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="44" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_18" weight1="400" weight2="400" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="45" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_38" weight1="200" weight2="200" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="46" pool="1" multiplyValue="3" showValue="66" reward="30000_1000005_66" weight1="200" weight2="200" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="47" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_18" weight1="20000" weight2="20000" broadcast="0" />
+      <data id="48" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_28" weight1="15000" weight2="15000" broadcast="0" />
+      <data id="49" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_66" weight1="10000" weight2="10000" broadcast="0" />
+      <data id="50" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_88" weight1="8000" weight2="8000" broadcast="0" />
+      <data id="51" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_128" weight1="5000" weight2="5000" broadcast="0" />
+      <data id="52" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_166" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="53" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_188" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="54" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_388" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="55" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_666" weight1="3000" weight2="3000" broadcast="0" />
+      <data id="56" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_888" weight1="3000" weight2="3000" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="57" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_1666" weight1="1200" weight2="1200" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="58" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_1888" weight1="1200" weight2="1200" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="59" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_3888" weight1="300" weight2="300" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="60" pool="1" multiplyValue="3" showValue="66" reward="10000_1000_6666" weight1="300" weight2="300" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="61" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_1" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="62" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_3" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="63" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_8" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="64" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_18" weight1="2000" weight2="2000" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="65" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_38" weight1="100" weight2="100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="66" pool="1" multiplyValue="1" showValue="6" reward="30000_1000005_66" weight1="100" weight2="100" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="67" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_18" weight1="160000" weight2="160000" broadcast="0" />
+      <data id="68" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_28" weight1="120000" weight2="120000" broadcast="0" />
+      <data id="69" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_66" weight1="80000" weight2="80000" broadcast="0" />
+      <data id="70" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_88" weight1="64000" weight2="64000" broadcast="0" />
+      <data id="71" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_128" weight1="40000" weight2="40000" broadcast="0" />
+      <data id="72" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_166" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="73" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_188" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="74" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_388" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="75" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_666" weight1="24000" weight2="24000" broadcast="0" />
+      <data id="76" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_888" weight1="24000" weight2="24000" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="77" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_1666" weight1="1800" weight2="1800" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="78" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_1888" weight1="1800" weight2="1800" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="79" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_3888" weight1="150" weight2="150" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="80" pool="1" multiplyValue="1" showValue="6" reward="10000_1000_6666" weight1="150" weight2="150" broadcast="1" assistReward="10000_1001_666,30000_820002_6,30000_1300017_666,30000_810001_66,30000_850006_66,30000_850036_66,30000_850016_66,30000_850026_66" />
+      <data id="81" pool="1" multiplyValue="0" reward="30000_1000005_1" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="82" pool="1" multiplyValue="0" reward="30000_1000005_3" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="83" pool="1" multiplyValue="0" reward="30000_1000005_8" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="84" pool="1" multiplyValue="0" reward="30000_1000005_18" weight1="197300" weight2="197300" broadcast="0" />
+      <data id="85" pool="1" multiplyValue="0" reward="30000_1000005_38" weight1="199560" weight2="199560" broadcast="0" />
+      <data id="86" pool="1" multiplyValue="0" reward="30000_1000005_66" weight1="199560" weight2="199560" broadcast="0" />
+      <data id="87" pool="1" multiplyValue="0" reward="10000_1000_18" weight1="1800000" weight2="1800000" broadcast="0" />
+      <data id="88" pool="1" multiplyValue="0" reward="10000_1000_28" weight1="1350000" weight2="1350000" broadcast="0" />
+      <data id="89" pool="1" multiplyValue="0" reward="10000_1000_66" weight1="900000" weight2="900000" broadcast="0" />
+      <data id="90" pool="1" multiplyValue="0" reward="10000_1000_88" weight1="720000" weight2="720000" broadcast="0" />
+      <data id="91" pool="1" multiplyValue="0" reward="10000_1000_128" weight1="450000" weight2="450000" broadcast="0" />
+      <data id="92" pool="1" multiplyValue="0" reward="10000_1000_166" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="93" pool="1" multiplyValue="0" reward="10000_1000_188" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="94" pool="1" multiplyValue="0" reward="10000_1000_388" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="95" pool="1" multiplyValue="0" reward="10000_1000_666" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="96" pool="1" multiplyValue="0" reward="10000_1000_888" weight1="270000" weight2="270000" broadcast="0" />
+      <data id="97" pool="1" multiplyValue="0" reward="10000_1000_1666" weight1="296100" weight2="296100" broadcast="0" />
+      <data id="98" pool="1" multiplyValue="0" reward="10000_1000_1888" weight1="296100" weight2="296100" broadcast="0" />
+      <data id="99" pool="1" multiplyValue="0" reward="10000_1000_3888" weight1="299340" weight2="299340" broadcast="0" />
+      <data id="100" pool="1" multiplyValue="0" reward="10000_1000_6666" weight1="299340" weight2="299340" broadcast="0" />
+      <data id="101" pool="2" multiplyValue="3" showValue="66" reward="30000_1000005_3" weight1="0" weight2="3000" />
+      <data id="102" pool="2" multiplyValue="3" showValue="66" reward="30000_1000005_8" weight1="0" weight2="3000" />
+      <data id="103" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_66" weight1="0" weight2="10000" />
+      <data id="104" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_88" weight1="0" weight2="8000" />
+      <data id="105" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_128" weight1="0" weight2="5000" />
+      <data id="106" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_166" weight1="0" weight2="3000" />
+      <data id="107" pool="2" multiplyValue="1" showValue="6" reward="30000_1000005_3" weight1="0" weight2="24000" />
+      <data id="108" pool="2" multiplyValue="1" showValue="6" reward="30000_1000005_8" weight1="0" weight2="24000" />
+      <data id="109" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_66" weight1="0" weight2="80000" />
+      <data id="110" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_88" weight1="0" weight2="64000" />
+      <data id="111" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_128" weight1="0" weight2="40000" />
+      <data id="112" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_166" weight1="0" weight2="24000" />
+      <data id="113" pool="2" multiplyValue="6" showValue="666" reward="30000_1000005_3" weight1="200" weight2="0" />
+      <data id="114" pool="2" multiplyValue="6" showValue="666" reward="30000_1000005_8" weight1="50" weight2="0" />
+      <data id="115" pool="2" multiplyValue="6" showValue="666" reward="30000_1000005_18" weight1="50" weight2="0" />
+      <data id="116" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_66" weight1="400" weight2="0" />
+      <data id="117" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_88" weight1="400" weight2="0" />
+      <data id="118" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_128" weight1="300" weight2="0" />
+      <data id="119" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_166" weight1="200" weight2="0" />
+      <data id="120" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_188" weight1="200" weight2="0" />
+      <data id="121" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_388" weight1="100" weight2="0" />
+      <data id="122" pool="2" multiplyValue="6" showValue="666" reward="10000_1000_666" weight1="100" weight2="0" />
+      <data id="123" pool="2" multiplyValue="3" showValue="66" reward="30000_1000005_3" weight1="400" weight2="0" />
+      <data id="124" pool="2" multiplyValue="3" showValue="66" reward="30000_1000005_8" weight1="100" weight2="0" />
+      <data id="125" pool="2" multiplyValue="3" showValue="66" reward="30000_1000005_18" weight1="100" weight2="0" />
+      <data id="126" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_66" weight1="800" weight2="0" />
+      <data id="127" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_88" weight1="800" weight2="0" />
+      <data id="128" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_128" weight1="600" weight2="0" />
+      <data id="129" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_166" weight1="400" weight2="0" />
+      <data id="130" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_188" weight1="400" weight2="0" />
+      <data id="131" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_388" weight1="200" weight2="0" />
+      <data id="132" pool="2" multiplyValue="3" showValue="66" reward="10000_1000_666" weight1="200" weight2="0" />
+      <data id="133" pool="2" multiplyValue="1" showValue="6" reward="30000_1000005_3" weight1="400" weight2="0" />
+      <data id="134" pool="2" multiplyValue="1" showValue="6" reward="30000_1000005_8" weight1="100" weight2="0" />
+      <data id="135" pool="2" multiplyValue="1" showValue="6" reward="30000_1000005_18" weight1="100" weight2="0" />
+      <data id="136" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_66" weight1="800" weight2="0" />
+      <data id="137" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_88" weight1="800" weight2="0" />
+      <data id="138" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_128" weight1="600" weight2="0" />
+      <data id="139" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_166" weight1="400" weight2="0" />
+      <data id="140" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_188" weight1="400" weight2="0" />
+      <data id="141" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_388" weight1="200" weight2="0" />
+      <data id="142" pool="2" multiplyValue="1" showValue="6" reward="10000_1000_666" weight1="200" weight2="0" />
 </root>

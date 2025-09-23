@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data achieveId="225101" conditionType="160200" conditionValue="35000" rewards="30000_1780050_10,30000_810001_30,30000_800000_30,30000_1150089_1,30000_10590110_10" timelimit="86399" />
-      <data achieveId="225102" conditionType="160200" conditionValue="60000" rewards="30000_1780050_20,30000_810001_60,30000_800000_60,30000_1300021_10,30000_95152001_1" timelimit="86399" />
+      <data achieveId="225101" conditionType="160200" conditionValue="10000" rewards="30000_1000005_30,30000_802004_300,30000_21063005_800,30000_1782103_800,30000_9990032_600" timelimit="259199" />
+      <data achieveId="225102" conditionType="160200" conditionValue="20000" rewards="30000_1000005_20,30000_802004_200,30000_21063005_550,30000_1782103_550,30000_9990032_400" timelimit="259199" />
+      <data achieveId="225103" conditionType="160200" conditionValue="40000" rewards="30000_1000005_20,30000_802004_200,30000_21063005_550,30000_1782103_550" timelimit="259199" />
 </root>

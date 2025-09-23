@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data achieveId="1243001" conditionType="700007" conditionValue="1" finishAchieveId="1241001" />
-      <data achieveId="1243002" conditionType="700007" conditionValue="10" finishAchieveId="1241002" />
-      <data achieveId="1243003" conditionType="700007" conditionValue="13" finishAchieveId="1241003" />
-      <data achieveId="1243004" conditionType="700007" conditionValue="16" finishAchieveId="1241004" />
-      <data achieveId="1243005" conditionType="700007" conditionValue="19" finishAchieveId="1241005" />
-      <data achieveId="1243006" conditionType="700007" conditionValue="22" finishAchieveId="1241006" />
-      <data achieveId="1243101" conditionType="700008" conditionValue="2" finishAchieveId="1241101" />
-      <data achieveId="1243102" conditionType="700008" conditionValue="4" finishAchieveId="1241102" />
-      <data achieveId="1243103" conditionType="700008" conditionValue="7" finishAchieveId="1241103" />
-      <data achieveId="1243104" conditionType="702301" conditionValue="4" finishAchieveId="1241102" />
+      <data achieveId="1243001" conditionType="700007" conditionValue="19" finishAchieveId="1241001" />
+      <data achieveId="1243002" conditionType="700007" conditionValue="19" finishAchieveId="1241002" />
+      <data achieveId="1243003" conditionType="700007" conditionValue="22" finishAchieveId="1241003" />
+      <data achieveId="1243004" conditionType="700007" conditionValue="22" finishAchieveId="1241004" />
+      <data achieveId="1243005" conditionType="700007" conditionValue="26" finishAchieveId="1241005" />
+      <data achieveId="1243006" conditionType="700007" conditionValue="1" finishAchieveId="1241006" />
+      <data achieveId="1243007" conditionType="700007" conditionValue="1" finishAchieveId="1241007" />
+      <data achieveId="1243008" conditionType="700007" conditionValue="1" finishAchieveId="1241008" />
+      <data achieveId="1243009" conditionType="700007" conditionValue="1" finishAchieveId="1241009" />
+      <data achieveId="1243010" conditionType="700007" conditionValue="1" finishAchieveId="1241010" />
+      <data achieveId="1243101" conditionType="700008" conditionValue="3" finishAchieveId="1241011" />
+      <data achieveId="1243102" conditionType="700008" conditionValue="3" finishAchieveId="1241012" />
+      <data achieveId="1243103" conditionType="700008" conditionValue="3" finishAchieveId="1241013" />
+      <data achieveId="1243104" conditionType="700008" conditionValue="3" finishAchieveId="1241014" />
+      <data achieveId="1243105" conditionType="700008" conditionValue="3" finishAchieveId="1241015" />
+      <data achieveId="1243106" conditionType="702301" conditionValue="500" finishAchieveId="1241016" />
+      <data achieveId="1243107" conditionType="702301" conditionValue="600" finishAchieveId="1241017" />
+      <data achieveId="1243108" conditionType="702301" conditionValue="700" finishAchieveId="1241018" />
+      <data achieveId="1243109" conditionType="702301" conditionValue="800" finishAchieveId="1241019" />
+      <data achieveId="1243110" conditionType="702301" conditionValue="1000" finishAchieveId="1241020" />
 </root>

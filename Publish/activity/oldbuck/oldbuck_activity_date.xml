@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" lossDays="1_15" vip="1_10" duration="8" />
+      <data id="2" lossDays="1_15" vip="11_99" duration="10" />
+      <data id="3" lossDays="16_30" vip="1_10" duration="8" />
+      <data id="4" lossDays="16_30" vip="11_99" duration="10" />
+      <data id="5" lossDays="31_9999" vip="1_10" duration="8" />
+      <data id="6" lossDays="31_9999" vip="11_99" duration="10" />
+</root>

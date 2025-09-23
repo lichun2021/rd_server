@@ -5,28 +5,30 @@
       <data rewardId="3" isAdvancedReward="1" advancedType="29900003" timesLimit="10" weight="160" />
       <data rewardId="4" isAdvancedReward="0" timesLimit="9999" reward="30000_850051_1" weight="90" />
       <data rewardId="5" isAdvancedReward="0" timesLimit="9999" reward="30000_850051_3" weight="30" />
-      <data rewardId="6" isAdvancedReward="0" timesLimit="9999" reward="30000_1780030_1" weight="880" />
+      <data rewardId="6" isAdvancedReward="0" timesLimit="9999" reward="30000_1780035_1" weight="880" />
       <data rewardId="7" isAdvancedReward="0" timesLimit="9999" reward="30000_101050_1" weight="175" />
       <data rewardId="8" isAdvancedReward="0" timesLimit="9999" reward="30000_103050_1" weight="175" />
       <data rewardId="9" isAdvancedReward="0" timesLimit="9999" reward="30000_104050_1" weight="175" />
       <data rewardId="10" isAdvancedReward="0" timesLimit="9999" reward="30000_105050_1" weight="175" />
-      <data rewardId="11" isAdvancedReward="0" timesLimit="9999" reward="30000_850054_1" weight="700" />
-      <data rewardId="12" isAdvancedReward="0" timesLimit="9999" reward="30000_1510002_10" weight="700" />
-      <data rewardId="13" isAdvancedReward="0" timesLimit="9999" reward="30000_13310002_10" weight="700" />
-      <data rewardId="14" isAdvancedReward="0" timesLimit="9999" reward="30000_800143_1" weight="700" />
-      <data rewardId="15" isAdvancedReward="0" timesLimit="9999" reward="30000_800110_1" weight="700" />
-      <data rewardId="16" isAdvancedReward="0" timesLimit="9999" reward="30000_840165_10" weight="700" />
-      <data rewardId="17" isAdvancedReward="0" timesLimit="9999" reward="30000_840194_10" weight="700" />
-      <data rewardId="18" isAdvancedReward="0" timesLimit="9999" reward="30000_1480001_10" weight="525" />
-      <data rewardId="19" isAdvancedReward="0" timesLimit="9999" reward="30000_1480001_30" weight="175" />
-      <data rewardId="20" isAdvancedReward="0" timesLimit="9999" reward="30000_800001_10" weight="525" />
-      <data rewardId="21" isAdvancedReward="0" timesLimit="9999" reward="30000_800001_30" weight="175" />
-      <data rewardId="22" isAdvancedReward="0" timesLimit="9999" reward="30000_800000_1" weight="225" />
-      <data rewardId="23" isAdvancedReward="0" timesLimit="9999" reward="30000_800000_3" weight="75" />
-      <data rewardId="24" isAdvancedReward="0" timesLimit="9999" reward="30000_1800000_5" weight="225" />
-      <data rewardId="25" isAdvancedReward="0" timesLimit="9999" reward="30000_1800000_15" weight="75" />
-      <data rewardId="26" isAdvancedReward="0" timesLimit="9999" reward="30000_1800001_1" weight="225" />
-      <data rewardId="27" isAdvancedReward="0" timesLimit="9999" reward="30000_1800001_3" weight="75" />
-      <data rewardId="28" isAdvancedReward="0" timesLimit="9999" reward="30000_1300017_5" weight="225" />
-      <data rewardId="29" isAdvancedReward="0" timesLimit="9999" reward="30000_1300017_15" weight="75" />
+      <data rewardId="11" isAdvancedReward="0" timesLimit="9999" reward="30000_850054_1" weight="600" />
+      <data rewardId="12" isAdvancedReward="0" timesLimit="9999" reward="30000_1510002_15" weight="600" />
+      <data rewardId="13" isAdvancedReward="0" timesLimit="9999" reward="30000_13310002_15" weight="600" />
+      <data rewardId="14" isAdvancedReward="0" timesLimit="9999" reward="30000_800143_1" weight="600" />
+      <data rewardId="15" isAdvancedReward="0" timesLimit="9999" reward="30000_800110_1" weight="600" />
+      <data rewardId="16" isAdvancedReward="0" timesLimit="9999" reward="30000_840165_10" weight="600" />
+      <data rewardId="17" isAdvancedReward="0" timesLimit="9999" reward="30000_840194_10" weight="600" />
+      <data rewardId="18" isAdvancedReward="0" timesLimit="9999" reward="30000_1480001_20" weight="450" />
+      <data rewardId="19" isAdvancedReward="0" timesLimit="9999" reward="30000_1480001_60" weight="150" />
+      <data rewardId="20" isAdvancedReward="0" timesLimit="9999" reward="30000_800001_40" weight="450" />
+      <data rewardId="21" isAdvancedReward="0" timesLimit="9999" reward="30000_800001_120" weight="150" />
+      <data rewardId="22" isAdvancedReward="0" timesLimit="9999" reward="30000_800000_2" weight="450" />
+      <data rewardId="23" isAdvancedReward="0" timesLimit="9999" reward="30000_800000_6" weight="150" />
+      <data rewardId="24" isAdvancedReward="0" timesLimit="9999" reward="30000_1782106_1" weight="450" />
+      <data rewardId="25" isAdvancedReward="0" timesLimit="9999" reward="30000_1782106_3" weight="150" />
+      <data rewardId="26" isAdvancedReward="0" timesLimit="9999" reward="30000_1300017_25" weight="225" />
+      <data rewardId="27" isAdvancedReward="0" timesLimit="9999" reward="30000_1300017_75" weight="75" />
+      <data rewardId="28" isAdvancedReward="0" timesLimit="9999" reward="30000_9990032_10" weight="225" />
+      <data rewardId="29" isAdvancedReward="0" timesLimit="9999" reward="30000_9990032_30" weight="75" />
+      <data rewardId="30" isAdvancedReward="0" timesLimit="9999" reward="30000_1782103_10" weight="225" />
+      <data rewardId="31" isAdvancedReward="0" timesLimit="9999" reward="30000_1782103_30" weight="75" />
 </root>

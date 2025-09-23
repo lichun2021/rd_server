@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="10001" range="1_665" weight="100" upWeight="100" divide="0" />
-      <data id="10002" range="666" weight="10" upWeight="20" divide="10" />
-      <data id="10003" range="667_887" weight="100" upWeight="100" divide="0" />
-      <data id="10004" range="888" weight="5" upWeight="10" divide="30" />
-      <data id="10005" range="889_999" weight="100" upWeight="100" divide="0" />
+      <data id="10001" range="1_665" weight="53840" upWeight="53760" divide="0" />
+      <data id="10002" range="666" weight="50" upWeight="100" divide="10" />
+      <data id="10003" range="667_887" weight="23000" upWeight="23000" divide="0" />
+      <data id="10004" range="888" weight="25" upWeight="50" divide="20" />
+      <data id="10005" range="889_998" weight="23000" upWeight="23000" divide="0" />
+      <data id="10006" range="999" weight="10" upWeight="15" divide="50" />
 </root>

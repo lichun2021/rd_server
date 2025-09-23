@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data achieveId="42001" conditionValue="0" cost="10000_1000_66" rewards="10000_1001_66" />
-      <data achieveId="42002" conditionValue="42001" cost="10000_1000_286" rewards="10000_1001_286" />
-      <data achieveId="42003" conditionValue="42002" cost="10000_1000_1286" rewards="10000_1001_1286" />
-      <data achieveId="42004" conditionValue="42003" cost="10000_1000_2886" rewards="10000_1001_2886" />
-      <data achieveId="42005" conditionValue="42004" cost="10000_1000_5886" rewards="10000_1001_5886" />
-      <data achieveId="42006" conditionValue="42005" cost="10000_1000_8886" rewards="10000_1001_8886" />
+      <data achieveId="42001" conditionValue="0" cost="10000_1000_0" rewards="10000_1001_10" />
+      <data achieveId="42002" conditionValue="0" cost="10000_1000_30" rewards="10000_1001_30" />
+      <data achieveId="42003" conditionValue="42001" cost="10000_1000_60" rewards="10000_1001_60" />
+      <data achieveId="42004" conditionValue="42002" cost="10000_1000_120" rewards="10000_1001_120" />
+      <data achieveId="42005" conditionValue="42003" cost="10000_1000_300" rewards="10000_1001_300" />
+      <data achieveId="42006" conditionValue="42004" cost="10000_1000_680" rewards="10000_1001_680" />
+      <data achieveId="42007" conditionValue="42005" cost="10000_1000_980" rewards="10000_1001_980" />
+      <data achieveId="42008" conditionValue="42006" cost="10000_1000_1280" rewards="10000_1001_1280" />
+      <data achieveId="42009" conditionValue="42007" cost="10000_1000_1580" rewards="10000_1001_1580" />
+      <data achieveId="42010" conditionValue="42008" cost="10000_1000_1880" rewards="10000_1001_1880" />
+      <data achieveId="42011" conditionValue="42009" cost="10000_1000_2880" rewards="10000_1001_2880" />
+      <data achieveId="42012" conditionValue="42010" cost="10000_1000_4880" rewards="10000_1001_4880" />
+      <data achieveId="42013" conditionValue="42011" cost="10000_1000_6880" rewards="10000_1001_6880" />
+      <data achieveId="42014" conditionValue="42012" cost="10000_1000_6880" rewards="10000_1001_6880" />
+      <data achieveId="42015" conditionValue="42013" cost="10000_1000_6880" rewards="10000_1001_6880" />
 </root>

@@ -34,7 +34,7 @@ return {
 5	1600017	160200	600	120		1001		MechaDebrisScoreExplain01
 5	1600018	700014	1	10		1340	1015	MechaDebrisScoreExplain02
 5	1600019	500020	3	15		31	16_0	MechaDebrisScoreExplain11
-5	1600020	380200	3600	15		31	15_0	MechaDebrisScoreExplain12
+5	1600020	200100	20	15		31	2_0	MechaDebrisScoreExplain04
 6	1600021	160200	600	120		1001		MechaDebrisScoreExplain01
 6	1600022	700014	1	10		1340	1015	MechaDebrisScoreExplain02
 6	1600023	350100	5	15		101	2208	MechaDebrisScoreExplain13

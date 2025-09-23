@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data termId="1" showTime="2022-8-1 00:00:00" startTime="2022-8-1 00:00:00" endTime="2022-8-20 23:59:59" hiddenTime="2022-8-20 23:59:59" />
+      <data termId="1" showTime="2022-10-14 00:00:00" startTime="2022-10-14 00:00:00" endTime="2022-10-20 23:59:59" hiddenTime="2022-10-23 23:59:59" />
+      <data termId="2" showTime="2023-10-17 00:00:00" startTime="2023-10-17 00:00:00" endTime="2023-10-23 23:59:59" hiddenTime="2023-10-26 23:59:59" />
+      <data termId="3" showTime="2024-10-17 00:00:00" startTime="2024-10-17 00:00:00" endTime="2024-10-23 23:59:59" hiddenTime="2024-10-26 23:59:59" />
 </root>

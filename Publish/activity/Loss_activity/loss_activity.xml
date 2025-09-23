@@ -1,0 +1,24 @@
+# 空置期时间（秒）
+vacancyPeriod = 21600
+
+# 空置期浮动值（秒）
+vacancyPeriodFloat = 3600
+
+# 冷却时间（秒）
+coolingTime = 10800
+
+# 冷却浮动值（秒）
+coolingTimeFloat = 1800
+
+# 注册时间限制（秒）
+registrationTime = 3600
+
+# 活动单期时间（秒）
+lossTime = 432000
+
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 0
+
+# 请求活动接口
+lossDataAddr = http://apps.datamore.tencent-cloud.net/api/pkg_rules/result?rbk_id=8174&secret=7faf7eab3a5dc1459734ee43d3545021&vopenid={0}&vroleid={1}
+

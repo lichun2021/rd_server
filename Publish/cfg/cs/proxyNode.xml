@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
+	<data id="wx1" addr="tcp://192.168.50.82:8280" areaId="1"/>
+	<data id="wx2" addr="tcp://192.168.50.82:8280" areaId="1"/>
+	<data id="qq1" addr="tcp://192.168.50.82:8280" areaId="2"/>
+	<data id="qq2" addr="tcp://192.168.50.82:8280" areaId="2"/>
 </root>

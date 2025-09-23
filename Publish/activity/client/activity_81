@@ -2,17 +2,19 @@ return {
 	prop =
 	{
 		activityId = 81,
-		name = [[双份幸运]],
+		name = [[泰伯竞猜]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">幸运星额外购，双份幸运眷顾您！</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">在活动页面参与赛事竞猜，获得竞猜币，竞猜币可参与竞猜商城礼品兑换。</font>]],
 		priority = 11260,
 		icon = [[Activity_Icon_81_Nor.png]],
 		selecticon = [[Activity_Icon_81_Sel.png]],
 		urlType = [[]],
-		urlQQ = [[https://act.supercore.qq.com/supercore/7792f6b786e4401cb000e3b38d23522a/index.html]],
-		urlWX = [[https://act.supercore.qq.com/supercore/7792f6b786e4401cb000e3b38d23522a/index.html]],
-		guestUrl = [[https://act.supercore.qq.com/supercore/7792f6b786e4401cb000e3b38d23522a/index.html]],
+		urlQQ = [[https://hongjing.qq.com/cp/a202501match/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a202501match/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a202501match/index.html]],
 		platform = [[]],
+		channel = [[]],
+		urlDailyReward = [[]],
 	},
 
 }

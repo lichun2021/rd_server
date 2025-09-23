@@ -1,0 +1,72 @@
+return {
+	prop =
+	{
+		activityId = 347,
+		name = [[异星探索]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间，完成活动任务可获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">星能探测器</font>。<br/>2.使用星能探测器可进行异星探索，并获得随机数量的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">星能</font>。<br/>3.每次异星探索可获得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">10点</font>个人探索积分，并增加相应数量的本服探索积分。<br/>4.每日<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">12点整及20点整</font>，会根据本服<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">新增加</font>的探索积分，在世界刷新出相应数量的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">星能矿</font>，星能矿持续2小时。<br/>5.每新增<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">5000点</font>本服探索积分，可刷新出1个星能矿；星能矿刷新后，各位指挥官可派遣部队前往星能矿搬运星能。<br/>6.每次搬运可获得20星能，每个星能矿可被搬运1次；每日最多通过搬运星能矿获得200星能。<br/>7.活动结束<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">前4小时</font>，无法再进行异星探索，未使用完的星能探测器可在下期活动继续使用。</font>]],
+		priority = 20000,
+		icon = [[Activity_Icon_347_Nor.png]],
+		selecticon = [[Activity_Icon_347_Sel.png]],
+		useItem = [[30000_21063064_1]],
+		price = [[10000_1000_50]],
+		onceMax = 100,
+		refreshTime = [[12:00:00_20:00:00]],
+		serverMaxPoint = 100000000,
+		refreshPoint = 5000,
+		noExplorationTime = 14400,
+		personRankSize = 100,
+		drawMax = 2000,
+	},
+	planet_exploration_reward = [[id	reward	weight	showWeight
+1	2	1	2
+1	30000_802005_30	200	200
+2	30000_802005_18	600	600
+3	30000_802005_12	1000	1000
+4	30000_802005_8	2200	2200
+5	30000_802005_5	6000	6000
+]],
+	planet_exploration_target = [[achieveId	type	conditionValue	isDaily	rewards	color	gotoType	gotoValue	title
+1	1	1	1	2	1	1	2	2
+3470001	1	300		30000_802005_180,30000_802004_180,30000_800002_180,30000_800000_180	1			
+3470002	1	600		30000_802005_360,30000_802004_360,30000_800002_360,30000_800000_360	2			
+3470003	1	1200		30000_802005_600,30000_802004_600,30000_800002_600,30000_800000_600	3			
+3470004	1	2500		30000_802005_960,30000_802004_960,30000_800002_960,30000_800000_960	4			
+3470005	1	5000		30000_802005_1440,30000_802004_1440,30000_800002_1440,30000_800000_1440	5			
+3471001	2	1	1	30000_21063064_1,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2		-1		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">登录游戏<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3471002	2	5	1	30000_21063064_1,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2		2024		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成军情中心清除威胁任务<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3471003	2	1	1	30000_21063064_1,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2		2031		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成星能探索<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">（每日重置）</font></font>
+3471004	2	10		30000_21063064_2,30000_850008_4,30000_850038_4,30000_850018_4,30000_850028_4		2024		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成军情中心清除威胁任务<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+3471005	2	15		30000_21063064_3,30000_850008_6,30000_850038_6,30000_850018_6,30000_850028_6		2024		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成军情中心清除威胁任务<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+3471006	2	20		30000_21063064_4,30000_850008_8,30000_850038_8,30000_850018_8,30000_850028_8		2024		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成军情中心清除威胁任务<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+3471007	2	3		30000_21063064_2,30000_850008_4,30000_850038_4,30000_850018_4,30000_850028_4		2031		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成星能探索<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+3471008	2	5		30000_21063064_3,30000_850008_6,30000_850038_6,30000_850018_6,30000_850028_6		2031		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成星能探索<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+3471009	2	10		30000_21063064_4,30000_850008_8,30000_850038_8,30000_850018_8,30000_850028_8		2031		<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">完成星能探索<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font>次</font>
+]],
+	planet_exploration_rank_reward = [[id	rankUpper	rankLower	rewards
+1	1	1	2
+1	1	1	30000_802005_1800,30000_802004_1800,30000_800002_1800,30000_800000_1800
+2	2	2	30000_802005_1080,30000_802004_1080,30000_800002_1080,30000_800000_1080
+3	3	3	30000_802005_720,30000_802004_720,30000_800002_720,30000_800000_720
+4	4	4	30000_802005_695,30000_802004_695,30000_800002_695,30000_800000_695
+5	5	5	30000_802005_670,30000_802004_670,30000_800002_670,30000_800000_670
+6	6	6	30000_802005_645,30000_802004_645,30000_800002_645,30000_800000_645
+7	7	7	30000_802005_620,30000_802004_620,30000_800002_620,30000_800000_620
+8	8	8	30000_802005_595,30000_802004_595,30000_800002_595,30000_800000_595
+9	9	9	30000_802005_570,30000_802004_570,30000_800002_570,30000_800000_570
+10	10	14	30000_802005_545,30000_802004_545,30000_800002_545,30000_800000_545
+11	15	19	30000_802005_520,30000_802004_520,30000_800002_520,30000_800000_520
+12	20	24	30000_802005_495,30000_802004_495,30000_800002_495,30000_800000_495
+13	25	29	30000_802005_470,30000_802004_470,30000_800002_470,30000_800000_470
+14	30	34	30000_802005_445,30000_802004_445,30000_800002_445,30000_800000_445
+15	35	39	30000_802005_420,30000_802004_420,30000_800002_420,30000_800000_420
+16	40	44	30000_802005_395,30000_802004_395,30000_800002_395,30000_800000_395
+17	45	49	30000_802005_370,30000_802004_370,30000_800002_370,30000_800000_370
+18	50	54	30000_802005_345,30000_802004_345,30000_800002_345,30000_800000_345
+19	55	64	30000_802005_320,30000_802004_320,30000_800002_320,30000_800000_320
+20	65	74	30000_802005_300,30000_802004_300,30000_800002_300,30000_800000_300
+21	75	84	30000_802005_280,30000_802004_280,30000_800002_280,30000_800000_280
+22	85	94	30000_802005_260,30000_802004_260,30000_800002_260,30000_800000_260
+23	95	100	30000_802005_240,30000_802004_240,30000_800002_240,30000_800000_240
+]],
+
+}

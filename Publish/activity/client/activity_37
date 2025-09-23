@@ -5,9 +5,9 @@ return {
 		icon = [[Activity_Icon_37_Nor.png]],
 		selecticon = [[Activity_Icon_37_Sel.png]],
 		title = [[活动详情]],
-		name = [[王牌卡鲁索]],
+		name = [[英雄登场]],
 		priority = 20050,
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您可消耗<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">秘宝抽奖卷</font>抽取稀有道具，若道具不足可使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">金条兑换</font>。<br/>2. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日</font>可进行<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1次免费</font>抽奖。<br/>3. 每次抽奖有概率获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">抽奖增益</font>，获得后<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">下次</font>抽奖可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">多倍奖励</font>。<br/>4. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幸运值</font>决定了获得多倍奖励的机会。<br/>5. 每次抽奖都可累计<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">宝箱积分</font>，累计足够积分可获得宝箱奖励。<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 卡鲁索碎片数量10概率0.1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 50万矿石数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 50万石油数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 通用加速24小时数量1概率2.6%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 8万合金数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 2万稀土数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">7. 卡鲁索碎片数量1概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">8. 训练加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">9. 医疗加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">10. 城建加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">11. 高级行军加速数量1概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">12. 卡鲁索碎片数量3概率0.3%。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您可消耗<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">秘宝抽奖卷</font>抽取稀有道具，若道具不足可使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">金条兑换</font>。<br/>2. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">每日</font>可进行<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1次免费</font>抽奖。<br/>3. 每次抽奖有概率获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">抽奖增益</font>，获得后<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">下次</font>抽奖可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">多倍奖励</font>。<br/>4. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幸运值</font>决定了获得多倍奖励的机会。<br/>5. 每次抽奖都可累计<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">宝箱积分</font>，累计足够积分可获得宝箱奖励。<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。</font><br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">概率公示：<br/></font><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">1. 昆娜碎片数量10概率0.1%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">2. 50万矿石数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">3. 50万石油数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">4. 通用加速24小时数量1概率2.6%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">5. 8万合金数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">6. 2万稀土数量8概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">7. 昆娜碎片数量1概率5%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">8. 训练加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">9. 医疗加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">10. 城建加速2小时数量3概率14%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">11. 高级行军加速数量1概率10%。</font><br/><font color="#adb0c0" face = "Microsoft YaHei" fontsize ="18">12. 昆娜碎片数量3概率0.3%。</font>]],
 		singlePrice = [[30000_9990001_1]],
 		tenPrice = [[30000_9990001_9_10]],
 		itemPrice = [[10000_1000_98]],
@@ -15,27 +15,27 @@ return {
 	},
 	lottery_draw_achieve = [[achieveId	conditionType	conditionValue	rewards
 1	2	1	2
-400001	140300	149	30000_1001073_10,30000_840156_10,30000_1510002_20,30000_13310002_20
-400002	140300	199	30000_1001073_20,30000_840156_15,30000_1510003_10,30000_13310003_10
-400003	140300	279	30000_1001073_30,30000_840156_20,30000_1510003_20,30000_13310003_20
-400004	140300	359	30000_1001073_35,30000_840156_25,30000_1510004_10,30000_13310004_10
-400005	140300	439	30000_1001073_40,30000_840156_30,30000_1510004_20,30000_13310004_20
-400006	140300	599	30000_1001073_65,30000_840156_40,30000_1510005_10,30000_13310005_10
+400001	140300	149	30000_1001077_10,30000_840156_10,30000_1510002_20,30000_13310002_20
+400002	140300	199	30000_1001077_20,30000_840156_15,30000_1510003_10,30000_13310003_10
+400003	140300	279	30000_1001077_30,30000_840156_20,30000_1510003_20,30000_13310003_20
+400004	140300	359	30000_1001077_35,30000_840156_25,30000_1510004_10,30000_13310004_10
+400005	140300	439	30000_1001077_40,30000_840156_30,30000_1510004_20,30000_13310004_20
+400006	140300	599	30000_1001077_65,30000_840156_40,30000_1510005_10,30000_13310005_10
 ]],
 	lottery_draw_cell_cfg = [[id	Quality	numQuality	rewards
 1	1	1	2
-1001	3	0	30000_1001073_10
+1001	3	0	30000_1001077_10
 1002	2	0	30000_850007_8
 1003	2	0	30000_850037_8
 1004	3	0	30000_100060_1
 1005	2	0	30000_850017_8
 1006	2	0	30000_850027_8
-1007	3	0	30000_1001073_3
+1007	3	0	30000_1001077_3
 1008	1	0	30000_104050_3
 1009	1	0	30000_105050_3
 1010	1	0	30000_101050_3
 1011	2	0	30000_820002_1
-1012	3	0	30000_1001073_1
+1012	3	0	30000_1001077_1
 ]],
 	lottery_draw_activity_cfg = [[itemPrice	10000_1000_98
 singlePrice	30000_9990001_1

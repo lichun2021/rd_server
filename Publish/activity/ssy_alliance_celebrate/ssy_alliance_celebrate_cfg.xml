@@ -2,7 +2,7 @@
 serverDelay = 0
 
 # 捐献道具
-donateItem = 30000_2660001_1
+donateItem = 30000_2660003_1
 
 # 捐献积分
 donateExp = 10

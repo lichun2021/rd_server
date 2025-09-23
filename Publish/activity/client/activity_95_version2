@@ -1,0 +1,26 @@
+return {
+	prop =
+	{
+		activityId = 95,
+		name = [[豪礼派送]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，达成指定任务条件后即可领取奖励；<br/>2. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励；</font>]],
+		priority = 20660,
+		icon = [[Activity_Icon_95_Nor.png]],
+		selecticon = [[Activity_Icon_95_Sel.png]],
+		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],
+		dailyRefresh = 1,
+	},
+	gift_send_achieve = [[achieveId	conditionType	conditionValue	warzoneValue	gotoType	gotoValue	rewards	title
+1	1	2	1	1	2	2	2
+950001	140700	1	1	-1	0	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_101050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">累计登录<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>天</font>
+950002	500011	0_999_10	10	31	2_0	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_101050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">击败野外敌军<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+950003	500005	5	5	31	1_1_1007	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_101050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">野外采集<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+950004	20100	0_1000	1000	23	2012	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_101050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练收取部队<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+950005	240100	10	10	1137		30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1001008_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">在特惠商人处购买道具<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+950006	111100	20	20	111		30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1001008_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">帮助盟友<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+950007	112100	20	20	29		30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1001008_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">联盟捐献<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+950008	500003	3	3	25		30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1001008_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">开启联盟宝藏<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>次</font>
+]],
+
+}

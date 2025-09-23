@@ -3,13 +3,13 @@
       <data id="1" canSelected="1" number="1" assignweight="0" weight="100000" rewardId="101" />
       <data id="2" canSelected="0" number="30" assignweight="0" weight="12400000" rewardId="201" />
       <data id="3" canSelected="0" number="6" assignweight="0" weight="12400000" rewardId="301" />
-      <data id="4" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="401,402,403" />
+      <data id="4" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="401,402,403,404,405" />
       <data id="5" canSelected="0" number="30" assignweight="0" weight="12400000" rewardId="501" />
       <data id="6" canSelected="0" number="30" assignweight="0" weight="12400000" rewardId="601" />
-      <data id="7" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="701,702,703" />
+      <data id="7" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="701,702,703,704,705" />
       <data id="8" canSelected="0" number="30" assignweight="0" weight="12300000" rewardId="801" />
       <data id="9" canSelected="0" number="30" assignweight="0" weight="12300000" rewardId="901" />
-      <data id="10" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="1001,1002,1003" />
+      <data id="10" canSelected="1" number="1" assignweight="0" weight="300000" rewardId="1001,1002,1003,1004,1005,1006,1007,1101,1201" />
       <data id="11" canSelected="0" number="30" assignweight="0" weight="12400000" rewardId="1101" />
       <data id="12" canSelected="0" number="10" assignweight="0" weight="12400000" rewardId="1201" />
 </root>

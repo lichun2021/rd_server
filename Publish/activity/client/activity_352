@@ -1,0 +1,24 @@
+return {
+	prop =
+	{
+		activityId = 352,
+		name = [[卡维利珍藏累计活动]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.购买每日必买礼包，可获得卡维利甄选和臻藏卡维利补给箱奖励。<br/>2.开启卡维利甄选可获得荣耀英雄碎片等各种奖励。<br/>3.具体奖励信息数量和概率，可通过点击宝箱进行预览。<br/>4.购买每日必买任意挡位可获得卡维利甄选宝箱。<br/>5.本界面付费获得的卡维利甄选宝箱数量会进行累计，累计一定数量可领取卡维利悬赏奖励。<br/>6.卡维利悬赏进度每周刷新</font>]],
+		priority = 10062,
+		icon = [[Activity_Icon_350_Nor.png]],
+		selecticon = [[Activity_Icon_350_Sel.png]],
+		bigIcon = [[]],
+		recordGiftItems = 840600,
+		timeLimit = [[2024-9-20 00:00:00]],
+	},
+	daiy_buy_gift_achieve = [[achieveId	boxClose	boxOpen	conditionValue	rewards
+1	2	2	2	2
+3520001	Item_DefUp	Item_Guard_Gift_01	5	30000_1000005_2,30000_840351_1,30000_810001_1,30000_1780040_1
+3520002	Item_ArmyUp	Item_Guard_Gift_02	20	30000_1000005_2,30000_840351_2,30000_810001_2,30000_1780040_2
+3520003	Item_DefUp	Item_Guard_Gift_03	40	30000_1000005_4,30000_840351_4,30000_810001_3,30000_1780040_3
+3520004	Item_ArmyUp	Item_Guard_Gift_04	70	30000_1000005_6,30000_840351_8,30000_810001_4,30000_1780040_4
+3520005	Item_DefUp	Item_Guard_Gift_01	120	30000_1000005_8,30000_840351_20,30000_810001_6,30000_1780040_6
+]],
+
+}

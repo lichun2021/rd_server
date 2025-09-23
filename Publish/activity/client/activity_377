@@ -1,0 +1,71 @@
+return {
+	prop =
+	{
+		activityId = 377,
+		name = [[炽耀宝藏]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间指挥官消耗宝藏秘钥开启宝箱。<br/>2.指挥官可点击单个宝箱直接开启，也可点击一键开启所有宝箱。<br/>3.宝箱分为普通宝箱，稀有宝箱，璀璨宝箱，宝箱等级越高奖励越丰厚。<br/>4.开启宝箱会获得随机数量宝藏硬币，可用于兑换稀有奖励。<br/>5.指挥官可通过点击刷新按钮手动刷新当前宝箱。<br/>6.开启当前9个宝箱后自动免费刷新当前宝箱，该次刷新会占用刷新次数。<br/>7.每隔12小时可免费刷新宝箱一次，该次刷新会占用刷新次数。<br/>8.通过兑换商店可获得活动专属称号"秘宝行者"，佩戴称号每次开启宝箱会获额外获得宝藏硬币*6。<br/>9.宝藏秘钥体每期活动可购买4800次，道具活动结束后不回收。<br/><br/>物品列表及概率公式<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">普通宝箱 刷新概率66.7%</font><br/>随机获得以下数量宝藏硬币：<br/>宝藏硬币*13    概率30%<br/>宝藏硬币*16    概率30%<br/>宝藏硬币*20    概率30%<br/>宝藏硬币*28    概率8%<br/>宝藏硬币*38    概率2%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">稀有宝箱 刷新概率22.2%</font><br/>随机获得以下数量宝藏硬币：<br/>宝藏硬币*20    概率30%<br/>宝藏硬币*24   概率30%<br/>宝藏硬币*28   概率30%<br/>宝藏硬币*38    概率8%<br/>宝藏硬币*58    概率2%<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">璀璨宝箱 刷新概率11.1%</font><br/>随机获得以下数量宝藏硬币：<br/>宝藏硬币*25    概率30%<br/>宝藏硬币*30   概率30%<br/>宝藏硬币*36   概率30%<br/>宝藏硬币*58    概率8%<br/>宝藏硬币*108    概率2%<br/>璀璨宝箱出现概率翻倍时，三种宝箱出现概率如下<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">普通宝箱 刷新概率55.6%</font><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">稀有宝箱 刷新概率22.2%</font><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="20">璀璨宝箱 刷新概率22.2%</font><br/></font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_377_Nor.png]],
+		selecticon = [[Activity_Icon_377_Sel.png]],
+		bigIcon = [[]],
+		freeRefreshTimes = 43200,
+		refreshTimes = 88,
+		refreshCost = [[30000_1377001_5]],
+		openTreasureCost = [[30000_1377001_6]],
+		purchaseItemCost = [[10000_1000_16]],
+		purchaseItemTimes = 4800,
+		accelerateItemId = [[30000_1377001_1]],
+	},
+	hidden_treasure_new_award_pool = [[rewardId	boxRank	reward	weight	buffWeight	extraReward	integralReward	itemsReward	boxName
+1	1	1	1	1	2	2	2	2
+1	1	301016	240	200	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300027_1200_240	@Act377Box1
+2	1	301015	480	400	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300027_750_480	@Act377Box1
+3	1	301014	720	600	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300027_500_720	@Act377Box1
+4	1	301013	960	800	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300017_1800_960	@Act377Box1
+5	1	301012	1500	1250	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300017_1000_1500	@Act377Box1
+6	1	301011	2100	1750	30000_1377002_6	30000_1377002_1 ,13_38	30000_1300017_600_2100	@Act377Box1
+7	2	301026	80	80	30000_1377002_6	30000_1377002_1,20_58	30000_1300037_24_80	@Act377Box2
+8	2	301025	160	160	30000_1377002_6	30000_1377002_1,20_58	30000_1300037_15_160	@Act377Box2
+9	2	301024	240	240	30000_1377002_6	30000_1377002_1,20_58	30000_1300037_10_240	@Act377Box2
+10	2	301023	320	320	30000_1377002_6	30000_1377002_1,20_58	30000_1300027_360_320	@Act377Box2
+11	2	301022	500	500	30000_1377002_6	30000_1377002_1,20_58	30000_1300027_225_500	@Act377Box2
+12	2	301021	700	700	30000_1377002_6	30000_1377002_1,20_58	30000_1300027_150_700	@Act377Box2
+13	3	301036	100	200	30000_1377002_6	30000_1377002_1,25_108	30000_1300037_24_100	@Act377Box3
+14	3	301035	150	300	30000_1377002_6	30000_1377002_1,25_108	30000_1300037_15_150	@Act377Box3
+15	3	301034	200	400	30000_1377002_6	30000_1377002_1,25_108	30000_1300037_10_200	@Act377Box3
+16	3	301033	150	300	30000_1377002_6	30000_1377002_1,25_108	30000_1300027_360_150	@Act377Box3
+17	3	301032	200	400	30000_1377002_6	30000_1377002_1,25_108	30000_1300027_225_200	@Act377Box3
+18	3	301031	200	400	30000_1377002_6	30000_1377002_1,25_108	30000_1300027_150_200	@Act377Box3
+]],
+	hidden_treasure_box_award_new = [[achieveId	conditionType	conditionValue	rewards	buffId	taskDesc
+1	1	1	2	1	2
+3770001	37701	10	30000_1300037_75,30000_1300027_1000,30000_810001_20,30000_1780050_5	2	Act377TaskDesc
+3770002	37701	30	30000_1300037_150,30000_1300027_2000,30000_810001_40,30000_1780050_10	1	Act377TaskDesc
+3770003	37701	80	30000_1300037_225,30000_1300027_3000,30000_810001_60,30000_1780050_15	3	Act377TaskDesc
+3770004	37701	150	30000_1300037_300,30000_1300027_4000,30000_810001_80,30000_1780050_20	4	Act377TaskDesc
+3770005	37701	240	30000_1300037_450,30000_1300027_6000,30000_810001_120,30000_1780050_30		Act377TaskDesc
+]],
+	hidden_treasure_exchange_new = [[id	priority	exchangerequirements	exchangeobtain	string	limittimes
+1	1	2	2	2	1
+1	1	30000_1377002_50000	30000_9978000_1	ActivityExchangeGainItemDes1	1
+2	2	30000_1377002_3000	30000_9978003_1	ActivityExchangeGainItemDes1	1
+3	3	30000_1377002_50	30000_820002_1	ActivityExchangeGainItemDes1	400
+4	4	30000_1377002_20	30000_810001_1	ActivityExchangeGainItemDes1	800
+5	5	30000_1377002_20	30000_1300027_16	ActivityExchangeGainItemDes1	200
+6	6	30000_1377002_12	30000_21063005_5	ActivityExchangeGainItemDes1	300
+7	7	30000_1377002_10	30000_802004_4	ActivityExchangeGainItemDes1	400
+8	8	30000_1377002_6	30000_1782103_5	ActivityExchangeGainItemDes1	600
+9	9	30000_1377002_4	30000_800002_3	ActivityExchangeGainItemDes1	1000
+10	10	30000_1377002_2	30000_1300017_8	ActivityExchangeGainItemDes1	2000
+11	11	30000_1377002_1	30000_850010_1	ActivityExchangeGainItemDes1	99999
+]],
+	hidden_treasure_buff_new = [[buffId	buffType	buffPram	buffDesc	buffDesc2	buffDesc3	color
+1	1	2	2	2	2	1
+1	1	15,2	Act377BuffDesc1	@Act377buffDesc1	Act377BuffDesc31	1
+2	2	5	Act377BuffDesc2	@Act377buffDesc2	Act377BuffDesc32	2
+3	3	15	Act377BuffDesc3	@Act377buffDesc3	Act377BuffDesc33	3
+4	4	15	Act377BuffDesc4	@Act377buffDesc4	Act377BuffDesc34	4
+]],
+
+}

@@ -1,9 +1,0 @@
-# 第一个英雄解锁消耗
-archivesFirstHeroCost = 30000_2110001_1
-
-# 解锁递增
-archivesAccumulationCost = 2
-
-# 解锁递增上限
-maxCost = 30
-

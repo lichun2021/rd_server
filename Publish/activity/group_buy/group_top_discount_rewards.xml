@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" buyTimes="1_2" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="2" buyTimes="1_3" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="3" buyTimes="1_4" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="4" buyTimes="1_5" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="5" buyTimes="1_6" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="6" buyTimes="1_7" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="7" buyTimes="1_8" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="8" buyTimes="1_9" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="9" buyTimes="1_10" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="10" buyTimes="1_11" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="11" buyTimes="1_12" rewards="30000_843008_1,30000_843008_20" points="99" />
-      <data id="12" buyTimes="1_13" rewards="30000_843008_1,30000_843008_20" points="99" />
+      <data id="1" buyTimes="3_20" rewards="30000_843012_1,30000_843012_2" points="40" />
+      <data id="2" buyTimes="10_40" rewards="30000_1000005_3,30000_1000005_4" points="40" />
+      <data id="3" buyTimes="10_50" rewards="30000_1300037_30,30000_1300037_55" points="40" />
+      <data id="4" buyTimes="15_80" rewards="30000_21070056_90,30000_21070056_185" points="40" />
+      <data id="5" buyTimes="15_80" rewards="30000_21065001_45,30000_21065001_95" points="40" />
+      <data id="6" buyTimes="25_130" rewards="30000_9990041_750,30000_9990041_1460" points="40" />
+      <data id="7" buyTimes="25_130" rewards="30000_9990042_150,30000_9990042_295" points="40" />
+      <data id="8" buyTimes="25_130" rewards="30000_9990051_375,30000_9990051_730" points="40" />
+      <data id="9" buyTimes="25_130" rewards="30000_9990052_75,30000_9990052_150" points="40" />
+      <data id="10" buyTimes="15_80" rewards="30000_802005_225,30000_802005_455" points="40" />
+      <data id="11" buyTimes="50_270" rewards="30000_1300027_750,30000_1300027_1545" points="40" />
+      <data id="12" buyTimes="20_110" rewards="30000_21063005_300,30000_21063005_635" points="40" />
+      <data id="13" buyTimes="50_270" rewards="30000_802004_375,30000_802004_775" points="40" />
+      <data id="14" buyTimes="40_230" rewards="30000_1782103_600,30000_1782103_1355" points="40" />
+      <data id="15" buyTimes="30_170" rewards="30000_9990032_720,30000_9990032_1595" points="40" />
+      <data id="16" buyTimes="100_580" rewards="30000_1300017_3000,30000_1300017_6860" points="40" />
+      <data id="17" buyTimes="10_50" rewards="30000_1782106_105,30000_1782106_195" points="40" />
+      <data id="18" buyTimes="40_230" rewards="30000_800002_720,30000_800002_1630" points="40" />
+      <data id="19" buyTimes="5_20" rewards="30000_100050_75,30000_100050_95" points="40" />
 </root>

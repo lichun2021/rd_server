@@ -12,6 +12,7 @@ return {
 		urlWX = [[https://w.url.cn/s/AJBYhCX]],
 		guestUrl = [[https://w.url.cn/s/AJBYhCX]],
 		platform = [[]],
+		urlDailyReward = [[]],
 	},
 
 }

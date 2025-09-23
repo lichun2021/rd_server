@@ -9,7 +9,7 @@ return {
 		icon = [[Activity_Icon_58_Nor.png]],
 		selecticon = [[Activity_Icon_58_Sel.png]],
 		toType = 1,
-		serverDelay = 0,
+		serverDelay = 1728000,
 	},
 
 }

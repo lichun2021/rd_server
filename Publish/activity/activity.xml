@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data activityId="6" activityName="基地崛起" activityType="6" timeType="4" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="7" activityName="累计登录" activityType="7" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="6" activityName="基地崛起" activityType="6" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="4" />
+      <data activityId="7" activityName="累计登录" activityType="7" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="3" />
       <data activityId="8" activityName="每日签到" activityType="8" timeType="4" isOpen="0" entranceType="2" hasBillBoard="0" />
-      <data activityId="10" activityName="八日庆典" activityType="10" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="10" activityName="八日庆典" activityType="10" timeType="2" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="4" />
       <data activityId="11" activityName="成长基金" activityType="11" timeType="4" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="13" activityName="使命战争" activityType="13" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="15" activityName="王牌指挥官" activityType="15" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
       <data activityId="16" activityName="急先锋" activityType="16" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="17" activityName="幽灵的复仇" activityType="17" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="18" activityName="辐射危机" activityType="18" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="19" activityName="战力狂飙" activityType="19" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="19" activityName="战力狂飙" activityType="19" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="3" />
       <data activityId="20" activityName="登录基金" activityType="20" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="21" activityName="超值月卡" activityType="21" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="22" activityName="首充奖励" activityType="22" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="22" activityName="首充奖励" activityType="22" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="23" activityName="全服buff" activityType="23" timeType="3" isOpen="0" entranceType="1" hasBillBoard="0" />
       <data activityId="24" activityName="据点活动" activityType="24" timeType="3" isOpen="0" entranceType="1" hasBillBoard="0" />
       <data activityId="25" activityName="火线征召" activityType="25" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="26" activityName="全军动员" activityType="26" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="27" activityName="全日警戒" activityType="27" timeType="4" isOpen="0" entranceType="1" hasBillBoard="0" />
       <data activityId="28" activityName="精工锻造" activityType="28" timeType="4" isOpen="0" entranceType="1" hasBillBoard="0" />
-      <data activityId="29" activityName="英雄军团" activityType="29" timeType="4" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="30" activityName="基金团购" activityType="30" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="29" activityName="英雄军团" activityType="29" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="4" />
+      <data activityId="30" activityName="基金团购" activityType="30" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="3" />
       <data activityId="1" activityName="超值福利" activityType="1" timeType="4" isOpen="1" entranceType="1" hasBillBoard="0" areaLimit="qq" />
       <data activityId="31" activityName="充值返利" activityType="31" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="32" activityName="消费返利" activityType="32" timeType="3" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="33" activityName="首领入侵" activityType="33" timeType="3" isOpen="0" entranceType="1" hasBillBoard="0" />
       <data activityId="34" activityName="充值翻倍" activityType="34" timeType="3" isOpen="0" entranceType="1" hasBillBoard="0" />
-      <data activityId="36" activityName="充值豪礼" activityType="36" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="36" activityName="充值豪礼" activityType="36" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="5" />
       <data activityId="35" activityName="每日必买" activityType="35" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="38" activityName="战区争夺" activityType="38" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="37" activityName="SS米迦勒" activityType="37" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
@@ -36,15 +36,15 @@
       <data activityId="45" activityName="欢乐万圣节" activityType="2" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="41" activityName="连续充值" activityType="41" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="40" activityName="铁血军团" activityType="40" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
-      <data activityId="44" activityName="藏宝图" activityType="44" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="44" activityName="藏宝图" activityType="44" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="2" />
       <data activityId="50" activityName="感恩尊享" activityType="50" timeType="3" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="43" activityName="复制中心" activityType="43" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="4" activityName="海量加速" activityType="4" timeType="3" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="3" activityName="备战远征" activityType="3" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="51" activityName="特权补给" activityType="51" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="52" activityName="勋章补给" activityType="52" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="51" activityName="特权补给" activityType="51" timeType="3" isOpen="0" entranceType="2" hasBillBoard="0" />
+      <data activityId="52" activityName="勋章补给" activityType="52" timeType="3" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="53" activityName="SS英雄宝箱" activityType="53" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="61" activityName="战略储备" activityType="61" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="61" activityName="战略储备" activityType="61" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="3" />
       <data activityId="62" activityName="玫瑰之约" activityType="62" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="63" activityName="使命战争" activityType="63" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="64" activityName="辐射危机" activityType="64" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
@@ -58,7 +58,7 @@
       <data activityId="74" activityName="绑定有礼" activityType="74" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="75" activityName="幸运星" activityType="75" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="76" activityName="限时掉落" activityType="76" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="77" activityName="特惠惊喜" activityType="77" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="77" activityName="特惠惊喜" activityType="77" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="78" activityName="经典归来" activityType="78" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="79" activityName="礼包返利" activityType="79" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="80" activityName="超值好礼" activityType="80" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
@@ -74,16 +74,16 @@
       <data activityId="91" activityName="英雄回归" activityType="91" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="92" activityName="狙杀大师" activityType="92" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="93" activityName="能量收集" activityType="93" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="95" activityName="豪礼派送" activityType="95" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="95" activityName="豪礼派送" activityType="95" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="2" />
       <data activityId="96" activityName="资源折扣" activityType="96" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="97" activityName="红包贺岁" activityType="97" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="97" activityName="红包贺岁" activityType="97" timeType="1" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="98" activityName="玩家红包" activityType="98" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="99" activityName="欢购豪礼" activityType="99" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="100" activityName="装扮专场" activityType="100" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="101" activityName="装扮兑换" activityType="101" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="102" activityName="新春寻宝" activityType="102" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="103" activityName="机甲觉醒" activityType="103" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="104" activityName="浪漫花语" activityType="104" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="104" activityName="浪漫花语" activityType="104" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="105" activityName="好友召回" activityType="105" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
       <data activityId="106" activityName="发展冲刺" activityType="106" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
       <data activityId="107" activityName="专属军资" activityType="107" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
@@ -116,21 +116,21 @@
       <data activityId="133" activityName="机甲拼图" activityType="133" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="135" activityName="时空转盘" activityType="135" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="136" activityName="周年历程" activityType="136" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="137" activityName="邀友抢红包" activityType="137" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" areaLimit="wx" />
+      <data activityId="137" activityName="邀友抢红包" activityType="137" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="138" activityName="皮肤计划" activityType="138" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="140" activityName="新服回馈" activityType="140" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="140" activityName="新服回馈" activityType="140" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="5" />
       <data activityId="139" activityName="直购基金" activityType="139" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="141" activityName="今日累充" activityType="141" timeType="1" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="142" activityName="军事备战" activityType="142" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="144" activityName="嘉年华" activityType="144" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="144" activityName="11.11狂欢" activityType="144" timeType="1" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="143" activityName="联盟总动员" activityType="143" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="58" activityName="首充双倍重置" activityType="58" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="58" activityName="首充双倍重置" activityType="58" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="147" activityName="突破枷锁" activityType="147" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="148" activityName="51登录" activityType="148" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="149" activityName="琳琅特惠" activityType="149" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="151" activityName="勋章行动" activityType="151" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="146" activityName="红警锦鲤" activityType="146" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="150" activityName="瓜分金币" activityType="150" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="150" activityName="瓜分金币" activityType="150" timeType="1" isOpen="1" entranceType="13" hasBillBoard="0" />
       <data activityId="155" activityName="英雄皮肤专场" activityType="155" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="153" activityName="装备科技" activityType="153" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="154" activityName="场景分享" activityType="154" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
@@ -139,10 +139,10 @@
       <data activityId="157" activityName="今日累充" activityType="157" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="159" activityName="泰伯利亚竞猜" activityType="159" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="160" activityName="机甲进化" activityType="160" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="161" activityName="基地飞升" activityType="161" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="161" activityName="基地飞升" activityType="161" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="3" />
       <data activityId="162" activityName="指挥官学院" activityType="162" timeType="7" isOpen="0" entranceType="1" hasBillBoard="0" cfgVersion="1" />
       <data activityId="165" activityName="装备黑市" activityType="165" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="163" activityName="圣诞大作战" activityType="163" timeType="1" isOpen="1" entranceType="9" hasBillBoard="0" />
+      <data activityId="163" activityName="圣诞大作战" activityType="163" timeType="1" isOpen="1" entranceType="1003" hasBillBoard="0" />
       <data activityId="164" activityName="加油运输车" activityType="164" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
       <data activityId="166" activityName="命运左轮枪" activityType="166" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="167" activityName="资源保卫战" activityType="167" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
@@ -158,59 +158,59 @@
       <data activityId="179" activityName="折扣礼包" activityType="179" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
       <data activityId="180" activityName="军魂传承" activityType="180" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="188" activityName="甄选换购" activityType="188" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="184" activityName="辐射战争" activityType="184" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="185" activityName="使命战争" activityType="185" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="184" activityName="辐射战争" activityType="184" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="3" />
+      <data activityId="185" activityName="泰星入侵" activityType="185" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="189" activityName="免费换装扮" activityType="189" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="190" activityName="装备秘宝" activityType="190" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="191" activityName="能源滚滚" activityType="191" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="198" activityName="武装科技" activityType="198" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="192" activityName="联盟盛典" activityType="192" timeType="1" isOpen="1" entranceType="4" hasBillBoard="0" />
+      <data activityId="192" activityName="联盟盛典" activityType="192" timeType="1" isOpen="1" entranceType="1003" hasBillBoard="0" />
       <data activityId="193" activityName="礼物兑换" activityType="193" timeType="1" isOpen="1" entranceType="4" hasBillBoard="0" />
       <data activityId="194" activityName="福船送礼" activityType="194" timeType="1" isOpen="1" entranceType="4" hasBillBoard="0" />
-      <data activityId="195" activityName="中秋特惠" activityType="195" timeType="1" isOpen="1" entranceType="4" hasBillBoard="0" />
+      <data activityId="195" activityName="中秋特惠" activityType="195" timeType="1" isOpen="1" entranceType="1000" hasBillBoard="0" />
       <data activityId="196" activityName="福袋金喜" activityType="196" timeType="1" isOpen="1" entranceType="4" hasBillBoard="0" />
-      <data activityId="197" activityName="充值福利" activityType="197" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="197" activityName="充值福利" activityType="197" timeType="1" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="201" activityName="勋章投资" activityType="201" timeType="7" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="204" activityName="点券夺宝" activityType="204" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="207" activityName="泰能投资" activityType="207" timeType="7" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="208" activityName="泰晶投资" activityType="208" timeType="7" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="206" activityName="霸主赐福" activityType="206" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="205" activityName="霸主之争" activityType="205" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="210" activityName="超级金矿" activityType="210" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="210" activityName="超级金矿" activityType="210" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="4" />
       <data activityId="209" activityName="空投补给" activityType="209" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="211" activityName="新兵动员令" activityType="211" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="211" activityName="新兵动员令" activityType="211" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="3" />
       <data activityId="215" activityName="光辉盛宴" activityType="215" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="225" activityName="七夕充值" activityType="225" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="225" activityName="七夕充值" activityType="225" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="227" activityName="双享好礼" activityType="227" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="220" activityName="万人团购" activityType="220" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="230" activityName="刮刮卡" activityType="230" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="236" activityName="红警战令" activityType="236" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="243" activityName="装备工匠" activityType="243" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="244" activityName="荣耀返利" activityType="244" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="244" activityName="荣耀返利 " activityType="244" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="216" activityName="红包庆典" activityType="216" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="245" activityName="战地寻宝" activityType="245" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="241" activityName="鸿运战虎" activityType="241" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
-      <data activityId="239" activityName="周年烟花" activityType="239" timeType="3" isOpen="1" entranceType="5" hasBillBoard="0" />
-      <data activityId="238" activityName="百粽盛宴" activityType="238" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
-      <data activityId="240" activityName="周年历程" activityType="240" timeType="3" isOpen="1" entranceType="5" hasBillBoard="0" />
-      <data activityId="242" activityName="秘粽寻香" activityType="242" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="241" activityName="鸿运战虎" activityType="241" timeType="3" isOpen="1" entranceType="1002" hasBillBoard="0" />
+      <data activityId="239" activityName="周年烟花" activityType="239" timeType="3" isOpen="1" entranceType="1001" hasBillBoard="0" />
+      <data activityId="238" activityName="节日战令" activityType="238" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="240" activityName="周年历程" activityType="240" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="242" activityName="秘粽寻香" activityType="242" timeType="3" isOpen="1" entranceType="1000" hasBillBoard="0" />
       <data activityId="219" activityName="庆典祝福语" activityType="219" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="253" activityName="心灵战场" activityType="253" timeType="4" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="260" activityName="军备升级" activityType="260" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="261" activityName="装备战令" activityType="261" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="262" activityName="0元礼包" activityType="262" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="263" activityName="成长基金" activityType="263" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="267" activityName="超值折扣" activityType="267" timeType="3" isOpen="1" entranceType="6" hasBillBoard="0" />
-      <data activityId="264" activityName="粽情祈愿" activityType="264" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" />
-      <data activityId="265" activityName="巧觅粽叶" activityType="265" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
-      <data activityId="266" activityName="联盟积分目标" activityType="266" timeType="3" isOpen="1" entranceType="6" hasBillBoard="0" />
+      <data activityId="262" activityName="0元礼包" activityType="262" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="5" />
+      <data activityId="263" activityName="成长基金" activityType="263" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="2" />
+      <data activityId="267" activityName="超值折扣" activityType="267" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="264" activityName="粽情祈愿" activityType="264" timeType="1" isOpen="1" entranceType="1002" hasBillBoard="0" />
+      <data activityId="265" activityName="巧觅粽叶" activityType="265" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="266" activityName="联盟积分目标" activityType="266" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
       <data activityId="268" activityName="回流拼图" activityType="268" timeType="3" isOpen="1" entranceType="3" hasBillBoard="0" />
       <data activityId="270" activityName="图纸达人" activityType="270" timeType="3" isOpen="1" entranceType="7" hasBillBoard="0" />
-      <data activityId="271" activityName="能量聚集" activityType="271" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="271" activityName="能量聚集" activityType="271" timeType="3" isOpen="1" entranceType="1002" hasBillBoard="0" />
       <data activityId="272" activityName="战火重燃" activityType="272" timeType="3" isOpen="1" entranceType="7" hasBillBoard="0" />
       <data activityId="273" activityName="硝烟再起" activityType="273" timeType="3" isOpen="1" entranceType="7" hasBillBoard="0" />
-      <data activityId="274" activityName="限时秒杀" activityType="274" timeType="1" isOpen="1" hasBillBoard="0" />
-      <data activityId="275" activityName="积分狂欢" activityType="275" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
+      <data activityId="274" activityName="限时秒杀" activityType="274" timeType="1" isOpen="1" entranceType="8" hasBillBoard="0" />
+      <data activityId="275" activityName="积分狂欢" activityType="275" timeType="3" isOpen="1" entranceType="8" hasBillBoard="0" checkMergeServer="TRUE" />
       <data activityId="269" activityName="泰能宝库" activityType="269" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="276" activityName="春之旅途" activityType="276" timeType="3" isOpen="1" entranceType="11" hasBillBoard="0" />
       <data activityId="277" activityName="冬日装扮" activityType="277" timeType="3" isOpen="1" entranceType="9" hasBillBoard="0" />
@@ -218,39 +218,103 @@
       <data activityId="279" activityName="新春累充" activityType="279" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
       <data activityId="280" activityName="H5组队回流" activityType="280" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="281" activityName="回归特权" activityType="281" timeType="3" isOpen="1" entranceType="3" hasBillBoard="0" />
-      <data activityId="282" activityName="机甲拼图" activityType="282" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="284" activityName="指挥官学院-新服" activityType="284" timeType="7" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="285" activityName="登录基金-新服" activityType="285" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="283" activityName="雄芯壮志" activityType="283" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="1" />
-      <data activityId="286" activityName="赐福礼盒" activityType="286" timeType="3" isOpen="1" entranceType="10" hasBillBoard="0" />
+      <data activityId="282" activityName="机甲拼图" activityType="282" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="5" />
+      <data activityId="284" activityName="指挥官学院-新服" activityType="284" timeType="7" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="5" />
+      <data activityId="285" activityName="登录基金-新服" activityType="285" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="4" />
+      <data activityId="283" activityName="雄芯壮志" activityType="283" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="3" />
+      <data activityId="286" activityName="赐福礼盒" activityType="286" timeType="3" isOpen="1" entranceType="1000" hasBillBoard="0" />
       <data activityId="287" activityName="红蓝对决" activityType="287" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="288" activityName="晶体投资" activityType="288" timeType="7" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="289" activityName="精装夺宝" activityType="289" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="290" activityName="流失活动" activityType="290" timeType="4" isOpen="1" entranceType="12" hasBillBoard="0" />
       <data activityId="293" activityName="移民活动" activityType="293" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
       <data activityId="294" activityName="泰能机密" activityType="294" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
-      <data activityId="292" activityName="幸运转盘" activityType="292" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
       <data activityId="295" activityName="初赛选美" activityType="295" timeType="1" isOpen="1" entranceType="14" hasBillBoard="0" />
       <data activityId="296" activityName="决赛选美" activityType="296" timeType="1" isOpen="1" entranceType="14" hasBillBoard="0" />
+      <data activityId="292" activityName="幸运转盘" activityType="292" timeType="3" isOpen="1" entranceType="1000" hasBillBoard="0" />
       <data activityId="297" activityName="欢乐限购" activityType="297" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="298" activityName="盟军祝福" activityType="298" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="299" activityName="无尽挖矿" activityType="299" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="300" activityName="深海密藏" activityType="300" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="301" activityName="七夕相会" activityType="301" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
       <data activityId="302" activityName="天降鸿福" activityType="302" timeType="3" isOpen="1" entranceType="16" hasBillBoard="0" />
-      <data activityId="303" activityName="听我说，谢谢你" activityType="303" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="304" activityName="英雄祈福" activityType="304" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="314" activityName="陨晶战场成就" activityType="314" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="305" activityName="加速兑换" activityType="305" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="304" activityName="英雄祈福" activityType="304" timeType="3" isOpen="1" entranceType="1003" hasBillBoard="0" />
+      <data activityId="303" activityName="感恩福利" activityType="303" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
+      <data activityId="306" activityName="四周年入口" activityType="306" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
+      <data activityId="308" activityName="荣耀同享" activityType="308" timeType="3" isOpen="1" entranceType="1001" hasBillBoard="0" />
+      <data activityId="310" activityName="凯恩投放" activityType="310" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="307" activityName="四周年入口" activityType="307" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
+      <data activityId="309" activityName="凯恩返场" activityType="309" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="312" activityName="首充" activityType="312" timeType="2" isOpen="1" entranceType="18" hasBillBoard="0" cfgVersion="3" />
+      <data activityId="311" activityName="回收活动" activityType="311" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="313" activityName="登录豪礼" activityType="313" timeType="4" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="5" />
+      <data activityId="314" activityName="陨晶成就" activityType="314" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="315" activityName="双旦乐透" activityType="315" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="316" activityName="星甲召唤" activityType="316" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="317" activityName="机甲研究所" activityType="317" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="318" activityName="合服预告" activityType="318" timeType="4" isOpen="1" entranceType="19" hasBillBoard="0" />
       <data activityId="319" activityName="玫瑰赠礼" activityType="319" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="320" activityName="赛季活动" activityType="320" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="320" activityName="荣耀联赛" activityType="320" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="321" activityName="星耀勋章" activityType="321" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="322" activityName="情报储蓄" activityType="322" timeType="2" isOpen="1" entranceType="0" hasBillBoard="0" />
+      <data activityId="323" activityName="全服科技" activityType="323" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="1" />
       <data activityId="324" activityName="拼单福利" activityType="324" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="325" activityName="数据迁移" activityType="325" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="332" activityName="金币觅宝" activityType="332" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="326" activityName="巨星拼图" activityType="326" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="327" activityName="鸿运夺金" activityType="327" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="328" activityName="兵种转换" activityType="328" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="329" activityName="5与伦比" activityType="329" timeType="1" isOpen="1" entranceType="1000" hasBillBoard="0" />
+      <data activityId="330" activityName="庆典基金" activityType="330" timeType="1" isOpen="1" entranceType="1000" hasBillBoard="0" />
+      <data activityId="331" activityName="参谋培养" activityType="331" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="332" activityName="金币觅宝" activityType="332" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="2" />
       <data activityId="333" activityName="金币觅宝" activityType="333" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="337" activityName="新直购礼包" activityType="337" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
-      <data activityId="341" activityName="邀请合服" activityType="341" timeType="4" isOpen="1" entranceType="20" hasBillBoard="0" />
+      <data activityId="334" activityName="新兵作训" activityType="334" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="2" />
+      <data activityId="335" activityName="实力飞升" activityType="335" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="336" activityName="实力飞升" activityType="336" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="337" activityName="尊享好礼" activityType="337" timeType="3" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="338" activityName="节日试炼" activityType="338" timeType="1" isOpen="1" entranceType="1000" hasBillBoard="0" />
+      <data activityId="339" activityName="回流飞升" activityType="339" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="340" activityName="回流飞升" activityType="340" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
+      <data activityId="341" activityName="邀请合服" activityType="341" timeType="1" isOpen="1" entranceType="20" hasBillBoard="0" />
       <data activityId="342" activityName="URL活动342" activityType="342" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="343" activityName="URL活动343" activityType="343" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
       <data activityId="344" activityName="URL活动344" activityType="344" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="345" activityName="积分冲刺" activityType="345" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" checkMergeServer="TRUE" />
+      <data activityId="346" activityName="积分冲刺" activityType="346" timeType="3" isOpen="1" entranceType="3" hasBillBoard="0" />
+      <data activityId="347" activityName="异星探索" activityType="347" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="348" activityName="幸运补给" activityType="348" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
       <data activityId="349" activityName="成长激励" activityType="349" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="350" activityName="机甲皮肤专场" activityType="350" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="352" activityName="每日必买活动" activityType="352" timeType="1" isOpen="1" entranceType="21" hasBillBoard="0" />
+      <data activityId="354" activityName="周年六重礼、" activityType="354" timeType="1" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="353" activityName="周年福运卡" activityType="353" timeType="1" isOpen="1" entranceType="17" hasBillBoard="0" />
+      <data activityId="355" activityName="超武研究所" activityType="355" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="356" activityName="回流转兵种" activityType="356" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
+      <data activityId="357" activityName="回流转服" activityType="357" timeType="1" isOpen="1" entranceType="3" hasBillBoard="0" />
+      <data activityId="351" activityName="庆典演练" activityType="351" timeType="1" isOpen="1" entranceType="1001" hasBillBoard="0" />
+      <data activityId="358" activityName="星海投资" activityType="358" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="359" activityName="联合作战" activityType="359" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" checkMergeServer="TRUE" />
+      <data activityId="360" activityName="超武再临" activityType="360" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="361" activityName="新春头彩专柜" activityType="361" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" checkMergeServer="TRUE" />
+      <data activityId="362" activityName="泰矿提炼所" activityType="362" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="363" activityName="秘境寻宝" activityType="363" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="364" activityName="深海追击" activityType="364" timeType="1" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="365" activityName="超值厚礼" activityType="365" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="366" activityName="荣耀动员" activityType="366" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="367" activityName="破晓启程" activityType="367" timeType="2" isOpen="1" entranceType="15" hasBillBoard="0" />
+      <data activityId="368" activityName="合服比拼" activityType="368" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="369" activityName="核心勘探" activityType="369" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="371" activityName="赛后庆典" activityType="371" timeType="1" isOpen="1" entranceType="1001" hasBillBoard="0" />
+      <data activityId="370" activityName="装扮收集" activityType="370" timeType="3" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="372" activityName="场景化入口" activityType="372" timeType="3" isOpen="1" entranceType="22" hasBillBoard="0" />
+      <data activityId="374" activityName="巨龙来袭" activityType="374" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="373" activityName="赛季拼图" activityType="373" timeType="3" isOpen="1" entranceType="1002" hasBillBoard="0" />
+      <data activityId="376" activityName="有福同享" activityType="376" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="375" activityName="物资运送" activityType="375" timeType="3" isOpen="1" entranceType="1003" hasBillBoard="0" checkMergeServer="TRUE" />
+      <data activityId="377" activityName="星耀宝藏" activityType="377" timeType="1" isOpen="1" entranceType="2" hasBillBoard="0" />
+      <data activityId="378" activityName="激情畅战" activityType="378" timeType="1" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="1" />
+      <data activityId="379" activityName="url活动-379" activityType="379" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="380" activityName="url活动-380" activityType="380" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
+      <data activityId="381" activityName="url活动-381" activityType="381" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
 </root>

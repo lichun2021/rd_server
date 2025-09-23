@@ -1,21 +1,39 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 1209600
+serverDelay = 1728000
 
 # 每日刷新时间间隔（分钟）
-dailyRefreshTime = 15
+dailyRefreshTime = 120
+
+# 每日刷新时间小时，时间点
+addPoolTimeHour = 10,12,14,16,18,20
 
 # 活动可抽取时间段
-drawTimes = 8:00-22:00
+drawTimes = 10:00-22:00
 
 # 基地等级大于等于xx级
-baseLevelLimit = 13
+baseLevelLimit = 35
 
 # 贵族等级大于x级
 vipLevelLimit = 8
 
-# 分组数量
-groupAmount = 3
+# 微信分组数量
+groupAmount = 10
+
+# qq分组数量
+groupQQAmount = 14
 
 # 抽奖存储数据
 saveDataLimit = 200
+
+# 结束转换抽奖道具
+drawItem = 30000_21070060_1
+
+# 结束保留抽奖道具
+drawReserveItem = 30000_21070059_1
+
+# 抽奖道具活动结束兑换为30金币
+drawItemChange = 10000_1001_30
+
+# 服务器分组时间（秒）
+groupingTime = 300
 

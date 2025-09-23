@@ -1,9 +1,9 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 1209600
+serverDelay = 1728000
 
 # 普通宝箱
-commonReward = 30000_1152091_1
+commonReward = 30000_1152099_1
 
 # 高级宝箱
-highReward = 30000_1152092_1
+highReward = 30000_1152100_1
 

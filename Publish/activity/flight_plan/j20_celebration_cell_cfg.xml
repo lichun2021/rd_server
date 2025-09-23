@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" event="1" rewards="30000_1001046_10" />
+      <data id="1002" event="1" rewards="30000_850007_8" />
+      <data id="1003" event="1" rewards="30000_850037_8" />
+      <data id="1004" event="2" rewards="30000_100060_1" />
+      <data id="1005" event="1" rewards="30000_850017_8" />
+      <data id="1006" event="1" rewards="30000_850027_8" />
+      <data id="1007" event="2" rewards="30000_1001046_3" />
+      <data id="1008" event="1" rewards="30000_104050_3" />
+      <data id="1009" event="1" rewards="30000_105050_3" />
+      <data id="1010" event="1" rewards="30000_101050_3" />
+      <data id="1011" event="1" rewards="30000_820002_1" />
+      <data id="1012" event="1" rewards="30000_1001046_1" />
+</root>

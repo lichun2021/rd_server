@@ -2,19 +2,20 @@ return {
 	prop =
 	{
 		activityId = 136,
-		name = [[周年历程]],
+		name = [[关注有礼]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1、活动时间：10月17日-11月5日<br/>2、盘点每位指挥官的红警一周年大数据历程，分享你我的周年感动！</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">关注红警社区领取好礼。</font>]],
 		priority = 11281,
 		icon = [[Activity_Icon_136_Nor.png]],
 		selecticon = [[Activity_Icon_136_Sel.png]],
 		urlType = [[]],
-		urlQQ = [[https://hongjing.qq.com/cp/a20190924sjpd/index_g.html]],
-		urlWX = [[https://hongjing.qq.com/cp/a20190924sjpd/index_g.html]],
-		guestUrl = [[https://hongjing.qq.com/cp/a20190924sjpd/index_g.html]],
+		urlQQ = [[https://hongjing.qq.com/cp/a20240206shequ/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a20240206shequ/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a20240206shequ/index.html]],
 		platform = [[]],
 		shareImg = [[V5Activity_136_Share_URL.jpg]],
 		shareCCBName = [[RAActivity136NodeShareV5.ccbi]],
+		urlDailyReward = [[]],
 	},
 
 }

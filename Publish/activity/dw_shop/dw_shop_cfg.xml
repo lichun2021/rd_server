@@ -2,13 +2,13 @@
 travelShopRefreshTime = 9_12_15_18_20_22
 
 # 活动期间系统刷新后，重置的免费刷新次数
-freeRefreshTimes = 4
+freeRefreshTimes = 8
 
 # 活动期间系统刷新后，重置的水晶刷新次数和消耗
 travelShopCrystalRefreshCost = 25_50_75_100_125_150_175_200
 
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 是否每日重置
 isDailyReset = 1

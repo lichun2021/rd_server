@@ -49,7 +49,7 @@
       <data level="47" levelUpExp="125000" normalReward="30000_850037_1,30000_850036_1" advReward="30000_850028_1,30000_810001_10" />
       <data level="48" levelUpExp="130000" normalReward="30000_850017_1,30000_850016_1" advReward="30000_800143_10,30000_13310003_10" />
       <data level="49" levelUpExp="135000" normalReward="30000_850027_1,30000_850026_1" advReward="30000_1000002_10,30000_1480001_50" />
-      <data level="50" levelUpExp="140000" normalReward="30000_1001056_5,30000_810002_1" advReward="30000_1000003_5,30000_1001056_5" />
+      <data level="50" levelUpExp="140000" normalReward="30000_810002_1,30000_1001056_5" advReward="30000_1000003_5,30000_1001056_5" />
       <data level="51" levelUpExp="145000" advReward="30000_1480001_50,30000_1510003_30" />
       <data level="52" levelUpExp="150000" advReward="30000_850009_1,30000_850008_1" />
       <data level="53" levelUpExp="155000" advReward="30000_810002_2,30000_101050_5" />

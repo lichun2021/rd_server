@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" pool="1" needItem="10000_1000_10,30000_1150083_1300" gainItem="30000_9023500_1" times="1" />
+      <data id="102" pool="1" needItem="10000_1000_10,30000_1150083_480" gainItem="30000_9030700_1" times="2" />
+      <data id="103" pool="1" needItem="10000_1000_10,30000_1150083_100" gainItem="30000_9023000_1" times="3" />
+      <data id="201" pool="2" needItem="10000_1000_10,30000_800000_1300" gainItem="30000_800001_1" times="4" />
+      <data id="202" pool="2" needItem="10000_1000_10,30000_800000_480" gainItem="30000_800001_1" times="5" />
+      <data id="203" pool="2" needItem="10000_1000_10,30000_1150042_10,30000_800000_100" gainItem="30000_800001_1" times="6" />
+</root>

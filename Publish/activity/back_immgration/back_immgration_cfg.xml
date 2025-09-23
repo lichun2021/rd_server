@@ -1,31 +1,33 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 23232
+serverDelay = 15552000
 
 # 触发-流失天数
-triggerLossDays = 1
+triggerLossDays = 60
+
 # 活动持续时间
 continueDays = 5
+
 # 活动触发间隔时间
-intervalDays = 3
+intervalDays = 60
 
-#基地等级限制
-triggerCityLevel = 15
+# 基地等级限制
+triggerCityLevel = 30
 
-#VIP等级
-vipLevel = 0
+# 需要的VIP等级
+vipLevel = 8
 
-#角色创建多少天以上
-intregisterDay = 1
+# 角色创建多少天以上
+intregisterDay = 3
 
-#开服时间相差多少天以上
-migrantDay =2
+# 开服时间相差多少天以上
+migrantDay = 5
 
 # 需要在目的服排行榜起始
-powerRankFrom = 1
+powerRankFrom = 15
 
 # 需要在目的服排行榜结束
-powerRankEnd = 200
+powerRankEnd = 70
 
-#推荐服务器个数
-recommendServerCount = 6
+# 推荐服务器个数
+recommendServerCount = 10
 

@@ -1,5 +1,5 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 每次打造获取积分
 getScore = 1

@@ -1,3 +1,6 @@
 # 去兵战力前X名的玩家可投票
 votingPlayerNum = 100
 
+# 活动正式开始前X秒确定司令人选
+chooseLeaderTimeLimit = 300
+

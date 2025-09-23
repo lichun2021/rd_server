@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data giftId="1" achieveId="1570001" cost="10000_1000_58" buyReward="30000_850051_1,30000_1780080_2" chooseItem="11_1,12_2" />
-      <data giftId="2" achieveId="1570002" cost="10000_1000_188" buyReward="30000_850052_1,30000_1780080_6" chooseItem="21_1,22_2" />
-      <data giftId="3" achieveId="1570003" cost="10000_1000_328" buyReward="30000_850053_1,30000_1780080_12" chooseItem="31_1,32_2" />
-      <data giftId="4" achieveId="1570004" cost="10000_1000_688" buyReward="30000_850053_2,30000_1780083_12" chooseItem="41_1,42_2" />
-      <data giftId="5" achieveId="1570005" cost="10000_1000_2188" buyReward="30000_850053_3,30000_1780083_40" chooseItem="51_1,52_2" />
-      <data giftId="6" achieveId="1570006" cost="10000_1000_3288" buyReward="30000_850053_4,30000_1780083_60" chooseItem="61_1,62_2" />
+      <data giftId="1" achieveId="1570001" cost="10000_1000_58" buyReward="30000_850051_1,30000_810001_20" chooseItem="11_1,12_2" />
+      <data giftId="2" achieveId="1570002" cost="10000_1000_188" buyReward="30000_850052_1,30000_810001_40" chooseItem="21_1,22_2" />
+      <data giftId="3" achieveId="1570003" cost="10000_1000_328" buyReward="30000_850053_1,30000_810001_60" chooseItem="31_1,32_2" />
+      <data giftId="4" achieveId="1570004" cost="10000_1000_688" buyReward="30000_850053_2,30000_810001_120" chooseItem="41_1,42_2" />
+      <data giftId="5" achieveId="1570005" cost="10000_1000_2188" buyReward="30000_850053_3,30000_810001_240" chooseItem="51_1,52_2" />
+      <data giftId="6" achieveId="1570006" cost="10000_1000_3288" buyReward="30000_850053_4,30000_810001_320" chooseItem="61_1,62_2" />
 </root>

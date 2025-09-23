@@ -1,3 +1,6 @@
-# 
+# 屏蔽新服
 serverDelay = 0
+
+# 每日奖励宝箱内容（三段式，若无每日奖励，则不填）
+urlDailyReward = 
 

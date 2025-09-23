@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="12001" level="1" gridCnt="1" blood="1000000" guardLimit="15" winAward="30000_1000003_3,30000_800002_20,30000_1800001_20,30000_850047_4" winEffect="100_100" />
-      <data id="12002" level="2" gridCnt="1" blood="1000000" guardLimit="15" winAward="30000_1000003_3,30000_800002_20,30000_1800001_20,30000_850047_5" winEffect="100_100" />
-      <data id="12003" level="3" gridCnt="1" blood="1000000" guardLimit="15" winAward="30000_1000003_3,30000_800002_20,30000_1800001_20,30000_850047_6" winEffect="100_100" />
-      <data id="12004" level="4" gridCnt="1" blood="1000000" guardLimit="15" winAward="30000_1000003_3,30000_800002_20,30000_1800001_20,30000_850047_7" winEffect="100_100" />
-</root>

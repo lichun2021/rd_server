@@ -1,5 +1,5 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 安卓付费点
 androidPayId = 316001
@@ -39,3 +39,4 @@ rankShowSize = 100
 
 # 单次捐献最高上限
 maxDonateLimit = 1000
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pool="1" weight="1200" reward="30000_1780050_10" finallyReward="0" />
+      <data id="2" pool="1" weight="1200" reward="30000_810002_2" finallyReward="0" />
+      <data id="3" pool="1" weight="700" reward="30000_840194_800" finallyReward="0" />
+      <data id="4" pool="1" weight="360" reward="30000_840165_500" finallyReward="0" />
+      <data id="5" pool="1" weight="360" reward="30000_840195_300" finallyReward="0" />
+      <data id="6" pool="1" weight="40" reward="30000_9990032_888" finallyReward="0" />
+      <data id="7" pool="1" weight="40" reward="30000_9990032_1200" finallyReward="0" />
+      <data id="8" pool="1" weight="1" reward="30000_21062416_100" finallyReward="1" />
+</root>

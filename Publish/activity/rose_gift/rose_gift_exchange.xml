@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1001" needItem="30000_1400009_10" gainItem="30000_1780138_1" times="10" />
-      <data id="1002" needItem="30000_1400009_11" gainItem="30000_1780138_2" times="30" />
-      <data id="1003" needItem="30000_1400009_12" gainItem="30000_1780138_3" times="60" />
-      <data id="1004" needItem="30000_1400009_13" gainItem="30000_1780138_4" times="100" />
-      <data id="1005" needItem="30000_1400009_14" gainItem="30000_1780138_5" times="150" />
-      <data id="2001" needItem="30000_1400009_15" gainItem="30000_1780138_6" times="500" />
-      <data id="2002" needItem="30000_1400009_16" gainItem="30000_1780138_7" times="1000" />
-      <data id="2003" needItem="30000_1400009_17" gainItem="30000_1780138_8" times="2000" />
-      <data id="2004" needItem="30000_1400009_18" gainItem="30000_1780138_9" times="3000" />
-      <data id="2005" needItem="30000_1400009_19" gainItem="30000_1780138_10" times="5000" />
+      <data id="1001" needItem="30000_1400009_4" gainItem="30000_1000003_5" times="200" />
+      <data id="1002" needItem="30000_1400009_2" gainItem="30000_9990032_35" times="200" />
+      <data id="1003" needItem="30000_1400009_2" gainItem="30000_21063005_20" times="400" />
+      <data id="1004" needItem="30000_1400009_2" gainItem="30000_1782103_40" times="300" />
+      <data id="1005" needItem="30000_1400009_2" gainItem="30000_1300027_36" times="150" />
+      <data id="1006" needItem="30000_1400009_1" gainItem="30000_1300017_125" times="400" />
+      <data id="1007" needItem="30000_1400009_2" gainItem="30000_1800001_8" times="200" />
+      <data id="1008" needItem="30000_1400009_1" gainItem="30000_1800000_80" times="400" />
+      <data id="1009" needItem="30000_1400009_2" gainItem="30000_802004_20" times="150" />
+      <data id="1010" needItem="30000_1400009_2" gainItem="30000_802005_10" times="100" />
+      <data id="1011" needItem="30000_1400009_1" gainItem="30000_800002_18" times="400" />
+      <data id="1012" needItem="30000_1400009_3" gainItem="30000_802003_12" times="200" />
+      <data id="1013" needItem="30000_1400009_1" gainItem="30000_800000_10" times="200" />
+      <data id="1014" needItem="30000_1400009_1" gainItem="30000_820002_1" times="200" />
+      <data id="1015" needItem="30000_1400009_1" gainItem="30000_810001_6" times="200" />
+      <data id="1016" needItem="30000_1400009_1" gainItem="30000_1780040_2" times="999" />
 </root>

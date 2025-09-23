@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="304000" openServiceTimeLowerLimit="0" openServiceTimeUpLimit="86400" resArea1="1_8,2_2" resArea2="1_2,2_8" resArea3="2_2,3_8" resArea4="3_2,4_8" resArea5="4_2,5_8" resArea6="5_2,6_8" blackArea="8_1" />
-      <data id="304001" openServiceTimeLowerLimit="86400" openServiceTimeUpLimit="172800" resArea1="1_8,2_1,3_1" resArea2="2_8,3_1,4_1" resArea3="3_8,4_1,5_1" resArea4="4_8,5_1,6_1" resArea5="4_1,5_6,6_3" resArea6="5_2,6_7,7_1" blackArea="8_1" />
-      <data id="304002" openServiceTimeLowerLimit="172800" openServiceTimeUpLimit="315360000" resArea1="1_8,2_1,3_1" resArea2="2_8,3_1,4_1" resArea3="3_8,4_1,5_1" resArea4="4_8,5_1,6_1" resArea5="5_15,6_4,7_1" resArea6="5_1,6_6,7_2" blackArea="8_1" />
-</root>

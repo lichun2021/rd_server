@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" resourceId="300502" level="1" collectSpeed="0.034" totalRes="20" minRes="1" refreshTime="1200,2400" refreshCount="20" refreshPoint="15_30,15_90,15_150,15_210,45_30,45_90,45_150,45_270,75_30,75_90,75_210,75_270,105_30,105_150,105_210,105_270,135_90,135_150,135_210,135_270" collectArmyMin="1" guildHonorRate="10" />
-      <data id="2" resourceId="300502" level="2" collectSpeed="0.1" totalRes="50" minRes="1" refreshTime="1200,2400" refreshCount="8" refreshPoint="15_30,15_90,15_150,15_210,45_30,45_90,45_150,45_270,75_30,75_90,75_210,75_270,105_30,105_150,105_210,105_270,135_90,135_150,135_210,135_270" collectArmyMin="1" guildHonorRate="10" />
-</root>

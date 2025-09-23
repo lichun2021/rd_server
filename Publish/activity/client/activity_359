@@ -1,0 +1,122 @@
+return {
+	prop =
+	{
+		activityId = 359,
+		name = [[联合作战]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 联合作战活动开启期间，只要玩家为回归身份，则整个联合作战开启期间在<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">该活动内都认定为回归身份</font>。<br/>2. 活动开启期间，联盟中的回归玩家人数越多可获得增益越多，效果越强 。<br/>3. 若回归玩家退出或加入联盟，增益情况都会实时刷新，正在进行的建筑建造，科技研究，训兵时间，打野剩余时长等不会发生改变。<br/>4. 活动开启期间，与回归玩家一同参加特定游戏行为或活动会获得额外奖励，通过邮件发放。<br/>5. 额外奖励中会掉落回归积分，回归积分可在活动商店中兑换道具。<br/>6. 每位玩家每天可获得的额外奖励次数为<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">3</font>次。<br/>7. 联盟瓜分奖池，联盟成员消耗的金币与体力会以一定比例返还到联盟瓜分奖池中。<br/>8. 消耗奖池瓜分券可获取任意联盟奖池中一部分奖励。<br/>9. 领取体力后如果持有体力超过999点，超出部分会自动消失。<br/>10. 活动开启期间，回归玩家首个加入的联盟，此联盟中当时在盟的所有成员可增加一次联盟回归宝箱开启次数。<br/>11. 联盟回归宝箱需要<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">进入联盟后1小时后</font>才可进行抽取。<br/>12. 联盟瓜分券需要<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">进入联盟后24小时后</font>可以进行使用。<br/></font>]],
+		priority = 10062,
+		icon = [[Activity_Icon_359_Nor.png]],
+		selecticon = [[Activity_Icon_359_Sel.png]],
+		bigIcon = [[]],
+		inviteCount = 10,
+		dropMax = 3,
+		partitionCost = [[30000_21070036_1]],
+		boxRewards = 1229004,
+		luckDrawCD = 3600,
+		divideJackpotCD = 86400,
+		valueProp = [[30000_21070035_1]],
+		partitionCostLookIcon = [[30000_1000005_5,30000_1782123_16,30000_1300027_160]],
+		dropLookIcon = [[30000_21070035_60,30000_820001_2,30000_850051_1,30000_850007_2,30000_850037_2]],
+		boxMax = 30,
+		warningCoins = 400,
+		warningVit = 200,
+		startCoinsValue = 2000,
+		startVitValue = 1000,
+		baseLevel = 30,
+		coinMax = 400000,
+		vitMax = 150000,
+	},
+	guild_back_achieve = [[achieveId	conditionValue	rewards	isReset	title
+1	2	2	1	2
+359000001	800	30000_21070035_100,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">800</font>金条</font>
+359000002	2000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">2000</font>金条</font>
+359000003	5000	30000_21070035_150,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">5000</font>金条</font>
+359000004	8000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">8000</font>金条</font>
+359000005	12000	30000_21070035_200,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">12000</font>金条</font>
+359000006	20000	30000_21070035_300,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回归玩家累计消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">20000</font>金条</font>
+359000007	1	30000_21070035_100,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">在本服与回归玩家集结进攻<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1</font>次</font>
+359000008	3	30000_21070035_150,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">在本服与回归玩家集结进攻<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">3</font>次</font>
+359000009	6	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">在本服与回归玩家集结进攻<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">6</font>次</font>
+359000010	10	30000_21070035_200,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">在本服与回归玩家集结进攻<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">10</font>次</font>
+359000011	20	30000_21070035_300,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">在本服与回归玩家集结进攻<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">20</font>次</font>
+359000012	500	30000_21070035_100,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回流玩家合计体力消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">500</font>点</font>
+359000013	1000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回流玩家合计体力消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1000</font>点</font>
+359000014	2000	30000_21070035_150,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回流玩家合计体力消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">2000</font>点</font>
+359000015	4000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回流玩家合计体力消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">4000</font>点</font>
+359000016	10000	30000_21070035_200,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">联盟中回流玩家合计体力消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">10000</font>点</font>
+359000017	6	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">6</font>元</font>
+359000018	30	30000_21070035_60,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">30</font>元</font>
+359000019	98	30000_21070035_100,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">累计充值<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">98</font>元</font>
+359000020	1000_200	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人本期累计消耗金条<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">200</font>金条</font>
+359000021	1000_500	30000_21070035_200,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人本期累计消耗金条<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">500</font>金条</font>
+359000022	1000_1000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人本期累计消耗金条<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">1000</font>金条</font>
+359000023	1000_3000	30000_21070035_500,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人本期累计消耗金条<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">3000</font>金条</font>
+359000024	1000_5000	30000_21070036_1,30000_850007_3,30000_850037_3,30000_850017_3,30000_810001_2	0	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">个人本期累计消耗金条<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">5000</font>金条</font>
+]],
+	guild_back_shop = [[id	times	needItem	gainItem
+1	1	2	2
+1	8	30000_21070035_120	30000_1000005_1
+2	100	30000_21070035_10	30000_1000003_1
+3	100	30000_21070035_6	30000_9990041_5
+4	100	30000_21070035_6	30000_9990042_1
+5	50	30000_21070035_12	30000_9990051_5
+6	50	30000_21070035_12	30000_9990052_1
+7	120	30000_21070035_9	30000_802005_4
+8	100	30000_21070035_10	30000_1300027_15
+9	360	30000_21070035_3	30000_9990032_4
+10	200	30000_21070035_5	30000_21063005_4
+11	200	30000_21070035_5	30000_1782103_8
+12	200	30000_21070035_5	30000_802004_4
+13	360	30000_21070035_3	30000_800002_5
+14	270	30000_21070035_4	30000_1782106_1
+15	350	30000_21070035_3	30000_1300017_24
+16	1000	30000_21070035_1	30000_1480001_14
+17	60	30000_21070035_15	30000_820002_1
+18	500	30000_21070035_2	30000_800000_1
+19	300	30000_21070035_4	30000_810001_1
+20	9999	30000_21070035_1	30000_1780025_1
+]],
+	guild_back_buff = [[id	count	effect	OvertTxt	DetailsTxt	DetailsAtTxt
+1	1	2	2	2	2
+1	5	400_1500	Act359Html0001Overt	Act359Html0001Details	Act359Html0001DetailsAt
+2	10	400_1500,401_2000	Act359Html0002Overt	Act359Html0002Details	Act359Html0002DetailsAt
+3	15	400_2000,401_2000,402_1500	Act359Html0003Overt	Act359Html0003Details	Act359Html0003DetailsAt
+4	20	400_2000,401_3000,402_1500,376_1500	Act359Html0004Overt	Act359Html0004Details	Act359Html0004DetailsAt
+5	30	400_3000,401_3000,402_1500,376_3000	Act359Html0004Overt	Act359Html0004Details	Act359Html0004DetailsAt
+]],
+	guild_back_partition = [[id	type	weight	ratio	rewards
+1	1	1	1	2
+1	1	400	1500	10000_1001_1
+2	1	1200	750	10000_1001_1
+3	1	2800	400	10000_1001_1
+4	1	2800	300	10000_1001_1
+5	1	2800	200	10000_1001_1
+6	2	400	2500	10000_1011_1
+7	2	1200	1200	10000_1011_1
+8	2	2800	600	10000_1011_1
+9	2	2800	500	10000_1011_1
+10	2	2800	400	10000_1011_1
+]],
+	guild_back_identity = [[id	type	goldRatio	vitRatio	dayDivideStaminaTimesMax	dayDivideStaminaCoinsValueMax	dayDivideStaminaVitValueMax
+1	1	1	1	1	1	1
+1	1	1000	1000	999999	400000	400000
+2	2	800	800	999999	400000	400000
+]],
+	guild_back_drop = [[id	count	probability	rewards
+1	1	1	2
+1	1	6000	30000_21070035_60,30000_820001_2,30000_850051_1,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+2	2	8000	30000_21070035_60,30000_820001_2,30000_850051_1,30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2
+]],
+	guild_back_skip = [[id	skipTxt	isShow	gotoType	gotoParam
+1	2	1	1	2
+1	集结攻击其他玩家	1	1201	
+2	集结攻击幽灵基地	1	51	0_0_0_8
+3	集结攻击狂暴机甲	1	51	0_0_0_12
+4	集结攻击入侵首领	1	1201	
+5	参加联合军演	1	1321	
+6	参加星海激战	1	300	8
+7	参加泰伯利亚	1	300	1
+]],
+
+}

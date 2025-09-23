@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" cabin="11001" subcabin="12001" damagePara="1" stage1Wave="4" stage1WaveCd="65" stage1RefreshCd="62" stage1Enemy="1101_100,1102_100,1103_100" stage1EnemyNum="1_5|2_5|3_5|4_5" stage1SpEnemy="2101_100" stage1SpEnemyNum="3_5|4_5" stage1AtkSubNum="5_5" stage2Stronghold="131001_4,132001_1" stage3Boss="3101" stage4box="14001" stage4boxNum="20,30" />
-      <data id="2" cabin="11002" subcabin="12002" damagePara="1" stage1Wave="4" stage1WaveCd="65" stage1RefreshCd="62" stage1Enemy="1201_100,1202_100" stage1EnemyNum="1_5|2_5|3_5|4_5" stage1SpEnemy="2201_100" stage1SpEnemyNum="3_5|4_5" stage1AtkSubNum="5_5" stage2Stronghold="131002_4,132002_1" stage3Boss="3201" stage4box="14002" stage4boxNum="30,40" />
-      <data id="3" cabin="11003" subcabin="12003" damagePara="1" stage1Wave="4" stage1WaveCd="65" stage1RefreshCd="62" stage1Enemy="1301_100,1302_100" stage1EnemyNum="1_5|2_5|3_5|4_5" stage1SpEnemy="2301_100" stage1SpEnemyNum="3_5|4_5" stage1AtkSubNum="5_5" stage2Stronghold="131003_4,132003_1" stage3Boss="3301" stage4box="14003" stage4boxNum="40,50" />
-      <data id="4" cabin="11004" subcabin="12004" damagePara="1" stage1Wave="4" stage1WaveCd="65" stage1RefreshCd="62" stage1Enemy="1401_100" stage1EnemyNum="1_5|2_5|3_5|4_5" stage1SpEnemy="2401_100" stage1SpEnemyNum="3_5|4_5" stage1AtkSubNum="5_5" stage2Stronghold="131004_4,132004_1" stage3Boss="3401" stage4box="14004" stage4boxNum="50,60" />
-</root>

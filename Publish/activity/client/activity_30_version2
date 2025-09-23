@@ -1,0 +1,41 @@
+return {
+	prop =
+	{
+		activityId = 30,
+		name = [[基金团购]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间内，<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">任意</font>购买<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">成长基金、豪华登录基金</font>或<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">登陆豪礼</font>即可参与本服务器基金团购活动。<br/>2. <font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">本服务器</font>内每售出一份成长基金、豪华登录基金或登陆豪礼即可累计<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1</font>积分。<br/>3. 活动期间本服务器<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">累计积分</font>到达指定额度后，<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">参与活动的全部玩家</font>即可获得对应奖励。<br/>4. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/>5. 请您返回活动页面查看<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">奖励详情</font>。</font>]],
+		priority = 20850,
+		icon = [[Activity_Icon_31_Nor.png]],
+		selecticon = [[Activity_Icon_31_Sel.png]],
+		bigIcon = [[Activity_GroupBuying_u_Rendered.png]],
+		showAward = [[10000_1001_1064,30000_810001_50,30000_1510002_45,30000_1510003_45,30000_1510004_150,30000_13310002_45,30000_13310003_45,30000_13310004_150,30000_800143_30,30000_800110_14]],
+		valueGold = 9999,
+		relationActivity1 = 263,
+		relationActivity1Show = [[10000_1001_19956,30000_101050_3,30000_103050_5,30000_104050_6]],
+		relationActivity1Icon = [[V5Activity_30_Icon_02.png]],
+		relationActivity2 = 285,
+		relationActivity2Show1 = [[30000_1800001_300,30000_1800000_3000,30000_850078_840]],
+		relationActivity2Icon1 = [[V5Activity_30_Icon_04.png]],
+		relationActivity2Show2 = [[30000_1000003_150,30000_800110_1080]],
+		relationActivity2Icon2 = [[V5Activity_30_Icon_05.png]],
+		relationActivity2Show3 = [[30000_1780134_2,30000_800000_3050]],
+		relationActivity2Icon3 = [[V5Activity_30_Icon_06.png]],
+		relationActivity3 = 313,
+		relationActivity3Show = [[30000_1000003_88,30000_1800001_300,30000_810001_500,30000_101050_300]],
+		relationActivity3Icon = [[V5Activity_30_Icon_03.png]],
+		dailyReward = [[30000_850010_3,30000_850040_3]],
+	},
+	group_purchase_achieve = [[achieveId	conditionType	conditionValue	rewards
+1	1	1	2
+300001	150200	10	10000_1001_28,30000_810001_2,30000_1510002_15,30000_13310002_15,30000_800110_2
+300002	150200	50	10000_1001_38,30000_810001_3,30000_1510002_30,30000_13310002_30,30000_800143_3
+300003	150200	200	10000_1001_58,30000_810001_4,30000_1510003_15,30000_13310003_15,30000_800110_3
+300004	150200	500	10000_1001_88,30000_810001_5,30000_1510003_30,30000_13310003_30,30000_800143_6
+300005	150200	1000	10000_1001_138,30000_810001_6,30000_1510004_15,30000_13310004_15,30000_800110_4
+300006	150200	1500	10000_1001_188,30000_810001_8,30000_1510004_30,30000_13310004_30,30000_800143_9
+300007	150200	2000	10000_1001_238,30000_810001_10,30000_1510004_45,30000_13310004_45,30000_800110_5
+300008	150200	2500	10000_1001_288,30000_810001_12,30000_1510004_60,30000_13310004_60,30000_800143_12
+]],
+
+}

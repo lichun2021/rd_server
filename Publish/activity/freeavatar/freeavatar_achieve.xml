@@ -4,17 +4,17 @@
       <data achieveId="18910002" cycle="1" conditionType="20100" conditionValue="0_3000" exp="200" questType="1" />
       <data achieveId="18910003" cycle="1" conditionType="31100" conditionValue="0_1000000" exp="100" questType="1" />
       <data achieveId="18910004" cycle="1" conditionType="112100" conditionValue="20" exp="100" questType="1" />
-      <data achieveId="18910005" cycle="1" conditionType="500020" conditionValue="3" exp="100" questType="1" />
+      <data achieveId="18910005" cycle="1" conditionType="500020" conditionValue="3" exp="200" questType="1" />
       <data achieveId="18910006" cycle="1" conditionType="300100" conditionValue="0_400" exp="1000" questType="2" />
       <data achieveId="18910007" cycle="1" conditionType="20100" conditionValue="0_50000" exp="1000" questType="2" />
       <data achieveId="18910008" cycle="1" conditionType="31100" conditionValue="0_10000000" exp="1000" questType="2" />
       <data achieveId="18910009" cycle="1" conditionType="112100" conditionValue="200" exp="1000" questType="2" />
       <data achieveId="18910010" cycle="1" conditionType="500024" conditionValue="6" exp="1000" questType="2" />
-      <data achieveId="18910011" cycle="1" conditionType="700043" conditionValue="1" exp="1250" questType="2" />
-      <data achieveId="18910012" cycle="1" conditionType="240100" conditionValue="100" exp="1250" questType="2" />
+      <data achieveId="18910011" cycle="1" conditionType="700043" conditionValue="1" exp="2000" questType="2" />
+      <data achieveId="18910012" cycle="1" conditionType="240100" conditionValue="100" exp="2000" questType="2" />
       <data achieveId="18920001" cycle="2" conditionType="300100" conditionValue="0_40" exp="200" questType="1" />
       <data achieveId="18920002" cycle="2" conditionType="20100" conditionValue="0_3000" exp="200" questType="1" />
-      <data achieveId="18920003" cycle="2" conditionType="31100" conditionValue="0_1000000" exp="100" questType="1" />
+      <data achieveId="18920003" cycle="2" conditionType="31100" conditionValue="0_1000000" exp="200" questType="1" />
       <data achieveId="18920004" cycle="2" conditionType="112100" conditionValue="20" exp="100" questType="1" />
       <data achieveId="18920005" cycle="2" conditionType="500020" conditionValue="3" exp="100" questType="1" />
       <data achieveId="18920006" cycle="2" conditionType="300100" conditionValue="0_400" exp="1000" questType="2" />
@@ -34,7 +34,7 @@
       <data achieveId="18930008" cycle="3" conditionType="31100" conditionValue="0_10000000" exp="1000" questType="2" />
       <data achieveId="18930009" cycle="3" conditionType="112100" conditionValue="200" exp="1000" questType="2" />
       <data achieveId="18930010" cycle="3" conditionType="500024" conditionValue="6" exp="1000" questType="2" />
-      <data achieveId="18930011" cycle="3" conditionType="700039" conditionValue="1" exp="1250" questType="2" />
+      <data achieveId="18930011" cycle="3" conditionType="700043" conditionValue="1" exp="2000" questType="2" />
       <data achieveId="18930012" cycle="3" conditionType="500013" conditionValue="301_310_100" exp="1250" questType="2" />
       <data achieveId="18940001" cycle="4" conditionType="300100" conditionValue="0_40" exp="200" questType="1" />
       <data achieveId="18940002" cycle="4" conditionType="20100" conditionValue="0_3000" exp="200" questType="1" />

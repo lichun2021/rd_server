@@ -1,714 +1,715 @@
 return {
 	prop =
 	{
-		activityId = 162,
+		activityId = 284,
 		name = [[指挥官学院]],
 		cycleRankId = 800,
 		icon = [[Activity_Icon_162_Nor.png]],
 		selecticon = [[Activity_Icon_162_Sel.png]],
-		priority = 10015,
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动共分为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">5</font>个阶段，每个阶段内可通过完成任务获取任务奖励，也可购买阶段内限定礼包冲击阶段排名，阶段排名前100名的玩家将获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">排名积分</font>；各阶段累计排名积分后将决定总排名名次！<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">若累计排名积分相同，则当前阶段排名在前的玩家的总排名名次在前。</font><br/>2. 各阶段及排名因素说明：<br/>阶段1：城建发展；以建筑工厂等级进行排名。<br/>阶段2：英雄培养；以英雄战斗力进行排名。<br/>阶段3：装备突破；以阶段期间获取的史诗级或传说级装备数量进行排名。<br/>阶段4：百万雄师；以阶段期间训练部队获取的战斗力进行排名。<br/>阶段5：机甲进阶；以机甲战斗力进行排名。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">若上述阶段内排名数据相同，则先达到的玩家排名在前。</font><br/>3. 若您于活动各阶段期间未领取任务奖励或团购宝箱奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>该部分奖励。</font>]],
+		priority = 900,
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动共分为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">5</font>个阶段，每个阶段内可通过完成任务获取任务奖励，也可购买阶段内限定礼包冲击阶段排名，阶段排名前100名的玩家将获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">排名积分</font>；各阶段累计排名积分后将决定总排名名次！<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">若累计排名积分相同，则当前阶段排名在前的玩家的总排名名次在前。</font><br/>2. 各阶段及排名因素说明：<br/>阶段1：城建发展；以建筑工厂等级进行排名。<br/>阶段2：英雄培养；以英雄战斗力进行排名。<br/>阶段3：装备突破；以阶段期间获取的史诗级或传说级装备数量进行排名。<br/>阶段4：机甲进阶；以机甲战斗力进行排名。<br/>阶段5：百万雄师；以阶段期间训练部队获取的战斗力进行排名。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">若上述阶段内排名数据相同，则先达到的玩家排名在前。</font><br/>3. 若您于活动各阶段期间未领取任务奖励或团购宝箱奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>该部分奖励。</font>]],
 		buildLevelLimit = 1,
 	},
 	commander_college_cut = [[stageId	order	funcType	rankId	time	name	rankTitle1	rankTitle2	achieveTitle	giftTitle
 1	1	1	1	1	2	2	2	2	2
-100	1	1	100	259200	城建发展	建筑排名	建筑工厂等级	建筑任务	助力礼包
+100	1	1	100	345600	城建发展	建筑排名	建筑工厂等级	建筑任务	助力礼包
 200	2	4	200	172800	英雄培养	英雄排名	英雄总战力	英雄任务	助力礼包
-500	5	7	500	172800	装备突破	装备排名	收集史诗级装备	装备任务	助力礼包
-600	6	6	600	172800	百万雄师	部队排名	训练部队战力	训练任务	助力礼包
-700	7	5	700	172800	机甲进阶	机甲排名	机甲总战力	机甲任务	助力礼包
+500	3	7	500	172800	装备突破	装备排名	收集史诗级装备	装备任务	助力礼包
+600	5	6	600	172800	百万雄师	部队排名	训练部队战力	训练任务	助力礼包
+700	4	5	700	86400	机甲进阶	机甲排名	机甲总战力	机甲任务	助力礼包
 ]],
 	commander_college_cut_achieve = [[achieveId	stageId	conditionValue	gotoType	gotoValue	rewards	title
 1	1	1	1	2	2	2
-28410101	100	5	0	2010	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_810003_6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410102	100	10	0	2010	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810003_12	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410103	100	13	0	2010	30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_101050_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410104	100	16	0	2010	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_101050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410105	100	19	0	2010	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_101050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410106	100	22	0	2010	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_101050_4	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-28410201	200	2000	0	2208	30000_1510002_5,30000_13310002_5,30000_800109_2,30000_800143_1,30000_800110_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410202	200	5000	0	2208	30000_1510002_10,30000_13310002_10,30000_800109_4,30000_800143_2,30000_800110_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410203	200	10000	0	2208	30000_1510003_5,30000_13310003_5,30000_800109_6,30000_800143_3,30000_800110_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410204	200	20000	0	2208	30000_1510003_10,30000_13310003_10,30000_800109_8,30000_800143_4,30000_800110_4	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410205	200	30000	0	2208	30000_1510004_5,30000_13310004_5,30000_800109_12,30000_800143_6,30000_800110_6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410206	200	50000	0	2208	30000_1510004_10,30000_13310004_10,30000_800109_18,30000_800143_9,30000_800110_9	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410501	500	5	0	2227	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_800001_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410502	500	10	0	2227	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_800001_20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410503	500	15	0	2227	30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_800001_30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410504	500	20	0	2227	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_800001_40	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410505	500	30	0	2227	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_800001_60	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410506	500	50	0	2227	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_800001_90	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
-28410601	600	20000	23	2012	30000_850036_1,30000_850035_1,30000_850034_1,30000_1300012_1,30000_810010_6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410602	600	50000	23	2012	30000_850036_3,30000_850035_3,30000_850034_3,30000_1300013_1,30000_810010_12	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410603	600	100000	23	2012	30000_850037_2,30000_850036_2,30000_850035_2,30000_1300014_1,30000_104050_1	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410604	600	300000	23	2012	30000_850037_3,30000_850036_3,30000_850035_3,30000_1300015_1,30000_104050_2	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410605	600	500000	23	2012	30000_850038_2,30000_850037_2,30000_850036_2,30000_1300016_1,30000_104050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410606	600	1000000	23	2012	30000_850038_3,30000_850037_3,30000_850036_3,30000_1300018_1,30000_104050_4	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410701	700	2000	0	2225	30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1,30000_840165_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410702	700	5000	0	2225	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_840165_20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410703	700	10000	0	2225	30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_840165_30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410704	700	15000	0	2225	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_840165_40	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410705	700	20000	0	2225	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_840165_60	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
-28410706	700	25000	0	2225	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_840165_90	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410101	100	5	0	2010	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810003_30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410102	100	10	0	2010	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_101050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410103	100	13	0	2010	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_101050_6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410104	100	16	0	2010	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_101050_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410105	100	19	0	2010	30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_101050_15	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410106	100	22	0	2010	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1,30000_101050_20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">建筑工厂升至<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+28410201	200	2000	0	2208	30000_810001_5,30000_1510003_10,30000_13310003_10,30000_800143_5,30000_800110_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410202	200	5000	0	2208	30000_810001_10,30000_1510003_20,30000_13310003_20,30000_800143_10,30000_800110_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410203	200	10000	0	2208	30000_810001_15,30000_1510003_40,30000_13310003_40,30000_800143_15,30000_800110_15	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410204	200	20000	0	2208	30000_810001_20,30000_1510003_60,30000_13310003_60,30000_800143_20,30000_800110_20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410205	200	30000	0	2208	30000_810001_25,30000_1510003_80,30000_13310003_80,30000_800143_25,30000_800110_25	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410206	200	50000	0	2208	30000_810001_30,30000_1510003_100,30000_13310003_100,30000_800143_30,30000_800110_30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">英雄战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410501	500	5	0	2227	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_800001_100	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410502	500	10	0	2227	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_800001_200	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410503	500	15	0	2227	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_800001_300	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410504	500	20	0	2227	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_800001_400	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410505	500	30	0	2227	30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_800001_600	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410506	500	50	0	2227	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1,30000_800001_900	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">获取史诗级或传说级装备<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>个</font>
+28410601	600	20000	23	2012	30000_850036_3,30000_850035_3,30000_850034_3,30000_1300012_1,30000_810010_30	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410602	600	50000	23	2012	30000_850037_2,30000_850036_2,30000_850035_2,30000_1300013_1,30000_104050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410603	600	100000	23	2012	30000_850037_3,30000_850036_3,30000_850035_3,30000_1300014_1,30000_104050_6	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410604	600	300000	23	2012	30000_850038_2,30000_850037_2,30000_850036_2,30000_1300015_1,30000_104050_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410605	600	500000	23	2012	30000_850038_3,30000_850037_3,30000_850036_3,30000_1300016_1,30000_104050_15	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410606	600	1000000	23	2012	30000_850039_2,30000_850038_2,30000_850037_2,30000_1300018_1,30000_104050_20	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">训练部队战力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410701	700	2000	0	2225	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_840165_100	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410702	700	5000	0	2225	30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_840165_200	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410703	700	10000	0	2225	30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_840165_300	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410704	700	15000	0	2225	30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_840165_400	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410705	700	20000	0	2225	30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_840165_600	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
+28410706	700	25000	0	2225	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1,30000_840165_900	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">机甲战斗力达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>点</font>
 ]],
 	commander_college_cut_gfit = [[id	stageId	level	buyLimit	price	awards	title
 1	1	1	1	2	2	2
-101	100	1	1	10000_1000_60	30000_101050_3,30000_810003_20,30000_1780030_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">449</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-102	100	2	1	10000_1000_300	30000_101050_18,30000_810003_30,30000_1780035_10,30000_1780030_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">2310</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-103	100	3	1	10000_1000_680	30000_101050_44,30000_810003_40,30000_1780040_6,30000_1780035_6,30000_1780030_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">5044</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-104	100	4	2	10000_1000_1280	30000_101050_84,30000_810003_60,30000_1780040_12,30000_1780035_12,30000_1780030_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">9708</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-105	100	5	3	10000_1000_3280	30000_101050_218,30000_810003_90,30000_1780045_12,30000_1780040_12,30000_1780035_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">25590</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-106	100	6	5	10000_1000_6480	30000_101050_418,30000_810003_225,30000_1780045_24,30000_1780040_24,30000_1780035_24	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">50010</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-201	200	1	1	10000_1000_60	30000_800110_2,30000_1510002_10,30000_13310002_10,30000_1510001_15,30000_13310001_15	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">426</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-202	200	2	1	10000_1000_300	30000_800110_10,30000_1510003_20,30000_13310003_20,30000_1510002_20,30000_13310002_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">2160</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-203	200	3	1	10000_1000_680	30000_800110_20,30000_1510003_60,30000_13310003_60,30000_1510002_60,30000_13310002_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">4800</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-204	200	4	2	10000_1000_1280	30000_800110_38,30000_1510004_30,30000_13310004_30,30000_1510003_40,30000_13310003_40	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">8904</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-205	200	5	3	10000_1000_3280	30000_800110_96,30000_1510005_25,30000_13310005_25,30000_1510004_35,30000_13310004_35	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">22728</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-206	200	6	5	10000_1000_6480	30000_800110_192,30000_1510005_50,30000_13310005_50,30000_1510004_60,30000_13310004_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">44856</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-501	500	1	1	10000_1000_60	30000_800000_5,30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">832</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-502	500	2	1	10000_1000_300	30000_800000_25,30000_850006_4,30000_850036_4,30000_850016_4,30000_850026_4	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">4160</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-503	500	3	1	10000_1000_680	30000_800000_55,30000_850006_10,30000_850036_10,30000_850016_10,30000_850026_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">9440</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-504	500	4	2	10000_1000_1280	30000_800000_100,30000_850007_6,30000_850037_6,30000_850017_6,30000_850027_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">17120</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-505	500	5	3	10000_1000_3280	30000_800000_250,30000_850008_6,30000_850038_6,30000_850018_6,30000_850028_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">44000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-506	500	6	5	10000_1000_6480	30000_800000_500,30000_850008_12,30000_850038_12,30000_850018_12,30000_850028_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">88000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-601	600	1	1	10000_1000_60	30000_104050_3,30000_810010_20,30000_1780030_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">449</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-602	600	2	1	10000_1000_300	30000_104050_18,30000_810010_30,30000_1780035_10,30000_1780030_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">2310</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-603	600	3	1	10000_1000_680	30000_104050_44,30000_810010_40,30000_1780040_6,30000_1780035_6,30000_1780030_6	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">5044</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-604	600	4	2	10000_1000_1280	30000_104050_84,30000_810010_60,30000_1780040_12,30000_1780035_12,30000_1780030_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">9708</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-605	600	5	3	10000_1000_3280	30000_104050_218,30000_810010_90,30000_1780045_12,30000_1780040_12,30000_1780035_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">25590</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-606	600	6	5	10000_1000_6480	30000_104050_418,30000_810010_225,30000_1780045_24,30000_1780040_24,30000_1780035_24	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">50010</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-701	700	1	1	10000_1000_60	30000_9990008_250,30000_15210001_3,30000_15210002_3,30000_15210003_3,30000_15210004_3	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">800</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-702	700	2	1	10000_1000_300	30000_9990008_1250,30000_15210001_15,30000_15210002_15,30000_15210003_15,30000_15210004_15	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">4000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-703	700	3	1	10000_1000_680	30000_9990008_2750,30000_15210001_35,30000_15210002_35,30000_15210003_35,30000_15210004_35	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">9000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-704	700	4	2	10000_1000_1280	30000_9990008_5300,30000_15210001_55,30000_15210002_55,30000_15210003_55,30000_15210004_55	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">16100</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-705	700	5	3	10000_1000_3280	30000_9990008_13500,30000_15210001_135,30000_15210002_135,30000_15210003_135,30000_15210004_135	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">40500</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
-706	700	6	5	10000_1000_6480	30000_9990008_27000,30000_15210001_270,30000_15210002_270,30000_15210003_270,30000_15210004_270	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">81000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+101	100	1	1	10000_1000_60	30000_101050_30,30000_810003_30,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">2970</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+102	100	2	1	10000_1000_300	30000_101050_150,30000_810003_150,30000_1780040_10,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">14250</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+103	100	3	1	10000_1000_680	30000_101050_288,30000_810003_288,30000_1780040_20,30000_1780035_20,30000_1780030_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">28032</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+104	100	4	2	10000_1000_1280	30000_101050_540,30000_810003_540,30000_1780045_12,30000_1780040_12,30000_1780035_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">51540</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+105	100	5	3	10000_1000_3280	30000_101050_1380,30000_810003_1380,30000_1780045_30,30000_1780040_30,30000_1780035_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">131220</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+106	100	6	5	10000_1000_6480	30000_101050_2700,30000_810003_2700,30000_1780050_20,30000_1780045_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">256900</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+201	200	1	1	10000_1000_60	30000_1000003_6,30000_1510002_10,30000_13310002_10,30000_1510001_15,30000_13310001_15	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">6090</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+202	200	2	1	10000_1000_300	30000_1000003_30,30000_1510003_40,30000_13310003_40,30000_1510002_40,30000_13310002_40	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">30960</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+203	200	3	1	10000_1000_680	30000_1000003_68,30000_1510003_120,30000_13310003_120,30000_1510002_120,30000_13310002_120	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">70880</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+204	200	4	2	10000_1000_1280	30000_1000003_128,30000_1510004_70,30000_13310004_70,30000_1510003_70,30000_13310003_70	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">133460</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+205	200	5	3	10000_1000_3280	30000_1000003_328,30000_1510005_60,30000_13310005_60,30000_1510004_60,30000_13310004_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">342400</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+206	200	6	5	10000_1000_6480	30000_1000003_648,30000_1510005_120,30000_13310005_120,30000_1510004_120,30000_13310004_120	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">676800</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+501	500	1	1	10000_1000_60	30000_800000_50,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">7000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+502	500	2	1	10000_1000_300	30000_800000_250,30000_1780040_10,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">34400</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+503	500	3	1	10000_1000_680	30000_800000_540,30000_1780040_20,30000_1780035_20,30000_1780030_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">74400</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+504	500	4	2	10000_1000_1280	30000_800000_1000,30000_1780045_12,30000_1780040_12,30000_1780035_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">136880</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+505	500	5	3	10000_1000_3280	30000_800000_2560,30000_1780045_30,30000_1780040_30,30000_1780035_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">349880</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+506	500	6	5	10000_1000_6480	30000_800000_5080,30000_1780050_20,30000_1780045_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">693840</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+601	600	1	1	10000_1000_60	30000_104050_30,30000_810010_30,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">2970</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+602	600	2	1	10000_1000_300	30000_104050_150,30000_810010_150,30000_1780040_10,30000_1780035_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">14250</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+603	600	3	1	10000_1000_680	30000_104050_288,30000_810010_288,30000_1780040_20,30000_1780035_20,30000_1780030_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">28032</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+604	600	4	2	10000_1000_1280	30000_104050_540,30000_810010_540,30000_1780045_12,30000_1780040_12,30000_1780035_12	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">51540</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+605	600	5	3	10000_1000_3280	30000_104050_1380,30000_810010_1380,30000_1780045_30,30000_1780040_30,30000_1780035_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">131220</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+606	600	6	5	10000_1000_6480	30000_104050_2700,30000_810010_2700,30000_1780050_20,30000_1780045_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">256900</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+701	700	1	1	10000_1000_150	30000_843009_300,30000_15510005_300,30000_15510002_300,30000_15510001_300,30000_15210001_400,30000_15210002_400,30000_15210003_400,30000_15210004_400	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">82000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+702	700	2	1	10000_1000_300	30000_843009_500,30000_15510005_500,30000_15510002_500,30000_15510001_500,30000_15210001_500,30000_15210002_500,30000_15210003_500,30000_15210004_500	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">120000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+703	700	3	1	10000_1000_680	30000_843009_1000,30000_15510005_1000,30000_15510002_1000,30000_15510001_1000,30000_15210001_800,30000_15210002_800,30000_15210003_800,30000_15210004_800	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">220000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+704	700	4	2	10000_1000_6480	30000_843010_100,30000_1780147_100,30000_843009_180,30000_15510005_180,30000_15510002_180,30000_15510001_180,30000_15210001_600,30000_15210002_600,30000_15210003_600,30000_15210004_600	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">97200</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+705	700	5	2	10000_1000_2000	30000_843009_2000,30000_15510005_2000,30000_15510002_2000,30000_15510001_2000,30000_15210001_2400,30000_15210002_2400,30000_15210003_2400,30000_15210004_2400	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">520000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+706	700	6	2	10000_1000_8000	30000_840195_3000,30000_843009_3000,30000_15510005_3000,30000_15510002_3000,30000_15210005_1000,30000_15210006_1000,30000_15210007_1000,30000_15210008_1000	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">860000</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
+707	700	7	10	10000_1000_6480	30000_9990032_12888,30000_840195_300,30000_1780050_20,30000_1780045_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">价值</font><img src="V5StoreGiftPack_Daliy_Icon_Gold.png"/><font color="#d58137" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">208480</font><font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">豪华礼包</font>
 ]],
 	commander_college_cut_box = [[achieveId	stageId	conditionValue	rewards	title	tips	notAchieveIcon	notRewardIcon	rewardedIcon
 1	1	1	2	2	2	2	2	2
-28420101	100	30	30000_101050_1,30000_810003_6,30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420102	100	60	30000_101050_2,30000_810003_12,30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420103	100	100	30000_850047_1,30000_101050_3,30000_810003_18,30000_850005_3,30000_850035_3,30000_850015_3,30000_850025_3	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420104	100	150	30000_850048_1,30000_101050_6,30000_810003_36,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420201	200	30	30000_800110_1,30000_1510003_1,30000_13310003_1,30000_1510002_3,30000_13310002_3	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420202	200	60	30000_800110_2,30000_1510003_2,30000_13310003_2,30000_1510002_6,30000_13310002_6	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420203	200	100	30000_850047_1,30000_800110_3,30000_1510003_3,30000_13310003_3,30000_1510002_9,30000_13310002_9	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420204	200	150	30000_850048_1,30000_800110_6,30000_1510003_6,30000_13310003_6,30000_1510002_18,30000_13310002_18	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420501	500	30	30000_800000_1,30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420502	500	60	30000_800000_2,30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420503	500	100	30000_850047_1,30000_800000_3,30000_850005_3,30000_850035_3,30000_850015_3,30000_850025_3	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420504	500	150	30000_850048_1,30000_800000_6,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420601	600	30	30000_104050_1,30000_810010_6,30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420602	600	60	30000_104050_2,30000_810010_12,30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420603	600	100	30000_850047_1,30000_104050_3,30000_810010_18,30000_850005_3,30000_850035_3,30000_850015_3,30000_850025_3	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420604	600	150	30000_850048_1,30000_104050_6,30000_810010_36,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420701	700	30	30000_840166_5,30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420702	700	60	30000_840166_10,30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420703	700	100	30000_850047_1,30000_840166_15,30000_850005_3,30000_850035_3,30000_850015_3,30000_850025_3	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
-28420704	700	150	30000_850048_1,30000_840166_30,30000_850005_6,30000_850035_6,30000_850015_6,30000_850025_6	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420101	100	30	30000_101050_5,30000_810003_20,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420102	100	60	30000_101050_10,30000_810003_40,30000_850006_10,30000_850036_10,30000_850016_10,30000_850026_10	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420103	100	100	30000_850047_1,30000_101050_15,30000_810003_60,30000_850006_15,30000_850036_15,30000_850016_15,30000_850026_15	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420104	100	150	30000_850048_1,30000_101050_30,30000_810003_120,30000_850006_30,30000_850036_30,30000_850016_30,30000_850026_30	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420201	200	30	30000_800110_10,30000_1510004_5,30000_13310004_5,30000_1510003_5,30000_13310003_5	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420202	200	60	30000_800110_20,30000_1510004_10,30000_13310004_10,30000_1510003_10,30000_13310003_10	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420203	200	100	30000_850047_1,30000_800110_30,30000_1510004_15,30000_13310004_15,30000_1510003_15,30000_13310003_15	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420204	200	150	30000_850048_1,30000_800110_40,30000_1510004_30,30000_13310004_30,30000_1510003_30,30000_13310003_30	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420501	500	30	30000_800000_10,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420502	500	60	30000_800000_20,30000_850006_10,30000_850036_10,30000_850016_10,30000_850026_10	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420503	500	100	30000_850047_1,30000_800000_30,30000_850006_15,30000_850036_15,30000_850016_15,30000_850026_15	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420504	500	150	30000_850048_1,30000_800000_40,30000_850006_30,30000_850036_30,30000_850016_30,30000_850026_30	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420601	600	30	30000_104050_5,30000_810010_20,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420602	600	60	30000_104050_10,30000_810010_40,30000_850006_10,30000_850036_10,30000_850016_10,30000_850026_10	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420603	600	100	30000_850047_1,30000_104050_15,30000_810010_60,30000_850006_15,30000_850036_15,30000_850016_15,30000_850026_15	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420604	600	150	30000_850048_1,30000_104050_30,30000_810010_120,30000_850006_30,30000_850036_30,30000_850016_30,30000_850026_30	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420701	700	30	30000_840165_200,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5	初级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420702	700	60	30000_840165_400,30000_850006_10,30000_850036_10,30000_850016_10,30000_850026_10	中级团购宝箱		V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420703	700	100	30000_850047_1,30000_840165_600,30000_850006_15,30000_850036_15,30000_850016_15,30000_850026_15	高级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
+28420704	700	150	30000_850048_1,30000_840165_1200,30000_850006_30,30000_850036_30,30000_850016_30,30000_850026_30	特级团购宝箱	阶段内购买任意档位礼包即可领取宝箱奖励	V5Activity_162_Chest_01_A.png	V5Activity_162_Chest_01.png	V5Activity_162_Chest_01_B.png
 ]],
 	commander_college_cut_rank = [[id	rankId	rankUpper	rankLower	rankScore	reward
 1	1	1	1	1	2
-1	100	1	1	100	10000_1001_500,10000_1014_200000,10000_1017_200000,30000_840003_50,30000_101050_30
-2	100	2	2	99	10000_1001_300,10000_1014_120000,10000_1017_120000,30000_840003_30,30000_101050_18
-3	100	3	3	98	10000_1001_200,10000_1014_80000,10000_1017_80000,30000_840003_20,30000_101050_12
-4	100	4	4	97	10000_1001_180,10000_1014_72000,10000_1017_72000,30000_840003_18,30000_101050_10
-5	100	5	5	96	10000_1001_160,10000_1014_64000,10000_1017_64000,30000_840003_16,30000_101050_9
-6	100	6	6	95	10000_1001_150,10000_1014_60000,10000_1017_60000,30000_840003_15,30000_101050_8
-7	100	7	7	94	10000_1001_140,10000_1014_56000,10000_1017_56000,30000_840003_14,30000_101050_8
-8	100	8	8	93	10000_1001_130,10000_1014_52000,10000_1017_52000,30000_840003_13,30000_101050_8
-9	100	9	9	92	10000_1001_120,10000_1014_48000,10000_1017_48000,30000_840003_12,30000_101050_8
-10	100	10	10	91	10000_1001_110,10000_1014_44000,10000_1017_44000,30000_840003_11,30000_101050_8
-11	100	11	11	90	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-12	100	12	12	89	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-13	100	13	13	88	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-14	100	14	14	87	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-15	100	15	15	86	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-16	100	16	16	85	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-17	100	17	17	84	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-18	100	18	18	83	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-19	100	19	19	82	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_101050_7
-20	100	20	20	81	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_7
-21	100	21	21	80	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-22	100	22	22	79	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-23	100	23	23	78	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-24	100	24	24	77	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-25	100	25	25	76	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-26	100	26	26	75	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-27	100	27	27	74	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-28	100	28	28	73	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-29	100	29	29	72	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_101050_6
-30	100	30	30	71	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_6
-31	100	31	31	70	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-32	100	32	32	69	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-33	100	33	33	68	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-34	100	34	34	67	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-35	100	35	35	66	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-36	100	36	36	65	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-37	100	37	37	64	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-38	100	38	38	63	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-39	100	39	39	62	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_101050_5
-40	100	40	40	61	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_5
-41	100	41	41	60	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-42	100	42	42	59	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-43	100	43	43	58	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-44	100	44	44	57	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-45	100	45	45	56	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-46	100	46	46	55	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-47	100	47	47	54	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-48	100	48	48	53	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-49	100	49	49	52	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_101050_4
-50	100	50	50	51	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_4
-51	100	51	51	50	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-52	100	52	52	49	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-53	100	53	53	48	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-54	100	54	54	47	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-55	100	55	55	46	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-56	100	56	56	45	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-57	100	57	57	44	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-58	100	58	58	43	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-59	100	59	59	42	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_101050_3
-60	100	60	60	41	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_3
-61	100	61	61	40	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-62	100	62	62	39	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-63	100	63	63	38	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-64	100	64	64	37	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-65	100	65	65	36	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-66	100	66	66	35	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-67	100	67	67	34	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-68	100	68	68	33	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-69	100	69	69	32	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_101050_2
-70	100	70	70	31	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-71	100	71	71	30	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-72	100	72	72	29	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-73	100	73	73	28	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-74	100	74	74	27	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-75	100	75	75	26	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-76	100	76	76	25	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-77	100	77	77	24	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-78	100	78	78	23	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-79	100	79	79	22	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_101050_2
-80	100	80	80	21	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_2
-81	100	81	81	20	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-82	100	82	82	19	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-83	100	83	83	18	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-84	100	84	84	17	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-85	100	85	85	16	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-86	100	86	86	15	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-87	100	87	87	14	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-88	100	88	88	13	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-89	100	89	89	12	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_101050_1
-90	100	90	90	11	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-91	100	91	91	10	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-92	100	92	92	9	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-93	100	93	93	8	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-94	100	94	94	7	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-95	100	95	95	6	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-96	100	96	96	5	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-97	100	97	97	4	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-98	100	98	98	3	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-99	100	99	99	2	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_101050_1
-100	100	100	100	1	10000_1001_10,10000_1014_4000,10000_1017_4000,30000_840003_1,30000_101050_1
-101	200	1	1	100	10000_1001_500,10000_1014_200000,10000_1017_200000,30000_840003_50,30000_800110_50
-102	200	2	2	99	10000_1001_300,10000_1014_120000,10000_1017_120000,30000_840003_30,30000_800110_30
-103	200	3	3	98	10000_1001_200,10000_1014_80000,10000_1017_80000,30000_840003_20,30000_800110_20
-104	200	4	4	97	10000_1001_180,10000_1014_72000,10000_1017_72000,30000_840003_18,30000_800110_18
-105	200	5	5	96	10000_1001_160,10000_1014_64000,10000_1017_64000,30000_840003_16,30000_800110_16
-106	200	6	6	95	10000_1001_150,10000_1014_60000,10000_1017_60000,30000_840003_15,30000_800110_15
-107	200	7	7	94	10000_1001_140,10000_1014_56000,10000_1017_56000,30000_840003_14,30000_800110_14
-108	200	8	8	93	10000_1001_130,10000_1014_52000,10000_1017_52000,30000_840003_13,30000_800110_13
-109	200	9	9	92	10000_1001_120,10000_1014_48000,10000_1017_48000,30000_840003_12,30000_800110_12
-110	200	10	10	91	10000_1001_110,10000_1014_44000,10000_1017_44000,30000_840003_11,30000_800110_11
-111	200	11	11	90	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-112	200	12	12	89	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-113	200	13	13	88	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-114	200	14	14	87	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-115	200	15	15	86	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-116	200	16	16	85	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-117	200	17	17	84	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-118	200	18	18	83	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-119	200	19	19	82	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800110_10
-120	200	20	20	81	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-121	200	21	21	80	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-122	200	22	22	79	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-123	200	23	23	78	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-124	200	24	24	77	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-125	200	25	25	76	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-126	200	26	26	75	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-127	200	27	27	74	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-128	200	28	28	73	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-129	200	29	29	72	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800110_9
-130	200	30	30	71	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-131	200	31	31	70	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-132	200	32	32	69	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-133	200	33	33	68	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-134	200	34	34	67	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-135	200	35	35	66	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-136	200	36	36	65	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-137	200	37	37	64	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-138	200	38	38	63	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-139	200	39	39	62	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800110_8
-140	200	40	40	61	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-141	200	41	41	60	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-142	200	42	42	59	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-143	200	43	43	58	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-144	200	44	44	57	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-145	200	45	45	56	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-146	200	46	46	55	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-147	200	47	47	54	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-148	200	48	48	53	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-149	200	49	49	52	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800110_7
-150	200	50	50	51	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-151	200	51	51	50	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-152	200	52	52	49	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-153	200	53	53	48	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-154	200	54	54	47	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-155	200	55	55	46	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-156	200	56	56	45	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-157	200	57	57	44	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-158	200	58	58	43	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-159	200	59	59	42	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800110_6
-160	200	60	60	41	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-161	200	61	61	40	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-162	200	62	62	39	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-163	200	63	63	38	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-164	200	64	64	37	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-165	200	65	65	36	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-166	200	66	66	35	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-167	200	67	67	34	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-168	200	68	68	33	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-169	200	69	69	32	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800110_5
-170	200	70	70	31	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-171	200	71	71	30	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-172	200	72	72	29	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-173	200	73	73	28	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-174	200	74	74	27	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-175	200	75	75	26	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-176	200	76	76	25	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-177	200	77	77	24	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-178	200	78	78	23	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-179	200	79	79	22	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800110_4
-180	200	80	80	21	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-181	200	81	81	20	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-182	200	82	82	19	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-183	200	83	83	18	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-184	200	84	84	17	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-185	200	85	85	16	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-186	200	86	86	15	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-187	200	87	87	14	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-188	200	88	88	13	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-189	200	89	89	12	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800110_3
-190	200	90	90	11	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-191	200	91	91	10	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-192	200	92	92	9	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-193	200	93	93	8	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-194	200	94	94	7	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-195	200	95	95	6	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-196	200	96	96	5	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-197	200	97	97	4	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-198	200	98	98	3	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-199	200	99	99	2	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800110_2
-200	200	100	100	1	10000_1001_10,10000_1014_4000,10000_1017_4000,30000_840003_1,30000_800110_1
-401	500	1	1	100	10000_1001_500,10000_1014_200000,10000_1017_200000,30000_840003_50,30000_800000_50
-402	500	2	2	99	10000_1001_300,10000_1014_120000,10000_1017_120000,30000_840003_30,30000_800000_30
-403	500	3	3	98	10000_1001_200,10000_1014_80000,10000_1017_80000,30000_840003_20,30000_800000_20
-404	500	4	4	97	10000_1001_180,10000_1014_72000,10000_1017_72000,30000_840003_18,30000_800000_18
-405	500	5	5	96	10000_1001_160,10000_1014_64000,10000_1017_64000,30000_840003_16,30000_800000_16
-406	500	6	6	95	10000_1001_150,10000_1014_60000,10000_1017_60000,30000_840003_15,30000_800000_15
-407	500	7	7	94	10000_1001_140,10000_1014_56000,10000_1017_56000,30000_840003_14,30000_800000_14
-408	500	8	8	93	10000_1001_130,10000_1014_52000,10000_1017_52000,30000_840003_13,30000_800000_13
-409	500	9	9	92	10000_1001_120,10000_1014_48000,10000_1017_48000,30000_840003_12,30000_800000_12
-410	500	10	10	91	10000_1001_110,10000_1014_44000,10000_1017_44000,30000_840003_11,30000_800000_11
-411	500	11	11	90	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-412	500	12	12	89	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-413	500	13	13	88	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-414	500	14	14	87	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-415	500	15	15	86	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-416	500	16	16	85	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-417	500	17	17	84	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-418	500	18	18	83	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-419	500	19	19	82	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_800000_10
-420	500	20	20	81	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-421	500	21	21	80	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-422	500	22	22	79	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-423	500	23	23	78	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-424	500	24	24	77	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-425	500	25	25	76	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-426	500	26	26	75	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-427	500	27	27	74	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-428	500	28	28	73	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-429	500	29	29	72	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_800000_9
-430	500	30	30	71	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-431	500	31	31	70	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-432	500	32	32	69	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-433	500	33	33	68	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-434	500	34	34	67	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-435	500	35	35	66	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-436	500	36	36	65	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-437	500	37	37	64	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-438	500	38	38	63	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-439	500	39	39	62	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_800000_8
-440	500	40	40	61	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-441	500	41	41	60	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-442	500	42	42	59	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-443	500	43	43	58	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-444	500	44	44	57	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-445	500	45	45	56	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-446	500	46	46	55	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-447	500	47	47	54	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-448	500	48	48	53	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-449	500	49	49	52	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_800000_7
-450	500	50	50	51	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-451	500	51	51	50	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-452	500	52	52	49	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-453	500	53	53	48	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-454	500	54	54	47	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-455	500	55	55	46	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-456	500	56	56	45	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-457	500	57	57	44	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-458	500	58	58	43	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-459	500	59	59	42	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_800000_6
-460	500	60	60	41	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-461	500	61	61	40	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-462	500	62	62	39	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-463	500	63	63	38	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-464	500	64	64	37	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-465	500	65	65	36	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-466	500	66	66	35	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-467	500	67	67	34	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-468	500	68	68	33	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-469	500	69	69	32	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_800000_5
-470	500	70	70	31	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-471	500	71	71	30	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-472	500	72	72	29	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-473	500	73	73	28	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-474	500	74	74	27	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-475	500	75	75	26	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-476	500	76	76	25	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-477	500	77	77	24	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-478	500	78	78	23	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-479	500	79	79	22	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_800000_4
-480	500	80	80	21	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-481	500	81	81	20	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-482	500	82	82	19	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-483	500	83	83	18	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-484	500	84	84	17	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-485	500	85	85	16	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-486	500	86	86	15	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-487	500	87	87	14	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-488	500	88	88	13	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-489	500	89	89	12	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_800000_3
-490	500	90	90	11	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-491	500	91	91	10	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-492	500	92	92	9	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-493	500	93	93	8	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-494	500	94	94	7	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-495	500	95	95	6	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-496	500	96	96	5	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-497	500	97	97	4	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-498	500	98	98	3	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-499	500	99	99	2	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_800000_2
-500	500	100	100	1	10000_1001_10,10000_1014_4000,10000_1017_4000,30000_840003_1,30000_800000_1
-501	600	1	1	100	10000_1001_500,10000_1014_200000,10000_1017_200000,30000_840003_50,30000_104050_30
-502	600	2	2	99	10000_1001_300,10000_1014_120000,10000_1017_120000,30000_840003_30,30000_104050_18
-503	600	3	3	98	10000_1001_200,10000_1014_80000,10000_1017_80000,30000_840003_20,30000_104050_12
-504	600	4	4	97	10000_1001_180,10000_1014_72000,10000_1017_72000,30000_840003_18,30000_104050_10
-505	600	5	5	96	10000_1001_160,10000_1014_64000,10000_1017_64000,30000_840003_16,30000_104050_9
-506	600	6	6	95	10000_1001_150,10000_1014_60000,10000_1017_60000,30000_840003_15,30000_104050_8
-507	600	7	7	94	10000_1001_140,10000_1014_56000,10000_1017_56000,30000_840003_14,30000_104050_8
-508	600	8	8	93	10000_1001_130,10000_1014_52000,10000_1017_52000,30000_840003_13,30000_104050_8
-509	600	9	9	92	10000_1001_120,10000_1014_48000,10000_1017_48000,30000_840003_12,30000_104050_8
-510	600	10	10	91	10000_1001_110,10000_1014_44000,10000_1017_44000,30000_840003_11,30000_104050_8
-511	600	11	11	90	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-512	600	12	12	89	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-513	600	13	13	88	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-514	600	14	14	87	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-515	600	15	15	86	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-516	600	16	16	85	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-517	600	17	17	84	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-518	600	18	18	83	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-519	600	19	19	82	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_104050_7
-520	600	20	20	81	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_7
-521	600	21	21	80	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-522	600	22	22	79	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-523	600	23	23	78	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-524	600	24	24	77	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-525	600	25	25	76	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-526	600	26	26	75	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-527	600	27	27	74	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-528	600	28	28	73	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-529	600	29	29	72	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_104050_6
-530	600	30	30	71	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_6
-531	600	31	31	70	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-532	600	32	32	69	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-533	600	33	33	68	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-534	600	34	34	67	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-535	600	35	35	66	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-536	600	36	36	65	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-537	600	37	37	64	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-538	600	38	38	63	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-539	600	39	39	62	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_104050_5
-540	600	40	40	61	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_5
-541	600	41	41	60	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-542	600	42	42	59	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-543	600	43	43	58	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-544	600	44	44	57	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-545	600	45	45	56	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-546	600	46	46	55	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-547	600	47	47	54	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-548	600	48	48	53	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-549	600	49	49	52	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_104050_4
-550	600	50	50	51	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_4
-551	600	51	51	50	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-552	600	52	52	49	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-553	600	53	53	48	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-554	600	54	54	47	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-555	600	55	55	46	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-556	600	56	56	45	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-557	600	57	57	44	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-558	600	58	58	43	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-559	600	59	59	42	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_104050_3
-560	600	60	60	41	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_3
-561	600	61	61	40	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-562	600	62	62	39	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-563	600	63	63	38	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-564	600	64	64	37	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-565	600	65	65	36	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-566	600	66	66	35	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-567	600	67	67	34	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-568	600	68	68	33	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-569	600	69	69	32	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_104050_2
-570	600	70	70	31	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-571	600	71	71	30	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-572	600	72	72	29	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-573	600	73	73	28	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-574	600	74	74	27	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-575	600	75	75	26	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-576	600	76	76	25	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-577	600	77	77	24	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-578	600	78	78	23	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-579	600	79	79	22	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_104050_2
-580	600	80	80	21	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_2
-581	600	81	81	20	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-582	600	82	82	19	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-583	600	83	83	18	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-584	600	84	84	17	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-585	600	85	85	16	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-586	600	86	86	15	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-587	600	87	87	14	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-588	600	88	88	13	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-589	600	89	89	12	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_104050_1
-590	600	90	90	11	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-591	600	91	91	10	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-592	600	92	92	9	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-593	600	93	93	8	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-594	600	94	94	7	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-595	600	95	95	6	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-596	600	96	96	5	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-597	600	97	97	4	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-598	600	98	98	3	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-599	600	99	99	2	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_104050_1
-600	600	100	100	1	10000_1001_10,10000_1014_4000,10000_1017_4000,30000_840003_1,30000_104050_1
-601	700	1	1	100	10000_1001_500,10000_1014_200000,10000_1017_200000,30000_840003_50,30000_840165_500
-602	700	2	2	99	10000_1001_300,10000_1014_120000,10000_1017_120000,30000_840003_30,30000_840165_300
-603	700	3	3	98	10000_1001_200,10000_1014_80000,10000_1017_80000,30000_840003_20,30000_840165_200
-604	700	4	4	97	10000_1001_180,10000_1014_72000,10000_1017_72000,30000_840003_18,30000_840165_180
-605	700	5	5	96	10000_1001_160,10000_1014_64000,10000_1017_64000,30000_840003_16,30000_840165_160
-606	700	6	6	95	10000_1001_150,10000_1014_60000,10000_1017_60000,30000_840003_15,30000_840165_150
-607	700	7	7	94	10000_1001_140,10000_1014_56000,10000_1017_56000,30000_840003_14,30000_840165_140
-608	700	8	8	93	10000_1001_130,10000_1014_52000,10000_1017_52000,30000_840003_13,30000_840165_130
-609	700	9	9	92	10000_1001_120,10000_1014_48000,10000_1017_48000,30000_840003_12,30000_840165_120
-610	700	10	10	91	10000_1001_110,10000_1014_44000,10000_1017_44000,30000_840003_11,30000_840165_110
-611	700	11	11	90	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-612	700	12	12	89	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-613	700	13	13	88	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-614	700	14	14	87	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-615	700	15	15	86	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-616	700	16	16	85	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-617	700	17	17	84	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-618	700	18	18	83	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-619	700	19	19	82	10000_1001_100,10000_1014_40000,10000_1017_40000,30000_840003_10,30000_840165_100
-620	700	20	20	81	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-621	700	21	21	80	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-622	700	22	22	79	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-623	700	23	23	78	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-624	700	24	24	77	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-625	700	25	25	76	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-626	700	26	26	75	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-627	700	27	27	74	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-628	700	28	28	73	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-629	700	29	29	72	10000_1001_90,10000_1014_36000,10000_1017_36000,30000_840003_9,30000_840165_90
-630	700	30	30	71	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-631	700	31	31	70	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-632	700	32	32	69	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-633	700	33	33	68	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-634	700	34	34	67	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-635	700	35	35	66	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-636	700	36	36	65	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-637	700	37	37	64	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-638	700	38	38	63	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-639	700	39	39	62	10000_1001_80,10000_1014_32000,10000_1017_32000,30000_840003_8,30000_840165_80
-640	700	40	40	61	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-641	700	41	41	60	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-642	700	42	42	59	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-643	700	43	43	58	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-644	700	44	44	57	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-645	700	45	45	56	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-646	700	46	46	55	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-647	700	47	47	54	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-648	700	48	48	53	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-649	700	49	49	52	10000_1001_70,10000_1014_28000,10000_1017_28000,30000_840003_7,30000_840165_70
-650	700	50	50	51	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-651	700	51	51	50	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-652	700	52	52	49	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-653	700	53	53	48	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-654	700	54	54	47	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-655	700	55	55	46	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-656	700	56	56	45	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-657	700	57	57	44	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-658	700	58	58	43	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-659	700	59	59	42	10000_1001_60,10000_1014_24000,10000_1017_24000,30000_840003_6,30000_840165_60
-660	700	60	60	41	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-661	700	61	61	40	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-662	700	62	62	39	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-663	700	63	63	38	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-664	700	64	64	37	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-665	700	65	65	36	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-666	700	66	66	35	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-667	700	67	67	34	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-668	700	68	68	33	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-669	700	69	69	32	10000_1001_50,10000_1014_20000,10000_1017_20000,30000_840003_5,30000_840165_50
-670	700	70	70	31	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-671	700	71	71	30	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-672	700	72	72	29	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-673	700	73	73	28	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-674	700	74	74	27	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-675	700	75	75	26	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-676	700	76	76	25	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-677	700	77	77	24	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-678	700	78	78	23	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-679	700	79	79	22	10000_1001_40,10000_1014_16000,10000_1017_16000,30000_840003_4,30000_840165_40
-680	700	80	80	21	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-681	700	81	81	20	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-682	700	82	82	19	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-683	700	83	83	18	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-684	700	84	84	17	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-685	700	85	85	16	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-686	700	86	86	15	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-687	700	87	87	14	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-688	700	88	88	13	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-689	700	89	89	12	10000_1001_30,10000_1014_12000,10000_1017_12000,30000_840003_3,30000_840165_30
-690	700	90	90	11	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-691	700	91	91	10	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-692	700	92	92	9	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-693	700	93	93	8	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-694	700	94	94	7	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-695	700	95	95	6	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-696	700	96	96	5	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-697	700	97	97	4	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-698	700	98	98	3	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-699	700	99	99	2	10000_1001_20,10000_1014_8000,10000_1017_8000,30000_840003_2,30000_840165_20
-700	700	100	100	1	10000_1001_10,10000_1014_4000,10000_1017_4000,30000_840003_1,30000_840165_10
-701	800	1	1		10000_1001_2000,30000_810001_200,30000_800000_100,30000_1000003_60,30000_8300000_1,30000_9050000_1,30000_9022800_1
-702	800	2	2		10000_1001_1200,30000_810001_120,30000_800000_60,30000_1000003_40,30000_8400000_1,30000_9050000_1
-703	800	3	3		10000_1001_800,30000_810001_80,30000_800000_40,30000_1000003_30,30000_8400000_1,30000_9050000_1
-704	800	4	4		10000_1001_720,30000_810001_72,30000_800000_36,30000_1000003_25,30000_8400000_1,30000_9050000_1
-705	800	5	5		10000_1001_640,30000_810001_64,30000_800000_32,30000_1000003_20,30000_8400000_1,30000_9050000_1
-706	800	6	6		10000_1001_600,30000_810001_60,30000_800000_30,30000_1000003_18,30000_8400000_1,30000_9050000_1
-707	800	7	7		10000_1001_560,30000_810001_56,30000_800000_28,30000_1000003_16,30000_8400000_1,30000_9050000_1
-708	800	8	8		10000_1001_520,30000_810001_52,30000_800000_26,30000_1000003_14,30000_8400000_1,30000_9050000_1
-709	800	9	9		10000_1001_480,30000_810001_48,30000_800000_24,30000_1000003_12,30000_8400000_1,30000_9050000_1
-710	800	10	10		10000_1001_440,30000_810001_44,30000_800000_22,30000_1000003_10,30000_8400000_1,30000_9050000_1
-711	800	11	11		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-712	800	12	12		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-713	800	13	13		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-714	800	14	14		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-715	800	15	15		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-716	800	16	16		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-717	800	17	17		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-718	800	18	18		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-719	800	19	19		10000_1001_400,30000_810001_40,30000_800000_20,30000_1000002_40
-720	800	20	20		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-721	800	21	21		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-722	800	22	22		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-723	800	23	23		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-724	800	24	24		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-725	800	25	25		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-726	800	26	26		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-727	800	27	27		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-728	800	28	28		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-729	800	29	29		10000_1001_360,30000_810001_36,30000_800000_18,30000_1000002_36
-730	800	30	30		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-731	800	31	31		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-732	800	32	32		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-733	800	33	33		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-734	800	34	34		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-735	800	35	35		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-736	800	36	36		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-737	800	37	37		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-738	800	38	38		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-739	800	39	39		10000_1001_320,30000_810001_32,30000_800000_16,30000_1000002_32
-740	800	40	40		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-741	800	41	41		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-742	800	42	42		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-743	800	43	43		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-744	800	44	44		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-745	800	45	45		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-746	800	46	46		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-747	800	47	47		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-748	800	48	48		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-749	800	49	49		10000_1001_280,30000_810001_28,30000_800000_14,30000_1000002_28
-750	800	50	50		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-751	800	51	51		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-752	800	52	52		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-753	800	53	53		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-754	800	54	54		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-755	800	55	55		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-756	800	56	56		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-757	800	57	57		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-758	800	58	58		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-759	800	59	59		10000_1001_240,30000_810001_24,30000_800000_12,30000_1000002_24
-760	800	60	60		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-761	800	61	61		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-762	800	62	62		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-763	800	63	63		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-764	800	64	64		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-765	800	65	65		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-766	800	66	66		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-767	800	67	67		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-768	800	68	68		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-769	800	69	69		10000_1001_200,30000_810001_20,30000_800000_10,30000_1000002_20
-770	800	70	70		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-771	800	71	71		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-772	800	72	72		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-773	800	73	73		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-774	800	74	74		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-775	800	75	75		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-776	800	76	76		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-777	800	77	77		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-778	800	78	78		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-779	800	79	79		10000_1001_160,30000_810001_16,30000_800000_8,30000_1000002_16
-780	800	80	80		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-781	800	81	81		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-782	800	82	82		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-783	800	83	83		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-784	800	84	84		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-785	800	85	85		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-786	800	86	86		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-787	800	87	87		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-788	800	88	88		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-789	800	89	89		10000_1001_120,30000_810001_12,30000_800000_6,30000_1000002_12
-790	800	90	90		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-791	800	91	91		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-792	800	92	92		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-793	800	93	93		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-794	800	94	94		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-795	800	95	95		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-796	800	96	96		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-797	800	97	97		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-798	800	98	98		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-799	800	99	99		10000_1001_80,30000_810001_8,30000_800000_4,30000_1000002_8
-800	800	100	100		10000_1001_40,30000_810001_4,30000_800000_2,30000_1000002_4
+1	100	1	1	100	10000_1001_1500,10000_1014_200000,10000_1017_200000,30000_101050_100,30000_1400011_480
+2	100	2	2	99	10000_1001_900,10000_1014_120000,10000_1017_120000,30000_101050_60,30000_1400011_240
+3	100	3	3	98	10000_1001_600,10000_1014_80000,10000_1017_80000,30000_101050_40,30000_1400011_150
+4	100	4	4	97	10000_1001_540,10000_1014_72000,10000_1017_72000,30000_101050_30,30000_1400011_120
+5	100	5	5	96	10000_1001_480,10000_1014_64000,10000_1017_64000,30000_101050_26,30000_1400011_100
+6	100	6	6	95	10000_1001_450,10000_1014_60000,10000_1017_60000,30000_101050_24,30000_1400011_90
+7	100	7	7	94	10000_1001_420,10000_1014_56000,10000_1017_56000,30000_101050_24,30000_1400011_80
+8	100	8	8	93	10000_1001_390,10000_1014_52000,10000_1017_52000,30000_101050_24,30000_1400011_70
+9	100	9	9	92	10000_1001_360,10000_1014_48000,10000_1017_48000,30000_101050_24,30000_1400011_60
+10	100	10	10	91	10000_1001_330,10000_1014_44000,10000_1017_44000,30000_101050_24,30000_1400011_50
+11	100	11	11	90	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_22
+12	100	12	12	89	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_22
+13	100	13	13	88	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_22
+14	100	14	14	87	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_22
+15	100	15	15	86	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_22
+16	100	16	16	85	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_20
+17	100	17	17	84	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_20
+18	100	18	18	83	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_20
+19	100	19	19	82	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_101050_20
+20	100	20	20	81	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_20
+21	100	21	21	80	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+22	100	22	22	79	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+23	100	23	23	78	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+24	100	24	24	77	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+25	100	25	25	76	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+26	100	26	26	75	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+27	100	27	27	74	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+28	100	28	28	73	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+29	100	29	29	72	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_101050_18
+30	100	30	30	71	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_18
+31	100	31	31	70	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_16
+32	100	32	32	69	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_16
+33	100	33	33	68	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_16
+34	100	34	34	67	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_16
+35	100	35	35	66	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_16
+36	100	36	36	65	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_14
+37	100	37	37	64	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_14
+38	100	38	38	63	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_14
+39	100	39	39	62	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_101050_14
+40	100	40	40	61	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_14
+41	100	41	41	60	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+42	100	42	42	59	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+43	100	43	43	58	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+44	100	44	44	57	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+45	100	45	45	56	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+46	100	46	46	55	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+47	100	47	47	54	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+48	100	48	48	53	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+49	100	49	49	52	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_101050_12
+50	100	50	50	51	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_12
+51	100	51	51	50	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_10
+52	100	52	52	49	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_10
+53	100	53	53	48	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_10
+54	100	54	54	47	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_10
+55	100	55	55	46	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_10
+56	100	56	56	45	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_8
+57	100	57	57	44	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_8
+58	100	58	58	43	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_8
+59	100	59	59	42	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_101050_8
+60	100	60	60	41	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_8
+61	100	61	61	40	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+62	100	62	62	39	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+63	100	63	63	38	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+64	100	64	64	37	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+65	100	65	65	36	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+66	100	66	66	35	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+67	100	67	67	34	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+68	100	68	68	33	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+69	100	69	69	32	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_101050_6
+70	100	70	70	31	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+71	100	71	71	30	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+72	100	72	72	29	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+73	100	73	73	28	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+74	100	74	74	27	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+75	100	75	75	26	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+76	100	76	76	25	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+77	100	77	77	24	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+78	100	78	78	23	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+79	100	79	79	22	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_101050_6
+80	100	80	80	21	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_6
+81	100	81	81	20	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+82	100	82	82	19	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+83	100	83	83	18	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+84	100	84	84	17	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+85	100	85	85	16	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+86	100	86	86	15	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+87	100	87	87	14	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+88	100	88	88	13	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+89	100	89	89	12	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_101050_4
+90	100	90	90	11	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+91	100	91	91	10	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+92	100	92	92	9	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+93	100	93	93	8	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+94	100	94	94	7	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+95	100	95	95	6	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+96	100	96	96	5	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+97	100	97	97	4	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+98	100	98	98	3	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+99	100	99	99	2	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_101050_4
+100	100	100	100	1	10000_1001_30,10000_1014_4000,10000_1017_4000,30000_101050_4
+101	200	1	1	100	10000_1001_1500,10000_1014_200000,10000_1017_200000,30000_800110_500,30000_1400011_480
+102	200	2	2	99	10000_1001_900,10000_1014_120000,10000_1017_120000,30000_800110_250,30000_1400011_240
+103	200	3	3	98	10000_1001_600,10000_1014_80000,10000_1017_80000,30000_800110_150,30000_1400011_150
+104	200	4	4	97	10000_1001_540,10000_1014_72000,10000_1017_72000,30000_800110_135,30000_1400011_120
+105	200	5	5	96	10000_1001_480,10000_1014_64000,10000_1017_64000,30000_800110_120,30000_1400011_100
+106	200	6	6	95	10000_1001_450,10000_1014_60000,10000_1017_60000,30000_800110_110,30000_1400011_90
+107	200	7	7	94	10000_1001_420,10000_1014_56000,10000_1017_56000,30000_800110_105,30000_1400011_80
+108	200	8	8	93	10000_1001_390,10000_1014_52000,10000_1017_52000,30000_800110_100,30000_1400011_70
+109	200	9	9	92	10000_1001_360,10000_1014_48000,10000_1017_48000,30000_800110_90,30000_1400011_60
+110	200	10	10	91	10000_1001_330,10000_1014_44000,10000_1017_44000,30000_800110_80,30000_1400011_50
+111	200	11	11	90	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+112	200	12	12	89	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+113	200	13	13	88	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+114	200	14	14	87	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+115	200	15	15	86	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+116	200	16	16	85	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+117	200	17	17	84	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+118	200	18	18	83	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+119	200	19	19	82	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800110_75
+120	200	20	20	81	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_70
+121	200	21	21	80	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_70
+122	200	22	22	79	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_70
+123	200	23	23	78	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_70
+124	200	24	24	77	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_70
+125	200	25	25	76	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_65
+126	200	26	26	75	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_65
+127	200	27	27	74	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_65
+128	200	28	28	73	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_65
+129	200	29	29	72	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800110_65
+130	200	30	30	71	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+131	200	31	31	70	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+132	200	32	32	69	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+133	200	33	33	68	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+134	200	34	34	67	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+135	200	35	35	66	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+136	200	36	36	65	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+137	200	37	37	64	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+138	200	38	38	63	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+139	200	39	39	62	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800110_60
+140	200	40	40	61	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_55
+141	200	41	41	60	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_55
+142	200	42	42	59	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_55
+143	200	43	43	58	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_55
+144	200	44	44	57	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_55
+145	200	45	45	56	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_50
+146	200	46	46	55	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_50
+147	200	47	47	54	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_50
+148	200	48	48	53	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_50
+149	200	49	49	52	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800110_50
+150	200	50	50	51	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+151	200	51	51	50	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+152	200	52	52	49	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+153	200	53	53	48	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+154	200	54	54	47	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+155	200	55	55	46	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+156	200	56	56	45	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+157	200	57	57	44	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+158	200	58	58	43	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+159	200	59	59	42	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800110_45
+160	200	60	60	41	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_40
+161	200	61	61	40	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_40
+162	200	62	62	39	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_40
+163	200	63	63	38	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_40
+164	200	64	64	37	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_40
+165	200	65	65	36	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_35
+166	200	66	66	35	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_35
+167	200	67	67	34	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_35
+168	200	68	68	33	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_35
+169	200	69	69	32	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800110_35
+170	200	70	70	31	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+171	200	71	71	30	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+172	200	72	72	29	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+173	200	73	73	28	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+174	200	74	74	27	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+175	200	75	75	26	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+176	200	76	76	25	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+177	200	77	77	24	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+178	200	78	78	23	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+179	200	79	79	22	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800110_30
+180	200	80	80	21	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_25
+181	200	81	81	20	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_25
+182	200	82	82	19	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_25
+183	200	83	83	18	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_25
+184	200	84	84	17	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_25
+185	200	85	85	16	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_20
+186	200	86	86	15	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_20
+187	200	87	87	14	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_20
+188	200	88	88	13	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_20
+189	200	89	89	12	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800110_20
+190	200	90	90	11	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+191	200	91	91	10	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+192	200	92	92	9	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+193	200	93	93	8	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+194	200	94	94	7	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+195	200	95	95	6	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+196	200	96	96	5	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+197	200	97	97	4	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+198	200	98	98	3	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+199	200	99	99	2	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800110_15
+200	200	100	100	1	10000_1001_30,10000_1014_4000,10000_1017_4000,30000_800110_10
+401	500	1	1	100	10000_1001_1500,10000_1014_200000,10000_1017_200000,30000_800000_500,30000_1400011_480
+402	500	2	2	99	10000_1001_900,10000_1014_120000,10000_1017_120000,30000_800000_250,30000_1400011_240
+403	500	3	3	98	10000_1001_600,10000_1014_80000,10000_1017_80000,30000_800000_150,30000_1400011_150
+404	500	4	4	97	10000_1001_540,10000_1014_72000,10000_1017_72000,30000_800000_135,30000_1400011_120
+405	500	5	5	96	10000_1001_480,10000_1014_64000,10000_1017_64000,30000_800000_120,30000_1400011_100
+406	500	6	6	95	10000_1001_450,10000_1014_60000,10000_1017_60000,30000_800000_110,30000_1400011_90
+407	500	7	7	94	10000_1001_420,10000_1014_56000,10000_1017_56000,30000_800000_105,30000_1400011_80
+408	500	8	8	93	10000_1001_390,10000_1014_52000,10000_1017_52000,30000_800000_100,30000_1400011_70
+409	500	9	9	92	10000_1001_360,10000_1014_48000,10000_1017_48000,30000_800000_90,30000_1400011_60
+410	500	10	10	91	10000_1001_330,10000_1014_44000,10000_1017_44000,30000_800000_80,30000_1400011_50
+411	500	11	11	90	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+412	500	12	12	89	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+413	500	13	13	88	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+414	500	14	14	87	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+415	500	15	15	86	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+416	500	16	16	85	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+417	500	17	17	84	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+418	500	18	18	83	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+419	500	19	19	82	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_800000_75
+420	500	20	20	81	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_70
+421	500	21	21	80	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_70
+422	500	22	22	79	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_70
+423	500	23	23	78	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_70
+424	500	24	24	77	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_70
+425	500	25	25	76	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_65
+426	500	26	26	75	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_65
+427	500	27	27	74	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_65
+428	500	28	28	73	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_65
+429	500	29	29	72	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_800000_65
+430	500	30	30	71	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+431	500	31	31	70	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+432	500	32	32	69	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+433	500	33	33	68	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+434	500	34	34	67	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+435	500	35	35	66	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+436	500	36	36	65	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+437	500	37	37	64	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+438	500	38	38	63	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+439	500	39	39	62	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_800000_60
+440	500	40	40	61	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_55
+441	500	41	41	60	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_55
+442	500	42	42	59	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_55
+443	500	43	43	58	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_55
+444	500	44	44	57	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_55
+445	500	45	45	56	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_50
+446	500	46	46	55	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_50
+447	500	47	47	54	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_50
+448	500	48	48	53	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_50
+449	500	49	49	52	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_800000_50
+450	500	50	50	51	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+451	500	51	51	50	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+452	500	52	52	49	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+453	500	53	53	48	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+454	500	54	54	47	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+455	500	55	55	46	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+456	500	56	56	45	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+457	500	57	57	44	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+458	500	58	58	43	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+459	500	59	59	42	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_800000_45
+460	500	60	60	41	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_40
+461	500	61	61	40	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_40
+462	500	62	62	39	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_40
+463	500	63	63	38	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_40
+464	500	64	64	37	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_40
+465	500	65	65	36	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_35
+466	500	66	66	35	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_35
+467	500	67	67	34	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_35
+468	500	68	68	33	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_35
+469	500	69	69	32	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_800000_35
+470	500	70	70	31	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+471	500	71	71	30	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+472	500	72	72	29	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+473	500	73	73	28	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+474	500	74	74	27	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+475	500	75	75	26	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+476	500	76	76	25	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+477	500	77	77	24	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+478	500	78	78	23	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+479	500	79	79	22	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_800000_30
+480	500	80	80	21	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_25
+481	500	81	81	20	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_25
+482	500	82	82	19	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_25
+483	500	83	83	18	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_25
+484	500	84	84	17	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_25
+485	500	85	85	16	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_20
+486	500	86	86	15	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_20
+487	500	87	87	14	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_20
+488	500	88	88	13	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_20
+489	500	89	89	12	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_800000_20
+490	500	90	90	11	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+491	500	91	91	10	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+492	500	92	92	9	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+493	500	93	93	8	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+494	500	94	94	7	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+495	500	95	95	6	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+496	500	96	96	5	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+497	500	97	97	4	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+498	500	98	98	3	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+499	500	99	99	2	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_800000_15
+500	500	100	100	1	10000_1001_30,10000_1014_4000,10000_1017_4000,30000_800000_10
+501	600	1	1	100	10000_1001_1500,10000_1014_200000,10000_1017_200000,30000_104050_100,30000_1400011_480
+502	600	2	2	99	10000_1001_900,10000_1014_120000,10000_1017_120000,30000_104050_60,30000_1400011_240
+503	600	3	3	98	10000_1001_600,10000_1014_80000,10000_1017_80000,30000_104050_40,30000_1400011_150
+504	600	4	4	97	10000_1001_540,10000_1014_72000,10000_1017_72000,30000_104050_30,30000_1400011_120
+505	600	5	5	96	10000_1001_480,10000_1014_64000,10000_1017_64000,30000_104050_26,30000_1400011_100
+506	600	6	6	95	10000_1001_450,10000_1014_60000,10000_1017_60000,30000_104050_24,30000_1400011_90
+507	600	7	7	94	10000_1001_420,10000_1014_56000,10000_1017_56000,30000_104050_24,30000_1400011_80
+508	600	8	8	93	10000_1001_390,10000_1014_52000,10000_1017_52000,30000_104050_24,30000_1400011_70
+509	600	9	9	92	10000_1001_360,10000_1014_48000,10000_1017_48000,30000_104050_24,30000_1400011_60
+510	600	10	10	91	10000_1001_330,10000_1014_44000,10000_1017_44000,30000_104050_24,30000_1400011_50
+511	600	11	11	90	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_22
+512	600	12	12	89	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_22
+513	600	13	13	88	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_22
+514	600	14	14	87	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_22
+515	600	15	15	86	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_22
+516	600	16	16	85	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_20
+517	600	17	17	84	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_20
+518	600	18	18	83	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_20
+519	600	19	19	82	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_104050_20
+520	600	20	20	81	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_20
+521	600	21	21	80	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+522	600	22	22	79	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+523	600	23	23	78	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+524	600	24	24	77	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+525	600	25	25	76	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+526	600	26	26	75	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+527	600	27	27	74	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+528	600	28	28	73	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+529	600	29	29	72	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_104050_18
+530	600	30	30	71	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_18
+531	600	31	31	70	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_16
+532	600	32	32	69	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_16
+533	600	33	33	68	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_16
+534	600	34	34	67	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_16
+535	600	35	35	66	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_16
+536	600	36	36	65	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_14
+537	600	37	37	64	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_14
+538	600	38	38	63	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_14
+539	600	39	39	62	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_104050_14
+540	600	40	40	61	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_14
+541	600	41	41	60	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+542	600	42	42	59	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+543	600	43	43	58	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+544	600	44	44	57	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+545	600	45	45	56	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+546	600	46	46	55	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+547	600	47	47	54	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+548	600	48	48	53	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+549	600	49	49	52	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_104050_12
+550	600	50	50	51	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_12
+551	600	51	51	50	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_10
+552	600	52	52	49	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_10
+553	600	53	53	48	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_10
+554	600	54	54	47	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_10
+555	600	55	55	46	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_10
+556	600	56	56	45	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_8
+557	600	57	57	44	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_8
+558	600	58	58	43	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_8
+559	600	59	59	42	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_104050_8
+560	600	60	60	41	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_8
+561	600	61	61	40	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+562	600	62	62	39	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+563	600	63	63	38	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+564	600	64	64	37	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+565	600	65	65	36	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+566	600	66	66	35	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+567	600	67	67	34	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+568	600	68	68	33	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+569	600	69	69	32	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_104050_6
+570	600	70	70	31	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+571	600	71	71	30	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+572	600	72	72	29	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+573	600	73	73	28	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+574	600	74	74	27	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+575	600	75	75	26	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+576	600	76	76	25	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+577	600	77	77	24	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+578	600	78	78	23	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+579	600	79	79	22	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_104050_6
+580	600	80	80	21	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_6
+581	600	81	81	20	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+582	600	82	82	19	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+583	600	83	83	18	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+584	600	84	84	17	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+585	600	85	85	16	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+586	600	86	86	15	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+587	600	87	87	14	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+588	600	88	88	13	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+589	600	89	89	12	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_104050_4
+590	600	90	90	11	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+591	600	91	91	10	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+592	600	92	92	9	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+593	600	93	93	8	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+594	600	94	94	7	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+595	600	95	95	6	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+596	600	96	96	5	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+597	600	97	97	4	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+598	600	98	98	3	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+599	600	99	99	2	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_104050_4
+600	600	100	100	1	10000_1001_30,10000_1014_4000,10000_1017_4000,30000_104050_4
+601	700	1	1	100	10000_1001_1500,10000_1014_200000,10000_1017_200000,30000_9990032_1000,30000_1400011_480
+602	700	2	2	99	10000_1001_900,10000_1014_120000,10000_1017_120000,30000_9990032_500,30000_1400011_240
+603	700	3	3	98	10000_1001_600,10000_1014_80000,10000_1017_80000,30000_9990032_300,30000_1400011_150
+604	700	4	4	97	10000_1001_540,10000_1014_72000,10000_1017_72000,30000_9990032_270,30000_1400011_120
+605	700	5	5	96	10000_1001_480,10000_1014_64000,10000_1017_64000,30000_9990032_240,30000_1400011_100
+606	700	6	6	95	10000_1001_450,10000_1014_60000,10000_1017_60000,30000_9990032_220,30000_1400011_90
+607	700	7	7	94	10000_1001_420,10000_1014_56000,10000_1017_56000,30000_9990032_210,30000_1400011_80
+608	700	8	8	93	10000_1001_390,10000_1014_52000,10000_1017_52000,30000_9990032_200,30000_1400011_70
+609	700	9	9	92	10000_1001_360,10000_1014_48000,10000_1017_48000,30000_9990032_180,30000_1400011_60
+610	700	10	10	91	10000_1001_330,10000_1014_44000,10000_1017_44000,30000_9990032_160,30000_1400011_50
+611	700	11	11	90	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+612	700	12	12	89	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+613	700	13	13	88	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+614	700	14	14	87	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+615	700	15	15	86	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+616	700	16	16	85	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+617	700	17	17	84	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+618	700	18	18	83	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+619	700	19	19	82	10000_1001_300,10000_1014_40000,10000_1017_40000,30000_9990032_150
+620	700	20	20	81	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_140
+621	700	21	21	80	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_140
+622	700	22	22	79	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_140
+623	700	23	23	78	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_140
+624	700	24	24	77	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_140
+625	700	25	25	76	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_130
+626	700	26	26	75	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_130
+627	700	27	27	74	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_130
+628	700	28	28	73	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_130
+629	700	29	29	72	10000_1001_270,10000_1014_36000,10000_1017_36000,30000_9990032_130
+630	700	30	30	71	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+631	700	31	31	70	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+632	700	32	32	69	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+633	700	33	33	68	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+634	700	34	34	67	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+635	700	35	35	66	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+636	700	36	36	65	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+637	700	37	37	64	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+638	700	38	38	63	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+639	700	39	39	62	10000_1001_240,10000_1014_32000,10000_1017_32000,30000_9990032_120
+640	700	40	40	61	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_110
+641	700	41	41	60	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_110
+642	700	42	42	59	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_110
+643	700	43	43	58	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_110
+644	700	44	44	57	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_110
+645	700	45	45	56	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_100
+646	700	46	46	55	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_100
+647	700	47	47	54	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_100
+648	700	48	48	53	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_100
+649	700	49	49	52	10000_1001_210,10000_1014_28000,10000_1017_28000,30000_9990032_100
+650	700	50	50	51	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+651	700	51	51	50	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+652	700	52	52	49	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+653	700	53	53	48	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+654	700	54	54	47	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+655	700	55	55	46	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+656	700	56	56	45	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+657	700	57	57	44	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+658	700	58	58	43	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+659	700	59	59	42	10000_1001_180,10000_1014_24000,10000_1017_24000,30000_9990032_90
+660	700	60	60	41	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_80
+661	700	61	61	40	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_80
+662	700	62	62	39	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_80
+663	700	63	63	38	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_80
+664	700	64	64	37	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_80
+665	700	65	65	36	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_70
+666	700	66	66	35	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_70
+667	700	67	67	34	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_70
+668	700	68	68	33	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_70
+669	700	69	69	32	10000_1001_150,10000_1014_20000,10000_1017_20000,30000_9990032_70
+670	700	70	70	31	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+671	700	71	71	30	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+672	700	72	72	29	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+673	700	73	73	28	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+674	700	74	74	27	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+675	700	75	75	26	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+676	700	76	76	25	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+677	700	77	77	24	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+678	700	78	78	23	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+679	700	79	79	22	10000_1001_120,10000_1014_16000,10000_1017_16000,30000_9990032_60
+680	700	80	80	21	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_50
+681	700	81	81	20	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_50
+682	700	82	82	19	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_50
+683	700	83	83	18	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_50
+684	700	84	84	17	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_50
+685	700	85	85	16	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_40
+686	700	86	86	15	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_40
+687	700	87	87	14	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_40
+688	700	88	88	13	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_40
+689	700	89	89	12	10000_1001_90,10000_1014_12000,10000_1017_12000,30000_9990032_40
+690	700	90	90	11	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+691	700	91	91	10	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+692	700	92	92	9	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+693	700	93	93	8	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+694	700	94	94	7	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+695	700	95	95	6	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+696	700	96	96	5	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+697	700	97	97	4	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+698	700	98	98	3	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+699	700	99	99	2	10000_1001_60,10000_1014_8000,10000_1017_8000,30000_9990032_30
+700	700	100	100	1	10000_1001_30,10000_1014_4000,10000_1017_4000,30000_9990032_20
+701	800	1	1		10000_1001_2000,30000_810001_300,30000_1800001_600,30000_1000003_300,30000_8300000_1,30000_9050000_1,30000_1400011_3000
+702	800	2	2		10000_1001_1200,30000_810001_180,30000_1800001_360,30000_1000003_180,30000_8400000_1,30000_9050000_1,30000_1400011_1500
+703	800	3	3		10000_1001_800,30000_810001_120,30000_1800001_240,30000_1000003_120,30000_8400000_1,30000_9050000_1,30000_1400011_1000
+704	800	4	4		10000_1001_720,30000_810001_108,30000_1800001_216,30000_1000003_108,30000_8400000_1,30000_9050000_1,30000_1400011_800
+705	800	5	5		10000_1001_640,30000_810001_96,30000_1800001_192,30000_1000003_96,30000_8400000_1,30000_9050000_1,30000_1400011_600
+706	800	6	6		10000_1001_600,30000_810001_90,30000_1800001_180,30000_1000003_90,30000_8400000_1,30000_9050000_1,30000_1400011_500
+707	800	7	7		10000_1001_560,30000_810001_84,30000_1800001_168,30000_1000003_84,30000_8400000_1,30000_9050000_1,30000_1400011_400
+708	800	8	8		10000_1001_520,30000_810001_78,30000_1800001_156,30000_1000003_78,30000_8400000_1,30000_9050000_1,30000_1400011_300
+709	800	9	9		10000_1001_480,30000_810001_72,30000_1800001_144,30000_1000003_72,30000_8400000_1,30000_9050000_1,30000_1400011_200
+710	800	10	10		10000_1001_440,30000_810001_66,30000_1800001_132,30000_1000003_66,30000_8400000_1,30000_9050000_1,30000_1400011_100
+711	800	11	11		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+712	800	12	12		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+713	800	13	13		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+714	800	14	14		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+715	800	15	15		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+716	800	16	16		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+717	800	17	17		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+718	800	18	18		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+719	800	19	19		10000_1001_400,30000_810001_60,30000_1800001_120,30000_1000003_60
+720	800	20	20		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+721	800	21	21		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+722	800	22	22		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+723	800	23	23		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+724	800	24	24		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+725	800	25	25		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+726	800	26	26		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+727	800	27	27		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+728	800	28	28		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+729	800	29	29		10000_1001_360,30000_810001_54,30000_1800001_108,30000_1000003_54
+730	800	30	30		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+731	800	31	31		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+732	800	32	32		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+733	800	33	33		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+734	800	34	34		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+735	800	35	35		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+736	800	36	36		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+737	800	37	37		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+738	800	38	38		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+739	800	39	39		10000_1001_320,30000_810001_48,30000_1800001_96,30000_1000003_48
+740	800	40	40		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+741	800	41	41		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+742	800	42	42		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+743	800	43	43		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+744	800	44	44		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+745	800	45	45		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+746	800	46	46		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+747	800	47	47		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+748	800	48	48		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+749	800	49	49		10000_1001_280,30000_810001_42,30000_1800001_84,30000_1000003_42
+750	800	50	50		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+751	800	51	51		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+752	800	52	52		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+753	800	53	53		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+754	800	54	54		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+755	800	55	55		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+756	800	56	56		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+757	800	57	57		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+758	800	58	58		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+759	800	59	59		10000_1001_240,30000_810001_36,30000_1800001_72,30000_1000003_36
+760	800	60	60		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+761	800	61	61		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+762	800	62	62		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+763	800	63	63		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+764	800	64	64		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+765	800	65	65		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+766	800	66	66		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+767	800	67	67		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+768	800	68	68		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+769	800	69	69		10000_1001_200,30000_810001_30,30000_1800001_60,30000_1000003_30
+770	800	70	70		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+771	800	71	71		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+772	800	72	72		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+773	800	73	73		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+774	800	74	74		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+775	800	75	75		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+776	800	76	76		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+777	800	77	77		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+778	800	78	78		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+779	800	79	79		10000_1001_160,30000_810001_24,30000_1800001_48,30000_1000003_24
+780	800	80	80		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+781	800	81	81		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+782	800	82	82		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+783	800	83	83		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+784	800	84	84		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+785	800	85	85		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+786	800	86	86		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+787	800	87	87		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+788	800	88	88		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+789	800	89	89		10000_1001_120,30000_810001_18,30000_1800001_36,30000_1000003_18
+790	800	90	90		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+791	800	91	91		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+792	800	92	92		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+793	800	93	93		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+794	800	94	94		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+795	800	95	95		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+796	800	96	96		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+797	800	97	97		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+798	800	98	98		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+799	800	99	99		10000_1001_80,30000_810001_12,30000_1800001_24,30000_1000003_12
+800	800	100	100		10000_1001_40,30000_810001_6,30000_1800001_12,30000_1000003_6
 ]],
 
 }

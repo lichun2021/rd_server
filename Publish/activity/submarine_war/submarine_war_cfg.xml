@@ -11,7 +11,7 @@ gameCountLimit = 3
 buyGameCountCost = 10000_1000_30;10000_1000_30
 
 # 消耗金条获得游戏次数上限
-buyGameTimes = 2
+buyGameTimes = 3
 
 # 跨服排行服务器数量
 serverNumber = 3
@@ -41,7 +41,7 @@ goldPrice = 10000_1000_10
 goldTimeLimit = 20
 
 # 扫荡时从最高关卡-n关开始
-sweepLevel = 3
+sweepLevel = 2
 
 # 潜艇大战积分折算经验比例 （浮点数 0.01=1%）
 baseTransRate = 1

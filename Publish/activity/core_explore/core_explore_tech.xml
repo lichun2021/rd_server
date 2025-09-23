@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="101" techType="4" techEffect="30000_21070056_20,30000_9990032_100,30000_840194_300" techCost="30000_1367005_600" />
+      <data id="201" techType="2" techEffect="1100" conditions="101" techCost="30000_1367005_1200" />
+      <data id="202" techType="1" techEffect="500" conditions="101" techCost="30000_1367005_1200" />
+      <data id="203" techType="3" techEffect="3" conditions="101" techCost="30000_1367005_1200" />
+      <data id="302" techType="5" conditions="201,202,203" />
+      <data id="401" techType="2" techEffect="1200" conditions="201" techCost="30000_1367005_1600" />
+      <data id="402" techType="1" techEffect="500" conditions="302" techCost="30000_1367005_1600" />
+      <data id="403" techType="3" techEffect="4" conditions="203" techCost="30000_1367005_1600" />
+      <data id="501" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_1" conditions="401" techCost="30000_1367005_1000" />
+      <data id="502" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_1" conditions="402" techCost="30000_1367005_1000" />
+      <data id="503" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_1" conditions="403" techCost="30000_1367005_1000" />
+      <data id="602" techType="8" conditions="501,502,503" />
+      <data id="701" techType="2" techEffect="2700" conditions="501" techCost="30000_1367005_2000" />
+      <data id="702" techType="1" techEffect="1000" conditions="602" techCost="30000_1367005_2000" />
+      <data id="703" techType="3" techEffect="5" conditions="503" techCost="30000_1367005_2000" />
+      <data id="801" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_1" conditions="701" techCost="30000_1367005_1000" />
+      <data id="802" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_1" conditions="702" techCost="30000_1367005_1000" />
+      <data id="803" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_1" conditions="703" techCost="30000_1367005_1000" />
+      <data id="902" techType="4" techEffect="30000_21070056_66" conditions="801,802,803" />
+      <data id="1001" techType="4" techEffect="30000_21070056_75,30000_9990032_375,30000_840194_1125" conditions="801" techCost="30000_1367005_3000" />
+      <data id="1002" techType="1" techEffect="750" conditions="902" techCost="30000_1367005_3000" />
+      <data id="1003" techType="4" techEffect="30000_21070056_75,30000_9990032_375,30000_840194_1125" conditions="803" techCost="30000_1367005_3000" />
+      <data id="1101" techType="4" techEffect="30000_21070056_90,30000_9990032_450,30000_840194_1350" conditions="1001" techCost="30000_1367005_4000" />
+      <data id="1102" techType="1" techEffect="750" conditions="1002" techCost="30000_1367005_4000" />
+      <data id="1103" techType="4" techEffect="30000_21070056_90,30000_9990032_450,30000_840194_1350" conditions="1003" techCost="30000_1367005_4000" />
+      <data id="1201" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_2" conditions="1101" techCost="30000_1367005_1000" />
+      <data id="1202" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_2" conditions="1102" techCost="30000_1367005_1000" />
+      <data id="1203" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367003_2" conditions="1103" techCost="30000_1367005_1000" />
+      <data id="1302" techType="8" conditions="1201,1202,1203" />
+      <data id="1401" techType="4" techEffect="30000_21070056_100,30000_9990032_500,30000_840194_1500" conditions="1201" techCost="30000_1367005_5000" />
+      <data id="1402" techType="1" techEffect="1500" conditions="1302" techCost="30000_1367005_5000" />
+      <data id="1403" techType="4" techEffect="30000_21070056_100,30000_9990032_500,30000_840194_1500" conditions="1203" techCost="30000_1367005_5000" />
+      <data id="1501" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_2" conditions="1401" techCost="30000_1367005_1000" />
+      <data id="1502" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_2" conditions="1402" techCost="30000_1367005_1000" />
+      <data id="1503" techType="4" techEffect="30000_21070056_30,30000_9990032_150,30000_840194_450,30000_1367004_2" conditions="1403" techCost="30000_1367005_1000" />
+      <data id="1602" techType="8" conditions="1501,1502,1503" />
+</root>

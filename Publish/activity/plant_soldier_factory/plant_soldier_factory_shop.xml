@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" shopItemType="0" times="1" getItem="30000_21070054_1,30000_840172_1" isRefresh="1" />
+      <data id="2" shopItemType="2" times="1" payItem="10000_1000_100" getItem="30000_21070054_2,30000_840172_2" isRefresh="1" />
+      <data id="3" shopItemType="1" times="1" iosPayId="3620101" androidPayID="3620001" payQuota="6" getItem="30000_21070054_2,30000_840172_2" />
+      <data id="4" shopItemType="1" times="1" iosPayId="3620102" androidPayID="3620002" payQuota="30" getItem="30000_21070054_6,30000_840172_6" />
+      <data id="5" shopItemType="2" times="1" payItem="10000_1000_480" getItem="30000_21070054_6,30000_840172_6" />
+      <data id="6" shopItemType="2" times="1" payItem="10000_1000_980" getItem="30000_21070054_11,30000_840172_11" />
+      <data id="7" shopItemType="2" times="3" payItem="10000_1000_2980" getItem="30000_21070054_30,30000_840172_30" />
+</root>

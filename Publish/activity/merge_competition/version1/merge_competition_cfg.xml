@@ -20,7 +20,7 @@ rankType5ShowMax = 2
 rankType1LocalNum = 20
 
 # 联盟去兵战力榜-本服前X给国家积分
-rankType2LocalNum = 3
+rankType2LocalNum = 1
 
 # 个人体力消耗榜-本服前X给国家积分
 rankType3LocalNum = 20

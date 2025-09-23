@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-	<data id="1" format="通知:【%var1%】服的玩家[%var2%]进入游戏，玩家坐标:[(%var3%,%var4%)]。" />
-	<data id="2" format="通知:【%var1%】服的玩家[%var2%]发起行军，玩家坐标:[(%var3%,%var4%)]，行军目标[(%var5%,%var6%)]，行军类型[%var7%]。" />
-	<data id="3" format="通知:【%var1%】服的玩家[%var2%]迁城成功，原有坐标:[(%var3%,%var4%)]，目标坐标[(%var5%,%var6%)]，目标服务器[%var7%]。" />
-</root>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data termId="1" showTime="2020-4-16 00:00:00" startTime="2020-4-16 00:00:00" stopTrigger="2020-5-6 00:00:00" endTime="2020-5-12 23:59:59" hiddenTime="2020-5-12 23:59:59" />
-      <data termId="2" showTime="2020-5-21 00:00:00" startTime="2020-5-21 00:00:00" stopTrigger="2021-12-9 23:59:59" endTime="2021-12-23 23:59:59" hiddenTime="2021-12-23 23:59:59" />
-</root>

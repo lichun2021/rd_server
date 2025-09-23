@@ -10,3 +10,9 @@ unlockCostId = 1000
 # 解锁每周购买次数
 unlockTime = 30
 
+# 领取双倍奖励的几率
+doubleProbability = 20
+
+# 使用手动领取的时间节点
+version20240905Time = 2024-9-11 12:00:00
+

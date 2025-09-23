@@ -8,7 +8,7 @@ return {
 		priority = 10055,
 		icon = [[Activity_Icon_147_Nor.png]],
 		selecticon = [[Activity_Icon_147_Sel.png]],
-		serverDelay = 1209600,
+		serverDelay = 1728000,
 	},
 
 }

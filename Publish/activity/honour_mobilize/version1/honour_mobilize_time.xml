@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data termId="1" showTime="0" startTime="0" endTime="315359999" hiddenTime="315359999" />
+      <data termId="1" showTime="345600" startTime="345600" endTime="604799" hiddenTime="604799" />
+      <data termId="2" showTime="950400" startTime="950400" endTime="1209599" hiddenTime="1209599" />
+      <data termId="3" showTime="1468800" startTime="1468800" endTime="1727999" hiddenTime="1727999" />
+      <data termId="4" showTime="1728000" startTime="1728000" endTime="315360000" hiddenTime="315360000" />
 </root>

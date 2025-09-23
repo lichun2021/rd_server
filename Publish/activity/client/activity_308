@@ -1,0 +1,34 @@
+return {
+	prop =
+	{
+		activityId = 308,
+		name = [[荣耀同享]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18"><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="22">基本规则说明：</font><br/>1.活动期间，全体联盟成员可通过捐献泰伯之心道具与赛博之心道具，升级联盟的泰伯能量和赛博能量等级。<br/>2.提升泰伯能量等级可以<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">额外提升特定活动特定行为的道具获取数量</font>（特定活动及特定行为范围可查看下方的其他规则说明）。<br/>3.提升赛博能量等级可以<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">额外提升特定礼包的道具获取数量</font>，其中额外提升对代金券与泰伯之心道具无效（特定礼包范围可查看下方的其他规则说明）。<br/>4.指定活动与礼包的额外返利奖励在泰伯能量等级与赛博能量<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">等级提升时</font>与<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">活动结束时</font>（需重新登录）通过邮件发送。<br/>5.除活动与礼包的额外赠送道具外，联盟的泰伯能量与赛博能量等级提升时，会为全体联盟成员发送一份<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">固定的升级奖励</font>（相同升级奖励只会收到一次，更换联盟不会重复收到）。<br/>6.每次捐献泰伯之心道具与赛博之心道具均可获得相应的<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">随机奖励</font>；泰伯之心道具可通过购买线上礼包获得；赛博之心道具可通过线上活动获得。<br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">7.您在新加入一个联盟时，因您错过了该联盟的当前能量等级提升时机，不会收到对应的能量等级奖励，且系统视为您领取了当前对应联盟能量等级的奖励，后续不会进行补发。请您谨慎更换联盟。</font><br/><font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="22">其他规则说明：</font><br/>1.特定活动特定范围是指：1)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">点券夺宝</font>活动转盘获得的道具；2)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">深海秘藏</font>活动开启能量球获得的道具；3)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">勋章行动</font>活动转盘获得的道具；4)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">新春商城</font>活动消耗金条兑换获得的道具；5)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">今日累充</font>活动消耗金条购买获得的道具；6)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">幸运折扣</font>活动消耗金条购买获得的道具；7)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">鸿运夺金</font>活动消耗金条抽取获得的道具；8)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">万人团购</font>活动消耗金条购买获得的道具；9)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">拼单福利</font>活动消耗金条购买获得的道具；10)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">秘境寻宝</font>活动寻路开启宝箱获得的道具；11)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">异星探索</font>活动随机探索获得的道具；12)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">泰矿提炼所</font>活动随机提炼及连线获得的道具；13)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">核心勘探</font>活动勘探商店购买及勘探科技中获得的养成道具；14)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">玫瑰之约</font>活动赠送玫瑰获得的道具；15)<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">幸运补给柜</font>活动开启补给柜获得的道具。<br/>2.特定礼包是指超值礼包、黑金礼包和推送礼包。其中超值礼包可从主界面超值礼包、自选资源入口获取，黑金礼包从特惠商人界面在满足条件后触发获取，推送礼包在满足触发条件后可触发获取。<br/>3.在泰伯利亚战场、赛博之战战场、陨晶战场、霸主争夺战战场及航海远征跨服状态下，购买的礼包不参与返利。<br/>4.每次返利时，返利道具数量的计算方式为：<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">返还数量 = 累计获得数量 X 当前返利比例 - 已返利数量</font>。本活动返利道具数量向下取整，根据返利比例计算得出的返还道具数量不足1个时不返还。</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_308_Nor.png]],
+		selecticon = [[Activity_Icon_308_Sel.png]],
+		itemA = [[30000_1400007_1]],
+		itemB = [[30000_1400008_1]],
+		itemARewardBase = [[30000_810001_1]],
+		itemARewardRandom = [[30000_1782123_2,30000_1782123_5,30000_1782123_20,30000_802005_10,30000_802005_30,30000_802005_100,30000_1300027_20,30000_1300027_50,30000_1300027_200,30000_802004_10,30000_802004_30,30000_802004_100,30000_21063005_20,30000_21063005_50,30000_21063005_200,30000_9990032_20,30000_9990032_50,30000_9990032_200,30000_800002_10,30000_800002_30,30000_800002_100]],
+		itemBRewardBase = [[30000_1780035_1]],
+		itemBRewardRandom = [[30000_810001_1,30000_100050_1,30000_810002_1,30000_850007_1,30000_850037_1]],
+		gotoA = [[1204_1327_1126_1157_1242_1151_1300_1220_1324_1363_1347_1362_1369_1319_1348]],
+		gotoB = [[2004_2002_2003]],
+		packList = [[681951_681952_681953_681954_681955_681956_681957_681958_681959_681960]],
+	},
+	alliance_share_glory_lv = [[id	level	type	expNeed	isMax	rewards	rewardProportion
+1	1	1	1	1	2	1
+1001	1	1	5	0	30000_1000005_1,30000_1782123_4,30000_1300027_40,30000_802005_20	1000
+1002	2	1	10	0	30000_1000005_1,30000_1782123_8,30000_1300027_80,30000_802005_40	1500
+1003	3	1	20	0	30000_1000005_2,30000_1782123_14,30000_1300027_140,30000_802005_70	2000
+1004	4	1	30	0	30000_1000005_3,30000_1782123_24,30000_1300027_240,30000_802005_120	3000
+1005	5	1	50	1	30000_1000005_12,30000_1782123_40,30000_1300027_400,30000_802005_200	4000
+2001	1	2	500	0	30000_1782123_5,30000_802005_30,30000_802004_30,30000_800002_30	1000
+2002	2	2	1000	0	30000_1782123_10,30000_802005_60,30000_802004_60,30000_800002_60	1500
+2003	3	2	2000	0	30000_1782123_15,30000_802005_90,30000_802004_90,30000_800002_90	2000
+2004	4	2	3000	0	30000_1782123_20,30000_802005_120,30000_802004_120,30000_800002_120	3000
+2005	5	2	5000	1	30000_1782123_25,30000_802005_150,30000_802004_150,30000_800002_150	4000
+]],
+
+}

@@ -2,7 +2,7 @@ return {
 	prop =
 	{
 		activityId = 85,
-		name = [[战意激增]],
+		name = [[荣耀攻城]],
 		title = [[活动详情]],
 		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官达到活动界面的指定条件即可领取对应奖励。<br/>2. 请您点击<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">领取按钮</font>领取奖励。<br/>3. 返回活动页面可查看奖励详情。<br/>4. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/></font>]],
 		priority = 10040,
@@ -12,14 +12,12 @@ return {
 	},
 	hero_theme_achieve = [[achieveId	conditionType	conditionValue	configValue	gotoType	gotoValue	rewards	title
 1	1	2	1	1	2	2	2
-850001	131300	1075_1	1	0	2208	30000_1510001_20,30000_1510002_10,30000_1510003_5,30000_810001_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">拥有英雄<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔</font>并分享{0}次</font>
-850002	100102	1075_2	2	0	2208	30000_1510001_20,30000_1510002_10,30000_1510003_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>星</font>
-850003	100102	1075_3	3	0	2208	30000_1510001_20,30000_1510002_10,30000_1510003_10,30000_1510004_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>星</font>
-850004	100102	1075_4	4	0	2208	30000_1510001_20,30000_1510002_10,30000_1510003_10,30000_1510004_5,30000_1510005_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>星</font>
-850005	100100	1075_40	40	0	2208	30000_13310001_20,30000_13310002_10,30000_13310003_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-850006	100100	1075_60	60	0	2208	30000_13310001_20,30000_13310002_10,30000_13310003_10	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-850007	100100	1075_80	80	0	2208	30000_13310001_20,30000_13310002_10,30000_13310003_10,30000_13310004_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
-850008	100100	1075_100	100	0	2208	30000_13310001_20,30000_13310002_10,30000_13310003_10,30000_13310004_5,30000_13310005_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">谢里尔达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+850001	131300	1114_1	1	1000	310	30000_840424_10,30000_840156_10,30000_100050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">拥有英雄<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅</font>并分享{0}次</font>
+850002	100102	1114_2	2	1000	310	30000_1001114_2,30000_840424_20,30000_840156_20,30000_100050_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>星</font>
+850003	100102	1114_3	3	1000	310	30000_1001114_3,30000_840424_30,30000_840156_30,30000_100050_8	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>星</font>
+850005	100100	1114_40	40	1000	310	30000_840424_10,30000_800143_10,30000_820002_3,30000_100050_3	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+850006	100100	1114_60	60	1000	310	30000_840424_20,30000_800143_20,30000_820002_5,30000_100050_5	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
+850007	100100	1114_80	80	1000	310	30000_840424_30,30000_800143_30,30000_820002_8,30000_100050_8	<font color="#fefefe" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">阿斯缇娅达到<font color="#ffeb00" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">{0}</font>级</font>
 ]],
 
 }

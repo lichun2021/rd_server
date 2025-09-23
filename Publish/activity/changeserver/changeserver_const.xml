@@ -1,0 +1,9 @@
+# 
+serverDelay = 0
+
+# 不在排行榜上消耗
+costRankNothing = 200
+
+# 不在战力范围内消耗
+costPowerNothing = 200
+

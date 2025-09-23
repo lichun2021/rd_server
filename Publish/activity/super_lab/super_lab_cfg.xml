@@ -1,5 +1,5 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 个人排名记录的总名次
 personRankSize = 100
@@ -8,7 +8,7 @@ personRankSize = 100
 guildRankSize = 10
 
 # 收集道具ID
-itemId = 1480001
+itemId = 1300017
 
 # 个人排名奖励发放邮件ID
 personalRankAwardMail = 20190101

@@ -8,5 +8,5 @@ dailyGainMessageLimit = 25
 dailyGainGiftLimit = 10
 
 # 非回流玩家单次接受礼物奖励内容
-gainGiftReward = 30000_1780040_1,30000_810001_2
+gainGiftReward = 30000_850051_1,30000_1780050_4,30000_810001_3
 

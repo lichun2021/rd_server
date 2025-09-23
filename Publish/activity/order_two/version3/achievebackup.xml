@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1001" cycle="1" repeatVal="2" orderType="1010" conditionVal="1" exp="5000" />
+      <data id="1002" cycle="1" repeatVal="2" orderType="1003" conditionVal="10" exp="5000" />
+      <data id="1003" cycle="1" repeatVal="3" orderType="1021" conditionVal="1" exp="3000" />
+      <data id="1004" cycle="1" repeatVal="5" orderType="1009" conditionVal="10103_1" exp="2000" />
+      <data id="1005" cycle="1" repeatVal="5" orderType="1012" conditionVal="8000_1" exp="2000" />
+      <data id="1006" cycle="1" repeatVal="5" orderType="1014" conditionVal="3" exp="3000" />
+      <data id="1007" cycle="1" repeatVal="5" orderType="1016" conditionVal="0_5" exp="3000" />
+      <data id="1008" cycle="1" repeatVal="6" orderType="1017" conditionVal="301_310_10" exp="2000" />
+      <data id="1009" cycle="1" repeatVal="15" orderType="1020" conditionVal="0_2000" exp="1000" />
+      <data id="2001" cycle="2" repeatVal="2" orderType="1006" conditionVal="0_1" exp="5000" />
+      <data id="2002" cycle="2" repeatVal="1" orderType="1010" conditionVal="1" exp="5000" />
+      <data id="2003" cycle="2" repeatVal="5" orderType="1009" conditionVal="10103_1" exp="2000" />
+      <data id="2004" cycle="2" repeatVal="1" orderType="1021" conditionVal="1" exp="3000" />
+      <data id="2005" cycle="2" repeatVal="8" orderType="1011" conditionVal="1" exp="2000" />
+      <data id="2006" cycle="2" repeatVal="50" orderType="1013" conditionVal="10" exp="500" />
+      <data id="2007" cycle="2" repeatVal="5" orderType="1017" conditionVal="201_210_10" exp="2000" />
+      <data id="2008" cycle="2" repeatVal="50" orderType="1018" conditionVal="6000" exp="200" />
+      <data id="2009" cycle="2" repeatVal="50" orderType="1019" conditionVal="1_99_10" exp="200" />
+      <data id="3001" cycle="3" repeatVal="2" orderType="1003" conditionVal="10" exp="5000" />
+      <data id="3002" cycle="3" repeatVal="2" orderType="1010" conditionVal="1" exp="5000" />
+      <data id="3004" cycle="3" repeatVal="3" orderType="1021" conditionVal="1" exp="3000" />
+      <data id="3005" cycle="3" repeatVal="5" orderType="1012" conditionVal="8000_1" exp="2000" />
+      <data id="3006" cycle="3" repeatVal="10" orderType="1014" conditionVal="3" exp="3000" />
+      <data id="3007" cycle="3" repeatVal="10" orderType="1016" conditionVal="0_5" exp="3000" />
+      <data id="3008" cycle="3" repeatVal="20" orderType="1017" conditionVal="301_310_10" exp="2000" />
+      <data id="3009" cycle="3" repeatVal="20" orderType="1020" conditionVal="0_2000" exp="1000" />
+      <data id="4001" cycle="4" repeatVal="2" orderType="1010" conditionVal="1" exp="5000" />
+      <data id="4002" cycle="4" repeatVal="2" orderType="1006" conditionVal="0_1" exp="5000" />
+      <data id="4003" cycle="4" repeatVal="3" orderType="1021" conditionVal="1" exp="3000" />
+      <data id="4004" cycle="4" repeatVal="5" orderType="1009" conditionVal="10103_1" exp="2000" />
+      <data id="4005" cycle="4" repeatVal="8" orderType="1011" conditionVal="1" exp="2000" />
+      <data id="4006" cycle="4" repeatVal="30" orderType="1015" conditionVal="10" exp="1500" />
+      <data id="4007" cycle="4" repeatVal="20" orderType="1017" conditionVal="201_210_10" exp="2000" />
+      <data id="4008" cycle="4" repeatVal="80" orderType="1018" conditionVal="6000" exp="200" />
+      <data id="4009" cycle="4" repeatVal="50" orderType="1019" conditionVal="1_99_10" exp="200" />
+</root>

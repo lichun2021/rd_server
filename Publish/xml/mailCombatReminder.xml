@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" dictionary="@BattleTips_01" defaultWeight="0" resourceWeight="100" baseWeight="0" />
-      <data id="2" dictionary="@BattleTips_02" defaultWeight="1" resourceWeight="1" baseWeight="1" />
-      <data id="3" dictionary="@BattleTips_03" defaultWeight="1" resourceWeight="1" baseWeight="1" />
-      <data id="4" dictionary="@BattleTips_04" defaultWeight="1" resourceWeight="1" baseWeight="1" />
-      <data id="5" dictionary="@BattleTips_05" defaultWeight="1" resourceWeight="1" baseWeight="1" />
-      <data id="6" dictionary="@BattleTips_06" defaultWeight="1" resourceWeight="1" baseWeight="1" />
-</root>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" giftName="@PresidentGiftName4" totalNumber="5" awardId="2500404" level="2" />
-      <data id="2" giftName="@PresidentGiftName5" totalNumber="10" awardId="2500405" level="2" />
-      <data id="3" giftName="@PresidentGiftName6" totalNumber="35" awardId="2500406" level="2" />
-      <data id="4" giftName="@PresidentGiftName7" totalNumber="5" awardId="2500407" level="3" />
-      <data id="5" giftName="@PresidentGiftName8" totalNumber="10" awardId="2500408" level="3" />
-      <data id="6" giftName="@PresidentGiftName9" totalNumber="35" awardId="2500409" level="3" />
-</root>

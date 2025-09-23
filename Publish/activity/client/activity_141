@@ -10,7 +10,7 @@ return {
 		selecticon = [[Activity_Icon_141_Sel.png]],
 		bigIcon = [[Activity_DailyRecharge.png]],
 		contenTips = [[<font color="#77443f" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">尊敬的指挥官：<br/><font color="#8a4b45" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">活动每天会重置，充值一定金额可购买超低折扣宝箱</font></font>]],
-		rechargeTips = [[<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">当前累充：<font color="#clec84" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}元</font></font>]],
+		rechargeTips = [[<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">当前累充：<font color="#c1ec84" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">{0}元</font></font>]],
 		serverDelay = 1296000,
 		des = [[<font color="#ab6148" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="20">超低折扣礼包达成购买条件后，只在当天可进行购买</font>]],
 	},

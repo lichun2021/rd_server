@@ -7761,7 +7761,6 @@ CREATE TABLE `player` (
   `armourSuit` int(11) NOT NULL DEFAULT '1',
   `armourSuitCount` int(11) NOT NULL DEFAULT '1',
   `maxBattlePoint` bigint(20) DEFAULT '0',
-  `openharmony` text COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   KEY `name_index` (`name`) USING BTREE,
   KEY `deviceId_index` (`deviceId`) USING BTREE,

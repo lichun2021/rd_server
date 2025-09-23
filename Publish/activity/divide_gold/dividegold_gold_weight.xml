@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" goldNum="33" weight="4300" />
-      <data id="2" goldNum="66" weight="2000" />
-      <data id="3" goldNum="88" weight="1750" />
-      <data id="4" goldNum="188" weight="1000" />
-      <data id="5" goldNum="288" weight="500" />
-      <data id="6" goldNum="388" weight="320" />
-      <data id="7" goldNum="666" weight="125" />
+      <data id="1" goldNum="66" weight="3000" />
+      <data id="2" goldNum="166" weight="2000" />
+      <data id="3" goldNum="266" weight="2000" />
+      <data id="4" goldNum="366" weight="1650" />
+      <data id="5" goldNum="666" weight="1000" />
+      <data id="6" goldNum="1666" weight="250" />
+      <data id="7" goldNum="6666" weight="95" />
       <data id="8" goldNum="8888" weight="5" />
 </root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pattern="30000_21070093_1" weight="1080" poolType="3" rewards="30000_810000_20" />
+      <data id="2" pattern="30000_21070094_1" weight="1080" poolType="3" rewards="30000_850008_20" />
+      <data id="3" pattern="30000_21070095_1" weight="1080" poolType="3" rewards="30000_850038_20" />
+      <data id="4" pattern="30000_21070096_1" weight="1080" poolType="3" rewards="30000_850018_20" />
+      <data id="5" pattern="30000_21070097_1" weight="1080" poolType="3" rewards="30000_850028_20" />
+      <data id="6" pattern="30000_21070098_1" weight="890" poolType="2" />
+      <data id="7" pattern="30000_21070099_1" weight="890" poolType="2" />
+      <data id="8" pattern="30000_21070100_1" weight="890" poolType="2" />
+      <data id="9" pattern="30000_21070101_1" weight="890" poolType="2" />
+      <data id="10" pattern="30000_21070102_1" weight="890" poolType="2" />
+      <data id="11" pattern="30000_21070103_1" weight="150" poolType="1" rewards="30000_6101401_1" />
+</root>

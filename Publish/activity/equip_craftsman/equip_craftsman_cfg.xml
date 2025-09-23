@@ -2,13 +2,13 @@
 costItem = 30000_9990243_1
 
 # 单个道具价格
-itemPrice = 10000_1000_35
+itemPrice = 10000_1000_30
 
 # 购买1次获得固定奖励
 extReward = 30000_840172_1
 
 # 服务器延迟时间
-serverDelay = 1209600
+serverDelay = 1728000
 
 # 单期活动限定摇奖次数
 inheritNum = 200

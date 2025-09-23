@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" pool="1_80,2_20" brandNumber="8" center="2" />
+      <data id="1" pool="1_87,2_13" brandNumber="8" center="2" />
+      <data id="2" pool="2_87,3_13" brandNumber="8" center="3" />
+      <data id="3" pool="3_75,4_25" brandNumber="4" center="4" />
 </root>

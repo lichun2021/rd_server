@@ -1,6 +1,0 @@
-# 总开关
-isOpen = TRUE
-
-# 每批刷新时间
-lifeTime = 10800
-

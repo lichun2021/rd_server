@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" typeA="1" typeB="1" />
+      <data id="2" typeA="1" typeB="2" />
+      <data id="3" typeA="1" typeB="3" isRule="1" />
+      <data id="4" typeA="1" typeB="4" />
+      <data id="5" typeA="2" typeB="1" />
+      <data id="6" typeA="2" typeB="2" isRule="1" />
+      <data id="7" typeA="2" typeB="3" isRule="1" />
+      <data id="8" typeA="2" typeB="4" />
+      <data id="9" typeA="3" typeB="1" isRule="1" />
+      <data id="10" typeA="3" typeB="2" isRule="1" />
+      <data id="11" typeA="3" typeB="3" isRule="1" />
+      <data id="12" typeA="3" typeB="4" />
+      <data id="13" typeA="4" typeB="1" />
+      <data id="14" typeA="4" typeB="2" />
+      <data id="15" typeA="4" typeB="3" />
+      <data id="16" typeA="4" typeB="4" />
+</root>

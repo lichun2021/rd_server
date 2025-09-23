@@ -2216,31 +2216,43 @@ return {
 2193	16	1800000	45	10000_1001_180	4000
 2194	16	1800000	50	10000_1001_200	4000
 ]],
-	travel_shop_gift = [[id	weight	price	name	icon	oldPrice	discount	discountBg	showImg	showImg2	ccbiType	showImg3	showImg4	showBust	message	specialReward	ordinaryReward	crystalReward	allianceGift
-1	1	2	2	2	2	2	1	2	2	1	2	2	2	2	2	2	2	2
-1	225	10000_1000_60	金闪闪礼包	V3TravellingShop_u_Box.png	10000_1000_11210	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_01.png	30000_850009_5,30000_850008_5	30000_850007_5,30000_850006_5	10000_1001_10	30000_840125_1
-2	225	10000_1000_60	原油倾销礼包	V3TravellingShop_u_Box.png	10000_1000_11210	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_02.png	30000_850039_5,30000_850038_5	30000_850037_5,30000_850036_5	10000_1001_10	30000_840125_1
-3	225	10000_1000_60	拼装合金礼包	V3TravellingShop_u_Box.png	10000_1000_11210	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_03.png	30000_850019_5,30000_850018_5	30000_850017_5,30000_850016_5	10000_1001_10	30000_840125_1
-4	225	10000_1000_60	禁运稀土礼包	V3TravellingShop_u_Box.png	10000_1000_11210	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_04.png	30000_850029_5,30000_850028_5	30000_850027_5,30000_850026_5	10000_1001_10	30000_840125_1
-5	200	10000_1000_60	大促销礼包	V3TravellingShop_u_Box.png	10000_1000_2044	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_06.png	30000_101050_6,30000_810003_36	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1
-6	133	10000_1000_300	不夜城礼包	V3TravellingShop_u_Box.png	10000_1000_15000	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_06.png	30000_101050_30,30000_810003_180	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1
-7	200	10000_1000_60	不夜城礼包	V3TravellingShop_u_Box.png	10000_1000_2044	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_08.png	30000_103050_6,30000_810008_36	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1
-8	133	10000_1000_300	科技蓝图礼包	V3TravellingShop_u_Box.png	10000_1000_15000	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_08.png	30000_103050_30,30000_810008_180	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1
-9	200	10000_1000_60	科技蓝图礼包	V3TravellingShop_u_Box.png	10000_1000_2044	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_104050_6,30000_810010_36	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1
-10	134	10000_1000_300	雇佣兵礼包	V3TravellingShop_u_Box.png	10000_1000_15000	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_104050_30,30000_810010_180	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1
-11	200	10000_1000_300	荣誉勋章礼包	V3TravellingShop_u_Box.png	10000_1000_20530	0.1	3	V1Store_Push_Banner_Loop_11_A.png	V1Store_Push_Banner_Loop_11_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1300017_340	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1
-12	200	10000_1000_300	机甲成长礼包	V3TravellingShop_u_Box.png	10000_1000_10030	0.3	3	V1Store_Push_Banner_Loop_18_A.png	V1Store_Push_Banner_Loop_18_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990008_3000	30000_15210001_40,30000_15210002_40,30000_15210003_40,30000_15210004_40	10000_1001_30	30000_840126_1
-13	200	10000_1000_300	未来机甲礼包	V3TravellingShop_u_Box.png	10000_1000_13530	0.2	3	V1Store_Push_Banner_Loop_13_A.png	V1Store_Push_Banner_Loop_13_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_840194_750	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1
-14	200	10000_1000_300	装备打造礼包	V3TravellingShop_u_Box.png	10000_1000_13454	0.2	3	V1Store_Push_Banner_Loop_22_A.png	V1Store_Push_Banner_Loop_22_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_800000_58	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1
-15	200	10000_1000_300	装备研究礼包	V3TravellingShop_u_Box.png	10000_1000_8780	0.3	3	V1Store_Push_Banner_Loop_12_A.png	V1Store_Push_Banner_Loop_12_B.png	1	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1800000_275	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1
-16	200	10000_1000_60	机甲成长礼包	V3TravellingShop_u_Box.png	10000_1000_2210	0.3	3	V1Store_Push_Banner_Loop_18_A.png	V1Store_Push_Banner_Loop_18_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990008_600	30000_15210001_10,30000_15210002_10,30000_15210003_10,30000_15210004_10	10000_1001_10	30000_840125_1
-17	200	10000_1000_60	未来机甲礼包	V3TravellingShop_u_Box.png	10000_1000_2950	0.2	3	V1Store_Push_Banner_Loop_13_A.png	V1Store_Push_Banner_Loop_13_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_840194_150	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1
-18	200	10000_1000_60	璀璨超能礼包	V3TravellingShop_u_Box.png	10000_1000_3450	0.2	3	V1Store_Push_Banner_Loop_17_A.png	V1Store_Push_Banner_Loop_17_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1480001_200	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1
-19	200	10000_1000_300	装备突破礼包	V3TravellingShop_u_Box.png	10000_1000_9030	0.3	3	V1Store_Push_Banner_Loop_10_A.png	V1Store_Push_Banner_Loop_10_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_802003_15	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1
-20	200	10000_1000_300	装备高级研究礼包	V3TravellingShop_u_Box.png	10000_1000_8030	0.4	3	V1Store_Push_Banner_Loop_36_A.png	V1Store_Push_Banner_Loop_36_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1800001_20	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1
+	travel_shop_gift = [[id	weight	price	name	icon	oldPrice	discount	discountBg	showImg	showImg2	ccbiType	showImg3	showImg4	showBust	message	specialReward	ordinaryReward	crystalReward	allianceGift	getPathId
+1	1	2	2	2	2	2	1	2	2	1	2	2	2	2	2	2	2	2	2
+1	0	10000_1000_60	金闪闪礼包	V3TravellingShop_u_Box.png	10000_1000_22410	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_01.png	30000_850009_10,30000_850008_10	30000_850007_10,30000_850006_10	10000_1001_10	30000_840125_1	1007
+2	0	10000_1000_60	原油倾销礼包	V3TravellingShop_u_Box.png	10000_1000_22410	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_02.png	30000_850039_10,30000_850038_10	30000_850037_10,30000_850036_10	10000_1001_10	30000_840125_1	1008
+3	0	10000_1000_60	拼装合金礼包	V3TravellingShop_u_Box.png	10000_1000_22410	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_03.png	30000_850019_10,30000_850018_10	30000_850017_10,30000_850016_10	10000_1001_10	30000_840125_1	1010
+4	0	10000_1000_60	禁运稀土礼包	V3TravellingShop_u_Box.png	10000_1000_22410	0.1	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_04.png	30000_850029_10,30000_850028_10	30000_850027_10,30000_850026_10	10000_1001_10	30000_840125_1	1009
+5	200	10000_1000_60	大促销礼包	V3TravellingShop_u_Box.png	10000_1000_2890	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_06.png	30000_101050_16,30000_810003_60	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	101
+6	133	10000_1000_300	不夜城礼包	V3TravellingShop_u_Box.png	10000_1000_19230	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_06.png	30000_101050_80,30000_810003_300	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1	
+7	200	10000_1000_60	不夜城礼包	V3TravellingShop_u_Box.png	10000_1000_2890	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_08.png	30000_103050_16,30000_810008_60	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	104
+8	133	10000_1000_300	科技蓝图礼包	V3TravellingShop_u_Box.png	10000_1000_19230	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_08.png	30000_103050_80,30000_810008_300	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1	
+9	200	10000_1000_60	科技蓝图礼包	V3TravellingShop_u_Box.png	10000_1000_2210	0.3	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_104050_8,30000_810010_40	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	102
+10	134	10000_1000_300	雇佣兵礼包	V3TravellingShop_u_Box.png	10000_1000_15830	0.2	3	V1Store_Push_Banner_Loop_31_A.png	V1Store_Push_Banner_Loop_31_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_104050_40,30000_810010_200	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1	
+11	0	10000_1000_300	荣誉勋章礼包	V3TravellingShop_u_Box.png	10000_1000_42030	0.1	3	V1Store_Push_Banner_Loop_11_A.png	V1Store_Push_Banner_Loop_11_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1300017_1200	30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2	10000_1001_30	30000_840126_1	
+12	0	10000_1000_300	机甲成长礼包	V3TravellingShop_u_Box.png	10000_1000_35030	0.1	3	V1Store_Push_Banner_Loop_18_A.png	V1Store_Push_Banner_Loop_18_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990008_15000	30000_15210001_50,30000_15210002_50,30000_15210003_50,30000_15210004_50	10000_1001_30	30000_840126_1	
+13	0	10000_1000_300	未来机甲礼包	V3TravellingShop_u_Box.png	10000_1000_36030	0.1	3	V1Store_Push_Banner_Loop_13_A.png	V1Store_Push_Banner_Loop_13_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_840194_3000	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+14	0	10000_1000_300	装备打造礼包	V3TravellingShop_u_Box.png	10000_1000_34830	0.1	3	V1Store_Push_Banner_Loop_22_A.png	V1Store_Push_Banner_Loop_22_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_800000_225	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+15	0	10000_1000_300	装备研究礼包	V3TravellingShop_u_Box.png	10000_1000_18030	0.2	3	V1Store_Push_Banner_Loop_12_A.png	V1Store_Push_Banner_Loop_12_B.png	1	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1800000_1200	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+16	0	10000_1000_60	机甲成长礼包	V3TravellingShop_u_Box.png	10000_1000_11010	0.1	3	V1Store_Push_Banner_Loop_18_A.png	V1Store_Push_Banner_Loop_18_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990008_3000	30000_15210001_10,30000_15210002_10,30000_15210003_10,30000_15210004_10	10000_1001_10	30000_840125_1	401
+17	0	10000_1000_60	未来机甲礼包	V3TravellingShop_u_Box.png	10000_1000_7450	0.1	3	V1Store_Push_Banner_Loop_13_A.png	V1Store_Push_Banner_Loop_13_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_840194_600	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	403
+18	0	10000_1000_60	璀璨超能礼包	V3TravellingShop_u_Box.png	10000_1000_7450	0.1	3	V1Store_Push_Banner_Loop_17_A.png	V1Store_Push_Banner_Loop_17_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1480001_600	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	801
+19	0	10000_1000_300	装备突破礼包	V3TravellingShop_u_Box.png	10000_1000_16030	0.2	3	V1Store_Push_Banner_Loop_10_A.png	V1Store_Push_Banner_Loop_10_B.png	3	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_802003_50	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+20	0	10000_1000_300	装备高级研究礼包	V3TravellingShop_u_Box.png	10000_1000_13530	0.3	3	V1Store_Push_Banner_Loop_36_A.png	V1Store_Push_Banner_Loop_36_B.png	3	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1800001_75	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+21	0	10000_1000_300	泰晶礼包	V3TravellingShop_u_Box.png	10000_1000_15030	0.2	3	V1Store_Push_Banner_Loop_32_A.png	V1Store_Push_Banner_Loop_32_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_800002_450	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+22	200	10000_1000_60	超时空补给礼包	V3TravellingShop_u_Box.png	10000_1000_151450	0.1	3	V1Store_Push_Banner_Loop_16_A.png	V1Store_Push_Banner_Loop_16_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1140002_1	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	
+23	200	10000_1000_60	荣誉勋章礼包	V3TravellingShop_u_Box.png	10000_1000_15850	0.1	3	V1Store_Push_Banner_Loop_11_A.png	V1Store_Push_Banner_Loop_11_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1300017_576	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	501
+24	200	10000_1000_60	泰晶礼包	V3TravellingShop_u_Box.png	10000_1000_4150	0.2	3	V1Store_Push_Banner_Loop_32_A.png	V1Store_Push_Banner_Loop_32_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_800002_135	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840125_1	303
+25	200	10000_1000_60	泰能礼包	V3TravellingShop_u_Box.png	10000_1000_5290	0.2	3	V1Store_Push_Banner_Loop_08_A.png	V1Store_Push_Banner_Loop_08_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1782103_128	30000_850006_6,30000_850036_6,30000_850016_6,30000_850026_6	10000_1001_10	30000_840126_1	601_602
+26	200	10000_1000_300	量子扩充石礼包	V3TravellingShop_u_Box.png	10000_1000_15480	0.2	3	V1Store_Push_Banner_Loop_47_A.png	V1Store_Push_Banner_Loop_47_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_802004_315	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+27	200	10000_1000_300	星能礼包	V3TravellingShop_u_Box.png	10000_1000_7780	0.4	3	V1Store_Push_Banner_Loop_48_A.png	V1Store_Push_Banner_Loop_48_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_802005_175	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+28	200	10000_1000_300	泰矿母体礼包	V3TravellingShop_u_Box.png	10000_1000_15630	0.2	3	V1Store_Push_Banner_Loop_37_A.png	V1Store_Push_Banner_Loop_37_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_21063005_320	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	603
+29	200	10000_1000_300	星耀礼包	V3TravellingShop_u_Box.png	10000_1000_18630	0.2	3	V1Store_Push_Banner_Loop_46_A.png	V1Store_Push_Banner_Loop_46_B.png	4	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_1300027_420	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	
+30	200	10000_1000_300	能量聚集器礼包	V3TravellingShop_u_Box.png	10000_1000_6930	0.5	3	V1Store_Push_Banner_Loop_50_A.png	V1Store_Push_Banner_Loop_50_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990042_60	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	1302
+31	200	10000_1000_300	能量吸收器礼包	V3TravellingShop_u_Box.png	10000_1000_6930	0.5	3	V1Store_Push_Banner_Loop_51_A.png	V1Store_Push_Banner_Loop_51_B.png	2	V5StoreGiftPack_Push_u_Day.png	V5StoreGiftPack_Push_u_Life_2.png	StorePic_Hero_05.png	StorePic_BlackLabel_07.png	30000_9990052_30	30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1	10000_1001_30	30000_840126_1	1304
 ]],
 	discount_show = [[discount	showBg	showIcon
 1	2	2
+0	V3TravellingShop_u_Num_BG_01.png	V3TravellingShop_u_Num_01.png
 1	V3TravellingShop_u_Num_BG_01.png	V3TravellingShop_u_Num_01.png
 2	V3TravellingShop_u_Num_BG_01.png	V3TravellingShop_u_Num_02.png
 3	V3TravellingShop_u_Num_BG_01.png	V3TravellingShop_u_Num_03.png
@@ -2253,42 +2265,42 @@ return {
 ]],
 	travel_shop_friendly_award = [[id	type	weight	group	award
 1	1	1	1	2
-1001	1	2100	1	30000_810001_5
-1002	1	2100	1	30000_1510003_20
-1003	1	2100	1	30000_13310003_20
-1004	1	2100	1	30000_1480001_20
-2101	2	2100	1	30000_810001_5
-2102	2	2100	1	30000_1510003_20
-2103	2	2100	1	30000_13310003_20
-2104	2	2100	1	30000_1480001_20
-2105	2	500	1	30000_1800000_100
-2106	2	500	1	30000_800000_20
-2107	2	500	1	30000_1300017_100
-2108	2	100	1	30000_1000003_10
-2201	2	2100	2	30000_1800000_3
-2202	2	2100	2	30000_1800000_6
-2203	2	2100	2	30000_1800000_9
-2204	2	2100	2	30000_1800000_12
-2205	2	500	2	30000_1800000_28
-2206	2	500	2	30000_1800000_48
-2207	2	500	2	30000_1800000_68
-2208	2	100	2	30000_1800000_150
-2301	2	2100	3	30000_1300017_3
-2302	2	2100	3	30000_1300017_6
-2303	2	2100	3	30000_1300017_9
-2304	2	2100	3	30000_1300017_12
-2305	2	500	3	30000_1300017_28
-2306	2	500	3	30000_1300017_48
-2307	2	500	3	30000_1300017_68
-2308	2	100	3	30000_1300017_150
-2401	2	2100	4	30000_800000_1
-2402	2	2100	4	30000_800000_2
-2403	2	2100	4	30000_800000_3
-2404	2	2100	4	30000_800000_4
-2405	2	500	4	30000_800000_6
-2406	2	500	4	30000_800000_8
-2407	2	500	4	30000_800000_10
-2408	2	100	4	30000_800000_30
+1001	1	2500	1	30000_810001_5
+1002	1	2500	1	30000_1300017_30
+1003	1	2500	1	30000_1000003_1
+1004	1	2500	1	30000_1480001_40
+2101	2	12900	1	30000_1300017_18
+2102	2	12900	1	30000_1300017_28
+2103	2	3600	1	30000_1300017_158
+2104	2	600	1	30000_1300017_488
+2105	2	4300	1	30000_1000003_2
+2106	2	4300	1	30000_1000003_3
+2107	2	1200	1	30000_1000003_8
+2108	2	200	1	30000_1000003_18
+2109	2	6300	2	30000_1800000_18
+2110	2	6300	2	30000_1800000_28
+2111	2	1500	2	30000_1800000_158
+2112	2	300	2	30000_1800000_488
+2113	2	2100	2	30000_1800001_2
+2114	2	2100	2	30000_1800001_3
+2115	2	500	2	30000_1800001_18
+2116	2	100	2	30000_1800001_88
+2201	2	6300	3	30000_800002_6
+2202	2	6300	3	30000_800002_8
+2203	2	1500	3	30000_800002_68
+2204	2	300	3	30000_800002_288
+2205	2	2100	3	30000_802004_4
+2206	2	2100	3	30000_802004_6
+2207	2	500	3	30000_802004_48
+2208	2	100	3	30000_802004_188
+2209	2	6300	4	30000_1782103_4
+2210	2	6300	4	30000_1782103_6
+2211	2	1500	4	30000_1782103_48
+2212	2	300	4	30000_1782103_228
+2213	2	2100	4	30000_21063005_3
+2214	2	2100	4	30000_21063005_5
+2215	2	500	4	30000_21063005_38
+2216	2	100	4	30000_21063005_128
 ]],
 
 }

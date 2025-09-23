@@ -1,0 +1,85 @@
+return {
+	prop =
+	{
+		activityId = 327,
+		name = [[鸿运夺金]],
+		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">1.活动期间指挥官可通过花费金条购买城建礼包获得抽取道具和<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">数字奖券</font>的机会，单日最多可抽取500次。<br/>2.指挥官抽取到对应次数可领取奖励，每个任务奖励仅可领取一次，活动结束后未领取的任务奖励视为放弃。<br/>3.进度奖励有多种奖励内容，您可选择最喜欢的奖励内容进行领取，请注意：领取任意进度奖励后不可再更换进度奖励内容。<br/>4.全服的指挥官每次抽取道具时，会往金条奖池存入一定数量的金条；当抽取的数字奖券为特定数字时，可分得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">金条奖池</font>内一定比例的金条，瓜分金条数量向下取整，金条通过邮件的形式发送。<br/>5.活动界面显示金条数量非实时更新，可能与实际金条数量存在差异，给您带来的不便敬请谅解。<br/>6.当金条奖池数量<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">大于20000时</font>，中奖数字获得几率将<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">大幅提升</font>。<br/>7.每日可进行一次免费抽取，免费抽取不会往金条奖池注入金条，且不会获得中奖数字。<br/>8.活动期间，仅每天10点00分至22点00分可参与抽奖，请合理规划您的活动参与时间。<br/><br/>花费金条抽奖时，特定数字奖券的基础出现几率及瓜分比例如下：<br/>1）数字奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">666</font>，出现几率0.05%，可分得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">10%金条</font>；<br/>2）数字奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">888</font>，出现几率0.03%，可分得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">20%金条</font>；<br/>3）数字奖券<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">999</font>，出现几率0.01%，可分得<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">50%金条</font>。<br/><br/>抽取道具概率公示如下（最顶部道具为道具1，顺时针方向依次为道具2、道具3，以此类推）：<br/>1）道具1，概率0.15%；<br/>2）道具2，概率1.35%；<br/>3）道具3，概率2%；<br/>4）道具4，概率8%；<br/>5）道具5，概率16.5%；<br/>6）道具6，概率8%；<br/>7）道具7，概率16%；<br/>8）道具8，概率24%；<br/>9）道具9，概率24%。<br/><br/>满足以下任意条件的指挥官不开启此活动：<br/>1）处于回流活动期间；<br/>2）建筑工厂等级小于5星；<br/>3）贵族等级小于8级。</font>]],
+		priority = 10000,
+		icon = [[Activity_Icon_327_Nor.png]],
+		selecticon = [[Activity_Icon_327_Sel.png]],
+		threshold = 20000,
+		oneCost = [[10000_1000_50]],
+		oneCostGet = [[30000_840172_1]],
+		oneCostGold = 5,
+		tenCost = [[10000_1000_500]],
+		tenCostGet = [[30000_840172_10]],
+		tenCostGold = 50,
+	},
+	luck_get_gold_achieve = [[achieveId	type	conditionValue	rewards	title
+1	1	1	2	2
+327101	1	5	30000_21065001_24,30000_21063005_160,30000_810001_10,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327102	1	30	30000_21065001_48,30000_21063005_320,30000_810001_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327103	1	80	30000_21065001_72,30000_21063005_480,30000_810001_30,30000_1780040_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327104	1	120	30000_21065001_96,30000_21063005_640,30000_810001_40,30000_1780040_40	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327105	1	200	30000_21065001_120,30000_21063005_800,30000_810001_50,30000_1780040_50	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327106	1	400	30000_21065001_240,30000_21063005_1600,30000_810001_60,30000_1780040_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327201	2	5	30000_21070056_70,30000_21070057_400,30000_810001_10,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327202	2	30	30000_21070056_140,30000_21070057_800,30000_810001_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327203	2	80	30000_21070056_210,30000_21070057_1200,30000_810001_30,30000_1780040_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327204	2	120	30000_21070056_280,30000_21070057_1600,30000_810001_40,30000_1780040_40	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327205	2	200	30000_21070056_350,30000_21070057_2000,30000_810001_50,30000_1780040_50	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327206	2	400	30000_21070056_700,30000_21070057_4000,30000_810001_60,30000_1780040_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327301	3	5	30000_850048_6,30000_810001_10,30000_1780040_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327302	3	30	30000_850048_12,30000_810001_20,30000_1780040_20	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327303	3	80	30000_850048_18,30000_810001_30,30000_1780040_30	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327304	3	120	30000_850048_24,30000_810001_40,30000_1780040_40	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327305	3	200	30000_850048_30,30000_810001_50,30000_1780040_50	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+327306	3	400	30000_850048_60,30000_810001_60,30000_1780040_60	<font color="#ffffff" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">累计抽奖达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次</font>
+]],
+	luck_get_gold_draw = [[id	poolId	gainItem	order	isCore
+1	1	2	1	1
+1001	1	30000_21065001_888	1	
+1002	1	30000_21063005_888	9	
+1003	1	30000_21065001_40	2	
+1004	1	30000_21065001_15	8	
+1005	1	30000_21063005_80	3	
+1006	1	30000_100060_1	7	
+1007	1	30000_810002_1	4	
+1008	1	30000_100050_1	6	
+1009	1	30000_1780040_20	5	
+2001	2	30000_21070056_2888	1	
+2002	2	30000_1000005_8	9	
+2003	2	30000_21070056_128	2	
+2004	2	30000_21070056_40	8	
+2005	2	30000_1000005_1	3	
+2006	2	30000_100060_1	7	
+2007	2	30000_810002_1	4	
+2008	2	30000_100050_1	6	
+2009	2	30000_1780040_20	5	
+3001	3	30000_850067_10888	1	
+3002	3	30000_850067_1888	9	
+3003	3	30000_850067_888	2	
+3004	3	30000_850067_188	8	
+3005	3	30000_850067_68	3	
+3006	3	30000_100060_1	7	
+3007	3	30000_810002_1	4	
+3008	3	30000_100050_1	6	
+3009	3	30000_1780040_20	5	
+]],
+	luck_get_gold_num = [[id	range	divide
+1	2	1
+10001	1_665	0
+10002	666	10
+10003	667_887	0
+10004	888	20
+10005	889_998	0
+10006	999	50
+]],
+	luck_get_gold_icon = [[id	type	icon
+1	1	2
+10001	1	Item_TaiEnergy_03.png
+10002	2	Item_MechaCore_01.png
+10003	3	Item_Res_Gold_01.png
+]],
+
+}

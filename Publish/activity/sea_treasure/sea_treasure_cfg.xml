@@ -1,5 +1,5 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 单日寻宝次数
 treasureNumber = 300

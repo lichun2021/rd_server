@@ -2,34 +2,46 @@ return {
 	prop =
 	{
 		activityId = 185,
-		tab1 = [[@WipeOutRebel]],
+		tab1 = [[@Act185WipeOut]],
 		tab2 = [[@ClearCoast]],
-		title1 = [[@WipeOutRebelTitle]],
-		des1 = [[@WipeOutRebelDesc]],
-		but1 = [[@attackRebel]],
-		des2 = [[@ClearCoastDesc]],
-		but2 = [[@Summon]],
+		title1 = [[@RAActivity185Lang2]],
+		des1 = [[@Act185WipeOutDesc]],
+		but1 = [[@RAActivity185Lang2]],
+		des2 = [[@Act185ClearCoastDesc]],
+		but2 = [[@RAActivity185Lang3]],
 		pos = [[@MonsterPos]],
 		actName = [[@RebelActTitle]],
-		htmlDes = [[RebelActDes]],
-		name = [[使命战争]],
+		htmlDes = [[Act185Des]],
+		name = [[赛季演习]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">基地外</font>将随机出现<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幽灵叛军</font>，击杀后可获得奖励，并<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">有几率额外</font>获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">通讯设备</font>道具。<br/>2. 使用通讯设备道具可在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">指定位置</font>引出<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">叛军首领</font>。<br/>3. 每消耗敌军<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1%血量</font>即可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">参与奖励</font>，给予叛军首领<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">最后一击</font>的指挥官可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">使命礼包</font>。<br/>4. 击杀叛军首领的指挥官<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">所在联盟</font>，全盟成员可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟小礼包</font>。<br/>5. 集结叛军首领时单人至多获得全队奖励的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">50%</font>，集结时合理的部队分配更能有效获得叛军首领的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">100份</font>参与奖励。<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/>7. 活动期间<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">任务每日重置</font>。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20"><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">核心规则</font><br/>1.大量<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱乱军</font>正在入侵战区，请立即派遣部队清剿。<br/>2.这些<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱乱军</font>受控于<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领</font>。每次击杀先驱乱军都有机会缴获<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领探测器</font>。<br/>3.活动期间使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领探测器</font>可以发现隐藏在暗处的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领</font>。活动结束后将无法使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领探测器</font>。<br/>4.和盟友一起击败<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领</font>，就有机会获得大量奖励：根据伤害量发放的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">参与奖励</font>、完成最后一击专属的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">使命礼包</font>、以及带回给所有联盟成员的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟小礼包</font>。<br/><br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">其他规则</font><br/>1.击杀乱军和参与击杀首领，都耗费<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">体力</font>。<br/>2.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">先驱首领探测器</font>只有活动期间才能使用，发现的首领至多暴露<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">10小时</font>，请尽快击杀。<br/>3.首领分为当前危机和往日危机。每种首领都有奖励获取次数上限，每人每天每种首领分别可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">50次</font>。<br/>4.击杀任务的进度会重置。个人任务每日重置，联盟任务每期重置。请记得领取任务奖励，未领取不会补发。<br/>5.集结击败首领后，全队最多可以获得100份参与奖，单人最多可以得到其中的50%。与队友一起合作配队可以让集体利益最大化。</font>]],
 		priority = 10900,
 		icon = [[Activity_Icon_13_Nor.png]],
 		selecticon = [[Activity_Icon_13_Sel.png]],
 		bigIcon = [[V3Activity_u_Banner_Render_01.png]],
-		itemIdTab = [[1400001_1400002_1400003]],
-		rewardStr = [[30000_1400004]],
-		rewardStr1 = [[30000_1400003]],
+		itemIdTab = [[1400026_1400027_1400028]],
+		itemIdTabOld = [[1400022_1400023_1400024_1400017_1400018_1400019]],
+		rewardStr = [[30000_1400029]],
+		rewardStr1 = [[30000_1400028]],
 	},
-	radiation_war_two_achieve = [[achieveId	configValue	rewards
-1	1	2
-18500001	5	30000_850006_1,30000_850036_1,30000_810000_10,30000_800143_2
-18500002	10	30000_850006_1,30000_850036_1,30000_850016_1,30000_810000_15,30000_800110_1
-18500003	20	30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_1780084_3
-18500004	30	30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_810001_2
-18500005	50	30000_850006_3,30000_850036_3,30000_850016_3,30000_850026_3,30000_810001_3
+	radiation_war_two_achieve = [[achieveId	type	configValue	rewards
+1	1	1	2
+18500001	1	5	30000_1782124_3,30000_810001_2,30000_850008_1,30000_850038_1
+18500002	1	10	30000_1300037_2,30000_1782124_3,30000_810001_2,30000_850008_1,30000_850038_1,30000_850018_1
+18500003	1	20	30000_1300037_4,30000_1782124_5,30000_810001_3,30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1
+18500004	1	30	30000_1300037_6,30000_1782124_5,30000_810001_4,30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2
+18500005	1	50	30000_1300037_8,30000_1782124_8,30000_810001_5,30000_850008_3,30000_850038_3,30000_850018_3,30000_850028_3
+18500101	2	20	30000_1300037_20,30000_1000003_20,30000_850009_1,30000_850039_1
+18500102	2	60	30000_1300037_20,30000_1000005_2,30000_850009_1,30000_850039_1,30000_850019_1
+18500103	2	120	30000_1300037_20,30000_1000005_2,30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1
+18500104	2	240	30000_1300037_20,30000_1000005_2,30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1
+18500105	2	400	30000_1300037_20,30000_1000005_2,30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2
+]],
+	radiation_war_two_display = [[id	showTitle	showItem
+1	2	2
+1	@Act185Title1	30000_1400026_1|@Act185Item1Rate1;30000_1400029_1|@Act185Item1Rate2;30000_1150001_1|@Act185Item1Rate3
+2	@Act185Title2	30000_1400027_1|@Act185Item2Rate1;30000_1400029_1|@Act185Item2Rate2;30000_1150001_1|@Act185Item2Rate3
+3	@Act185Title3	30000_1400028_1|@Act185Item3Rate1;30000_1400029_1|@Act185Item3Rate2;30000_1150001_1|@Act185Item3Rate3
 ]],
 
 }

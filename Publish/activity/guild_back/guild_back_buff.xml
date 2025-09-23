@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" count="5" effect="400_1500" />
+      <data id="2" count="10" effect="400_1500,401_2000" />
+      <data id="3" count="15" effect="400_2000,401_2000,402_1500" />
+      <data id="4" count="20" effect="400_2000,401_3000,402_1500,376_1500" />
+      <data id="5" count="30" effect="400_3000,401_3000,402_1500,376_3000" />
+</root>

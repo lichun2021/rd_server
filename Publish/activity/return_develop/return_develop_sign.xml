@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" day="1" playerType="1" commonRewards="30000_850048_1,30000_1150048_5" advancedReward="30000_1780080_10,30000_840194_50,30000_1150048_10" />
-      <data id="2" day="2" playerType="1" commonRewards="30000_850048_1,30000_1150048_5" advancedReward="30000_1300017_50,30000_1780050_1,30000_1150048_10" />
-      <data id="3" day="3" playerType="1" commonRewards="30000_850048_1,30000_1150048_5" advancedReward="30000_1780083_10,30000_810001_10,30000_1150048_10" />
-      <data id="4" day="4" playerType="1" commonRewards="30000_850048_2,30000_1150048_5" advancedReward="30000_840194_150,30000_1780050_2,30000_1150048_10" />
-      <data id="5" day="5" playerType="1" commonRewards="30000_850048_2,30000_1150048_10" advancedReward="30000_1300017_150,30000_810001_30,30000_1150048_20" />
-      <data id="6" day="6" playerType="1" commonRewards="30000_850048_2,30000_1150048_10" advancedReward="30000_800000_20,30000_800001_100,30000_1150048_20" />
-      <data id="7" day="7" playerType="1" commonRewards="30000_850048_3,30000_1150048_10" advancedReward="30000_1000003_10,30000_800000_30,30000_1150048_20" />
+      <data id="1" day="1" playerType="1" commonRewards="30000_1000003_20,30000_1150048_10" advancedReward="30000_1000005_6,30000_850048_1,30000_1150048_10" />
+      <data id="2" day="2" playerType="1" commonRewards="30000_850048_1,30000_1150048_10" advancedReward="30000_100050_5,30000_1780050_20,30000_1150048_10" />
+      <data id="3" day="3" playerType="1" commonRewards="30000_1300017_3000,30000_1150048_10" advancedReward="30000_1782123_20,30000_1782103_1200,30000_1150048_10" />
+      <data id="4" day="4" playerType="1" commonRewards="30000_850048_2,30000_1150048_10" advancedReward="30000_802005_200,30000_802004_300,30000_1150048_10" />
+      <data id="5" day="5" playerType="1" commonRewards="30000_850048_2,30000_1150048_20" advancedReward="30000_21065001_20,30000_21063005_600,30000_1150048_20" />
+      <data id="6" day="6" playerType="1" commonRewards="30000_850048_2,30000_1150048_20" advancedReward="30000_1300027_600,30000_21070056_60,30000_1150048_20" />
+      <data id="7" day="7" playerType="1" commonRewards="30000_1000003_100,30000_1150048_20" advancedReward="30000_1000005_6,30000_850048_10,30000_1150048_20" />
 </root>

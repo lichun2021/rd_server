@@ -1,0 +1,99 @@
+return {
+	prop =
+	{
+		activityId = 362,
+		name = [[泰矿提炼所]],
+		title = [[泰矿提炼所]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.消耗提炼装置进行提炼，每次提炼消耗不变。<br/>2.玩家提炼后会随机在提炼矩阵中提炼出一个奖励，当提炼的奖励连成横线、纵线、斜线时对应的大奖格子变为可以可领取状态。<br/>3.大奖需要手动领取，如果活动结束没有领取则视为放弃。<br/>4.当提炼矩阵中的大奖可领取次数达到3个及以上时，需刷新提炼矩阵，刷新时没有领取的大奖会自动领取。<br/>5.每人每天可提炼次数上限为9999次。<br/>6.提炼装置会被保留进行下一期泰矿提炼所活动。<br/>7.提炼概率公示:<br/> 泰能辉金*1: 4%<br/> 泰能辉金*2: 4%<br/> 泰能辉金*3: 4%<br/> 泰能辉金*4: 4%<br/> 泰能辉金*6: 4%<br/> 泰矿母体*10: 4%<br/> 泰矿母体*20: 4%<br/> 泰矿母体*30: 4%<br/> 泰矿母体*50: 4%<br/> 泰矿母体*80: 4%<br/> 自选泰能材料*10: 4%<br/> 自选泰能材料*20: 4%<br/> 自选泰能材料*30: 4%<br/> 自选泰能材料*50: 4%<br/> 自选泰能材料*80: 4%<br/> 金币*10: 4%<br/> 金币*20: 4%<br/> 金币*30: 4%<br/> 金币*50: 4%<br/> 金币*80: 4%<br/> 通用加速5分钟*10: 4%<br/> 通用加速5分钟*20: 4%<br/> 通用加速5分钟*30: 4%<br/> 通用加速5分钟*50: 4%<br/> 通用加速5分钟*80: 4%<br/>8.刷新提炼矩阵后大奖奖励不会发生改变，但出现位置会发生改变。<br/></font>]],
+		priority = 10030,
+		icon = [[Activity_Icon_362_Nor.png]],
+		selecticon = [[Activity_Icon_362_Sel.png]],
+		bigIcon = [[DiamondsIcon_02.png]],
+		grandTimesRefresh = 3,
+		drawItem = [[30000_21070054_1]],
+		drawValueLimit = 9999,
+		drawInterval = 0.2,
+	},
+	plant_soldier_factory_shop = [[id	shopItemType	times	iosPayId	androidPayID	payQuota	payItem	getItem	isRefresh	buyLimitTxt
+1	1	1	1	1	1	2	2	1	2
+1	0	1					30000_21070054_1,30000_840172_1	1	@Act362DailyRefresh
+2	2	1				10000_1000_100	30000_21070054_2,30000_840172_2	1	@Act362DailyRefresh
+3	1	1	3620101	3620001	6		30000_21070054_2,30000_840172_2		@Act362CyclicRefresh 
+4	1	1	3620102	3620002	30		30000_21070054_6,30000_840172_6		@Act362CyclicRefresh 
+5	2	1				10000_1000_480	30000_21070054_6,30000_840172_6		@Act362CyclicRefresh 
+6	2	1				10000_1000_980	30000_21070054_11,30000_840172_11		@Act362CyclicRefresh 
+7	2	3				10000_1000_2980	30000_21070054_30,30000_840172_30		@Act362CyclicRefresh 
+]],
+	plant_soldier_factory_achieve = [[achieveId	conditionType	conditionValue	assort	refreshType	rewards	title	gotoType	gotoValue
+1	1	1	1	1	2	2	1	2
+362001	180101	160	1	1	30000_21063005_20,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">每日任务积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1508	
+362002	180101	320	1	1	30000_21063005_30,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">每日任务积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1508	
+362003	180101	500	1	1	30000_21070054_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">每日任务积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>分<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1508	
+362004	500011	20	1	1	30000_21063005_20,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1201	
+362005	500011	50	1	1	30000_21063005_30,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1201	
+362006	500011	100	1	1	30000_21070054_1,30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">击败野怪<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>次<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">(每日刷新)</font></font>	1201	
+362007	170220	5	2		30000_21065001_9,30000_21063005_60,30000_1782103_60,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362008	170220	10	2		30000_21065001_18,30000_21063005_70,30000_1782103_70,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362009	170220	20	2		30000_21065001_27,30000_21063005_80,30000_1782103_80,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362010	170220	30	2		30000_21065001_45,30000_21063005_90,30000_1782103_90,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362011	170220	50	2		30000_21065001_54,30000_21063005_100,30000_1782103_100,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362012	170220	75	2		30000_21065001_72,30000_21063005_110,30000_1782103_110,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+362013	170220	100	2		30000_21065001_90,30000_21063005_120,30000_1782103_120,30000_810001_10,30000_820002_10	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">提炼装置消耗<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}/{1}</font>个</font>	-1	
+]],
+	plant_soldier_factory_pool = [[id	poolType	groupSign	reward	weight
+1	2	2	2	2
+1	1		30000_21065001_1	400
+2	1		30000_21065001_2	400
+3	1		30000_21065001_3	400
+4	1		30000_21065001_4	400
+5	1		30000_21065001_6	400
+6	1		30000_21063005_10	400
+7	1		30000_21063005_20	400
+8	1		30000_21063005_30	400
+9	1		30000_21063005_50	400
+10	1		30000_21063005_80	400
+11	1		30000_1782103_10	400
+12	1		30000_1782103_20	400
+13	1		30000_1782103_30	400
+14	1		30000_1782103_50	400
+15	1		30000_1782103_80	400
+16	1		10000_1001_10	400
+17	1		10000_1001_20	400
+18	1		10000_1001_30	400
+19	1		10000_1001_50	400
+20	1		10000_1001_80	400
+21	1		30000_810000_10	400
+22	1		30000_810000_20	400
+23	1		30000_810000_30	400
+24	1		30000_810000_50	400
+25	1		30000_810000_80	400
+26	2	1	30000_21065001_80	2000
+27	2	1	30000_21065001_100	2000
+28	2	1	30000_21063005_288	2000
+29	2	1	30000_21063005_588	2000
+30	2	1	30000_21063005_888	2000
+31	2	2	30000_21065001_80	2000
+32	2	2	30000_21065001_100	2000
+33	2	2	10000_1001_100	2000
+34	2	2	10000_1001_200	2000
+35	2	2	10000_1001_300	2000
+36	2	3	30000_21065001_368	10000
+37	2	4	30000_21065001_228	10000
+]],
+	plant_soldier_factory_group = [[id	group	connectionLimit
+1	1	2
+1	1	1,2,3,4,5
+2	1	6,7,8,9,10
+3	1	11,12,13,14,15
+4	1	16,17,18,19,20
+5	1	21,22,23,24,25
+6	3	1,7,13,19,25
+7	2	5,10,15,20,25
+8	2	4,9,14,19,24
+9	2	3,8,13,18,23
+10	2	2,7,12,17,22
+11	2	1,6,11,16,21
+12	4	5,9,13,17,21
+]],
+
+}

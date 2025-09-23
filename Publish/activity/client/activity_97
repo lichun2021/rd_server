@@ -2,29 +2,37 @@ return {
 	prop =
 	{
 		activityId = 97,
-		name = [[红包贺岁]],
+		name = [[庆典红包雨]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间，指定时间段系统将全服派发贺岁红包，抢到就有多重好礼，更有机会获得稀有道具！</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">活动期间，指定时间段系统将全服派发红包，抢到就有多重好礼，更有机会获得稀有道具！</font>]],
 		priority = 10250,
 		icon = [[Activity_Icon_97_Nor.png]],
 		selecticon = [[Activity_Icon_97_Sel.png]],
 		bigIcon = [[V3Activity_u_Consumption_Rendered.png]],
-		serverDelay = 0,
+		serverDelay = 1728000,
 	},
 	redPacket_achieve = [[stageID	title	shotTitle	rewardsID	num	broadcastItemID	showTime	startTime	endTime	day
 1	2	2	2	2	2	2	2	2	1
-1	redPacketName1	@redPacketShotName1	5000013	200	850009	11:00:00	12:00:00	12:30:00	1
-2	redPacketName2	@redPacketShotName2	5000013	200	850009	19:00:00	20:00:00	20:30:00	1
-3	redPacketName3	@redPacketShotName3	5000014	200	100060	11:00:00	12:00:00	12:30:00	2
-4	redPacketName4	@redPacketShotName4	5000014	200	100060	19:00:00	20:00:00	20:30:00	2
-5	redPacketName5	@redPacketShotName5	5000015	200	1510005	11:00:00	12:00:00	12:30:00	3
-6	redPacketName6	@redPacketShotName6	5000015	200	1510005	19:00:00	20:00:00	20:30:00	3
-7	redPacketName7	@redPacketShotName7	5000016	200	13310005	11:00:00	12:00:00	12:30:00	4
-8	redPacketName8	@redPacketShotName8	5000016	200	13310005	19:00:00	20:00:00	20:30:00	4
-9	redPacketName9	@redPacketShotName9	5000017	200	1480005	11:00:00	12:00:00	12:30:00	5
-10	redPacketName10	@redPacketShotName10	5000017	200	1480005	19:00:00	20:00:00	20:30:00	5
-11	redPacketName11	@redPacketShotName11	5000018	200	1000003	11:00:00	12:00:00	12:30:00	6
-12	redPacketName12	@redPacketShotName12	5000018	200	1000003	19:00:00	20:00:00	20:30:00	6
+1	redPacketName1	@redPacketShotName1	5000020	200	21063005	11:00:00	12:00:00	12:30:00	1
+2	redPacketName2	@redPacketShotName2	5000020	200	21063005	19:00:00	20:00:00	20:30:00	1
+3	redPacketName3	@redPacketShotName3	5000021	200	21065001	11:00:00	12:00:00	12:30:00	2
+4	redPacketName4	@redPacketShotName4	5000021	200	21065001	19:00:00	20:00:00	20:30:00	2
+5	redPacketName5	@redPacketShotName5	5000022	200	1000005	11:00:00	12:00:00	12:30:00	3
+6	redPacketName6	@redPacketShotName6	5000022	200	1000005	19:00:00	20:00:00	20:30:00	3
+7	redPacketName7	@redPacketShotName7	5000023	200	802004	11:00:00	12:00:00	12:30:00	4
+8	redPacketName8	@redPacketShotName8	5000023	200	802004	19:00:00	20:00:00	20:30:00	4
+9	redPacketName9	@redPacketShotName9	5000024	200	9990041	11:00:00	12:00:00	12:30:00	5
+10	redPacketName10	@redPacketShotName10	5000024	200	9990041	19:00:00	20:00:00	20:30:00	5
+11	redPacketName11	@redPacketShotName11	5000025	200	802005	11:00:00	12:00:00	12:30:00	6
+12	redPacketName12	@redPacketShotName12	5000025	200	802005	19:00:00	20:00:00	20:30:00	6
+13	redPacketName13	@redPacketShotName13	5000026	200	1300027	11:00:00	12:00:00	12:30:00	7
+14	redPacketName14	@redPacketShotName14	5000026	200	1300027	19:00:00	20:00:00	20:30:00	7
+15	redPacketName15	@redPacketShotName16	5000027	200	9990042	11:00:00	12:00:00	12:30:00	8
+16	redPacketName16	@redPacketShotName17	5000027	200	9990042	19:00:00	20:00:00	20:30:00	8
+17	redPacketName17	@redPacketShotName16	5000028	200	802004	11:00:00	12:00:00	12:30:00	9
+18	redPacketName18	@redPacketShotName17	5000028	200	802004	19:00:00	20:00:00	20:30:00	9
+19	redPacketName19	@redPacketShotName16	5000029	200	802004	11:00:00	12:00:00	12:30:00	10
+20	redPacketName20	@redPacketShotName17	5000029	200	802004	19:00:00	20:00:00	20:30:00	10
 ]],
 
 }

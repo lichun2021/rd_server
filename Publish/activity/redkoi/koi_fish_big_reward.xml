@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data rewardId="1" bigReward="30000_802003_500" />
-      <data rewardId="2" bigReward="30000_1001045_200" />
-      <data rewardId="3" bigReward="30000_1001044_200" />
-      <data rewardId="4" bigReward="30000_1001048_200" />
-      <data rewardId="5" bigReward="30000_1001046_200" />
-      <data rewardId="6" bigReward="30000_1001041_200" />
+      <data rewardId="1" bigReward="30000_1000005_30" />
+      <data rewardId="2" bigReward="30000_800002_3000" />
+      <data rewardId="3" bigReward="30000_802004_1600" />
+      <data rewardId="4" bigReward="30000_1782103_2400" />
+      <data rewardId="5" bigReward="30000_21063005_1200" />
+      <data rewardId="6" bigReward="30000_9990032_3000" />
 </root>

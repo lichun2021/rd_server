@@ -2,20 +2,21 @@ return {
 	prop =
 	{
 		activityId = 83,
-		name = [[版本预告]],
-		title = [[预告详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">红警OL征程再起</font>]],
+		name = [[季中盛典-招募]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">玩家可在活动页面参与完成任务可获得抽奖机会，可获得抽奖机会，成功邀请符合条件的玩家可额外获得丰厚奖励。</font>]],
 		priority = 11280,
 		icon = [[Activity_Icon_83_Nor.png]],
 		selecticon = [[Activity_Icon_83_Sel.png]],
 		urlType = [[]],
-		urlQQ = [[]],
-		urlWX = [[]],
-		guestUrl = [[]],
+		urlQQ = [[https://hongjing.qq.com/cp/a202502new/index2.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a202502new/index2.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a202502new/index2.html]],
 		urlIpadQQ = [[]],
 		urlIpadWX = [[]],
 		guestIpadUrl = [[]],
 		platform = [[]],
+		urlDailyReward = [[]],
 	},
 
 }

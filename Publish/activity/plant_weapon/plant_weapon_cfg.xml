@@ -1,0 +1,36 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 当期超武解锁道具
+unlockPlantWeapon = 30000_9990069_100
+
+# 当期超武id
+PlantWeapon = 1005
+
+# 加1计数道具
+addOneItem = 21070029
+
+# 加3计数道具
+addThreeItem = 21070030
+
+# 单轮最大连续研究次数
+maxExtract = 20
+
+# 连续放弃次数_等待时间
+continuityWaive = 3_28800
+
+# 必给加1道具的 累计消耗材料数
+needItemValue = 1500
+
+# 本期可抽取的轮次上限
+turnMax = 1
+
+# 灵感值上限
+inspirationMax = 3
+
+# 往期投放的超武可选列表
+unlockPlantWeapons = 30000_9990065_100_1003
+
+# 每次研究的额外奖励
+extReward = 30000_840172_1
+

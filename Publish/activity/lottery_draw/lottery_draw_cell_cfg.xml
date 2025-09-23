@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1001" rewards="30000_1001073_10" singleWeight="1" tenWeight="1" />
+      <data id="1001" rewards="30000_1001077_10" singleWeight="1" tenWeight="1" />
       <data id="1002" rewards="30000_850007_8" singleWeight="100" tenWeight="100" />
       <data id="1003" rewards="30000_850037_8" singleWeight="100" tenWeight="100" />
       <data id="1004" rewards="30000_100060_1" singleWeight="26" tenWeight="26" />
       <data id="1005" rewards="30000_850017_8" singleWeight="100" tenWeight="100" />
       <data id="1006" rewards="30000_850027_8" singleWeight="100" tenWeight="100" />
-      <data id="1007" rewards="30000_1001073_3" singleWeight="3" tenWeight="3" />
+      <data id="1007" rewards="30000_1001077_3" singleWeight="3" tenWeight="3" />
       <data id="1008" rewards="30000_104050_3" singleWeight="140" tenWeight="140" />
       <data id="1009" rewards="30000_105050_3" singleWeight="140" tenWeight="140" />
       <data id="1010" rewards="30000_101050_3" singleWeight="140" tenWeight="140" />
       <data id="1011" rewards="30000_820002_1" singleWeight="100" tenWeight="100" />
-      <data id="1012" rewards="30000_1001073_1" singleWeight="50" tenWeight="50" />
+      <data id="1012" rewards="30000_1001077_1" singleWeight="50" tenWeight="50" />
 </root>

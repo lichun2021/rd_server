@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" dropProb="5000" dropNum="1" dropLimit="60" />
+      <data id="1" dropProb="3000" dropNum="1" dropLimit="9999" />
       <data id="2" dropProb="10000" dropNum="6" dropLimit="36" />
-      <data id="3" dropProb="2000" dropNum="1" dropLimit="60" />
-      <data id="4" dropProb="5000" dropNum="1" dropLimit="96" />
-      <data id="5" dropProb="10000" dropNum="3" dropLimit="20" />
-      <data id="6" conditionValue="420" dropProb="10000" dropNum="2" dropLimit="30" />
-      <data id="7" dropProb="10000" dropNum="10" dropLimit="60" />
+      <data id="3" dropProb="3000" dropNum="1" dropLimit="60" />
+      <data id="4" dropProb="5000" dropNum="2" dropLimit="20" />
+      <data id="5" dropProb="10000" dropNum="6" dropLimit="30" />
+      <data id="6" conditionValue="420" dropProb="10000" dropNum="15" dropLimit="90" />
+      <data id="7" dropProb="10000" dropNum="20" dropLimit="60" />
 </root>

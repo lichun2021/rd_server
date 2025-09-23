@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="10001" match="5" orderType="1001" conditionVal="1" exp="50" repeatVal="10" />
-      <data id="10002" match="5" orderType="1002" conditionVal="1200" exp="100" repeatVal="10" />
-      <data id="20001" match="8" orderType="1003" conditionVal="1" exp="50" repeatVal="10" />
-      <data id="20002" match="8" orderType="1004" conditionVal="24000" exp="100" repeatVal="10" />
-      <data id="30001" match="9" orderType="1005" conditionVal="1" exp="200" repeatVal="2" />
-      <data id="30002" match="9" orderType="1006" conditionVal="500000" exp="10" repeatVal="20" />
-      <data id="30003" match="9" orderType="1007" conditionVal="100000" exp="10" repeatVal="20" />
-      <data id="40001" match="3" orderType="1008" conditionVal="1" exp="50" repeatVal="10" />
-      <data id="40002" match="3" orderType="1009" conditionVal="1200" exp="100" repeatVal="10" />
-      <data id="40003" match="3" orderType="1010" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="40004" match="3" orderType="1011" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="40005" match="3" orderType="1012" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="40006" match="3" orderType="1013" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="40007" match="3" orderType="1014" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="50001" match="7" orderType="1015" conditionVal="1" exp="50" repeatVal="10" />
-      <data id="50002" match="7" orderType="1016" conditionVal="1200" exp="100" repeatVal="10" />
-      <data id="50003" match="7" orderType="1017" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="50004" match="7" orderType="1018" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="50005" match="7" orderType="1019" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="50006" match="7" orderType="1020" conditionVal="1" exp="200" repeatVal="1" />
-      <data id="50007" match="7" orderType="1021" conditionVal="1" exp="200" repeatVal="1" />
+      <data id="10001" match="5" orderType="1041" conditionVal="1" exp="5000" repeatVal="8" />
+      <data id="10002" match="5" orderType="1052" conditionVal="800" exp="10000" repeatVal="8" />
+      <data id="30001" match="9" orderType="1044" conditionVal="1" exp="10000" repeatVal="1" />
+      <data id="30002" match="9" orderType="1047" conditionVal="500000" exp="5000" repeatVal="10" />
+      <data id="30003" match="9" orderType="1048" conditionVal="500000" exp="5000" repeatVal="10" />
+      <data id="40001" match="3" orderType="1042" conditionVal="1" exp="3000" repeatVal="8" />
+      <data id="40002" match="3" orderType="1053" conditionVal="800" exp="6000" repeatVal="8" />
+      <data id="40003" match="3" orderType="1050" conditionVal="3" exp="3000" repeatVal="1" />
+      <data id="40004" match="3" orderType="1050" conditionVal="4" exp="6000" repeatVal="1" />
+      <data id="40005" match="3" orderType="1050" conditionVal="5" exp="10000" repeatVal="1" />
+      <data id="40006" match="3" orderType="1050" conditionVal="6" exp="15000" repeatVal="1" />
+      <data id="40007" match="3" orderType="1050" conditionVal="7" exp="20000" repeatVal="1" />
+      <data id="70001" match="12" orderType="1060" conditionVal="1" exp="5000" repeatVal="8" />
+      <data id="70002" match="12" orderType="1061" conditionVal="800" exp="10000" repeatVal="8" />
+      <data id="80001" match="11" orderType="1057" conditionVal="1" exp="3000" repeatVal="11" />
+      <data id="80002" match="11" orderType="1058" conditionVal="200000" exp="4000" repeatVal="11" />
+      <data id="80003" match="11" orderType="1059" conditionVal="20000000" exp="4000" repeatVal="11" />
 </root>

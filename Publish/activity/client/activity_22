@@ -7,8 +7,9 @@ return {
 		name = [[首充奖励]],
 		title = [[活动详情]],
 		exRewardCondition = [[建筑工厂15级前充值]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官进入游戏后，首次充值任意金额即可激活SS英雄谭雅和领取超值礼包。<br/>2. 建筑工厂15级前充值还有额外奖励。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官进入游戏后，首次充值任意金额即可激活SS英雄谭雅和领取超值礼包。<br/>2. 建筑工厂15级前充值还有额外奖励。<br/>3. 活动结束时未领取的奖励视为放弃。</font>]],
 		priority = 20600,
+		resetTime = 3888000,
 	},
 	first_recharge_reward = [[id	cityLvlLimit	commonAward	extrAward	showDynamicEffect	rareMark
 1	1	2	2	2	2

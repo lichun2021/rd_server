@@ -5,17 +5,17 @@ serverDelay = 5184000
 openSculptureTimes = 1
 
 # 分享获得次数
-shareGetTimes = 2
+shareGetTimes = 1
 
 # 每日是否重置
 times = 1
 
 # 第一阶段持续时间
-firstTime = 259200
+firstTime = 518400
 
 # 第二阶段持续时间
-secondTime = 0
+secondTime = 518400
 
 # 第三阶段持续时间
-thirdTime = 0
+thirdTime = 172800
 

@@ -2,4 +2,7 @@
 <root>
       <data termId="1" showTime="2020-10-17 00:00:00" startTime="2020-10-17 00:00:00" endTime="2020-11-28 23:59:59" hiddenTime="2020-11-28 23:59:59" />
       <data termId="2" showTime="2020-12-25 00:00:00" startTime="2020-12-25 00:00:00" endTime="2021-1-1 23:59:59" hiddenTime="2021-1-1 23:59:59" />
+      <data termId="3" showTime="2022-10-24 00:00:00" startTime="2022-10-24 00:00:00" endTime="2022-11-27 23:59:59" hiddenTime="2022-11-27 23:59:59" />
+      <data termId="4" showTime="2023-12-29 00:00:00" startTime="2023-12-29 00:00:00" endTime="2024-1-28 23:59:59" hiddenTime="2024-1-28 23:59:59" />
+      <data termId="5" showTime="2024-12-25 00:00:00" startTime="2024-12-25 00:00:00" endTime="2025-3-28 23:59:59" hiddenTime="2025-3-28 23:59:59" />
 </root>

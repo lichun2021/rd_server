@@ -1,0 +1,35 @@
+return {
+	prop =
+	{
+		activityId = 184,
+		tab1 = [[@WipeOutRebel]],
+		tab2 = [[@ClearCoast]],
+		title1 = [[@WipeOutRebelTitle]],
+		des1 = [[@WipeOutRebelDesc]],
+		but1 = [[@attackRebel]],
+		des2 = [[@ClearCoastDesc]],
+		but2 = [[@Summon]],
+		pos = [[@MonsterPos]],
+		actName = [[@RebelActTitle]],
+		htmlDes = [[RebelActDes]],
+		name = [[使命战争]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">基地外</font>将随机出现<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">幽灵叛军</font>，击杀后可获得奖励，并<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">有几率额外</font>获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">通讯设备</font>道具。<br/>2. 使用通讯设备道具可在<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">指定位置</font>引出<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">叛军首领</font>。<br/>3. 每消耗敌军<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1%血量</font>即可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">参与奖励</font>，给予叛军首领<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">最后一击</font>的指挥官可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">使命礼包</font>。<br/>4. 击杀叛军首领的指挥官<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">所在联盟</font>，全盟成员可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">联盟小礼包</font>。<br/>5. 集结叛军首领时单人至多获得全队奖励的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">50%</font>，集结时合理的部队分配更能有效获得叛军首领的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">100份</font>参与奖励。<br/>6. 若您于活动期间未领取奖励，将视为<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">自动放弃</font>奖励。<br/>7. 活动期间<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">任务每日重置</font>。</font>]],
+		priority = 10900,
+		icon = [[Activity_Icon_13_Nor.png]],
+		selecticon = [[Activity_Icon_13_Sel.png]],
+		bigIcon = [[V3Activity_u_Banner_Render_01.png]],
+		itemIdTab = [[1400001_1400002_1400003]],
+		rewardStr = [[30000_1400004]],
+		rewardStr1 = [[30000_1400003]],
+	},
+	radiation_war_achieve = [[achieveId	configValue	rewards
+1	1	2
+18400001	1	30000_1800000_50,30000_1000002_2,30000_800110_2,30000_800143_2,30000_1510003_10,30000_13310003_10,30000_810001_2,30000_850006_1,30000_850036_1
+18400002	5	30000_1800000_100,30000_1000002_4,30000_800110_4,30000_800143_4,30000_1510003_20,30000_13310003_20,30000_810001_4,30000_850006_2,30000_850036_2,30000_850016_2
+18400003	10	30000_1782201_2,30000_1800000_150,30000_1000002_6,30000_800110_6,30000_800143_6,30000_1510003_30,30000_13310003_30,30000_810001_6,30000_850006_3,30000_850036_3,30000_850016_3,30000_850026_3
+18400004	20	30000_1782201_3,30000_1800000_200,30000_1000002_8,30000_800110_8,30000_800143_8,30000_1510003_40,30000_13310003_40,30000_810001_8,30000_850006_4,30000_850036_4,30000_850016_4,30000_850026_4
+18400005	30	30000_1782201_5,30000_1800000_250,30000_1000002_10,30000_800110_10,30000_800143_10,30000_1510003_50,30000_13310003_50,30000_810001_10,30000_850006_5,30000_850036_5,30000_850016_5,30000_850026_5
+]],
+
+}

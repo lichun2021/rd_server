@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="7" payId="302012" type="2" reward="10000_1000_17" specialServer="0" />
+      <data id="8" payId="302013" type="2" reward="10000_1000_18" specialServer="0" />
+      <data id="9" payId="302014" type="2" reward="10000_1000_19" specialServer="0" />
+      <data id="10" payId="302015" type="2" reward="10000_1000_20" specialServer="0" />
+      <data id="11" payId="302016" type="2" reward="10000_1000_21" specialServer="0" />
+      <data id="12" payId="302017" type="2" reward="10000_1000_22" specialServer="0" />
+      <data id="13" payId="3000001" type="2" reward="10000_1000_23" specialServer="0" />
+      <data id="14" payId="3000002" type="2" reward="10000_1000_24" specialServer="0" />
+      <data id="21" payId="302012" type="2" reward="10000_1000_17" specialServer="1" />
+      <data id="22" payId="302013" type="2" reward="10000_1000_18" specialServer="1" />
+      <data id="23" payId="302014" type="2" reward="10000_1000_19" specialServer="1" />
+      <data id="24" payId="302015" type="2" reward="10000_1000_20" specialServer="1" />
+      <data id="25" payId="302016" type="2" reward="10000_1000_21" specialServer="1" />
+      <data id="26" payId="302017" type="2" reward="10000_1000_22" specialServer="1" />
+      <data id="27" payId="3000001" type="2" reward="10000_1000_23" specialServer="1" />
+      <data id="28" payId="3000002" type="2" reward="10000_1000_24" specialServer="1" />
+</root>

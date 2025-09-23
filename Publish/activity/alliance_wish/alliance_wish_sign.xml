@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" pos="1" signWeight="1_2000,2_2000,3_2000,4_2000,5_2000" />
+      <data id="2" pos="2" signWeight="1_3000,2_2000,3_2000,4_2000,5_1000" />
+      <data id="3" pos="3" signWeight="1_4000,2_2000,3_2000,4_1000,5_1000" />
+      <data id="4" pos="4" signWeight="1_5000,2_3000,3_2000" />
+      <data id="5" pos="5" signWeight="1_6000,2_3500,3_500" />
+</root>

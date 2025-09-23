@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" rewards="30000_1000003_3" singleWeight="100" />
-      <data id="2" rewards="30000_800000_15" singleWeight="1200" />
-      <data id="3" rewards="30000_840194_300" singleWeight="1600" />
-      <data id="4" rewards="30000_800000_75" singleWeight="500" />
-      <data id="5" rewards="30000_1480001_300" singleWeight="1600" />
-      <data id="6" rewards="30000_1300017_600" singleWeight="500" />
-      <data id="7" rewards="30000_1800000_120" singleWeight="1200" />
-      <data id="8" rewards="30000_1300017_120" singleWeight="1200" />
-      <data id="9" rewards="30000_1800000_600" singleWeight="500" />
-      <data id="10" rewards="30000_810002_1" singleWeight="1600" />
+      <data id="1" rewards="30000_1000005_30" singleWeight="50" />
+      <data id="2" rewards="30000_850048_3" singleWeight="2250" />
+      <data id="3" rewards="30000_850048_108" singleWeight="50" />
+      <data id="4" rewards="30000_1782123_8" singleWeight="2250" />
+      <data id="5" rewards="30000_1782123_388" singleWeight="50" />
+      <data id="6" rewards="30000_1300027_88" singleWeight="2250" />
+      <data id="7" rewards="30000_1300027_3888" singleWeight="50" />
+      <data id="8" rewards="30000_21065001_8" singleWeight="2500" />
+      <data id="9" rewards="30000_21065001_38" singleWeight="500" />
+      <data id="10" rewards="30000_21065001_388" singleWeight="50" />
 </root>

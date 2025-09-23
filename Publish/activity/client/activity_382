@@ -1,0 +1,55 @@
+return {
+	prop =
+	{
+		activityId = 382,
+		name = [[心愿庄园]],
+		title = [[心愿庄园]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1.活动期间可通过消耗<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">心愿券</font>进行刮卡<br/>2.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">心愿券</font>可通过心愿商店购买，<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">心愿券</font>可保留到下次活动<br/>3.刮卡可刮出普通图案，组合图案，限定图案<br/>  普通图案：刮到后可获得对应图案的奖励<br/>  组合图案：集齐组合图案中所有图案可获得奖励，并刷新组合图案获取状态<br/>限定图案：刮到可获得对应图案奖励，每次活动有出现上限，到达出现上限次数后，不会再被刮到<br/>4.每次刮卡可获得<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1点庄园积分</font>和<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">1-3点家园经验</font><br/>5.<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">庄园积分</font>可在兑换商店兑换道具</font>]],
+		priority = 10001,
+		icon = [[Activity_Icon_361_Nor.png]],
+		selecticon = [[Activity_Icon_361_Sel.png]],
+		homeBuildingCcbi = [[1_100]],
+		scratchCardItemSave = [[30000_21070094_1]],
+		exchangeItem = [[30000_21070095_1]],
+		intervalTime = 0.1,
+		dailyFreeDrawLimit = 1,
+		drawGetAward = 3200008,
+		groupID = [[6,7,8,9,10]],
+		bigPrizeID = 11,
+		groupItems = [[30000_21070095_100]],
+		bigPrizeGetLimit = 2,
+		groupAwardMustGetValue = 3,
+		bigPrizeMustGetValue = 10,
+	},
+	act_home382_pattern = [[id	pattern	weight	poolType	rewards
+1	1	1	1	2
+1	V3AllianceFlag_01	1000	3	30000_810000_10,30000_810011_10
+2	V3AllianceFlag_02	1000	3	30000_810001_11,30000_810012_11
+3	V3AllianceFlag_03	1000	3	30000_810002_12,30000_810013_12
+4	V3AllianceFlag_04	1000	3	30000_810003_13,30000_810014_13
+5	V3AllianceFlag_05	1000	3	30000_810004_14,30000_100010_14
+6	V3AllianceFlag_06	1000	2	
+7	V3AllianceFlag_07	1000	2	
+8	V3AllianceFlag_08	1000	2	
+9	V3AllianceFlag_09	1000	2	
+10	V3AllianceFlag_10	1000	2	
+11	V3AllianceFlag_11	1000	1	30000_810010_20
+]],
+	act_home382_pointsShop = [[id	times	needItem	gainItem	refreshType	buyLimitTxt
+1	1	2	2	1	2
+1	9999	30000_21070053_5	30000_21070060_1	1	每日限购:
+2	1000	30000_21070053_1	30000_810001_5	1	每日限购:
+3	9999	30000_21070053_1	30000_1780040_1	1	活动限购:
+]],
+	act_home382_shop = [[id	shopItemType	times	refreshType	iosPayId	androidPayID	payQuota	payItem	payItemShow	getItem	buyLimitTxt
+1	1	1	1	1	1	1	2	2	2	2
+1	0	1	1				10000_1000_50	10000_1000_100	30000_21070060_2,30000_840172_2	每日限购:
+2	2	1	1				10000_1000_100	10000_1000_100	30000_21070060_6,30000_840172_6	每日限购:
+3	1	1	1	3610101	3610001	6			30000_21070059_6,30000_840172_6	每日限购:
+4	1	1	1	3610102	3610002	18			30000_21070059_12,30000_840172_12	每日限购:
+5	1	2	1	3610103	3610003	30			30000_21070059_18,30000_840172_18	每日限购:
+6	1	3		3610104	3610004	328			30000_21070059_110,30000_840172_110	活动限购:
+7	1	10		3610105	3610005	648			30000_21070059_216,30000_840172_216	活动限购:
+]],
+
+}

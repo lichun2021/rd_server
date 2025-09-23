@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data rewardId="1" boxRank="1" reward="301016" weight="240" buffWeight="200" extraReward="30000_1377002_6" />
+      <data rewardId="2" boxRank="1" reward="301015" weight="480" buffWeight="400" extraReward="30000_1377002_6" />
+      <data rewardId="3" boxRank="1" reward="301014" weight="720" buffWeight="600" extraReward="30000_1377002_6" />
+      <data rewardId="4" boxRank="1" reward="301013" weight="960" buffWeight="800" extraReward="30000_1377002_6" />
+      <data rewardId="5" boxRank="1" reward="301012" weight="1500" buffWeight="1250" extraReward="30000_1377002_6" />
+      <data rewardId="6" boxRank="1" reward="301011" weight="2100" buffWeight="1750" extraReward="30000_1377002_6" />
+      <data rewardId="7" boxRank="2" reward="301026" weight="80" buffWeight="80" extraReward="30000_1377002_6" />
+      <data rewardId="8" boxRank="2" reward="301025" weight="160" buffWeight="160" extraReward="30000_1377002_6" />
+      <data rewardId="9" boxRank="2" reward="301024" weight="240" buffWeight="240" extraReward="30000_1377002_6" />
+      <data rewardId="10" boxRank="2" reward="301023" weight="320" buffWeight="320" extraReward="30000_1377002_6" />
+      <data rewardId="11" boxRank="2" reward="301022" weight="500" buffWeight="500" extraReward="30000_1377002_6" />
+      <data rewardId="12" boxRank="2" reward="301021" weight="700" buffWeight="700" extraReward="30000_1377002_6" />
+      <data rewardId="13" boxRank="3" reward="301036" weight="100" buffWeight="200" extraReward="30000_1377002_6" />
+      <data rewardId="14" boxRank="3" reward="301035" weight="150" buffWeight="300" extraReward="30000_1377002_6" />
+      <data rewardId="15" boxRank="3" reward="301034" weight="200" buffWeight="400" extraReward="30000_1377002_6" />
+      <data rewardId="16" boxRank="3" reward="301033" weight="150" buffWeight="300" extraReward="30000_1377002_6" />
+      <data rewardId="17" boxRank="3" reward="301032" weight="200" buffWeight="400" extraReward="30000_1377002_6" />
+      <data rewardId="18" boxRank="3" reward="301031" weight="200" buffWeight="400" extraReward="30000_1377002_6" />
+</root>

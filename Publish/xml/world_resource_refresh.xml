@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" openServiceTimeLowerLimit="0" openServiceTimeUpLimit="86400" resourceCommonNum="1007_160,1008_160,1001_25" resourceSpecialNum="1007_160,1008_160,1001_25" resourceCapitalNum="1007_12,1008_12" />
-      <data id="2" openServiceTimeLowerLimit="86400" openServiceTimeUpLimit="172800" resourceCommonNum="1007_128,1008_128,1010_64,1001_25" resourceSpecialNum="1007_128,1008_128,1010_64,1001_25" resourceCapitalNum="1007_8,1008_8,1010_8" />
-      <data id="3" openServiceTimeLowerLimit="172800" openServiceTimeUpLimit="315360000" resourceCommonNum="1007_106,1008_106,1010_53,1009_53,1001_25" resourceSpecialNum="1007_106,1008_106,1010_53,1009_53,1001_25" resourceCapitalNum="1007_6,1008_6,1010_6,1009_6" />
-</root>

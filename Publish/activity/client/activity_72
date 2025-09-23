@@ -13,6 +13,7 @@ return {
 		urlWX = [[https://imgcache.qq.com/club/themes/mobile/middle_page/index.html?url=https%3a%2f%2fqzs.qq.com%2fopen%2fbaymax%2f5%2f12205_0585b4a85057c827025265bb91af2a8e_0.html]],
 		guestUrl = [[https://imgcache.qq.com/club/themes/mobile/middle_page/index.html?url=https%3a%2f%2fqzs.qq.com%2fopen%2fbaymax%2f5%2f12205_0585b4a85057c827025265bb91af2a8e_0.html]],
 		platform = [[]],
+		urlDailyReward = [[]],
 	},
 
 }

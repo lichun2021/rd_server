@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
       <data termId="1" showTime="2020-7-6 00:00:00" startTime="2020-7-6 00:00:00" endTime="2020-7-30 23:59:59" hiddenTime="2020-7-30 23:59:59" />
+      <data termId="2" showTime="2022-10-9 00:00:00" startTime="2022-10-9 00:00:00" endTime="2022-10-11 23:59:59" hiddenTime="2022-10-11 23:59:59" />
+      <data termId="3" showTime="2023-9-5 00:00:00" startTime="2023-9-5 00:00:00" endTime="2023-9-7 23:59:59" hiddenTime="2023-9-7 23:59:59" />
+      <data termId="4" showTime="2024-4-3 00:00:00" startTime="2024-4-3 00:00:00" endTime="2024-4-5 23:59:59" hiddenTime="2024-4-5 23:59:59" />
+      <data termId="5" showTime="2024-11-28 00:00:00" startTime="2024-11-28 00:00:00" endTime="2024-11-30 23:59:59" hiddenTime="2024-11-30 23:59:59" />
+      <data termId="6" showTime="2025-7-10 00:00:00" startTime="2025-7-10 00:00:00" endTime="2025-7-12 23:59:59" hiddenTime="2025-7-12 23:59:59" />
 </root>

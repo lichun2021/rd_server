@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="14001" level="1" gridCnt="1" reward="30000_500301_100,30000_810001_4,30000_840194_20" gatherTime="60" />
-      <data id="14002" level="2" gridCnt="1" reward="30000_500301_100,30000_810001_4,30000_840194_30" gatherTime="60" />
-      <data id="14003" level="3" gridCnt="1" reward="30000_500301_100,30000_810001_4,30000_840194_40" gatherTime="60" />
-      <data id="14004" level="4" gridCnt="1" reward="30000_500301_100,30000_810001_4,30000_840194_50" gatherTime="60" />
-</root>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1" openLimit="0" commonTime="15" advancedTime="20" />
-      <data id="2" openLimit="2" commonTime="15" advancedTime="20" />
-      <data id="3" openLimit="4" commonTime="15" advancedTime="20" />
+      <data id="1" openLimit="0" commonTime="28800" advancedTime="21600" />
+      <data id="2" openLimit="1" commonTime="28800" advancedTime="21600" />
+      <data id="3" openLimit="3" commonTime="28800" advancedTime="21600" />
 </root>

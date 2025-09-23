@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data achieveId="2710101" conditionType="700071" conditionValue="1" rewards="30000_850007_1,30000_850037_1,30000_850051_1" day="1" inTegral="5" />
-      <data achieveId="2710102" conditionType="700071" conditionValue="2" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850051_2" day="1" inTegral="10" />
-      <data achieveId="2710103" conditionType="700071" conditionValue="3" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_850051_3" day="1" inTegral="15" />
-      <data achieveId="2710104" conditionType="700071" conditionValue="4" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_850051_4" day="1" inTegral="25" />
-      <data achieveId="2710105" conditionType="700071" conditionValue="5" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_850052_1" day="1" inTegral="35" />
+      <data achieveId="2710101" conditionType="700071" conditionValue="1" rewards="30000_850008_1,30000_850038_1,30000_850051_1" day="1" inTegral="5" />
+      <data achieveId="2710102" conditionType="700071" conditionValue="2" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850051_2" day="1" inTegral="10" />
+      <data achieveId="2710103" conditionType="700071" conditionValue="3" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_850051_3" day="1" inTegral="15" />
+      <data achieveId="2710104" conditionType="700071" conditionValue="4" rewards="30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1,30000_850051_4" day="1" inTegral="25" />
+      <data achieveId="2710105" conditionType="700071" conditionValue="5" rewards="30000_850009_2,30000_850039_2,30000_850019_2,30000_850029_2,30000_850052_1" day="1" inTegral="35" />
       <data achieveId="2710201" conditionType="500013" conditionValue="201_210_10" rewards="30000_850076_1,30000_1510003_1,30000_1510002_5,30000_1510001_10,30000_800143_1" day="1" inTegral="5" />
       <data achieveId="2710202" conditionType="500013" conditionValue="201_210_20" rewards="30000_850076_2,30000_1510003_2,30000_1510002_10,30000_1510001_20,30000_800143_2" day="1" inTegral="10" />
       <data achieveId="2710203" conditionType="500013" conditionValue="201_210_30" rewards="30000_850076_3,30000_1510003_3,30000_1510002_15,30000_1510001_30,30000_800143_3" day="1" inTegral="15" />
       <data achieveId="2710204" conditionType="500013" conditionValue="201_210_50" rewards="30000_850076_4,30000_1510003_4,30000_1510002_20,30000_1510001_40,30000_800143_4" day="1" inTegral="15" />
       <data achieveId="2710205" conditionType="500013" conditionValue="201_210_80" rewards="30000_850076_5,30000_1510003_5,30000_1510002_25,30000_1510001_50,30000_800143_5" day="1" inTegral="20" />
-      <data achieveId="2710301" conditionType="230100" conditionValue="10" rewards="30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1" day="1" inTegral="5" />
-      <data achieveId="2710302" conditionType="230100" conditionValue="20" rewards="30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2" day="1" inTegral="10" />
-      <data achieveId="2710303" conditionType="230100" conditionValue="40" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="1" inTegral="15" />
-      <data achieveId="2710304" conditionType="230100" conditionValue="70" rewards="30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2" day="1" inTegral="15" />
-      <data achieveId="2710305" conditionType="230100" conditionValue="100" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1" day="1" inTegral="20" />
+      <data achieveId="2710301" conditionType="230100" conditionValue="10" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="1" inTegral="5" />
+      <data achieveId="2710302" conditionType="230100" conditionValue="20" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1" day="1" inTegral="10" />
+      <data achieveId="2710303" conditionType="230100" conditionValue="40" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2" day="1" inTegral="15" />
+      <data achieveId="2710304" conditionType="230100" conditionValue="70" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1" day="1" inTegral="15" />
+      <data achieveId="2710305" conditionType="230100" conditionValue="100" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2" day="1" inTegral="20" />
       <data achieveId="2720401" conditionType="500013" conditionValue="301_310_10" rewards="30000_850076_1,30000_13310003_1,30000_13310002_5,30000_13310001_10" day="2" inTegral="5" />
       <data achieveId="2720402" conditionType="500013" conditionValue="301_310_20" rewards="30000_850076_2,30000_13310003_2,30000_13310002_10,30000_13310001_20" day="2" inTegral="10" />
       <data achieveId="2720403" conditionType="500013" conditionValue="301_310_30" rewards="30000_850076_3,30000_13310003_3,30000_13310002_15,30000_13310001_30,30000_800110_1" day="2" inTegral="15" />
       <data achieveId="2720404" conditionType="500013" conditionValue="301_310_50" rewards="30000_850076_4,30000_13310003_4,30000_13310002_20,30000_13310001_40,30000_800110_2" day="2" inTegral="15" />
       <data achieveId="2720405" conditionType="500013" conditionValue="301_310_80" rewards="30000_850076_5,30000_13310003_5,30000_13310002_25,30000_13310001_50,30000_800110_3" day="2" inTegral="20" />
-      <data achieveId="2720501" conditionType="500004" conditionValue="300" rewards="30000_810003_12" day="2" inTegral="5" />
-      <data achieveId="2720502" conditionType="500004" conditionValue="1000" rewards="30000_810003_18,30000_810008_18" day="2" inTegral="10" />
-      <data achieveId="2720503" conditionType="500004" conditionValue="2000" rewards="30000_810003_24,30000_810008_24,30000_810010_24" day="2" inTegral="15" />
-      <data achieveId="2720504" conditionType="500004" conditionValue="4000" rewards="30000_810003_30,30000_810008_30,30000_810010_30,30000_810012_30" day="2" inTegral="15" />
-      <data achieveId="2720505" conditionType="500004" conditionValue="6000" rewards="30000_810003_36,30000_810008_36,30000_810010_36,30000_810012_36" day="2" inTegral="20" />
+      <data achieveId="2720501" conditionType="500004" conditionValue="300" rewards="30000_810003_16" day="2" inTegral="5" />
+      <data achieveId="2720502" conditionType="500004" conditionValue="1000" rewards="30000_810003_24,30000_810008_24" day="2" inTegral="10" />
+      <data achieveId="2720503" conditionType="500004" conditionValue="2000" rewards="30000_810003_32,30000_810008_32,30000_810010_32" day="2" inTegral="15" />
+      <data achieveId="2720504" conditionType="500004" conditionValue="4000" rewards="30000_810003_40,30000_810008_40,30000_810010_40,30000_810012_40" day="2" inTegral="15" />
+      <data achieveId="2720505" conditionType="500004" conditionValue="6000" rewards="30000_810003_48,30000_810008_48,30000_810010_48,30000_810012_48" day="2" inTegral="20" />
       <data achieveId="2720601" conditionType="111100" conditionValue="10" rewards="30000_1510002_5,30000_13310002_5,30000_1510001_10,30000_13310001_10" day="2" inTegral="5" />
       <data achieveId="2720602" conditionType="111100" conditionValue="20" rewards="30000_1510002_10,30000_13310002_10,30000_1510001_20,30000_13310001_20" day="2" inTegral="10" />
       <data achieveId="2720603" conditionType="111100" conditionValue="40" rewards="30000_1510002_15,30000_13310002_15,30000_1510001_30,30000_13310001_30" day="2" inTegral="15" />
       <data achieveId="2720604" conditionType="111100" conditionValue="70" rewards="30000_1510002_20,30000_13310002_20,30000_1510001_40,30000_13310001_40" day="2" inTegral="15" />
       <data achieveId="2720605" conditionType="111100" conditionValue="100" rewards="30000_1510002_25,30000_13310002_25,30000_1510001_50,30000_13310001_50" day="2" inTegral="20" />
-      <data achieveId="2730701" conditionType="31100" conditionValue="0_1000000" rewards="30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1" day="3" inTegral="5" />
-      <data achieveId="2730702" conditionType="31100" conditionValue="0_2000000" rewards="30000_850005_2,30000_850035_2,30000_850015_2,30000_850025_2" day="3" inTegral="10" />
-      <data achieveId="2730703" conditionType="31100" conditionValue="0_4000000" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="3" inTegral="15" />
-      <data achieveId="2730704" conditionType="31100" conditionValue="0_7000000" rewards="30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2" day="3" inTegral="15" />
-      <data achieveId="2730705" conditionType="31100" conditionValue="0_10000000" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1" day="3" inTegral="20" />
-      <data achieveId="2730801" conditionType="20100" conditionValue="0_1000" rewards="30000_850036_1,30000_850035_1,30000_850043_1,30000_850034_1,30000_810010_8" day="3" inTegral="5" />
-      <data achieveId="2730802" conditionType="20100" conditionValue="0_2000" rewards="30000_850036_2,30000_850035_2,30000_850043_2,30000_850034_2,30000_810010_12" day="3" inTegral="10" />
-      <data achieveId="2730803" conditionType="20100" conditionValue="0_3000" rewards="30000_850037_1,30000_850036_1,30000_850035_1,30000_850043_1,30000_810010_16" day="3" inTegral="15" />
-      <data achieveId="2730804" conditionType="20100" conditionValue="0_5000" rewards="30000_850037_2,30000_850036_2,30000_850035_2,30000_850043_2,30000_104050_1" day="3" inTegral="15" />
-      <data achieveId="2730805" conditionType="20100" conditionValue="0_8000" rewards="30000_850038_1,30000_850037_1,30000_850036_1,30000_850035_1,30000_104050_2" day="3" inTegral="20" />
+      <data achieveId="2730701" conditionType="31100" conditionValue="0_1000000" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="3" inTegral="5" />
+      <data achieveId="2730702" conditionType="31100" conditionValue="0_2000000" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1" day="3" inTegral="10" />
+      <data achieveId="2730703" conditionType="31100" conditionValue="0_4000000" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2" day="3" inTegral="15" />
+      <data achieveId="2730704" conditionType="31100" conditionValue="0_7000000" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1" day="3" inTegral="15" />
+      <data achieveId="2730705" conditionType="31100" conditionValue="0_10000000" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2" day="3" inTegral="20" />
+      <data achieveId="2730801" conditionType="20100" conditionValue="0_1000" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_810010_8" day="3" inTegral="5" />
+      <data achieveId="2730802" conditionType="20100" conditionValue="0_2000" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810010_12" day="3" inTegral="10" />
+      <data achieveId="2730803" conditionType="20100" conditionValue="0_3000" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_810010_16" day="3" inTegral="15" />
+      <data achieveId="2730804" conditionType="20100" conditionValue="0_5000" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_104050_1" day="3" inTegral="15" />
+      <data achieveId="2730805" conditionType="20100" conditionValue="0_8000" rewards="30000_850009_1,30000_850039_1,30000_850019_1,30000_850029_1,30000_104050_2" day="3" inTegral="20" />
       <data achieveId="2730901" conditionType="700072" conditionValue="1" rewards="30000_850076_1,30000_1510003_1,30000_1510002_5,30000_13310002_5,30000_840165_5" day="3" inTegral="5" />
       <data achieveId="2730902" conditionType="700072" conditionValue="3" rewards="30000_850076_2,30000_1510003_2,30000_1510002_10,30000_13310002_10,30000_840165_10" day="3" inTegral="10" />
       <data achieveId="2730903" conditionType="700072" conditionValue="5" rewards="30000_850076_3,30000_1510003_3,30000_1510002_15,30000_13310002_15,30000_840165_15" day="3" inTegral="15" />
@@ -51,28 +51,28 @@
       <data achieveId="2741004" conditionType="112100" conditionValue="60" rewards="30000_1510002_20,30000_13310002_20,30000_1510001_40,30000_13310001_40" day="4" inTegral="15" />
       <data achieveId="2741005" conditionType="112100" conditionValue="80" rewards="30000_1510002_25,30000_13310002_25,30000_1510001_50,30000_13310001_50" day="4" inTegral="20" />
       <data achieveId="2741101" conditionType="500003" conditionValue="1" rewards="30000_850076_1,30000_1510002_5,30000_13310002_5" day="4" inTegral="5" />
-      <data achieveId="2741102" conditionType="500003" conditionValue="3" rewards="30000_850076_2,30000_1510002_10,30000_13310002_10,30000_810000_3" day="4" inTegral="10" />
-      <data achieveId="2741103" conditionType="500003" conditionValue="6" rewards="30000_850076_3,30000_1510002_15,30000_13310002_15,30000_810000_6" day="4" inTegral="15" />
-      <data achieveId="2741104" conditionType="500003" conditionValue="9" rewards="30000_850076_4,30000_1510002_20,30000_13310002_20,30000_810000_9" day="4" inTegral="15" />
-      <data achieveId="2741105" conditionType="500003" conditionValue="12" rewards="30000_850076_5,30000_1510002_25,30000_13310002_25,30000_810000_12" day="4" inTegral="20" />
-      <data achieveId="2741201" conditionType="500024" conditionValue="1" rewards="30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1" day="4" inTegral="5" />
-      <data achieveId="2741202" conditionType="500024" conditionValue="2" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810000_3" day="4" inTegral="10" />
-      <data achieveId="2741203" conditionType="500024" conditionValue="3" rewards="30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_810000_6" day="4" inTegral="15" />
-      <data achieveId="2741204" conditionType="500024" conditionValue="4" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_810000_9" day="4" inTegral="15" />
-      <data achieveId="2741205" conditionType="500024" conditionValue="6" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810000_12" day="4" inTegral="20" />
+      <data achieveId="2741102" conditionType="500003" conditionValue="3" rewards="30000_850076_2,30000_1510002_10,30000_13310002_10,30000_810000_5" day="4" inTegral="10" />
+      <data achieveId="2741103" conditionType="500003" conditionValue="6" rewards="30000_850076_3,30000_1510002_15,30000_13310002_15,30000_810000_10" day="4" inTegral="15" />
+      <data achieveId="2741104" conditionType="500003" conditionValue="9" rewards="30000_850076_4,30000_1510002_20,30000_13310002_20,30000_810000_15" day="4" inTegral="15" />
+      <data achieveId="2741105" conditionType="500003" conditionValue="12" rewards="30000_850076_5,30000_1510002_25,30000_13310002_25,30000_810000_20" day="4" inTegral="20" />
+      <data achieveId="2741201" conditionType="500024" conditionValue="1" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="4" inTegral="5" />
+      <data achieveId="2741202" conditionType="500024" conditionValue="2" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_810000_5" day="4" inTegral="10" />
+      <data achieveId="2741203" conditionType="500024" conditionValue="3" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810000_10" day="4" inTegral="15" />
+      <data achieveId="2741204" conditionType="500024" conditionValue="5" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_810000_15" day="4" inTegral="15" />
+      <data achieveId="2741205" conditionType="500024" conditionValue="8" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_810000_20" day="4" inTegral="20" />
       <data achieveId="2751301" conditionType="500013" conditionValue="401_410_5" rewards="30000_850076_1,30000_1510002_5,30000_13310002_5,30000_800110_1,30000_800143_1" day="5" inTegral="5" />
       <data achieveId="2751302" conditionType="500013" conditionValue="401_410_10" rewards="30000_850076_2,30000_1510002_10,30000_13310002_10,30000_800110_2,30000_800143_2" day="5" inTegral="10" />
       <data achieveId="2751303" conditionType="500013" conditionValue="401_410_15" rewards="30000_850076_3,30000_1510002_15,30000_13310002_15,30000_800110_3,30000_800143_3" day="5" inTegral="15" />
       <data achieveId="2751304" conditionType="500013" conditionValue="401_410_20" rewards="30000_850076_4,30000_1510002_20,30000_13310002_20,30000_800110_4,30000_800143_4" day="5" inTegral="15" />
       <data achieveId="2751305" conditionType="500013" conditionValue="401_410_30" rewards="30000_850076_5,30000_1510002_25,30000_13310002_25,30000_800110_5,30000_800143_5" day="5" inTegral="20" />
-      <data achieveId="2751401" conditionType="240100" conditionValue="5" rewards="30000_850005_1,30000_850035_1,30000_850015_1,30000_850025_1" day="5" inTegral="5" />
-      <data achieveId="2751402" conditionType="240100" conditionValue="10" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1,30000_810000_3" day="5" inTegral="10" />
-      <data achieveId="2751403" conditionType="240100" conditionValue="20" rewards="30000_850006_2,30000_850036_2,30000_850016_2,30000_850026_2,30000_810000_6" day="5" inTegral="15" />
-      <data achieveId="2751404" conditionType="240100" conditionValue="30" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_810000_9" day="5" inTegral="15" />
-      <data achieveId="2751405" conditionType="240100" conditionValue="40" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810000_12" day="5" inTegral="20" />
+      <data achieveId="2751401" conditionType="240100" conditionValue="5" rewards="30000_850006_1,30000_850036_1,30000_850016_1,30000_850026_1" day="5" inTegral="5" />
+      <data achieveId="2751402" conditionType="240100" conditionValue="10" rewards="30000_850007_1,30000_850037_1,30000_850017_1,30000_850027_1,30000_810000_5" day="5" inTegral="10" />
+      <data achieveId="2751403" conditionType="240100" conditionValue="20" rewards="30000_850007_2,30000_850037_2,30000_850017_2,30000_850027_2,30000_810000_10" day="5" inTegral="15" />
+      <data achieveId="2751404" conditionType="240100" conditionValue="30" rewards="30000_850008_1,30000_850038_1,30000_850018_1,30000_850028_1,30000_810000_15" day="5" inTegral="15" />
+      <data achieveId="2751405" conditionType="240100" conditionValue="40" rewards="30000_850008_2,30000_850038_2,30000_850018_2,30000_850028_2,30000_810000_20" day="5" inTegral="20" />
       <data achieveId="2751501" conditionType="170100" conditionValue="50" rewards="30000_850076_1,30000_1510002_5,30000_13310002_5" day="5" inTegral="5" />
       <data achieveId="2751502" conditionType="170100" conditionValue="100" rewards="30000_850076_2,30000_1510002_10,30000_13310002_10,30000_850051_1" day="5" inTegral="10" />
-      <data achieveId="2751503" conditionType="170100" conditionValue="150" rewards="30000_850076_3,30000_1510002_15,30000_13310002_15,30000_850051_2" day="5" inTegral="15" />
-      <data achieveId="2751504" conditionType="170100" conditionValue="200" rewards="30000_850076_4,30000_1510002_20,30000_13310002_20,30000_850051_3" day="5" inTegral="15" />
-      <data achieveId="2751505" conditionType="170100" conditionValue="300" rewards="30000_850076_5,30000_1510002_25,30000_13310002_25,30000_850052_1" day="5" inTegral="20" />
+      <data achieveId="2751503" conditionType="170100" conditionValue="200" rewards="30000_850076_3,30000_1510002_15,30000_13310002_15,30000_850051_2" day="5" inTegral="15" />
+      <data achieveId="2751504" conditionType="170100" conditionValue="300" rewards="30000_850076_4,30000_1510002_20,30000_13310002_20,30000_850051_3" day="5" inTegral="15" />
+      <data achieveId="2751505" conditionType="170100" conditionValue="500" rewards="30000_850076_5,30000_1510002_25,30000_13310002_25,30000_850052_1" day="5" inTegral="20" />
 </root>

@@ -8,10 +8,10 @@ wishGuildMemberCount = 5
 wishGuildSendCD = 28800
 
 # 普通祝福随机ID(确定增加位置)
-wishCommPosPoolId = 101
+wishCommPosPoolId = 102
 
 # 璀璨祝福随机ID(确定增加位置)
-wishLuxuryPosPoolId = 102
+wishLuxuryPosPoolId = 103
 
 # 收取获得道具（1积分）
 achiveItem = 30000_2980001_1
@@ -42,4 +42,7 @@ numCount = 5
 
 # 签到随机池
 wishSignPosPoolId = 101
+
+# 第几次签到必得
+signMust = 5_1
 

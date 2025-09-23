@@ -1,27 +1,27 @@
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 1209600
+serverDelay = 604800
 
-# 冷却时间
-cdTime = 8
+# 冷却时间（小时）
+cdTime = 2
 
 # 至多邀请玩家
 maxPlayer = 5
 
 # 基础金币数
-baseGold = 520
+baseGold = 1888
 
 # 玩家邀请权重
-playerWeight = 100
+playerWeight = 166
 
 # 玩家签到权重
-punchWeight = 100
+punchWeight = 266
 
 # 玩家可分享次数
 shareCount = 1
 
 # 分享奖励
-shareReward = 30000_1001045_1
+shareReward = 30000_24200026_200,10000_1001_66,30000_810001_10,30000_850007_10,30000_850037_10,30000_850017_10,30000_850027_10
 
 # 注册时间截止
-registrationline = 2022-8-1 00:00:00
+registrationline = 2024-10-16 00:00:00
 

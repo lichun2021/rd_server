@@ -12,6 +12,7 @@ return {
 		urlWX = [[https://hongjing.qq.com/cp/a20211126bdsjh/index_g.html]],
 		guestUrl = [[https://hongjing.qq.com/cp/a20211126bdsjh/index_g.html]],
 		platform = [[]],
+		urlDailyReward = [[]],
 	},
 
 }

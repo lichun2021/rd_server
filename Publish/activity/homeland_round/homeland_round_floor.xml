@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+      <data id="1" floor="0" floorReward="30000_1383002_4,30000_810000_10" cost="30000_1383001_2" guarantee="3" resultWeight="3_50,2_1950,1_8000" guaranteeWeight="3_50,2_1950,1_8000" />
+      <data id="2" floor="1" floorReward="30000_1383002_18,30000_810000_20" cost="30000_1383001_2" guarantee="3" resultWeight="3_10,2_390,1_1800,-1_6800,-2_1000" guaranteeWeight="3_10,2_390,1_9600" />
+      <data id="3" floor="2" floorReward="30000_1383002_55,30000_810000_60" cost="30000_1383001_4" guarantee="3" resultWeight="3_10,2_390,1_1800,-1_6800,-2_1000" guaranteeWeight="3_10,2_390,1_9600" />
+      <data id="4" floor="3" floorReward="30000_1383002_150,30000_810000_150" cost="30000_1383001_6" guarantee="3" resultWeight="3_10,2_390,1_1800,-1_6800,-2_1000" guaranteeWeight="3_10,2_390,1_9600" />
+      <data id="5" floor="4" floorReward="30000_1383002_350,30000_810000_300" cost="30000_1383001_10" guarantee="3" resultWeight="3_10,2_390,1_1800,-1_6800,-2_1000" guaranteeWeight="3_10,2_390,1_9600" />
+      <data id="6" floor="5" floorReward="30000_1383002_780,30000_810000_600" cost="30000_1383001_16" guarantee="3" resultWeight="3_10,2_390,1_1800,-1_6800,-2_1000" guaranteeWeight="3_10,2_390,1_9600" />
+      <data id="7" floor="6" floorReward="30000_1383002_1800,30000_810000_1200" />
+</root>

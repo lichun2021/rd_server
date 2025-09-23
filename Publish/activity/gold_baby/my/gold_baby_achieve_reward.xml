@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	  <data id="1" needTimes="10" rewards="30000_850051_1"/>
+	  <data id="2" needTimes="20" rewards="30000_850051_3"/>
+	  <data id="3" needTimes="30" rewards="30000_1780030_10"/>
+	  <data id="4" needTimes="40" rewards="30000_101050_15" />
+	  <data id="5" needTimes="50" rewards="30000_103050_40"/>
+</root>

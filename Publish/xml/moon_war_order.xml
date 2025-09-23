@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1001" techId="20701" techCost="10000" coolingTime="600" p1="30" />
-      <data id="2001" techId="21401" techCost="20000" coolingTime="510" effectTime="90" orderEffect="1701_750,1702_750" />
-      <data id="3001" techId="11601" techCost="30000" coolingTime="600" p1="302099" p2="100" />
-      <data id="4001" techId="22001" techCost="40000" coolingTime="600" p1="1" />
-</root>

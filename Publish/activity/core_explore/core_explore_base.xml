@@ -1,0 +1,66 @@
+# 服务器开服延时开启活动时间；单位：秒
+serverDelay = 1728000
+
+# 基地等级限制
+baseLimit = 35
+
+# VIP等级限制
+vipLimit = 0
+
+# 免费矿镐ID
+freePickId = 1367001
+
+# 付费矿镐ID
+buyPickId = 1367002
+
+# 免费矿镐数量上限
+pickLimit = 12
+
+# 每日0时赠与矿镐数量
+dailyFreePick = 5
+
+# 赠送矿镐间隔(秒）
+freePickCd = 5400
+
+# 赠送矿镐数量
+freePickNum = 1
+
+# 矿镐购买消耗
+pickPrice = 10000_1000_6
+
+# 点击沙土消耗
+sandCost = 30000_1367001_1,30000_1367002_1
+
+# 点击石头消耗
+stoneCost = 30000_1367001_1,30000_1367002_1
+
+# 宝箱基础点击次数
+boxClickTimes = 4,10
+
+# 宝箱点击奖励id
+boxClickAward = 3690001
+
+# 每期购买矿镐次数上限
+buyPickLimit = 2000
+
+# 炸弹道具ID
+boomItemId = 1367003
+
+# 钻机道具ID
+rigItemId = 1367004
+
+# 每期赠送炸弹数量
+freeBoomNum = 1
+
+# 每期赠送钻机数量
+freeRigNum = 1
+
+# 矿石id
+mineralItemId = 1367005
+
+# 连续x行强制阻断
+block = 5
+
+# 回收道具ID
+clearItemIds = 1367001,1367005
+

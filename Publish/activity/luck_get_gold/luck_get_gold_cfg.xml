@@ -8,14 +8,47 @@ serverDelay = 2592000
 freeCount = 1
 
 # 金条阈值
-threshold = 6000
+threshold = 20000
 
 # 单次消耗
 oneCost = 10000_1000_50
 
+# 单次抽奖获得城建礼包
+oneCostGet = 30000_840172_1
+
+# 单次抽奖奖池增加多少金条
+oneCostGold = 5
+
 # 十次消耗
-tenCost = 10000_1000_450
+tenCost = 10000_1000_500
+
+# 十连抽奖获得城建礼包
+tenCostGet = 30000_840172_10
+
+# 十连抽奖奖池增加多少金条
+tenCostGold = 50
 
 # 初始金条数量
-startGold = 5000
+startGold = 10000
+
+# 基地大于等于此等级才会开启此活动
+baseLevel = 35
+
+# 贵族大于等级此等级才会开启此互动
+vipLevel = 8
+
+# 各平台的中心服
+calServer = 1_10001,2_20001
+
+# 单日最大抽奖次数
+dailyMax = 500
+
+# 1秒最多处理数据条目数
+maxAction = 1000
+
+# 每日抽奖开始时间，填写10表示10点开始
+dailyStartTime = 10
+
+# 每日抽奖结束时间，填写21表示21:59:59结束
+dailyEndTime = 21
 

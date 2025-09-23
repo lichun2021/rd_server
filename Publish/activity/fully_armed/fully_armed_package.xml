@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
       <data id="1" awardId="4950028" price="10000_1000_60" limit="8" />
-      <data id="2" awardId="4950029" price="10000_1000_3" limit="150" />
-      <data id="3" awardId="4950030" price="10000_1000_20" limit="5" />
+      <data id="2" awardId="4950029" price="10000_1000_3" limit="100" />
+      <data id="3" awardId="4950030" price="10000_1000_5" limit="300" />
 </root>

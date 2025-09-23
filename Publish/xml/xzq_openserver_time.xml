@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data termId="1" signupPointNumLimit="1" signupTime="0" signupEndTime="241200" startTime="244800" endTime="252000" hurtRate="2000" includedPointLevel="2" />
-      <data termId="2" signupPointNumLimit="1" signupTime="345600" signupEndTime="586800" startTime="590400" endTime="597600" hurtRate="3500" includedPointLevel="2,3" />
-      <data termId="3" signupPointNumLimit="1" signupTime="691200" signupEndTime="932400" startTime="936000" endTime="943200" hurtRate="5000" includedPointLevel="2,3,4" />
-</root>

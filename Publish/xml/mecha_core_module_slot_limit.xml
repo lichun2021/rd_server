@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" slotType="1" unlockRankLimit="0" unlockBaseLevelLimit="8" />
-      <data id="2" slotType="2" unlockRankLimit="1" unlockBaseLevelLimit="10" />
-      <data id="3" slotType="3" unlockRankLimit="2" unlockBaseLevelLimit="12" />
-      <data id="4" slotType="4" unlockRankLimit="3" unlockBaseLevelLimit="14" />
-      <data id="5" slotType="5" unlockRankLimit="4" unlockBaseLevelLimit="16" />
-      <data id="6" slotType="6" unlockRankLimit="5" unlockBaseLevelLimit="18" />
-</root>

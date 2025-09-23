@@ -2,5 +2,8 @@
 serverDelay = 0
 
 # 开服时间晚于此时间的服务器开启
-serverOpenTime = 2024-4-25 00:00:00
+serverOpenTime = 2025-3-19 00:00:00
+
+# 每日奖励宝箱内容（三段式，若无每日奖励，则不填）
+urlDailyReward = 
 

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data id="1001" event="2" rewards="30000_15200008_1" />
-      <data id="1002" event="1" rewards="30000_850007_1" />
-      <data id="1003" event="1" rewards="30000_101050_1" />
-      <data id="1004" event="2" rewards="30000_15200008_2" />
-      <data id="1005" event="1" rewards="30000_1510003_6" />
-      <data id="1006" event="1" rewards="30000_13310003_6" />
-      <data id="1007" event="2" rewards="30000_15200008_2" />
-      <data id="1008" event="1" rewards="30000_850037_1" />
-      <data id="1009" event="1" rewards="30000_103050_1" />
-      <data id="1010" event="2" rewards="30000_15200008_3" />
-      <data id="1011" event="1" rewards="30000_800143_1" />
-      <data id="1012" event="1" rewards="30000_800110_1" />
-      <data id="1013" event="2" rewards="30000_15200008_1" />
-      <data id="1014" event="1" rewards="30000_850017_1" />
-      <data id="1015" event="1" rewards="30000_104050_1" />
-      <data id="1016" event="2" rewards="30000_15200008_2" />
-      <data id="1017" event="1" rewards="30000_800000_1" />
-      <data id="1018" event="1" rewards="30000_800001_6" />
-      <data id="1019" event="2" rewards="30000_15200008_2" />
-      <data id="1020" event="1" rewards="30000_850027_1" />
-      <data id="1021" event="1" rewards="30000_105050_1" />
-      <data id="1022" event="2" rewards="30000_15200008_3" />
+      <data id="1001" event="2" rewards="30000_15200009_1" />
+      <data id="1002" event="1" rewards="30000_850008_1" />
+      <data id="1003" event="1" rewards="30000_101050_2" />
+      <data id="1004" event="2" rewards="30000_15200009_2" />
+      <data id="1005" event="1" rewards="30000_800001_6" />
+      <data id="1006" event="1" rewards="30000_1782106_1" />
+      <data id="1007" event="2" rewards="30000_15200009_2" />
+      <data id="1008" event="1" rewards="30000_850038_1" />
+      <data id="1009" event="1" rewards="30000_103050_2" />
+      <data id="1010" event="2" rewards="30000_15200009_3" />
+      <data id="1011" event="1" rewards="30000_800110_1" />
+      <data id="1012" event="1" rewards="30000_800000_1" />
+      <data id="1013" event="2" rewards="30000_15200009_1" />
+      <data id="1014" event="1" rewards="30000_850018_1" />
+      <data id="1015" event="1" rewards="30000_104050_2" />
+      <data id="1016" event="2" rewards="30000_15200009_2" />
+      <data id="1017" event="1" rewards="30000_800001_6" />
+      <data id="1018" event="1" rewards="30000_1782106_1" />
+      <data id="1019" event="2" rewards="30000_15200009_2" />
+      <data id="1020" event="1" rewards="30000_850028_1" />
+      <data id="1021" event="1" rewards="30000_105050_2" />
+      <data id="1022" event="2" rewards="30000_15200009_3" />
       <data id="1023" event="1" rewards="30000_1480001_18" />
-      <data id="1024" event="1" rewards="30000_840165_8" />
+      <data id="1024" event="1" rewards="30000_800002_10" />
 </root>

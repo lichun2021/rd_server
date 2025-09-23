@@ -2,7 +2,7 @@
 singlePrice = 30000_15200007_1
 
 # 服务器开服延时开启活动时间；单位：秒
-serverDelay = 604800
+serverDelay = 1728000
 
 # 倍率
 magnification = 2_40,3_40,5_20

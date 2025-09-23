@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<root>
-      <data id="1" defaultName="@alliance_field_1" resourceUpLimit="450000000" collectSpeed="2000" buildingUpLimit="50000" resType="1007" />
-      <data id="2" defaultName="@alliance_field_2" resourceUpLimit="450000000" collectSpeed="2000" buildingUpLimit="50000" resType="1008" />
-      <data id="3" defaultName="@alliance_field_3" resourceUpLimit="75000000" collectSpeed="2000" buildingUpLimit="50000" resType="1010" />
-      <data id="4" defaultName="@alliance_field_4" resourceUpLimit="18750000" collectSpeed="2000" buildingUpLimit="50000" resType="1009" />
-</root>

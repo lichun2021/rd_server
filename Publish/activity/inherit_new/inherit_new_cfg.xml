@@ -19,6 +19,12 @@ maxGift = 500000
 # 金条返现比例(万分比)
 goldRate = 5000
 
+# 【专服】返还金条数量上限
+specialMaxGift = 600000
+
+# 【专服】金条返现比例(万分比)
+specialGoldRate = 6000
+
 # 指挥官等级
 level = 1
 

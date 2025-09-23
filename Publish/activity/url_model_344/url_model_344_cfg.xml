@@ -7,3 +7,6 @@ serverOpenTime = 2024-4-25 00:00:00
 # 开服时间早于此时间的服务器开启
 serverEndTime = 2024-5-25 23:59:59
 
+# 每日奖励宝箱内容（三段式，若无每日奖励，则不填）
+urlDailyReward = 
+

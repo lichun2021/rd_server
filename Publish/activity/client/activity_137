@@ -2,19 +2,20 @@ return {
 	prop =
 	{
 		activityId = 137,
-		name = [[邀友抢红包]],
+		name = [[赛事竞猜]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1、活动时间：10月17日-10月31日<br/>2、活动内容：活动时间内邀请好友完成指定任务，即可100%获得现金红包<br/>3、本活动为周年庆期间微信用户专属</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">参与荣耀S3泰伯联赛竞猜，领取实物周边和海量道具。</font>]],
 		priority = 11282,
 		icon = [[Activity_Icon_137_Nor.png]],
 		selecticon = [[Activity_Icon_137_Sel.png]],
 		urlType = [[]],
-		urlQQ = [[https://game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90232584&appid=wxd383fb5d440a7267&url=https%3A%2F%2Fgame.weixin.qq.com%2Fcgi-bin%2Fh5%2Fstatic%2Fh5-bounty-template%2Findex.html%3Fnoticeid%3D90231825%26act_id%3D600010%26path%3Dact%26act_code%3D-AZugEeFuqySEGZLv2Tvmg%23wechat_redirect]],
-		urlWX = [[https://game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90232584&appid=wxd383fb5d440a7267&url=https%3A%2F%2Fgame.weixin.qq.com%2Fcgi-bin%2Fh5%2Fstatic%2Fh5-bounty-template%2Findex.html%3Fnoticeid%3D90231825%26act_id%3D600010%26path%3Dact%26act_code%3D-AZugEeFuqySEGZLv2Tvmg%23wechat_redirect]],
-		guestUrl = [[https://game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90232584&appid=wxd383fb5d440a7267&url=https%3A%2F%2Fgame.weixin.qq.com%2Fcgi-bin%2Fh5%2Fstatic%2Fh5-bounty-template%2Findex.html%3Fnoticeid%3D90231825%26act_id%3D600010%26path%3Dact%26act_code%3D-AZugEeFuqySEGZLv2Tvmg%23wechat_redirect]],
+		urlQQ = [[https://hongjing.qq.com/cp/a202406match/index.html]],
+		urlWX = [[https://hongjing.qq.com/cp/a202406match/index.html]],
+		guestUrl = [[https://hongjing.qq.com/cp/a202406match/index.html]],
 		platform = [[]],
 		shareImg = [[V5Activity_137_Share_URL.jpg]],
 		shareCCBName = [[RAActivity137NodeShareV5.ccbi]],
+		urlDailyReward = [[]],
 	},
 
 }

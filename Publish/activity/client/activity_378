@@ -1,0 +1,57 @@
+return {
+	prop =
+	{
+		activityId = 378,
+		name = [[激情畅战]],
+		title = [[活动详情]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，您产生的死兵会<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">全部进入</font>到激情畅战医院中。<br/>2. 可使用<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">通用加速，训兵加速</font>使激情畅战医院中的士兵快速复活。<br/>3. 击杀其他玩家士兵，击伤其他玩家士兵，会获得杀敌积分。<br/>4. 自己士兵死亡，自己士兵受伤，会获得损兵积分。<br/>5. 达到对应积分数值可领取任务奖励。<br/>6. 活动结束后的展示期内，<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">仍可领取</font>复活但没有领取的士兵，展示期内畅战医院中的士兵会继续进行复活，但后续死亡的士兵不再进入畅战医院。<br/>7.活动结束后的展示期内，任务奖励不可领取，请及时领取奖励。<br/>8.如果活动完全结束，即展示期结束，畅战医院内仍有复活中、没有领取的士兵，会全部通过<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">邮件发放</font>。<br/>9.默认进入激情畅战医院的士兵采取平均恢复所有部队的形式进行士兵的复活，可选择主力兵种进行优先恢复。<br/>10.平均恢复所有部队:所有种类的士兵依次恢复。<br/>11.优先恢复兵种:先恢复选定兵种，选定兵种恢复完成后以平均恢复所有部队形式恢复剩余士兵。<br/>12.优先恢复泰能兵种，再根据士兵等级从高到底恢复。<br/>13.使用加速时，也会优先恢复选择兵种。</font>]],
+		priority = 10900,
+		icon = [[Activity_Icon_378_Nor.png]],
+		selecticon = [[Activity_Icon_378_Sel.png]],
+		redPointShowOdd = 10000,
+		generalSpeedItems = [[810000,810001,810002,100010,100020,100030,100040,100050,100060,100070,810010,810011,810019,104010,104020,104030,104040,104041,104050,104060,104070]],
+	},
+	hot_blood_war_achieve = [[achieveId	conditionValue	rewards	title	type
+1	2	2	2	1
+37810001	300000	30000_1782116_10,30000_810000_250,30000_810010_250,30000_810012_250,30000_500201_250	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">杀敌积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	1
+37810002	600000	30000_1782116_20,30000_810000_500,30000_810010_500,30000_810012_500,30000_500201_500	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">杀敌积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	1
+37810003	900000	30000_1782116_30,30000_810000_750,30000_810010_750,30000_810012_750,30000_500201_750	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">杀敌积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	1
+37810004	1200000	30000_1782116_40,30000_810000_1000,30000_810010_1000,30000_810012_1000,30000_500201_1000	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">杀敌积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	1
+37810005	1500000	30000_1782116_50,30000_810000_1250,30000_810010_1250,30000_810012_1250,30000_500201_1250	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">杀敌积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	1
+37810006	60000	30000_1782116_4,30000_810000_100,30000_810010_100,30000_810012_100,30000_500201_100	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">损兵积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	2
+37810007	120000	30000_1782116_8,30000_810000_200,30000_810010_200,30000_810012_200,30000_500201_200	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">损兵积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	2
+37810008	180000	30000_1782116_12,30000_810000_300,30000_810010_300,30000_810012_300,30000_500201_300	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">损兵积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	2
+37810009	240000	30000_1782116_16,30000_810000_400,30000_810010_400,30000_810012_400,30000_500201_400	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">损兵积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	2
+37810010	300000	30000_1782116_20,30000_810000_500,30000_810010_500,30000_810012_500,30000_500201_500	<font color="#ffffff" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">损兵积分达到<font color="#f5d99d" face = "Font/HiraginoSansGB-W6.ttf" fontsize ="18">{0}</font></font>	2
+]],
+	hot_blood_war_point = [[id	target	point	desc	addPointSoldierID
+1	1	1	2	2
+3780001	1000	15	Act378_point1001	100101,100301,100501,100701
+3780002	1000	30	Act378_point1002	100201,100401,100601,100801
+3780003	1000	60	Act378_point1003	100102,100302,100502,100702
+3780004	1000	120	Act378_point1004	100202,100402,100602,100802
+3780005	1000	200	Act378_point1005	100103,100303,100503,100703
+3780006	1000	320	Act378_point1006	100203,100403,100603,100803
+3780007	1000	500	Act378_point1007	100104,100304,100504,100704
+3780008	1000	750	Act378_point1008	100204,100404,100604,100804
+3780009	1000	1050	Act378_point1009	100105,100305,100505,100705
+3780010	1000	1450	Act378_point1010	100205,100405,100605,100805
+3780011	1000	1950	Act378_point1011	100106,100306,100506,100706
+3780012	1000	2500	Act378_point1012	100206,100406,100606,100806
+3780013	1000	3000	Act378_point1013	100107,100307,100507,100707,100207,100407,100607,100807
+3780014	1000	15	Act378_point2001	100101,100301,100501,100701
+3780015	1000	30	Act378_point2002	100201,100401,100601,100801
+3780016	1000	60	Act378_point2003	100102,100302,100502,100702
+3780017	1000	120	Act378_point2004	100202,100402,100602,100802
+3780018	1000	200	Act378_point2005	100103,100303,100503,100703
+3780019	1000	320	Act378_point2006	100203,100403,100603,100803
+3780020	1000	500	Act378_point2007	100104,100304,100504,100704
+3780021	1000	750	Act378_point2008	100204,100404,100604,100804
+3780022	1000	1050	Act378_point2009	100105,100305,100505,100705
+3780023	1000	1450	Act378_point2010	100205,100405,100605,100805
+3780024	1000	1950	Act378_point2011	100106,100306,100506,100706
+3780025	1000	2500	Act378_point2012	100206,100406,100606,100806
+3780026	1000	3000	Act378_point2013	100107,100307,100507,100707,100207,100407,100607,100807
+]],
+
+}

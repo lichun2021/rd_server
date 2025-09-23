@@ -2,10 +2,10 @@
 serverDelay = 2592000
 
 # 最小大本等级可见
-buildMinLevel = 3
+buildMinLevel = 35
 
 # 转换消耗
-exchangeCost = 10000_1000_6480
+exchangeCost = 10000_1000_1980
 
 # 活动期间总共转换次数
 exchangeTotalTime = 6
@@ -14,8 +14,11 @@ exchangeTotalTime = 6
 exchangeCD = 7200
 
 # 触发-流失天数
-triggerLossDays = 1
-# 活动持续时间
-continueDays = 1
+triggerLossDays = 30
+
+# 活动持续天数
+continueDays = 3
+
 # 活动触发间隔时间
-intervalDays = 1
+intervalDays = 30
+
