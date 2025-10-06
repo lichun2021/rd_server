@@ -8,6 +8,8 @@ if errorlevel 1 goto error
 call gradle :GameServer:jar
 if errorlevel 1 goto error
 
+copy /Y GameServer\build\libs\gameserver.jar Publish\gameserver.jar
+
 echo =====================================
 echo ===== GameServer build success ======
 echo =====================================

@@ -1,2 +1,4 @@
 /.gradle
 /GameActivity/build
+/GameServer/build
+/Publish

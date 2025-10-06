@@ -239,7 +239,7 @@
       <data activityId="301" activityName="七夕相会" activityType="301" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" />
       <data activityId="302" activityName="天降鸿福" activityType="302" timeType="3" isOpen="1" entranceType="16" hasBillBoard="0" />
       <data activityId="305" activityName="加速兑换" activityType="305" timeType="3" isOpen="1" entranceType="1" hasBillBoard="0" />
-      <data activityId="304" activityName="英雄祈福" activityType="304" timeType="3" isOpen="1" entranceType="1003" hasBillBoard="0" />
+      <data activityId="304" activityName="英雄祈福" activityType="304" timeType="3" isOpen="0" entranceType="1003" hasBillBoard="0" />
       <data activityId="303" activityName="感恩福利" activityType="303" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
       <data activityId="306" activityName="四周年入口" activityType="306" timeType="3" isOpen="1" entranceType="13" hasBillBoard="0" />
       <data activityId="308" activityName="荣耀同享" activityType="308" timeType="3" isOpen="1" entranceType="1001" hasBillBoard="0" />

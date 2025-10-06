@@ -308,11 +308,11 @@ public class PlayerRechargeModule extends PlayerModule {
 		PayCfg payCfg = HawkConfigManager.getInstance().getConfigByKey(PayCfg.class, goodsId);
 
 		// win32直接充值成功
-		// if (GameUtil.isWin32Platform(player)) {
-		// 	win32DirectRecharge(payCfg, rechargeId, rechargeInfo);
-		// 	player.responseSuccess(protocol.getType());
-		// 	return true;
-		// } 
+		if (GameUtil.isWin32Platform(player)) {
+			win32DirectRecharge(payCfg, rechargeId, rechargeInfo);
+			player.responseSuccess(protocol.getType());
+			return true;
+		} 
 		
 		try {
 			// 明显失败的订单信息 
@@ -440,9 +440,9 @@ public class PlayerRechargeModule extends PlayerModule {
 	 * @return
 	 */
 	private boolean buyItem(PayGiftCfg payGiftCfg, int protocol) {
-		// if (!GameUtil.isWin32Platform(player)) {
-		// 	return buyItemRequest(payGiftCfg, protocol);
-		// }
+		if (!GameUtil.isWin32Platform(player)) {
+			return buyItemRequest(payGiftCfg, protocol);
+		}
 
 		String currency = GameUtil.getPriceType(player.getChannel()).name();
 		String billno = HawkOSOperator.randomUUID();
