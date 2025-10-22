@@ -288,7 +288,11 @@ public class PlayerIdleModule extends PlayerModule {
 		String pfToken = req.getPfToken();
 		try {
 			String oldAccessToken = player.getAccessToken();
-			JSONObject pfInfoJson = JSONObject.parseObject(pfToken);
+			JSONObject pfInfoJson = LoginUtil.safeParsePfToken(pfToken);
+			if (pfInfoJson == null) {
+				HawkLog.errPrintln("pfTokenUpdate pfToken invalid json, playerId: {}", player.getId());
+				return true;
+			}
 			
 			// 避免token盗用
 			String openid = (String) pfInfoJson.get("open_id");

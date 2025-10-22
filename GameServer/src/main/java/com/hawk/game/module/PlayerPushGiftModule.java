@@ -207,8 +207,11 @@ public class PlayerPushGiftModule extends PlayerModule {
 		
 		removeIds.stream().forEach(id->entity.removeGiftIdTime(id));
 		this.reset();
+
 		return true;
 	}
+
+
 
 	/**
 	 * pve战败触发

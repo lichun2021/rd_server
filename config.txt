@@ -15,3 +15,9 @@
 "PORT": "88"
 }
 }
+
+
+
+用 app.bitly.com 设置短链
+
+https://app.bitly.com/Bpa7bzLd2nF/links/bit.ly/3KEt6VB/details

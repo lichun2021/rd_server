@@ -5,7 +5,7 @@ return {
 		name = [[新服启航]],
 		title = [[活动详情]],
 		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动持续十一天，每个阶段会有不同的状态加成<br/>2. 每个阶段开启后，可领取一份奖励，阶段结束且奖励没有领取则不会进行补发</font>]],
-		priority = 40000,
+		priority = 20041,
 		icon = [[Activity_Icon_323_Nor.png]],
 		selecticon = [[Activity_Icon_323_Sel.png]],
 		bigIcon = [[Activity_BattlefieldWelfare_u_Rendered.png]],

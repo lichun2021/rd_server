@@ -2,6 +2,7 @@ package com.hawk.game.config;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.Optional;
 import org.hawk.config.HawkConfigBase;
 import org.hawk.config.HawkConfigManager;
 import org.hawk.helper.HawkAssert;
+import org.hawk.log.HawkLog;
 import org.hawk.os.HawkOSOperator;
 import org.hawk.os.HawkTime;
 
@@ -177,9 +179,11 @@ public class GiftGroupCfg extends HawkConfigBase {
 		this.isRemove = 0;
 	}
 	
-	public boolean checkUnlockConValue(Player player){
-		return checkUnlockConValue(player, unlockConValueList, unlockConType) && checkUnlockConValue(player, unlockConValueList2, unlockConType2);
-	}
+    public boolean checkUnlockConValue(Player player){
+        boolean first = checkUnlockConValue(player, unlockConValueList, unlockConType);
+        boolean second = checkUnlockConValue(player, unlockConValueList2, unlockConType2);
+        return first && second;
+    }
 	
 	private static boolean checkUnlockConValue(Player player ,List<int[]> unlockConValueList , int unlockConType){
 		long curTime = HawkTime.getMillisecond();
@@ -324,6 +328,7 @@ public class GiftGroupCfg extends HawkConfigBase {
 				rlt = true;
 				break;
 			}
+            // 移除逐条件打印，避免日志过量
 			
 			//逻辑与的情况下,非真即中断  逻辑或的情况,真即中断。
 			if (unlockConType == GsConst.GiftConst.LOGIC_AND && !rlt ||

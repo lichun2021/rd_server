@@ -2,7 +2,7 @@ return {
 	prop =
 	{
 		activityId = 338,
-		name = [[步步高升]],
+		name = [[勇者试炼]],
 		tips = [[<font color="#99a5b6" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">1.活动期间，逐天开放各类任务，完成每日的当前任务可获得任务奖励，并解锁对应天数的赏金礼包。<br/>2.部分赏金礼包可免费领取，部分赏金礼包需要付费购买。<br/>3.赏金礼包逐天开放，对于同一天开放的赏金礼包<font color="#f5d99d" face = "Font/HiraginoSansGB-W3.ttf" fontsize ="18">只有领取或购买前一档位的赏金礼包后，才可领取或购买下一档位的赏金礼包</font>。</font>]],
 		priority = 10000,
 		icon = [[Activity_Icon_338_Nor.png]],

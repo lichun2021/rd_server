@@ -762,7 +762,8 @@ public class PlayerLoginModule extends PlayerModule {
 		
 		boolean isWin32 = GameUtil.isWin32Platform(loginCmd.getPlatform(), loginCmd.getChannel()); 
 		if (!isWin32 && player.getPfTokenJson() == null && !HawkOSOperator.isEmptyString(loginCmd.getPfToken())) {
-			JSONObject pfInfoJson = JSONObject.parseObject(loginCmd.getPfToken());
+			JSONObject pfInfoJson = LoginUtil.safeParsePfToken(loginCmd.getPfToken());
+			if (pfInfoJson != null) {
 			player.setPfTokenJson(pfInfoJson);
 			try {
 				String channelId = player.getChannelId();
@@ -773,6 +774,7 @@ public class PlayerLoginModule extends PlayerModule {
 				HawkException.catchException(e);
 			}
 			HawkLog.logPrintln("onPlayerDataLoadSuccess set pftoken, playerId: {}", player.getId());
+			}
 		}
 		
 		// 记录平台信息

@@ -48,4 +48,6 @@
       <data termId="46" showTime="2025-5-19 00:00:00" startTime="2025-5-19 00:00:00" endTime="2025-6-15 23:59:59" hiddenTime="2025-6-15 23:59:59" />
       <data termId="47" showTime="2025-6-23 00:00:00" startTime="2025-6-23 00:00:00" endTime="2025-7-20 23:59:59" hiddenTime="2025-7-20 23:59:59" />
       <data termId="48" showTime="2025-7-28 00:00:00" startTime="2025-7-28 00:00:00" endTime="2025-8-24 23:59:59" hiddenTime="2025-8-24 23:59:59" />
+      <data termId="49" showTime="2025-09-01 00:00:00" startTime="2025-09-01 00:00:00" endTime="2025-09-28 23:59:59" hiddenTime="2025-09-28 23:59:59" />
+      <data termId="50" showTime="2025-10-06 00:00:00" startTime="2025-10-06 00:00:00" endTime="2025-11-02 23:59:59" hiddenTime="2025-11-02 23:59:59" />
 </root>

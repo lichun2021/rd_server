@@ -11,7 +11,7 @@ return {
 		icon = [[Activity_Icon_142_Nor.png]],
 		selecticon = [[Activity_Icon_142_Sel.png]],
 		bigIcon = [[DiamondsIcon_02.png]],
-		advanceReward = [[30000_800000_30,30000_1300017_100,30000_840194_200,30000_810001_2,30000_1780050_10]],
+		advanceReward = [[30000_800000_30,30000_1300017_100,30000_840194_200,30000_810001_5,30000_1780050_20]],
 		iosAdvance = 142001,
 		androidAdvance = 142002,
 		discountPrice = 600,

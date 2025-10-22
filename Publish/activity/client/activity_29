@@ -4,12 +4,11 @@ return {
 		activityId = 29,
 		name = [[英雄军团]],
 		title = [[活动详情]],
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官拥有并分享的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">英雄</font>达到指定条件即可领取对应奖励。<br/>2. 奖励需在活动结束前<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">手动领取</font>。<br/>3. 请返回活动页面查看奖励详情与活动周期。<br/>4. 活动结束时未领取的奖励视为放弃。</font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 指挥官拥有并分享的<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">英雄</font>达到指定条件即可领取对应奖励。<br/>2. 奖励需在活动结束前<font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">手动领取</font>。<br/>3. 请返回活动页面查看奖励详情与活动周期。</font>]],
 		priority = 11050,
 		icon = [[Activity_Icon_23_Nor.png]],
 		selecticon = [[Activity_Icon_23_Sel.png]],
 		bigIcon = [[Activity_HeroCollection_u_Rendered.png]],
-		resetTime = 3888000,
 	},
 	hero_achieve = [[achieveId	conditionType	conditionValue	rewards
 1	1	1	2

@@ -155,6 +155,22 @@ public class GsConfig extends HawkAppCfg {
 	 */
 	protected final boolean secTlogPrintEnable;
 	/**
+	 * 协议体完整日志打印开关
+	 */
+	protected final boolean protocolBodyLogEnable;
+	/**
+	 * 入站协议体打印开关
+	 */
+	protected final boolean protocolBodyLogInbound;
+	/**
+	 * 出站协议体打印开关
+	 */
+	protected final boolean protocolBodyLogOutbound;
+	/**
+	 * 协议体日志最大字节数
+	 */
+	protected final int protocolLogMaxBytes;
+	/**
 	 * 积分上报开关
 	 */
 	protected final boolean scoreBatchEnable;
@@ -510,6 +526,10 @@ public class GsConfig extends HawkAppCfg {
 		buyItemOrderExpire = 60;
 		playerRedisExpire = 2592000;
 		secTlogPrintEnable = false;
+		protocolBodyLogEnable = false;
+		protocolBodyLogInbound = true;
+		protocolBodyLogOutbound = true;
+		protocolLogMaxBytes = 65536;
 		scoreBatchEnable = false;
 		preparePlayerData = true;
 		asyncInitData = true;
@@ -592,6 +612,22 @@ public class GsConfig extends HawkAppCfg {
 
 	public boolean isSecTlogPrintEnable() {
 		return secTlogPrintEnable;
+	}
+
+	public boolean isProtocolBodyLogEnable() {
+		return protocolBodyLogEnable;
+	}
+
+	public boolean isProtocolBodyLogInbound() {
+		return protocolBodyLogInbound;
+	}
+
+	public boolean isProtocolBodyLogOutbound() {
+		return protocolBodyLogOutbound;
+	}
+
+	public int getProtocolLogMaxBytes() {
+		return protocolLogMaxBytes;
 	}
 
 	public int getPlayerRedisExpire() {

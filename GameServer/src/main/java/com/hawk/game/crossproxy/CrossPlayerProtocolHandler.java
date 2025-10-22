@@ -416,8 +416,10 @@ public class CrossPlayerProtocolHandler {
 	private void handlePfToken(Player player, HPLogin cmd) {
 		// 设置平台的token信息
 		if (!GameUtil.isWin32Platform(cmd.getPlatform(), cmd.getChannel())) {
-			JSONObject pfInfoJson = JSONObject.parseObject(cmd.getPfToken());
-			player.setPfTokenJson(pfInfoJson);
+			JSONObject pfInfoJson = LoginUtil.safeParsePfToken(cmd.getPfToken());
+			if (pfInfoJson != null) {
+				player.setPfTokenJson(pfInfoJson);
+			}
 		}
 	}
 

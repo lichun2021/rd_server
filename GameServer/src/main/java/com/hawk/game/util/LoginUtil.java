@@ -66,6 +66,27 @@ public class LoginUtil {
 	private static Set<String> createFailedOpenIds = new ConcurrentHashSet<String>();
 	
 	/**
+	 * 安全解析pfToken为JSONObject，允许清理前后噪声并在失败时返回null。
+	 */
+	public static JSONObject safeParsePfToken(String pfToken) {
+		if (HawkOSOperator.isEmptyString(pfToken)) {
+			return null;
+		}
+		try {
+			String trimmed = pfToken.trim();
+			int start = trimmed.indexOf('{');
+			int end = trimmed.lastIndexOf('}');
+			if (start >= 0 && end > start) {
+				String jsonSlice = trimmed.substring(start, end + 1);
+				return JSONObject.parseObject(jsonSlice);
+			}
+		} catch (Exception e) {
+			HawkException.catchException(e);
+		}
+		return null;
+	}
+	
+	/**
 	 * 校验服务器和puid信息
 	 * 
 	 * @param cmd
@@ -112,13 +133,17 @@ public class LoginUtil {
 			
 			// 缓存信息中不存在的时候, 通过msdk接口重新拉取
 			if (HawkOSOperator.isEmptyString(puidProfile) && !HawkOSOperator.isEmptyString(pfToken) && !GsConfig.getInstance().isRobotMode() && !puid.startsWith("robot")) {
-				JSONObject pfInfoJson = JSONObject.parseObject(pfToken);
+				JSONObject pfInfoJson = safeParsePfToken(pfToken);
+				if (pfInfoJson == null) {
+					HawkLog.errPrintln("pfToken json invalid, openid: {}, puid: {}", openid, puid);
+				} else {
 				Map<String, String> params = new HashMap<String, String>();
 				params.put("channel", channel);
 				JSONObject json = SDKManager.getInstance().fetchProfile(SDKConst.SDKType.MSDK, params, pfInfoJson, session.getAddress());
 				if (json != null) {
 					puidProfile = json.toJSONString();
 					profileReload = true;
+				}
 				}
 			}
 
@@ -283,7 +308,11 @@ public class LoginUtil {
 				// 设置平台的token信息
 				if (!GameUtil.isWin32Platform(cmd.getPlatform(), cmd.getChannel())) {
 					if (!HawkOSOperator.isEmptyString(cmd.getPfToken())) {
-						JSONObject pfInfoJson = JSONObject.parseObject(cmd.getPfToken());
+						JSONObject pfInfoJson = safeParsePfToken(cmd.getPfToken());
+						if (pfInfoJson == null) {
+							HawkLog.errPrintln("player login pftoken invalid json, playerId: {}", cmd.getPlayerId());
+							return false;
+						}
 						
 						// 避免token盗用
 						try {
@@ -491,7 +520,11 @@ public class LoginUtil {
 
 		// gameserver进行严格鉴权
 		try {
-			JSONObject pfInfoJson = JSONObject.parseObject(cmd.getPfToken());
+			JSONObject pfInfoJson = safeParsePfToken(cmd.getPfToken());
+			if (pfInfoJson == null) {
+				HawkLog.errPrintln("platformAuthCheck pfToken invalid json, puid: {}, channel: {}", cmd.getPuid(), cmd.getChannel());
+				return false;
+			}
 			Map<String, String> params = new HashMap<String, String>();
 			params.put("channel", cmd.getChannel());
 			JSONObject json = SDKManager.getInstance().verifyLogin(params, pfInfoJson, session.getAddress());

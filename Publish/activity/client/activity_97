@@ -9,7 +9,7 @@ return {
 		icon = [[Activity_Icon_97_Nor.png]],
 		selecticon = [[Activity_Icon_97_Sel.png]],
 		bigIcon = [[V3Activity_u_Consumption_Rendered.png]],
-		serverDelay = 1728000,
+		serverDelay = 172800,
 	},
 	redPacket_achieve = [[stageID	title	shotTitle	rewardsID	num	broadcastItemID	showTime	startTime	endTime	day
 1	2	2	2	2	2	2	2	2	1

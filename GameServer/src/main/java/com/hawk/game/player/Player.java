@@ -360,6 +360,7 @@ public class Player extends HawkAppObj {
 	 * 协议日志记录器
 	 */
 	public static final Logger logger = LoggerFactory.getLogger("Server");
+	public static final Logger protocolLogger = LoggerFactory.getLogger("Protocol");
 
 	/** 虎牢关战场id */
 	private String lmjyRoomId;
@@ -1725,24 +1726,43 @@ public class Player extends HawkAppObj {
 	 *
 	 * @param protocol
 	 */
-	@Override
-	public boolean sendProtocol(HawkProtocol protocol, long delayTime) {
-		if (GsConfig.getInstance().isProtocolSecure()) {
-			int needCompressLimit = GsConfig.getInstance().getProtocolCompressSize();
-			int beforeSize = protocol.getSize();
-			if (needCompressLimit > 0 && protocol.getSize() >= needCompressLimit && !this.isCsPlayer()) {
-				if (protocol.getReserve() == 0) {
-					protocol = ProtoUtil.compressProtocol(protocol);
-				}
-			}
-			// 处理之后是否还超过大小
-			if (needCompressLimit > 0 && protocol.getSize() >= needCompressLimit) {
-				HawkLog.logPrintln("send protocol size overflow, protocol: {}, beforeSize: {}, afterSize: {}", protocol.getType(), beforeSize, protocol.getSize());
-			}
-		}
+    @Override
+    public boolean sendProtocol(HawkProtocol protocol, long delayTime) {
+        // 先进行可能的压缩，再决定日志打印（保证 reserve 与数据一致）
+        if (GsConfig.getInstance().isProtocolSecure()) {
+            int needCompressLimit = GsConfig.getInstance().getProtocolCompressSize();
+            int beforeSize = protocol.getSize();
+            if (needCompressLimit > 0 && protocol.getSize() >= needCompressLimit && !this.isCsPlayer()) {
+                if (protocol.getReserve() == 0) {
+                    protocol = ProtoUtil.compressProtocol(protocol);
+                }
+            }
+            // 处理之后是否还超过大小
+            if (needCompressLimit > 0 && protocol.getSize() >= needCompressLimit) {
+                HawkLog.logPrintln("send protocol size overflow, protocol: {}, beforeSize: {}, afterSize: {}", protocol.getType(), beforeSize, protocol.getSize());
+            }
+        }
 
-		return super.sendProtocol(protocol, delayTime);
-	}
+        // 协议体S2C完整打印（按cfg控制）- 放到压缩逻辑之后
+        try {
+            GsConfig cfg = GsConfig.getInstance();
+            if (cfg != null && cfg.isProtocolBodyLogEnable() && cfg.isProtocolBodyLogOutbound()) {
+                int type = protocol.getType();
+                String name = ProtoUtil.getProtocolName(type);
+                int maxBytes = cfg.getProtocolLogMaxBytes();
+                String decoded = ProtoUtil.tryDecodeProtocol(type, ProtoUtil.preferInflated(protocol.getReserve(), protocol.getData()));
+                if (decoded != null) {
+                    protocolLogger.info("S2C | pid={} | ip={} | code={}({}) | size={} | body={}", getId(), getClientIp(), type, name, protocol.getSize(), decoded);
+                } else {
+                    protocolLogger.info("S2C | pid={} | ip={} | code={}({}) | size={} | body=UNREGISTERED", getId(), getClientIp(), type, name, protocol.getSize());
+                }
+            }
+        } catch (Exception e) {
+            HawkException.catchException(e);
+        }
+
+        return super.sendProtocol(protocol, delayTime);
+    }
 
 	/**
 	 * 通用的操作成功回复协议
@@ -1965,6 +1985,24 @@ public class Player extends HawkAppObj {
 	 */
 	@Override
 	public boolean onProtocol(HawkProtocol protocol) {
+		// 协议体C2S完整打印（按cfg控制）
+		try {
+			GsConfig cfg = GsConfig.getInstance();
+			if (cfg != null && cfg.isProtocolBodyLogEnable() && cfg.isProtocolBodyLogInbound()) {
+				int type = protocol.getType();
+				String name = ProtoUtil.getProtocolName(type);
+				int maxBytes = cfg.getProtocolLogMaxBytes();
+				String decoded = ProtoUtil.tryDecodeProtocol(type, ProtoUtil.preferInflated(protocol.getReserve(), protocol.getData()));
+				if (decoded != null) {
+					protocolLogger.info("C2S | pid={} | ip={} | code={}({}) | size={} | body={}", getId(), getClientIp(), type, name, protocol.getSize(), decoded);
+				} else {
+					protocolLogger.info("C2S | pid={} | ip={} | code={}({}) | size={} | body=UNREGISTERED", getId(), getClientIp(), type, name, protocol.getSize());
+				}
+			}
+		} catch (Exception e) {
+			HawkException.catchException(e);
+		}
+
 		if (!checkBeforeOnProtocol(protocol)) {
 			return false;
 		}

@@ -78,4 +78,8 @@
       <data termId="76" showTime="2025-07-31 00:00:00" startTime="2025-07-31 00:00:00" endTime="2025-08-07 23:59:59" hiddenTime="2025-08-07 23:59:59" />
       <data termId="77" showTime="2025-8-16 00:00:00" startTime="2025-8-16 00:00:00" endTime="2025-8-23 23:59:59" hiddenTime="2025-8-23 23:59:59" />
       <data termId="78" showTime="2025-8-31 00:00:00" startTime="2025-8-31 00:00:00" endTime="2025-9-7 23:59:59" hiddenTime="2025-9-7 23:59:59" />
+      <data termId="79" showTime="2025-09-16 00:00:00" startTime="2025-09-16 00:00:00" endTime="2025-09-23 23:59:59" hiddenTime="2025-09-23 23:59:59" />
+      <data termId="80" showTime="2025-09-30 00:00:00" startTime="2025-09-30 00:00:00" endTime="2025-10-07 23:59:59" hiddenTime="2025-10-07 23:59:59" />
+      <data termId="81" showTime="2025-10-16 00:00:00" startTime="2025-10-16 00:00:00" endTime="2025-10-23 23:59:59" hiddenTime="2025-10-23 23:59:59" />
+      <data termId="82" showTime="2025-10-31 00:00:00" startTime="2025-10-31 00:00:00" endTime="2025-11-07 23:59:59" hiddenTime="2025-11-07 23:59:59" />
 </root>

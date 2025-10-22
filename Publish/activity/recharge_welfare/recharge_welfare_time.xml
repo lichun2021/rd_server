@@ -203,4 +203,15 @@
       <data termId="201" showTime="2025-8-25 00:00:00" startTime="2025-8-25 00:00:00" endTime="2025-8-28 23:59:59" hiddenTime="2025-8-28 23:59:59" />
       <data termId="202" showTime="2025-09-01 00:00:00" startTime="2025-09-01 00:00:00" endTime="2025-09-03 23:59:59" hiddenTime="2025-09-03 23:59:59" />
       <data termId="203" showTime="2025-09-07 00:00:00" startTime="2025-09-07 00:00:00" endTime="2025-09-09 23:59:59" hiddenTime="2025-09-09 23:59:59" />
+      <data termId="204" showTime="2025-09-13 00:00:00" startTime="2025-09-13 00:00:00" endTime="2025-09-15 23:59:59" hiddenTime="2025-09-15 23:59:59" />
+      <data termId="205" showTime="2025-09-19 00:00:00" startTime="2025-09-19 00:00:00" endTime="2025-09-21 23:59:59" hiddenTime="2025-09-21 23:59:59" />
+      <data termId="206" showTime="2025-09-25 00:00:00" startTime="2025-09-25 00:00:00" endTime="2025-09-27 23:59:59" hiddenTime="2025-09-27 23:59:59" />
+      <data termId="207" showTime="2025-10-01 00:00:00" startTime="2025-10-01 00:00:00" endTime="2025-10-03 23:59:59" hiddenTime="2025-10-03 23:59:59" />
+      <data termId="208" showTime="2025-10-07 00:00:00" startTime="2025-10-07 00:00:00" endTime="2025-10-09 23:59:59" hiddenTime="2025-10-09 23:59:59" />
+      <data termId="209" showTime="2025-10-13 00:00:00" startTime="2025-10-13 00:00:00" endTime="2025-10-15 23:59:59" hiddenTime="2025-10-15 23:59:59" />
+      <data termId="210" showTime="2025-10-19 00:00:00" startTime="2025-10-19 00:00:00" endTime="2025-10-21 23:59:59" hiddenTime="2025-10-21 23:59:59" />
+      <data termId="211" showTime="2025-10-25 00:00:00" startTime="2025-10-25 00:00:00" endTime="2025-10-28 23:59:59" hiddenTime="2025-10-28 23:59:59" />
+      <data termId="212" showTime="2025-11-01 00:00:00" startTime="2025-11-01 00:00:00" endTime="2025-11-03 23:59:59" hiddenTime="2025-11-03 23:59:59" />
+      <data termId="213" showTime="2025-11-07 00:00:00" startTime="2025-11-07 00:00:00" endTime="2025-11-09 23:59:59" hiddenTime="2025-11-09 23:59:59" />
+      <data termId="214" showTime="2025-11-13 00:00:00" startTime="2025-11-13 00:00:00" endTime="2025-11-15 23:59:59" hiddenTime="2025-11-15 23:59:59" />
 </root>

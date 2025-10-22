@@ -22,4 +22,7 @@
       <data termId="20" showTime="2025-5-1 00:00:00" startTime="2025-5-1 00:00:00" endTime="2025-5-7 23:59:59" hiddenTime="2025-5-7 23:59:59" />
       <data termId="21" showTime="2025-5-30 00:00:00" startTime="2025-5-30 00:00:00" endTime="2025-6-5 23:59:59" hiddenTime="2025-6-5 23:59:59" />
       <data termId="22" showTime="2025-7-18 00:00:00" startTime="2025-7-18 00:00:00" endTime="2025-8-10 23:59:59" hiddenTime="2025-8-10 23:59:59" />
+      <data termId="23" showTime="2025-8-29 00:00:00" startTime="2025-8-29 00:00:00" endTime="2025-9-4 23:59:59" hiddenTime="2025-9-4 23:59:59" />
+      <data termId="24" showTime="2025-9-19 00:00:00" startTime="2025-9-19 00:00:00" endTime="2025-9-25 23:59:59" hiddenTime="2025-9-25 23:59:59" />
+      <data termId="25" showTime="2025-10-17 00:00:00" startTime="2025-10-17 00:00:00" endTime="2025-10-31 23:59:59" hiddenTime="2025-10-31 23:59:59" />
 </root>

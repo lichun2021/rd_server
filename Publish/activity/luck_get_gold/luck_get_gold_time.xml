@@ -36,4 +36,8 @@
       <data termId="34" showTime="2025-07-19 00:00:00" startTime="2025-07-19 00:00:00" endTime="2025-07-21 23:59:59" hiddenTime="2025-07-21 23:59:59" />
       <data termId="35" showTime="2025-8-8 00:00:00" startTime="2025-8-8 00:00:00" endTime="2025-8-10 23:59:59" hiddenTime="2025-8-10 23:59:59" />
       <data termId="36" showTime="2025-8-30 00:00:00" startTime="2025-8-30 00:00:00" endTime="2025-9-1 23:59:59" hiddenTime="2025-9-1 23:59:59" />
+      <data termId="37" showTime="2025-09-15 00:00:00" startTime="2025-09-15 00:00:00" endTime="2025-09-17 23:59:59" hiddenTime="2025-09-17 23:59:59" />
+      <data termId="38" showTime="2025-09-29 00:00:00" startTime="2025-09-29 00:00:00" endTime="2025-10-01 23:59:59" hiddenTime="2025-10-01 23:59:59" />
+      <data termId="39" showTime="2025-10-8 00:00:00" startTime="2025-10-8 00:00:00" endTime="2025-10-10 23:59:59" hiddenTime="2025-10-10 23:59:59" />
+      <data termId="40" showTime="2025-10-29 00:00:00" startTime="2025-10-29 00:00:00" endTime="2025-10-31 23:59:59" hiddenTime="2025-10-31 23:59:59" />
 </root>

@@ -70,4 +70,7 @@
       <data termId="68" showTime="2025-5-1 00:00:00" startTime="2025-5-1 00:00:00" endTime="2025-5-5 23:59:55" hiddenTime="2025-5-5 23:59:55" />
       <data termId="69" showTime="2025-5-30 00:00:00" startTime="2025-5-30 00:00:00" endTime="2025-6-3 23:59:55" hiddenTime="2025-6-3 23:59:55" />
       <data termId="70" showTime="2025-7-18 00:00:00" startTime="2025-7-18 00:00:00" endTime="2025-7-22 23:59:59" hiddenTime="2025-7-22 23:59:59" />
+      <data termId="71" showTime="2025-8-29 00:00:00" startTime="2025-8-29 00:00:00" endTime="2025-9-2 23:59:59" hiddenTime="2025-9-2 23:59:59" />
+      <data termId="72" showTime="2025-9-19 00:00:00" startTime="2025-9-19 00:00:00" endTime="2025-9-23 23:59:59" hiddenTime="2025-9-23 23:59:59" />
+      <data termId="73" showTime="2025-10-17 00:00:00" startTime="2025-10-17 00:00:00" endTime="2025-10-21 23:59:55" hiddenTime="2025-10-21 23:59:55" />
 </root>

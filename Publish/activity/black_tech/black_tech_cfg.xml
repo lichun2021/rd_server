@@ -8,5 +8,5 @@ refresh = 1
 activeTimes = 3
 
 # 服务器开服延时开启活动时间；单位:秒
-serverDelay = 1728000
+serverDelay = 0
 

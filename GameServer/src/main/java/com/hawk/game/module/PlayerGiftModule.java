@@ -219,6 +219,7 @@ public class PlayerGiftModule extends PlayerModule {
 		player.getSuperVipObject().syncSuperVipInfo(true);
 		player.getSuperVipObject().checkMissedSuperVipDailyGift();
 		clearMonthGift();
+
 		return true;
 	}
 	
@@ -933,6 +934,9 @@ public class PlayerGiftModule extends PlayerModule {
 	 */
 	public void syncGiftInfo() {
 		HPSyncGiftInfoResp.Builder resp = createGiftInfoPB(player);
+        try {
+            logger.info("gift sync size, playerId:{}, groupCount:{}", player.getId(), resp.getGiftsOnSellCount());
+        } catch (Exception ignore) {}
 		player.sendProtocol(HawkProtocol.valueOf(HP.code.GIFT_SYNC_S, resp));
 	}
 
@@ -1770,9 +1774,9 @@ public class PlayerGiftModule extends PlayerModule {
 		boolean conditionCheck = cfg.checkUnlockConValue(player);
 		if (conditionCheck && ConstProperty.getInstance().getSecondBuildGiftGroupId() == groupId) {
 			long serverOpenTime = GlobalData.getInstance().getServerOpenTime(player.getServerId());
-			return serverOpenTime > ConstProperty.getInstance().getSecondBuildDefaultOpenTimeLong();
+			boolean pass = serverOpenTime > ConstProperty.getInstance().getSecondBuildDefaultOpenTimeLong();
+			return pass;
 		}
-		
 		return conditionCheck;
 	}
 	
