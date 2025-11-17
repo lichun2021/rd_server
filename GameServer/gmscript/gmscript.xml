@@ -33,6 +33,9 @@
 	<!-- 修改钻石数量-->
 	<item id="changeDiamond"		className="com.hawk.game.gmscript.ChangeDiamondHandler"/>
 	
+	<!-- 修改玩家平台（Android <-> iOS）-->
+	<item id="changePlatform"		className="com.hawk.game.gmscript.ChangePlatformHandler"/>
+	
 	<!-- 超级武器开启关闭服务-->
 	<item id="superweapon"			className="com.hawk.game.gmscript.SuperWeaponSwitchHandler"/>
 	

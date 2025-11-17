@@ -55,35 +55,35 @@ public class CrossSeasonGM {
 	
 	
 	 public String printInfo(){
-	        //页面信息
+	        // //页面信息
 	        String info = "";
-	        try {
-	            //获取本地InetAddress对象
-	            InetAddress localAddress = InetAddress.getLocalHost();
-	            //获取本地IP地址
-	            String ipAddress = localAddress.getHostAddress();
-	            //获得gm端口
-	            int port = GsConfig.getInstance().getGmPort();
-	            //组装页面信息
+	        // try {
+	        //     //获取本地InetAddress对象
+	        //     InetAddress localAddress = InetAddress.getLocalHost();
+	        //     //获取本地IP地址
+	        //     String ipAddress = localAddress.getHostAddress();
+	        //     //获得gm端口
+	        //     int port = GsConfig.getInstance().getGmPort();
+	        //     //组装页面信息
 	            
-	            CrossSeaonStateData state = CrossActivitySeasonService.getInstance().getCrossSeaonStateData();
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=info\">刷新</a>          &nbsp;&nbsp; ";
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=score\">查看积分</a>        &nbsp;&nbsp;    ";
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=doMatchTest\">匹配测试</a>       &nbsp;&nbsp;    ";
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=clearData\">清除数据(所有)</a>        &nbsp;&nbsp;  |&nbsp;  ";
+	        //     CrossSeaonStateData state = CrossActivitySeasonService.getInstance().getCrossSeaonStateData();
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=info\">刷新</a>          &nbsp;&nbsp; ";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=score\">查看积分</a>        &nbsp;&nbsp;    ";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=doMatchTest\">匹配测试</a>       &nbsp;&nbsp;    ";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=clearData\">清除数据(所有)</a>        &nbsp;&nbsp;  |&nbsp;  ";
 	            
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceOpen\">强制开启跨服</a>       &nbsp;&nbsp;   ";
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceLoad\">强制开启加载</a>       &nbsp;&nbsp;   ";
-	            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceCLear\">强制开启清除</a>       &nbsp;&nbsp;   <br>";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceOpen\">强制开启跨服</a>       &nbsp;&nbsp;   ";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceLoad\">强制开启加载</a>       &nbsp;&nbsp;   ";
+	        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CROSSSEASON&cmd=crossForceCLear\">强制开启清除</a>       &nbsp;&nbsp;   <br>";
 	            
-	            info += ("=====================当前赛季状态===================<br>");
-	            info += ("===赛季:"+state.getSeason() + "<br>");
-	            info += ("===状态:"+ state.getState().getStateEnum().name()+ "<br>");
-	            info += ("===================================================<br>");
-	        }catch (Exception e){
-	            HawkException.catchException(e);
-	        }
-	        return info;
+	        //     info += ("=====================当前赛季状态===================<br>");
+	        //     info += ("===赛季:"+state.getSeason() + "<br>");
+	        //     info += ("===状态:"+ state.getState().getStateEnum().name()+ "<br>");
+	        //     info += ("===================================================<br>");
+	        // }catch (Exception e){
+	        //     HawkException.catchException(e);
+	        // }
+	         return info;
 	    }
 	 
 	 public String crossForceCLear(){

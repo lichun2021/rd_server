@@ -36,8 +36,13 @@ public class QueryPartitionRealtimeInfoHandler extends IdipScriptHandler {
 		result.getBody().put("SvrName", IdipUtil.encode(serverInfo.getName()));
 		result.getBody().put("AreaId", Integer.valueOf(serverId));
 		
+		// 总注册数和在线数
 		result.getBody().put("RegisterNum", GlobalData.getInstance().getRegisterCount());
 		result.getBody().put("OnlineNum", GlobalData.getInstance().getOnlineUserCount());
+		
+		// 分平台在线数统计
+		result.getBody().put("IosOnlineNum", GlobalData.getInstance().getIosOnlineCount());
+		result.getBody().put("AndroidOnlineNum", GlobalData.getInstance().getAndroidOnlineCount());
 		
 		return result;
 	}

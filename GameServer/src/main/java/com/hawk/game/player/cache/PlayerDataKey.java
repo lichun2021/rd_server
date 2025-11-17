@@ -443,7 +443,6 @@ public enum PlayerDataKey {
 					lvUpStateEntity.setType(StateType.PLAYER_STATE_VALUE);
 					lvUpStateEntity.setStatusId(PlayerState.REWARD_LEVEL_VALUE);
 					lvUpStateEntity.setVal(1);
-					lvUpStateEntity.setUuid(HawkOSOperator.randomUUID());
 					statusDataEntities.add(lvUpStateEntity);
 					if (!HawkDBManager.getInstance().create(lvUpStateEntity)) {
 						return null;

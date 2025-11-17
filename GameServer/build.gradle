@@ -49,6 +49,7 @@ dependencies {
 }
 
 sourceSets.main.java.srcDirs += 'idipscript'
+sourceSets.main.java.srcDirs += 'gmscript'
 
 jar {
 	manifest {

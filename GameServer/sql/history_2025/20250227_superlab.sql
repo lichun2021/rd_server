@@ -1,1 +1,0 @@
-alter table `laboratory` add column `pageUnlock` int(11) NOT NULL DEFAULT '0';

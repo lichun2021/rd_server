@@ -1,1 +1,0 @@
-ALTER TABLE `activity_card` ADD COLUMN `customLatest` text COLLATE utf8mb4_unicode_ci NOT NULL;

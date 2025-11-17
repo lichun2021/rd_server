@@ -525,7 +525,6 @@ public class PlayerLoginModule extends PlayerModule {
 		StatusDataEntity protectBufEntity = player.getData().getStatusById(EffType.CITY_SHIELD_VALUE);
 		if (protectBufEntity == null) {
 			protectBufEntity = new StatusDataEntity();			
-			protectBufEntity.setUuid(HawkOSOperator.randomUUID());
 			protectBufEntity.setPlayerId(player.getId());
 			protectBufEntity.setType(StateType.BUFF_STATE_VALUE);
 			protectBufEntity.setStatusId(EffType.CITY_SHIELD_VALUE);

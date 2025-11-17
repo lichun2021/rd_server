@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-      <data activityId="6" activityName="基地崛起" activityType="6" timeType="2" isOpen="1" entranceType="2" hasBillBoard="0" cfgVersion="4" />
+      <data activityId="6" activityName="基地崛起" activityType="6" timeType="2" isOpen="1" entranceType="1" hasBillBoard="0" cfgVersion="4" />
       <data activityId="7" activityName="累计登录" activityType="7" timeType="3" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="3" />
       <data activityId="8" activityName="每日签到" activityType="8" timeType="4" isOpen="0" entranceType="2" hasBillBoard="0" />
       <data activityId="10" activityName="八日庆典" activityType="10" timeType="2" isOpen="1" entranceType="15" hasBillBoard="0" cfgVersion="4" />

@@ -1,1 +1,0 @@
-alter table `guild_info` add column `leaderPlatform` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '';

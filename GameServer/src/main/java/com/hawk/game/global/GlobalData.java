@@ -1769,6 +1769,32 @@ public class GlobalData extends HawkTickable {
 	public int getOnlineUserCount() {
 		return activePlayer.size();
 	}
+	
+	/**
+	 * 获取 iOS 在线玩家数量
+	 * 
+	 * @return
+	 */
+	public int getIosOnlineCount() {
+		int total = 0;
+		for (PfOnlineInfo info : onlineInfo.values()) {
+			total += info.getIosOnlineCnt();
+		}
+		return total;
+	}
+	
+	/**
+	 * 获取 Android 在线玩家数量
+	 * 
+	 * @return
+	 */
+	public int getAndroidOnlineCount() {
+		int total = 0;
+		for (PfOnlineInfo info : onlineInfo.values()) {
+			total += info.getAndroidOnlineCnt();
+		}
+		return total;
+	}
 
 	/**
 	 * 获取在线玩家的id列表

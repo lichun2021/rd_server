@@ -1,1 +1,0 @@
-ALTER TABLE `activity_dress_treasure` ADD COLUMN `tips` text COLLATE utf8mb4_unicode_ci NOT NULL;

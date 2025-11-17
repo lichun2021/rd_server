@@ -222,12 +222,12 @@ public class PlayerRechargeModule extends PlayerModule {
 			return false;
 		}
 		
-		// 充值未开启
-		if (!GameUtil.isWin32Platform(player) && !SDKManager.getInstance().isPayOpen()) {
-			sendError(protocol.getType(), Status.SysError.MODULE_CLOSED);
-			logger.error("recharge closed by MSDK, playerId: {}", player.getId());
-			return false;
-		}
+		// // 充值未开启
+		// if (!GameUtil.isWin32Platform(player) && !SDKManager.getInstance().isPayOpen()) {
+		// 	sendError(protocol.getType(), Status.SysError.MODULE_CLOSED);
+		// 	logger.error("recharge closed by MSDK, playerId: {}", player.getId());
+		// 	return false;
+		// }
 		
 		String timestamp = HawkTime.formatTime(HawkApp.getInstance().getCurrentTime(), "yyyyMMddHHmmss");
 		String orderId = String.format("%s_%s", timestamp, HawkOSOperator.randomUUID());
@@ -307,42 +307,48 @@ public class PlayerRechargeModule extends PlayerModule {
 		String rechargeInfo = request.getRechargeInfo();
 		PayCfg payCfg = HawkConfigManager.getInstance().getConfigByKey(PayCfg.class, goodsId);
 
-		// win32直接充值成功
-		if (GameUtil.isWin32Platform(player)) {
-			win32DirectRecharge(payCfg, rechargeId, rechargeInfo);
-			player.responseSuccess(protocol.getType());
-			return true;
-		} 
-		
-		try {
-			// 明显失败的订单信息 
-			JSONObject json = JSONObject.parseObject(rechargeInfo);
-			if (json != null && json.containsKey("resultCode")) {
-				// 2-用户取消; 3-参数错误
-				int resultCode = json.getInteger("resultCode");
-				if (resultCode == 2 || resultCode == 3) {					
-					rechargeFailedResponse(rechargeId, RechargeSuccRespCode.RECHARGE_INVALID_ORDER_VALUE, true);
-					
-					// 记录错误新
-					logger.error("recharge notify discard result code, playerId: {},  rechargeInfo: {}", player.getId(), rechargeInfo);
-					return false;
-				}
-			}
-		} catch (Exception e) {
-			HawkException.catchException(e);
-		}
-		
-		// 日志记录
-		logger.info("recharge notify fetch balance, playerId: {},  rechargeInfo: {}", player.getId(), rechargeInfo);
-		
-		processOrderSet.add(rechargeId);
-		
-		// 拉取余额
-		onPlayerFetchBalanceAction(payCfg, rechargeInfo, rechargeId);
-		
+
+		win32DirectRecharge(payCfg, rechargeId, rechargeInfo);
 		player.responseSuccess(protocol.getType());
 		return true;
 	}
+		
+		// win32直接充值成功
+		// if (GameUtil.isWin32Platform(player)) {
+		// 	win32DirectRecharge(payCfg, rechargeId, rechargeInfo);
+		// 	player.responseSuccess(protocol.getType());
+		// 	return true;
+		// } 
+		
+		// try {
+		// 	// 明显失败的订单信息 
+		// 	JSONObject json = JSONObject.parseObject(rechargeInfo);
+		// 	if (json != null && json.containsKey("resultCode")) {
+		// 		// 2-用户取消; 3-参数错误
+		// 		int resultCode = json.getInteger("resultCode");
+		// 		if (resultCode == 2 || resultCode == 3) {					
+		// 			rechargeFailedResponse(rechargeId, RechargeSuccRespCode.RECHARGE_INVALID_ORDER_VALUE, true);
+					
+		// 			// 记录错误新
+		// 			logger.error("recharge notify discard result code, playerId: {},  rechargeInfo: {}", player.getId(), rechargeInfo);
+		// 			return false;
+		// 		}
+		// 	}
+		// } catch (Exception e) {
+		// 	HawkException.catchException(e);
+		// }
+		
+		// // 日志记录
+		// logger.info("recharge notify fetch balance, playerId: {},  rechargeInfo: {}", player.getId(), rechargeInfo);
+		
+		// processOrderSet.add(rechargeId);
+		
+		// // 拉取余额
+		// onPlayerFetchBalanceAction(payCfg, rechargeInfo, rechargeId);
+		
+		// player.responseSuccess(protocol.getType());
+		// return true;
+	//}
 	
 	/**
 	 * win32充值
@@ -440,9 +446,9 @@ public class PlayerRechargeModule extends PlayerModule {
 	 * @return
 	 */
 	private boolean buyItem(PayGiftCfg payGiftCfg, int protocol) {
-		if (!GameUtil.isWin32Platform(player)) {
-			return buyItemRequest(payGiftCfg, protocol);
-		}
+		// if (!GameUtil.isWin32Platform(player)) {
+		// 	return buyItemRequest(payGiftCfg, protocol);
+		// }
 
 		String currency = GameUtil.getPriceType(player.getChannel()).name();
 		String billno = HawkOSOperator.randomUUID();

@@ -2723,7 +2723,7 @@ givenItemCostEvent = 21070054
 getDressNumLimit = 7
 
 # 一次性获得超过上限道具时，服务器拦截，前端提示
-maxAddItemNum = 250000
+maxAddItemNum = 1000000
 
 # 使用接口cd时间（秒）
 moveCityFixAramCD = 86400

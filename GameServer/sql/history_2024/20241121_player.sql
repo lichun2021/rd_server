@@ -1,1 +1,0 @@
-ALTER TABLE `player` ADD COLUMN `openharmony` text COLLATE utf8mb4_unicode_ci NOT NULL;

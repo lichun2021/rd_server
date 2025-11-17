@@ -4718,11 +4718,17 @@ public class GuildService extends HawkAppObj {
 	 * @param scienceEntity
 	 * @return
 	 */
-	private boolean isScienceEnough(GuildScienceEntity scienceEntity) {
-		GuildScienceLevelCfg cfg = HawkConfigManager.getInstance().getCombineConfig(GuildScienceLevelCfg.class,
-				scienceEntity.getLevel() + 1, scienceEntity.getScienceId());
-		return scienceEntity.getDonate() >= cfg.getFullDonate();
-	}
+    private boolean isScienceEnough(GuildScienceEntity scienceEntity) {
+        GuildScienceLevelCfg cfg = HawkConfigManager.getInstance().getCombineConfig(GuildScienceLevelCfg.class,
+                scienceEntity.getLevel() + 1, scienceEntity.getScienceId());
+        int fullDonate = (cfg != null ? cfg.getFullDonate() : 0);
+        if (fullDonate <= 0) {
+            // 配置异常保护，避免因 fullDonate=0 导致一律判满
+            logger.error("GuildScience fullDonate invalid, scienceId: {}, nextLevel: {}, fullDonate: {}", scienceEntity.getScienceId(), scienceEntity.getLevel() + 1, fullDonate);
+            return false;
+        }
+        return scienceEntity.getDonate() >= fullDonate;
+    }
 
 	/**
 	 * 联盟科技是否满级

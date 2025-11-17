@@ -1,1 +1,0 @@
-alter table `queue` add column `multiply` int(11) NOT NULL DEFAULT '0';

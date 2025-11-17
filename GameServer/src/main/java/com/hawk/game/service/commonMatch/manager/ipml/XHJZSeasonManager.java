@@ -1450,25 +1450,25 @@ public class XHJZSeasonManager extends CMWManagerBase {
     public String printInfo(){
         //页面信息
         String info = "";
-        try {
-            //获取本地InetAddress对象
-            InetAddress localAddress = InetAddress.getLocalHost();
-            //获取本地IP地址
-            String ipAddress = localAddress.getHostAddress();
-            //获得gm端口
-            int port = GsConfig.getInstance().getGmPort();
-            //组装页面信息
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=info\">刷新</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=next\">切阶段</a>          ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=addSeason&add=1\">加赛季</a>          ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=addSeason&add=0\">赛季归0</a>          ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=allOne\">全员进1队</a>          ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=sendFinalMail\">发最终奖励</a>          ";
-            info +="<br><br>";
-            info += stateData.toString() + "<br>";
-        } catch (Exception e) {
-            HawkException.catchException(e);
-        }
+        // try {
+        //     //获取本地InetAddress对象
+        //     InetAddress localAddress = InetAddress.getLocalHost();
+        //     //获取本地IP地址
+        //     String ipAddress = localAddress.getHostAddress();
+        //     //获得gm端口
+        //     int port = GsConfig.getInstance().getGmPort();
+        //     //组装页面信息
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=info\">刷新</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=next\">切阶段</a>          ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=addSeason&add=1\">加赛季</a>          ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=addSeason&add=0\">赛季归0</a>          ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=allOne\">全员进1队</a>          ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=CMWGM&type=XHJZ_SEASON&cmd=sendFinalMail\">发最终奖励</a>          ";
+        //     info +="<br><br>";
+        //     info += stateData.toString() + "<br>";
+        // } catch (Exception e) {
+        //     HawkException.catchException(e);
+        // }
         return info;
     }
 }

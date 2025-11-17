@@ -2098,43 +2098,37 @@ public class XQHXWarService extends HawkAppObj {
     public String printInfo(){
         //页面信息
         String info = "";
-        try {
-            //获取本地InetAddress对象
-            InetAddress localAddress = InetAddress.getLocalHost();
-            //获取本地IP地址
-            String ipAddress = localAddress.getHostAddress();
-            //获得gm端口
-            int port = GsConfig.getInstance().getGmPort();
-            //组装页面信息
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=info\">刷新</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=next\">切阶段</a>          ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=bigNext\">切大阶段</a>         ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=1\">切战场1阶段</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=2\">切战场2阶段</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=3\">切战场3阶段</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=4\">切战场4阶段</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleOver\">结束战斗</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=doTeamRank\">刷新排行榜</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addAllTeam\">战队加满</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=allSignFirst\">所有战队报名时间1</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=allOneSignFirst\">所有1队报名时间1</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=1\">期数加1</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=5\">期数加5</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=10\">期数加10</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=100\">期数加100</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=1000\">期数加1000</a>           ";
-            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=0\">期数清0</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=matchTestInfo\">匹配测试</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=signupInfo\" target=\"_blank\">报名信息</a>           ";
-//            info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=matchInfo\" target=\"_blank\">战场信息</a>           ";
-            info +="<br><br>";
-            info += stateData.toString() + "<br>";
-            for(XQHXWarBattleStateData battleStateData : battleStateDataMap.values()){
-                info += battleStateData.toString() + "<br>";
-            }
-        }catch (Exception e){
-            HawkException.catchException(e);
-        }
+        // try {
+        //     //获取本地InetAddress对象
+        //     InetAddress localAddress = InetAddress.getLocalHost();
+        //     //获取本地IP地址
+        //     String ipAddress = localAddress.getHostAddress();
+        //     //获得gm端口
+        //     int port = GsConfig.getInstance().getGmPort();
+        //     //组装页面信息
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=info\">刷新</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=next\">切阶段</a>          ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=bigNext\">切大阶段</a>         ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=1\">切战场1阶段</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=2\">切战场2阶段</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=3\">切战场3阶段</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleNext&timeIndex=4\">切战场4阶段</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=battleOver\">结束战斗</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=doTeamRank\">刷新排行榜</a>           ";        ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=1\">期数加1</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=5\">期数加5</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=10\">期数加10</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=100\">期数加100</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=1000\">期数加1000</a>           ";
+        //     info +="<a href=\"http://"+ipAddress+":"+port+"/script/whcgm?opt=XQHXGM&cmd=addTermId&add=0\">期数清0</a>           ";
+        //     info +="<br><br>";
+        //     info += stateData.toString() + "<br>";
+        //     for(XQHXWarBattleStateData battleStateData : battleStateDataMap.values()){
+        //         info += battleStateData.toString() + "<br>";
+        //     }
+        // }catch (Exception e){
+        //     HawkException.catchException(e);
+        // }
         return info;
     }
     /**==============================================================================================================**/

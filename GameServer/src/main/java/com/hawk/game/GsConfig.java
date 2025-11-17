@@ -563,8 +563,8 @@ public class GsConfig extends HawkAppCfg {
 		xinyueRoleEncode = true; 
 		reportException2Feishu = false;
 		
-		targetCehuaUrl = "https://open.feishu.cn/open-apis/bot/v2/hook/45ebd8ea-ae33-4a0e-8e65-dc1be1b16773";
-		targetQAUrl = "https://open.feishu.cn/open-apis/bot/v2/hook/bc353d70-5a05-486f-834c-1d688d2ca163";
+		targetCehuaUrl = "";
+		targetQAUrl = "";
 		exceptionFilter = "";
 		specialServer = "50001-trunk服,50002-debug服,50003-milestone服,50009-策划服";
 		ownerIdServers = "ou_06f9ce75ed1ec0b3d5fa61c3870d059d,马洪滨,80001,80004;ou_99a6f25f55fcca3dd0ef8055f52e57d7,裴敏,80027,80026,80025,80013,80010,80003,80038,80039;ou_80becff92e6905cf670ec3143f47bf54,刘嘉文,80022,80023,80046;ou_652820c2e5ce9979feb57f0c9b86b2d5,李梅梅,80037,80036,80033,80032,80051,80050,80049,80048;ou_29e4508459c49d29c8d1be133c2dc6ba,韩金龙,80030,80029,80012,80028,80014,80011";

@@ -1,1 +1,0 @@
-alter table `world_march` add column `mechacoreSuit` int(11) NOT NULL DEFAULT '0';
