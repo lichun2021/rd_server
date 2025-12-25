@@ -5,7 +5,7 @@ import org.hawk.log.HawkLog;
 import org.hawk.net.protocol.HawkProtocol;
 import org.hawk.os.HawkRand;
 import org.hawk.os.HawkTime;
-import org.hawk.robot.HawkRobotApp;
+import com.hawk.robot.GameRobotApp;
 
 import com.hawk.game.protocol.HP;
 import com.hawk.robot.GameRobotEntity;
@@ -41,8 +41,8 @@ public class AssembleFinishResponsor extends RobotResponsor {
 			return;
 		}
 		
-		int onlineDuration = HawkRobotApp.getInstance().getConfig().getInt("robot.onlineDuration");
-		int offset = HawkRobotApp.getInstance().getConfig().getInt("robot.onlineOffset");
+		int onlineDuration = GameRobotApp.getInstance().getConfig().getInt("robot.onlineDuration");
+		int offset = GameRobotApp.getInstance().getConfig().getInt("robot.onlineOffset");
 		onlineDuration += HawkRand.randInt(offset);
 		robotEntity.setOfflineTime(HawkTime.getMillisecond() + onlineDuration * 1000);
 		WorldDataManager.getInstance().addRobot(robotEntity.getPlayerId());

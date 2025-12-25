@@ -256,6 +256,27 @@ public class ConstProperty extends HawkConfigBase {
 	 */
 	private final String outOfTownArea;
 	
+	// effect12701士兵调整
+	protected final String effect12701SoldierAdjust;
+	// effect1547最大值
+	protected final String effect1547Maxinum;
+	// 总领取上限
+	protected final int totalclaimLimt;
+	// effect10056士兵调整
+	protected final String effect10056SoldierAdjust;
+	// effect12083 总数上限
+	protected final int effect12083AllNumLimit;
+	// effect1562 次数上限
+	protected final int effect1562TimesLimit;
+	// effect12561 基础值
+	protected final int effect12561BaseVaule;
+	// effect12013 总数上限
+	protected final int effect12013AllNumLimit;
+	// effect12292 攻击次数
+	protected final int effect12292AtkNum;
+	// effect12511 增加火力点
+	protected final int effect12511AddFirePoint;
+	
 	/**
 	 * 酒馆每日刷新时间，整点时间
 	 */
@@ -735,6 +756,16 @@ public class ConstProperty extends HawkConfigBase {
 		wishingAddValueExpr = "";
 		wishingCostValueExpr = "";
 		outOfTownArea = "";
+		effect12701SoldierAdjust = "";
+		effect1547Maxinum = "";
+		totalclaimLimt = 0;
+		effect10056SoldierAdjust = "";
+		effect12083AllNumLimit = 0;
+		effect1562TimesLimit = 0;
+		effect12561BaseVaule = 0;
+		effect12013AllNumLimit = 0;
+		effect12292AtkNum = 0;
+		effect12511AddFirePoint = 0;
 		wishingCritRate = "";
 		wishingCostResType = 0;
 		tavernRefreshTime = 0;
@@ -1534,6 +1565,46 @@ public class ConstProperty extends HawkConfigBase {
 
 	public String getOutOfTownArea() {
 		return outOfTownArea;
+	}
+	
+	public String getEffect12701SoldierAdjust() {
+		return effect12701SoldierAdjust;
+	}
+	
+	public String getEffect1547Maxinum() {
+		return effect1547Maxinum;
+	}
+	
+	public int getTotalclaimLimt() {
+		return totalclaimLimt;
+	}
+	
+	public String getEffect10056SoldierAdjust() {
+		return effect10056SoldierAdjust;
+	}
+	
+	public int getEffect12083AllnumLimit() {
+		return effect12083AllNumLimit;
+	}
+	
+	public int getEffect1562TimesLimit() {
+		return effect1562TimesLimit;
+	}
+	
+	public int getEffect12561BaseVaule() {
+		return effect12561BaseVaule;
+	}
+	
+	public int getEffect12013AllNumLimit() {
+		return effect12013AllNumLimit;
+	}
+	
+	public int getEffect12292AtkNum() {
+		return effect12292AtkNum;
+	}
+	
+	public int getEffect12511AddFirePoint() {
+		return effect12511AddFirePoint;
 	}
 	
 	public String getBuildAwardBubble() {

@@ -49,6 +49,26 @@ public class BuildLimitCfg extends HawkConfigBase {
 	protected final int cyLv28;
 	protected final int cyLv29;
 	protected final int cyLv30;
+	protected final int cyLv31;
+	protected final int cyLv32;
+	protected final int cyLv33;
+	protected final int cyLv34;
+	protected final int cyLv35;
+	protected final int cyLv36;
+	protected final int cyLv37;
+	protected final int cyLv38;
+	protected final int cyLv39;
+	protected final int cyLv40;
+	protected final int cyLv41;
+	protected final int cyLv42;
+	protected final int cyLv43;
+	protected final int cyLv44;
+	protected final int cyLv45;
+	protected final int cyLv46;
+	protected final int cyLv47;
+	protected final int cyLv48;
+	protected final int cyLv49;
+	protected final int cyLv50;
 
 	// 大本对应等级能建造本建筑的数量
 	protected Map<Integer, Integer> countLimit;
@@ -85,6 +105,26 @@ public class BuildLimitCfg extends HawkConfigBase {
 		cyLv28 = 0;
 		cyLv29 = 0;
 		cyLv30 = 0;
+		cyLv31 = 0;
+		cyLv32 = 0;
+		cyLv33 = 0;
+		cyLv34 = 0;
+		cyLv35 = 0;
+		cyLv36 = 0;
+		cyLv37 = 0;
+		cyLv38 = 0;
+		cyLv39 = 0;
+		cyLv40 = 0;
+		cyLv41 = 0;
+		cyLv42 = 0;
+		cyLv43 = 0;
+		cyLv44 = 0;
+		cyLv45 = 0;
+		cyLv46 = 0;
+		cyLv47 = 0;
+		cyLv48 = 0;
+		cyLv49 = 0;
+		cyLv50 = 0;
 	}
 
 	public int getLimit(int level){
@@ -103,7 +143,7 @@ public class BuildLimitCfg extends HawkConfigBase {
 	@Override
 	protected boolean assemble() {
 		countLimit = new HashMap<Integer, Integer>();
-		for(int lvl = 1; lvl <= 30; lvl++){
+		for(int lvl = 1; lvl <= 50; lvl++){
 			try {
 				Field field = getClass().getDeclaredField("cyLv" + lvl);
 				int count = field.getInt(this);

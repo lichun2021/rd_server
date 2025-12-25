@@ -29,6 +29,8 @@ public class BattleSoldierCfg extends HawkConfigBase {
 	protected final int level;
 	// 占位优先级
 	protected final int posPrior;
+	// 训练权重
+	protected final int weight;
 	// 几回合攻击一次 放大100倍 50/100/200/300
 	protected final int attackRound;
 	// 攻击半径
@@ -65,7 +67,18 @@ public class BattleSoldierCfg extends HawkConfigBase {
 	protected final String skillIds;
 	// 士兵石油消耗
 	protected final int consume;
-   	protected final String promotion;
+	// 进阶链
+	protected final String promotion;
+	// 驻扎兵标识
+	protected final int plantSoldier;
+	// 驻扎兵消耗
+	protected final String plantSoldierRes;
+	// 驻扎兵治疗消耗
+	protected final String plantSoldierHealRes;
+	// 驻扎兵治疗时间
+	protected final int plantSoldierHealTime;
+	// 驻扎兵进阶
+	protected final String advanceArmy;
 	
 	private static List<Integer> soldierIdList = new ArrayList<>();
 	private static Map<Integer, List<Integer>> buildingSoldierIds = new HashMap<Integer, List<Integer>>();
@@ -75,6 +88,7 @@ public class BattleSoldierCfg extends HawkConfigBase {
 		type = 0;
 		level = 0;
 		posPrior = 0;
+		weight = 0;
 		attackRound = 0;
 		attackDis = 0;
 		moveStep = 0;
@@ -94,6 +108,11 @@ public class BattleSoldierCfg extends HawkConfigBase {
 		skillIds = "";
 		consume = 0;
 		promotion = "";
+		plantSoldier = 0;
+		plantSoldierRes = "";
+		plantSoldierHealRes = "";
+		plantSoldierHealTime = 0;
+		advanceArmy = "";
 	}
 
 	public int getId() {
@@ -248,4 +267,27 @@ public class BattleSoldierCfg extends HawkConfigBase {
 		return buildingSoldierIds.keySet().stream().collect(Collectors.toList());
 	}
 	
+	public String getPromotion() {
+		return promotion;
+	}
+	
+	public int getPlantSoldier() {
+		return plantSoldier;
+	}
+	
+	public String getPlantSoldierRes() {
+		return plantSoldierRes;
+	}
+	
+	public String getPlantSoldierHealRes() {
+		return plantSoldierHealRes;
+	}
+	
+	public int getPlantSoldierHealTime() {
+		return plantSoldierHealTime;
+	}
+	
+	public String getAdvanceArmy() {
+		return advanceArmy;
+	}
 }

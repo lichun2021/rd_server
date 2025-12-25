@@ -112,6 +112,16 @@ public class BuildingCfg extends HawkConfigBase {
 	protected final String rebuildRes;
 	// 取消改建返还资源
 	protected final String rebuildCancelReclaim;
+	// 下一阶段
+	protected final String postStage;
+	// 上一阶段
+	protected final String frontStage;
+	// 前置条件
+	protected final String frontCondition;
+	// 荣誉
+	protected final int honor;
+	// 进度
+	protected final int progress;
 	// 作用号值
 	private final String effectID;
 	// 建造时爱因斯坦时光机器
@@ -120,6 +130,10 @@ public class BuildingCfg extends HawkConfigBase {
 	protected final int cityDefence;
 	// 陷阱容量
 	protected final int trapCapacity;
+	// 城墙火力值
+	protected final int wallFireSpeed;
+	// 黑土地城墙火力值
+	protected final int wallFireSpeedOnBlackLand;
 	
 	protected final int dismantleTime;
 	
@@ -196,6 +210,11 @@ public class BuildingCfg extends HawkConfigBase {
 		rebuildTime = 0;
 		rebuildRes = "";
 		rebuildCancelReclaim = "";
+		postStage = "";
+		frontStage = "";
+		frontCondition = "";
+		honor = 0;
+		progress = 0;
 		frontRechargeDiamond = 0;
 		unlockSoldier = "";
 		battlePopulation = 0;
@@ -207,6 +226,8 @@ public class BuildingCfg extends HawkConfigBase {
 		maxPopulation = 0;
 		cityDefence = 0;
 		trapCapacity = 0;
+		wallFireSpeed = 0;
+		wallFireSpeedOnBlackLand = 0;
 		dismantleTime = 0;
 		exp = 0;
 		heroSpace = 0;
@@ -359,6 +380,34 @@ public class BuildingCfg extends HawkConfigBase {
 
 	public String getRebuildCancelReclaim() {
 		return rebuildCancelReclaim;
+	}
+	
+	public String getPostStage() {
+		return postStage;
+	}
+	
+	public String getFrontStage() {
+		return frontStage;
+	}
+	
+	public String getFrontCondition() {
+		return frontCondition;
+	}
+	
+	public int getHonor() {
+		return honor;
+	}
+	
+	public int getProgress() {
+		return progress;
+	}
+	
+	public int getWallFireSpeed() {
+		return wallFireSpeed;
+	}
+	
+	public int getWallFireSpeedOnBlackLand() {
+		return wallFireSpeedOnBlackLand;
 	}
 
 	public int getFrontRechargeDiamond() {

@@ -24,6 +24,8 @@ public class BuildAreaCfg extends HawkConfigBase {
 	protected final int id;
 	// 区域解锁对应的大本等级
 	protected final int unlockrankLevel;
+	// 剧情关卡解锁等级
+	protected final int unlockDramaLevel;
 	// 区域对应的地块
 	protected final String blocks;
 	// 区域对应可放置的类型建筑
@@ -34,6 +36,14 @@ public class BuildAreaCfg extends HawkConfigBase {
 	protected final int difference;
 	// 解锁消耗
 	protected final String unlockConsume;
+	// 解锁需要的战力
+	protected final int unlockPower;
+	// 解锁需要的士兵数量
+	protected final int unlockSoldierNum;
+	// 解锁前置区域
+	protected final int unlockPreArea;
+	// 掉落
+	protected final String ItemDrop;
 	
 	private List<Integer> blockList;
 	
@@ -46,11 +56,16 @@ public class BuildAreaCfg extends HawkConfigBase {
 	public BuildAreaCfg() {
 		id = 0;
 		unlockrankLevel = 1;
+		unlockDramaLevel = 0;
 		blocks = "";
 		buildType = "";
 		click = 0;
 		difference = 0;
 		unlockConsume = "";
+		unlockPower = 0;
+		unlockSoldierNum = 0;
+		unlockPreArea = 0;
+		ItemDrop = "";
 	}
 
 	public int getId() {
@@ -60,6 +75,10 @@ public class BuildAreaCfg extends HawkConfigBase {
 	public int getUnlockCityLevel() {
 		return unlockrankLevel;
 	}
+	
+	public int getUnlockDramaLevel() {
+		return unlockDramaLevel;
+	}
 
 	public String getBlocks() {
 		return blocks;
@@ -67,6 +86,22 @@ public class BuildAreaCfg extends HawkConfigBase {
 
 	public String getBuildType() {
 		return buildType;
+	}
+	
+	public int getUnlockPower() {
+		return unlockPower;
+	}
+	
+	public int getUnlockSoldierNum() {
+		return unlockSoldierNum;
+	}
+	
+	public int getUnlockPreArea() {
+		return unlockPreArea;
+	}
+	
+	public String getItemDrop() {
+		return ItemDrop;
 	}
 	
 	public List<Integer> getBlockList() {

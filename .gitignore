@@ -7,3 +7,6 @@
 /部署
 /Publish
 /GameServer/online
+/QAServer
+/Protocol/Protobuf/Java/build
+/GameRobot/build

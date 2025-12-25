@@ -7,6 +7,7 @@ import org.hawk.annotation.RobotAction;
 import org.hawk.config.HawkConfigManager;
 import org.hawk.config.HawkConfigStorage;
 import org.hawk.log.HawkLog;
+import org.hawk.config.HawkXmlCfg;
 import org.hawk.os.HawkException;
 import org.hawk.os.HawkOSOperator;
 import org.hawk.os.HawkRand;
@@ -142,7 +143,7 @@ public class GameRobotApp extends HawkRobotApp {
 	/**
 	 * 老版检测机制： 不限时注册
 	 */
-	private void onTick() {
+	protected void onTick() {
 		// 在线机器人数量上限
 		final int count = RobotAppConfig.getInstance().getRobotOnlineCnt();
 		// 添加机器人
@@ -431,9 +432,8 @@ public class GameRobotApp extends HawkRobotApp {
 		return false;
 	}
 	
-	@Override
 	public void removeRobot(HawkRobotEntity robotEntity) {
-		super.removeRobot(robotEntity);
+		super.removeRobot(robotEntity.getPuid());
 		// 不是在线玩家，又不是正在登录中的玩家
 		if (!robotEntity.isOnline() && !StatisticHelper.isLoginAccount(robotEntity.getPuid())) {
 			return;
@@ -463,6 +463,27 @@ public class GameRobotApp extends HawkRobotApp {
 	 */
 	public void addAction(HawkRobotAction action) {
 		actions.add(action);
+	}
+
+	/**
+	 * 兼容旧版本调用，返回 xml 配置
+	 */
+	public HawkXmlCfg getConfig() {
+		return getRobotXml();
+	}
+
+	/**
+	 * 兼容旧版本调用，按实体添加机器人
+	 */
+	public void addRobot(HawkRobotEntity robotEntity) {
+		super.addRobot(robotEntity.getPuid(), robotEntity);
+	}
+
+	/**
+	 * 兼容旧版本调用，按 id 获取机器人
+	 */
+	public HawkRobotEntity getRobotEntity(String id) {
+		return getRobot(id);
 	}
 	
 	/**

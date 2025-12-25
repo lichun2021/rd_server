@@ -26,8 +26,8 @@ xcopy /Y ..\GameServer\xml\tmx_block.dat %PROJECT_HOME%\xml\
 xcopy /Y ..\GameServer\xml\build_area.xml %PROJECT_HOME%\xml\
 xcopy /Y ..\GameServer\xml\equipment.xml %PROJECT_HOME%\xml\
 
-rm -rf %PROJECT_HOME%\bin
-rm -rf %PROJECT_HOME%\build
+if exist %PROJECT_HOME%\bin rmdir /s /q %PROJECT_HOME%\bin
+if exist %PROJECT_HOME%\build rmdir /s /q %PROJECT_HOME%\build
 
 call gradle -b %PROJECT_HOME%\build.gradle build
 
