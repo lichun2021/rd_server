@@ -73,6 +73,15 @@ public class TimeLimitBuyActivity extends ActivityBase {
 	private long lastResetGoodsBuyTime = 0L;
 	
 	/**
+	 * 记录最近一次开启状态，用于诊断是否命中时间段/轮次
+	 */
+	private boolean lastOpening = false;
+	private int lastTermId = -1;
+	private int lastTurnId = -1;
+	/** 启动后首次打印标记 */
+	private boolean firstStateLogged = false;
+	
+	/**
 	 * 上一次注水时间
 	 */
 	private long lastWaterFlood = 0L;
@@ -306,6 +315,35 @@ public class TimeLimitBuyActivity extends ActivityBase {
 		resetGoodsBuy();
 		
 		checkNotice();
+		
+		// 诊断：活动开启状态、当前期次与轮次变化时打点
+		int termId = getActivityTermId();
+		int currentTurn = getCurrentTurnId();
+		boolean opening = isOpening(null);
+		if (!firstStateLogged) {
+			long nowMs = HawkTime.getMillisecond();
+			long startMs = getTimeControl().getStartTimeByTermId(termId);
+			long endMs = getTimeControl().getEndTimeByTermId(termId);
+			long serverDelay = TimeLimitBuyKVCfg.getInstance() != null ? TimeLimitBuyKVCfg.getInstance().getServerDelay() : -1;
+			logger.info(
+					"activity timeLimitBuy state (first), opening:{}, termId:{}, currentTurn:{}, nowMs:{}, startMs:{}, endMs:{}, serverDelay:{}",
+					opening, termId, currentTurn, nowMs, startMs, endMs, serverDelay);
+			firstStateLogged = true;
+			lastOpening = opening;
+			lastTermId = termId;
+			lastTurnId = currentTurn;
+		} else if (opening != lastOpening || termId != lastTermId || currentTurn != lastTurnId) {
+			long nowMs = HawkTime.getMillisecond();
+			long startMs = getTimeControl().getStartTimeByTermId(termId);
+			long endMs = getTimeControl().getEndTimeByTermId(termId);
+			long serverDelay = TimeLimitBuyKVCfg.getInstance() != null ? TimeLimitBuyKVCfg.getInstance().getServerDelay() : -1;
+			logger.info(
+					"activity timeLimitBuy state, opening:{}, termId:{}, currentTurn:{}, nowMs:{}, startMs:{}, endMs:{}, serverDelay:{}",
+					opening, termId, currentTurn, nowMs, startMs, endMs, serverDelay);
+			lastOpening = opening;
+			lastTermId = termId;
+			lastTurnId = currentTurn;
+		}
 	}
 	
 	/**

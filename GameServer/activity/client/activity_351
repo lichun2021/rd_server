@@ -2,8 +2,8 @@ return {
 	prop =
 	{
 		activityId = 351,
-		name = [[战术演练]],
-		title = [[战术演练]],
+		name = [[战场演练]],
+		title = [[战场演练]],
 		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">
 1.点击屏幕后，等待一段时间后战舰会自动攻击。<br/>
 2.击中不同的敌人获得不同的积分。<br/>

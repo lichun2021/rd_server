@@ -11,10 +11,10 @@ initTime = 20
 initMinute = 0
 
 # 占领首都到成为国王过度时间(s)
-occupationTime = 72000
+occupationTime = 1800
 
 # 战争时期周期(s)
-warfareTime = 72000
+warfareTime = 7200
 
 # 国王战事件数量上限
 maxEventCount = 20

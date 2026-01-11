@@ -1,0 +1,22 @@
+合服操作检查单（按顺序打勾）
+
+[ ] 1. 停服：执行 `stop_for_merge.sh`（默认 127.0.0.1:8080，需在参与合服的每服上跑），包含：
+       - `http://<webHost>:<webPort>/script/closeForMergeServer`
+       - `http://<webHost>:<webPort>/script/syscontrol?all=true&close=true`
+     确认不可登录、无新写入。
+[ ] 2. 修改合服配置（GameServer）：更新 `xml/merge_server_group.xml`、`xml/merge_server_time.xml`（主服放第一、从服列表完整，生效时间为当前/预设），重启游戏服使生效。
+[ ] 3. 备份数据库：使用 `backup_merge_db.js`（或手动）为 `cfg/mergeDb.cfg` 中各库生成 `<库名>_backup`，确认成功且未报错。
+[ ] 4. 执行合服：运行 `java -jar mergeserver.jar`，使用当前 `cfg` 配置完成合服。
+[ ] 5. 主库后置 SQL：在主库执行 `cfg/AfterMergeSql` 中的语句，确认无报错。
+[ ] 6. 修改 serverlist：更新登录/网关的 serverlist 文件/通道配置，使从服入口指向主服（保留原 serverId），发布/重启让配置生效。
+[ ] 7. 后台 API：同步/更新后台管理的合服相关接口或配置（如区服列表、合服标记），确保与 serverlist 一致。
+[ ] 8. 全服保护罩（可选，合服后）：调用 IDIP 4205 开启全服盾，例如 PowerShell：
+      $body = '{
+        "head": { "Cmdid": "4205", "AreaId": 1, "Partition": 1, "PlatId": 1, "OpenId": "", "RoleId": "", "Seqid": 1, "ServiceName": "idip" },
+        "body": { "AreaId": 1, "Partition": 10001, "PlatId": 1, "EffectiveDate": 240 }
+      }'
+      Invoke-WebRequest -Uri "http://127.0.0.1:8080/script/idip/4205" -Method Post -ContentType "application/json" -Body $body
+[ ] 9. 校验数据：抽查关键表（玩家、联盟、活动等），确认数据完整、无重复/缺失。
+[ ] 10. 应用验证：启动/重启游戏服，进行登录、充值、主要功能冒烟测试。
+[ ] 11. 备份/回滚：保留 `_backup` 库和合服日志，记录操作时间与负责人；如需回滚，可用 `restore_from_backup.js`（先 DROP 原库，再从 `<库>_backup` 导回）。
+

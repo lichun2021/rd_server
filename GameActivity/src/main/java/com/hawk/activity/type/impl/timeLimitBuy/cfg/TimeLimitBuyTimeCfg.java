@@ -2,6 +2,7 @@ package com.hawk.activity.type.impl.timeLimitBuy.cfg;
 
 import org.hawk.config.HawkConfigBase;
 import org.hawk.config.HawkConfigManager;
+import org.hawk.log.HawkLog;
 import org.hawk.os.HawkTime;
 
 import com.hawk.activity.config.IActivityTimeCfg;
@@ -87,5 +88,14 @@ public class TimeLimitBuyTimeCfg extends HawkConfigBase implements IActivityTime
 	@Override
 	public long getHiddenTimeValue() {
 		return hiddenTimeValue;
+	}
+
+	@Override
+	protected boolean checkValid() {
+		long now = HawkTime.getSeconds();
+		boolean valid = checkTimeCfgValid(this.getClass());
+		HawkLog.logPrintln("[TimeLimitBuyTimeCfg] termId:{} show:{} start:{} end:{} hidden:{} now:{} valid:{}",
+				termId, showTimeValue, startTimeValue, endTimeValue, hiddenTimeValue, now, valid);
+		return valid;
 	}
 }

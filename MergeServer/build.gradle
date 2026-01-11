@@ -1,3 +1,5 @@
+apply plugin: 'java'
+
 project.archivesBaseName = "mergeserver";
 
 configurations { providedCompile }

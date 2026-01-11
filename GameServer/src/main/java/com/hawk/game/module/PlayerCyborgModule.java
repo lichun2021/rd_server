@@ -536,9 +536,11 @@ public class PlayerCyborgModule extends PlayerModule {
 
 	@ProtocolHandler(code = HP.code.CYBORG_WAR_ENTER_INSTANCE_REQ_VALUE)
 	public void onEnterInstance(HawkProtocol hawkProtocol) {	
+		HawkLog.logPrintln("CyborgWar enterInstance req, playerId:{}, guildId:{}, termId:{}", player.getId(), player.getGuildId(), CyborgWarService.getInstance().getTermId());
 		HawkTuple2<String, Integer> tuple = getCrossToServerId();
 		int status = tuple.second;
 		if (status != Status.SysError.SUCCESS_OK_VALUE) {
+			HawkLog.logPrintln("CyborgWar enterInstance fail before cross, playerId:{}, err:{}", player.getId(), status);
 			Player.logger.info("playerId:{} try to enter cyborg war failed errorCode:{}", player.getId(), status);
 			this.sendError(hawkProtocol.getType(), status);
 			return;
@@ -546,12 +548,15 @@ public class PlayerCyborgModule extends PlayerModule {
 		
 		String serverId = tuple.first;
 		if (HawkOSOperator.isEmptyString(serverId)) {
+			HawkLog.logPrintln("CyborgWar enterInstance fail, serverId empty, playerId:{}", player.getId());
 			this.sendError(hawkProtocol.getType(), Status.Error.CYBORG_HAS_NO_MATCH_INFO_VALUE);
 			return;
 		}
 		
+		HawkLog.logPrintln("CyborgWar enterInstance choose server, playerId:{}, targetServer:{}", player.getId(), serverId);
 		int errorCode = sourceCheckEnterInstance(serverId);
 		if (errorCode != Status.SysError.SUCCESS_OK_VALUE) {
+			HawkLog.logPrintln("CyborgWar enterInstance check fail, playerId:{}, err:{}, targetServer:{}", player.getId(), errorCode, serverId);
 			this.sendError(hawkProtocol.getType(), errorCode);
 			return;
 		}			
@@ -567,6 +572,7 @@ public class PlayerCyborgModule extends PlayerModule {
 		
 		if (isCrossToSelf(serverId)) {
 			//如果是本服的则处理.
+			HawkLog.logPrintln("CyborgWar enterInstance local, playerId:{}, targetServer:{}", player.getId(), serverId);
 			simulateCross();
 			DungeonRedisLog.log(player.getId(), "onEnterInstance local:{}", serverId);
 		} else {			
@@ -576,6 +582,7 @@ public class PlayerCyborgModule extends PlayerModule {
 			} else {
 				player.responseSuccess(hawkProtocol.getType());
 			}
+			HawkLog.logPrintln("CyborgWar enterInstance cross, playerId:{}, targetServer:{}, result:{}", player.getId(), serverId, rlt);
 			DungeonRedisLog.log(player.getId(), "onEnterInstance corss:{},rlt:{}", serverId,rlt);
 		}
 	}

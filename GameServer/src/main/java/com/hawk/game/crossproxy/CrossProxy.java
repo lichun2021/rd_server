@@ -709,7 +709,8 @@ public class CrossProxy extends HawkTickable {
 
 				// 超时的协议直接丢弃
 				if (header.getTimestamp() + ProxyHelper.PROTOCOL_EXPIRE < HawkTime.getMillisecond()) {
-					HawkLog.errPrintln("csproxy header timeout: {}, protocol: {}", header.getOri(), protocol.getType());
+					long cost = HawkTime.getMillisecond() - header.getTimestamp();
+					HawkLog.errPrintln("csproxy header timeout: {}, protocol: {}, costMs: {}", header.getOri(), protocol.getType(), cost);
 					continue;
 				}
 				

@@ -8,7 +8,7 @@ itemPrice = 10000_1000_30
 extReward = 30000_840172_1
 
 # 服务器延迟时间
-serverDelay = 1728000
+serverDelay = 172800
 
 # 单期活动限定摇奖次数
 inheritNum = 200

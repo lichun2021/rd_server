@@ -99,6 +99,11 @@
 			<appender-ref ref="Tlog"/>
 		</logger>
 		
+		<!-- Activity diagnostics (timeLimitBuy / superSale 等) -->
+		<logger name="com.hawk.activity" level="info" additivity="true">
+			<appender-ref ref="Server"/>
+		</logger>
+		
 		<logger name="Copy" level="info" additivity="false">
 			<appender-ref ref="Copy"/>
 		</logger>

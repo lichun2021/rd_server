@@ -16,11 +16,11 @@ public class ProxyHelper {
 	/**
 	 * 协议过期时间
 	 */
-	public static final int PROTOCOL_EXPIRE = 10000;
+	public static final int PROTOCOL_EXPIRE = 40000;
 	/**
 	 * 最大空闲周期周期
 	 */
-	public static final int MASTER_CHECK_PERIOD = 10000;
+	public static final int MASTER_CHECK_PERIOD = 40000;
 	/**
 	 * 自动解锁时间
 	 */

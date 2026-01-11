@@ -8,7 +8,7 @@ return {
 		icon = [[Activity_Icon_328_Nor.png]],
 		selecticon = [[Activity_Icon_328_Sel.png]],
 		exchangeCost = [[10000_1000_6480]],
-		exchangeTotalTime = 6,
+		exchangeTotalTime = 30,
 		exchangeCD = 7200,
 		exchangeShowTime = 3,
 		otherName_01 = [[英雄]],

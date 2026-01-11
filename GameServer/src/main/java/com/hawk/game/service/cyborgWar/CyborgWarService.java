@@ -2503,6 +2503,7 @@ public class CyborgWarService extends HawkAppObj {
 	public HawkTuple2<CWRoomData, Integer> getPlayerRoomData(Player player) {
 		String guildId = player.getGuildId();
 		if (HawkOSOperator.isEmptyString(guildId)) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, no guild, playerId: {}", player.getId());
 			return new HawkTuple2<CWRoomData, Integer>(null, Status.Error.GUILD_NO_JOIN_VALUE);
 		}
 
@@ -2510,22 +2511,29 @@ public class CyborgWarService extends HawkAppObj {
 
 		CWPlayerData cwPlayer = CyborgWarRedis.getInstance().getCWPlayerData(player.getId(), termId);
 		if (cwPlayer == null) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, no cwPlayerData, playerId: {}, termId: {}", player.getId(), termId);
 			return new HawkTuple2<CWRoomData, Integer>(null, Status.Error.CYBORG_NOT_IN_THIS_WAR_VALUE);
 		}
 		String teamId = cwPlayer.getTeamId();
 		// 没有出战
 		if (HawkOSOperator.isEmptyString(teamId)) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, empty teamId, playerId: {}, termId: {}", player.getId(), termId);
 			return new HawkTuple2<CWRoomData, Integer>(null, Status.Error.CYBORG_NOT_IN_THIS_WAR_VALUE);
 		}
 		CWTeamJoinData teamData = CyborgWarRedis.getInstance().getCWJoinTeamData(teamId, termId);
 		if (teamData == null) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, joinData null, playerId: {}, termId: {}, teamId: {}", player.getId(), termId, teamId);
 			return new HawkTuple2<CWRoomData, Integer>(null, Status.Error.CYBORG_NOT_IN_THIS_WAR_VALUE);
 		}
 		String roomId = teamData.getRoomId();
 		if (HawkOSOperator.isEmptyString(teamData.getRoomId())) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, roomId empty, playerId: {}, termId: {}, teamId: {}", player.getId(), termId, teamId);
 			return new HawkTuple2<CWRoomData, Integer>(null, Status.Error.CYBORG_HAS_NO_MATCH_INFO_VALUE);
 		}
 		CWRoomData roomData = CyborgWarRedis.getInstance().getCWRoomData(roomId, termId);
+		if (roomData == null) {
+			HawkLog.logPrintln("CyborgWarService getPlayerRoomData fail, roomData null, playerId: {}, termId: {}, teamId: {}, roomId: {}", player.getId(), termId, teamId, roomId);
+		}
 		return new HawkTuple2<CWRoomData, Integer>(roomData, Status.SysError.SUCCESS_OK_VALUE);
 	}
 

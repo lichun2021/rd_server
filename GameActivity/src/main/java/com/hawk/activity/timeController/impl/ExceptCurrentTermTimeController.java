@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.hawk.config.HawkConfigBase;
 import org.hawk.config.HawkConfigManager;
 import org.hawk.config.iterator.ConfigIterator;
+import org.hawk.log.HawkLog;
 
 import com.hawk.activity.ActivityManager;
 import com.hawk.activity.config.ActivityCfg;
@@ -32,6 +33,7 @@ public abstract class ExceptCurrentTermTimeController extends ITimeController {
 		boolean delay = serverDelay != 0;
 		long timeLimit = serverOpenDate + serverDelay;
 		if (delay && timeLimit > now) {
+			logMatch("serverDelay_not_reached", now, 0, 0, 0, 0, serverDelay);
 			return Optional.empty();
 		}
 
@@ -41,12 +43,29 @@ public abstract class ExceptCurrentTermTimeController extends ITimeController {
 			if (now >= timeCfg.getShowTimeValue() && now < timeCfg.getHiddenTimeValue()) {
 				// 延迟显示时间节点超出活动展示时间,则本期活动不参与
 				if (delay && timeLimit > timeCfg.getShowTimeValue()) {
+					logMatch("delay_block_showtime", now, timeCfg.getTermId(), timeCfg.getShowTimeValue(),
+							timeCfg.getStartTimeValue(), timeCfg.getHiddenTimeValue(), serverDelay);
 					return Optional.empty();
 				}
+				logMatch("hit", now, timeCfg.getTermId(), timeCfg.getShowTimeValue(), timeCfg.getStartTimeValue(),
+						timeCfg.getHiddenTimeValue(), serverDelay);
 				return Optional.of(timeCfg);
 			}
 		}
+		logMatch("no_term_hit", now, 0, 0, 0, 0, serverDelay);
 		return Optional.empty();
+	}
+
+	/**
+	 * 仅对 timeLimitBuy / superSale 相关时间控制打印诊断，避免刷屏
+	 */
+	private void logMatch(String stage, long now, int termId, long show, long start, long hidden, long serverDelay) {
+		String cls = getTimeCfgClass().getSimpleName();
+		if (!cls.toLowerCase().contains("timelimitbuy") ) {
+			return;
+		}
+		HawkLog.logPrintln("[TimeCtrlDebug] class:{} stage:{} now:{} termId:{} show:{} start:{} hidden:{} serverDelay:{}",
+				cls, stage, now, termId, show, start, hidden, serverDelay);
 	}
 
 	

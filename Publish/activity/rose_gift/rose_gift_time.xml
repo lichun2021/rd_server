@@ -152,4 +152,22 @@
       <data termId="150" showTime="2025-8-29 00:00:00" startTime="2025-8-29 00:00:00" endTime="2025-8-31 23:59:59" hiddenTime="2025-8-31 23:59:59" />
       <data termId="151" showTime="2025-09-04 00:00:00" startTime="2025-09-04 00:00:00" endTime="2025-09-06 23:59:59" hiddenTime="2025-09-06 23:59:59" />
       <data termId="152" showTime="2025-09-10 00:00:00" startTime="2025-09-10 00:00:00" endTime="2025-09-12 23:59:59" hiddenTime="2025-09-12 23:59:59" />
+      <data termId="153" showTime="2025-09-16 00:00:00" startTime="2025-09-16 00:00:00" endTime="2025-09-18 23:59:59" hiddenTime="2025-09-18 23:59:59" />
+      <data termId="154" showTime="2025-09-22 00:00:00" startTime="2025-09-22 00:00:00" endTime="2025-09-24 23:59:59" hiddenTime="2025-09-24 23:59:59" />
+      <data termId="155" showTime="2025-09-28 00:00:00" startTime="2025-09-28 00:00:00" endTime="2025-09-30 23:59:59" hiddenTime="2025-09-30 23:59:59" />
+      <data termId="156" showTime="2025-10-04 00:00:00" startTime="2025-10-04 00:00:00" endTime="2025-10-06 23:59:59" hiddenTime="2025-10-06 23:59:59" />
+      <data termId="157" showTime="2025-10-10 00:00:00" startTime="2025-10-10 00:00:00" endTime="2025-10-12 23:59:59" hiddenTime="2025-10-12 23:59:59" />
+      <data termId="158" showTime="2025-10-16 00:00:00" startTime="2025-10-16 00:00:00" endTime="2025-10-18 23:59:59" hiddenTime="2025-10-18 23:59:59" />
+      <data termId="159" showTime="2025-10-22 00:00:00" startTime="2025-10-22 00:00:00" endTime="2025-10-24 23:59:59" hiddenTime="2025-10-24 23:59:59" />
+      <data termId="160" showTime="2025-10-29 00:00:00" startTime="2025-10-29 00:00:00" endTime="2025-10-31 23:59:59" hiddenTime="2025-10-31 23:59:59" />
+      <data termId="161" showTime="2025-11-04 00:00:00" startTime="2025-11-04 00:00:00" endTime="2025-11-06 23:59:59" hiddenTime="2025-11-06 23:59:59" />
+      <data termId="162" showTime="2025-11-10 00:00:00" startTime="2025-11-10 00:00:00" endTime="2025-11-12 23:59:59" hiddenTime="2025-11-12 23:59:59" />
+	  <data termId="163" showTime="2025-11-16 00:00:00" startTime="2025-11-16 00:00:00" endTime="2025-11-18 23:59:59" hiddenTime="2025-11-18 23:59:59" />
+	  <data termId="164" showTime="2025-11-22 00:00:00" startTime="2025-11-22 00:00:00" endTime="2025-11-24 23:59:59" hiddenTime="2025-11-24 23:59:59" />
+	  <data termId="165" showTime="2025-11-28 00:00:00" startTime="2025-11-28 00:00:00" endTime="2025-11-30 23:59:59" hiddenTime="2025-11-30 23:59:59" />
+	  <data termId="166" showTime="2025-12-4 00:00:00" startTime="2025-12-4 00:00:00" endTime="2025-12-6 23:59:59" hiddenTime="2025-12-6 23:59:59" />
+	  <data termId="167" showTime="2025-12-10 00:00:00" startTime="2025-12-10 00:00:00" endTime="2025-12-12 23:59:59" hiddenTime="2025-12-12 23:59:59" />
+	  <data termId="168" showTime="2025-12-16 00:00:00" startTime="2025-12-16 00:00:00" endTime="2025-12-18 23:59:59" hiddenTime="2025-12-18 23:59:59" />
+	  <data termId="169" showTime="2025-12-22 00:00:00" startTime="2025-12-22 00:00:00" endTime="2025-12-24 23:59:59" hiddenTime="2025-12-24 23:59:59" />
+	  <data termId="170" showTime="2025-12-28 00:00:00" startTime="2025-12-28 00:00:00" endTime="2025-12-30 23:59:59" hiddenTime="2025-12-30 23:59:59" />
 </root>

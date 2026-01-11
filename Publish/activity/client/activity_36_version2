@@ -7,8 +7,7 @@ return {
 		title = [[活动详情]],
 		name = [[充值豪礼]],
 		priority = 20650,
-		resetTime = 3888000,
-		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，累计充值到达指定金额即可领取奖励。<br/>2. 具体奖励详情，指挥官可返回活动页面查看奖励详情。<br/>3. 活动结束时未领取的奖励视为放弃。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">注意: 仅在充值福利页面进行的充值计入累计额度。每日必买、周卡月卡、直购礼包等内容不计入充值额度。</font></font>]],
+		tips = [[<font color="#adb0c0" face = "Microsoft YaHei" fontsize ="20">1. 活动期间，累计充值到达指定金额即可领取奖励。<br/>2. 具体奖励详情，指挥官可返回活动页面查看奖励详情。<br/><font color="#ffe782" face = "Microsoft YaHei" fontsize ="20">注意: 仅在充值福利页面进行的充值计入累计额度。每日必买、周卡月卡、直购礼包等内容不计入充值额度。</font></font>]],
 	},
 	recharge_gift = [[achieveId	conditionType	conditionValue	valueGold	preAchieve	name	rewards
 1	2	1	1	1	2	2

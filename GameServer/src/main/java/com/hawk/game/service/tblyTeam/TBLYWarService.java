@@ -548,6 +548,10 @@ public class TBLYWarService extends HawkAppObj {
             }
             GuildTeamData teamDataA = battleTeamDataMap.get(roomData.campA);
             GuildTeamData teamDataB = battleTeamDataMap.get(roomData.campB);
+            if(teamDataA == null || teamDataB == null){
+                HawkLog.errPrintln("TBLYWarService onBattleOpen teamData is null, roomId: {}, campA: {}, campB: {}", roomId, roomData.campA, roomData.campB);
+                continue;
+            }
             TBLYExtraParam extParm = new TBLYExtraParam();
             extParm.setCampAGuild(teamDataA.guildId);
             extParm.setCampAGuildName(teamDataA.guildName);
@@ -568,7 +572,9 @@ public class TBLYWarService extends HawkAppObj {
             roomData.roomState = 1;
             roomStrMap.put(roomData.id, roomData.serialize());
         }
-        RedisProxy.getInstance().getRedisSession().hmSet(String.format(TBLYWarResidKey.TBLY_WAR_ROOM, getTermId()), roomStrMap, 0);
+        if(!roomStrMap.isEmpty()){
+            RedisProxy.getInstance().getRedisSession().hmSet(String.format(TBLYWarResidKey.TBLY_WAR_ROOM, getTermId()), roomStrMap, 0);
+        }
     }
 
     /**
@@ -1337,38 +1343,47 @@ public class TBLYWarService extends HawkAppObj {
     public boolean checkEnter(Player player) {
         try {
             if(player.isCsPlayer()){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:crossover_fighting", player.getId());
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.CrossServerError.CROSS_FIGHTERING_VALUE, 0);
                 return false;
             }
             String guildId = player.getGuildId();
             if (HawkOSOperator.isEmptyString(guildId)) {
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:no_guild", player.getId());
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.GUILD_NO_JOIN,0);
                 return false;
             }
             GuildTeamPlayerData playerData = TBLYGuildTeamManager.getInstance().getPlayerData(player.getId());
             if(playerData == null){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:no_playerData", player.getId());
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_NOT_IN_THIS_WAR_VALUE,0);
                 return false;
             }
             if(!playerData.teamId.startsWith(guildId)){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:team_not_match_guild teamId:{} guildId:{}", player.getId(), playerData.teamId, guildId);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_NOT_IN_THIS_WAR_VALUE,0);
                 return false;
             }
             int teamEnterNum = getTeamEnterNum(playerData.teamId);
             if(teamEnterNum >= TiberiumConstCfg.getInstance().getWarMemberLimit()){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:team_full teamEnterNum:{} limit:{} teamId:{}", player.getId(), teamEnterNum, TiberiumConstCfg.getInstance().getWarMemberLimit(), playerData.teamId);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_PLAYER_OVER_LIMIT_VALUE,0);
                 return false;
             }
-            GuildTeamRoomData roomData = roomDataMap.get(teamIdToRoomId.get(playerData.teamId));
+            String roomId = teamIdToRoomId.get(playerData.teamId);
+            GuildTeamRoomData roomData = roomDataMap.get(roomId);
             if(roomData == null){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:no_roomData teamId:{} roomId:{} roomMapSize:{} termId:{}", player.getId(), playerData.teamId, roomId, roomDataMap.size(), getTermId());
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_NOT_IN_THIS_WAR_VALUE,0);
                 return false;
             }
             if(roomData.timeIndex <= 0 ||stateData.getState() != TBLYWarStateEnum.BATTLE){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:state_not_battle roomState:{} timeIndex:{}", player.getId(), stateData.getState(), roomData.timeIndex);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_NOT_IN_THIS_WAR_VALUE, 0);
                 return false;
             }
             if(battleStateDataMap.get(roomData.timeIndex).getState() != TBLYWarStateEnum.BATTLE_OPEN){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:battle_state_not_open roomIndex:{} state:{}", player.getId(), roomData.timeIndex, battleStateDataMap.get(roomData.timeIndex).getState());
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_NOT_IN_THIS_WAR_VALUE, 0);
                 return false;
             }
@@ -1382,15 +1397,18 @@ public class TBLYWarService extends HawkAppObj {
                 warEndTime = warStartTime + TiberiumConstCfg.getInstance().getWarOpenTime();
             }
             if(now < warStartTime || now > warEndTime - TimeUnit.MINUTES.toMillis(5)){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:time_window now:{} start:{} end:{} roomIndex:{}", player.getId(), now, warStartTime, warEndTime, roomData.timeIndex);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_ROOM_NEAR_CLOSE_VALUE, 0);
                 return false;
             }
             if(playerData.auth == GuildTeam.GuildTeamAuth.GT_CANDIDATE_VALUE && now < warStartTime + TimeUnit.MINUTES.toMillis(5)){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:candidate_wait roomIndex:{} now:{} start:{}", player.getId(), roomData.timeIndex, now, warStartTime);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.XHJZError.XHJZ_CANDIDATE_NOT_IN_TIME, 0);
                 return false;
             }
             GuildTeamPlayerData redisData = TBLYGuildTeamManager.getInstance().load(player.getId());
             if(redisData.quitTIme > warStartTime && redisData.quitTIme < warEndTime){
+                HawkLog.logPrintln("Tiberium checkEnter fail: playerId:{} reason:already_quit quitTime:{} start:{} end:{}", player.getId(), redisData.quitTIme, warStartTime, warEndTime);
                 player.sendError(HP.code.TIBERIUM_WAR_ENTER_INSTANCE_REQ_VALUE, Status.Error.TIBERIUM_HAS_JOINED_WAR_VALUE, 0);
                 return false;
             }

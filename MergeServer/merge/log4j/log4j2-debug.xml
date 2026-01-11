@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info" monitorInterval="15">
+	<Properties>
+		<Property name="LOG_HOME">logs</Property>
+	</Properties>
+	
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+		</Console>
+		
+		<RollingFile name="Exception" fileName="${LOG_HOME}/Exception.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Exception.log.%d{yyyy-MM-dd}">
+			<PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+			<TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+		</RollingFile>
+		<RollingFile name="Binlog" fileName="${LOG_HOME}/Binlog.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Binlog.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="%d|%p|%t|%F:%L|%m%n"/>
+            <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+        </RollingFile>
+        <RollingFile name="Server" fileName="${LOG_HOME}/Server.log" filePattern="${LOG_HOME}/%d{yyyy-MM-dd}/Server.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="%d %p [%t] [%F:%L] - %m%n"/>
+            <TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+        </RollingFile>
+		
+	</appenders>
+	
+	<loggers>
+		<root level="info"  >
+			<appender-ref ref="Console"/>
+			<appender-ref ref="Server"/>
+		</root>		
+		<logger name="Exception" level="info" >
+			<appender-ref ref="Exception"/>
+		</logger>		
+		<logger name="Binlog" level="info" additivity="false">
+            <appender-ref ref="Binlog"/>
+        </logger>		
+	</loggers>
+</configuration>

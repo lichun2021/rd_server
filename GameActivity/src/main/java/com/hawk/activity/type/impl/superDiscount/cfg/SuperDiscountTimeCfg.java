@@ -2,6 +2,7 @@ package com.hawk.activity.type.impl.superDiscount.cfg;
 
 import org.hawk.config.HawkConfigBase;
 import org.hawk.config.HawkConfigManager;
+import org.hawk.log.HawkLog;
 import org.hawk.os.HawkTime;
 import com.hawk.activity.config.IActivityTimeCfg;
 
@@ -84,6 +85,8 @@ public class SuperDiscountTimeCfg extends HawkConfigBase implements IActivityTim
 	
 	@Override
 	protected boolean checkValid() {
-		return checkTimeCfgValid(this.getClass());
+		long now = HawkTime.getSeconds();
+		boolean valid = checkTimeCfgValid(this.getClass());
+		return valid;
 	}
 }

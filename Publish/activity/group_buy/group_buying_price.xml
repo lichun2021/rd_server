@@ -6,20 +6,20 @@
       <data id="104" goodsId="1" buyTimes="22500_29999" price="10000_1000_140" />
       <data id="105" goodsId="1" buyTimes="30000_99999999" price="10000_1000_105" />
       <data id="201" goodsId="2" buyTimes="0_14999" price="10000_1000_175" />
-      <data id="202" goodsId="2" buyTimes="15000_29999" price="10000_1000_157" />
-      <data id="203" goodsId="2" buyTimes="30000_44999" price="10000_1000_140" />
-      <data id="204" goodsId="2" buyTimes="45000_59999" price="10000_1000_122" />
-      <data id="205" goodsId="2" buyTimes="60000_99999999" price="10000_1000_105" />
+      <data id="202" goodsId="2" buyTimes="15000_29999" price="10000_1000_140" />
+      <data id="203" goodsId="2" buyTimes="30000_44999" price="10000_1000_105" />
+      <data id="204" goodsId="2" buyTimes="45000_59999" price="10000_1000_87" />
+      <data id="205" goodsId="2" buyTimes="60000_99999999" price="10000_1000_70" />
       <data id="301" goodsId="3" buyTimes="0_14999" price="10000_1000_150" />
-      <data id="302" goodsId="3" buyTimes="15000_29999" price="10000_1000_135" />
-      <data id="303" goodsId="3" buyTimes="30000_44999" price="10000_1000_120" />
-      <data id="304" goodsId="3" buyTimes="45000_59999" price="10000_1000_105" />
-      <data id="305" goodsId="3" buyTimes="60000_99999999" price="10000_1000_90" />
+      <data id="302" goodsId="3" buyTimes="15000_29999" price="10000_1000_120" />
+      <data id="303" goodsId="3" buyTimes="30000_44999" price="10000_1000_105" />
+      <data id="304" goodsId="3" buyTimes="45000_59999" price="10000_1000_90" />
+      <data id="305" goodsId="3" buyTimes="60000_99999999" price="10000_1000_75" />
       <data id="401" goodsId="4" buyTimes="0_14999" price="10000_1000_100" />
       <data id="402" goodsId="4" buyTimes="15000_29999" price="10000_1000_80" />
-      <data id="403" goodsId="4" buyTimes="30000_44999" price="10000_1000_70" />
-      <data id="404" goodsId="4" buyTimes="45000_59999" price="10000_1000_60" />
-      <data id="405" goodsId="4" buyTimes="60000_99999999" price="10000_1000_50" />
+      <data id="403" goodsId="4" buyTimes="30000_44999" price="10000_1000_60" />
+      <data id="404" goodsId="4" buyTimes="45000_59999" price="10000_1000_45" />
+      <data id="405" goodsId="4" buyTimes="60000_99999999" price="10000_1000_35" />
       <data id="501" goodsId="5" buyTimes="0_14999" price="10000_1000_150" />
       <data id="502" goodsId="5" buyTimes="15000_29999" price="10000_1000_120" />
       <data id="503" goodsId="5" buyTimes="30000_44999" price="10000_1000_90" />
@@ -50,26 +50,26 @@
       <data id="1003" goodsId="10" buyTimes="75000_112499" price="10000_1000_80" />
       <data id="1004" goodsId="10" buyTimes="112500_149999" price="10000_1000_60" />
       <data id="1005" goodsId="10" buyTimes="150000_99999999" price="10000_1000_50" />
-      <data id="1101" goodsId="11" buyTimes="0_37499" price="10000_1000_67" />
-      <data id="1102" goodsId="11" buyTimes="37500_74999" price="10000_1000_52" />
-      <data id="1103" goodsId="11" buyTimes="75000_112499" price="10000_1000_37" />
-      <data id="1104" goodsId="11" buyTimes="112500_149999" price="10000_1000_22" />
-      <data id="1105" goodsId="11" buyTimes="150000_99999999" price="10000_1000_15" />
-      <data id="1201" goodsId="12" buyTimes="0_17499" price="10000_1000_90" />
-      <data id="1202" goodsId="12" buyTimes="17500_34999" price="10000_1000_75" />
-      <data id="1203" goodsId="12" buyTimes="35000_52499" price="10000_1000_60" />
-      <data id="1204" goodsId="12" buyTimes="52500_69999" price="10000_1000_45" />
-      <data id="1205" goodsId="12" buyTimes="70000_99999999" price="10000_1000_37" />
+      <data id="1101" goodsId="11" buyTimes="0_37499" price="10000_1000_45" />
+      <data id="1102" goodsId="11" buyTimes="37500_74999" price="10000_1000_30" />
+      <data id="1103" goodsId="11" buyTimes="75000_112499" price="10000_1000_22" />
+      <data id="1104" goodsId="11" buyTimes="112500_149999" price="10000_1000_15" />
+      <data id="1105" goodsId="11" buyTimes="150000_99999999" price="10000_1000_10" />
+      <data id="1201" goodsId="12" buyTimes="0_17499" price="10000_1000_60" />
+      <data id="1202" goodsId="12" buyTimes="17500_34999" price="10000_1000_45" />
+      <data id="1203" goodsId="12" buyTimes="35000_52499" price="10000_1000_36" />
+      <data id="1204" goodsId="12" buyTimes="52500_69999" price="10000_1000_30" />
+      <data id="1205" goodsId="12" buyTimes="70000_99999999" price="10000_1000_24" />
       <data id="1301" goodsId="13" buyTimes="0_17499" price="10000_1000_45" />
       <data id="1302" goodsId="13" buyTimes="17500_34999" price="10000_1000_37" />
       <data id="1303" goodsId="13" buyTimes="35000_52499" price="10000_1000_30" />
       <data id="1304" goodsId="13" buyTimes="52500_69999" price="10000_1000_22" />
       <data id="1305" goodsId="13" buyTimes="70000_99999999" price="10000_1000_15" />
-      <data id="1401" goodsId="14" buyTimes="0_4999" price="10000_1000_45" />
-      <data id="1402" goodsId="14" buyTimes="5000_9999" price="10000_1000_37" />
-      <data id="1403" goodsId="14" buyTimes="10000_14999" price="10000_1000_30" />
-      <data id="1404" goodsId="14" buyTimes="15000_19999" price="10000_1000_22" />
-      <data id="1405" goodsId="14" buyTimes="20000_99999999" price="10000_1000_18" />
+      <data id="1401" goodsId="14" buyTimes="0_4999" price="10000_1000_30" />
+      <data id="1402" goodsId="14" buyTimes="5000_9999" price="10000_1000_22" />
+      <data id="1403" goodsId="14" buyTimes="10000_14999" price="10000_1000_18" />
+      <data id="1404" goodsId="14" buyTimes="15000_19999" price="10000_1000_15" />
+      <data id="1405" goodsId="14" buyTimes="20000_99999999" price="10000_1000_12" />
       <data id="1501" goodsId="15" buyTimes="0_6249" price="10000_1000_56" />
       <data id="1502" goodsId="15" buyTimes="6250_12499" price="10000_1000_48" />
       <data id="1503" goodsId="15" buyTimes="12500_18749" price="10000_1000_40" />
