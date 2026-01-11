@@ -707,12 +707,12 @@ public class CrossProxy extends HawkTickable {
 					continue;
 				}			
 
-				// 超时的协议直接丢弃
-				if (header.getTimestamp() + ProxyHelper.PROTOCOL_EXPIRE < HawkTime.getMillisecond()) {
-					long cost = HawkTime.getMillisecond() - header.getTimestamp();
-					HawkLog.errPrintln("csproxy header timeout: {}, protocol: {}, costMs: {}", header.getOri(), protocol.getType(), cost);
-					continue;
-				}
+				// // 超时的协议直接丢弃
+				// if (header.getTimestamp() + ProxyHelper.PROTOCOL_EXPIRE < HawkTime.getMillisecond()) {
+				// 	long cost = HawkTime.getMillisecond() - header.getTimestamp();
+				// 	HawkLog.errPrintln("csproxy header timeout: {}, protocol: {}, costMs: {}", header.getOri(), protocol.getType(), cost);
+				// 	continue;
+				// }
 				
 				// 协议处理
 				protocol.setUserData(header);
