@@ -16,7 +16,7 @@ public class ProxyHelper {
 	/**
 	 * 协议过期时间
 	 */
-	public static final int PROTOCOL_EXPIRE = 40000;
+	public static final int PROTOCOL_EXPIRE = 120000;
 	/**
 	 * 最大空闲周期周期
 	 */

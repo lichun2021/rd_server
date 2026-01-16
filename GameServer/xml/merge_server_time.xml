@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
   <!-- 合服生效时间（毫秒时间戳） -->
-  <data id="1001" mergeServers="10001_10002" mergeTime="2026-01-06 09:00:00" masterServer="10001" slaveServers="10002" />
-  <data id="1002" mergeServers="10003_10004" mergeTime="2026-01-06 09:00:00" masterServer="10003" slaveServers="10004" />
+  <data id="1003" mergeServers="10001_10002_10003_10004" mergeTime="2026-01-16 09:00:00" masterServer="10001" slaveServers="10003" />
+  <data id="1004" mergeServers="10005_10006" mergeTime="2026-01-16 09:00:00" masterServer="10005" slaveServers="10006" />
 </root>

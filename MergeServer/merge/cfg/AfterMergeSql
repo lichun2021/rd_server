@@ -16,7 +16,7 @@ UPDATE army SET free=free+march;
 UPDATE army SET march=0;
 
 --  server_identify
-DELETE FROM server_identify;lastTakeBackTime
+DELETE FROM server_identify;
 
 -- edit duplicate guild name  append server Id
 -- update guild_info a set a.`name`=concat(a.`name`, '-', (select serverId from player where id = a.leaderId)) where EXISTS ( select 1 from (select name from guild_info) gi where gi.name = a.name GROUP BY gi.name HAVING count(gi.name) > 1);

@@ -4,8 +4,20 @@
        - `http://<webHost>:<webPort>/script/closeForMergeServer`
        - `http://<webHost>:<webPort>/script/syscontrol?all=true&close=true`
      确认不可登录、无新写入。
+[ ] 1.1 （强烈建议）合服/导入前隔离业务数据库连接，避免导入/合服期间出现 MDL（table/schema metadata lock）卡死：
+     - 临时修改业务账号（如 `remote_user@192.168.10.131`）密码，使业务连接池无法重连
+     - 合服/导入完成后再改回原密码并恢复业务
+     - 在 DB 机本地（root@localhost）执行示例（将 host/用户/新旧密码按实际替换）：
+       - `ALTER USER 'remote_user'@'192.168.10.131' IDENTIFIED BY 'SecurePass1234
+       '; FLUSH PRIVILEGES;`
+       - `-- 可选：踢掉现有连接`
+       - `SELECT CONCAT('KILL CONNECTION ',id,';') FROM information_schema.processlist WHERE host LIKE '192.168.10.131:%';`
+       - `-- 结束后改回`
+       - `ALTER USER 'remote_user'@'192.168.10.131' IDENTIFIED BY 'SecurePass123'; FLUSH PRIVILEGES;`
 [ ] 2. 修改合服配置（GameServer）：更新 `xml/merge_server_group.xml`、`xml/merge_server_time.xml`（主服放第一、从服列表完整，生效时间为当前/预设），重启游戏服使生效。
-[ ] 3. 备份数据库：使用 `backup_merge_db.js`（或手动）为 `cfg/mergeDb.cfg` 中各库生成 `<库名>_backup`，确认成功且未报错。
+[ ] 3. 备份数据库：二选一
+     - 导出为 SQL 文件：`node backup_merge_sql.js`（读取 `cfg/mergeDb.cfg`，输出到 `MergeServer/backups/`，可用 `DUMP_VERBOSE=1` 看表级进度）
+     - 备份到新库：`node backup_merge_db.js`（生成 `<库名>_backup`），确认成功且未报错。
 [ ] 4. 执行合服：运行 `java -jar mergeserver.jar`，使用当前 `cfg` 配置完成合服。
 [ ] 5. 主库后置 SQL：在主库执行 `cfg/AfterMergeSql` 中的语句，确认无报错。
 [ ] 6. 修改 serverlist：更新登录/网关的 serverlist 文件/通道配置，使从服入口指向主服（保留原 serverId），发布/重启让配置生效。
@@ -18,5 +30,3 @@
       Invoke-WebRequest -Uri "http://127.0.0.1:8080/script/idip/4205" -Method Post -ContentType "application/json" -Body $body
 [ ] 9. 校验数据：抽查关键表（玩家、联盟、活动等），确认数据完整、无重复/缺失。
 [ ] 10. 应用验证：启动/重启游戏服，进行登录、充值、主要功能冒烟测试。
-[ ] 11. 备份/回滚：保留 `_backup` 库和合服日志，记录操作时间与负责人；如需回滚，可用 `restore_from_backup.js`（先 DROP 原库，再从 `<库>_backup` 导回）。
-

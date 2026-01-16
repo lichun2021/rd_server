@@ -6,6 +6,8 @@ const SCRIPT_DIR = __dirname;
 const CONFIG_FILE = path.join(SCRIPT_DIR, 'cfg', 'mergeDb.cfg');
 const MYSQL_BIN = process.env.MYSQL_BIN || 'mysql';
 const MYSQLDUMP_BIN = process.env.MYSQLDUMP_BIN || 'mysqldump';
+// mysqldump 默认不输出进度，开关：DUMP_VERBOSE=1 会打印正在导出的表（输出到 stderr）
+const DUMP_VERBOSE = String(process.env.DUMP_VERBOSE || '').trim() === '1';
 
 if (!fs.existsSync(CONFIG_FILE)) {
   console.error(`[ERROR] 找不到配置文件: ${CONFIG_FILE}`);
@@ -77,10 +79,13 @@ function backupOne(srcDb, dstDb, conn) {
     // --no-tablespaces 避免缺少 PROCESS 权限报错
     const dumpArgs = [
       '-h', conn.host, '-P', conn.port, '-u', conn.user, `-p${conn.pass}`,
+      // --quick: 逐行读取，减少大表内存/卡顿风险；配合 pipe 更稳
+      '--quick',
       '--single-transaction', '--routines', '--events', '--triggers',
       '--column-statistics=0', '--no-tablespaces',
       srcDb,
     ];
+    if (DUMP_VERBOSE) dumpArgs.splice(dumpArgs.length - 1, 0, '--verbose');
     const restoreArgs = ['-h', conn.host, '-P', conn.port, '-u', conn.user, `-p${conn.pass}`, dstDb];
 
     const dump = spawn(MYSQLDUMP_BIN, dumpArgs, { stdio: ['ignore', 'pipe', 'inherit'] });

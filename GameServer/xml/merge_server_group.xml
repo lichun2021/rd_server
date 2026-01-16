@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
   <!-- 主服放在 mergeServerIds 的第一个，slaveServers 列出从服 -->
-  <data id="1001" mergeServerIds="10001_10002" masterServer="10001" slaveServers="10002"/>
-  <data id="1002" mergeServerIds="10003_10004" masterServer="10003" slaveServers="10004"/>
+  <data id="1003" mergeServerIds="10001_10002_10003_10004" masterServer="10001" slaveServers="10003"/>
+  <data id="1004" mergeServerIds="10005_10006" masterServer="10005" slaveServers="10006"/>
 </root>

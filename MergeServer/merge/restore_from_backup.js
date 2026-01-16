@@ -6,6 +6,14 @@ const SCRIPT_DIR = __dirname;
 const CONFIG_FILE = path.join(SCRIPT_DIR, 'cfg', 'mergeDb.cfg');
 const MYSQL_BIN = process.env.MYSQL_BIN || 'mysql';
 const MYSQLDUMP_BIN = process.env.MYSQLDUMP_BIN || 'mysqldump';
+// 仅回滚主库（dbNames 第一个）：RESTORE_SCOPE=master
+const RESTORE_SCOPE = (process.env.RESTORE_SCOPE || 'all').trim().toLowerCase(); // all | master
+// 备份库后缀，默认 _backup（如需用 _backup2：BACKUP_SUFFIX=_backup2）
+const BACKUP_SUFFIX = (process.env.BACKUP_SUFFIX || '_backup').trim();
+// 只打印，不执行：DRY_RUN=1
+const DRY_RUN = String(process.env.DRY_RUN || '').trim() === '1';
+// mysqldump 输出表级进度（stderr）：DUMP_VERBOSE=1
+const DUMP_VERBOSE = String(process.env.DUMP_VERBOSE || '').trim() === '1';
 
 if (!fs.existsSync(CONFIG_FILE)) {
   console.error(`[ERROR] 找不到配置文件: ${CONFIG_FILE}`);
@@ -49,6 +57,10 @@ const userList = toList(cfg.dbUsernames, dbNames.length, 'root');
 const passList = toList(cfg.dbPasswords, dbNames.length, '');
 
 function mysqlExec(conn, sql) {
+  if (DRY_RUN) {
+    console.log(`[DRY] mysql -h ${conn.host} -P ${conn.port} -u ${conn.user} -p*** -e "${sql}"`);
+    return '';
+  }
   const args = ['-h', conn.host, '-P', conn.port, '-u', conn.user, `-p${conn.pass}`, '-N', '-B', '-e', sql];
   const res = spawnSync(MYSQL_BIN, args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] });
   if (res.status !== 0) {
@@ -59,7 +71,7 @@ function mysqlExec(conn, sql) {
 }
 
 function restoreOne(db, conn) {
-  const backup = `${db}_backup`;
+  const backup = `${db}${BACKUP_SUFFIX}`;
   console.log(`[CHECK] ${backup} @ ${conn.host}:${conn.port}`);
   const exists = mysqlExec(conn, `SHOW DATABASES LIKE '${backup}';`);
   if (!exists) {
@@ -77,11 +89,19 @@ function restoreOne(db, conn) {
   return new Promise((resolve, reject) => {
     const dumpArgs = [
       '-h', conn.host, '-P', conn.port, '-u', conn.user, `-p${conn.pass}`,
+      '--quick',
       '--single-transaction', '--routines', '--events', '--triggers',
       '--column-statistics=0', '--no-tablespaces',
       backup,
     ];
+    if (DUMP_VERBOSE) dumpArgs.splice(dumpArgs.length - 1, 0, '--verbose');
     const restoreArgs = ['-h', conn.host, '-P', conn.port, '-u', conn.user, `-p${conn.pass}`, db];
+
+    if (DRY_RUN) {
+      console.log(`[DRY] ${MYSQLDUMP_BIN} ${dumpArgs.join(' ')} | ${MYSQL_BIN} ${restoreArgs.join(' ')}`);
+      resolve();
+      return;
+    }
 
     const dump = spawn(MYSQLDUMP_BIN, dumpArgs, { stdio: ['ignore', 'pipe', 'inherit'] });
     const restore = spawn(MYSQL_BIN, restoreArgs, { stdio: ['pipe', 'inherit', 'inherit'] });
@@ -113,9 +133,11 @@ function restoreOne(db, conn) {
   console.log('使用配置:');
   console.log(`  dbHosts=${hostList.join(',')} dbPorts=${portList.join(',')} dbUsernames=${userList.join(',')}`);
   console.log(`  dbNames=${dbNames.join(',')}`);
+  console.log(`  restoreScope=${RESTORE_SCOPE} backupSuffix=${BACKUP_SUFFIX} dryRun=${DRY_RUN ? 'on' : 'off'} verbose=${DUMP_VERBOSE ? 'on' : 'off'}`);
   console.log('');
 
-  for (let i = 0; i < dbNames.length; i++) {
+  const max = RESTORE_SCOPE === 'master' ? 1 : dbNames.length;
+  for (let i = 0; i < max; i++) {
     const db = dbNames[i];
     const conn = { host: hostList[i], port: portList[i], user: userList[i], pass: passList[i] };
     await restoreOne(db, conn);
