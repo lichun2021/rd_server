@@ -21,11 +21,14 @@ import org.hawk.tuple.HawkTuples;
 
 import com.google.common.collect.ImmutableMap;
 import com.hawk.game.battle.effect.BattleConst;
+import com.hawk.game.battle.effect.impl.hero1116.Hero1116Param;
 import com.hawk.game.battle.effect.impl.Checker1524;
 import com.hawk.game.battle.effect.impl.Checker1525;
+import com.hawk.game.config.BattleSoldierCfg;
 import com.hawk.game.config.BattleSoldierSkillCfg;
 import com.hawk.game.config.ConstProperty;
 import com.hawk.game.item.RandomItem;
+import com.hawk.game.player.Player;
 import com.hawk.game.protocol.Const.EffType;
 import com.hawk.game.protocol.Const.PBSoldierSkill;
 import com.hawk.game.protocol.Const.SoldierType;
@@ -52,6 +55,14 @@ public class BattleSoldier_6 extends IFootSoldier {
 	boolean eff12363Atk;
 	private int skill46Cnt;
 	private List<BattleSoldier> skill46Targes = new ArrayList<>();
+	Hero1116Param hero1116;
+
+	@Override
+	public void init(Player player, BattleSoldierCfg soldierCfg, int count, int shadowCnt) {
+		super.init(player, soldierCfg, count, shadowCnt);
+		hero1116 = new Hero1116Param(this);
+	}
+
 	@Override
 	public SoldierType getType() {
 		return SoldierType.FOOT_SOLDIER_6;
@@ -64,6 +75,12 @@ public class BattleSoldier_6 extends IFootSoldier {
 		isSkill5Round = isSkill5Round || eff1617Cen >= ConstProperty.getInstance().getEffect1617TimesLimit();
 		sss1670Debuf();
 		skill64601Atk();
+		hero1116.roundStart();
+	}
+
+	@Override
+	public int skillFireAtkExactly(BattleSoldier defSoldier) {
+		return super.skillFireAtkExactly(defSoldier) + hero1116.eff12725Val;
 	}
 
 	@Override
@@ -98,6 +115,11 @@ public class BattleSoldier_6 extends IFootSoldier {
 		try {
 			boolean trigger = getEffVal(EffType.HERO_12361) > 0
 					&& HawkRand.randInt(10000) < ConstProperty.getInstance().getEffect12361BasePro() + getEffVal(EffType.HERO_1673) + getEffVal(EffType.HERO_12381);
+			ImmutableMap<SoldierType, Integer> effect12361TargetWeightMap = ConstProperty.getInstance().getEffect12361TargetWeightMap();
+			if (hero1116.eff12721) {
+				effect12361TargetWeightMap = ConstProperty.getInstance().effect12721TargetWeightMap;
+				trigger = true;
+			}
 			if (!trigger) {
 				return false;
 			}
@@ -120,7 +142,6 @@ public class BattleSoldier_6 extends IFootSoldier {
 			}
 
 			HawkWeightFactor<BattleSoldier> hf = new HawkWeightFactor<>();
-			ImmutableMap<SoldierType, Integer> effect12361TargetWeightMap = ConstProperty.getInstance().getEffect12361TargetWeightMap();
 			for (BattleSoldier so : sols) {
 				int weight = effect12361TargetWeightMap.getOrDefault(so.getType(), 0);
 				if (weight > 0) {
@@ -205,6 +226,7 @@ public class BattleSoldier_6 extends IFootSoldier {
 		hero1617Check();
 		sss1670(defSoldier, killCnt, hurtVal);
 		skill64601Check(defSoldier);
+		hero1116.skill12722Atk(defSoldier);
 	}
 
 	private void skill64601Check(BattleSoldier defSoldier) {
@@ -394,6 +416,7 @@ public class BattleSoldier_6 extends IFootSoldier {
 	public double reduceHurtValPct(BattleSoldier atkSoldier, double hurtVal) {
 		hurtVal = super.reduceHurtValPct(atkSoldier, hurtVal);
 		hurtVal *= (1 - getEffVal(EffType.HERO_12371) * GsConst.EFF_PER);
+		hurtVal = hero1116.reduceHurtValPct(atkSoldier, hurtVal);
 		return hurtVal;
 	}
 
@@ -402,7 +425,7 @@ public class BattleSoldier_6 extends IFootSoldier {
 		hurtVal = super.addHurtValPct(defSoldier, hurtVal);
 		if (eff12361Atk) {
 			Integer xishu = ConstProperty.getInstance().getEffect12361DamageAdjustMap().getOrDefault(defSoldier.getType(), 10000);
-			hurtVal = hurtVal * getEffVal(EffType.HERO_12361) * GsConst.EFF_PER
+			hurtVal = hurtVal * (getEffVal(EffType.HERO_12361) + getEffVal(EffType.HERO_12721)) * GsConst.EFF_PER
 					* xishu * GsConst.EFF_PER;
 			addDebugLog("【12361】定点猎杀 {} , {} ,{}", defSoldier.getUUID(), getEffVal(EffType.HERO_12361), xishu);
 		}
@@ -410,6 +433,7 @@ public class BattleSoldier_6 extends IFootSoldier {
 			hurtVal = hurtVal * getEffVal(EffType.HERO_12363) * GsConst.EFF_PER;
 			addDebugLog("【12363】爆裂弹片: 定点猎杀命中敌方单位后，额外对其附近随机 2 个敌方单位产生 1 次爆裂伤害（伤害率: XX.XX%）", getEffVal(EffType.HERO_12363));
 		}
+		hurtVal = hero1116.addHurtValPct(defSoldier, hurtVal);
 		return hurtVal;
 	}
 	
@@ -435,6 +459,7 @@ public class BattleSoldier_6 extends IFootSoldier {
 		}
 
 		result -= debuff1595Val();
+		result += hero1116.eff12723Val;
 
 		return result;
 	}

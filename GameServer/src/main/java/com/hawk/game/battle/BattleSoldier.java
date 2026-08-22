@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -41,6 +42,8 @@ import com.hawk.game.battle.effect.BattleTupleType.Type;
 import com.hawk.game.battle.effect.impl.hero1110.Buff12574;
 import com.hawk.game.battle.effect.impl.hero1112.Debuff12611;
 import com.hawk.game.battle.effect.impl.hero1114.Debuff12674;
+import com.hawk.game.battle.effect.impl.hero1116.Debuff12724;
+import com.hawk.game.battle.effect.impl.hero1116.Hero1116Param;
 import com.hawk.game.battle.guarder.GuarderPlayer;
 import com.hawk.game.battle.sssSolomon.ISSSSolomonPet;
 import com.hawk.game.config.BattleSoldierCfg;
@@ -227,6 +230,8 @@ public abstract class BattleSoldier implements IBattleSoldier {
 	protected int effect12515Num;
 	protected int debuff12571Num;
 	protected int debuffSkill24601;
+	public HashMultimap<Integer, Debuff12724> debuff12724 = HashMultimap.create();
+	public int debuff12724Num;
 	// 雷感状态
 	protected Map<String, Debuff12611> sorek12611Debuff = new HashMap<>();
 	protected Map<String, Debuff12674> astiaya12674Debuff = new HashMap<>();
@@ -339,6 +344,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 新回合开始 */
 	public void roundStart() {
+		debuff12724Num = debuff12724Num();
 		sorek12611DebuffValRoundStart();
 		kunNa1652();
 		eff12541SoldierAtk();
@@ -778,7 +784,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		double attack = solderStarCfg.getAttack() * (1 - getEffVal(EffType.BASE_ATKD) * GsConst.EFF_PER)
 				+ tupleValue(BattleTupleType.Type.ATK_BASE, SoldierType.XXXXXXXXXXXMAN).first * GsConst.EFF_PER;
 		double val = attack * GsConst.EFF_PER * (totalEffNum + eff12392);
-		int battleFreeCnt = battleFreeCnt();
+		int battleFreeCnt = battleFreeCnt(true);
 		double result = val * Math.pow(battleFreeCnt, BattleConst.Const.POW.getNumber() * 0.01);
 
 		{// 锦标赛专用号
@@ -843,7 +849,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 				+ tupleValue(BattleTupleType.Type.DEF_BASE, SoldierType.XXXXXXXXXXXMAN).first * GsConst.EFF_PER;
 		double val = defence * GsConst.EFF_PER * totalEffNum;
 		// val = Math.max(val, defence); // 不低于原始生命值
-		int battleFreeCnt = battleFreeCnt();
+		int battleFreeCnt = battleFreeCnt(false);
 		double result = val * Math.pow(battleFreeCnt, BattleConst.Const.POW.getNumber() * 0.01);
 		{// 百分比破甲
 			int cutDefSelf = getEffVal(EffType.EFF_1427);
@@ -1810,11 +1816,31 @@ public abstract class BattleSoldier implements IBattleSoldier {
 	}
 
 	/** 出战数量 */
-	private int battleFreeCnt() {
+	private int battleFreeCnt(boolean atk) {
 		double eff1429pct = getEffVal(EffType.EFF_1429) * GsConst.EFF_PER;
 		int battleRound = this.getTroop().getBattle().getBattleRound();
 		int xxx = roundDead.getOrDefault(battleRound - 1, 0) + roundDead.getOrDefault(battleRound - 2, 0);
-		return (int) (getFreeCnt() + xxx * eff1429pct);
+		int result = (int) (getFreeCnt() + xxx * eff1429pct);
+		if (atk) {
+			result -= debuff12724Num;
+		}
+		return Math.max(0, result);
+	}
+
+	private int debuff12724Num() {
+		Set<Debuff12724> debuffs = debuff12724.get(getBattleRound());
+		if (debuffs.isEmpty()) {
+			return 0;
+		}
+		int effect = 0;
+		for (Debuff12724 debuff : debuffs) {
+			if (debuff.round == getBattleRound()) {
+				effect += debuff.eff12724;
+			}
+		}
+		int result = (int) (getFreeCnt() * GsConst.EFF_PER * effect);
+		addDebugLog("【12724】 {} {}数量的部队本回合无法进行攻击", getUUID(), result);
+		return result;
 	}
 
 	public int getSoldierId() {
