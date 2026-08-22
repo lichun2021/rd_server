@@ -7745,4 +7745,20 @@
       <data id="9483180" itemType="141" pile_max="999999" cityLevel="1" use="1" useAll="0" sellPrice="100" dressId="483180" canGive="1" protectionPeriod="7776000" protectionConsume="2" />
       <data id="11036000" itemType="3" effect="11036000" buffId="236000" pile_max="999999" cityLevel="1" use="1" useAll="0" sellPrice="100" />
       <data id="11037000" itemType="3" effect="11037000" buffId="200174" pile_max="999999" cityLevel="1" use="1" useAll="0" sellPrice="100" />
+      <data id="1001120" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101120" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001120_10" />
+      <data id="1001121" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101121" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001121_10" />
+      <data id="1001122" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101122" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001122_10" />
+      <data id="1001123" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101123" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001123_10" />
+      <data id="1001116" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101116" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001116_10" />
+      <data id="1001117" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101117" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001117_10" />
+      <data id="1001118" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101118" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001118_10" />
+      <data id="1001119" itemType="10" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="100" exchangeItem="30000_1000005_1" />
+      <data id="1101119" itemType="11" pile_max="999999" cityLevel="1" use="0" useAll="0" sellPrice="3000" resolveList="30000_1001119_10" />
 </root>

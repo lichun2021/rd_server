@@ -102,4 +102,28 @@
       <data id="111404" hero="1114" stage="4" consumption="30000_1001114_40" power="5500" attr="2007_5000" />
       <data id="111405" hero="1114" stage="5" consumption="30000_1001114_60" power="6500" attr="2007_7500" />
       <data id="111406" hero="1114" stage="6" consumption="30000_1001114_90" power="7500" attr="2007_7500" />
+      <data id="112001" hero="1120" stage="1" consumption="30000_1001120_10" power="2500" attr="2003_2500" />
+      <data id="112002" hero="1120" stage="2" consumption="30000_1001120_20" power="3500" attr="2003_2500" />
+      <data id="112003" hero="1120" stage="3" consumption="30000_1001120_30" power="4500" attr="2003_5000" />
+      <data id="112004" hero="1120" stage="4" consumption="30000_1001120_40" power="5500" attr="2003_5000" />
+      <data id="112005" hero="1120" stage="5" consumption="30000_1001120_60" power="6500" attr="2003_7500" />
+      <data id="112006" hero="1120" stage="6" consumption="30000_1001120_90" power="7500" attr="2003_7500" />
+      <data id="112201" hero="1122" stage="1" consumption="30000_1001122_10" power="2500" attr="2004_2500" />
+      <data id="112202" hero="1122" stage="2" consumption="30000_1001122_20" power="3500" attr="2004_2500" />
+      <data id="112203" hero="1122" stage="3" consumption="30000_1001122_30" power="4500" attr="2004_5000" />
+      <data id="112204" hero="1122" stage="4" consumption="30000_1001122_40" power="5500" attr="2004_5000" />
+      <data id="112205" hero="1122" stage="5" consumption="30000_1001122_60" power="6500" attr="2004_7500" />
+      <data id="112206" hero="1122" stage="6" consumption="30000_1001122_90" power="7500" attr="2004_7500" />
+      <data id="111601" hero="1116" stage="1" consumption="30000_1001116_10" power="2500" attr="2006_2500" />
+      <data id="111602" hero="1116" stage="2" consumption="30000_1001116_20" power="3500" attr="2006_2500" />
+      <data id="111603" hero="1116" stage="3" consumption="30000_1001116_30" power="4500" attr="2006_5000" />
+      <data id="111604" hero="1116" stage="4" consumption="30000_1001116_40" power="5500" attr="2006_5000" />
+      <data id="111605" hero="1116" stage="5" consumption="30000_1001116_60" power="6500" attr="2006_7500" />
+      <data id="111606" hero="1116" stage="6" consumption="30000_1001116_90" power="7500" attr="2006_7500" />
+      <data id="111801" hero="1118" stage="1" consumption="30000_1001118_10" power="2500" attr="2001_2500" />
+      <data id="111802" hero="1118" stage="2" consumption="30000_1001118_20" power="3500" attr="2001_2500" />
+      <data id="111803" hero="1118" stage="3" consumption="30000_1001118_30" power="4500" attr="2001_5000" />
+      <data id="111804" hero="1118" stage="4" consumption="30000_1001118_40" power="5500" attr="2001_5000" />
+      <data id="111805" hero="1118" stage="5" consumption="30000_1001118_60" power="6500" attr="2001_7500" />
+      <data id="111806" hero="1118" stage="6" consumption="30000_1001118_90" power="7500" attr="2001_7500" />
 </root>
