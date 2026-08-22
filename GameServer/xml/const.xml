@@ -2352,6 +2352,32 @@ effect12786SoldierAdjust = 1_10000,2_0,3_18000,4_10000,5_10000,6_15000,7_10000,8
 effect12787BaseVaule = 35500
 effect12787SoldierAdjust = 1_10000,2_40000,3_5000,4_10000,5_10000,6_10000,7_10000,8_10000
 
+# Hero 1120: bomber share threshold and bombing interval/counts
+effect12831SelfNumLimit = 5000
+effect12831AtkRound = 5
+effect12831AtkTimesForMass = 18
+effect12831AtkTimesForPerson = 9
+
+# Hero 1120: drone charge cap and per-attack/per-round charge
+effect12835BaseVaule = 100
+effect12835AtkThresholdValue1 = 1
+effect12836AtkThresholdValue1 = 2
+effect12835SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# Hero 1120: Wingbeat extra attacks and inclusive duration
+effect12836BaseVaule = 18
+effect12836ContinueRound = 5
+
+# Hero 1120: persistent smart-shield reduction and enemy adjustments
+effect12837BaseVaule = 1000
+effect12837SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
+# Hero 1120: personal-combat stack interval/cap and enemy adjustments
+effect12838AtkRound = 5
+effect12838Maxinum = 2
+effect12838SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+effect12839SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
+
 # 先驱回响【10052】作用号，兵种修正系数；万分比
 effect10052SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
 

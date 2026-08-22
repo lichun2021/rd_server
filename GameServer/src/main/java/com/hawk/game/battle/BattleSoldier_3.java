@@ -21,6 +21,8 @@ import org.hawk.tuple.HawkTuple3;
 import org.hawk.tuple.HawkTuples;
 
 import com.hawk.game.battle.effect.BattleConst;
+import com.hawk.game.battle.effect.impl.hero1120.Buff12835;
+import com.hawk.game.battle.effect.impl.hero1120.Hero1120Rules;
 import com.hawk.game.config.BattleSoldierSkillCfg;
 import com.hawk.game.config.ConstProperty;
 import com.hawk.game.protocol.Const.EffType;
@@ -59,17 +61,37 @@ public class BattleSoldier_3 extends IPlanSoldier {
 	private HawkTuple2<Integer, Integer> skill12413Buff;
 	private HawkTuple2<Integer, Integer> skill12443Buff;
 	int effect12414num;
+	public int effect12835BaseVaule;
+	public Buff12835 buff12835 = new Buff12835(0, 0, 0);
+
 	@Override
 	public void roundStart() {
 		super.roundStart();
 		int battleRound = getTroop().getBattle().getBattleRound();
 		super303 = battleRound > 1 && battleRound % 3 == 0 && getEffVal(EffType.MDS_1543) > 0;
+		if (Hero1120Rules.isFullyCharged(effect12835BaseVaule, ConstProperty.getInstance().effect12835BaseVaule)) {
+			effect12835BaseVaule = 0;
+			buff12835 = new Buff12835(0, getBattleRound(),
+					getBattleRound() + ConstProperty.getInstance().effect12836ContinueRound);
+			addDebugLog("【12831】All combat drones charged; bomber gains Wingbeat");
+		}
+		if (!buff12835.isActive(getBattleRound())) {
+			effect12835BaseVaule = Hero1120Rules.nextCharge(
+					effect12835BaseVaule,
+					ConstProperty.getInstance().effect12836AtkThresholdValue1,
+					ConstProperty.getInstance().effect12835BaseVaule);
+			addDebugLog("【12831】Round-start drone charge {}", effect12835BaseVaule);
+		}
 	}
 
 	@Override
 	public void beforeAttack(BattleSoldier defSoldier) {
 		super.beforeAttack(defSoldier);
-		hero12051(defSoldier);
+		if (getEffVal(EffType.HERO_12831) > 0) {
+			hero12831(defSoldier);
+		} else if (getEffVal(EffType.EFF_12051) > 0) {
+			hero12051(defSoldier);
+		}
 	}
 
 	private void hero12051(BattleSoldier defSoldier) {
@@ -172,6 +194,117 @@ public class BattleSoldier_3 extends IPlanSoldier {
 			effect12414num++;
 			effect12414num = Math.min(effect12414num, ConstProperty.getInstance().getEffect12414Maxinum());
 			addDebugLog("【12414】轰炸机在释放轮番轰炸技能时，额外附加如下效果:潜能爆发: 个人战时， 且每发动 1 次轮番轰炸后，自身受到攻击时伤害减少 +XX.XX%（该效果可叠加，{} 层）", effect12414num);
+		}
+		hero12051AtkHurtPct = 0;
+		eff12412Atk(target);
+		return target.getType();
+	}
+
+	private void hero12831(BattleSoldier defSoldier) {
+		try {
+			if (!Hero1120Rules.isBombingRound(
+					getEffVal(EffType.HERO_12831),
+					getBattleRound(),
+					ConstProperty.getInstance().effect12831AtkRound)) {
+				return;
+			}
+
+			int atkTimes;
+			if (getEffVal(EffType.EFF_12271) > 0) {
+				atkTimes = Hero1120Rules.attackTimes(
+						BattleConst.WarEff.MASS.check(getTroop().getWarEff()),
+						ConstProperty.getInstance().getEffect12271AtkTimesForPerson(),
+						ConstProperty.getInstance().getEffect12271AtkTimesForMass());
+			} else {
+				atkTimes = Hero1120Rules.attackTimes(
+						BattleConst.WarEff.MASS.check(getTroop().getWarEff()),
+						ConstProperty.getInstance().effect12831AtkTimesForPerson,
+						ConstProperty.getInstance().effect12831AtkTimesForMass);
+			}
+			if (getEffVal(EffType.HERO_12414) > 0) {
+				atkTimes += ConstProperty.getInstance().getEffect12414AtkTimesForPerson();
+				addDebugLog("【12414】Extra personal bombing times {}",
+						ConstProperty.getInstance().getEffect12414AtkTimesForPerson());
+			}
+			atkTimes += effect12066AtkTimes;
+
+			SoldierType lastTarType = SoldierType.PLANE_SOLDIER_4;
+			BattleTroop tarTroop = defSoldier.getTroop();
+			if (getEffVal(EffType.HERO_12411) > 0
+					&& getEffVal(EffType.HERO_12411) + getEffVal(EffType.HERO_12431)
+							+ getEffVal(EffType.HERO_12833) > HawkRand.randInt(10000)) {
+				boolean hasRanged = tarTroop.getSoldierList().stream()
+						.filter(BattleSoldier::isAlive)
+						.anyMatch(BattleSoldier::isYuanCheng);
+				if (!hasRanged) {
+					lastTarType = SoldierType.PLANE_SOLDIER_3;
+				}
+			}
+			if (buff12835.isActive(getBattleRound())) {
+				atkTimes += ConstProperty.getInstance().effect12836BaseVaule;
+			}
+			for (int i = 0; i < atkTimes; i++) {
+				lastTarType = hero12831Atk(tarTroop, i, lastTarType);
+				if (lastTarType == null) {
+					break;
+				}
+			}
+			int effVal12413 = getEffVal(EffType.HERO_12413);
+			if (effVal12413 > 0) {
+				setSkill12413Buff(HawkTuples.tuple(
+						getBattleRound() + ConstProperty.getInstance().getEffect12413ContinueRound() - 1,
+						effVal12413 + getEffVal(EffType.HERO_12834)));
+			}
+		} catch (Exception e) {
+			HawkException.catchException(e);
+		}
+	}
+
+	private SoldierType hero12831Atk(BattleTroop tarTroop, int atktime, SoldierType lastTarType) {
+		boolean ranged = isYuanCheng(lastTarType);
+		Map<SoldierType, BattleSoldier> targetsByType = new HashMap<>(4);
+		List<BattleSoldier> soldierList = new ArrayList<>(tarTroop.getSoldierList());
+		Collections.shuffle(soldierList);
+		for (BattleSoldier target : soldierList) {
+			if (targetsByType.containsKey(target.getType())) {
+				continue;
+			}
+			if (ranged && target.isAlive() && target.isYuanCheng()) {
+				targetsByType.put(target.getType(), target);
+			}
+			if (!ranged && target.isAlive() && target.isJinZhan()) {
+				targetsByType.put(target.getType(), target);
+			}
+		}
+
+		BattleSoldier target = null;
+		for (int typeValue : Hero1120Rules.targetPriority(ranged, lastTarType.getNumber())) {
+			SoldierType type = SoldierType.valueOf(typeValue);
+			if (targetsByType.containsKey(type)) {
+				target = targetsByType.get(type);
+				break;
+			}
+		}
+		if (target == null) {
+			return null;
+		}
+		hero12051AtkHurtPct = Hero1120Rules.combinedEffectValue(
+				getEffVal(EffType.HERO_12831), getEffVal(EffType.HERO_12852))
+				+ (atktime + 1) * getEffVal(EffType.HERO_12832)
+				+ eff12066Add + getEffVal(EffType.HERO_12432);
+		if (target.getType() == SoldierType.CANNON_SOLDIER_7) {
+			hero12051AtkHurtPct += getEffVal(EffType.EFF_12071) + getEffVal(EffType.EFF_12052);
+		}
+		super.attackOnce(target, QIAN_PAI_MAX, 0, Integer.MAX_VALUE, false);
+		if (!buff12835.isActive(getBattleRound())) {
+			effect12835BaseVaule = Hero1120Rules.nextCharge(
+					effect12835BaseVaule,
+					ConstProperty.getInstance().effect12835AtkThresholdValue1,
+					ConstProperty.getInstance().effect12835BaseVaule);
+		}
+		if (getEffVal(EffType.HERO_12414) > 0) {
+			effect12414num++;
+			effect12414num = Math.min(effect12414num, ConstProperty.getInstance().getEffect12414Maxinum());
 		}
 		hero12051AtkHurtPct = 0;
 		eff12412Atk(target);
@@ -415,6 +548,18 @@ public class BattleSoldier_3 extends IPlanSoldier {
 			result += getBuff12574Val(EffType.EFF_12578);
 			addDebugLog("###增幅效果12578是指其触发轰炸机兵种技能 俯冲轰炸增加{} ", getBuff12574Val(EffType.EFF_12578));
 		}
+		if (getEffVal(EffType.HERO_12839) > 0) {
+			double val12839 = getEffVal(EffType.HERO_12839) * GsConst.EFF_PER
+					* ConstProperty.getInstance().effect12839SoldierAdjustMap
+							.getOrDefault(defSoldier.getType(), 10000);
+			int stackCount = Hero1120Rules.cappedRoundStacks(
+					getBattleRound(),
+					ConstProperty.getInstance().effect12838AtkRound,
+					ConstProperty.getInstance().effect12838Maxinum);
+			val12839 = val12839 * GsConst.EFF_PER * stackCount;
+			result += val12839;
+			addDebugLog("【12838~12839】Bomber damage stack count {}", stackCount);
+		}
 		return result;
 	}
 
@@ -431,12 +576,17 @@ public class BattleSoldier_3 extends IPlanSoldier {
 		int effVal12053 = getEffVal(EffType.EFF_12072) > 0 ? getEffVal(EffType.EFF_12072) : getEffVal(EffType.EFF_12053);
 		int effVal12413 = atkSoldier.getType() == SoldierType.TANK_SOLDIER_2 ? 0 : skill12413BuffVal();
 		int hudunTriger = skill.getTrigger() + getEffVal(EffType.EFF_1423) - effVal12053 + effVal12413;
+		int p1IntVal = skill.getP1IntVal();
+		if (getEffVal(EffType.HERO_12837) > 0) {
+			hudunTriger = 10000;
+			p1IntVal = ConstProperty.getInstance().effect12837BaseVaule;
+		}
 		if (!isSss1671BiZhong() && debuff1656round < getTroop().getBattle().getBattleRound() && trigerSkill(skill, hudunTriger)) {
 			final double oldHurtVal = hurtVal;
 			int effVal1457 = getEffVal(EffType.EFF_1457);
 			int effVal1545 = getEffVal(EffType.MDS_1545);
 			int effVal12073 = getEffVal(EffType.EFF_12073) > 0 ? getEffVal(EffType.EFF_12073) : getEffVal(EffType.EFF_12054);
-			int val = skill.getP1IntVal() + effVal1457 + effVal1545 - effVal12073;
+			int val = p1IntVal + effVal1457 + effVal1545 - effVal12073;
 			val = Math.max(0, val);
 			double reduceHurt = hurtVal * GsConst.EFF_PER * val;
 			hurtVal = hurtVal - reduceHurt;
@@ -457,6 +607,32 @@ public class BattleSoldier_3 extends IPlanSoldier {
 					* ConstProperty.getInstance().getEffect12414AdjustMap().getOrDefault(atkSoldier.getType(), 0) * GsConst.EFF_PER;
 			addDebugLog(" {}【12414】自身受到攻击时伤害减少 +{}", getUUID(), r12414num);
 			hurtVal *= (1 - r12414num);
+		}
+		if (!buff12835.isActive(getBattleRound())) {
+			double val12835 = (ConstProperty.getInstance().effect12835BaseVaule - effect12835BaseVaule)
+					* getEffVal(EffType.HERO_12835) * GsConst.EFF_PER
+					* ConstProperty.getInstance().effect12835SoldierAdjustMap
+							.getOrDefault(atkSoldier.getType(), 10000);
+			hurtVal *= 1 - val12835 * GsConst.EFF_PER;
+		}
+		if (getEffVal(EffType.HERO_12837) > 0) {
+			int effectValue = Hero1120Rules.combinedEffectValue(
+					getEffVal(EffType.HERO_12837), getEffVal(EffType.HERO_12853));
+			double val12837 = effectValue * GsConst.EFF_PER
+					* ConstProperty.getInstance().effect12837SoldierAdjustMap
+							.getOrDefault(atkSoldier.getType(), 10000);
+			hurtVal *= 1 - val12837 * GsConst.EFF_PER;
+		}
+		if (getEffVal(EffType.HERO_12838) > 0) {
+			double val12838 = getEffVal(EffType.HERO_12838) * GsConst.EFF_PER
+					* ConstProperty.getInstance().effect12838SoldierAdjustMap
+							.getOrDefault(atkSoldier.getType(), 10000);
+			int stackCount = Hero1120Rules.cappedRoundStacks(
+					getBattleRound(),
+					ConstProperty.getInstance().effect12838AtkRound,
+					ConstProperty.getInstance().effect12838Maxinum);
+			val12838 = val12838 * GsConst.EFF_PER * stackCount;
+			hurtVal *= 1 - val12838;
 		}
 		return hurtVal;
 	}
@@ -490,6 +666,13 @@ public class BattleSoldier_3 extends IPlanSoldier {
 	public int skillFireAtkExactly(BattleSoldier defSoldier) {
 		int result = super.skillFireAtkExactly(defSoldier);
 		result += skill12443BuffVal();
+		if (buff12835.isActive(getBattleRound())) {
+			int effectValue = Hero1120Rules.combinedEffectValue(
+					getEffVal(EffType.HERO_12836), getEffVal(EffType.HERO_12851));
+			result += effectValue * GsConst.EFF_PER
+					* ConstProperty.getInstance().effect12836SoldierAdjustMap
+							.getOrDefault(defSoldier.getType(), 10000);
+		}
 		return result;
 	}
 

@@ -137,7 +137,7 @@ HERO_RUNTIME = {
             "Checker12833.java", "Checker12834.java", "Checker12835.java",
             "Checker12836.java", "Checker12837.java", "Checker12838.java",
             "Checker12839.java", "Checker12841.java", "Checker12851.java",
-            "Checker12852.java", "Checker12853.java",
+            "Checker12852.java", "Checker12853.java", "Hero1120Rules.java",
         ),
         "hooks": {
             "BattleSoldier_3.java": (
@@ -400,6 +400,101 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
             self.assertTrue(has_java_hook(checker_source, r"\bHero1116Rules\.isBothSelfFight\s*\("))
             self.assertEqual(1, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.troopEffType\s*\)", checker_code)))
             self.assertEqual(1, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.tarTroopEffType\s*\)", checker_code)))
+
+    def test_hero_1120_execution_sites_use_live_production_rules(self):
+        source = (self.battle / "BattleSoldier_3.java").read_text(encoding="utf-8")
+        checker_path = self.effects / "hero1120" / "Checker12831.java"
+        buff_path = self.effects / "hero1120" / "Buff12835.java"
+        skill_path = self.skills / "Skill1120.java"
+        self.assertTrue(checker_path.is_file(), "missing live 12831 checker")
+        self.assertTrue(buff_path.is_file(), "missing live 12835 buff")
+        self.assertTrue(skill_path.is_file(), "missing live Skill1120")
+        checker = checker_path.read_text(encoding="utf-8")
+        buff = buff_path.read_text(encoding="utf-8")
+        skill = skill_path.read_text(encoding="utf-8")
+
+        self.assertTrue(has_java_hook(buff, r"\bclass\s+Buff12835\s+extends\s+ISoldierbuff\b"))
+        self.assertTrue(has_java_hook(checker, r"\bHero1120Rules\.is12831Eligible\s*\("))
+
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\broundStart\s*\(\s*\)",
+            r"\bHero1120Rules\.isFullyCharged\s*\(\s*effect12835BaseVaule\s*,\s*ConstProperty\.getInstance\s*\(\s*\)\.effect12835BaseVaule\s*\)",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\broundStart\s*\(\s*\)",
+            r"\beffect12835BaseVaule\s*=\s*Hero1120Rules\.nextCharge\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bbeforeAttack\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            r"\bgetEffVal\s*\(\s*EffType\.HERO_12831\s*\)\s*>\s*0[^}]*\bhero12831\s*\(\s*\w+\s*\)",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bhero12831\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            r"\bHero1120Rules\.isBombingRound\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bhero12831\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            r"\bHero1120Rules\.attackTimes\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bhero12831Atk\s*\(\s*BattleTroop\s+\w+\s*,\s*int\s+\w+\s*,\s*SoldierType\s+\w+\s*\)",
+            r"\bHero1120Rules\.targetPriority\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bhero12831Atk\s*\(\s*BattleTroop\s+\w+\s*,\s*int\s+\w+\s*,\s*SoldierType\s+\w+\s*\)",
+            r"\bHero1120Rules\.combinedEffectValue\s*\(\s*getEffVal\s*\(\s*EffType\.HERO_12831\s*\)\s*,\s*getEffVal\s*\(\s*EffType\.HERO_12852\s*\)\s*\)",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bhero12831Atk\s*\(\s*BattleTroop\s+\w+\s*,\s*int\s+\w+\s*,\s*SoldierType\s+\w+\s*\)",
+            r"\bHero1120Rules\.nextCharge\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bskillHurtExactly\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            r"\bHero1120Rules\.cappedRoundStacks\s*\(",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\breduceHurtValPct\s*\(\s*BattleSoldier\s+\w+\s*,\s*double\s+\w+\s*\)",
+            r"\bHero1120Rules\.combinedEffectValue\s*\(\s*getEffVal\s*\(\s*EffType\.HERO_12837\s*\)\s*,\s*getEffVal\s*\(\s*EffType\.HERO_12853\s*\)\s*\)",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bskillFireAtkExactly\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            r"\bHero1120Rules\.combinedEffectValue\s*\(\s*getEffVal\s*\(\s*EffType\.HERO_12836\s*\)\s*,\s*getEffVal\s*\(\s*EffType\.HERO_12851\s*\)\s*\)",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            skill,
+            r"\beffectTime\s*\(\s*\)",
+            r"\bHero1120Rules\.effectDurationMillis\s*\(\s*effectTime\s*,\s*getSoulEffVal\s*\(\s*EffType\.HERO_12854\s*\)\s*\)",
+        ))
+
+    def test_hero_1120_method_hook_rejects_comments_literals_if_false_and_wrong_method(self):
+        source = (self.battle / "BattleSoldier_3.java").read_text(encoding="utf-8")
+        method = r"\bbeforeAttack\s*\(\s*BattleSoldier\s+\w+\s*\)"
+        hook = r"\bhero12831\s*\(\s*defSoldier\s*\)"
+        self.assertTrue(has_executable_java_method_hook(source, method, hook))
+
+        without_live_hook = source.replace("\t\t\thero12831(defSoldier);", "")
+        decoys = (
+            "\nvoid wrong1120Method() { hero12831(defSoldier); }\n"
+            "// hero12831(defSoldier);\n"
+            "String hero1120Token = \"hero12831(defSoldier);\";\n"
+        )
+        self.assertFalse(has_executable_java_method_hook(without_live_hook + decoys, method, hook))
+        dead_hook = without_live_hook.replace(
+            "\t\tif (getEffVal(EffType.HERO_12831) > 0) {",
+            "\t\tif (getEffVal(EffType.HERO_12831) > 0) {\n\t\t\tif (false) hero12831(defSoldier);",
+        )
+        self.assertFalse(has_executable_java_method_hook(dead_hook, method, hook))
 
     def assert_protocol_and_const_configuration_closure(self, hero_id):
         proto_source = self.const_proto.read_text(encoding="utf-8")
