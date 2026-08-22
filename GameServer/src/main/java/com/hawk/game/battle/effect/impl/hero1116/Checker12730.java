@@ -41,7 +41,7 @@ public class Checker12730 implements IChecker {
 	 */
 	@Override
 	public CheckerKVResult value(CheckerParames parames) {
-		if (parames.solider.getEffVal(EffType.HERO_12721) == 0 || !BattleConst.WarEff.SELF_FIGHT.check(parames.troopEffType)|| !BattleConst.WarEff.SELF_FIGHT.check(parames.tarTroopEffType)) {
+		if (parames.solider.getEffVal(EffType.HERO_12721) == 0 || !Hero1116Rules.isBothSelfFight(BattleConst.WarEff.SELF_FIGHT.check(parames.troopEffType), BattleConst.WarEff.SELF_FIGHT.check(parames.tarTroopEffType))) {
 			return CheckerKVResult.DefaultVal;
 		}
 		int effPer = 0;

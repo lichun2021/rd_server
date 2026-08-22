@@ -17,6 +17,11 @@ public final class Hero1116RulesHarness {
 		assertFalse(Hero1116Rules.is12730Active(1, 9, 10), "12730 excludes rounds before its boundary");
 		assertTrue(Hero1116Rules.is12730Active(1, 10, 10), "12730 includes its first round");
 
+		assertTrue(Hero1116Rules.isBothSelfFight(true, true), "12729/12730 require both troops to be self-fight");
+		assertFalse(Hero1116Rules.isBothSelfFight(true, false), "12729/12730 reject a non-self-fight target");
+		assertFalse(Hero1116Rules.isBothSelfFight(false, true), "12729/12730 reject a non-self-fight source");
+		assertFalse(Hero1116Rules.isBothSelfFight(false, false), "12729/12730 reject two non-self-fight troops");
+
 		assertEquals(300000, Hero1116Rules.effectDurationMillis(300, 0), "base duration is seconds");
 		assertEquals(315000, Hero1116Rules.effectDurationMillis(300, 15), "12746 soul duration extends base seconds");
 	}

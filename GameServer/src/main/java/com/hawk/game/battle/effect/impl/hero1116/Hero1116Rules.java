@@ -21,6 +21,10 @@ public final class Hero1116Rules {
 		return effectValue > 0 && battleRound >= firstRound;
 	}
 
+	public static boolean isBothSelfFight(boolean selfPersonal, boolean targetPersonal) {
+		return selfPersonal && targetPersonal;
+	}
+
 	public static int effectDurationMillis(int baseSeconds, int soulSeconds) {
 		return baseSeconds * 1000 + soulSeconds * 1000;
 	}

@@ -274,8 +274,11 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
         self.assertTrue(has_java_hook(battle_service, r"\bunity\.setTarTroopEffType\s*\(\s*tarTroopEffType\s*\)"))
         self.assertTrue(has_java_hook(battle_service, r"\bsetTarTroopEffType\s*\(\s*unity\.getTarTroopEffType\s*\(\s*\)\s*\)"))
 
-        self.assertEqual(2, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.(?:troopEffType|tarTroopEffType)\s*\)", mask_java_literals(strip_java_comments(checker_12729)))))
-        self.assertEqual(2, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.(?:troopEffType|tarTroopEffType)\s*\)", mask_java_literals(strip_java_comments(checker_12730)))))
+        for checker_source in (checker_12729, checker_12730):
+            checker_code = mask_java_literals(strip_java_comments(checker_source))
+            self.assertTrue(has_java_hook(checker_source, r"\bHero1116Rules\.isBothSelfFight\s*\("))
+            self.assertEqual(1, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.troopEffType\s*\)", checker_code)))
+            self.assertEqual(1, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.tarTroopEffType\s*\)", checker_code)))
 
     def assert_protocol_and_const_configuration_closure(self, hero_id):
         proto_source = self.const_proto.read_text(encoding="utf-8")
