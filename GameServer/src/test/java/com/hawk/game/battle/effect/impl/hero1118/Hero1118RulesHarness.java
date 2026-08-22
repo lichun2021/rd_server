@@ -9,14 +9,17 @@ public final class Hero1118RulesHarness {
 				Hero1118Rules.is12781Eligible(0, 501, 1000, 10000, 5000, 500),
 				"12781 requires a positive root effect");
 		assertFalse(
-				Hero1118Rules.is12781Eligible(1, 49, 90, 1000, 5000, 500),
+				Hero1118Rules.is12781Eligible(1, 49, 1000, 1000, 500, 500),
 				"12781 rejects a share below the rally threshold");
 		assertFalse(
-				Hero1118Rules.is12781Eligible(1, 500, 1000, 10000, 5000, 500),
+				Hero1118Rules.is12781Eligible(1, 50, 100, 1000, 5000, 500),
 				"12781 self share is strict at its boundary");
 		assertTrue(
-				Hero1118Rules.is12781Eligible(1, 501, 1000, 10000, 5000, 500),
-				"12781 includes the rally boundary and accepts an above-boundary self share");
+				Hero1118Rules.is12781Eligible(1, 50, 99, 1000, 5000, 500),
+				"12781 includes the exact rally boundary and accepts an above-boundary self share");
+
+		assertEquals(2000, Hero1118Rules.combineAdditiveDamageBonus(1000, 1000),
+				"12782 shares the additive damage interval instead of compounding to 2100");
 
 		assertFalse(Hero1118Rules.shouldSwitchStance(1, 9, 10), "stance stays before the boundary");
 		assertTrue(Hero1118Rules.shouldSwitchStance(1, 10, 10), "stance switches at the boundary");

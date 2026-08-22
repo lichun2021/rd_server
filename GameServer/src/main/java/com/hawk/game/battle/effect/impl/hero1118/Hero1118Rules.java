@@ -34,6 +34,10 @@ public final class Hero1118Rules {
 		return baseEffectValue + soulEffectValue;
 	}
 
+	public static int combineAdditiveDamageBonus(int currentBonus, int addedBonus) {
+		return currentBonus + addedBonus;
+	}
+
 	public static int effectDurationMillis(int baseSeconds, int soulSeconds) {
 		return baseSeconds * 1000 + soulSeconds * 1000;
 	}

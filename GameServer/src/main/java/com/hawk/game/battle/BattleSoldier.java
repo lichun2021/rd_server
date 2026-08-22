@@ -44,6 +44,7 @@ import com.hawk.game.battle.effect.impl.hero1112.Debuff12611;
 import com.hawk.game.battle.effect.impl.hero1114.Debuff12674;
 import com.hawk.game.battle.effect.impl.hero1116.Debuff12724;
 import com.hawk.game.battle.effect.impl.hero1118.Debuff12785;
+import com.hawk.game.battle.effect.impl.hero1118.Hero1118Rules;
 import com.hawk.game.battle.guarder.GuarderPlayer;
 import com.hawk.game.battle.sssSolomon.ISSSSolomonPet;
 import com.hawk.game.config.BattleSoldierCfg;
@@ -138,6 +139,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 	private Map<String, Integer> jiDiEnXiCntMap;
 
 	private Map<Integer, Integer> roundDead;
+	private Map<Integer, Integer> roundKill;
 
 	private HawkTuple3<Integer, Integer, Integer> eff12163Debuff = HawkTuples.tuple(0, 0, 0);
 	private int eff12163DebuffExtry;
@@ -276,6 +278,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		this.killTypeCntMap = new HashMap<>();
 		this.jiDiEnXiCntMap = new HashMap<>();
 		this.roundDead = new HashMap<>();
+		this.roundKill = new HashMap<>();
 		this.oriCnt = count;
 		this.shadowCnt = shadowCnt;
 		this.soldierId = soldierCfg.getId();
@@ -1090,10 +1093,6 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 直接百分比+最终值*/
 	public double addHurtValPct(BattleSoldier defSoldier, double hurtVal) {
-		for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
-			hurtVal *= 1 + GsConst.EFF_PER * tank.hero1118.buff12782(this);
-		}
-
 		List<Integer> list = tuplePerList(BattleTupleType.Type.HURT_PCT, defSoldier.getType());
 		for (int effVal : list) {
 			hurtVal *= (1 + effVal * GsConst.EFF_PER);
@@ -1280,6 +1279,9 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		result += defSoldier.skill544DebuffVal();
 		if (this instanceof ISSSSolomonPet) {
 			result += getEffVal(EffType.EFF_12242);
+		}
+		for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
+			result = Hero1118Rules.combineAdditiveDamageBonus(result, tank.hero1118.buff12782(this));
 		}
 		return result;
 	}
@@ -1962,6 +1964,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	public void addKillCnt(BattleSoldier soldier, int kill) {
 		this.killCntMap.merge(soldier, kill, (v1, v2) -> v1 + v2);
+		this.roundKill.merge(getBattleRound(), kill, (v1, v2) -> v1 + v2);
 		this.killTypeCntMap.merge(soldier.getType(), kill, (v1, v2) -> v1 + v2);
 		this.killPower += kill * soldier.getSoldierCfg().getPower();
 	}
@@ -3226,6 +3229,10 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	public void setForceFieldMarch(long forceFieldMarch) {
 		this.forceFieldMarch = forceFieldMarch;
+	}
+
+	public Map<Integer, Integer> getRoundKill() {
+		return roundKill;
 	}
 	
 	public double forceField(BattleSoldier atk, double hurtVal){

@@ -92,7 +92,6 @@ HERO_RUNTIME = {
                 r"\btank\.hero1118\.buff12787\s*\(",
                 r"\btank\.hero1118\.debuff12786\s*\(",
                 r"\btank\.hero1118\.buff12784reduceHurtValPct\s*\(",
-                r"\btank\.hero1118\.buff12782\s*\(",
                 r"\btank\.hero1118SoulLink\s*\(",
                 r"\bdebuff12724Num\s*\+\s*debuff12785Num\b",
             ),
@@ -224,6 +223,55 @@ def has_java_hook(source: str, pattern: str) -> bool:
     return re.search(pattern, mask_java_literals(strip_java_comments(source))) is not None
 
 
+def extract_java_method_body(source: str, method_pattern: str) -> str:
+    """Return a comment/literal-masked Java method body, balancing nested braces."""
+    code = mask_java_literals(strip_java_comments(source))
+    declaration = re.search(method_pattern + r"\s*\{", code)
+    if declaration is None:
+        return ""
+    opening_brace = declaration.end() - 1
+    depth = 1
+    index = opening_brace + 1
+    while index < len(code) and depth:
+        if code[index] == "{":
+            depth += 1
+        elif code[index] == "}":
+            depth -= 1
+        index += 1
+    return code[opening_brace + 1:index - 1] if depth == 0 else ""
+
+
+def strip_constant_false_blocks(code: str) -> str:
+    """Mask braced if(false) blocks so dead tokens cannot satisfy executable hooks."""
+    result = list(code)
+    search_from = 0
+    pattern = re.compile(r"\bif\s*\(\s*false\s*\)\s*\{")
+    while True:
+        match = pattern.search(code, search_from)
+        if match is None:
+            break
+        opening_brace = match.end() - 1
+        depth = 1
+        index = opening_brace + 1
+        while index < len(code) and depth:
+            if code[index] == "{":
+                depth += 1
+            elif code[index] == "}":
+                depth -= 1
+            index += 1
+        if depth != 0:
+            return ""
+        for offset in range(match.start(), index):
+            result[offset] = "\n" if code[offset] == "\n" else " "
+        search_from = index
+    return "".join(result)
+
+
+def has_executable_java_method_hook(source: str, method_pattern: str, hook_pattern: str) -> bool:
+    body = extract_java_method_body(source, method_pattern)
+    return re.search(hook_pattern, strip_constant_false_blocks(body)) is not None
+
+
 class NewHeroRuntimeClosureTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -250,6 +298,58 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
         pattern = r"\bhero1116\.roundStart\s*\(\s*\)"
         self.assertTrue(has_java_hook(source, pattern))
         self.assertFalse(has_java_hook(source.replace("hero1116.roundStart();", ""), pattern))
+
+    def test_method_hook_matcher_rejects_wrong_method_comments_literals_and_if_false(self):
+        hook = r"\btank\.hero1118\.buff12782\s*\(\s*this\s*\)"
+        source = (
+            "int wrongMethod() { return tank.hero1118.buff12782(this); }\n"
+            "int skillHurtExactly(BattleSoldier target) {\n"
+            "  // tank.hero1118.buff12782(this)\n"
+            "  String token = \"tank.hero1118.buff12782(this)\";\n"
+            "  if (false) { return tank.hero1118.buff12782(this); }\n"
+            "  return 0;\n"
+            "}\n"
+        )
+        method = r"\bskillHurtExactly\s*\(\s*BattleSoldier\s+\w+\s*\)"
+        self.assertFalse(has_executable_java_method_hook(source, method, hook))
+        live_source = source.replace("  return 0;", "  return tank.hero1118.buff12782(this);")
+        self.assertTrue(has_executable_java_method_hook(live_source, method, hook))
+
+    def test_hero_1118_round_kill_chain_and_12782_execution_site(self):
+        source = (self.battle / "BattleSoldier.java").read_text(encoding="utf-8")
+        self.assertTrue(has_java_hook(source, r"\bprivate\s+Map\s*<\s*Integer\s*,\s*Integer\s*>\s+roundKill\s*;"))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\binit\s*\(\s*Player\s+\w+\s*,\s*BattleSoldierCfg\s+\w+\s*,\s*int\s+\w+\s*,\s*int\s+\w+\s*\)",
+            r"\bthis\.roundKill\s*=\s*new\s+HashMap\s*<\s*>\s*\(\s*\)\s*;",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\baddKillCnt\s*\(\s*BattleSoldier\s+\w+\s*,\s*int\s+\w+\s*\)",
+            r"\bthis\.roundKill\.merge\s*\(\s*getBattleRound\s*\(\s*\)\s*,\s*kill\s*,\s*\(\s*v1\s*,\s*v2\s*\)\s*->\s*v1\s*\+\s*v2\s*\)\s*;",
+        ))
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bgetRoundKill\s*\(\s*\)",
+            r"\breturn\s+roundKill\s*;",
+        ))
+
+        buff12782 = r"\btank\.hero1118\.buff12782\s*\(\s*this\s*\)"
+        additive12782 = (
+            r"\bresult\s*=\s*Hero1118Rules\.combineAdditiveDamageBonus\s*\(\s*result\s*,\s*"
+            + buff12782
+            + r"\s*\)\s*;"
+        )
+        self.assertTrue(has_executable_java_method_hook(
+            source,
+            r"\bskillHurtExactly\s*\(\s*BattleSoldier\s+\w+\s*\)",
+            additive12782,
+        ))
+        self.assertFalse(has_executable_java_method_hook(
+            source,
+            r"\baddHurtValPct\s*\(\s*BattleSoldier\s+\w+\s*,\s*double\s+\w+\s*\)",
+            buff12782,
+        ))
 
     def test_hero_1116_target_war_eff_plumbing(self):
         checker_params = (self.java / "battle" / "effect" / "CheckerParames.java").read_text(encoding="utf-8")
