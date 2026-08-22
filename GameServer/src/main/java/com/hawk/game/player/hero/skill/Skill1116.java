@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.math.NumberUtils;
 import org.hawk.os.HawkException;
 
+import com.hawk.game.battle.effect.impl.hero1116.Hero1116Rules;
 import com.hawk.game.protocol.Const.EffType;
 import com.hawk.game.protocol.Hero.PBHeroEffect;
 import com.hawk.game.util.EffectParams;
@@ -77,7 +78,7 @@ public class Skill1116 extends ISSSHeroSkill {
 
 	@Override
 	public int effectTime() {
-		return effectTime * 1000 + getSoulEffVal(EffType.HERO_12746) * 1000;
+		return Hero1116Rules.effectDurationMillis(effectTime, getSoulEffVal(EffType.HERO_12746));
 	}
 
 }

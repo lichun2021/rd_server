@@ -36,6 +36,7 @@ HERO_RUNTIME = {
         ),
         "hooks": {
             "BattleSoldier.java": (
+                r"\bHashMultimap\s*<\s*Integer\s*,\s*Debuff12724\s*>\s+debuff12724\b",
                 r"\bdebuff12724Num\s*=\s*debuff12724Num\s*\(\s*\)",
             ),
             "BattleSoldier_6.java": (

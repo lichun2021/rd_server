@@ -33,7 +33,7 @@ public class Hero1116Param {
 	}
 
 	public void roundStart() {
-		this.eff12721 = parent.getEffVal(EffType.HERO_12721) > 0;
+		this.eff12721 = Hero1116Rules.is12721Active(parent.getEffVal(EffType.HERO_12721));
 		if (!eff12721) {
 			return;
 		}
@@ -43,7 +43,7 @@ public class Hero1116Param {
 		this.eff12723TypeChange = false;
 		this.eff12728 = 0;
 		skill12722Targes.clear();
-		if (parent.getEffVal(EffType.HERO_12722) == 0 || parent.getBattleRound() % ConstProperty.getInstance().effect12722AtkRound != 0) {
+		if (!Hero1116Rules.is12722Round(parent.getEffVal(EffType.HERO_12722), parent.getBattleRound(), ConstProperty.getInstance().effect12722AtkRound)) {
 			return;
 		}
 		List<RandomContent<BattleSoldier>> objList = parent.getTroop().getEnemyTroop().getSoldierList().stream().filter(BattleSoldier::canBeAttack)
@@ -164,7 +164,7 @@ public class Hero1116Param {
 			hurtVal = hurtVal * GsConst.EFF_PER * (GsConst.EFF_RATE - eff12728);
 			parent.addDebugLog("【12727~12728】镜像残影自身狙击兵受到伤害减少 {} , {}", eff12727, eff12728);
 		}
-		if (parent.getEffVal(EffType.HERO_12729) > 0 && parent.getBattleRound() <= ConstProperty.getInstance().effect12729AtkRound) {
+		if (Hero1116Rules.is12729Active(parent.getEffVal(EffType.HERO_12729), parent.getBattleRound(), ConstProperty.getInstance().effect12729AtkRound)) {
 			int effVal12729 = (int) (parent.getEffVal(EffType.HERO_12729) * GsConst.EFF_PER
 					* ConstProperty.getInstance().effect12729SoldierAdjustMap.getOrDefault(atkSoldier.getType(), 0));
 			hurtVal = hurtVal * GsConst.EFF_PER * (GsConst.EFF_RATE - effVal12729);
@@ -189,7 +189,7 @@ public class Hero1116Param {
 //			parent.addDebugLog("【12721】棱镜矩阵 {} hurtVal : {} ", defSoldier.getUUID(), hurtVal);
 //		}
 
-		if (parent.getEffVal(EffType.HERO_12730) > 0 && parent.getBattleRound() >= ConstProperty.getInstance().effect12730AtkRound) {
+		if (Hero1116Rules.is12730Active(parent.getEffVal(EffType.HERO_12730), parent.getBattleRound(), ConstProperty.getInstance().effect12730AtkRound)) {
 			int effVal12730 = (int) (parent.getEffVal(EffType.HERO_12730) * GsConst.EFF_PER
 					* ConstProperty.getInstance().effect12730SoldierAdjustMap.getOrDefault(defSoldier.getType(), 0));
 			hurtVal = hurtVal * GsConst.EFF_PER * (GsConst.EFF_RATE + effVal12730);
