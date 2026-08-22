@@ -242,25 +242,31 @@ def extract_java_method_body(source: str, method_pattern: str) -> str:
 
 
 def strip_constant_false_blocks(code: str) -> str:
-    """Mask braced if(false) blocks so dead tokens cannot satisfy executable hooks."""
+    """Mask braced or single-statement if(false) bodies in an extracted method."""
     result = list(code)
     search_from = 0
-    pattern = re.compile(r"\bif\s*\(\s*false\s*\)\s*\{")
+    pattern = re.compile(r"\bif\s*\(\s*false\s*\)\s*")
     while True:
         match = pattern.search(code, search_from)
         if match is None:
             break
-        opening_brace = match.end() - 1
-        depth = 1
-        index = opening_brace + 1
-        while index < len(code) and depth:
-            if code[index] == "{":
-                depth += 1
-            elif code[index] == "}":
-                depth -= 1
-            index += 1
-        if depth != 0:
-            return ""
+        statement_start = match.end()
+        if statement_start < len(code) and code[statement_start] == "{":
+            depth = 1
+            index = statement_start + 1
+            while index < len(code) and depth:
+                if code[index] == "{":
+                    depth += 1
+                elif code[index] == "}":
+                    depth -= 1
+                index += 1
+            if depth != 0:
+                return ""
+        else:
+            semicolon = code.find(";", statement_start)
+            if semicolon < 0:
+                return ""
+            index = semicolon + 1
         for offset in range(match.start(), index):
             result[offset] = "\n" if code[offset] == "\n" else " "
         search_from = index
@@ -307,6 +313,8 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
             "  // tank.hero1118.buff12782(this)\n"
             "  String token = \"tank.hero1118.buff12782(this)\";\n"
             "  if (false) { return tank.hero1118.buff12782(this); }\n"
+            "  if (false) return tank.hero1118.buff12782(this);\n"
+            "  if (false) tank.hero1118.buff12782(this);\n"
             "  return 0;\n"
             "}\n"
         )
