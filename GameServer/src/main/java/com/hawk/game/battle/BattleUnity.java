@@ -34,6 +34,8 @@ public class BattleUnity {
 	private boolean isDuel;
 
 	private Map<EffType, CheckerKVResult> tarTypeNotSensitiveCache = new HashMap<>();
+	private BattleConst.WarEff troopEffType;
+	private BattleConst.WarEff tarTroopEffType;
 	
 	private BattleUnity() {
 	}
@@ -170,5 +172,21 @@ public class BattleUnity {
 	
 	public Map<EffType, CheckerKVResult> getTarTypeNotSensitiveCache() {
 		return tarTypeNotSensitiveCache;
+	}
+
+	public BattleConst.WarEff getTroopEffType() {
+		return troopEffType;
+	}
+
+	public void setTroopEffType(BattleConst.WarEff troopEffType) {
+		this.troopEffType = troopEffType;
+	}
+
+	public BattleConst.WarEff getTarTroopEffType() {
+		return tarTroopEffType;
+	}
+
+	public void setTarTroopEffType(BattleConst.WarEff tarTroopEffType) {
+		this.tarTroopEffType = tarTroopEffType;
 	}
 }

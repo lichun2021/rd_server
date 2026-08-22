@@ -238,6 +238,44 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
         self.assertTrue(has_java_hook(source, pattern))
         self.assertFalse(has_java_hook(source.replace("hero1116.roundStart();", ""), pattern))
 
+    def test_hero_1116_target_war_eff_plumbing(self):
+        checker_params = (self.java / "battle" / "effect" / "CheckerParames.java").read_text(encoding="utf-8")
+        battle_unity = (self.battle / "BattleUnity.java").read_text(encoding="utf-8")
+        battle_service = (self.battle / "BattleService.java").read_text(encoding="utf-8")
+        checker_12729 = (self.effects / "hero1116" / "Checker12729.java").read_text(encoding="utf-8")
+        checker_12730 = (self.effects / "hero1116" / "Checker12730.java").read_text(encoding="utf-8")
+
+        self.assertTrue(has_java_hook(checker_params, r"\bpublic\s+final\s+BattleConst\.WarEff\s+tarTroopEffType\b"))
+        self.assertTrue(has_java_hook(checker_params, r"\bsetTarTroopEffType\s*\(\s*BattleConst\.WarEff\s+tarTroopEffType\s*\)"))
+        self.assertTrue(has_java_hook(checker_params, r"\bnew\s+CheckerParames\s*\([^;]*\btarTroopEffType\b"))
+
+        self.assertTrue(has_java_hook(battle_unity, r"\bBattleConst\.WarEff\s+troopEffType\b"))
+        self.assertTrue(has_java_hook(battle_unity, r"\bBattleConst\.WarEff\s+tarTroopEffType\b"))
+        self.assertTrue(has_java_hook(battle_unity, r"\bsetTarTroopEffType\s*\(\s*BattleConst\.WarEff\s+tarTroopEffType\s*\)"))
+
+        code = mask_java_literals(strip_java_comments(battle_service))
+        self.assertRegex(
+            code,
+            r"\bbuildBattleSoldierList\s*\(\s*List<BattleUnity>\s+unitList\s*,\s*List<BattleUnity>\s+tarUnitList\s*,\s*BattleConst\.WarEff\s+troopEffType\s*,\s*BattleConst\.WarEff\s+tarTroopEffType\s*,",
+        )
+        build_calls = re.findall(r"\bbuildBattleSoldierList\s*\(([^\n;]+)\)", code)
+        build_calls = [call for call in build_calls if "List<" not in call]
+        self.assertTrue(build_calls, "missing battle-soldier build calls")
+        for call in build_calls:
+            args = [arg.strip() for arg in call.split(",")]
+            self.assertGreaterEqual(len(args), 5, f"missing target WarEff in build call: {call}")
+            self.assertIn(
+                (args[2], args[3]),
+                (("atkTroopEffType", "defTroopEffType"), ("defTroopEffType", "atkTroopEffType")),
+                f"attacker/defender WarEff pairing is not propagated: {call}",
+            )
+        self.assertTrue(has_java_hook(battle_service, r"\bunity\.setTroopEffType\s*\(\s*troopEffType\s*\)"))
+        self.assertTrue(has_java_hook(battle_service, r"\bunity\.setTarTroopEffType\s*\(\s*tarTroopEffType\s*\)"))
+        self.assertTrue(has_java_hook(battle_service, r"\bsetTarTroopEffType\s*\(\s*unity\.getTarTroopEffType\s*\(\s*\)\s*\)"))
+
+        self.assertEqual(2, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.(?:troopEffType|tarTroopEffType)\s*\)", mask_java_literals(strip_java_comments(checker_12729)))))
+        self.assertEqual(2, len(re.findall(r"\bWarEff\.SELF_FIGHT\.check\s*\(\s*parames\.(?:troopEffType|tarTroopEffType)\s*\)", mask_java_literals(strip_java_comments(checker_12730)))))
+
     def assert_protocol_and_const_configuration_closure(self, hero_id):
         proto_source = self.const_proto.read_text(encoding="utf-8")
         const_property_source = strip_java_comments(self.const_property.read_text(encoding="utf-8"))

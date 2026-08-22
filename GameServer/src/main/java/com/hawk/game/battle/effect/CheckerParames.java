@@ -22,6 +22,7 @@ public class CheckerParames {
 	/** 目标兵种类型 */
 	public final SoldierType tarType;
 	public final BattleConst.WarEff troopEffType;
+	public final BattleConst.WarEff tarTroopEffType;
 	public final List<Integer> heroId;
 	/** 已方所有参战玩家 */
 	public final List<ArmyInfo> armyList;
@@ -40,12 +41,13 @@ public class CheckerParames {
 	/** 慎用! 对应的战场, troop等都没有组装 */
 	public final BattleSoldier solider;
 
-	private CheckerParames(BattleSoldier solider, SoldierType type, SoldierType tarType, BattleConst.WarEff troopEffType, List<Integer> heroId,
+	private CheckerParames(BattleSoldier solider, SoldierType type, SoldierType tarType, BattleConst.WarEff troopEffType, BattleConst.WarEff tarTroopEffType, List<Integer> heroId,
 			int supersoldierId, int hurtPer, BattleUnity unity,BattleTupleType.Type tupleType) {
 		this.solider = solider;
 		this.tarType = tarType;
 		this.type = type;
 		this.troopEffType = troopEffType;
+		this.tarTroopEffType = tarTroopEffType;
 		this.heroId = heroId;
 		this.hurtPer = hurtPer;
 		this.supersoldierId = supersoldierId;
@@ -194,13 +196,14 @@ public class CheckerParames {
 		private BattleSoldier solider;
 		private SoldierType tarType;
 		private BattleConst.WarEff troopEffType;
+		private BattleConst.WarEff tarTroopEffType;
 		private List<Integer> heroId;
 		private int supersoldierId;
 		private int hurtPer;
 		private BattleUnity unity;
 		private BattleTupleType.Type tupleType;
 		public CheckerParames build() {
-			CheckerParames pa = new CheckerParames(solider, solider.getType(), tarType, troopEffType, heroId, supersoldierId, hurtPer, unity,tupleType);
+			CheckerParames pa = new CheckerParames(solider, solider.getType(), tarType, troopEffType, tarTroopEffType, heroId, supersoldierId, hurtPer, unity,tupleType);
 			return pa;
 		}
 
@@ -228,6 +231,11 @@ public class CheckerParames {
 
 		public Builder setTroopEffType(BattleConst.WarEff troopEffType) {
 			this.troopEffType = troopEffType;
+			return this;
+		}
+
+		public Builder setTarTroopEffType(BattleConst.WarEff tarTroopEffType) {
+			this.tarTroopEffType = tarTroopEffType;
 			return this;
 		}
 

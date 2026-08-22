@@ -303,8 +303,8 @@ public class BattleService extends HawkAppObj {
 
 		List<BattleUnity> monsterList = monsterArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -399,8 +399,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setHeroIds(heroIds);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -487,8 +487,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setHeroIds(heroIds);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -565,8 +565,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setHeroIds(foggyInfo.getHeroIds());
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, worldPoint.getId(), atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -644,8 +644,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setMechacoreSuit(MechaCoreSuitType.MECHA_ONE);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, worldPoint.getId(), atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -720,8 +720,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setHeroIds(cfg.getHeroIdList());
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -791,8 +791,8 @@ public class BattleService extends HawkAppObj {
 		defArmyMap.put(npcPlayer.getId(), defArmyList);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -864,8 +864,8 @@ public class BattleService extends HawkAppObj {
 		List<BattleUnity> defArmyList = buildPlayerArmyList(pointId, defMarchs, defPlayers.get(0), defTypeSet, defArmyMap, defTroopEffType);
 		List<BattleUnity> monsterList = monsterArmys.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, atkTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, defTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, atkTroopEffType, defTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(defPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), defPlayers.get(0).getId());
@@ -960,8 +960,8 @@ public class BattleService extends HawkAppObj {
 		final NpcPlayer npc = npcPlayer;
 		List<BattleUnity> monsterList = monsterArmys.stream().map(army -> BattleUnity.valueOf(npc, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, atkTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, defTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, atkTroopEffType, defTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(defPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), defPlayers.get(0).getId());
@@ -1030,8 +1030,8 @@ public class BattleService extends HawkAppObj {
 		List<BattleUnity> defArmyList = buildPlayerArmyList(pointId, defMarchs, defPlayers.get(0), defTypeSet, defArmyMap, defTroopEffType);
 		List<BattleUnity> monsterList = atkArmys.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, atkTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, defTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(monsterList, defArmyList, atkTroopEffType, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, monsterList, defTroopEffType, atkTroopEffType, defTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(defPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), defPlayers.get(0).getId());
@@ -1115,8 +1115,8 @@ public class BattleService extends HawkAppObj {
 		defArmyMap.put(npcPlayer.getId(), defArmyList);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -1205,8 +1205,8 @@ public class BattleService extends HawkAppObj {
 		defArmyMap.put(npcPlayer.getId(), defArmyList);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, new EffectParams())).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -1296,8 +1296,8 @@ public class BattleService extends HawkAppObj {
 		effParams.setHeroIds(heroIds);
 		List<BattleUnity> monsterList = defArmyList.stream().map(army -> BattleUnity.valueOf(npcPlayer, army, effParams)).collect(Collectors.toList());
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, monsterList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(monsterList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayers.get(0).getId(), battleType, pointId, atkPlayers.get(0).getId(), npcPlayer.getId());
@@ -1574,8 +1574,8 @@ public class BattleService extends HawkAppObj {
 		}
 		
 		// 构建参战数据
-		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, defArmyList, atkTroopEffType, defTypeSet);
-		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, atkArmyList, defTroopEffType, atkTypeSet);
+		List<BattleSoldier> atkSoldiers = buildBattleSoldierList(atkArmyList, defArmyList, atkTroopEffType, defTroopEffType, defTypeSet);
+		List<BattleSoldier> defSoldiers = buildBattleSoldierList(defArmyList, atkArmyList, defTroopEffType, atkTroopEffType, atkTypeSet);
 
 		// 构建战斗
 		Battle battle = new Battle(atkPlayer.getId(), battleType, pointId, atkPlayer.getId(), defPlayer.getId());
@@ -2173,11 +2173,13 @@ public class BattleService extends HawkAppObj {
 	 *            部队作用号类型-集结时 @see WarEff_MASS;
 	 * @return
 	 */
-	public List<BattleSoldier> buildBattleSoldierList(List<BattleUnity> unitList,List<BattleUnity> tarUnitList, BattleConst.WarEff troopEffType, Set<SoldierType> tarTypeSet) {
+	public List<BattleSoldier> buildBattleSoldierList(List<BattleUnity> unitList,List<BattleUnity> tarUnitList, BattleConst.WarEff troopEffType, BattleConst.WarEff tarTroopEffType, Set<SoldierType> tarTypeSet) {
 		ListIterator<BattleUnity> listIterator = unitList.listIterator();
 		while (listIterator.hasNext()) {
 			try {
 				BattleUnity unity = listIterator.next();
+				unity.setTroopEffType(troopEffType);
+				unity.setTarTroopEffType(tarTroopEffType);
 				unity.initSolder();
 			} catch (Exception e) {
 				listIterator.remove();
@@ -2188,6 +2190,8 @@ public class BattleService extends HawkAppObj {
 		while (listIteratortar.hasNext()) {
 			try {
 				BattleUnity unity = listIteratortar.next();
+				unity.setTroopEffType(tarTroopEffType);
+				unity.setTarTroopEffType(troopEffType);
 				unity.initSolder();
 			} catch (Exception e) {
 				listIteratortar.remove();
@@ -2671,6 +2675,7 @@ public class BattleService extends HawkAppObj {
 				.setSolider(solider)
 				.setTarType(tarType)
 				.setTroopEffType(troopEffType)
+				.setTarTroopEffType(unity.getTarTroopEffType())
 				.setHeroId(unity.getEffectParams().getHeroIds())
 				.setHurtPer(unity.getHurtPer())
 				.setSupersoldierId(unity.getEffectParams().getSuperSoliderId())
