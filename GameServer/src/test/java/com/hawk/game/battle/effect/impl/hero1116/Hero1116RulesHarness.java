@@ -22,6 +22,11 @@ public final class Hero1116RulesHarness {
 		assertFalse(Hero1116Rules.isBothSelfFight(false, true), "12729/12730 reject a non-self-fight source");
 		assertFalse(Hero1116Rules.isBothSelfFight(false, false), "12729/12730 reject two non-self-fight troops");
 
+		assertEquals(25, Hero1116Rules.adjustAffectedCount(100, 2500, 10000),
+				"12724 applies the default soldier coefficient");
+		assertEquals(100, Hero1116Rules.adjustAffectedCount(100, 2500, 40000),
+				"12724 applies a non-default soldier coefficient");
+
 		assertEquals(300000, Hero1116Rules.effectDurationMillis(300, 0), "base duration is seconds");
 		assertEquals(315000, Hero1116Rules.effectDurationMillis(300, 15), "12746 soul duration extends base seconds");
 	}

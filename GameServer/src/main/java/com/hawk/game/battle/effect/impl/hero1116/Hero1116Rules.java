@@ -25,6 +25,10 @@ public final class Hero1116Rules {
 		return selfPersonal && targetPersonal;
 	}
 
+	public static int adjustAffectedCount(int freeCount, int effectValue, int soldierAdjust) {
+		return (int) (freeCount * 0.0001d * effectValue * 0.0001d * soldierAdjust);
+	}
+
 	public static int effectDurationMillis(int baseSeconds, int soulSeconds) {
 		return baseSeconds * 1000 + soulSeconds * 1000;
 	}

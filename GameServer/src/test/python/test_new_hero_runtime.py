@@ -1,4 +1,7 @@
 import re
+import shutil
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -18,6 +21,7 @@ HERO_RUNTIME = {
             ("effect12722RoundWeight", "effect12722RoundWeightMap"),
             ("effect12722SoldierAdjust", "effect12722SoldierAdjustMap"),
             ("effect12723NumLimit", "effect12723NumLimit"),
+            ("effect12724SoldierAdjust", "effect12724SoldierAdjustMap"),
             ("effect12726SoldierAdjust", "effect12726SoldierAdjustMap"),
             ("effect12727SoldierAdjust", "effect12727SoldierAdjustMap"),
             ("effect12728SoldierAdjust", "effect12728SoldierAdjustMap"),
@@ -289,6 +293,52 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
         cls.const_property = cls.java / "config" / "ConstProperty.java"
         cls.const_xml = cls.repo / "GameServer" / "xml" / "const.xml"
         cls.const_proto = cls.repo / "Protocol" / "Const.proto"
+
+    def test_rule_harnesses_execute_production_rules(self):
+        javac = shutil.which("javac")
+        java = shutil.which("java")
+        self.assertIsNotNone(javac, "javac is required to execute hero rule harnesses")
+        self.assertIsNotNone(java, "java is required to execute hero rule harnesses")
+
+        heroes = (1116, 1118, 1120)
+        sources = []
+        for hero_id in heroes:
+            package = self.effects / f"hero{hero_id}"
+            sources.extend((
+                package / f"Hero{hero_id}Rules.java",
+                self.repo / "GameServer" / "src" / "test" / "java" / "com" / "hawk" / "game"
+                / "battle" / "effect" / "impl" / f"hero{hero_id}" / f"Hero{hero_id}RulesHarness.java",
+            ))
+
+        with tempfile.TemporaryDirectory(prefix="hero-rules-harness-") as output_dir:
+            compile_result = subprocess.run(
+                [javac, "-encoding", "UTF-8", "-d", output_dir, *(str(path) for path in sources)],
+                cwd=self.repo,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(
+                0,
+                compile_result.returncode,
+                f"hero rule harness compilation failed:\n{compile_result.stdout}\n{compile_result.stderr}",
+            )
+            for hero_id in heroes:
+                class_name = (
+                    f"com.hawk.game.battle.effect.impl.hero{hero_id}."
+                    f"Hero{hero_id}RulesHarness"
+                )
+                with self.subTest(hero_id=hero_id):
+                    run_result = subprocess.run(
+                        [java, "-cp", output_dir, class_name],
+                        cwd=self.repo,
+                        capture_output=True,
+                        text=True,
+                    )
+                    self.assertEqual(
+                        0,
+                        run_result.returncode,
+                        f"{class_name} failed:\n{run_result.stdout}\n{run_result.stderr}",
+                    )
 
     def test_hook_matcher_ignores_comments_and_literals(self):
         source = (

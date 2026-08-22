@@ -43,6 +43,7 @@ import com.hawk.game.battle.effect.impl.hero1110.Buff12574;
 import com.hawk.game.battle.effect.impl.hero1112.Debuff12611;
 import com.hawk.game.battle.effect.impl.hero1114.Debuff12674;
 import com.hawk.game.battle.effect.impl.hero1116.Debuff12724;
+import com.hawk.game.battle.effect.impl.hero1116.Hero1116Rules;
 import com.hawk.game.battle.effect.impl.hero1118.Debuff12785;
 import com.hawk.game.battle.effect.impl.hero1118.Hero1118Rules;
 import com.hawk.game.battle.guarder.GuarderPlayer;
@@ -1871,7 +1872,10 @@ public abstract class BattleSoldier implements IBattleSoldier {
 				effect += debuff.eff12724;
 			}
 		}
-		int result = (int) (getFreeCnt() * GsConst.EFF_PER * effect);
+		int result = Hero1116Rules.adjustAffectedCount(
+				getFreeCnt(),
+				effect,
+				ConstProperty.getInstance().effect12724SoldierAdjustMap.getOrDefault(getType(), 10000));
 		addDebugLog("【12724】 {} {}数量的部队本回合无法进行攻击", getUUID(), result);
 		return result;
 	}
