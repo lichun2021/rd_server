@@ -43,6 +43,7 @@ import com.hawk.game.battle.effect.impl.hero1110.Buff12574;
 import com.hawk.game.battle.effect.impl.hero1112.Debuff12611;
 import com.hawk.game.battle.effect.impl.hero1114.Debuff12674;
 import com.hawk.game.battle.effect.impl.hero1116.Debuff12724;
+import com.hawk.game.battle.effect.impl.hero1118.Debuff12785;
 import com.hawk.game.battle.guarder.GuarderPlayer;
 import com.hawk.game.battle.sssSolomon.ISSSSolomonPet;
 import com.hawk.game.config.BattleSoldierCfg;
@@ -230,7 +231,9 @@ public abstract class BattleSoldier implements IBattleSoldier {
 	protected int debuff12571Num;
 	protected int debuffSkill24601;
 	public HashMultimap<Integer, Debuff12724> debuff12724 = HashMultimap.create();
+	public HashMultimap<Integer, Debuff12785> debuff12785 = HashMultimap.create();
 	public int debuff12724Num;
+	public int debuff12785Num;
 	// 雷感状态
 	protected Map<String, Debuff12611> sorek12611Debuff = new HashMap<>();
 	protected Map<String, Debuff12674> astiaya12674Debuff = new HashMap<>();
@@ -343,6 +346,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 新回合开始 */
 	public void roundStart() {
+		debuff12785Num = debuff12785Num();
 		debuff12724Num = debuff12724Num();
 		sorek12611DebuffValRoundStart();
 		kunNa1652();
@@ -665,10 +669,11 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		int d1681 = debuff1681Val();
 		int eff12391 = getEffVal(EffType.HERO_12391) * getTroop().lossRatePct();
 		int eff12676 = getBattleRound() % 2 == 0 ? getEffVal(EffType.HERO_12676) : 0;
+		int buff12787 = buff12787();
 		int totalEff = tuple.first - d1529 + skillHPExactly() + eff1622 + eff1625 - d11012 - d1681 - debuff12008HP + buff12040Val - debuff12065HP + hpBuff12092()
 				- skill744DebuffVal() + buff12302.second + getBuff12337HpVal() + eff12391 - skill11043DebuffVal() + getEffVal(EffType.HERO_12464) + getEffVal(EffType.HERO_12483)
 				- debuffEffect12553Value - debuffEffect12554Value
-				+ getBuff12574Val(EffType.EFF_12574) + skill12602Val() - skill12642DebuffVal() + eff12676;
+				+ getBuff12574Val(EffType.EFF_12574) + skill12602Val() - skill12642DebuffVal() + eff12676 + buff12787;
 		if (Objects.nonNull(atkSoldier)) {
 			totalEff += skillHPExactly(atkSoldier);
 			totalEff -= atkSoldier.skillIgnoreTargetHP(this);
@@ -685,6 +690,14 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		result = crossTalent100XXVal(BattleTupleType.Type.NATION_HP, result);
 
 		return Math.max(result, hp);
+	}
+
+	private int buff12787() {
+		int result = 0;
+		for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
+			result += tank.hero1118.buff12787(this);
+		}
+		return result;
 	}
 
 	private int skill12602Val() {
@@ -815,11 +828,16 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		double eff12662Val = Math.min(troop.planAttackCnt, ConstProperty.getInstance().effect12662Maxinum) * getEffVal(EffType.EFF_12662) * GsConst.EFF_PER * ConstProperty.getInstance().effect12662SoldierAdjustMap.getOrDefault(getType(), 10000);
 		int skillIgnore = defSoldier.skillIgnoreTargetAtk(this);
 		int eff12675 = getBattleRound() % 2 == 1 ? getEffVal(EffType.HERO_12675) : 0;
+		int debuff12786 = 0;
+		for (BattleSoldier_1 tank : defSoldier.getTroop().hero1118Soldier) {
+			debuff12786 += tank.hero1118.debuff12786(defSoldier);
+		}
+		int buff12787 = buff12787();
 		double totalEffNum = GsConst.EFF_RATE + skillPer + extryPer + tuple.first - eff184 - dskill814 + eff1620 + eff1623 - debufSkill724Val - debuff12006Atk - debuff12063Atk
 				- skill744DebuffVal() + getBuff12333Val(false) - skill11042DebuffVal() + getEffVal(EffType.HERO_12464) - debuffEffect12553Value - debuffEffect12554Value
 				+ getBuff12574Val(EffType.EFF_12574)
 				- getDebuff12561(defSoldier) - debuff44601 
-				+ eff12662Val - skillIgnore  - getAstiaya12674DebuffVal(false) + eff12675;
+				+ eff12662Val - skillIgnore - getAstiaya12674DebuffVal(false) + eff12675 - debuff12786 + buff12787;
 
 		totalEffNum = Math.max(5000, totalEffNum); // 最多降到一半防御
 		return totalEffNum;
@@ -887,11 +905,12 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		ignoreDef += getDebuff1639(getTroop().getBattle().getBattleRound());
 		int eff12391 = getEffVal(EffType.HERO_12391) * getTroop().lossRatePct();
 		int eff12676 = getBattleRound() % 2 == 0 ? getEffVal(EffType.HERO_12676) : 0;
+		int buff12787 = buff12787();
 		// 在这里汇总上面得到的加成. 加成都是做用号值 不要除10000
 		double totalEffNum = GsConst.EFF_RATE + skillPer + effPer + eff1621 + eff1624 - ignoreDef - debuff12007Def - debuff12064Def - skill744DebuffVal() + getBuff12337DefVal()
 				+ eff12391 - skill11043DebuffVal() + getEffVal(EffType.HERO_12464) + getEffVal(EffType.HERO_12483) - debuffEffect12553Value - debuffEffect12554Value
 				+ getBuff12574Val(EffType.EFF_12574)
-				- skill12642DebuffVal() - debuffSkill24601 + eff12676;
+				- skill12642DebuffVal() - debuffSkill24601 + eff12676 + buff12787;
 		return totalEffNum;
 	}
 
@@ -1071,6 +1090,9 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 直接百分比+最终值*/
 	public double addHurtValPct(BattleSoldier defSoldier, double hurtVal) {
+		for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
+			hurtVal *= 1 + GsConst.EFF_PER * tank.hero1118.buff12782(this);
+		}
 
 		List<Integer> list = tuplePerList(BattleTupleType.Type.HURT_PCT, defSoldier.getType());
 		for (int effVal : list) {
@@ -1088,6 +1110,9 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 直接百分比减少最终值*/
 	public double reduceHurtValPct(BattleSoldier atkSoldier, double hurtVal) {
+		for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
+			hurtVal *= 1 - GsConst.EFF_PER * tank.hero1118.buff12784reduceHurtValPct(atkSoldier);
+		}
 
 		List<Integer> list = tuplePerList(BattleTupleType.Type.REDUCE_HURT_PCT, atkSoldier.getType());
 		for (int effVal : list) {
@@ -1644,7 +1669,14 @@ public abstract class BattleSoldier implements IBattleSoldier {
 			getTroop().setSoulLinkClose(true);
 		}
 
-		return kaluolinSoulLink(atkSoldier, hurtVal);
+		hurtVal = kaluolinSoulLink(atkSoldier, hurtVal);
+		if (getType() != SoldierType.TANK_SOLDIER_1) {
+			Collections.sort(getTroop().hero1118Soldier, Comparator.comparingInt(BattleSoldier::getFreeCnt).reversed());
+			for (BattleSoldier_1 tank : getTroop().hero1118Soldier) {
+				hurtVal = tank.hero1118SoulLink(atkSoldier, hurtVal);
+			}
+		}
+		return hurtVal;
 	}
 
 	private double soulLinkAilinna(BattleSoldier maxtank, BattleSoldier atkSoldier, double hurtVal) {
@@ -1821,7 +1853,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		int xxx = roundDead.getOrDefault(battleRound - 1, 0) + roundDead.getOrDefault(battleRound - 2, 0);
 		int result = (int) (getFreeCnt() + xxx * eff1429pct);
 		if (atk) {
-			result -= debuff12724Num;
+			result -= debuff12724Num + debuff12785Num;
 		}
 		return Math.max(0, result);
 	}
@@ -1839,6 +1871,23 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		}
 		int result = (int) (getFreeCnt() * GsConst.EFF_PER * effect);
 		addDebugLog("【12724】 {} {}数量的部队本回合无法进行攻击", getUUID(), result);
+		return result;
+	}
+
+	private int debuff12785Num() {
+		Set<Debuff12785> debuffs = debuff12785.get(getBattleRound());
+		if (debuffs.isEmpty()) {
+			return 0;
+		}
+		int effect = 0;
+		for (Debuff12785 debuff : debuffs) {
+			if (debuff.round == getBattleRound()) {
+				effect += debuff.eff12785;
+			}
+		}
+		int result = (int) (getFreeCnt() * GsConst.EFF_PER * effect * GsConst.EFF_PER
+				* ConstProperty.getInstance().effect12785SoldierAdjustMap.getOrDefault(getType(), 10000));
+		addDebugLog("[12785] {} units unable to attack: {}", getUUID(), result);
 		return result;
 	}
 

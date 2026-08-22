@@ -76,6 +76,7 @@ public class BattleTroop {
 	public int eff12086ZhuanAll;
 	public int skill74501Buff;
 	public Map<String,Integer> skill144Val = new HashMap<>();
+	public List<BattleSoldier_1> hero1118Soldier = new ArrayList<>(2);
 	/**
 	 * 战斗单元列表
 	 */
@@ -333,6 +334,10 @@ public class BattleTroop {
 			if (soldier.getEffVal(EffType.SUPER_SOLDIER_1633) > 0) {
 				maxSOLDIER_1633 = Math.max(maxSOLDIER_1633, soldier.getEffVal(EffType.SUPER_SOLDIER_1633));
 				jijia1633.add((BattleSoldier_8) soldier);
+			}
+
+			if (soldier.getEffVal(EffType.HERO_12781) > 0) {
+				hero1118Soldier.add((BattleSoldier_1) soldier);
 			}
 
 		}

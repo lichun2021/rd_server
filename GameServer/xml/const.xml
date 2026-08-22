@@ -2299,6 +2299,59 @@ effect12730AtkRound = 10
 # 【12730】敌方兵种修正系数；万分比
 effect12730SoldierAdjust = 1_40000,2_65000,3_70000,4_20000,5_6000,6_20000,7_30000,8_25000
 
+# Hero 1118: defensive tank share of rally march; permyriad
+effect12781AllNumLimit = 500
+
+# Hero 1118: defensive tank share of own march; permyriad
+effect12781SelfNumLimit = 5000
+
+# Hero 1118: maximum effective 12781 stacks
+effect12781Maxinum = 2
+
+# Hero 1118: stance-switch interval
+effect12781AtkRound = 10
+
+# Hero 1118: precision-strike interval
+effect12782AtkRound = 5
+
+# Hero 1118: allied soldier adjustment; permyriad
+effect12782SoldierAdjust = 1_10000,2_40000,3_5000,4_10000,5_12000,6_8000,7_10000,8_10000
+
+# Hero 1118: extra share rate when marching with hero 1089; permyriad
+effect12783ExtraVaule = 1000
+
+# Hero 1118: shared-damage reduction for the defensive tank; permyriad
+effect12783BaseVaule = 5000
+
+# Hero 1118: sharing adjustment by attacking soldier; permyriad
+effect12783SoldierAdjust = 1_5000,2_0,3_15000,4_20000,5_8000,6_12000,7_20000,8_20000
+
+# Hero 1118: glory-pattern layers gained per stance switch
+effect12784AddFirePoint = 2
+
+# Hero 1118: kill-history window
+effect12784Round = 10
+
+# Hero 1118: soldier types engraved per switch
+effect12784Nums = 2
+
+# Hero 1118: base damage reduction; permyriad
+effect12784BaseVaule = 1200
+
+# Hero 1118: glory-pattern effect thresholds
+effect12785AtkThresholdValue1 = 2
+effect12785AtkThresholdValue2 = 4
+effect12785AtkThresholdValue3 = 6
+effect12785AtkThresholdValue4 = 8
+
+# Hero 1118: enemy soldier adjustments; permyriad
+effect12785SoldierAdjust = 1_10000,2_0,3_18000,4_10000,5_10000,6_15000,7_10000,8_10000
+effect12786SoldierAdjust = 1_10000,2_0,3_18000,4_10000,5_10000,6_15000,7_10000,8_10000
+
+# Hero 1118: base attack/defense/health bonus and allied adjustments; permyriad
+effect12787BaseVaule = 35500
+effect12787SoldierAdjust = 1_10000,2_40000,3_5000,4_10000,5_10000,6_10000,7_10000,8_10000
+
 # 先驱回响【10052】作用号，兵种修正系数；万分比
 effect10052SoldierAdjust = 1_10000,2_10000,3_10000,4_10000,5_10000,6_10000,7_10000,8_10000
 

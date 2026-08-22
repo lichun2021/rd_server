@@ -3,6 +3,7 @@ package com.hawk.game.battle.sssSolomon;
 import com.hawk.game.battle.BattleSoldier;
 import com.hawk.game.battle.BattleSoldier_1;
 import com.hawk.game.march.ArmyInfo;
+import com.hawk.game.protocol.Const.EffType;
 import com.hawk.game.util.GsConst;
 
 public class SolomonPet_1 extends BattleSoldier_1 implements ISSSSolomonPet {
@@ -16,6 +17,14 @@ public class SolomonPet_1 extends BattleSoldier_1 implements ISSSSolomonPet {
 	@Override
 	protected int get12085Cnt() {
 		return parent.getFreeCnt();
+	}
+
+	@Override
+	public int getEffVal(EffType eff) {
+		if (eff == EffType.HERO_12781) {
+			return 0;
+		}
+		return parent.getEffVal(eff);
 	}
 
 

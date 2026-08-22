@@ -14,6 +14,7 @@ import org.hawk.tuple.HawkTuple2;
 import org.hawk.tuple.HawkTuple3;
 
 import com.google.common.base.Splitter;
+import com.hawk.game.battle.effect.impl.hero1118.Hero1118;
 import com.hawk.game.config.BattleSoldierCfg;
 import com.hawk.game.config.BattleSoldierSkillCfg;
 import com.hawk.game.config.ConstProperty;
@@ -45,12 +46,20 @@ public class BattleSoldier_1 extends BattleSoldier {
 	private boolean triggerSkill144;
 	private int eff12401Cnt;
 	private int eff12403Cnt;
+	public Hero1118 hero1118;
 	
 	@Override
 	public void roundStart() {
 		super.roundStart();
+		hero1118.roundStart();
 		skill1451 = false;
 		hundun12085();
+	}
+
+	@Override
+	public void roundEnd() {
+		super.roundEnd();
+		hero1118.roundEnd();
 	}
 
 	private void hundun12085() {
@@ -102,6 +111,7 @@ public class BattleSoldier_1 extends BattleSoldier {
 		if (!hasSkill(PBSoldierSkill.SOLDIER_SKILL_114)) {
 			SOLDIER_SKILL_114_ceng = -1000000;
 		}
+		hero1118 = new Hero1118(this);
 	}
 
 	@Override
@@ -118,6 +128,16 @@ public class BattleSoldier_1 extends BattleSoldier {
 		}
 
 		super.attackOnce(defSoldier, atkTimes, hurtPer, atkDis);
+	}
+
+	@Override
+	protected void attackOver(BattleSoldier defSoldier, int killCnt, double hurtVal) {
+		super.attackOver(defSoldier, killCnt, hurtVal);
+		hero1118.attackOver(defSoldier);
+	}
+
+	public double hero1118SoulLink(BattleSoldier atkSoldier, double hurtVal) {
+		return hero1118.soulLink(atkSoldier, hurtVal);
 	}
 
 	@Override
@@ -202,6 +222,9 @@ public class BattleSoldier_1 extends BattleSoldier {
 			hurtVal *= (1 + eff12163DebuffVal().third * GsConst.EFF_PER);
 			hurtVal = Math.max(hurtVal, 0);
 			addDebugLog("###{}防御坦克处于【损坏状态】时，其在受到攻击时，伤害额外+{} ", getUUID(), eff12163Debuff.third);
+		}
+		if (getEffVal(EffType.HERO_12791) > 0) {
+			hurtVal *= 1 - GsConst.EFF_PER * getEffVal(EffType.HERO_12791);
 		}
 		return hurtVal;
 	}
