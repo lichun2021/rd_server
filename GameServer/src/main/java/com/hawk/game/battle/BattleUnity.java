@@ -7,6 +7,7 @@ import java.util.Objects;
 import org.hawk.config.HawkConfigManager;
 import org.hawk.os.HawkException;
 
+import com.hawk.game.battle.effect.BattleConst;
 import com.hawk.game.battle.effect.CheckerKVResult;
 import com.hawk.game.config.BattleSoldierCfg;
 import com.hawk.game.march.ArmyInfo;

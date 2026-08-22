@@ -249,6 +249,7 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
         self.assertTrue(has_java_hook(checker_params, r"\bsetTarTroopEffType\s*\(\s*BattleConst\.WarEff\s+tarTroopEffType\s*\)"))
         self.assertTrue(has_java_hook(checker_params, r"\bnew\s+CheckerParames\s*\([^;]*\btarTroopEffType\b"))
 
+        self.assertTrue(has_java_hook(battle_unity, r"(?m)^\s*import\s+com\.hawk\.game\.battle\.effect\.BattleConst\s*;"))
         self.assertTrue(has_java_hook(battle_unity, r"\bBattleConst\.WarEff\s+troopEffType\b"))
         self.assertTrue(has_java_hook(battle_unity, r"\bBattleConst\.WarEff\s+tarTroopEffType\b"))
         self.assertTrue(has_java_hook(battle_unity, r"\bsetTarTroopEffType\s*\(\s*BattleConst\.WarEff\s+tarTroopEffType\s*\)"))
