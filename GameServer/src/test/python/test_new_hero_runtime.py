@@ -151,6 +151,33 @@ HERO_RUNTIME = {
         },
         "soul_duration_effect": "HERO_12854",
     },
+    1122: {
+        "skill_ids": (112201, 112202, 112203, 112204, 112205),
+        "effect_ids": (
+            12961, 12962, 12963, 12964, 12965, 12966, 12967, 12968,
+            12969, 12970, 12981, 12991, 12992, 12993, 12994,
+        ),
+        "const_fields": (),
+        "support": (
+            "Checker12961.java", "Checker12962.java", "Checker12963.java",
+            "Checker12964.java", "Checker12965.java", "Checker12966.java",
+            "Checker12967.java", "Checker12970.java", "Checker12981.java",
+            "Checker12991.java", "Checker12992.java", "Checker12993.java",
+            "Hero1122Rules.java", "Hero1122Runtime.java",
+            "Hero1122SourceChecker.java",
+        ),
+        "hooks": {
+            "BattleSoldier.java": (
+                r"\bHero1122Runtime\.attackAdjustment\s*\(\s*this\s*\)",
+                r"\bHero1122Runtime\.superAttackBonus\s*\(\s*this\s*\)",
+                r"\bHero1122Runtime\.outgoingDamageBonus\s*\(\s*this\s*\)",
+                r"\bHero1122Runtime\.windFieldExtraDamage\s*\(\s*this\s*\)",
+                r"\bHero1122Runtime\.incomingDamageReduction\s*\(\s*this\s*\)",
+                r"\bHero1122Runtime\.bomberInterferenceDodge\s*\(\s*this\s*,\s*target\s*\)",
+            ),
+        },
+        "soul_duration_effect": "HERO_12994",
+    },
 }
 
 
@@ -587,6 +614,9 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
     def test_hero_1120_protocol_and_const_configuration_closure(self):
         self.assert_protocol_and_const_configuration_closure(1120)
 
+    def test_hero_1122_protocol_and_const_configuration_closure(self):
+        self.assert_protocol_and_const_configuration_closure(1122)
+
     def assert_runtime_source_closure(self, hero_id):
         expected = HERO_RUNTIME[hero_id]
         skill_file = self.skills / f"Skill{hero_id}.java"
@@ -631,9 +661,8 @@ class NewHeroRuntimeClosureTest(unittest.TestCase):
     def test_hero_1120_runtime_source_closure(self):
         self.assert_runtime_source_closure(1120)
 
-    @unittest.skip("trusted server runtime source for hero 1122 is not available")
     def test_hero_1122_runtime_source_closure(self):
-        self.fail("enable after a source-backed hero 1122 implementation is available")
+        self.assert_runtime_source_closure(1122)
 
 
 if __name__ == "__main__":

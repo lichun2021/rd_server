@@ -46,6 +46,7 @@ import com.hawk.game.battle.effect.impl.hero1116.Debuff12724;
 import com.hawk.game.battle.effect.impl.hero1116.Hero1116Rules;
 import com.hawk.game.battle.effect.impl.hero1118.Debuff12785;
 import com.hawk.game.battle.effect.impl.hero1118.Hero1118Rules;
+import com.hawk.game.battle.effect.impl.hero1122.Hero1122Runtime;
 import com.hawk.game.battle.guarder.GuarderPlayer;
 import com.hawk.game.battle.sssSolomon.ISSSSolomonPet;
 import com.hawk.game.config.BattleSoldierCfg;
@@ -841,7 +842,8 @@ public abstract class BattleSoldier implements IBattleSoldier {
 				- skill744DebuffVal() + getBuff12333Val(false) - skill11042DebuffVal() + getEffVal(EffType.HERO_12464) - debuffEffect12553Value - debuffEffect12554Value
 				+ getBuff12574Val(EffType.EFF_12574)
 				- getDebuff12561(defSoldier) - debuff44601 
-				+ eff12662Val - skillIgnore - getAstiaya12674DebuffVal(false) + eff12675 - debuff12786 + buff12787;
+				+ eff12662Val - skillIgnore - getAstiaya12674DebuffVal(false) + eff12675 - debuff12786 + buff12787
+				+ Hero1122Runtime.attackAdjustment(this);
 
 		totalEffNum = Math.max(5000, totalEffNum); // 最多降到一半防御
 		return totalEffNum;
@@ -853,7 +855,8 @@ public abstract class BattleSoldier implements IBattleSoldier {
 		// 集结英雄E
 		HawkTuple2<Integer, Integer> tuple = tupleValue(BattleTupleType.Type.ATKFIRE, tarType);
 		int skillPer = skillFireAtkExactly(defSoldier);
-		double totalEffNum = tuple.first + getBuff12333Val(true) + getBuff12574Val(EffType.EFF_12575);
+		double totalEffNum = tuple.first + getBuff12333Val(true) + getBuff12574Val(EffType.EFF_12575)
+				+ Hero1122Runtime.superAttackBonus(this);
 		int eff12223Num = Math.min(troop.attackCnt, ConstProperty.getInstance().getEffect12223Maxinum()) * getEffVal(EffType.HERO_12223);
 		return totalEffNum + eff12223Num + skillPer - debuff12272Fatk - skill11042DebuffVal();
 	}
@@ -1099,6 +1102,8 @@ public abstract class BattleSoldier implements IBattleSoldier {
 			hurtVal *= (1 + effVal * GsConst.EFF_PER);
 			troop.getBattle().addDebugLog("###Soldier={} effVal={} 伤害+的作用号在计算时为累乘算式, 操作后伤害值 {}", getUUID(), effVal, hurtVal);
 		}
+		hurtVal *= (1 + Hero1122Runtime.outgoingDamageBonus(this) * GsConst.EFF_PER);
+		hurtVal *= (1 + Hero1122Runtime.windFieldExtraDamage(this) * GsConst.EFF_PER);
 		hurtVal = hurtVal * (1 - skill12362DebuffVal() * GsConst.EFF_PER);
 		if (debuff12517Val > 0) {
 			hurtVal = hurtVal
@@ -1119,6 +1124,7 @@ public abstract class BattleSoldier implements IBattleSoldier {
 			hurtVal *= (1 - effVal * GsConst.EFF_PER);
 			troop.getBattle().addDebugLog("###Soldier={} effVal={} 伤害减少的作用号在计算时为累乘算式, 操作后伤害值 {}", getUUID(), effVal, hurtVal);
 		}
+		hurtVal *= (1 - Hero1122Runtime.incomingDamageReduction(this) * GsConst.EFF_PER);
 		hurtVal *= (1 - getBuff1652(getTroop().getBattle().getBattleRound()) * GsConst.EFF_PER);
 		hurtVal *= (1 - getEffVal(EffType.EFF_12103) * GsConst.EFF_PER - getEffVal(EffType.EFF_12104) * GsConst.EFF_PER);
 
@@ -1253,7 +1259,8 @@ public abstract class BattleSoldier implements IBattleSoldier {
 
 	/** 闪避攻击数值, 万分比数  */
 	protected int skillDogeEffval(BattleSoldier target) {
-		return tupleValue(BattleTupleType.Type.DODGE, target.getType()).first;
+		return (int) Math.min(GsConst.EFF_RATE, tupleValue(BattleTupleType.Type.DODGE, target.getType()).first
+				+ Hero1122Runtime.bomberInterferenceDodge(this, target));
 	}
 
 	/**
