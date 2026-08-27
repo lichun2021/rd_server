@@ -161,8 +161,9 @@ HERO_RUNTIME = {
         "support": (
             "Checker12961.java", "Checker12962.java", "Checker12963.java",
             "Checker12964.java", "Checker12965.java", "Checker12966.java",
-            "Checker12967.java", "Checker12970.java", "Checker12981.java",
-            "Checker12991.java", "Checker12992.java", "Checker12993.java",
+            "Checker12967.java", "Checker12968.java", "Checker12969.java",
+            "Checker12970.java", "Checker12981.java", "Checker12991.java",
+            "Checker12992.java", "Checker12993.java",
             "Hero1122Rules.java", "Hero1122Runtime.java",
             "Hero1122SourceChecker.java",
         ),
